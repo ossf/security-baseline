@@ -25,7 +25,7 @@ Revision to the TAC official security baseline will be a community effort follow
 
 ## Adoption Tracking and Reporting 
 The adoption high level tracking will be logged in the [pilot adoption execution plan](https://docs.google.com/spreadsheets/d/16YYsJDu1Xw_G3hUVnMiQ9sdvbWoBBt_pHLiVFsYNHVg/edit?gid=1333945810#gid=1333945810). 
-The detailed traffic mechanism is under development. A link will be provided once the the mechanism is established.
+The detailed traffic mechanism is manual at this point through a spreadsheet, and it's not scalable. [The tracking is on weekly basis](https://docs.google.com/spreadsheets/d/1LCLpN1Hgx7C9M9KNuvH5aN5vukYPmxrq_1dUQrDhnco/edit?gid=818010490#gid=818010490), with the first tracking date as the bench mark date for baseline adoption. Need continuous monitoring solution.
 The adoption progress will be reported during the bi-weekly TAC meeting during the time allocated to staff mmebers, and as part of the BEST WG update to TAC on behalf of the SIG.   
 
 
