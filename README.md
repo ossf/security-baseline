@@ -1,6 +1,6 @@
-# **Security Baseline**
+# **Open Source Project Security Baseline**
 
-The goal of this SIG is to evolve [OpenSSF security baseline](https://github.com/ossf/tac/blob/main/process/security_baseline.md) for OpenSSF and Linux Foundation wide adoption, make it easier to discover, adopt and contribute to open source technologies to improve Open Source Software (OSS) security. 
+The SIG is under the [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers). The goal of this SIG is to evolve [OpenSSF security baseline](https://github.com/ossf/tac/blob/main/process/security_baseline.md) for OpenSSF and Linux Foundation wide adoption, make it easier to discover, adopt and contribute to open source technologies to improve Open Source Software (OSS) security. 
 
 ## 
 **Motivation**
@@ -32,20 +32,26 @@ Through the effort of this group, open source software is more secure.
 This group's work is built on top of the technical output from all the [OpenSSF WGs and Sigs](https://github.com/ossf/tac?tab=readme-ov-file#working-groups-wgs), and [projects](https://github.com/ossf/tac?tab=readme-ov-file#projects). 
 
 ## 
-**Active Projects**
+**OpenSSF Security Baseline Adoption Pilot Projects**
+
+The maintainers of these projects will be the early adopters of the [OpenSSF security baseline](https://github.com/ossf/tac/blob/main/process/security_baseline.md). The maintainers of these pilot projects have committed to fully adopting the seurity baseline by meeting the security baseline requirements for their project life cycle by 9/15/2024, resolving issues 
+
+Detailoed adoption plan and tracking will be linked here once it's apprved by the adopting pilot project maintainers.
+
+
+| Name                       | Repository/Home Page | Notes                                                                                                 | Sponsoring Org | Lifecycle     |
+| ---------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------- |---------- |
+| GUAC                   | https://github.com/guacsec/guac                  | [Meeting Notes](https://docs.google.com/document/d/1ImSlr_t3WNZ3zWqpmfqkw1mi6_nkv3enkQ7snWDomKA/edit)  | Supply Chain Integrity WG | [Incubating](process/project-lifecycle-documents/guac_incubating.md) |
+| OpenVEX | https://github.com/openvex | [Meeting Notes](https://docs.google.com/document/d/1C-L0JDx5O35TjXb6dcyL6ioc5xWUCkdR5kEbZ1uVQto/edit) | Vulnerability Disclosures WG | [Sandbox](process/project-lifecycle-documents/openvex_for_sandbox_stage.md) |
+| Protobom | http://github.com/bom-squad/protobom | [Meeting Notes](https://docs.google.com/document/d/1bz2BBImzSnLRiBLrA5GehQ0ckW3Vs7Gmtt8R-Olm0QY/edit)  | Security Tooling WG | [Sandbox](process/project-lifecycle-documents/protobom_sandbox_stage.md) |
+| Repository Service for TUF | https://github.com/repository-service-tuf/repository-service-tuf |  [Meeting Notes](https://docs.google.com/document/d/13a_AtFpPK9WO4PlAN6ciD-G1jiBU3gEDtRD1OUinUFY/edit)  | Securing Software Repositories WG | [Incubating](process/project-lifecycle-documents/repository_service_for_tuf_incubation_stage.md) |
  
-
-## 
-**Inactive Projects**
-
-[Optional]
-
 # 
 **Get Involved**
 
-*   Official communications occur on the [ADD LINK TO YOUR WG MAILING LIST] (ex: https://lists.openssf.org/g/openssf-tac/topics).  \
+*   Official communications occur on the [Security Baseline Mailing List](https://lists.openssf.org/g/openssf-sig-security-baseline).  \
 [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
-*   [Add Slack information if availabable]
+*   [Join our Slack](https://app.slack.com/client/T019QHUBYQ3/C07DC6TT2QY)
 
 ## 
 
