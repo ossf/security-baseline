@@ -10,7 +10,7 @@ GUAC, Protobom, OpenVEX and RSTUF maintainers have committed to having their pro
 ## Adoption Friction Points 
 We will rely on every adopting project to submit issues to the security baseline repo to log the friction points and provide feedback to refine the security baseline, facilitating easier adoption. 
 
-Maintainers of the security baseline will closely monitor the GitHub issues, help remove blockers and reduce friction points, update security baseline based on feedback from pilot projects.   
+Maintainers of the security baseline will closely monitor the GitHub issues, help remove blockers and reduce friction points, update security baseline based on feedback from pilot projects.
 
 ## Tooling and Process Improvements
 Big thanks to our pilot project maintainers! They have committed to share what works well for them, including reusable code, tooling, usability improvement of our tooling and processes. 
@@ -23,9 +23,10 @@ Need community input on the process to evolve the security baseline and feed the
 
 Revision to the TAC official security baseline will be a community effort following the [TAC Issue/PR process](https://github.com/ossf/tac/blob/main/process/TAC-Decision-Process.md#issuepull-request-types). 
 
-## Adoption Tracking
+## Adoption Tracking and Reporting 
 The adoption high level tracking will be logged in the [pilot adoption execution plan](https://docs.google.com/spreadsheets/d/16YYsJDu1Xw_G3hUVnMiQ9sdvbWoBBt_pHLiVFsYNHVg/edit?gid=1333945810#gid=1333945810). 
 The detailed traffic mechanism is under development. A link will be provided once the the mechanism is established.
+The adoption progress will be reported during the bi-weekly TAC meeting during the time allocated to staff mmebers, and as part of the BEST WG update to TAC on behalf of the SIG.   
 
 
 
