@@ -36,15 +36,15 @@ This group's work is built on top of the technical output from all the [OpenSSF 
 
 The maintainers of these projects will be the early adopters of the [OpenSSF security baseline](https://github.com/ossf/tac/blob/main/process/security_baseline.md). The maintainers of these pilot projects have committed to fully adopting the seurity baseline by meeting the security baseline requirements for their project life cycle by 9/15/2024, resolving issues 
 
-Detailoed adoption plan and tracking will be linked here once it's apprved by the adopting pilot project maintainers.
+Detailed adoption plan and tracking will be linked here once it's apprved by the adopting pilot project maintainers.
 
 
-| Name                       | Repository/Home Page | Notes                                                                                                 | Sponsoring Org | Lifecycle     |
-| ---------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------- |---------- |
-| GUAC                   | https://github.com/guacsec/guac                  | [Meeting Notes](https://docs.google.com/document/d/1ImSlr_t3WNZ3zWqpmfqkw1mi6_nkv3enkQ7snWDomKA/edit)  | Supply Chain Integrity WG | [Incubating](process/project-lifecycle-documents/guac_incubating.md) |
-| OpenVEX | https://github.com/openvex | [Meeting Notes](https://docs.google.com/document/d/1C-L0JDx5O35TjXb6dcyL6ioc5xWUCkdR5kEbZ1uVQto/edit) | Vulnerability Disclosures WG | [Sandbox](process/project-lifecycle-documents/openvex_for_sandbox_stage.md) |
-| Protobom | http://github.com/bom-squad/protobom | [Meeting Notes](https://docs.google.com/document/d/1bz2BBImzSnLRiBLrA5GehQ0ckW3Vs7Gmtt8R-Olm0QY/edit)  | Security Tooling WG | [Sandbox](process/project-lifecycle-documents/protobom_sandbox_stage.md) |
-| Repository Service for TUF | https://github.com/repository-service-tuf/repository-service-tuf |  [Meeting Notes](https://docs.google.com/document/d/13a_AtFpPK9WO4PlAN6ciD-G1jiBU3gEDtRD1OUinUFY/edit)  | Securing Software Repositories WG | [Incubating](process/project-lifecycle-documents/repository_service_for_tuf_incubation_stage.md) |
+| Name                       | Repository/Home Page | Notes                                                                                                 | Sponsoring Org | Lifecycle     |Security Baseline requirements|
+| ---------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------- |---------- |---------- |
+| GUAC                   | https://github.com/guacsec/guac                  | [Meeting Notes](https://docs.google.com/document/d/1ImSlr_t3WNZ3zWqpmfqkw1mi6_nkv3enkQ7snWDomKA/edit)  | Supply Chain Integrity WG | [Incubating](process/project-lifecycle-documents/guac_incubating.md) |[Security Baseline - Once Sandbox](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---once-sandbox)<br /> and <br />[Security Baseline - To Become Incubating](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---to-become-incubating)<br /> and <br />[Security Baseline - Once Incubating](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---to-become-incubating) |
+| OpenVEX | https://github.com/openvex | [Meeting Notes](https://docs.google.com/document/d/1C-L0JDx5O35TjXb6dcyL6ioc5xWUCkdR5kEbZ1uVQto/edit) | Vulnerability Disclosures WG | [Sandbox](process/project-lifecycle-documents/openvex_for_sandbox_stage.md) |[Security Baseline - Once Sandbox](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---once-sandbox) |
+| Protobom | http://github.com/bom-squad/protobom | [Meeting Notes](https://docs.google.com/document/d/1bz2BBImzSnLRiBLrA5GehQ0ckW3Vs7Gmtt8R-Olm0QY/edit)  | Security Tooling WG | [Sandbox](process/project-lifecycle-documents/protobom_sandbox_stage.md) |[Security Baseline - Once Sandbox](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---once-sandbox) |
+| Repository Service for TUF | https://github.com/repository-service-tuf/repository-service-tuf |  [Meeting Notes](https://docs.google.com/document/d/13a_AtFpPK9WO4PlAN6ciD-G1jiBU3gEDtRD1OUinUFY/edit)  | Securing Software Repositories WG | [Incubating](process/project-lifecycle-documents/repository_service_for_tuf_incubation_stage.md) |[Security Baseline - Once Sandbox](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---once-sandbox) <br /> and <br />[Security Baseline - To Become Incubating](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---to-become-incubating)<br /> and <br />[Security Baseline - Once Incubating](https://github.com/ossf/tac/blob/main/process/security_baseline.md#security-baseline---to-become-incubating) |
  
 # 
 **Get Involved**
@@ -59,17 +59,16 @@ Detailoed adoption plan and tracking will be linked here once it's apprved by th
 ### 
 **Quick Start**
 
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
+*   Need contributors to improve documents, raise awareness of the initiative and increase adoption of the security baseline.
+*   Need contributors to evangelize the security baseline for Linux Foundation wide adoption .
+*   Create an issue or submit a OR to turn your ideas into reality
 
 ## 
 **Meeting times**
 
 [TODO: Update with your WG meeting details]
-*   Every other Tuesday @ 10:00am EST (Link to calendar invite)
-*   [Meeting Minutes](https://docs.google.com/document/d/1uXQI1vI5_HyOvxHMexrnTY_ruBrynbPl5yOd1UM4g3A/edit#heading=h.yworp6sxzb6g)
+*   Every other Tuesday @ 10:00am EST (https://zoom-lfx.platform.linuxfoundation.org/meeting/97740884759?password=5cab7229-2324-4816-81db-517812a088a9)
+*   [Meeting Minutes]([https://docs.google.com/document/d/1uXQI1vI5_HyOvxHMexrnTY_ruBrynbPl5yOd1UM4g3A/edit#heading=h.yworp6sxzb6g](https://docs.google.com/document/d/16tL1Ln7owIRXSoCKgyYHCs9-JP9iw-ouyk8koGAeHA0/edit))
 
 # 
 **Governance**
@@ -80,7 +79,7 @@ The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) 
 
 [OPTIONAL]
 *   Lead name: Eddie Knight 
-*   Co-Lead name: MIchael Lieberman
+*   Co-Lead name: Michael Lieberman
 
 #
 **Intellectual Property**
