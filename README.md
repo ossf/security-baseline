@@ -1,39 +1,39 @@
-# **OSSF Project/WG Name**
+# **Security Baseline**
 
-[Brief description of the initiative]
-
+The goal of this SIG is to evolve [OpenSSF security baseline](https://github.com/ossf/tac/blob/main/process/security_baseline.md) for OpenSSF and Linux Foundation wide adoption, make it easier to discover, adopt and contribute to open source technologies to improve Open Source Software (OSS) security. 
 
 ## 
 **Motivation**
 
-[Background / use cases of the problem to be solved]
+For OpenSSF adoption of the security baseline, there needs to be a home for tracking the adoption, for maintainers to raise issues to refine the security baseline, merge the baseline back to TAC lifecycle, and for OpenSSF to develop the roadmap for the security baseline. It will provide a venue for early adopters to share their findings and reusable code with other maintainers. The pilot adoption builds the foundation for wider adoption of the security baseline in OpenSSF and in Linux Foundation.
 
+This SIG creates a venue for other participating foundations to help evolve the OpenSSF security baseline into a security baseline that can be applied to a broad range of software-based projects. The group will define the right level of risks that the security baseline is applicable for, the effectiveness measurement of the security baseline, and the adoption path of the security baseline at the minimum.
+
+Members of this group will be from various Linux foundations and entities outside of Linux Foundation. Reducing duplicate effort and achieving a higher level of security across Linux Foundation participating foundations is one of the goals of the group.
+
+Right now it's very difficult for new people interested in participating to determine how to participate or what to use. This SIG will provide a technology consumption framework to help open source producers quickly navigate the OSS security technology landscape, discover, adopt and contribute to technical initiatives, help end user organizations large and small to think about adopting OpenSSF/adjacent technical projects and guidance. 
 
 ## 
 **Objective**
 
-[What is to be achieved with this initiative]
-
-[OKRs - OPTIONAL]
-
+Through the effort of this group, open source software is more secure. 
 
 ## 
 **Scope**
 
-[What is in and out of scope]
+* Security adoption and maintenance in OpenSSF
+* Security basline adoption and maintenance across Linux Foundation
+* OpenSSF/adjacent technollogy consumption framwork 
 
 
 ## 
 **Prior Work**
 
-
-
-*   List of prior and/or related projects
+This group's work is built on top of the technical output from all the [OpenSSF WGs and Sigs](https://github.com/ossf/tac?tab=readme-ov-file#working-groups-wgs), and [projects](https://github.com/ossf/tac?tab=readme-ov-file#projects). 
 
 ## 
 **Active Projects**
-
-[Optional]
+ 
 
 ## 
 **Inactive Projects**
@@ -62,7 +62,7 @@
 **Meeting times**
 
 [TODO: Update with your WG meeting details]
-*   Every other Tuesday @ 10:00am PST (Link to calendar invite)
+*   Every other Tuesday @ 10:00am EST (Link to calendar invite)
 *   [Meeting Minutes](https://docs.google.com/document/d/1uXQI1vI5_HyOvxHMexrnTY_ruBrynbPl5yOd1UM4g3A/edit#heading=h.yworp6sxzb6g)
 
 # 
@@ -73,8 +73,8 @@ The [CHARTER.md](https://github.com/ossf/project-template/blob/main/CHARTER.md) 
 
 
 [OPTIONAL]
-*   Lead name 
-*   Co-Lead name
+*   Lead name: Eddie Knight 
+*   Co-Lead name: MIchael Lieberman
 
 #
 **Intellectual Property**
