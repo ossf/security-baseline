@@ -28,25 +28,26 @@ Reference and previous work by BEST WG:
 
 ## OSS Supply Chain Threats
 
-![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
+![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
+https://github.com/Danajoyluck/security-baseline/blob/main/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg
 
 ## OSS Security Technologies for More Effective Dependency Management
 
 ### Overview
-![overview](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
+![overview](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
 
 ### Security Tools - Dependency Ingestion Policy and Enforcement
-![State](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework_state.jpg)
-![policy and enforcement](https://github.com/security-baseline/openssf-tac/blob/main/files/images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
+![State](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
+![policy and enforcement](https://github.com/security-baseline/openssf-tac/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
 
 ### Security Insights
-![Security Insights](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework_Security_Insights.jpg)
+![Security Insights](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework_Security_Insights.jpg)
 
 ###  Generating Cryptographically Signed Artifacts Attestation, Metadata
-![Security Metadata](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework%20_Attestation.jpg)
+![Security Metadata](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework%20_Attestation.jpg)
 
 ### Ecosystem Support
-![Ecosystem Support](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework_Ecosystem_Support.jpg)
+![Ecosystem Support](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework_Ecosystem_Support.jpg)
 
 ### Frameworks, Specifications, Standards, Education and Training
-![Frameworks, Specifications, Standards, Education and Training](https://github.com/Danajoyluck/security-baseline/blob/main/files/images/OpenSSF_Practitioner_Framework_Framework_Specifications_Standards_Education.jpg)
+![Frameworks, Specifications, Standards, Education and Training](https://github.com/Danajoyluck/security-baseline/blob/main/files/architecture/images/OpenSSF_Practitioner_Framework_Framework_Specifications_Standards_Education.jpg)
