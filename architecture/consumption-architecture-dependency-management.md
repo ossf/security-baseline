@@ -8,6 +8,12 @@ The goals of this document are:
 1. To help open source producers quickly navigate the OSS security technology landscape, discover, adopt and contribute to technical initiitves. 
 2. To provide an easy model for our end user organizations large and small to have a framework/reference architecture to help them think about adopting OpenSSF technical projects and guidance. 
 
+This document is based on the prio work conducted in OpenSSF [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers)
+* [Open Source Software Supply Chain Threats, Threats Definition](https://github.com/ossf/toolbelt/tree/main/threats). 
+* [The Security Toolbelt](https://github.com/ossf/Diagrammers-Society/blob/main/drawings/Sterling%20Toolchain%20Patterns.svg).
+
+This document serves as a map that takes readers from here to OpenSSF and adjacent technologies. Details of the technologies are out of the scope of this document. The details of how consumers manage open source software dependencies are out of the scope of this document. 
+
 ## Intended Audience
 Open source software maintainers, contributors and consumers are the intended audience of this document.
 
@@ -20,21 +26,26 @@ As an open source software producer and a consumer, I'd like to contribute to op
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
 # Open Source Software Dependency Management 
-Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. Open source software dependency management is critical to sustain software security and reliability. 
+Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu) has shown that among the surveyed comemrcial software:
+* 96% of the total codebase contained open source.
+* 77% of all code in the total code base originated from open source
+* 84% of the codebases contained at least one open source vulnerability
+* 54% increase in codedebases containing high-risk vulnerabilities in the past year
 
-![OSS powers critical infrastructure](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF%20Practitioner%20Framework%20_Synopsys_OSSRA_Codebase.jpg)
- <br /> Source: [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu)
-![OSS vulnerabilities](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF%20Practitioner%20Framework%20_Synopsys_OSSRA_Vuln.jpg)
- <br /> Source: [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu)
+Open source software dependency management is critical to sustain software security and reliability. 
 
-Reference and previous work by BEST WG:  
-* [OSS Supply Chain Threats, threats definition](https://github.com/ossf/toolbelt/tree/main/threats). 
-* [security toolbelt](https://github.com/ossf/Diagrammers-Society/blob/main/drawings/Sterling%20Toolchain%20Patterns.svg).
+## Open Source Software Supply Chain Threats
 
-## OSS Supply Chain Threats
+Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. For detailes of the threats, check out the threat modeling that OpenSSF [BEST WG](https://github.com/ossf/wg-best-practices-os-developers) and [End User WG](https://github.com/ossf/wg-endusers) have conducted:
+* [Threats against OSS producers](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Threats.md)
+* [Threats against OSS producers' development environments](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Environment_Threats.md)
+* [Threats against OSS Source Code Management(SCM) systems](https://github.com/ossf/toolbelt/blob/main/threats/Source_Code_Management_Threats.md)
+* [Threats against OSS CI/CD systems](https://github.com/ossf/toolbelt/blob/main/threats/Build%2BCI_Threats.md)
+* [Threats against OSS publication/distribution](https://github.com/ossf/toolbelt/blob/main/threats/Build%2BCI_Threats.md)
+* [Threat Model of Enterprise Open Source Supply Chains](https://docs.google.com/document/d/1kNCETEfm2_Pm9dFwmDJfph0TtUCK1-3ERL4OjA9UKYI/edit)
 
-![OSS Supply Chain Threats](https://github.com/Danajoyluck-patch-1/security-baseline/blob/main/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
-https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg
+
+![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
 
 ## OSS Security Technologies for More Effective Dependency Management
 
@@ -59,3 +70,4 @@ https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/archit
 ### Frameworks, Specifications, Standards, Education and Training
 ![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
 ![Frameworks, Specifications, Standards, Education and Training](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_Framework_Specifications_Standards_Education.jpg)
+
