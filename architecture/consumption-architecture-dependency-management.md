@@ -24,7 +24,15 @@ As an open source software producer and a consumer, I'd like to contribute to op
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
 # Open Source Software Dependency Management 
-Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu) has shown that among the surveyed comemrcial software:
+Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. 
+
+[SonaType latest state of the software supply chain report](https://www.sonatype.com/state-of-the-software-supply-chain/Introduction) has show among the monitored OSS ecosystems:
+* An average 29% of year-over year growth of OSS projects
+* Demands for open source ecosystems are still growing, measured by the numder of download requests
+* The number of malicious packages tripled in 2023 compared to 2022. 
+* In September 2023, 245,032 malicious packages discovered, 2x all previous years (2019-2022) combinedthe 
+  
+[Synopsys latest OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu) has shown that among the surveyed comemrcial software:
 * 96% of the total codebase contained open source.
 * 77% of all code in the total code base originated from open source
 * 84% of the codebases contained at least one open source vulnerability
