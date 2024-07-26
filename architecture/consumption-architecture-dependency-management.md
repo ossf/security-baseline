@@ -20,7 +20,12 @@ As an open source software producer and a consumer, I'd like to contribute to op
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
 
 # Open Source Software Dependency Management 
+Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. Open source software dependency management is critical to sustain software security and reliability. 
 
+![OSS powers critical infrastructure](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF%20Practitioner%20Framework%20_Synopsys_OSSRA_Codebase.jpg)
+ <br /> Source: [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu)
+![OSS vulnerabilities](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF%20Practitioner%20Framework%20_Synopsys_OSSRA_Vuln.jpg)
+ <br /> Source: [Synopsys 2024 OpenSource Security and Risk Analysis Report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?utm_source=google&utm_medium=cpc&utm_term=open_source_security_tool&utm_campaign=G_S_OSSRA_BMM&cmp=ps-SIG-G_S_OSSRA_BMM&gad_source=1&gclid=CjwKCAjwko21BhAPEiwAwfaQCKkvVOJOS1uu4S7zF1p9uqhcdwrCNXNbMl7EcD5L0SIgS58-jUj_OxoC7FwQAvD_BwE#introMenu)
 
 Reference and previous work by BEST WG:  
 * [OSS Supply Chain Threats, threats definition](https://github.com/ossf/toolbelt/tree/main/threats). 
