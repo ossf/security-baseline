@@ -1,5 +1,3 @@
-# work in progress.....welcome contributions, review feedbacks, etc. 
-
 # Introduction
 ## Context and Scope
 This document captures technologies that are hosted in OpenSSF. The document covers some of the Open Source Software(OSS) security tools and frameworks that make these OpenSSF technologies possible. The technical stack in this document demonstrates how OSS security technologies make software supply chain more secure. 
@@ -36,14 +34,15 @@ Open source software dependency management is critical to sustain software secur
 
 ## Open Source Software Supply Chain Threats
 
-Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. For detailes of the threats, check out the threat modeling that OpenSSF [BEST WG](https://github.com/ossf/wg-best-practices-os-developers) and [End User WG](https://github.com/ossf/wg-endusers) have conducted:
+Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. OSS prodcuers are also OSS consumers. For detailes of the threats, check out the threat modeling that OpenSSF [BEST WG](https://github.com/ossf/wg-best-practices-os-developers) and [End User WG](https://github.com/ossf/wg-endusers) have conducted:
 * [Threats against OSS producers](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Threats.md)
 * [Threats against OSS producers' development environments](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Environment_Threats.md)
 * [Threats against OSS Source Code Management(SCM) systems](https://github.com/ossf/toolbelt/blob/main/threats/Source_Code_Management_Threats.md)
 * [Threats against OSS CI/CD systems](https://github.com/ossf/toolbelt/blob/main/threats/Build%2BCI_Threats.md)
-* [Threats against OSS publication/distribution](https://github.com/ossf/toolbelt/blob/main/threats/Build%2BCI_Threats.md)
+* [Threats against OSS publication/distribution](https://github.com/ossf/toolbelt/blob/main/threats/Publication_Threats.md)
 * [Threat Model of Enterprise Open Source Supply Chains](https://docs.google.com/document/d/1kNCETEfm2_Pm9dFwmDJfph0TtUCK1-3ERL4OjA9UKYI/edit)
 
+Every OSS threat category requires OSS depenednecy management to reduce the risks from the OSS supply chain threats.      
 
 ![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
 
