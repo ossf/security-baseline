@@ -56,7 +56,7 @@ Every OSS threat category requires OSS depenednecy management to reduce the risk
 
 ## Open source software Security Technologies for OSS Dependency Management 
 
-This section provides an overview of the technology stack that provides OSS dependency management , and dives deeper into a few areas in below order. Each area depends on the areas below to provide technology inputs.  
+This section provides an overview of the technology stack that provides OSS dependency management , and dives deeper into each of the below areas. Each area depends on the areas below it to provide technology inputs.  
 * [Dependency Ingestion Policy and Enforcement](#dependency-ingestion-policy-and-enforcement)
 * [Security Insights into OSS Projects](#security-insights-into-oss-projects)
 * [Generating Verifiable Cryptographically Signed Artifacts Attestation, Metadata](#generating-verifiable-cryptographically-signed-artifacts-attestation-metadata)
