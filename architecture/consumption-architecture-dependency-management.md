@@ -54,20 +54,31 @@ Every OSS threat category requires OSS depenednecy management to reduce the risk
 
 ![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
 
-## OSS Security Technologies for More Effective Dependency Management
+## Open source software Security Technologies for OSS Dependency Management 
+
+This section provides an overview of the technology stack that provides OSS dependency management , and dives deeper into a few areas in below order. Each area depends on the areas below to provide technology inputs.  
+* [Dependency Ingestion Policy and Enforcement](#dependency-ingestion-policy-and-enforcement)
+* [Security Insights into OSS Projects](#security-insights-into-oss-projects)
+* [Generating Verifiable Cryptographically Signed Artifacts Attestation, Metadata](#generating-verifiable-cryptographically-signed-artifacts-attestation-metadata)
+* [Ecosystem Support](#ecosystem-support)
+* [Frameworks, Specifications, Standards, Education and Training](#frameworks-specifications-standards-education-and-training)
+  
 
 ### Overview
+
+OpenSSF and its sister/brother foundations provide OSS technologies to raise security awareness through education and training, establish best practices and standards,  
+
 ![overview](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
 
-### Security Tools - Dependency Ingestion Policy and Enforcement
+### Dependency Ingestion Policy and Enforcement
 ![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
 ![policy and enforcement](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
 
-### Security Insights
+### Security Insights into OSS Projects
 ![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
 ![Security Insights](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_Security_Insights.jpg)
 
-###  Generating Cryptographically Signed Artifacts Attestation, Metadata
+###  Generating Verifiable Cryptographically Signed Artifacts Attestation, Metadata
 ![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
 ![Security Metadata](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Attestation.jpg)
 
