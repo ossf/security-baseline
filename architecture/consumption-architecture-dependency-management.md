@@ -42,7 +42,7 @@ Open source software dependency management is critical to sustain software secur
 
 ## Open Source Software Supply Chain Threats
 
-Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. OSS prodcuers are also OSS consumers. For detailes of the threats, check out the threat modeling that OpenSSF [BEST WG](https://github.com/ossf/wg-best-practices-os-developers) and [End User WG](https://github.com/ossf/wg-endusers) have conducted:
+Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. OSS prodcuers are also OSS consumers. For detailes of the threats, check out the threat modeling that OpenSSF [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers) and [End User Working Group](https://github.com/ossf/wg-endusers) have conducted:
 * [Threats against OSS producers](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Threats.md)
 * [Threats against OSS producers' development environments](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Environment_Threats.md)
 * [Threats against OSS Source Code Management(SCM) systems](https://github.com/ossf/toolbelt/blob/main/threats/Source_Code_Management_Threats.md)
@@ -50,7 +50,7 @@ Security threats exist in every link of the OSS supply chain, from upstream main
 * [Threats against OSS publication/distribution](https://github.com/ossf/toolbelt/blob/main/threats/Publication_Threats.md)
 * [Threat Model of Enterprise Open Source Supply Chains](https://docs.google.com/document/d/1kNCETEfm2_Pm9dFwmDJfph0TtUCK1-3ERL4OjA9UKYI/edit)
 
-Every OSS threat category requires OSS depenednecy management to reduce the risks from the OSS supply chain threats.      
+Every OSS threat category requires OSS dependency management to reduce the risks from the OSS supply chain threats. The diagram below demonstrates the significance of choosing safe dependencies by OSS producers when start developing their software, securing the development environment, securing the SCM systems to reduce the risks of unauthorized code which leads to malicious dependencies, ingesting safe dependencies into the CI process from package registries, and securing the package registries to prevent malicioud packages from being uploaded and legit packages from being compromised. OSS consumers need to manage depenendencies to ensure safe OSS consumption to sustain their software/product/service security and reliability.    
 
 ![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
 
@@ -66,11 +66,27 @@ This section provides an overview of the technology stack that provides OSS depe
 
 ### Overview
 
-OpenSSF and its sister/brother foundations provide OSS technologies to raise security awareness through education and training, establish best practices and standards,  
+OpenSSF and its sister/brother foundations provide OSS technologies to raise security awareness through education and training, establish best software development practices, guides, security standards, frameworks, specifications, provide security tools to improve open source software dependency management. The security tools are built on top of the ecosystem support to make open source software ecosystems more secure.
+
+Every layer in the following diagram provides support to the layers above it, relies on the underneath layers for foundational support. 
 
 ![overview](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
 
 ### Dependency Ingestion Policy and Enforcement
+To sustain OSS dependency management at scale, with accuracy and efficiency, we need technical solutions that can define software ingestion policies and enforce those policies. It's analogous to someone being allowed into your home with your permission. 
+
+To sustain OSS dependency management at scale, with accuracy and efficiency, we need technical solutions that can define software ingestion policies and enforce those policies. For example, if an open source software has not been maintained actively, the software should not be introduced into your code base. 
+
+The following diagram has illustrated that dependency ingestion policy and enforcement is a very green field on OSS producer side (This may change soon with Minder joining OpenSSF as an OSS project). On the customer side, organizations have their own governance and technologies in managing OSS dependencies. 
+
+[giituf](https://github.com/gittuf/gittuf) is an OpenSSF [sandbox](https://github.com/ossf/tac/blob/main/process/project-lifecycle.md#stages---definitions--expectations) project hosted in the [Supply Chain Integrity Working Group](https://github.com/ossf/wg-supply-chain-integrity). It provides a security layer over Git. It's in active development phase and conducts policy validation. 
+
+[Witness](https://github.com/in-toto/witness) is a CNCF project under the [in-toto](https://github.com/in-toto) umbrella that protects software supply chain integrity. Witness comes with an OPA policy engine that verifies the software attestation and ensures that your dependency was handled safely from source to deployment. Witness in-toto attestation feature is available for CI systems on OSS producer side and consumer side  
+
+[Repository Service for TUF(RSTUF](https://github.com/repository-service-tuf/repository-service-tuf) is an OpenSSF [incubating](https://github.com/ossf/tac/blob/main/process/project-lifecycle.md#stages---definitions--expectations) project. The verification component of RSTUF provides metadata verification to ensure the software that's being ingested is as expected. RSTUF metadata verification can be used by both CI systems on OSS producer side and consumer side.    
+
+The target state of achieving end to end OSS supply chain security is to have policy enforcement at every link of the supply chain. As software flows from OSS producers' development environment into the SCM system, a Policy Enforcement Point (PEP) should only allow the software into the SCM system when the software meets pre-defined policies, CI system should fail the integration that's triggered by an SCM event if PEP policy validation fails, package registry should block a package being published or prevent a package from being distributed when PEP identified policy violation. Similar policy enforcement should be adopted on the consumer side as well.
+
 ![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
 ![policy and enforcement](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
 
