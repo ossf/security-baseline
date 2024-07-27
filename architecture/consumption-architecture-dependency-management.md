@@ -1,9 +1,9 @@
 # Introduction
 ## Context and Scope
-This document captures technologies that are hosted in OpenSSF and some technologies in CNCF. The technical stack in this document demonstrates how OSS security technologies make software supply chain more secure. 
+This document captures technologies that are hosted in OpenSSF and some technologies in CNCF. The technical stack in this document demonstrates how OSS security technologies make software supply chain more secure through dependency management. 
 
 The goals of this document are:
-1. To help open source producers quickly navigate the OSS security technology landscape, discover, adopt and contribute to technical initiitves. 
+1. To help open source producers quickly navigate the OSS security technology landscape, discover, adopt and contribute to technical initiatives. 
 2. To provide an easy model for our end user organizations large and small to have a framework/reference architecture to help them think about adopting OpenSSF technical projects and guidance. 
 
 This document is based on the previous work conducted in OpenSSF [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers):
