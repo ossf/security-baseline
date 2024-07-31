@@ -41,7 +41,7 @@ Open source software is the foundation of the digital world we live in. It power
 Open source software dependency management is critical to sustain software security and reliability. 
 
 ## Open Source Software Supply Chain Threats
-![OSS Supply Chain Threats](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
+![OSS Supply Chain Threats](./images/OpenSSF_OSS_Supply_Chain_Threats.jpg)
 
 Security threats exist in every link of the OSS supply chain, from upstream maintainers to consumers. OSS producers are also OSS consumers. For details of the threats, check out the threat modeling that OpenSSF [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers) and [End User Working Group](https://github.com/ossf/wg-endusers) have conducted:
 * [Threats against OSS producers](https://github.com/ossf/toolbelt/blob/main/threats/Developer_Threats.md)
@@ -64,7 +64,7 @@ This section provides an overview of the technology stack that provides OSS depe
   
 
 ### Overview
-![overview](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
+![overview](./images/OpenSSF_Practitioner_Framework%20_Overview.jpg)
 
 OpenSSF and its peer foundations provide OSS technologies to raise security awareness through education and training, establish best software development practices, guides, security standards, frameworks, specifications, and provide security tools to improve open source software dependency management. The security tools are built on top of the ecosystem support to make open source software ecosystems more secure.
 
@@ -72,8 +72,8 @@ Every layer in the diagram provides support to the layers above it, relies on th
 
 ### Dependency Ingestion Policy and Enforcement
 
-![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
-![policy and enforcement](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
+![State](./images/OpenSSF_Practitioner_Framework_state.jpg)
+![policy and enforcement](./images/OpenSSF_Practitioner_Framework%20_Ingestion_Policy_and_Enforcement.jpg)
 
 To sustain OSS dependency management at scale, with accuracy and efficiency, we need technical solutions that can define software ingestion policies and enforce those policies. For example, if an open source software has not been maintained actively, the software should not be introduced into your code base. 
 
@@ -87,8 +87,8 @@ The target state of achieving end to end OSS supply chain security is to have po
 
 ### Security Insights into OSS Projects
 
-![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
-![Security Insights](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_Security_Insights.jpg)
+![State](./images/OpenSSF_Practitioner_Framework_state.jpg)
+![Security Insights](./images/OpenSSF_Practitioner_Framework_Security_Insights.jpg)
 
 Gaining insights into OSS Projects is the collective effort of multiple technologies across multiple layers:
 * Security Metadata Data Aggregation and Synthesis ( Health Metrics, SBOM, VEX, OSV,  in-toto Attestation, SLSA Provenance, TUF Metadata )
@@ -105,8 +105,8 @@ Gaining insights into OSS Projects is the collective effort of multiple technolo
 
 ###  Generating Verifiable Cryptographically Signed Artifacts Attestation, Metadata
 
-![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
-![Security Metadata](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework%20_Attestation.jpg)
+![State](./images/OpenSSF_Practitioner_Framework_state.jpg)
+![Security Metadata](./images/OpenSSF_Practitioner_Framework%20_Attestation.jpg)
 
 Signed artifacts are only useful when it's verifiable, as our maintainers always say.
 * OSS Metadata Generation, Storage and Verification ( SBOM, VEX, Attestation, Provenance, TUF Metadata)
@@ -123,14 +123,14 @@ Signed artifacts are only useful when it's verifiable, as our maintainers always
 
 ### Ecosystem Support
 
-![Ecosystem Support](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_Ecosystem_Support.jpg)
+![Ecosystem Support](./images/OpenSSF_Practitioner_Framework_Ecosystem_Support.jpg)
 
 The digram illustrates the supports that OSS projects expect to get from the ecosystems that host the projects, and the typical patterns that OSS consumers in an organization adopt to manage software securities including dependency manageent. 
 
 ### Frameworks, Specifications, Standards, Education and Training
 
-![State](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_state.jpg)
-![Frameworks, Specifications, Standards, Education and Training](https://github.com/Danajoyluck/security-baseline/blob/Danajoyluck-patch-1/architecture/images/OpenSSF_Practitioner_Framework_Framework_Specifications_Standards_Education.jpg)
+![State](./images/OpenSSF_Practitioner_Framework_state.jpg)
+![Frameworks, Specifications, Standards, Education and Training](./images/OpenSSF_Practitioner_Framework_Framework_Specifications_Standards_Education.jpg)
 
 OpenSSF and peer foundations hosts software security frameworks, specifications, standards that propels the development of security tooling. This section focuses on the technologies that we have not got a chance to touch on in the previous sections:
 * [S2C2F](https://github.com/ossf/s2c2f) is an an OpenSSF [incubating](https://github.com/ossf/tac/blob/main/process/project-lifecycle-documents/s2c2f_incubation_stage.md) project in the [Supply Chain Integrity Working Group](https://github.com/ossf/wg-supply-chain-integrity). It's for OSS consumers' organizations. The framework defines how to securely consume OSS dependencies by the developers.
