@@ -3,8 +3,8 @@
 This document captures technologies that are hosted in OpenSSF and some technologies in CNCF. The technical stack in this document demonstrates how OSS security technologies make software supply chain more secure through dependency management. 
 
 The goals of this document are:
-1. To help open source producers quickly navigate the OSS security technology landscape, discover, adopt and contribute to technical initiatives. 
-2. To provide an easy model for our end user organizations large and small to have a framework/reference architecture to help them think about adopting OpenSSF technical projects and guidance. 
+1. To help open source software producers discover, adopt as appropriate, and contribute to technical initiatives of OpenSSF (and related foundations) to improve security. 
+2. To provide an easy model for our end user organizations large and small to have a framework/reference architecture to help them consider adopting OpenSSF technical projects and guidance. 
 
 This document is based on the previous work conducted in OpenSSF [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers):
 * [Open Source Software Supply Chain Threats, Threats Definition](https://github.com/ossf/toolbelt/tree/main/threats). 
@@ -17,7 +17,7 @@ Open source software maintainers, contributors and consumers are the intended au
 
 The document answers these questions:
 * As an open source software producer, I'd like to adopt open source security technologies to produce more secure open source software. What resources does OpenSSF provide? 
-* As an open source software consumer, I'd like to adopt open source security technologies to consume secure open source software. What resources OpenSSF provide? 
+* As an open source software consumer, I'd like to adopt open source security technologies to consume secure open source software. What resources does the OpenSSF provide? 
 * As an open source software producer and a consumer, I'd like to contribute to open source security technologies, which OpenSSF projects need contributors? 
 
 ## Nomenclature
@@ -26,7 +26,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 # Open Source Software Dependency Management 
 Open source software is the foundation of the digital world we live in. It powers critical infrastructure and impacts people's everyday lives. 
 
-[SonaType latest state of the software supply chain report](https://www.sonatype.com/state-of-the-software-supply-chain/Introduction) has show among the monitored OSS ecosystems:
+[Sonatype's latest state of the software supply chain report](https://www.sonatype.com/state-of-the-software-supply-chain/Introduction) has shown among the monitored OSS ecosystems:
 * An average 29% of year-over-year growth of OSS projects
 * Demands for open source ecosystems are still growing, measured by the number of download requests
 * The number of malicious packages tripled in 2023 compared to 2022. 
