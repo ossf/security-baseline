@@ -23,7 +23,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 | Legal | The [version control system] MUST require all [code contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit]. |
 | Legal | The license for the source code MUST be written in a standardized format approved by the [OSI] or [FSF]. |
 | Legal | The license for the source code MUST be maintained in a standard location within the project's [repository]. |
-| Legal | The license for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code license. |
+| Legal | The license for the [released software assets] MUST be written in a standardized format approved by the [OSI] or [FSF], if different from the source code license. |
 
 ### Maturity Level 2 (Incubating)
 
