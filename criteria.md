@@ -10,7 +10,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 |---|---|
 | Access Control | The project's [version control system] MUST require [multi-factor authentication] for users when modifying the project [repository] settings or accessing sensitive data. |
 | Access Control | The project's [version control system] MUST restrict [collaborator] permissions to the lowest available privileges by default. |
-| Access Control | The project's [version control system] MUST prevent accidental direct [commit] against the [primary branch]. |
+| Access Control | The project's [version control system] MUST prevent accidental direct [commits] against the [primary branch]. |
 | Access Control | The project's [version control system] MUST prevent accidental deletion of the [primary branch]. |
 | Build & Release | The project's [build and release pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script. |
 | Build & Release | All [releases] and [released software assets] MUST be assigned a standardized [unique version identifier]. |
@@ -21,7 +21,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 | Quality | The [version control system] MUST be publicly readable and have a static URL. |
 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made. |
 | Legal | The [version control system] MUST require all [code contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit]. |
-| Legal | The license for the source code MUST be written in a standardized format approved by the OSI or FSF. |
+| Legal | The license for the source code MUST be written in a standardized format approved by the [OSI] or [FSF]. |
 | Legal | The license for the source code MUST be maintained in a standard location within the project's [repository]. |
 | Legal | The license for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code license. |
 
@@ -78,3 +78,6 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 [unique version identifier]: ./lexicon.md#unique-version-identifier
 [version control system]: ./lexicon.md#version-control-system
 [vulnerability reporting]: ./lexicon.md#vulnerability-reporting
+
+[FSF]: https://www.fsf.org/
+[OSI]: https://opensource.org/

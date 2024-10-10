@@ -93,7 +93,7 @@ Automated tests or validations that run on [commits](#commit) before they are me
 
 ### Unique Version Identifier
 
-A label assigned to a specific [release](#release) of the software, commonly following semantic versioning (e.g., `v1.2.3`). It includes a major, minor, and patch version number.
+A label assigned to a specific [release](#release) of the software, such as `v1.2.3`. Commonly recommended formats are [Semantic Versioning](https://semver.org/) or [Calendar Versioning](https://calver.org).
 
 ### Version Control System (VCS)
 
