@@ -20,7 +20,7 @@ Any alteration of the project's [codebase](#codebase), [CI/CD Pipelines](#cicd-p
 
 Automated pipelines for Continuous Integration and Continuous Delivery. Responsible for building, testing, and delivering [changes](#changes). These pipelines integrate contributions frequently, enabling rapid and reliable software delivery. CI focuses on testing and building code, while CD delivers software to users.
 
-In the context of the Open Source Project Security Baseline, CI/CD Pipelines does not involve Continuous Deployment.
+In the context of the Open Source Project Security Baseline, CD refers only to _continuous delivery_, not to _continuous deployment_, as sometimes used elsewhere.
 
 ### Code Contributors
 
