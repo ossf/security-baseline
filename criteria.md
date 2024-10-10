@@ -38,7 +38,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects]. |
 | Documentation | The [project documentation] MUST include a guide for [code contributors] that includes the requirements for acceptable contributions. |
 | Documentation | The [project documentation] MUST provide design documentation demonstrating all actions and actors within the system. |
-| Quality | All [released software assets] MUST be [released] with a machine-readable list of all direct and transitive dependencies with their associated version identifier. |
+| Quality | All [software assets] MUST be [released] with a machine-readable list of all direct and transitive dependencies with their associated version identifier. |
 | Quality | Any automated [status checks] for [commits]  MUST pass or require manual intervention prior to merge. |
 | Quality | Any additional code [repositories] produced by the project MUST enforce security requirements as applicable to the status and intent of the respective [codebase]. |
 | Quality | The [version control system] MUST NOT contain generated executable artifacts. |
