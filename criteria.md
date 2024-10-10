@@ -13,7 +13,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 | Access Control | The project's [version control system] MUST prevent accidental direct [commits] against the [primary branch]. |
 | Access Control | The project's [version control system] MUST prevent accidental deletion of the [primary branch]. |
 | Build & Release | The project's [build and release pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script. |
-| Build & Release | All [releases] and [released software assets] MUST be assigned a standardized [unique version identifier]. |
+| Build & Release | All [releases] and [released software assets] MUST be assigned a [unique version identifier]. |
 | Build & Release | Any websites, API responses or other services related to the project development and release MUST be delivered using SSH,HTTPS or other encrypted channels. |
 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles. |
 | Documentation | The [project documentation] MUST provide user guides for all basic functionality. |
