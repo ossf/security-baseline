@@ -31,7 +31,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 |---|---|
 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated. |
 | Access Control | The [project documentation] MUST have a policy that [code contributors] are reviewed prior to granting escalated permissions to sensitive resources. |
-| Build & Release | All [released software assets] MUST be created with consistent, automated [build and release pipeline]. |
+| Build & Release | All [released software assets] MUST be created with consistent, automated [build and release pipelines]. |
 | Build & Release | All [build and release pipelines] MUST use standardized tooling to ingest dependencies at build time. |
 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications. |
 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response. |
