@@ -1,6 +1,6 @@
 # Open Source Project Security Baseline
 
-This document contains the criteria for the baseline. Where applicable, terms should be interpreted according to the definitions in the [OSPS Lexicon](./lexicon.md)
+This document contains the criteria for the baseline. Where applicable, terms must be interpreted according to the definitions in the [OSPS Lexicon](./lexicon.md)
 
 ## Criteria
 
