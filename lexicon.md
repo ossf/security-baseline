@@ -101,7 +101,7 @@ Automated tests or validations that run on [commits](#commit) before they are me
 
 A label assigned to a specific [release](#release) of the software, such as `v1.2.3`. Commonly recommended formats are [Semantic Versioning](https://semver.org/) or [Calendar Versioning](https://calver.org).
 
-### Version Control System (VCS)
+### Version Control System
 
 A tool that tracks [changes](#changes) to files over time and facilitates collaboration among contributors. Examples of version control systems include Git, Subversion, and Mercurial.
 
