@@ -48,6 +48,10 @@ Errors or flaws in the software that cause it to produce incorrect or unintended
 
 [Defects](#defects) in the software that can be leveraged by attackers to gain unauthorized access, execute [arbitrary code](#arbitrary-code), or cause other undesired outcomes.
 
+### License
+
+A legal document that defines the terms under which the software can be used, modified, and distributed. May be stored at the top level of the [repository](#repository) in a file named `LICENSE` or within files in a directory named `LICENSE/`. The license applies to the [codebase](#codebase) and any [released software assets](#released-software-assets), unless otherwise stated.
+
 ### Known Vulnerabilities
 
 Publicly acknowledged [exploitable vulnerabilities](#exploitable-vulnerabilities) that have been identified within the software. These vulnerabilities often have associated advisories, patches, or recommended mitigations.
