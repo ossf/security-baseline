@@ -1,5 +1,7 @@
 # Open Source Project Security Lexicon
 
+This lexicon is intended to provide clear and consistent definitions for terms used in the Open Source Project Security Baseline. These definitions help ensure that criteria are interpreted accurately and consistently across projects.
+
 ## Definitions
 
 ### Arbitrary Code
