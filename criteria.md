@@ -36,7 +36,7 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications. |
 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response. |
 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects]. |
-| Documentation | The [project documentation] MUST include a guide for [code contributors] and approvers that includes the requirements for acceptable contributions.|
+| Documentation | The [project documentation] MUST include a guide for [code contributors] that includes the requirements for acceptable contributions.|
 | Documentation | The [project documentation] MUST provide design documentation demonstrating all actions and actors within the system. |
 | Quality | All [released software assets] MUST be [released] with a machine-readable list of all direct and transitive dependencies with their associated version identifier. |
 | Quality | Any automated [status checks] for [commits]  MUST pass or require manual intervention prior to merge. |

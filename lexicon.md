@@ -22,9 +22,9 @@ In the context of the Open Source Project Security Baseline, CI/CD Pipelines doe
 
 ### Code Contributors
 
-Entities who [commit](#commit) code or [documentation](#project-documentation) to the project. Contributors may include maintainers, [collaborators](#collaborator), or external participants who submit [changes](#changes).
+Entities who [commit](#commit) code or [documentation](#project-documentation) to the project. Code contributors include [collaborators](#collaborator) or external participants who submit [changes](#changes).
 
-In the context of the Open Source Project Security Baseline, Code Contributors does not address non-code contributions such as designing, triaging, reviewing, or testing.
+In the context of the Open Source Project Security Baseline, code contributors does not address non-code contributions such as designing, triaging, reviewing, or testing.
 
 ### Codebase
 
