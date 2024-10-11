@@ -83,7 +83,7 @@ Deliverables provided to users as part of a [release](#release). These assets ca
 
 ### Releases
 
-Specific versions of the software that have been made available to users, typically accompanied by a [unique version identifier](#unique-version-identifier). Each release includes notes on updates and changes.
+Specific versions of the software that have been made available to users, typically accompanied by a [unique version identifier](#unique-version-identifier). Each [release](#release) includes notes on updates and changes.
 
 ### Repository
 
