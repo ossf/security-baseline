@@ -1,0 +1,723 @@
+criteria:
+  - id: OSPS-01
+    level: 1
+    category: Access Control
+    criteria: |
+      The project's version control system MUST require
+      multi-factor authentication for users when
+      modifying the project repository settings or
+      accessing sensitive data.
+    objective: |
+      Protects against unauthorized access to sensitive
+      areas of the project's repository, reducing the risk
+      of account compromise or insider threats.
+    implementation: |
+      Enable multi-factor authentication for the project's
+      version control system, requiring users to provide
+      a second form of authentication when accessing
+      sensitive data or modifying repository settings.
+    control_mappings:  # TODO
+  - id: OSPS-02
+    level: 1
+    category: Access Control
+    criteria: |
+      The project's version control system MUST restrict
+      collaborator permissions to the lowest available
+      privileges by default.
+    objective: |
+      Reduces the risk of unauthorized access to the project's
+      repository by limiting the permissions granted to
+      collaborators.
+    implementation: |
+      Configure the project's version control system to
+      assign the lowest available permissions to collaborators
+      by default, granting additional permissions only when
+      necessary.
+    control_mappings:  # TODO
+  - id: OSPS-03
+    level: 1
+    category: Access Control
+    criteria: |
+      The project's version control system MUST prevent
+      accidental direct commits against the primary branch.
+    objective: |
+      Reduces the risk of accidental changes to the primary
+      branch of the project's repository, ensuring that
+      modifications are reviewed and approved before being
+      committed.
+    implementation: |
+      Configure the project's version control system to
+      prevent direct commits to the primary branch, requiring
+      changes to be made through pull requests or other
+      review mechanisms.
+    control_mappings:  # TODO
+  - id: OSPS-04
+    level: 1
+    category: Access Control
+    criteria: |
+      The project's version control system MUST prevent
+      accidental deletion of the primary branch.
+    objective: |
+      Protects the primary branch of the project's repository
+      from accidental deletion, ensuring that the project's
+      history and codebase are preserved.
+    implementation: |
+      Configure the project's version control system to
+      prevent the accidental deletion of the primary branch,
+      requiring additional confirmation or permissions to
+      perform such actions.
+    control_mappings:  # TODO
+  - id: OSPS-05
+    level: 1
+    category: Build & Release
+    criteria: |
+      The project's build and release pipelines MUST NOT
+      execute arbitrary code that is input from outside of
+      the build script.
+    objective: |
+      Reduces the risk of code injection or other security
+      vulnerabilities in the project's build and release
+      processes by restricting the execution of external
+      code.
+    implementation: |
+      Ensure that the project's build and release pipelines
+      do not execute arbitrary code provided from external
+      sources, limiting the potential for security exploits.
+    control_mappings:  # TODO
+  - id: OSPS-06
+    level: 1
+    category: Build & Release
+    criteria: |
+      All releases and released software assets MUST be
+      assigned a unique version identifier.
+    objective: |
+      Ensures that each release and software asset produced
+      by the project is uniquely identified, enabling users
+      to track changes and updates to the project over time.
+    implementation: |
+      Assign a unique version identifier to each release and
+      software asset produced by the project, following a
+      consistent naming convention or numbering scheme.
+    control_mappings:  # TODO
+  - id: OSPS-07
+    level: 1
+    category: Build & Release
+    criteria: |
+      Any websites, API responses or other services related
+      to the project development and release MUST be delivered
+      using SSH, HTTPS or other encrypted channels.
+    objective: |
+      Protects the confidentiality and integrity of data
+      transmitted between the project's services and users,
+      reducing the risk of eavesdropping or data tampering.
+    implementation: |
+      Configure the project's websites, API responses, and
+      other services to use encrypted channels such as SSH
+      or HTTPS for data transmission, ensuring that data is
+      protected in transit.
+    control_mappings:  # TODO
+  - id: OSPS-09
+    level: 1
+    category: Documentation
+    criteria: |
+      The project MUST have one or more mechanisms for public
+      discussions about proposed changes and usage obstacles.
+    objective: |
+      Encourages open communication and collaboration within
+      the project community, enabling users to provide feedback
+      and discuss proposed changes or usage challenges.
+    implementation: |
+      Establish one or more mechanisms for public discussions
+      within the project, such as mailing lists, forums, or
+      issue trackers, to facilitate communication and feedback
+      from the community.
+    control_mappings:  # TODO
+  - id: OSPS-10
+    level: 1
+    category: Documentation
+    criteria: |
+      The project documentation MUST include an explanation
+      of the contribution process.
+    objective: |
+      Provides guidance to new contributors on how to
+      participate in the project, outlining the steps
+      required to submit changes or enhancements to the
+      project's codebase.
+    implementation: |
+      Document the contribution process in the project's
+      documentation, detailing the steps for submitting
+      changes, creating pull requests, and engaging with
+      the project maintainers.
+    control_mappings:  # TODO
+  - id: OSPS-11
+    level: 1
+    category: Documentation
+    criteria: |
+      The project documentation MUST provide user guides
+      for all basic functionality.
+    objective: |
+      Helps users understand how to use the project's
+      features and functionality, reducing the barrier
+      to entry for new users and contributors.
+    implementation: |
+      Create user guides or documentation for all basic
+      functionality of the project, explaining how to
+      install, configure, and use the project's features.
+    control_mappings:  # TODO
+  - id: OSPS-12
+    category: Quality
+    criteria: |
+      The version control system MUST be publicly readable
+      and have a static URL.
+    objective: |
+      Enables users to access and review the project's
+      source code and history, promoting transparency
+      and collaboration within the project community.
+    implementation: |
+      Ensure that the project's version control system
+      is publicly readable and accessible via a static
+      URL, allowing users to view the codebase and history
+      of the project.
+    control_mappings:  # TODO
+  - id: OSPS-13
+    level: 1
+    category: Quality
+    criteria: |
+      The version control system MUST contain a publicly
+      readable record of all changes made, who made the
+      changes, and when the changes were made.
+    objective: |
+      Provides transparency and accountability for changes
+      made to the project's codebase, enabling users to
+      track modifications and understand the history of
+      the project.
+    implementation: |
+      Maintain a publicly readable record of all changes
+      made to the project's version control system, including
+      information on who made the changes and when they were
+      made, to provide visibility into the project's history.
+    control_mappings:  # TODO
+  - id: OSPS-14
+    level: 1
+    category: Legal
+    criteria: |
+      The version control system MUST require all code
+      contributors to assert that they are legally
+      authorized to commit the associated contributions
+      on every commit.
+    objective: |
+      Ensures that code contributors are aware of and
+      acknowledge their legal responsibility for the
+      contributions they make to the project, reducing
+      the risk of intellectual property disputes.
+    implementation: |
+      Require all code contributors to assert that they
+      are legally authorized to commit their contributions
+      on every commit, confirming their understanding of
+      the legal implications of their code changes.
+    control_mappings:  # TODO
+  - id: OSPS-15
+    level: 1
+    category: Legal
+    criteria: |
+      The license for the source code MUST be written in
+      a standardized format approved by the OSI or FSF.
+    objective: |
+      Ensures that the project's source code is distributed
+      under a recognized and legally enforceable license,
+      providing clarity on how the code can be used and
+      shared by others.
+    implementation: |
+      Choose a license for the project's source code that
+      is written in a standardized format approved by the
+      Open Source Initiative (OSI) or Free Software Foundation
+      (FSF), ensuring that the terms are clear and enforceable.
+    control_mappings:  # TODO
+  - id: OSPS-16
+    level: 1
+    category: Legal
+    criteria: |
+      The license for the source code MUST be maintained
+      in a standard location within the project's repository.
+    objective: |
+      Ensures that the project's source code is distributed
+      with the appropriate license terms, making it clear
+      to users and contributors how the code can be used
+      and shared.
+    implementation: |
+      Include the project's source code license in a standard
+      location within the project's repository, such as a
+      LICENSE file, to provide visibility and clarity on the
+      licensing terms.
+    control_mappings:  # TODO
+  - id: OSPS-17
+    level: 1
+    category: Legal
+    criteria: |
+      The license for the released software assets MUST be
+      written in a standardized format approved by the OSI
+      or FSF, if different from the source code license.
+    objective: |
+      Ensures that the project's released software assets
+      are distributed under a recognized and legally enforceable
+      license, separate from the source code license if necessary,
+      providing clarity on how the software can be used and shared.
+    implementation: |
+      Choose a license for the project's released software assets
+      that is written in a standardized format approved by the
+      Open Source Initiative (OSI) or Free Software Foundation
+      (FSF), if different from the source code license, to clarify
+      the terms under which the software can be used and shared.
+    control_mappings:  # TODO
+  - id: OSPS-40
+    level: 2
+    category: Access Control
+    criteria: |
+      The project's permissions in CI/CD pipelines MUST be
+      configured to the lowest available privileges except
+      when explicitly elevated.
+    objective: |
+      Reduces the risk of unauthorized access to the project's
+      build and release processes by limiting the permissions
+      granted to users and services within the CI/CD pipelines.
+    implementation: |
+      Configure the project's CI/CD pipelines to assign the
+      lowest available permissions to users and services by
+      default, elevating permissions only when necessary for
+      specific tasks.
+    control_mappings:  # TODO
+  - id: OSPS-41
+    level: 2
+    category: Access Control
+    criteria: |
+      The project documentation MUST have a policy that
+      code contributors are reviewed prior to granting
+      escalated permissions to sensitive resources.
+    objective: |
+      Ensures that code contributors are vetted and reviewed
+      before being granted elevated permissions to sensitive
+      resources within the project, reducing the risk of
+      unauthorized access or misuse.
+    implementation: |
+      Establish a policy in the project documentation that
+      requires code contributors to be reviewed and approved
+      before being granted escalated permissions to sensitive
+      resources, such as production environments or critical
+      systems.
+    control_mappings:  # TODO
+  - id: OSPS-42
+    level: 2
+    category: Build & Release
+    criteria: |
+      All released software assets MUST be created with
+      consistent, automated build and release pipelines.
+    objective: |
+      Ensures that the project's software assets are built
+      and released using consistent and automated processes,
+      reducing the risk of errors or inconsistencies in the
+      deployment and distribution of the software.
+    implementation: |
+      Implement automated build and release pipelines for
+      all software assets produced by the project, ensuring
+      that the process is consistent, repeatable, and reliable.
+    control_mappings:  # TODO
+  - id: OSPS-43
+    level: 2
+    category: Build & Release
+    criteria: |
+      All build and release pipelines MUST use standardized
+      tooling to ingest dependencies at build time.
+    objective: |
+      Ensures that the project's build and release pipelines
+      use standardized tools and processes to manage dependencies,
+      reducing the risk of compatibility issues or security
+      vulnerabilities in the software.
+    implementation: |
+      Use standardized tooling and processes to ingest
+      dependencies at build time in the project's build and
+      release pipelines, ensuring that dependencies are managed
+      consistently and securely.
+    control_mappings:  # TODO
+  - id: OSPS-44
+    level: 2
+    category: Build & Release
+    criteria: |
+      All releases MUST include a descriptive log of functional
+      and security modifications.
+    objective: |
+      Provides transparency and accountability for changes
+      made to the project's software releases, enabling users
+      to understand the modifications and improvements included
+      in each release.
+    implementation: |
+      Include a descriptive log of functional and security
+      modifications in all project releases, detailing the
+      changes made and the impact on the software's functionality
+      and security.
+    control_mappings:  # TODO
+  - id: OSPS-45
+    level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a policy for
+      coordinated vulnerability reporting, with a clear
+      timeframe for response.
+    objective: |
+      Establishes a process for reporting and addressing
+      vulnerabilities in the project, ensuring that security
+      issues are handled promptly and transparently.
+    implementation: |
+      Document a policy for coordinated vulnerability reporting
+      in the project documentation, outlining the process for
+      reporting security issues and the expected timeframe for
+      response and resolution.
+    control_mappings:  # TODO
+  - id: OSPS-46
+    level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a mechanism for
+      reporting defects.
+    objective: |
+      Enables users and contributors to report defects or
+      issues with the project's software, facilitating
+      communication and collaboration on bug fixes and
+      improvements.
+    implementation: |
+      Provide a mechanism for reporting defects in the project
+      documentation, such as an issue tracker or bug reporting
+      system, to allow users and contributors to report and
+      track issues with the software.
+    control_mappings:  # TODO
+  - id: OSPS-47
+    level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a guide for
+      code contributors that includes the requirements for
+      acceptable contributions.
+    objective: |
+      Provides guidance to code contributors on how to
+      submit changes and enhancements to the project's
+      codebase, outlining the standards and expectations
+      for acceptable contributions.
+    implementation: |
+      Create a guide for code contributors in the project
+      documentation, detailing the requirements and standards
+      for acceptable contributions, including coding conventions,
+      testing procedures, and submission guidelines.
+    control_mappings:  # TODO
+  - id: OSPS-48
+    level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST provide design
+      documentation demonstrating all actions and actors
+      within the system.
+    objective: |
+      Provides an overview of the project's design and
+      architecture, illustrating the interactions and
+      components of the system to help users and contributors
+      understand the project's functionality.
+    implementation: |
+      Include design documentation in the project documentation,
+      demonstrating the actions and actors within the system,
+      to provide an overview of the project's design and
+      architecture.
+    control_mappings:  # TODO
+  - id: OSPS-49
+    level: 2
+    category: Quality
+    criteria: |
+      All software assets MUST be released with a machine-readable
+      list of all direct and transitive dependencies with their
+      associated version identifier.
+    objective: |
+      Provides transparency and accountability for the
+      project's dependencies, enabling users and contributors
+      to understand the software's dependencies and versions.
+    implementation: |
+      Include a machine-readable list
+      of all direct and transitive dependencies with their
+      associated version identifiers in all software assets
+      released by the project, ensuring visibility and clarity
+      on the dependencies used.
+    control_mappings:  # TODO
+  - id: OSPS-50
+    level: 2
+    category: Quality
+    criteria: |
+      Any automated status checks for commits MUST pass
+      or require manual intervention prior to merge.
+    objective: |
+      Ensures that code changes are reviewed and validated
+      before being merged into the project's codebase, reducing
+      the risk of introducing errors or vulnerabilities.
+    implementation: |
+      Implement automated status checks for commits that
+      must pass or require manual intervention before changes
+      are merged into the project's codebase, ensuring that
+      code changes are reviewed and validated.
+    control_mappings:  # TODO
+  - id: OSPS-51
+    level: 2
+    category: Quality
+    criteria: |
+      Any additional code repositories produced by the
+      project MUST enforce security requirements as applicable
+      to the status and intent of the respective codebase.
+    objective: |
+      Ensures that additional code repositories produced by
+      the project adhere to security requirements appropriate
+      for the codebase's status and intent, reducing the risk
+      of security vulnerabilities or misconfigurations.
+    implementation: |
+      Enforce security requirements in any additional code
+      repositories produced by the project, aligning the
+      security controls with the status and intent of the
+      respective codebase to mitigate risks.
+    control_mappings:  # TODO
+  - id: OSPS-52
+    level: 2
+    category: Quality
+    criteria: |
+      The version control system MUST NOT contain generated
+      executable artifacts.
+    objective: |
+      Reduces the risk of including generated executable
+      artifacts in the project's version control system,
+      ensuring that only source code and necessary files
+      are stored in the repository.
+    implementation: |
+      Avoid storing generated executable artifacts in the
+      project's version control system, focusing on source
+      code and necessary files to maintain a clean and
+      efficient repository.
+    control_mappings:  # TODO
+  - id: OSPS-70
+    level: 3
+    category: Access Control
+    criteria: |
+      The project's version control system MUST require
+      multi-factor authentication that does not include
+      SMS for users when modifying the project repository
+      settings or accessing sensitive data.
+    objective: |
+      Enhances the security of the project's version control
+      system by requiring multi-factor authentication methods
+      that are more resistant to account compromise or
+      interception.
+    implementation: |
+      Enable multi-factor authentication methods that do not
+      include SMS for users accessing sensitive data or modifying
+      repository settings in the project's version control system,
+      enhancing the security of user accounts.
+    control_mappings:  # TODO
+  - id: OSPS-71
+    level: 3
+    category: Build & Release
+    criteria: |
+      The project documentation MUST include a policy to
+      address applicable Software Composition Analysis results
+      prior to any release.
+    objective: |
+      Ensures that potential security vulnerabilities or
+      licensing issues identified by Software Composition
+      Analysis tools are addressed before software releases,
+      reducing the risk of shipping insecure or non-compliant
+      software.
+    implementation: |
+      Document a policy in the project documentation to address
+      applicable Software Composition Analysis results before
+      any release, ensuring that security vulnerabilities and
+      licensing issues are resolved or mitigated.
+    control_mappings:  # TODO
+  - id: OSPS-72
+    level: 3
+    category: Documentation
+    criteria: |
+      The project documentation MUST define a cadence in
+      which known vulnerabilities are evaluated, and exploitable
+      vulnerabilities are either fixed or verified as unexploitable.
+    objective: |
+      Establishes a process for evaluating and addressing
+      known vulnerabilities in the project's software, ensuring
+      that security issues are managed and resolved in a timely
+      manner.
+    implementation: |
+      Define a cadence in the project documentation for evaluating
+      known vulnerabilities, fixing exploitable vulnerabilities,
+      and verifying unexploitable vulnerabilities, to ensure that
+      security issues are addressed promptly and effectively.
+    control_mappings:  # TODO
+  - id: OSPS-73
+    level: 3
+    category: Documentation
+    criteria: |
+      The project documentation MUST include descriptions
+      of all input and output interfaces of the released
+      software assets.
+    objective: |
+      Provides users and developers with an understanding
+      of the input and output interfaces of the project's
+      software assets, enabling integration and interaction
+      with external systems.
+    implementation: |
+      Include descriptions of all input and output interfaces
+      of the released software assets in the project documentation,
+      detailing how users and developers can interact with the
+      software and integrate it with other systems.
+    control_mappings:  # TODO
+
+lexicon:
+  - term: Arbitrary Code
+    definition: |
+      Code provided by an external source that is executed by a
+      system without validation or restriction.
+  - term: Build and Release Pipeline
+    definition: |
+      A series of automated processes that compile and deploy
+      software. Similar to the generic term CI/CD Pipelines, but
+      this term excludes some pipelines, such as pre-merge status
+      checks.
+  - term: Changes
+    definition: |
+      Any alteration of the project's codebase, CI/CD Pipelines,
+      or documentation. This may include addition, deletion, or
+      modification of content.
+  - term: CI/CD Pipelines
+    definition: |
+      Automated pipelines for Continuous Integration and Continuous
+      Delivery. Responsible for building, testing, and delivering
+      changes. These pipelines integrate contributions frequently,
+      enabling rapid and reliable software delivery. CI focuses on
+      testing and building code, while CD delivers software to users.
+
+      In the context of the Open Source Project Security Baseline,
+      CI/CD Pipelines does not involve Continuous Deployment.
+  - term: Code Contributors
+    definition: |
+      Entities who commit code or documentation to the project.
+      Code contributors include collaborators or external participants
+      who submit changes.
+
+      In the context of the Open Source Project Security Baseline,
+      code contributors does not address non-code contributions such
+      as designing, triaging, reviewing, or testing.
+  - term: Codebase
+    definition: |
+      The collection of source code and related assets that make
+      up the project. The codebase includes all files necessary to
+      build and test the software. Lives in the repository, sometimes
+      alongside documentation and CI/CD pipelines. The contents of
+      the codebase are the primary deliverable in a release.
+  - term: Collaborator
+    definition: |
+      A user with access to the project's version control system
+      who can commit to the codebase, approve changes, or manage
+      the repository settings. Collaborators may have varying
+      permission levels based on their role in the project.
+  - term: Commit
+    definition: |
+      A record of a single change submitted to the version control
+      system. Each commit includes details such as the modifications
+      made, the contributor who made them, and the timestamp of the change.
+  - term: Defects
+    definition: |
+      Errors or flaws in the software that cause it to produce
+      incorrect or unintended results, or to behave in an unintended
+      way. Defects can include bugs, vulnerabilities, or other issues
+      that impact the software's functionality or security. Defects
+      may have originally been intentional, but a change in environment
+      or understanding has made them undesirable.
+  - term: Exploitable Vulnerabilities
+    definition: |
+      Defects in the software that can be leveraged by attackers
+      to gain unauthorized access, execute arbitrary code, or cause
+      other undesired outcomes.
+  - term: License
+    definition: |
+      A legal document that defines the terms under which the software
+      can be used, modified, and distributed. May be stored at the top
+      level of the repository in a file named `LICENSE` or within files
+      in a directory named `LICENSE/`. The license applies to the codebase
+      and any released software assets, unless otherwise stated.
+  - term: Known Vulnerabilities
+    definition: |
+      Publicly acknowledged exploitable vulnerabilities that have
+      been identified within the software. These vulnerabilities often
+      have associated advisories, patches, or recommended mitigations.
+  - term: Multi-factor Authentication
+    definition: |
+      An authentication method that requires two or more verification
+      factors (e.g., a password and a token) to gain access to a resource.
+      This method strengthens security by requiring multiple forms of identification.
+  - term: Primary Branch
+    definition: |
+      The main development branch in the version control system,
+      representing the latest stable codebase. Releases are typically
+      made from this branch. Commonly named `main` or `master`. In some
+      situations where branches are not featured, a repository with
+      forked repositories will have the original repo acting as an
+      equivalent to the primary branch.
+  - term: Project Documentation
+    definition: |
+      Written materials related to the project, such as user guides,
+      developer guides, and contribution guidelines. These documents
+      help users and developers understand, contribute to, and interact
+      with the software. At release time, this may include provenance
+      information, licensing details, and other metadata.
+  - term: Provenance
+    definition: |
+      Information about the origin and history of the released software
+      assets. This may include details about its development, dependencies,
+      vulnerabilities, contributors, and licensing.
+  - term: Release
+    definition: |
+      - _(verb)_ The process of making a version-controlled bundle of
+        assets available to users.
+      - _(noun)_ A version-controlled bundle of code, documentation, and
+        other assets made available to users. A release often includes
+        release notes that describe the changes.
+  - term: Released Software Assets
+    definition: |
+      Deliverables provided to users as part of a release. These assets
+      can include binaries, libraries, or containers.
+  - term: Releases
+    definition: |
+      Specific versions of the software that have been made available
+      to users, typically accompanied by a unique version identifier.
+      Each release includes notes on updates and changes.
+  - term: Repository
+    definition: |
+      A storage location managed by a version control system where the
+      project's code, documentation, and other resources are stored. It
+      tracks changes, manages collaborator permissions, and includes
+      configuration options such as branch protection and access controls.
+  - term: Software Composition Analysis
+    definition: |
+      The process of identifying and cataloging all components and
+      dependencies in a software codebase. SCA is essential for managing
+      security vulnerabilities and ensuring compliance with organizational
+      policies.
+  - term: Status Checks
+    definition: |
+      Automated tests or validations that run on commits before they
+      are merged. Status checks ensure that any changes meet the project's
+      quality and security standards.
+  - term: Unique Version Identifier
+    definition: |
+      A label assigned to a specific release of the software, such as
+      `v1.2.3`. Commonly recommended formats are Semantic Versioning
+      or Calendar Versioning.
+  - term: Version Control System
+    definition: |
+      A tool that tracks changes to files over time and facilitates
+      collaboration among contributors. Examples of version control
+      systems include Git, Subversion, and Mercurial.
+  - term: Vulnerability Reporting
+    definition: |
+      The act of identifying and documenting exploitable vulnerabilities
+      in released software assets. This may include privately or openly
+      reporting vulnerabilities to maintainers, security teams, or the
+      public, as well as tracking the resolution of these vulnerabilities.
