@@ -81,10 +81,6 @@ Information about the origin and history of the [released software assets](#rele
 
 Deliverables provided to users as part of a [release](#release). These assets can include binaries, libraries, or containers.
 
-### Releases
-
-Specific versions of the software that have been made available to users, typically accompanied by a [unique version identifier](#unique-version-identifier). Each [release](#release) includes notes on updates and changes.
-
 ### Repository
 
 A storage location managed by a [version control system](#version-control-system) where the project's [code](#commit), [documentation](#project-documentation), and other resources are stored. It tracks [changes](#changes), manages collaborator permissions, and includes configuration options such as branch protection and access controls.
