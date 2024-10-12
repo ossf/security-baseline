@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "editor.rulers": [54],
+    "prettier.printWidth": 55
+}

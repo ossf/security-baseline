@@ -1,3 +1,5 @@
+# @prettier
+# max-line-length 55 for optimized github diff rendering
 criteria:
   - id: OSPS-01
     level: 1
@@ -16,7 +18,9 @@ criteria:
       version control system, requiring users to provide
       a second form of authentication when accessing
       sensitive data or modifying repository settings.
-    control_mappings:  # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-02
     level: 1
     category: Access Control
@@ -31,42 +35,45 @@ criteria:
     implementation: |
       Configure the project's version control system to
       assign the lowest available permissions to collaborators
-      by default, granting additional permissions only when
-      necessary.
-    control_mappings:  # TODO
+      by default when added, granting additional
+      permissions only when necessary.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-03
     level: 1
     category: Access Control
     criteria: |
       The project's version control system MUST prevent
-      accidental direct commits against the primary branch.
+      unintentional direct commits against the primary branch.
     objective: |
       Reduces the risk of accidental changes to the primary
       branch of the project's repository, ensuring that
-      modifications are reviewed and approved before being
-      committed.
+      due diligence is done before commits are merged.
     implementation: |
-      Configure the project's version control system to
-      prevent direct commits to the primary branch, requiring
-      changes to be made through pull requests or other
-      review mechanisms.
-    control_mappings:  # TODO
+      Set branch protection on the primary branch in the
+      project's version control system requiring changes
+      to be made through pull/merge requests or other review
+      mechanisms.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-04
     level: 1
     category: Access Control
     criteria: |
       The project's version control system MUST prevent
-      accidental deletion of the primary branch.
+      unintentional deletion of the primary branch.
     objective: |
       Protects the primary branch of the project's repository
       from accidental deletion, ensuring that the project's
       history and codebase are preserved.
     implementation: |
-      Configure the project's version control system to
-      prevent the accidental deletion of the primary branch,
-      requiring additional confirmation or permissions to
-      perform such actions.
-    control_mappings:  # TODO
+      Set branch protection on the primary branch in the
+      project's version control system to prevent deletion.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-05
     level: 1
     category: Build & Release
@@ -82,8 +89,10 @@ criteria:
     implementation: |
       Ensure that the project's build and release pipelines
       do not execute arbitrary code provided from external
-      sources, limiting the potential for security exploits.
-    control_mappings:  # TODO
+      sources.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-06
     level: 1
     category: Build & Release
@@ -91,14 +100,18 @@ criteria:
       All releases and released software assets MUST be
       assigned a unique version identifier.
     objective: |
-      Ensures that each release and software asset produced
-      by the project is uniquely identified, enabling users
-      to track changes and updates to the project over time.
+      Ensures that each software asset produced by the 
+      project is uniquely identified, enabling users
+      to track changes and updates to the project over
+      time.
     implementation: |
-      Assign a unique version identifier to each release and
-      software asset produced by the project, following a
-      consistent naming convention or numbering scheme.
-    control_mappings:  # TODO
+      Assign a unique version identifier to each release
+      and associated software asset produced by the
+      project, following a consistent naming convention
+      or numbering scheme.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-07
     level: 1
     category: Build & Release
@@ -113,9 +126,10 @@ criteria:
     implementation: |
       Configure the project's websites, API responses, and
       other services to use encrypted channels such as SSH
-      or HTTPS for data transmission, ensuring that data is
-      protected in transit.
-    control_mappings:  # TODO
+      or HTTPS for data transmission.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-09
     level: 1
     category: Documentation
@@ -127,11 +141,13 @@ criteria:
       the project community, enabling users to provide feedback
       and discuss proposed changes or usage challenges.
     implementation: |
-      Establish one or more mechanisms for public discussions
-      within the project, such as mailing lists, forums, or
-      issue trackers, to facilitate communication and feedback
-      from the community.
-    control_mappings:  # TODO
+      Establish one or more mechanisms for public 
+      discussions within the project, such as mailing
+      lists, instant messaging, or issue trackers, to
+      facilitate open communication and feedback.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-10
     level: 1
     category: Documentation
@@ -144,11 +160,13 @@ criteria:
       required to submit changes or enhancements to the
       project's codebase.
     implementation: |
-      Document the contribution process in the project's
-      documentation, detailing the steps for submitting
-      changes, creating pull requests, and engaging with
-      the project maintainers.
-    control_mappings:  # TODO
+      Create a CONTRIBUTING.md or CONTRIBUTING/
+      directory to outline the contribution process
+      including the steps for submitting changes, 
+      and engaging with the project maintainers.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-11
     level: 1
     category: Documentation
@@ -156,14 +174,17 @@ criteria:
       The project documentation MUST provide user guides
       for all basic functionality.
     objective: |
-      Helps users understand how to use the project's
-      features and functionality, reducing the barrier
-      to entry for new users and contributors.
+      Ensure that users have a clear and comprehensive
+      understanding of the project's current features 
+      in order to prevent damage from misuse or
+      misconfiguration.
     implementation: |
       Create user guides or documentation for all basic
       functionality of the project, explaining how to
       install, configure, and use the project's features.
-    control_mappings:  # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
   - id: OSPS-12
     category: Quality
     criteria: |
@@ -178,7 +199,7 @@ criteria:
       is publicly readable and accessible via a static
       URL, allowing users to view the codebase and history
       of the project.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-13
     level: 1
     category: Quality
@@ -196,7 +217,7 @@ criteria:
       made to the project's version control system, including
       information on who made the changes and when they were
       made, to provide visibility into the project's history.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-14
     level: 1
     category: Legal
@@ -211,11 +232,10 @@ criteria:
       contributions they make to the project, reducing
       the risk of intellectual property disputes.
     implementation: |
-      Require all code contributors to assert that they
-      are legally authorized to commit their contributions
+      Require all code contributors to assert that they are legally authorized to commit their contributions
       on every commit, confirming their understanding of
       the legal implications of their code changes.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-15
     level: 1
     category: Legal
@@ -232,7 +252,7 @@ criteria:
       is written in a standardized format approved by the
       Open Source Initiative (OSI) or Free Software Foundation
       (FSF), ensuring that the terms are clear and enforceable.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-16
     level: 1
     category: Legal
@@ -249,7 +269,7 @@ criteria:
       location within the project's repository, such as a
       LICENSE file, to provide visibility and clarity on the
       licensing terms.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-17
     level: 1
     category: Legal
@@ -268,7 +288,7 @@ criteria:
       Open Source Initiative (OSI) or Free Software Foundation
       (FSF), if different from the source code license, to clarify
       the terms under which the software can be used and shared.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-40
     level: 2
     category: Access Control
@@ -285,7 +305,7 @@ criteria:
       lowest available permissions to users and services by
       default, elevating permissions only when necessary for
       specific tasks.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-41
     level: 2
     category: Access Control
@@ -304,7 +324,7 @@ criteria:
       before being granted escalated permissions to sensitive
       resources, such as production environments or critical
       systems.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-42
     level: 2
     category: Build & Release
@@ -320,7 +340,7 @@ criteria:
       Implement automated build and release pipelines for
       all software assets produced by the project, ensuring
       that the process is consistent, repeatable, and reliable.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-43
     level: 2
     category: Build & Release
@@ -337,7 +357,7 @@ criteria:
       dependencies at build time in the project's build and
       release pipelines, ensuring that dependencies are managed
       consistently and securely.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-44
     level: 2
     category: Build & Release
@@ -354,7 +374,7 @@ criteria:
       modifications in all project releases, detailing the
       changes made and the impact on the software's functionality
       and security.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-45
     level: 2
     category: Documentation
@@ -371,7 +391,7 @@ criteria:
       in the project documentation, outlining the process for
       reporting security issues and the expected timeframe for
       response and resolution.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-46
     level: 2
     category: Documentation
@@ -388,7 +408,7 @@ criteria:
       documentation, such as an issue tracker or bug reporting
       system, to allow users and contributors to report and
       track issues with the software.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-47
     level: 2
     category: Documentation
@@ -406,7 +426,7 @@ criteria:
       documentation, detailing the requirements and standards
       for acceptable contributions, including coding conventions,
       testing procedures, and submission guidelines.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-48
     level: 2
     category: Documentation
@@ -424,7 +444,7 @@ criteria:
       demonstrating the actions and actors within the system,
       to provide an overview of the project's design and
       architecture.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-49
     level: 2
     category: Quality
@@ -442,7 +462,7 @@ criteria:
       associated version identifiers in all software assets
       released by the project, ensuring visibility and clarity
       on the dependencies used.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-50
     level: 2
     category: Quality
@@ -458,7 +478,7 @@ criteria:
       must pass or require manual intervention before changes
       are merged into the project's codebase, ensuring that
       code changes are reviewed and validated.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-51
     level: 2
     category: Quality
@@ -476,7 +496,7 @@ criteria:
       repositories produced by the project, aligning the
       security controls with the status and intent of the
       respective codebase to mitigate risks.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-52
     level: 2
     category: Quality
@@ -493,7 +513,7 @@ criteria:
       project's version control system, focusing on source
       code and necessary files to maintain a clean and
       efficient repository.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-70
     level: 3
     category: Access Control
@@ -512,7 +532,7 @@ criteria:
       include SMS for users accessing sensitive data or modifying
       repository settings in the project's version control system,
       enhancing the security of user accounts.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-71
     level: 3
     category: Build & Release
@@ -531,7 +551,7 @@ criteria:
       applicable Software Composition Analysis results before
       any release, ensuring that security vulnerabilities and
       licensing issues are resolved or mitigated.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-72
     level: 3
     category: Documentation
@@ -549,7 +569,7 @@ criteria:
       known vulnerabilities, fixing exploitable vulnerabilities,
       and verifying unexploitable vulnerabilities, to ensure that
       security issues are addressed promptly and effectively.
-    control_mappings:  # TODO
+    control_mappings: # TODO
   - id: OSPS-73
     level: 3
     category: Documentation
@@ -567,7 +587,7 @@ criteria:
       of the released software assets in the project documentation,
       detailing how users and developers can interact with the
       software and integrate it with other systems.
-    control_mappings:  # TODO
+    control_mappings: # TODO
 
 lexicon:
   - term: Arbitrary Code
@@ -580,12 +600,12 @@ lexicon:
       software. Similar to the generic term CI/CD Pipelines, but
       this term excludes some pipelines, such as pre-merge status
       checks.
-  - term: Changes
+  - term: Change
     definition: |
       Any alteration of the project's codebase, CI/CD Pipelines,
       or documentation. This may include addition, deletion, or
       modification of content.
-  - term: CI/CD Pipelines
+  - term: CI/CD Pipeline
     definition: |
       Automated pipelines for Continuous Integration and Continuous
       Delivery. Responsible for building, testing, and delivering
@@ -595,7 +615,7 @@ lexicon:
 
       In the context of the Open Source Project Security Baseline,
       CI/CD Pipelines does not involve Continuous Deployment.
-  - term: Code Contributors
+  - term: Code Contributor
     definition: |
       Entities who commit code or documentation to the project.
       Code contributors include collaborators or external participants
@@ -622,7 +642,7 @@ lexicon:
       A record of a single change submitted to the version control
       system. Each commit includes details such as the modifications
       made, the contributor who made them, and the timestamp of the change.
-  - term: Defects
+  - term: Defect
     definition: |
       Errors or flaws in the software that cause it to produce
       incorrect or unintended results, or to behave in an unintended
@@ -679,11 +699,11 @@ lexicon:
       - _(noun)_ A version-controlled bundle of code, documentation, and
         other assets made available to users. A release often includes
         release notes that describe the changes.
-  - term: Released Software Assets
+  - term: Released Software Asset
     definition: |
       Deliverables provided to users as part of a release. These assets
       can include binaries, libraries, or containers.
-  - term: Releases
+  - term: Release
     definition: |
       Specific versions of the software that have been made available
       to users, typically accompanied by a unique version identifier.
@@ -700,7 +720,7 @@ lexicon:
       dependencies in a software codebase. SCA is essential for managing
       security vulnerabilities and ensuring compliance with organizational
       policies.
-  - term: Status Checks
+  - term: Status Check
     definition: |
       Automated tests or validations that run on commits before they
       are merged. Status checks ensure that any changes meet the project's

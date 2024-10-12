@@ -45,8 +45,8 @@ This document contains the criteria for the baseline. Where applicable, terms mu
 
 ### Maturity Level 3 (Graduated)
 
-| Category | Criteria Statement |
-|---|---|
+| ID | Category | Criteria Statement |
+|---|---|---|
 | OSPS-70 | Access Control | The project's [version control system] MUST require [multi-factor authentication] that does not include SMS for users when modifying the project [repository] settings or accessing sensitive data. |
 | OSPS-71 | Build & Release | The [project documentation] MUST include a policy to address applicable [Software Composition Analysis] results prior to any [release]. |
 | OSPS-72 | Documentation | The [project documentation] MUST define a cadence in which [known vulnerabilities] are evaluated, and [exploitable vulnerabilities] are either fixed or verified as unexploitable. |
