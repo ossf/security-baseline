@@ -9,20 +9,20 @@ The Basleine is a set of security criteria that projects should meet to be consi
 
 ---
 
-## Baseline Criteria
+## Criteria Overview
 
 | ID  | Maturity Level | Category | Criteria |
 | --- | -------------- | -------- | -------- |
 
 {{- range .Criteria }}
-| {{ .ID }} | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
+| [{{ .ID }}]({{ .ID | linkPrep }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
 {{- end }}
 
----
+## Criteria Details
 
 {{- range .Criteria }}
 
-### {{ .ID }} - {{ .Category }}
+### {{ .ID }}
 
 **Criteria:**
 
@@ -53,11 +53,7 @@ _No security insights identified._
 {{ else }}  
 _No scorecard probe identified._  
 {{- end }}
-
----
-
 {{- end }}
-
 ## Lexicon
 
 {{- range .Lexicon }}

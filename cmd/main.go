@@ -98,6 +98,18 @@ func readYAMLFile(filePath string) error {
 	return nil
 }
 
+func containsSynonym(list []string, entryTerm, term string) bool {
+	if strings.EqualFold(entryTerm, term) {
+		return true
+	}
+	for _, item := range list {
+		if strings.EqualFold(item, term) {
+			return true
+		}
+	}
+	return false
+}
+
 // Function to add links by wrapping terms with square brackets
 func addLinks(text, term string) string {
 	// Escape any special characters in the term to use in regex
@@ -105,13 +117,19 @@ func addLinks(text, term string) string {
 
 	// Create a regular expression to match the term as a whole word
 	// The `(?i)` part makes it case-insensitive, and `\b` ensures whole word matching
-	termRegex := regexp.MustCompile(`(?i)\b` + escapedTerm + `\b`)
+	termRegex := regexp.MustCompile(`(?i)\b` + escapedTerm + `(?:s)?\b`)
 
 	// Replace the term with the same term wrapped in brackets, avoiding rewrapping terms
 	return termRegex.ReplaceAllStringFunc(text, func(matched string) string {
 		// Only wrap the term in brackets if it's not already wrapped
 		if strings.HasPrefix(matched, "[") && strings.HasSuffix(matched, "]") {
 			return matched // Term is already wrapped, skip it
+		}
+		for i, entry := range Data.Lexicon {
+			if entry.Term == term && !containsSynonym(entry.Synonyms, entry.Term, matched) {
+				fmt.Printf("Adding synonym %s to %s\n", matched, term)
+				Data.Lexicon[i].Synonyms = append(entry.Synonyms, matched)
+			}
 		}
 		return fmt.Sprintf("[%s]", matched)
 	})
