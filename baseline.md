@@ -1589,16 +1589,28 @@ This baseline was created by community leaders from across the Linux Foundation,
 - Cloud Native Computing Foundation (CNCF)
 - Fintech Open Source Foundation (FINOS)
 
+[Arbitrary Code]: #arbitrary-code
+[Build and Release Pipeline]: #build-and-release-pipeline
+[Change]: #change
+[CI/CD Pipeline]: #ci/cd-pipeline
 [Code Contributor]: #code-contributor
 [Contributor]: #code-contributor
+[Codebase]: #codebase
+[Collaborator]: #collaborator
+[Commit]: #commit
+[Defect]: #defect
 [Exploitable Vulnerabilities]: #exploitable-vulnerabilities
 [Exploitable Vulnerability]: #exploitable-vulnerabilities
+[License]: #license
 [Known Vulnerabilities]: #known-vulnerabilities
 [Known Vulnerability]: #known-vulnerabilities
 [Multi-factor Authentication]: #multi-factor-authentication
 [MFA]: #multi-factor-authentication
+[Primary Branch]: #primary-branch
+[Project Documentation]: #project-documentation
 [Software Provenance]: #software-provenance
 [Provenance]: #software-provenance
+[Release]: #release
 [Released Software Asset]: #released-software-asset
 [Software Asset]: #released-software-asset
 [Repository]: #repository
@@ -1606,6 +1618,9 @@ This baseline was created by community leaders from across the Linux Foundation,
 [Repositories]: #repository
 [Software Composition Analysis]: #software-composition-analysis
 [SCA]: #software-composition-analysis
+[Status Check]: #status-check
+[Subproject]: #subproject
+[Version Identifier]: #version-identifier
 [Version Control System]: #version-control-system
 [VCS]: #version-control-system
 [Vulnerability Reporting]: #vulnerability-reporting

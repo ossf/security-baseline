@@ -77,8 +77,8 @@ This baseline was created by community leaders from across the Linux Foundation,
 - Cloud Native Computing Foundation (CNCF)
 - Fintech Open Source Foundation (FINOS)
 {{ range .Lexicon }}
-{{- if .Synonyms }}
 [{{ .Term }}]: {{ .Term | linkPrep }}
+{{- if .Synonyms }}
 {{- $term := .Term }}
 {{- range .Synonyms }}
 [{{.}}]: {{ $term | linkPrep }}
