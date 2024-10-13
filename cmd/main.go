@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"text/template"
 
@@ -48,6 +49,8 @@ var rootCmd = &cobra.Command{
 	},
 }
 
+var Data Baseline
+
 // Command to process YAML file
 var compileCmd = &cobra.Command{
 	Use:   "compile [file]",
@@ -55,12 +58,11 @@ var compileCmd = &cobra.Command{
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		filePath := args[0]
-		baseline, err := readYAMLFile(filePath)
+		err := readYAMLFile(filePath)
 		if err != nil {
 			log.Fatalf("Error reading YAML file: %v", err)
 		}
-		fmt.Println(baseline)
-		err = generateBaselineMdFile(baseline)
+		err = generateBaselineMdFile(Data)
 		if err != nil {
 			log.Fatalf("Error generating output: %v", err)
 		}
@@ -80,20 +82,56 @@ func main() {
 }
 
 // Function to read the YAML file
-func readYAMLFile(filePath string) (Baseline, error) {
+func readYAMLFile(filePath string) error {
 	file, err := os.Open(filePath)
 	if err != nil {
-		return Baseline{}, fmt.Errorf("error opening file: %v", err)
+		return fmt.Errorf("error opening file: %v", err)
 	}
 	defer file.Close()
 
 	var baseline Baseline
 	decoder := yaml.NewDecoder(file)
 	if err := decoder.Decode(&baseline); err != nil {
-		return Baseline{}, fmt.Errorf("error decoding YAML: %v", err)
+		return fmt.Errorf("error decoding YAML: %v", err)
+	}
+	Data = baseline
+	return nil
+}
+
+// Function to add links by wrapping terms with square brackets
+func addLinks(text, term string) string {
+	// Escape any special characters in the term to use in regex
+	escapedTerm := regexp.QuoteMeta(term)
+
+	// Create a regular expression to match the term as a whole word
+	// The `(?i)` part makes it case-insensitive, and `\b` ensures whole word matching
+	termRegex := regexp.MustCompile(`(?i)\b` + escapedTerm + `\b`)
+
+	// Replace the term with the same term wrapped in brackets, avoiding rewrapping terms
+	return termRegex.ReplaceAllStringFunc(text, func(matched string) string {
+		// Only wrap the term in brackets if it's not already wrapped
+		if strings.HasPrefix(matched, "[") && strings.HasSuffix(matched, "]") {
+			return matched // Term is already wrapped, skip it
+		}
+		return fmt.Sprintf("[%s]", matched)
+	})
+}
+
+// Main function to apply the term replacements
+func addLinksTemplateFunction(text string) string {
+	// Iterate over the lexicon and replace terms with brackets
+	for _, entry := range Data.Lexicon {
+		text = addLinks(text, entry.Term)
+		for _, synonym := range entry.Synonyms {
+			text = addLinks(text, synonym)
+		}
 	}
 
-	return baseline, nil
+	return text
+}
+
+func linkPrepTemplateFunction(text string) string {
+	return "#" + strings.ToLower(strings.ReplaceAll(text, " ", "-"))
 }
 
 // Function to generate the markdown file
@@ -121,6 +159,12 @@ func generateBaselineMdFile(baseline Baseline) (err error) {
 		// Template function to remove newlines and collapse text
 		"collapseNewlines": func(s string) string {
 			return strings.ReplaceAll(s, "\n", " ")
+		},
+		"addLinks": func(s string) string {
+			return addLinksTemplateFunction(s)
+		},
+		"linkPrep": func(s string) string {
+			return linkPrepTemplateFunction(s)
 		},
 	}).Parse(string(templateContent))
 	if err != nil {

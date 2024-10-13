@@ -999,6 +999,7 @@ lexicon:
       protection and access controls.
     synonyms:
       - Repo
+      - Repositories
   - term: Software Composition Analysis
     definition: |
       The process of identifying and cataloging all
@@ -1020,14 +1021,13 @@ lexicon:
       maintained in a separate repository.
       Subprojects may be compiled into the primary
       project or used as standalone components.
-  - term: Unique Version Identifier
+  - term: Version Identifier
     definition: |
       A label assigned to a specific release of the
       software, such as `v1.2.3`. Commonly
       recommended formats are Semantic Versioning
       or Calendar Versioning.
     synonyms:
-      - Version Identifier
   - term: Version Control System
     definition: |
       A tool that tracks changes to files over time
