@@ -3,7 +3,7 @@
 # Baseline. This data should be used to generate
 # supplemental user-facing assets.
 #
-# max-line-length 53 for optimized github diff
+# max-line-length 52 for optimized github diff
 #
 # # # #
 #
@@ -18,9 +18,9 @@
 # requirement. 1 is the lowest level of maturity,
 # and 3 is the highest level of maturity.
 #
-# category is the area of focus for the requirement.
-# This could be Access Control, Build & Release,
-# Documentation, Quality, or Legal.
+# category is the area of focus for the
+# requirement. This could be Access Control, Build
+# & Release, Documentation, Quality, or Legal.
 #
 # criteria should be a concise statement of the
 # requirement. It should contain MUST or MUST NOT
@@ -46,8 +46,9 @@ criteria:
     criteria: |
       The project's version control system MUST
       require multi-factor authentication for
-      collaborators modifying the project repository
-      settings or accessing sensitive data.
+      collaborators modifying the project
+      repository settings or accessing sensitive
+      data.
     objective: |
       Protect against unauthorized access to
       sensitive areas of the project's repository,
@@ -839,18 +840,19 @@ lexicon:
     definition: |
       Any alteration of the project's codebase,
       CI/CD Pipelines, or documentation. This may
-      include addition, deletion, or modification of
-      content.
+      include addition, deletion, or modification
+      of content.
   - term: CI/CD Pipeline
     definition: |
-      Automated pipelines for Continuous Integration
-      and Continuous Delivery. Responsible for
-      building, testing, and delivering changes.
-      These pipelines integrate contributions
-      frequently, enabling rapid and reliable
-      software delivery. CI focuses on testing and
-      building code, while CD delivers software to
-      location such as a package registry.
+      Automated pipelines for Continuous
+      Integration and Continuous Delivery.
+      Responsible for building, testing, and
+      delivering changes. These pipelines integrate
+      contributions frequently, enabling rapid and
+      reliable software delivery. CI focuses on
+      testing and building code, while CD delivers
+      software to location such as a package
+      registry.
 
       In the context of the Open Source Project
       Security Baseline, CD refers only to
@@ -873,19 +875,19 @@ lexicon:
     definition: |
       The collection of source code and related
       assets that make up the project. The codebase
-      includes all files necessary to build and test
-      the software. Lives in the repository,
+      includes all files necessary to build and
+      test the software. Lives in the repository,
       sometimes alongside documentation and CI/CD
       pipelines. The contents of the codebase are
       the primary deliverable in a release.
   - term: Collaborator
     definition: |
       A user with access to the project's version
-      control system who can commit to the codebase,
-      approve changes, or manage the repository
-      settings. Collaborators may have varying
-      permission levels based on their role in the
-      project.
+      control system who can commit to the
+      codebase, approve changes, or manage the
+      repository settings. Collaborators may have
+      varying permission levels based on their role
+      in the project.
   - term: Commit
     definition: |
       A record of a single change submitted to the
@@ -896,13 +898,14 @@ lexicon:
   - term: Defect
     definition: |
       Errors or flaws in the software that cause it
-      to produce incorrect or unintended results, or
-      to behave in an unintended way. Defects can
-      include bugs, vulnerabilities, or other issues
-      that impact the software's functionality or
-      security. Defects may have originally been
-      intentional, but a change in environment or
-      understanding has made them undesirable.
+      to produce incorrect or unintended results, 
+      or to behave in an unintended way. Defects
+      can include bugs, vulnerabilities, or other
+      issues that impact the software's
+      functionality or security. Defects may have
+      originally been intentional, but a change in
+      environment or understanding has made them
+      undesirable.
   - term: Exploitable Vulnerabilities
     definition: |
       Defects in the software that can be leveraged
@@ -915,12 +918,12 @@ lexicon:
     definition: |
       A legal document that defines the terms under
       which the software can be used, modified, and
-      distributed. May be stored at the top level of
-      the repository in a file named `LICENSE` or
-      within files in a directory named `LICENSE/`.
-      The license applies to the codebase and any
-      released software assets, unless otherwise
-      stated.
+      distributed. May be stored at the top level
+      of the repository in a file named `LICENSE`
+      or within files in a directory named
+      `LICENSE/`. The license applies to repository
+      contents and any released software assets,
+      unless otherwise stated.
   - term: Known Vulnerabilities
     definition: |
       Publicly acknowledged exploitable
@@ -942,28 +945,31 @@ lexicon:
   - term: Primary Branch
     definition: |
       The main development branch in the version
-      control system, representing the latest stable
-      codebase. Releases are typically made from
-      this branch. Commonly named `main` or
+      control system, representing the latest
+      stable codebase. Releases are typically made
+      from this branch. Commonly named `main` or
       `master`. In some situations where branches
       are not featured, a repository with forked
       repositories will have the original repo
-      acting as an equivalent to the primary branch.
+      acting as an equivalent to the primary
+      branch.
   - term: Project Documentation
     definition: |
-      Written materials related to the project, such
-      as user guides, developer guides, and
+      Written materials related to the project,
+      such as user guides, developer guides, and
       contribution guidelines. These documents help
       users and developers understand, contribute
-      to, and interact with the software. At release
-      time, this may include provenance information,
-      licensing details, and other metadata.
+      to, and interact with the software. At
+      release time, this may include provenance
+      information, licensing details, and other
+      metadata.
   - term: Software Provenance
     definition: |
       Information about the origin and history of
-      the released software assets. This may include
-      details about its development, dependencies,
-      vulnerabilities, contributors, and licensing.
+      the released software assets. This may
+      include details about its development,
+      dependencies, vulnerabilities, contributors,
+      and licensing.
     synonyms:
       - Provenance
   - term: Release
@@ -986,11 +992,11 @@ lexicon:
     definition: |
       A storage location managed by a version
       control system where the project's code,
-      documentation, and other resources are stored.
-      It tracks changes, manages collaborator
-      permissions, and includes configuration
-      options such as branch protection and access
-      controls.
+      documentation, and other resources are
+      stored. It tracks changes, manages
+      collaborator permissions, and includes
+      configuration options such as branch
+      protection and access controls.
     synonyms:
       - Repo
   - term: Software Composition Analysis
@@ -1018,8 +1024,8 @@ lexicon:
     definition: |
       A label assigned to a specific release of the
       software, such as `v1.2.3`. Commonly
-      recommended formats are Semantic Versioning or
-      Calendar Versioning.
+      recommended formats are Semantic Versioning
+      or Calendar Versioning.
     synonyms:
       - Version Identifier
   - term: Version Control System
@@ -1035,10 +1041,10 @@ lexicon:
     definition: |
       The act of identifying and documenting
       exploitable vulnerabilities in released
-      software assets. This may include privately or
-      openly reporting vulnerabilities to
-      maintainers, security teams, or the public, as
-      well as tracking the resolution of these
+      software assets. This may include privately
+      or openly reporting vulnerabilities to
+      maintainers, security teams, or the public,
+      as well as tracking the resolution of these
       vulnerabilities.
     synonyms:
       - Coordinated Vulnerability Reporting
