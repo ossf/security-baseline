@@ -119,15 +119,16 @@ func addLinks(text, term string) string {
 	// The `(?i)` part makes it case-insensitive, and `\b` ensures whole word matching
 	termRegex := regexp.MustCompile(`(?i)\b` + escapedTerm + `(?:s)?\b`)
 
-	// Replace the term with the same term wrapped in brackets, avoiding rewrapping terms
+	// Replace the term with the same term wrapped in brackets, and avoid rewrapping terms
 	return termRegex.ReplaceAllStringFunc(text, func(matched string) string {
-		// Only wrap the term in brackets if it's not already wrapped
-		if strings.HasPrefix(matched, "[") && strings.HasSuffix(matched, "]") {
-			return matched // Term is already wrapped, skip it
+		beforeIndex := strings.Index(text, matched) - 1
+		afterIndex := beforeIndex + len(matched) + 1
+		if beforeIndex >= 0 && text[beforeIndex] == '[' && afterIndex < len(text) && text[afterIndex] == ']' {
+			return matched // Skip wrapping if already wrapped in brackets
 		}
+
 		for i, entry := range Data.Lexicon {
 			if entry.Term == term && !containsSynonym(entry.Synonyms, entry.Term, matched) {
-				fmt.Printf("Adding synonym %s to %s\n", matched, term)
 				Data.Lexicon[i].Synonyms = append(entry.Synonyms, matched)
 			}
 		}

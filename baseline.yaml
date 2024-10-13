@@ -858,7 +858,7 @@ lexicon:
       Security Baseline, CD refers only to
       continuous delivery, not to continuous
       deployment, as sometimes used elsewhere.
-  - term: Code Contributor
+  - term: Contributor
     definition: |
       Entities who commit code or documentation to
       the project. Code contributors include
@@ -869,8 +869,6 @@ lexicon:
       Security Baseline, code contributors does not
       address non-code contributions such as
       designing, triaging, reviewing, or testing.
-    synonyms:
-      - Contributor
   - term: Codebase
     definition: |
       The collection of source code and related
@@ -986,8 +984,6 @@ lexicon:
       Deliverables provided to users as part of a
       release. These assets can include binaries,
       libraries, or containers.
-    synonyms:
-      - Software Asset
   - term: Repository
     definition: |
       A storage location managed by a version

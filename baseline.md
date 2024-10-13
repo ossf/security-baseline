@@ -18,34 +18,34 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-03](#osps-03) | 1 | Access Control | The project's [version control system] MUST prevent unintentional direct [commits] against the [primary branch].  |
 | [OSPS-04](#osps-04) | 1 | Access Control | The project's [version control system] MUST prevent unintentional deletion of the [primary branch].  |
 | [OSPS-05](#osps-05) | 1 | Build & Release | The project's [build and [release] pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script.  |
-| [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released [software assets]] MUST be assigned a unique [version identifier].  |
+| [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released software assets] MUST be assigned a unique [version identifier].  |
 | [OSPS-07](#osps-07) | 1 | Build & Release | Any websites, API responses or other services related to the project development and [release] MUST be delivered using SSH, HTTPS or other encrypted channels.  |
 | [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
 | [OSPS-10](#osps-10) | 1 | Documentation | The [project documentation] MUST include an explanation of the contribution process.  |
 | [OSPS-11](#osps-11) | 1 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
 | [OSPS-12](#osps-12) | 0 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
-| [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [[changes]] made, who made the [[changes]], and when the [[changes]] were made.  |
-| [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all [code [contributors]] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
+| [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made.  |
+| [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
 | [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST be written in a standardized format approved by the OSI or FSF.  |
 | [OSPS-16](#osps-16) | 1 | Legal | The [license] for the source code MUST be maintained in a standard location within the project's [repository].  |
-| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released [software assets]] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
+| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
 | [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
-| [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that [code [contributors]] are reviewed prior to granting escalated permissions to sensitive resources.  |
-| [OSPS-42](#osps-42) | 2 | Build & Release | All [released [software assets]] MUST be created with consistent, automated [[build and [release] pipelines]].  |
-| [OSPS-43](#osps-43) | 2 | Build & Release | All [[build and [release] pipelines]] MUST use standardized tooling to ingest dependencies at build time.  |
-| [OSPS-44](#osps-44) | 2 | Build & Release | All [[releases]] MUST include a descriptive log of functional and security modifications.  |
+| [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
+| [OSPS-42](#osps-42) | 2 | Build & Release | All [released software assets] MUST be created with consistent, automated [build and [release] pipelines].  |
+| [OSPS-43](#osps-43) | 2 | Build & Release | All [build and [release] pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
+| [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications.  |
 | [OSPS-45](#osps-45) | 2 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response.  |
 | [OSPS-46](#osps-46) | 2 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects].  |
-| [OSPS-47](#osps-47) | 2 | Documentation | The [project documentation] MUST include a guide for [code [contributors]] that includes requirements for acceptable contributions.  |
+| [OSPS-47](#osps-47) | 2 | Documentation | The [project documentation] MUST include a guide for code [contributors] that includes requirements for acceptable contributions.  |
 | [OSPS-48](#osps-48) | 2 | Documentation | The [project documentation] MUST provide design documentation demonstrating all actions and actors within the system.  |
-| [OSPS-49](#osps-49) | 2 | Quality | All [software assets] MUST be released with a machine-readable list of all direct and transitive dependencies with their associated [version identifier].  |
-| [OSPS-50](#osps-50) | 2 | Quality | Any automated [status checks] for [[commits]] MUST pass or require manual intervention prior to merge.  |
+| [OSPS-49](#osps-49) | 2 | Quality | All software assets MUST be released with a machine-readable list of all direct and transitive dependencies with their associated [version identifier].  |
+| [OSPS-50](#osps-50) | 2 | Quality | Any automated [status checks] for [commits] MUST pass or require manual intervention prior to merge.  |
 | [OSPS-51](#osps-51) | 2 | Quality | Any additional code [repositories] produced by the project MUST enforce security requirements as applicable to the status and intent of the respective [codebase].  |
 | [OSPS-52](#osps-52) | 2 | Quality | The [version control system] MUST NOT contain generated executable artifacts.  |
 | [OSPS-70](#osps-70) | 3 | Access Control | The project's [version control system] MUST require [multi-factor authentication] that does not include SMS for users when modifying the project [repository] settings or accessing sensitive data.  |
 | [OSPS-71](#osps-71) | 3 | Build & Release | The [project documentation] MUST include a policy to address applicable [Software Composition Analysis] results prior to any [release].  |
 | [OSPS-72](#osps-72) | 3 | Documentation | The [project documentation] MUST define a cadence in which [known vulnerabilities] are evaluated, and [exploitable vulnerabilities] are either fixed or verified as unexploitable.  |
-| [OSPS-73](#osps-73) | 3 | Documentation | The [project documentation] MUST include descriptions of all input and output interfaces of the [released [software assets]].  |
+| [OSPS-73](#osps-73) | 3 | Documentation | The [project documentation] MUST include descriptions of all input and output interfaces of the [released software assets].  |
 
 ## Criteria Details
 
@@ -55,7 +55,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 
 The project's [version control system] MUST
 require [multi-factor authentication] for
-[[collaborators]] modifying the project
+[collaborators] modifying the project
 [repository] settings or accessing sensitive
 data.
 
@@ -70,7 +70,7 @@ insider threats.
 
 Require [multi-factor authentication] for the
 project's [version control system], requiring
-[[collaborators]] to provide a second form of
+[collaborators] to provide a second form of
 authentication when accessing sensitive data
 or modifying [repository] settings.
 
@@ -98,13 +98,13 @@ lowest available privileges by default.
 
 Reduce the risk of unauthorized access to
 the project's [repository] by limiting the
-permissions granted to [[collaborators]].
+permissions granted to [collaborators].
 
 **Implementation:**
 
 Configure the project's version control
 system to assign the lowest available
-permissions to [[collaborators]] by default when
+permissions to [collaborators] by default when
 added, granting additional permissions only
 when necessary.
 
@@ -125,21 +125,21 @@ _No scorecard probe identified._
 **Criteria:**
 
 The project's [version control system] MUST
-prevent unintentional direct [[commits]] against
+prevent unintentional direct [commits] against
 the [primary branch].
 
 **Objective:**
 
-Reduce the risk of accidental [[changes]] to the
+Reduce the risk of accidental [changes] to the
 [primary branch] of the project's [repository],
 ensuring that due diligence is done before
-[[commits]] are merged.
+[commits] are merged.
 
 **Implementation:**
 
 Set branch protection on the [primary branch]
 in the project's [version control system]
-requiring [[changes]] to be made through
+requiring [changes] to be made through
 pull/merge requests or other review
 mechanisms.
 
@@ -192,7 +192,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The project's [[build and [release] pipelines]]
+The project's [build and [release] pipelines]
 MUST NOT execute [arbitrary code] that is
 input from outside of the build script.
 
@@ -225,21 +225,21 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [[releases]] and [released [software assets]]
+All [releases] and [released software assets]
 MUST be assigned a unique version
 identifier.
 
 **Objective:**
 
-Ensure that each [software asset] produced by
+Ensure that each software asset produced by
 the  project is uniquely identified,
-enabling users to track [[changes]] and updates
+enabling users to track [changes] and updates
 to the project over time.
 
 **Implementation:**
 
 Assign a unique [version identifier] to each
-[release] and associated [software asset]
+[release] and associated software asset
 produced by the project, following a
 consistent naming convention or numbering
 scheme.
@@ -297,14 +297,14 @@ _No scorecard probe identified._
 
 The project MUST have one or more mechanisms
 for public discussions about proposed
-[[changes]] and usage obstacles.
+[changes] and usage obstacles.
 
 **Objective:**
 
 Encourages open communication and
 collaboration within the project community,
 enabling users to provide feedback and
-discuss proposed [[changes]] or usage
+discuss proposed [changes] or usage
 challenges.
 
 **Implementation:**
@@ -338,7 +338,7 @@ explanation of the contribution process.
 
 Provide guidance to new [contributors] on how
 to participate in the project, outlining the
-steps required to submit [[changes]] or
+steps required to submit [changes] or
 enhancements to the project's [codebase].
 
 **Implementation:**
@@ -346,7 +346,7 @@ enhancements to the project's [codebase].
 Create a CONTRIBUTING.md or CONTRIBUTING/
 directory to outline the contribution
 process including the steps for submitting
-[[changes]], and engaging with the project
+[changes], and engaging with the project
 maintainers.
 
 **Control Mappings:**  
@@ -417,7 +417,7 @@ Bitbucket. Ensure the [repository] is publicly
 readable. Avoid duplication or mirroring of
 [repositories] unless highly visible
 documentation clarifies the primary source.
-Avoid frequent [[changes]] to the [repository]
+Avoid frequent [changes] to the [repository]
 that would impact the [repository] URL.
 
 **Control Mappings:**  
@@ -437,14 +437,14 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [version control system] MUST contain a
-publicly readable record of all [[changes]]
-made, who made the [[changes]], and when the
-[[changes]] were made.
+publicly readable record of all [changes]
+made, who made the [changes], and when the
+[changes] were made.
 
 **Objective:**
 
 Provide transparency and accountability for
-[[changes]] made to the project's [codebase],
+[changes] made to the project's [codebase],
 enabling users to track modifications and
 understand the history of the project.
 
@@ -453,8 +453,8 @@ understand the history of the project.
 Use a common [VCS] such as GitHub, GitLab, or
 Bitbucket to maintain a publicly readable
 [commit] history. Avoid squashing or rewriting
-[[commits]] in a way that would obscure the
-author of any [[commits]].
+[commits] in a way that would obscure the
+author of any [commits].
 
 **Control Mappings:**  
   
@@ -473,13 +473,13 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [version control system] MUST require all
-[code [contributors]] to assert that they are
+code [contributors] to assert that they are
 legally authorized to [commit] the associated
 contributions on every [commit].
 
 **Objective:**
 
-Ensure that [code [contributors]] are aware of
+Ensure that code [contributors] are aware of
 and acknowledge their legal responsibility
 for the contributions they make to the
 project, reducing the risk of intellectual
@@ -488,7 +488,7 @@ property disputes.
 **Implementation:**
 
 Include a DCO or CLA in the project's
-[repository], requiring [code [contributors]] to
+[repository], requiring code [contributors] to
 assert that they are legally authorized to
 [commit] the associated contributions on every
 [commit]. Use a [status check] to ensure the
@@ -581,7 +581,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The [license] for the [released [software assets]]
+The [license] for the [released software assets]
 MUST be written in a standardized format
 approved by the OSI or FSF, if different
 from the source code [license].
@@ -598,7 +598,7 @@ used and shared.
 **Implementation:**
 
 Choose a [license] for the project's released
-[software assets] that is written in a
+software assets that is written in a
 standardized format approved by the Open
 Source Initiative (OSI) or Free Software
 Foundation (FSF).
@@ -622,7 +622,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The project's permissions in [[CI/CD pipelines]]
+The project's permissions in [CI/CD pipelines]
 MUST be configured to the lowest available
 privileges except when explicitly elevated.
 
@@ -631,13 +631,13 @@ privileges except when explicitly elevated.
 Reduce the risk of unauthorized access to
 the project's build and [release] processes by
 limiting the permissions granted to steps
-within the [[CI/CD pipelines]]. Allows for
+within the [CI/CD pipelines]. Allows for
 quicker adoption of third-party services
 that do not require elevated permissions.
 
 **Implementation:**
 
-Configure the project's [[CI/CD pipelines]] to
+Configure the project's [CI/CD pipelines] to
 assign the lowest available permissions to
 users and services by default, elevating
 permissions only when necessary for specific
@@ -663,13 +663,13 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [project documentation] MUST have a policy
-that [code [contributors]] are reviewed prior to
+that code [contributors] are reviewed prior to
 granting escalated permissions to sensitive
 resources.
 
 **Objective:**
 
-Ensure that [code [contributors]] are vetted and
+Ensure that code [contributors] are vetted and
 reviewed before being granted elevated
 permissions to sensitive resources within
 the project, reducing the risk of
@@ -706,13 +706,13 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [released [software assets]] MUST be created
+All [released software assets] MUST be created
 with consistent, automated build and [release]
 pipelines.
 
 **Objective:**
 
-Ensure that the project's [software assets]
+Ensure that the project's software assets
 are built and released using consistent and
 automated processes, reducing the risk of
 errors or inconsistencies in the deployment
@@ -721,7 +721,7 @@ and distribution of the software.
 **Implementation:**
 
 Implement reproducible build and [release]
-pipelines for all [software assets] produced
+pipelines for all software assets produced
 by the project. [VCS]-integrated pipelines are
 recommended to ensure consistency and
 automation in the build and [release]
@@ -743,7 +743,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [[build and [release] pipelines]] MUST use
+All [build and [release] pipelines] MUST use
 standardized tooling to ingest dependencies
 at build time.
 
@@ -781,20 +781,20 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [[releases]] MUST include a descriptive log
+All [releases] MUST include a descriptive log
 of functional and security modifications.
 
 **Objective:**
 
 Provide transparency and accountability for
-[[changes]] made to the project's software
-[[releases]], enabling users to understand the
+[changes] made to the project's software
+[releases], enabling users to understand the
 modifications and improvements included in
 each [release].
 
 **Implementation:**
 
-Ensure that all [[releases]] include a
+Ensure that all [releases] include a
 descriptive [change] log. 
 
 It is recommended to ensure that the [change]
@@ -858,12 +858,12 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [project documentation] MUST include a
-mechanism for reporting [[defects]].
+mechanism for reporting [defects].
 
 **Objective:**
 
 Enable users and [contributors] to report
-[[defects]] or issues with the released software
+[defects] or issues with the released software
 assets, facilitating communication and
 collaboration on [defect] fixes and
 improvements.
@@ -878,7 +878,7 @@ and visibly explain how to use the reporting
 system.
 
 It is recommended that [project documentation]
-also sets expectations for how [[defects]] will
+also sets expectations for how [defects] will
 be triaged and resolved.
 
 **Control Mappings:**  
@@ -898,13 +898,13 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [project documentation] MUST include a
-guide for [code [contributors]] that includes
+guide for code [contributors] that includes
 requirements for acceptable contributions.
 
 **Objective:**
 
-Provide guidance to [code [contributors]] on how
-to submit [[changes]] and enhancements to the
+Provide guidance to code [contributors] on how
+to submit [changes] and enhancements to the
 project's [codebase], outlining the standards
 and expectations for acceptable
 contributions.
@@ -916,7 +916,7 @@ contents in the [project documentation] to
 outline the requirements for acceptable
 contributions, including coding standards,
 testing requirements, and submission
-guidelines for [code [contributors]].
+guidelines for code [contributors].
 
 It is recommended that this guide is the
 source of truth for both [contributors] and
@@ -949,7 +949,7 @@ and architecture, illustrating the
 interactions and components of the system to
 help [contributors] and security reviewers
 understand the internal logic of the
-[released [software assets]].
+[released software assets].
 
 **Implementation:**
 
@@ -974,7 +974,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [software assets] MUST be released with a
+All software assets MUST be released with a
 machine-readable list of all direct and
 transitive dependencies with their
 associated [version identifier].
@@ -1017,7 +1017,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-Any automated [[status checks]] for [[commits]] MUST
+Any automated [status checks] for [commits] MUST
 pass or require manual intervention prior to
 merge.
 
@@ -1025,9 +1025,9 @@ merge.
 
 Ensure that the project's approvers do not
 become accustomed to tolerating failing
-[[status checks]], even if arbitrary, because it
+[status checks], even if arbitrary, because it
 increases the risk of overlooking security
-vulnerabilities or [[defects]] identified by
+vulnerabilities or [defects] identified by
 automated checks.
 
 **Implementation:**
@@ -1039,7 +1039,7 @@ before a [commit] can be merged into the
 [primary branch].
 
 It is recommended that any non-blocking 
-[[status checks]] are NOT configured as a pass
+[status checks] are NOT configured as a pass
 or fail requirement that approvers may be
 tempted to bypass.
 
@@ -1075,8 +1075,8 @@ for that [codebase].
 
 The parent project should maintain a list of
 any [codebases] that are considered
-[[subprojects]] or additional [repositories].
-[[Collaborators]] on those [repositories] should
+[subprojects] or additional [repositories].
+[Collaborators] on those [repositories] should
 identify the proper maturity level and apply
 the Open Source Project Security Baseline to
 the [codebase]. Any [subproject] or [repository]
@@ -1188,7 +1188,7 @@ Composition Analysis results prior to any
 
 Ensure that potential vulnerabilities or
 licensing issues identified by [SCA] tools
-are addressed before software [[releases]],
+are addressed before software [releases],
 reducing the risk of shipping insecure or
 non-compliant software.
 
@@ -1255,7 +1255,7 @@ _No scorecard probe identified._
 
 The [project documentation] MUST include
 descriptions of all input and output
-interfaces of the [released [software assets]].
+interfaces of the [released software assets].
 
 **Objective:**
 
@@ -1268,7 +1268,7 @@ software effectively.
 **Implementation:**
 
 Document all input and output interfaces of
-the [released [software assets]], explaining how
+the [released software assets], explaining how
 users can interact with the software and
 what data is expected or produced.
 
@@ -1322,7 +1322,7 @@ Security Baseline, CD refers only to
 continuous delivery, not to continuous
 deployment, as sometimes used elsewhere.
 
-### Code Contributor
+### Contributor
 
 Entities who commit code or documentation to
 the project. Code contributors include
@@ -1529,9 +1529,8 @@ This baseline was created by community leaders from across the Linux Foundation,
 [changes]: #change
 [CI/CD Pipeline]: #ci/cd-pipeline
 [CI/CD pipelines]: #ci/cd-pipeline
-[Code Contributor]: #code-contributor
-[Contributor]: #code-contributor
-[code contributors]: #code-contributor
+[Contributor]: #contributor
+[contributors]: #contributor
 [Codebase]: #codebase
 [codebases]: #codebase
 [Collaborator]: #collaborator
@@ -1554,7 +1553,6 @@ This baseline was created by community leaders from across the Linux Foundation,
 [Release]: #release
 [releases]: #release
 [Released Software Asset]: #released-software-asset
-[Software Asset]: #released-software-asset
 [released software assets]: #released-software-asset
 [Repository]: #repository
 [Repo]: #repository
