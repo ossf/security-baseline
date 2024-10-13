@@ -110,6 +110,23 @@ func containsSynonym(list []string, entryTerm, term string) bool {
 	return false
 }
 
+func isWrapped(text string, matched string) bool {
+	// Find the index of the matched term
+	beforeIndex := strings.Index(text, matched)
+	// If there's no match or it's the very first term, it's not wrapped
+	if beforeIndex <= 0 {
+		return false
+	}
+
+	// Scan the substring before the term to check for brackets
+	substrBeforeTerm := text[:beforeIndex]
+	// Count open and close brackets before the term
+	openBrackets := strings.Count(substrBeforeTerm, "[")
+	closeBrackets := strings.Count(substrBeforeTerm, "]")
+	// Check if there's an unmatched open bracket before the term
+	return openBrackets > closeBrackets
+}
+
 // Function to add links by wrapping terms with square brackets
 func addLinks(text, term string) string {
 	// Escape any special characters in the term to use in regex
@@ -121,9 +138,7 @@ func addLinks(text, term string) string {
 
 	// Replace the term with the same term wrapped in brackets, and avoid rewrapping terms
 	return termRegex.ReplaceAllStringFunc(text, func(matched string) string {
-		beforeIndex := strings.Index(text, matched) - 1
-		afterIndex := beforeIndex + len(matched) + 1
-		if beforeIndex >= 0 && text[beforeIndex] == '[' && afterIndex < len(text) && text[afterIndex] == ']' {
+		if isWrapped(text, matched) {
 			return matched // Skip wrapping if already wrapped in brackets
 		}
 

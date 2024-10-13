@@ -17,7 +17,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-02](#osps-02) | 1 | Access Control | The project's [version control system] MUST restrict [collaborator] permissions to the lowest available privileges by default.  |
 | [OSPS-03](#osps-03) | 1 | Access Control | The project's [version control system] MUST prevent unintentional direct [commits] against the [primary branch].  |
 | [OSPS-04](#osps-04) | 1 | Access Control | The project's [version control system] MUST prevent unintentional deletion of the [primary branch].  |
-| [OSPS-05](#osps-05) | 1 | Build & Release | The project's [build and [release] pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script.  |
+| [OSPS-05](#osps-05) | 1 | Build & Release | The project's [build and release pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script.  |
 | [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released software assets] MUST be assigned a unique [version identifier].  |
 | [OSPS-07](#osps-07) | 1 | Build & Release | Any websites, API responses or other services related to the project development and [release] MUST be delivered using SSH, HTTPS or other encrypted channels.  |
 | [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
@@ -32,7 +32,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
 | [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
 | [OSPS-42](#osps-42) | 2 | Build & Release | All [released software assets] MUST be created with consistent, automated [build and [release] pipelines].  |
-| [OSPS-43](#osps-43) | 2 | Build & Release | All [build and [release] pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
+| [OSPS-43](#osps-43) | 2 | Build & Release | All [build and release pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
 | [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications.  |
 | [OSPS-45](#osps-45) | 2 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response.  |
 | [OSPS-46](#osps-46) | 2 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects].  |
@@ -192,7 +192,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The project's [build and [release] pipelines]
+The project's [build and release pipelines]
 MUST NOT execute [arbitrary code] that is
 input from outside of the build script.
 
@@ -743,7 +743,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [build and [release] pipelines] MUST use
+All [build and release pipelines] MUST use
 standardized tooling to ingest dependencies
 at build time.
 
