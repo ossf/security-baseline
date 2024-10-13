@@ -27,7 +27,14 @@ type Criteria struct {
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Criteria []Criteria `yaml:"criteria"`
+	Criteria []Criteria     `yaml:"criteria"`
+	Lexicon  []LexiconEntry `yaml:"lexicon"`
+}
+
+type LexiconEntry struct {
+	Term       string   `yaml:"term"`
+	Definition string   `yaml:"definition"`
+	Synonyms   []string `yaml:"synonyms"`
 }
 
 // Root command for Cobra
@@ -52,6 +59,7 @@ var compileCmd = &cobra.Command{
 		if err != nil {
 			log.Fatalf("Error reading YAML file: %v", err)
 		}
+		fmt.Println(baseline)
 		err = generateBaselineMdFile(baseline)
 		if err != nil {
 			log.Fatalf("Error generating output: %v", err)

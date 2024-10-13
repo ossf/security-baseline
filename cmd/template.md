@@ -6,7 +6,8 @@
 
 The Basleine is a set of security criteria that projects should meet to be considered secure. The criteria are organized by maturity level and category. In the detailed subsections you will find the criteria, objectives, and implementation notes.
 
-This document was automatically generated from the [Open Source Project Security Baseline YAML](https://github.com/ossf/security-baselines/blob/main/baselines/ossf-security-baseline.yaml) file.
+> [!NOTE]
+> This document was automatically generated from the [Open Source Project Security Baseline YAML](https://github.com/ossf/security-baselines/blob/main/baselines/ossf-security-baseline.yaml) file.
 
 ---
 
@@ -58,6 +59,16 @@ _No scorecard probe identified._
 ---
 
 {{- end }}
+
+## Lexicon
+
+{{- range .Lexicon }}
+### {{ .Term }}
+
+{{ .Definition }}
+
+{{- end }}
+---
 
 ## Acknowledgments
 
