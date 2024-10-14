@@ -10,6 +10,7 @@ import (
 	"text/template"
 
 	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 	"gopkg.in/yaml.v3"
 )
 
@@ -39,35 +40,47 @@ type LexiconEntry struct {
 }
 
 // Root command for Cobra
-var rootCmd = &cobra.Command{
-	Use:   "baseline-compiler",
-	Short: "Baseline Compiler is a tool for compiling YAML-based security criteria.",
-	Long:  `Baseline Compiler reads a YAML file that defines security criteria and outputs a structured report.`,
-	Run: func(cmd *cobra.Command, args []string) {
-		// Print help when no arguments are passed
-		cmd.Help()
-	},
-}
+var (
+	Data         Baseline
+	templatePath = "template.md"
+	YAMLpath     string
+	OutputPath   string
 
-var Data Baseline
+	rootCmd = &cobra.Command{
+		Use:  "baseline-compiler",
+		Long: `Baseline Compiler reads the Basline YAML and outputs it as a markdown document.`,
+		Run: func(cmd *cobra.Command, args []string) {
+			cmd.Help()
+		},
+	}
+	compileCmd = &cobra.Command{
+		Use:   "compile [file]",
+		Short: "Compile a YAML file of security criteria",
+		Args:  cobra.MinimumNArgs(0),
+		Run: func(cmd *cobra.Command, args []string) {
+			err := readYAMLFile()
+			if err != nil {
+				log.Fatalf("Error reading YAML file: %v", err)
+			}
+			err = generateBaselineMdFile()
+			if err != nil {
+				log.Fatalf("Error generating output: %v", err)
+			}
+			fmt.Println("---")
+			fmt.Printf("Output generated to %s\n", filepath.Join("..", "baseline.md"))
+			fmt.Println("Please verify the contents before committing.")
+			fmt.Println("Known issues exist with links where one term is a substring of another, such as 'release' and 'release pipeline'")
+			fmt.Println("---")
+		},
+	}
+)
 
-// Command to process YAML file
-var compileCmd = &cobra.Command{
-	Use:   "compile [file]",
-	Short: "Compile a YAML file of security criteria",
-	Args:  cobra.MinimumNArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-		filePath := args[0]
-		err := readYAMLFile(filePath)
-		if err != nil {
-			log.Fatalf("Error reading YAML file: %v", err)
-		}
-		err = generateBaselineMdFile(Data)
-		if err != nil {
-			log.Fatalf("Error generating output: %v", err)
-		}
+func init() {
+	compileCmd.Flags().StringVarP(&OutputPath, "output", "o", filepath.Join("..", "baseline.md"), "Output file path")
+	viper.BindPFlag("output", compileCmd.Flags().Lookup("output"))
 
-	},
+	compileCmd.Flags().StringVarP(&YAMLpath, "file", "f", filepath.Join("..", "baseline.yaml"), "Path to the YAML input file")
+	viper.BindPFlag("file", compileCmd.Flags().Lookup("file"))
 }
 
 func main() {
@@ -82,8 +95,8 @@ func main() {
 }
 
 // Function to read the YAML file
-func readYAMLFile(filePath string) error {
-	file, err := os.Open(filePath)
+func readYAMLFile() error {
+	file, err := os.Open(YAMLpath)
 	if err != nil {
 		return fmt.Errorf("error opening file: %v", err)
 	}
@@ -110,20 +123,14 @@ func containsSynonym(list []string, entryTerm, term string) bool {
 	return false
 }
 
+// Check whether there's an unmatched open bracket before the term
 func isWrapped(text string, matched string) bool {
-	// Find the index of the matched term
 	beforeIndex := strings.Index(text, matched)
-	// If there's no match or it's the very first term, it's not wrapped
-	if beforeIndex <= 0 {
-		return false
-	}
-
-	// Scan the substring before the term to check for brackets
 	substrBeforeTerm := text[:beforeIndex]
-	// Count open and close brackets before the term
+
 	openBrackets := strings.Count(substrBeforeTerm, "[")
 	closeBrackets := strings.Count(substrBeforeTerm, "]")
-	// Check if there's an unmatched open bracket before the term
+
 	return openBrackets > closeBrackets
 }
 
@@ -164,21 +171,16 @@ func addLinksTemplateFunction(text string) string {
 	return text
 }
 
-func linkPrepTemplateFunction(text string) string {
+func asLinkTemplateFunction(text string) string {
 	return "#" + strings.ToLower(strings.ReplaceAll(text, " ", "-"))
 }
 
 // Function to generate the markdown file
-func generateBaselineMdFile(baseline Baseline) (err error) {
-	templatePath := "template.md"
-	outputDir := ".."
-	mdFileName := "baseline.md"
-	outputPath := filepath.Join(outputDir, mdFileName)
-
+func generateBaselineMdFile() (err error) {
 	// Open or create the output file
-	outputFile, err := os.Create(outputPath)
+	outputFile, err := os.Create(OutputPath)
 	if err != nil {
-		return fmt.Errorf("error creating output file %s: %w", outputPath, err)
+		return fmt.Errorf("error creating output file %s: %w", OutputPath, err)
 	}
 	defer outputFile.Close()
 
@@ -197,8 +199,8 @@ func generateBaselineMdFile(baseline Baseline) (err error) {
 		"addLinks": func(s string) string {
 			return addLinksTemplateFunction(s)
 		},
-		"linkPrep": func(s string) string {
-			return linkPrepTemplateFunction(s)
+		"asLink": func(s string) string {
+			return asLinkTemplateFunction(s)
 		},
 	}).Parse(string(templateContent))
 	if err != nil {
@@ -206,7 +208,7 @@ func generateBaselineMdFile(baseline Baseline) (err error) {
 	}
 
 	// Execute the template and write to the output file
-	err = tmpl.Execute(outputFile, baseline)
+	err = tmpl.Execute(outputFile, Data)
 	if err != nil {
 		return fmt.Errorf("error executing template: %w", err)
 	}

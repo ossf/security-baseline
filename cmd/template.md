@@ -15,7 +15,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | --- | -------------- | -------- | -------- |
 
 {{- range .Criteria }}
-| [{{ .ID }}]({{ .ID | linkPrep }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
+| [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
 {{- end }}
 
 ## Criteria Details
@@ -26,7 +26,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 
 **Criteria:**
 
-{{ .CriteriaText | addLinks}}
+{{ .CriteriaText | addLinks }}
 **Objective:**
 
 {{ .Objective | addLinks}}
@@ -73,11 +73,11 @@ This baseline was created by community leaders from across the Linux Foundation,
 - Cloud Native Computing Foundation (CNCF)
 - Fintech Open Source Foundation (FINOS)
 {{ range .Lexicon }}
-[{{ .Term }}]: {{ .Term | linkPrep }}
+[{{ .Term }}]: {{ .Term | asLink }}
 {{- if .Synonyms }}
 {{- $term := .Term }}
 {{- range .Synonyms }}
-[{{.}}]: {{ $term | linkPrep }}
+[{{.}}]: {{ $term | asLink }}
 {{- end }}
 {{- end }}
 {{- end }}
