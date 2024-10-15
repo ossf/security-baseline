@@ -749,8 +749,8 @@ at build time.
 
 **Objective:**
 
-Ensure that the project's build and [release]
-pipelines use standardized tools and
+Ensure that the project's [build and release
+pipelines] use standardized tools and
 processes to manage dependencies, reducing
 the risk of compatibility issues or security
 vulnerabilities in the software.
