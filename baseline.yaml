@@ -432,7 +432,7 @@ criteria:
       to sensitive resources, such as merge
       approval or access to secrets.
 
-      It is recommended that, vetting includes
+      It is recommended that vetting includes
       establishing a justifiable lineage of
       identity such as confirming the
       contributor's association with a known
