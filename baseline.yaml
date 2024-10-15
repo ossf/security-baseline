@@ -248,6 +248,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
   - id: OSPS-12
+    maturity_level: 1
     category: Quality
     criteria: |
       The project's source code MUST be publicly
