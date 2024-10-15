@@ -23,7 +23,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
 | [OSPS-10](#osps-10) | 1 | Documentation | The [project documentation] MUST include an explanation of the contribution process.  |
 | [OSPS-11](#osps-11) | 1 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
-| [OSPS-12](#osps-12) | 0 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
+| [OSPS-12](#osps-12) | 1 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
 | [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made.  |
 | [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
 | [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST be written in a standardized format approved by the OSI or FSF.  |
@@ -31,7 +31,7 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
 | [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
 | [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
-| [OSPS-42](#osps-42) | 2 | Build & Release | All x MUST be created with consistent, automated [build and release pipelines].  |
+| [OSPS-42](#osps-42) | 2 | Build & Release | All [released software assets] MUST be created with consistent, automated [build and [release] pipelines].  |
 | [OSPS-43](#osps-43) | 2 | Build & Release | All [build and release pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
 | [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications.  |
 | [OSPS-45](#osps-45) | 2 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response.  |
@@ -684,7 +684,7 @@ before being granted escalated permissions
 to sensitive resources, such as merge
 approval or access to secrets.
 
-It is recommended that, vetting includes
+It is recommended that vetting includes
 establishing a justifiable lineage of
 identity such as confirming the
 [contributor]'s association with a known
@@ -749,8 +749,8 @@ at build time.
 
 **Objective:**
 
-Ensure that the project's [build and release
-pipelines] use standardized tools and
+Ensure that the project's build and [release]
+pipelines use standardized tools and
 processes to manage dependencies, reducing
 the risk of compatibility issues or security
 vulnerabilities in the software.
@@ -1290,7 +1290,7 @@ Code provided by an external source that is
 executed by a system without validation or
 restriction.
 
-### Build and Release Pipelines
+### Build and Release Pipeline
 
 A series of automated processes that compile
 and deploy software. Similar to the generic
@@ -1523,7 +1523,8 @@ This baseline was created by community leaders from across the Linux Foundation,
 - Fintech Open Source Foundation (FINOS)
 
 [Arbitrary Code]: #arbitrary-code
-[Build and Release Pipelines]: #build-and-release-pipelines
+[Build and Release Pipeline]: #build-and-release-pipeline
+[build and release pipelines]: #build-and-release-pipeline
 [Change]: #change
 [changes]: #change
 [CI/CD Pipeline]: #ci/cd-pipeline
