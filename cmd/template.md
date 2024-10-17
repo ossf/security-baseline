@@ -33,30 +33,32 @@ The Basleine is a set of security criteria that projects should meet to be consi
 **Implementation:**
 
 {{ .Implementation | addLinks }}
-**Control Mappings:**  
-{{ if .ControlMappings }}  
-{{ .ControlMappings }}  
-{{ else }}  
-_No control mappings identified._  
+**Control Mappings:**
+{{ if .ControlMappings }}
+{{ .ControlMappings }}
+{{ else }}
+_No control mappings identified._
 {{- end }}
 
-**Security Insights Value:**  
-{{ if .SecurityInsightsValue }}  
-{{ .SecurityInsightsValue }}  
-{{ else }}  
-_No security insights identified._  
+**Security Insights Value:**
+{{ if .SecurityInsightsValue }}
+{{ .SecurityInsightsValue }}
+{{ else }}
+_No security insights identified._
 {{- end }}
 
-**Scorecard Probe:**  
-{{ if .ScorecardProbe }}  
-{{ .ScorecardProbe }}  
-{{ else }}  
-_No scorecard probe identified._  
+**Scorecard Probe(s):**
+{{ if .ScorecardProbe }}
+{{- range .ScorecardProbe }}
+- {{ . }}
+{{- end }}
+{{- else }}
+_No scorecard probe identified._
 {{- end }}
 {{- end }}
+
 ## Lexicon
-
-{{- range .Lexicon }}
+{{ range .Lexicon }}
 ### {{ .Term }}
 
 {{ .Definition }}
