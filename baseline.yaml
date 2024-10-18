@@ -735,8 +735,8 @@ criteria:
       tampering or unauthorized modifications.  
     implementation: |
       Sign all released software assets at build 
-      time with a cryptographic signature, such 
-      as a GPG or PGP signature.   
+      time with a cryptographic signature or attestations, such 
+      as GPG or PGP signature, Sigstore signatures, SLSA provenance, or SLSA VSAs.   
       
       It is recommended that this signature is
       generated as part of the build and release
