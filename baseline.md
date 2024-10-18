@@ -17,35 +17,38 @@ The Basleine is a set of security criteria that projects should meet to be consi
 | [OSPS-02](#osps-02) | 1 | Access Control | The project's [version control system] MUST restrict [collaborator] permissions to the lowest available privileges by default.  |
 | [OSPS-03](#osps-03) | 1 | Access Control | The project's [version control system] MUST prevent unintentional direct [commits] against the [primary branch].  |
 | [OSPS-04](#osps-04) | 1 | Access Control | The project's [version control system] MUST prevent unintentional deletion of the [primary branch].  |
+| [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
+| [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
+| [OSPS-70](#osps-70) | 3 | Access Control | The project's [version control system] MUST require [multi-factor authentication] that does not include SMS for users when modifying the project [repository] settings or accessing sensitive data.  |
 | [OSPS-05](#osps-05) | 1 | Build & Release | The project's [build and release pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script.  |
 | [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released software assets] MUST be assigned a unique [version identifier].  |
 | [OSPS-07](#osps-07) | 1 | Build & Release | Any websites, API responses or other services related to the project development and [release] MUST be delivered using SSH, HTTPS or other encrypted channels.  |
-| [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
-| [OSPS-10](#osps-10) | 1 | Documentation | The [project documentation] MUST include an explanation of the contribution process.  |
-| [OSPS-11](#osps-11) | 1 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
-| [OSPS-12](#osps-12) | 1 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
-| [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made.  |
-| [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
-| [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST be written in a standardized format approved by the OSI or FSF.  |
-| [OSPS-16](#osps-16) | 1 | Legal | The [license] for the source code MUST be maintained in a standard location within the project's [repository].  |
-| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
-| [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
-| [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
 | [OSPS-42](#osps-42) | 2 | Build & Release | All [released software assets] MUST be created with consistent, automated [build and release pipelines].  |
 | [OSPS-43](#osps-43) | 2 | Build & Release | All [build and release pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
 | [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications.  |
+| [OSPS-71](#osps-71) | 3 | Build & Release | The [project documentation] MUST include a policy to address applicable [Software Composition Analysis] results prior to any [release].  |
+| [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
+| [OSPS-10](#osps-10) | 1 | Documentation | The [project documentation] MUST include an explanation of the contribution process.  |
+| [OSPS-11](#osps-11) | 1 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
 | [OSPS-45](#osps-45) | 2 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response.  |
 | [OSPS-46](#osps-46) | 2 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects].  |
 | [OSPS-47](#osps-47) | 2 | Documentation | The [project documentation] MUST include a guide for code [contributors] that includes requirements for acceptable contributions.  |
 | [OSPS-48](#osps-48) | 2 | Documentation | The [project documentation] MUST provide design documentation demonstrating all actions and actors within the system.  |
+| [OSPS-72](#osps-72) | 3 | Documentation | The [project documentation] MUST define a cadence in which [known vulnerabilities] are evaluated, and [exploitable vulnerabilities] are either fixed or verified as unexploitable.  |
+| [OSPS-73](#osps-73) | 3 | Documentation | The [project documentation] MUST include descriptions of all input and output interfaces of the [released software assets].  |
+| [OSPS-12](#osps-12) | 1 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
+| [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made.  |
 | [OSPS-49](#osps-49) | 2 | Quality | All software assets MUST be released with a machine-readable list of all direct and transitive dependencies with their associated [version identifier].  |
 | [OSPS-50](#osps-50) | 2 | Quality | Any automated [status checks] for [commits] MUST pass or require manual intervention prior to merge.  |
 | [OSPS-51](#osps-51) | 2 | Quality | Any additional code [repositories] produced by the project MUST enforce security requirements as applicable to the status and intent of the respective [codebase].  |
 | [OSPS-52](#osps-52) | 2 | Quality | The [version control system] MUST NOT contain generated executable artifacts.  |
-| [OSPS-70](#osps-70) | 3 | Access Control | The project's [version control system] MUST require [multi-factor authentication] that does not include SMS for users when modifying the project [repository] settings or accessing sensitive data.  |
-| [OSPS-71](#osps-71) | 3 | Build & Release | The [project documentation] MUST include a policy to address applicable [Software Composition Analysis] results prior to any [release].  |
-| [OSPS-72](#osps-72) | 3 | Documentation | The [project documentation] MUST define a cadence in which [known vulnerabilities] are evaluated, and [exploitable vulnerabilities] are either fixed or verified as unexploitable.  |
-| [OSPS-73](#osps-73) | 3 | Documentation | The [project documentation] MUST include descriptions of all input and output interfaces of the [released software assets].  |
+| [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
+| [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST be written in a standardized format approved by the OSI or FSF.  |
+| [OSPS-16](#osps-16) | 1 | Legal | The [license] for the source code MUST be maintained in a standard location within the project's [repository].  |
+| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
+
+
+
 
 ## Criteria Details
 
