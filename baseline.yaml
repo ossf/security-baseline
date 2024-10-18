@@ -738,6 +738,12 @@ criteria:
       time with a cryptographic signature or attestations, such 
       as GPG or PGP signature, Sigstore signatures, SLSA provenance, or SLSA VSAs.   
       
+      Provide clear documentation for users on how they can verify the signature
+      and what a valid signature or attestation indicates (e.g.
+      "it came from our CI/CD system",
+      "one of our project maintainers built the software", "it was built from the
+      indicated source repo with the indicated builder", "it meets SLSA level 3").
+      
       It is recommended that this signature is
       generated as part of the build and release
       pipeline to ensure that it is consistent and
