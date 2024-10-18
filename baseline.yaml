@@ -720,6 +720,32 @@ criteria:
       in a separate repository and fetched during
       a specific well-documented pipeline step.
     control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
+  - id: OSPS-53
+    maturity_level: 2
+    category: Build & Release
+    criteria: |
+      All released software assets MUST be signed
+      with a cryptographic signature.    
+    objective: |
+      Provide users with a mechanism to verify the
+      authenticity and integrity of released 
+      software assets, reducing the risk of
+      tampering or unauthorized modifications.  
+    implementation: |
+      Sign all released software assets at build 
+      time with a cryptographic signature, such 
+      as a GPG or PGP signature.   
+      
+      It is recommended that this signature is
+      generated as part of the build and release
+      pipeline to ensure that it is consistent and
+      automated.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - releasesAreSigned 
   - id: OSPS-70
     maturity_level: 3
     category: Access Control
