@@ -1347,8 +1347,7 @@ the primary deliverable in a release.
 ### Collaborator
 
 A user with access to the project's version
-control system who can commit to the
-codebase, approve changes, or manage the
+control system who can approve changes, or manage the
 repository settings. Collaborators may have
 varying permission levels based on their role
 in the project.
