@@ -74,16 +74,16 @@ project's [version control system], requiring
 authentication when accessing sensitive data
 or modifying [repository] settings.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-02
@@ -108,16 +108,16 @@ permissions to [collaborators] by default when
 added, granting additional permissions only
 when necessary.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-03
@@ -143,17 +143,17 @@ requiring [changes] to be made through
 pull/merge requests or other review
 mechanisms.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- blocksForcePushOnBranches
 
 ### OSPS-04
 
@@ -176,17 +176,17 @@ Set branch protection on the [primary branch]
 in the project's [version control system] to
 prevent deletion.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- blocksDeleteOnBranches
 
 ### OSPS-05
 
@@ -209,17 +209,17 @@ Ensure that the project's build and [release]
 pipelines do not execute [arbitrary code]
 provided from external sources.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- hasDangerousWorkflowScriptInjection
 
 ### OSPS-06
 
@@ -244,16 +244,16 @@ produced by the project, following a
 consistent naming convention or numbering
 scheme.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-07
@@ -279,16 +279,16 @@ responses, and other services to use
 encrypted channels such as SSH or HTTPS for
 data transmission.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-09
@@ -315,16 +315,16 @@ mailing lists, instant messaging, or issue
 trackers, to facilitate open communication
 and feedback.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-10
@@ -349,16 +349,16 @@ process including the steps for submitting
 [changes], and engaging with the project
 maintainers.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-11
@@ -384,16 +384,16 @@ use the project's features. If there are any
 known dangerous or destructive actions
 available, include highly-visible warnings.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-12
@@ -420,16 +420,16 @@ documentation clarifies the primary source.
 Avoid frequent [changes] to the [repository]
 that would impact the [repository] URL.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-13
@@ -456,16 +456,16 @@ Bitbucket to maintain a publicly readable
 [commits] in a way that would obscure the
 author of any [commits].
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-14
@@ -494,16 +494,16 @@ assert that they are legally authorized to
 [commit]. Use a [status check] to ensure the
 assertion is made.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-15
@@ -530,17 +530,17 @@ approved by the Open Source Initiative (OSI)
 or Free Software Foundation (FSF), ensuring
 that the terms are clear and enforceable.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- hasPermissiveLicense
 
 ### OSPS-16
 
@@ -565,17 +565,17 @@ the project's [LICENSE] file or [LICENSE]/
 directory to provide visibility and clarity
 on the licensing terms.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- hasLicenseFile
 
 ### OSPS-17
 
@@ -606,16 +606,16 @@ Foundation (FSF).
 Only necessary if [license] is different
 from the source code [license].
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-40
@@ -646,17 +646,18 @@ may be possible at the organizational or
 [repository] level. If not, set permissions at
 the top level of the pipeline.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- topLevelPermissions
+- jobLevelPermissions
 
 ### OSPS-41
 
@@ -690,16 +691,16 @@ identity such as confirming the
 [contributor]'s association with a known
 trusted organization.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-42
@@ -722,21 +723,23 @@ and distribution of the software.
 
 Implement reproducible build and [release]
 pipelines for all software assets produced
-by the project. [VCS]-integrated pipelines are
+by the project. 
+
+[VCS]-integrated pipelines are
 recommended to ensure consistency and
 automation in the build and [release]
 processes.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-43
@@ -749,8 +752,8 @@ at build time.
 
 **Objective:**
 
-Ensure that the project's [build and release
-pipelines] use standardized tools and
+Ensure that the project's build and [release]
+pipelines use standardized tools and
 processes to manage dependencies, reducing
 the risk of compatibility issues or security
 vulnerabilities in the software.
@@ -765,16 +768,16 @@ dependency file, lock file, or manifest to
 specify the required dependencies, which are
 then pulled in by the build system.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-44
@@ -803,16 +806,16 @@ beyond [commit] messages, such as descriptions
 of the security impact or relevance to
 different use cases.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-45
@@ -841,17 +844,18 @@ vulnerabilities. Set expectations for the
 how the project will respond and address
 reported issues.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- securityPolicyPresent
+- securityPolicyContainsVulnerabilityDisclosure
 
 ### OSPS-46
 
@@ -881,16 +885,16 @@ It is recommended that [project documentation]
 also sets expectations for how [defects] will
 be triaged and resolved.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-47
@@ -922,16 +926,16 @@ It is recommended that this guide is the
 source of truth for both [contributors] and
 approvers.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-48
@@ -958,16 +962,16 @@ that explains the actions and actors. Actors
 include any subsystem or entity that can
 influence another segment in the system.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-49
@@ -1001,17 +1005,18 @@ This enables users to ingest this data in a
 standardized approach alongside other
 projects in their environment.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- hasSBOM
+- hasReleaseSBOM
 
 ### OSPS-50
 
@@ -1043,17 +1048,17 @@ It is recommended that any non-blocking
 or fail requirement that approvers may be
 tempted to bypass.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- runsStatusChecksBeforeMerging
 
 ### OSPS-51
 
@@ -1087,16 +1092,16 @@ lower standard if they have lower levels of
 adoption or are not intended for general
 use.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-52
@@ -1125,17 +1130,17 @@ process such as testing, it should be stored
 in a separate [repository] and fetched during
 a specific well-documented pipeline step.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
-_No scorecard probe identified._
+**Scorecard Probe(s):**
+
+- hasBinaryArtifacts
 
 ### OSPS-70
 
@@ -1163,16 +1168,16 @@ alternatives include hardware tokens, mobile
 authenticator apps, or biometric
 authentication.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-71
@@ -1200,16 +1205,16 @@ results before any [release], and add status
 checks that verify compliance with that 
 policy prior to [release].
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-72
@@ -1237,16 +1242,16 @@ vulnerabilities, fixing exploitable
 vulnerabilities, and verifying unexploitable
 vulnerabilities.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
 
 ### OSPS-73
@@ -1272,18 +1277,20 @@ the [released software assets], explaining how
 users can interact with the software and
 what data is expected or produced.
 
-**Control Mappings:**  
-  
+**Control Mappings:**
+
 _No control mappings identified._
 
-**Security Insights Value:**  
-  
+**Security Insights Value:**
+
 _No security insights identified._
 
-**Scorecard Probe:**  
-  
+**Scorecard Probe(s):**
+
 _No scorecard probe identified._
+
 ## Lexicon
+
 ### Arbitrary Code
 
 Code provided by an external source that is

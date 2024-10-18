@@ -62,7 +62,8 @@ criteria:
       or modifying repository settings.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None yet
   - id: OSPS-02
     maturity_level: 1
     category: Access Control
@@ -82,7 +83,8 @@ criteria:
       when necessary.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None yet
   - id: OSPS-03
     maturity_level: 1
     category: Access Control
@@ -102,8 +104,8 @@ criteria:
       pull/merge requests or other review
       mechanisms.
     control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - blocksForcePushOnBranches
   - id: OSPS-04
     maturity_level: 1
     category: Access Control
@@ -121,8 +123,8 @@ criteria:
       in the project's version control system to
       prevent deletion.
     control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - blocksDeleteOnBranches
   - id: OSPS-05
     maturity_level: 1
     category: Build & Release
@@ -140,10 +142,10 @@ criteria:
       pipelines do not execute arbitrary code
       provided from external sources.
     control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - hasDangerousWorkflowScriptInjection
   - id: OSPS-06
-    maturity_level: 1
+    maturity_level: 1 # TODO: This should be lv2
     category: Build & Release
     criteria: |
       All releases and released software assets
@@ -162,7 +164,8 @@ criteria:
       scheme.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None, would need to be paired with SI
   - id: OSPS-07
     maturity_level: 1
     category: Build & Release
@@ -183,7 +186,8 @@ criteria:
       data transmission.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None, would need to be paired with SI
   - id: OSPS-09
     maturity_level: 1
     category: Documentation
@@ -205,7 +209,8 @@ criteria:
       and feedback.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None yet
   - id: OSPS-10
     maturity_level: 1
     category: Documentation
@@ -225,7 +230,8 @@ criteria:
       maintainers.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None, may not be suitable
   - id: OSPS-11
     maturity_level: 1
     category: Documentation
@@ -246,7 +252,6 @@ criteria:
       available, include highly-visible warnings.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-12
     maturity_level: 1
     category: Quality
@@ -268,7 +273,6 @@ criteria:
       that would impact the repository URL.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-13
     maturity_level: 1
     category: Quality
@@ -290,7 +294,6 @@ criteria:
       author of any commits.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-14
     maturity_level: 1
     category: Legal
@@ -314,7 +317,8 @@ criteria:
       assertion is made.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None, may not be suitable
   - id: OSPS-15
     maturity_level: 1
     category: Legal
@@ -336,7 +340,8 @@ criteria:
       that the terms are clear and enforceable.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - hasPermissiveLicense # Check this
   - id: OSPS-16
     maturity_level: 1
     category: Legal
@@ -357,7 +362,8 @@ criteria:
       on the licensing terms.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - hasLicenseFile
   - id: OSPS-17
     maturity_level: 1
     category: Legal
@@ -384,7 +390,8 @@ criteria:
       from the source code license.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # None, may need to be paired with SI
   - id: OSPS-40
     maturity_level: 2
     category: Access Control
@@ -409,8 +416,9 @@ criteria:
       repository level. If not, set permissions at
       the top level of the pipeline.
     control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - topLevelPermissions
+      - jobLevelPermissions
   - id: OSPS-41
     maturity_level: 2
     category: Access Control
@@ -440,7 +448,6 @@ criteria:
       trusted organization.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-42
     maturity_level: 2
     category: Build & Release
@@ -457,13 +464,14 @@ criteria:
     implementation: |
       Implement reproducible build and release
       pipelines for all software assets produced
-      by the project. VCS-integrated pipelines are
+      by the project. 
+      
+      VCS-integrated pipelines are
       recommended to ensure consistency and
       automation in the build and release
       processes.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-43
     maturity_level: 2
     category: Build & Release
@@ -487,7 +495,8 @@ criteria:
       then pulled in by the build system.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # TODO
   - id: OSPS-44
     maturity_level: 2
     category: Build & Release
@@ -511,7 +520,8 @@ criteria:
       different use cases.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # TODO, this might be possible if paired with SI to find the release location
   - id: OSPS-45
     maturity_level: 2
     category: Documentation
@@ -535,7 +545,9 @@ criteria:
       reported issues.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - securityPolicyPresent
+      - securityPolicyContainsVulnerabilityDisclosure
   - id: OSPS-46
     maturity_level: 2
     category: Documentation
@@ -561,7 +573,6 @@ criteria:
       be triaged and resolved.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-47
     maturity_level: 2
     category: Documentation
@@ -588,7 +599,6 @@ criteria:
       approvers.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-48
     maturity_level: 2
     category: Documentation
@@ -610,7 +620,6 @@ criteria:
       influence another segment in the system.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-49
     maturity_level: 2
     category: Quality
@@ -639,7 +648,11 @@ criteria:
       projects in their environment.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - hasSBOM
+      - hasReleaseSBOM
+      - # TODO: check for non-sbom dependency files
+
   - id: OSPS-50
     maturity_level: 2
     category: Quality
@@ -667,7 +680,9 @@ criteria:
       tempted to bypass.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - runsStatusChecksBeforeMerging
+      - # TODO: check for checks passing?
   - id: OSPS-51
     maturity_level: 2
     category: Quality
@@ -697,7 +712,8 @@ criteria:
       use.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # TODO, this may be possible if paired with SI to find the subproject
   - id: OSPS-52
     maturity_level: 2
     category: Quality
@@ -720,6 +736,8 @@ criteria:
       in a separate repository and fetched during
       a specific well-documented pipeline step.
     control_mappings: # TODO
+    scorecard_probe:
+      - hasBinaryArtifacts
   - id: OSPS-70
     maturity_level: 3
     category: Access Control
@@ -743,7 +761,8 @@ criteria:
       authentication.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # TODO
   - id: OSPS-71
     maturity_level: 3
     category: Build & Release
@@ -766,7 +785,8 @@ criteria:
       policy prior to release.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
+    scorecard_probe:
+      - # TODO: this is about policy, but we should also look for evidence of SCA
   - id: OSPS-72
     maturity_level: 3
     category: Documentation
@@ -789,7 +809,6 @@ criteria:
       vulnerabilities.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
   - id: OSPS-73
     maturity_level: 3
     category: Documentation
@@ -810,7 +829,6 @@ criteria:
       what data is expected or produced.
     control_mappings: # TODO
     security_insights_value: # TODO
-    scorecard_probe: # TODO
 
 # # # #
 #
