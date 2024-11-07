@@ -756,10 +756,11 @@ criteria:
     maturity_level: 3
     category: Quality
     criteria: |
-      All changes to the project's codebase MUST
-      require a passing status check from a
-      Static Application Security Testing (SAST)
-      tool.
+      All proposed changes to the project's
+      codebase must be automatically evaluated 
+      against a documented policy for known
+      vulnerabilities and blocked in the
+      event of violations.
     objective: |
       Identify and address defects and security weaknesses 
       in the project's codebase early in the 
