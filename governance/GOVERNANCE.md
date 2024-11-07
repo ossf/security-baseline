@@ -62,6 +62,10 @@ To nominate a community member as a maintainer candidate, a group of maintainers
 - The number of members in the committee shall not be less than two (2).
 - Whenever the number of organizations with maintainers in the project is more than two (2), committee members shall be from different organizations.
 
+### Continued Maintainer Status
+
+Once confirmed as a maintainer, continuation is contingent on regular activity and adherence to the [OpenSSF Code of Conduct](https://openssf.org/community/code-of-conduct/).
+
 ### Emeritus Maintainers
 
 Emeritus maintainers will be listed in a separate section on the OSPS Baseline's [MAINTAINERS.md].
