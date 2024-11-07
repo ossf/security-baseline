@@ -9,7 +9,7 @@ All definitions are maintained in YAML format for tandem machine and human readi
 Each entry has the following values:
 
 - **ID**:
-  - Entries 1-39 are resurved for maturity level 1
+  - Entries 1-39 are reserved for maturity level 1
   - Entries 40-69 are reserved for maturity level 2
   - Entries 70-99 are reserved for maturity level 3
 - **Maturity Level**:
