@@ -44,7 +44,7 @@ Any changes intended to be merged in the OSPS Baseline repository shall meet the
 
 Any repository under the OSPS Baseline organization may impose additional requirements to approve pull requests as long as these minimal requirements are met.
 
-## Reaching Maintainer Status
+## Maintainer Status
 
 Any community member may be considered as a candidate for maintainer status under the following conditions:
 
@@ -62,7 +62,7 @@ To nominate a community member as a maintainer candidate, a group of maintainers
 - The number of members in the committee shall not be less than two (2).
 - Whenever the number of organizations with maintainers in the project is more than two (2), committee members shall be from different organizations.
 
-## Emeritus Maintainers
+### Emeritus Maintainers
 
 Emeritus maintainers will be listed in a separate section on the OSPS Baseline's [MAINTAINERS.md].
 
