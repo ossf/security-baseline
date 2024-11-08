@@ -357,9 +357,11 @@ criteria:
       shared.
     implementation: |
       Include the project's source code license in
-      the project's LICENSE file or LICENSE/
+      the project's LICENSE file, COPYING file,
+      or LICENSE/
       directory to provide visibility and clarity
-      on the licensing terms.
+      on the licensing terms. The filename MAY
+      have an extension.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe:
