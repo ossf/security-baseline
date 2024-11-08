@@ -171,7 +171,7 @@ criteria:
     category: Build & Release
     criteria: |
       Any websites, API responses or other
-      services related to the project development
+      services involved in the project development
       and release MUST be delivered using SSH,
       HTTPS or other encrypted channels.
     objective: |
@@ -950,6 +950,12 @@ lexicon:
       within the software. These vulnerabilities
       often have associated advisories, patches, or
       recommended mitigations.
+
+      All proposed changes to the project's
+      codebase must be automatically evaluated 
+      against a documented policy for known
+      vulnerabilities and blocked in the
+      event of violations.
     synonyms:
       - Known Vulnerability
   - term: Multi-factor Authentication
