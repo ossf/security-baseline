@@ -403,9 +403,7 @@ criteria:
       Reduce the risk of unauthorized access to
       the project's build and release processes by
       limiting the permissions granted to steps
-      within the CI/CD pipelines. Allows for
-      quicker adoption of third-party services
-      that do not require elevated permissions.
+      within the CI/CD pipelines.
     implementation: |
       Configure the project's CI/CD pipelines to
       assign the lowest available permissions to
