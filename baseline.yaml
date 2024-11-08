@@ -637,7 +637,7 @@ criteria:
       This may take the form of a software bill of
       materials (SBOM) or a dependency file that
       lists all direct and transitive dependencies
-      such as package.json, or Gemfile.lock, or
+      such as package.json, Gemfile.lock, or
       go.sum.
 
       It is recommended to use a CycloneDX or SPDX
