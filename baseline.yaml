@@ -233,7 +233,7 @@ criteria:
     scorecard_probe:
       - # None, may not be suitable
   - id: OSPS-11
-    maturity_level: 1
+    maturity_level: 2
     category: Documentation
     criteria: |
       The project documentation MUST provide user
