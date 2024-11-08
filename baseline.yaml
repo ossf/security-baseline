@@ -462,10 +462,6 @@ criteria:
       errors or inconsistencies in the deployment
       and distribution of the software.
     implementation: |
-      Implement reproducible build and release
-      pipelines for all software assets produced
-      by the project. 
-      
       VCS-integrated pipelines are
       recommended to ensure consistency and
       automation in the build and release
