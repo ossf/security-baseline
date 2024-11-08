@@ -295,7 +295,7 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
   - id: OSPS-14
-    maturity_level: 1
+    maturity_level: 2
     category: Legal
     criteria: |
       The version control system MUST require all
