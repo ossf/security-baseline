@@ -477,8 +477,8 @@ criteria:
     category: Build & Release
     criteria: |
       All build and release pipelines MUST use
-      standardized tooling to ingest dependencies
-      at build time.
+      standardized tooling where available to
+      ingest dependencies at build time.
     objective: |
       Ensure that the project's build and release
       pipelines use standardized tools and
