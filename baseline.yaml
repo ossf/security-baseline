@@ -697,13 +697,14 @@ criteria:
       - runsStatusChecksBeforeMerging
       - # TODO: check for checks passing?
   - id: OSPS-51
-    maturity_level: 2
+    maturity_level: 3
     category: Quality
     criteria: |
-      Any additional code repositories produced by
-      the project MUST enforce security
-      requirements as applicable to the status and
-      intent of the respective codebase.
+      Any additional subproject code repositories
+      produced by the project and compiled into a
+      release MUST enforce security requirements as
+      applicable to the status and intent of the
+      respective codebase.
     objective: |
       Ensure that additional code repositories or
       subprojects produced by the project are held
@@ -717,12 +718,12 @@ criteria:
       identify the proper maturity level and apply
       the Open Source Project Security Baseline to
       the codebase. Any subproject or repository
-      which is compiled into the primary project
-      must be held to the same standard as the
-      primary project. Others may be held to a
-      lower standard if they have lower levels of
-      adoption or are not intended for general
-      use.
+      from the project which is compiled into the
+      primary project must be held to the same 
+      standard as the primary project. Others may
+      be held to a lower standard if they have
+      lower levels of adoption or are not intended
+      for general use.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe:
