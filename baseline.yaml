@@ -781,12 +781,10 @@ criteria:
     category: Build & Release
     criteria: |
       The project documentation MUST include a
-      policy to address applicable Software
-      Composition Analysis results prior to any
-      release.
+      policy to address SCA violations prior to any
+      release. 
     objective: |
-      Ensure that potential vulnerabilities or
-      licensing issues identified by SCA tools
+      Ensure that violations of your SCA policy
       are addressed before software releases,
       reducing the risk of shipping insecure or
       non-compliant software.
