@@ -150,7 +150,8 @@ criteria:
     criteria: |
       All releases and released software assets
       MUST be assigned a unique version
-      identifier.
+      identifier for each release intended to be
+      used by users.
     objective: |
       Ensure that each software asset produced by
       the  project is uniquely identified,
@@ -162,6 +163,8 @@ criteria:
       produced by the project, following a
       consistent naming convention or numbering
       scheme.
+      Examples include SemVer, CalVer, or
+      git commit id.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe:
