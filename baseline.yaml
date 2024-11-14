@@ -623,10 +623,11 @@ criteria:
     maturity_level: 2
     category: Quality
     criteria: |
-      All software assets MUST be released with a
-      machine-readable list of all direct and
-      transitive dependencies with their
-      associated version identifier.
+      All released software assets MUST be
+      delivered with a machine-readable list of
+      all direct and transitive internal software
+      dependencies with their associated version
+      identifiers.
     objective: |
       Provide transparency and accountability for
       the project's dependencies, enabling users
