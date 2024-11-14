@@ -827,7 +827,7 @@ criteria:
     category: Documentation
     criteria: |
       The project documentation MUST include
-      descriptions of all input and output
+      descriptions of all external input and output
       interfaces of the released software assets.
     objective: |
       Provide users and developers with an
