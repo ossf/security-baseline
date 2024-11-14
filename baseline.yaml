@@ -744,11 +744,12 @@ criteria:
       Remove generated executable artifacts
       in the project's version control system.
 
-      It is recommended that any scenario where
-      a binary artifact appears critical to a
-      process such as testing, it should be stored
-      in a separate repository and fetched during
-      a specific well-documented pipeline step.
+      It is recommended that any scenario where a
+      generated executable artifact appears
+      critical to a process such as testing, it
+      should be instead be generated at build time
+      or stored separately and fetched during a
+      specific well-documented pipeline step.
     control_mappings: # TODO
     scorecard_probe:
       - hasBinaryArtifacts
