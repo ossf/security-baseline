@@ -726,7 +726,7 @@ criteria:
     maturity_level: 2
     category: Build & Release
     criteria: |
-      All released software assets MUST be signed
+      All released software assets MUST be signed or accounted for in a signed manifest including each asset's cryptographic hashes (such as an SBOM, provenance attestation or similar). The identity of the person or process authoring the software release must be published, discoverable and must be taken into account during the verification process.
       with a cryptographic signature.    
     objective: |
       Provide users with a mechanism to verify the
