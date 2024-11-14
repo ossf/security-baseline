@@ -497,7 +497,7 @@ criteria:
     maturity_level: 2
     category: Build & Release
     criteria: |
-      All releases MUST include a descriptive log
+      All releases MUST provide a descriptive log
       of functional and security modifications.
     objective: |
       Provide transparency and accountability for
