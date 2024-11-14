@@ -387,8 +387,8 @@ criteria:
       providing clarity on how the code
       can be used and shared by others.
     implementation: |
-      Add a LICENSE file to the project's repo
-      with a license that is
+      If a different license is included with
+      released software assets, ensure it is
       an approved license by the
       Open Source Initiative (OSI), or
       a free license as approved by the
