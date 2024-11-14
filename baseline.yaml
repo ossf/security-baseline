@@ -675,7 +675,7 @@ criteria:
       before a commit can be merged into the
       primary branch.
 
-      It is recommended that any non-blocking 
+      It is recommended that any optional
       status checks are NOT configured as a pass
       or fail requirement that approvers may be
       tempted to bypass.
