@@ -671,7 +671,7 @@ criteria:
     category: Quality
     criteria: |
       Any automated status checks for commits MUST
-      pass or require manual intervention prior to
+      pass or require manual acknowledgement prior to
       merge.
     objective: |
       Ensure that the project's approvers do not
@@ -683,7 +683,7 @@ criteria:
     implementation: |
       Configure the project's version control
       system to require that all automated status
-      checks pass or require manual intervention
+      checks pass or require manual acknowledgement
       before a commit can be merged into the
       primary branch.
 
