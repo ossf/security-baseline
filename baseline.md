@@ -7,7 +7,6 @@ The Baseline is a set of security criteria that projects should meet to be consi
 > [!NOTE]
 > This document was automatically generated from the [Open Source Project Security Baseline YAML](https://github.com/ossf/security-baseline/blob/main/baseline.yaml) file.
 
-
 ---
 
 ## Criteria Overview
@@ -19,33 +18,33 @@ The Baseline is a set of security criteria that projects should meet to be consi
 | [OSPS-03](#osps-03) | 1 | Access Control | The project's [version control system] MUST prevent unintentional direct [commits] against the [primary branch].  |
 | [OSPS-04](#osps-04) | 1 | Access Control | The project's [version control system] MUST prevent unintentional deletion of the [primary branch].  |
 | [OSPS-05](#osps-05) | 1 | Build & Release | The project's [build and release pipelines] MUST NOT execute [arbitrary code] that is input from outside of the build script.  |
-| [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released software assets] MUST be assigned a unique [version identifier].  |
-| [OSPS-07](#osps-07) | 1 | Build & Release | Any websites, API responses or other services related to the project development and [release] MUST be delivered using SSH, HTTPS or other encrypted channels.  |
+| [OSPS-06](#osps-06) | 1 | Build & Release | All [releases] and [released software assets] MUST be assigned a unique [version identifier] for each [release] intended to be used by users.  |
+| [OSPS-07](#osps-07) | 1 | Build & Release | Any websites, API responses or other services involved in the project development and [release] MUST be delivered using SSH, HTTPS or other encrypted channels.  |
 | [OSPS-09](#osps-09) | 1 | Documentation | The project MUST have one or more mechanisms for public discussions about proposed [changes] and usage obstacles.  |
 | [OSPS-10](#osps-10) | 1 | Documentation | The [project documentation] MUST include an explanation of the contribution process.  |
-| [OSPS-11](#osps-11) | 1 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
+| [OSPS-11](#osps-11) | 2 | Documentation | The [project documentation] MUST provide user guides for all basic functionality.  |
 | [OSPS-12](#osps-12) | 1 | Quality | The project's source code MUST be publicly readable and have a static URL.  |
 | [OSPS-13](#osps-13) | 1 | Quality | The [version control system] MUST contain a publicly readable record of all [changes] made, who made the [changes], and when the [changes] were made.  |
-| [OSPS-14](#osps-14) | 1 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
-| [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST be written in a standardized format approved by the OSI or FSF.  |
+| [OSPS-14](#osps-14) | 2 | Legal | The [version control system] MUST require all code [contributors] to assert that they are legally authorized to [commit] the associated contributions on every [commit].  |
+| [OSPS-15](#osps-15) | 1 | Legal | The [license] for the source code MUST meet the OSI Open Source Definition or the FSF Free Software Definition.  |
 | [OSPS-16](#osps-16) | 1 | Legal | The [license] for the source code MUST be maintained in a standard location within the project's [repository].  |
-| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST be written in a standardized format approved by the OSI or FSF, if different from the source code [license].  |
+| [OSPS-17](#osps-17) | 1 | Legal | The [license] for the [released software assets] MUST meet the OSI Open Source Definition or the FSF Free Software Definition.  |
 | [OSPS-40](#osps-40) | 2 | Access Control | The project's permissions in [CI/CD pipelines] MUST be configured to the lowest available privileges except when explicitly elevated.  |
 | [OSPS-41](#osps-41) | 2 | Access Control | The [project documentation] MUST have a policy that code [contributors] are reviewed prior to granting escalated permissions to sensitive resources.  |
 | [OSPS-42](#osps-42) | 2 | Build & Release | All [released software assets] MUST be created with consistent, automated [build and release pipelines].  |
-| [OSPS-43](#osps-43) | 2 | Build & Release | All [build and release pipelines] MUST use standardized tooling to ingest dependencies at build time.  |
-| [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST include a descriptive log of functional and security modifications.  |
+| [OSPS-43](#osps-43) | 2 | Build & Release | All [build and release pipelines] MUST use standardized tooling where available to ingest dependencies at build time.  |
+| [OSPS-44](#osps-44) | 2 | Build & Release | All [releases] MUST provide a descriptive log of functional and security modifications.  |
 | [OSPS-45](#osps-45) | 2 | Documentation | The [project documentation] MUST include a policy for coordinated [vulnerability reporting], with a clear timeframe for response.  |
 | [OSPS-46](#osps-46) | 2 | Documentation | The [project documentation] MUST include a mechanism for reporting [defects].  |
 | [OSPS-47](#osps-47) | 2 | Documentation | The [project documentation] MUST include a guide for code [contributors] that includes requirements for acceptable contributions.  |
 | [OSPS-48](#osps-48) | 2 | Documentation | The [project documentation] MUST provide design documentation demonstrating all actions and actors within the system.  |
-| [OSPS-49](#osps-49) | 2 | Quality | All software assets MUST be released with a machine-readable list of all direct and transitive dependencies with their associated [version identifier].  |
-| [OSPS-50](#osps-50) | 2 | Quality | Any automated [status checks] for [commits] MUST pass or require manual intervention prior to merge.  |
-| [OSPS-51](#osps-51) | 2 | Quality | Any additional code [repositories] produced by the project MUST enforce security requirements as applicable to the status and intent of the respective [codebase].  |
+| [OSPS-49](#osps-49) | 2 | Quality | All [released software assets] MUST be delivered with a machine-readable list of all direct and transitive internal software dependencies with their associated [version identifiers].  |
+| [OSPS-50](#osps-50) | 2 | Quality | Any automated [status checks] for [commits] MUST pass or require manual acknowledgement prior to merge.  |
+| [OSPS-51](#osps-51) | 3 | Quality | Any additional [subproject] code [repositories] produced by the project and compiled into a [release] MUST enforce security requirements as applicable to the status and intent of the respective [codebase].  |
 | [OSPS-52](#osps-52) | 2 | Quality | The [version control system] MUST NOT contain generated executable artifacts.  |
 | [OSPS-70](#osps-70) | 3 | Access Control | The project's [version control system] MUST require [multi-factor authentication] that does not include SMS for users when modifying the project [repository] settings or accessing sensitive data.  |
-| [OSPS-71](#osps-71) | 3 | Build & Release | The [project documentation] MUST include a policy to address applicable [Software Composition Analysis] results prior to any [release].  |
-| [OSPS-72](#osps-72) | 3 | Documentation | The [project documentation] MUST define a cadence in which [known vulnerabilities] are evaluated, and [exploitable vulnerabilities] are either fixed or verified as unexploitable.  |
+| [OSPS-71](#osps-71) | 3 | Build & Release | The [project documentation] MUST include a policy to address [SCA] violations prior to any [release].  |
+| [OSPS-72](#osps-72) | 2 |  | The [project documentation] MUST include a policy that defines a threshold for remediation of [SCA] findings related to vulnerabilities and [licenses].  |
 | [OSPS-73](#osps-73) | 3 | Documentation | The [project documentation] MUST include descriptions of all input and output interfaces of the [released software assets].  |
 
 ## Criteria Details
@@ -228,7 +227,8 @@ _No security insights identified._
 
 All [releases] and [released software assets]
 MUST be assigned a unique version
-identifier.
+identifier for each [release] intended to be
+used by users.
 
 **Objective:**
 
@@ -244,6 +244,8 @@ Assign a unique [version identifier] to each
 produced by the project, following a
 consistent naming convention or numbering
 scheme.
+Examples include SemVer, CalVer, or
+git [commit] id.
 
 **Control Mappings:**
 
@@ -262,7 +264,7 @@ _No scorecard probe identified._
 **Criteria:**
 
 Any websites, API responses or other
-services related to the project development
+services involved in the project development
 and [release] MUST be delivered using SSH,
 HTTPS or other encrypted channels.
 
@@ -511,25 +513,34 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The [license] for the source code MUST be
-written in a standardized format approved by
-the OSI or FSF.
+The [license] for the source code MUST
+meet the OSI Open Source Definition or
+the FSF Free Software Definition.
 
 **Objective:**
 
 Ensure that the project's source code is
 distributed under a recognized and legally
-enforceable [license], providing clarity on
-how the code can be used and shared by
-others.
+enforceable open source software [license],
+providing clarity on how the code
+can be used and shared by others.
 
 **Implementation:**
 
 Add a [LICENSE] file to the project's [repo]
-that is written in a standardized format
-approved by the Open Source Initiative (OSI)
-or Free Software Foundation (FSF), ensuring
-that the terms are clear and enforceable.
+with a [license] that is
+an approved [license] by the
+Open Source Initiative (OSI), or
+a free [license] as approved by the
+Free Software Foundation (FSF).
+Examples of such [licenses] include the
+MIT, BSD 2-clause, BSD 3-clause revised,
+Apache 2.0, Lesser GNU General Public
+[License] (LGPL), and the
+GNU General Public [License] (GPL).
+Releasing to the public domain (e.g., CC0)
+meets this criterion if there are no
+other encumbrances (e.g., patents).
 
 **Control Mappings:**
 
@@ -562,9 +573,11 @@ shared.
 **Implementation:**
 
 Include the project's source code [license] in
-the project's [LICENSE] file or [LICENSE]/
+the project's [LICENSE] file, COPYING file,
+or [LICENSE]/
 directory to provide visibility and clarity
-on the licensing terms.
+on the licensing terms. The filename MAY
+have an extension.
 
 **Control Mappings:**
 
@@ -583,29 +596,33 @@ _No security insights identified._
 **Criteria:**
 
 The [license] for the [released software assets]
-MUST be written in a standardized format
-approved by the OSI or FSF, if different
-from the source code [license].
+MUST meet the OSI Open Source Definition or
+the FSF Free Software Definition.
 
 **Objective:**
 
-Ensure that the project's released software
-assets are distributed under a recognized
-and legally enforceable [license], separate
-from the source code [license] if necessary,
-providing clarity on how the software can be
-used and shared.
+Ensure that the project's source code is
+distributed under a recognized and legally
+enforceable open source software [license],
+providing clarity on how the code
+can be used and shared by others.
 
 **Implementation:**
 
-Choose a [license] for the project's released
-software assets that is written in a
-standardized format approved by the Open
-Source Initiative (OSI) or Free Software
-Foundation (FSF).
-
-Only necessary if [license] is different
-from the source code [license].
+If a different [license] is included with
+[released software assets], ensure it is
+an approved [license] by the
+Open Source Initiative (OSI), or
+a free [license] as approved by the
+Free Software Foundation (FSF).
+Examples of such [licenses] include the
+MIT, BSD 2-clause, BSD 3-clause revised,
+Apache 2.0, Lesser GNU General Public
+[License] (LGPL), and the
+GNU General Public [License] (GPL).
+Note that the [license] for the released
+software assets may be different than the
+source code.
 
 **Control Mappings:**
 
@@ -632,9 +649,7 @@ privileges except when explicitly elevated.
 Reduce the risk of unauthorized access to
 the project's build and [release] processes by
 limiting the permissions granted to steps
-within the [CI/CD pipelines]. Allows for
-quicker adoption of third-party services
-that do not require elevated permissions.
+within the [CI/CD pipelines].
 
 **Implementation:**
 
@@ -722,10 +737,6 @@ and distribution of the software.
 
 **Implementation:**
 
-Implement reproducible build and [release]
-pipelines for all software assets produced
-by the project. 
-
 [VCS]-integrated pipelines are
 recommended to ensure consistency and
 automation in the build and [release]
@@ -748,8 +759,8 @@ _No scorecard probe identified._
 **Criteria:**
 
 All [build and release pipelines] MUST use
-standardized tooling to ingest dependencies
-at build time.
+standardized tooling where available to
+ingest dependencies at build time.
 
 **Objective:**
 
@@ -785,7 +796,7 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All [releases] MUST include a descriptive log
+All [releases] MUST provide a descriptive log
 of functional and security modifications.
 
 **Objective:**
@@ -979,10 +990,11 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-All software assets MUST be released with a
-machine-readable list of all direct and
-transitive dependencies with their
-associated [version identifier].
+All [released software assets] MUST be
+delivered with a machine-readable list of
+all direct and transitive internal software
+dependencies with their associated version
+identifiers.
 
 **Objective:**
 
@@ -996,8 +1008,8 @@ software's dependencies and versions.
 This may take the form of a software bill of
 materials (SBOM) or a dependency file that
 lists all direct and transitive dependencies
-such as requirements.txt, package.json, or
-Gemfile.lock, or go.sum.
+such as package.json, Gemfile.lock, or
+go.sum.
 
 It is recommended to use a CycloneDX or SPDX
 file that is auto-generated at build time by
@@ -1024,7 +1036,7 @@ _No security insights identified._
 **Criteria:**
 
 Any automated [status checks] for [commits] MUST
-pass or require manual intervention prior to
+pass or require manual acknowledgement prior to
 merge.
 
 **Objective:**
@@ -1040,11 +1052,11 @@ automated checks.
 
 Configure the project's version control
 system to require that all automated status
-checks pass or require manual intervention
+checks pass or require manual acknowledgement
 before a [commit] can be merged into the
 [primary branch].
 
-It is recommended that any non-blocking 
+It is recommended that any optional
 [status checks] are NOT configured as a pass
 or fail requirement that approvers may be
 tempted to bypass.
@@ -1065,10 +1077,11 @@ _No security insights identified._
 
 **Criteria:**
 
-Any additional code [repositories] produced by
-the project MUST enforce security
-requirements as applicable to the status and
-intent of the respective [codebase].
+Any additional [subproject] code [repositories]
+produced by the project and compiled into a
+[release] MUST enforce security requirements as
+applicable to the status and intent of the
+respective [codebase].
 
 **Objective:**
 
@@ -1086,12 +1099,12 @@ any [codebases] that are considered
 identify the proper maturity level and apply
 the Open Source Project Security Baseline to
 the [codebase]. Any [subproject] or [repository]
-which is compiled into the primary project
-must be held to the same standard as the
-primary project. Others may be held to a
-lower standard if they have lower levels of
-adoption or are not intended for general
-use.
+from the project which is compiled into the
+primary project must be held to the same 
+standard as the primary project. Others may
+be held to a lower standard if they have
+lower levels of adoption or are not intended
+for general use.
 
 **Control Mappings:**
 
@@ -1125,11 +1138,12 @@ in the [repository].
 Remove generated executable artifacts
 in the project's [version control system].
 
-It is recommended that any scenario where
-a binary artifact appears critical to a
-process such as testing, it should be stored
-in a separate [repository] and fetched during
-a specific well-documented pipeline step.
+It is recommended that any scenario where a
+generated executable artifact appears
+critical to a process such as testing, it
+should be instead be generated at build time
+or stored separately and fetched during a
+specific well-documented pipeline step.
 
 **Control Mappings:**
 
@@ -1186,14 +1200,12 @@ _No scorecard probe identified._
 **Criteria:**
 
 The [project documentation] MUST include a
-policy to address applicable Software
-Composition Analysis results prior to any
+policy to address [SCA] violations prior to any
 [release].
 
 **Objective:**
 
-Ensure that potential vulnerabilities or
-licensing issues identified by [SCA] tools
+Ensure that violations of your [SCA] policy
 are addressed before software [releases],
 reducing the risk of shipping insecure or
 non-compliant software.
@@ -1222,26 +1234,26 @@ _No scorecard probe identified._
 
 **Criteria:**
 
-The [project documentation] MUST define a
-cadence in which [known vulnerabilities] are
-evaluated, and [exploitable vulnerabilities]
-are either fixed or verified as
-unexploitable.
+The [project documentation] MUST include a
+policy that defines a threshold for remediation
+of [SCA] findings related to vulnerabilities and
+[licenses].
 
 **Objective:**
 
-Establish a process for evaluating and
-addressing [known vulnerabilities], then
-communicate this process to users and
-[contributors] alike.
+Ensure that the project clearly communicates
+the threshold for remediation of [SCA] findings,
+including vulnerabilities and [license] issues
+in software dependencies.
 
 **Implementation:**
 
-Define a policy in the project
-documentation for evaluating known
-vulnerabilities, fixing exploitable
-vulnerabilities, and verifying unexploitable
-vulnerabilities.
+Document a policy in the project that
+defines a threshold for remediation of [SCA]
+findings related to vulnerabilities and
+[licenses]. Include the process for
+identifying, prioritizing, and remediating
+these findings.
 
 **Control Mappings:**
 
@@ -1409,6 +1421,12 @@ within the software. These vulnerabilities
 often have associated advisories, patches, or
 recommended mitigations.
 
+All proposed changes to the project's
+codebase must be automatically evaluated 
+against a documented policy for known
+vulnerabilities and blocked in the
+event of violations.
+
 ### Multi-factor Authentication
 
 An authentication method that requires two or
@@ -1552,6 +1570,7 @@ This baseline was created by community leaders from across the Linux Foundation,
 [Exploitable Vulnerabilities]: #exploitable-vulnerabilities
 [Exploitable Vulnerability]: #exploitable-vulnerabilities
 [License]: #license
+[licenses]: #license
 [Known Vulnerabilities]: #known-vulnerabilities
 [Known Vulnerability]: #known-vulnerabilities
 [Multi-factor Authentication]: #multi-factor-authentication
@@ -1574,6 +1593,7 @@ This baseline was created by community leaders from across the Linux Foundation,
 [Subproject]: #subproject
 [subprojects]: #subproject
 [Version Identifier]: #version-identifier
+[version identifiers]: #version-identifier
 [Version Control System]: #version-control-system
 [VCS]: #version-control-system
 [version control systems]: #version-control-system
