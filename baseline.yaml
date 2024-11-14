@@ -10,9 +10,6 @@
 # Citeria
 #
 # ID is a unique identifier for the requirement.
-# 1-39 are resurved for maturity level 1, 40-69
-# are reserved for maturity level 2, and 70-99 are
-# reserved for maturity level 3.
 #
 # maturity_level is the level of maturity for the
 # requirement. 1 is the lowest level of maturity,
