@@ -178,6 +178,11 @@ func asLinkTemplateFunction(text string) string {
 // Function to generate the markdown file
 func generateBaselineMdFile() (err error) {
 	// Open or create the output file
+	oDir := filepath.Dir(OutputPath)
+	err = os.MkdirAll(oDir, os.ModePerm)
+	if err != nil {
+		return fmt.Errorf("error creating output directory %s: %w", oDir, err)
+	}
 	outputFile, err := os.Create(OutputPath)
 	if err != nil {
 		return fmt.Errorf("error creating output file %s: %w", OutputPath, err)
