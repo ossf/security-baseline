@@ -62,12 +62,13 @@ var (
 			if err != nil {
 				log.Fatalf("Error reading YAML file: %v", err)
 			}
+
 			err = generateBaselineMdFile()
 			if err != nil {
 				log.Fatalf("Error generating output: %v", err)
 			}
 			fmt.Println("---")
-			fmt.Printf("Output generated to %s\n", filepath.Join("..", "baseline.md"))
+			fmt.Printf("Output generated to %s\n", OutputPath)
 			fmt.Println("Please verify the contents before committing.")
 			fmt.Println("Known issues exist with links where one term is a substring of another, such as 'release' and 'release pipeline'")
 			fmt.Println("---")
