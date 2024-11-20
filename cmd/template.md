@@ -1,11 +1,15 @@
 # Open Source Project Security Baseline
 
+* Contents
+{:toc}
+
 ## Overview
 
-The Baseline is a set of security criteria that projects should meet to be considered secure. The criteria are organized by maturity level and category. In the detailed subsections you will find the criteria, objectives, and implementation notes.
+The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
+The criteria are organized by maturity level and category.
+In the detailed subsections you will find the criteria, objectives, and implementation notes.
 
-> [!NOTE]
-> This document was automatically generated from the [Open Source Project Security Baseline YAML](https://github.com/ossf/security-baseline/blob/main/baseline.yaml) file.
+For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
 ---
 
@@ -55,7 +59,11 @@ _No security insights identified._
 {{- else }}
 _No scorecard probe identified._
 {{- end }}
+
+---
+
 {{- end }}
+
 
 ## Lexicon
 {{ range .Lexicon }}
@@ -74,6 +82,7 @@ This baseline was created by community leaders from across the Linux Foundation,
 - Open Source Security Foundation (OpenSSF)
 - Cloud Native Computing Foundation (CNCF)
 - Fintech Open Source Foundation (FINOS)
+- [OSPS Baseline contributors](https://github.com/ossf/security-baseline/graphs/contributors)
 {{ range .Lexicon }}
 [{{ .Term }}]: {{ .Term | asLink }}
 {{- if .Synonyms }}
