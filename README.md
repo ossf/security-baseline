@@ -9,9 +9,9 @@ All definitions are maintained in YAML format for tandem machine and human readi
 Each entry has the following values:
 
 - **ID**:
-  - Entries 1-39 are reserved for maturity level 1
-  - Entries 40-69 are reserved for maturity level 2
-  - Entries 70-99 are reserved for maturity level 3
+  - Entries are of the form OSPS-_Category_-_Index_ where
+    - *Category* is a two-letter abbreviated form of the categories listed below
+    - *Index* is a sequentially-assigned two-digit number. Numbers are unique within a category but not between categories
 - **Maturity Level**:
   - Level 1: for any code or non-code project with any number of maintainers or users
   - Level 2: for any code project that has at least 2 maintainers and a small number of consistent users
