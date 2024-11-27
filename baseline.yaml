@@ -755,6 +755,31 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - hasBinaryArtifacts
+  - id: OSPS-QA-07
+    maturity_level: 3
+    category: Quality
+    criteria: |
+      All proposed changes to the project's
+      codebase must be automatically evaluated 
+      against a documented policy for known
+      vulnerabilities and blocked in the
+      event of violations except when declared
+      and supressed as non exploitable.
+    objective: |
+      Identify and address defects and security weaknesses 
+      in the project's codebase early in the 
+      development process, reducing the risk of 
+      shipping insecure software.
+    implementation: |
+      Create a status check in the project's
+      version control system that runs a Static
+      Application Security Testing (SAST) tool on
+      all changes to the codebase. Require that the
+      status check passes before changes can be
+      merged.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # sastToolRunsOnAllCommits 
   - id: OSPS-AC-07
     maturity_level: 3
     category: Access Control
