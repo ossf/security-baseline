@@ -786,7 +786,7 @@ criteria:
     criteria: |
       The project documentation MUST include a
       policy to address SCA violations prior to any
-      release. 
+      release.
     objective: |
       Ensure that violations of your SCA policy
       are addressed before software releases,
@@ -806,22 +806,22 @@ criteria:
     maturity_level: 3
     category: Documentation
     criteria: |
-      The project documentation MUST define a
-      cadence in which known vulnerabilities are
-      evaluated, and exploitable vulnerabilities
-      are either fixed or verified as
-      unexploitable.
+      The project documentation MUST include a
+      policy that defines a threshold for remediation
+      of SCA findings related to vulnerabilities and
+      licenses.
     objective: |
-      Establish a process for evaluating and
-      addressing known vulnerabilities, then
-      communicate this process to users and
-      contributors alike.
+      Ensure that the project clearly communicates
+      the threshold for remediation of SCA findings,
+      including vulnerabilities and license issues
+      in software dependencies.
     implementation: |
-      Define a policy in the project
-      documentation for evaluating known
-      vulnerabilities, fixing exploitable
-      vulnerabilities, and verifying unexploitable
-      vulnerabilities.
+      Document a policy in the project that
+      defines a threshold for remediation of SCA
+      findings related to vulnerabilities and
+      licenses. Include the process for
+      identifying, prioritizing, and remediating
+      these findings.
     control_mappings: # TODO
     security_insights_value: # TODO
   - id: OSPS-DO-09
