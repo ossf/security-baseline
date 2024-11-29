@@ -1,0 +1,12 @@
+# Configure generation of web page(s).
+name: OpenSSF Security Baseline
+title: null
+kramdown:
+  toc_levels: "2"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      author: Open Source Security Foundation (OpenSSF) Securite Baseline SIG

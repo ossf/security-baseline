@@ -62,12 +62,13 @@ var (
 			if err != nil {
 				log.Fatalf("Error reading YAML file: %v", err)
 			}
+
 			err = generateBaselineMdFile()
 			if err != nil {
 				log.Fatalf("Error generating output: %v", err)
 			}
 			fmt.Println("---")
-			fmt.Printf("Output generated to %s\n", filepath.Join("..", "baseline.md"))
+			fmt.Printf("Output generated to %s\n", OutputPath)
 			fmt.Println("Please verify the contents before committing.")
 			fmt.Println("Known issues exist with links where one term is a substring of another, such as 'release' and 'release pipeline'")
 			fmt.Println("---")
@@ -178,6 +179,11 @@ func asLinkTemplateFunction(text string) string {
 // Function to generate the markdown file
 func generateBaselineMdFile() (err error) {
 	// Open or create the output file
+	oDir := filepath.Dir(OutputPath)
+	err = os.MkdirAll(oDir, os.ModePerm)
+	if err != nil {
+		return fmt.Errorf("error creating output directory %s: %w", oDir, err)
+	}
 	outputFile, err := os.Create(OutputPath)
 	if err != nil {
 		return fmt.Errorf("error creating output file %s: %w", OutputPath, err)
