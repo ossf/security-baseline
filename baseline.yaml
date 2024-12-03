@@ -42,6 +42,7 @@
 # recommendations or best practices.
 #
 criteria:
+
   - id: OSPS-AC-01
     maturity_level: 1
     category: Access Control
@@ -66,6 +67,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None yet
+
   - id: OSPS-AC-02
     maturity_level: 1
     category: Access Control
@@ -87,6 +89,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None yet
+
   - id: OSPS-AC-03
     maturity_level: 1
     category: Access Control
@@ -108,6 +111,7 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - blocksForcePushOnBranches
+
   - id: OSPS-AC-04
     maturity_level: 1
     category: Access Control
@@ -127,6 +131,89 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - blocksDeleteOnBranches
+
+  - id: OSPS-AC-05
+    maturity_level: 2
+    category: Access Control
+    criteria: |
+      The project's permissions in CI/CD pipelines
+      MUST be configured to the lowest available
+      privileges except when explicitly elevated.
+    objective: |
+      Reduce the risk of unauthorized access to
+      the project's build and release processes by
+      limiting the permissions granted to steps
+      within the CI/CD pipelines.
+    implementation: |
+      Configure the project's CI/CD pipelines to
+      assign the lowest available permissions to
+      users and services by default, elevating
+      permissions only when necessary for specific
+      tasks. In some version control systems, this
+      may be possible at the organizational or
+      repository level. If not, set permissions at
+      the top level of the pipeline.
+    control_mappings: # TODO
+    scorecard_probe:
+      - topLevelPermissions
+      - jobLevelPermissions
+
+  - id: OSPS-AC-06
+    maturity_level: 2
+    category: Access Control
+    criteria: |
+      The project documentation MUST have a policy
+      that code contributors are reviewed prior to
+      granting escalated permissions to sensitive
+      resources.
+    objective: |
+      Ensure that code contributors are vetted and
+      reviewed before being granted elevated
+      permissions to sensitive resources within
+      the project, reducing the risk of
+      unauthorized access or misuse.
+    implementation: |
+      Publish an enforceable policy in the project
+      documentation that requires code
+      contributors to be reviewed and approved
+      before being granted escalated permissions
+      to sensitive resources, such as merge
+      approval or access to secrets.
+
+      It is recommended that vetting includes
+      establishing a justifiable lineage of
+      identity such as confirming the
+      contributor's association with a known
+      trusted organization.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-AC-07
+    maturity_level: 3
+    category: Access Control
+    criteria: |
+      The project's version control system MUST
+      require multi-factor authentication that
+      does not include SMS for users when
+      modifying the project repository settings or
+      accessing sensitive data.
+    objective: |
+      Ensure that multi-factor authentication
+      does not allow SMS as a factor, because
+      SMS lacks encryption and may be vulnerable
+      to attacks via Signaling System 7,
+      social engineering, or SIM-swapping.
+    implementation: | # NOTE: I don't think this is currently possible in GitHub
+      Require multi-factor authentication methods
+      that do not include SMS for users. Common
+      alternatives include hardware tokens, mobile
+      authenticator apps, or biometric
+      authentication.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - # TODO
+
   - id: OSPS-BR-01
     maturity_level: 1
     category: Build & Release
@@ -146,6 +233,7 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - hasDangerousWorkflowScriptInjection
+
   - id: OSPS-BR-02
     maturity_level: 1 # TODO: This should be lv2
     category: Build & Release
@@ -171,6 +259,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, would need to be paired with SI
+
   - id: OSPS-BR-03
     maturity_level: 1
     category: Build & Release
@@ -193,6 +282,80 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, would need to be paired with SI
+
+  - id: OSPS-BR-04
+    maturity_level: 2
+    category: Build & Release
+    criteria: |
+      All released software assets MUST be created
+      with consistent, automated build and release
+      pipelines.
+    objective: |
+      Ensure that the project's software assets
+      are built and released using consistent and
+      automated processes, reducing the risk of
+      errors or inconsistencies in the deployment
+      and distribution of the software.
+    implementation: |
+      VCS-integrated pipelines are
+      recommended to ensure consistency and
+      automation in the build and release
+      processes.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-BR-05
+    maturity_level: 2
+    category: Build & Release
+    criteria: |
+      All build and release pipelines MUST use
+      standardized tooling where available to
+      ingest dependencies at build time.
+    objective: |
+      Ensure that the project's build and release
+      pipelines use standardized tools and
+      processes to manage dependencies, reducing
+      the risk of compatibility issues or security
+      vulnerabilities in the software.
+    implementation: |
+      Use a common tooling for your ecosystem,
+      such as package managers or dependency
+      management tools to ingest dependencies at
+      build time. This may include using a
+      dependency file, lock file, or manifest to
+      specify the required dependencies, which are
+      then pulled in by the build system.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - # TODO
+
+  - id: OSPS-BR-06
+    maturity_level: 2
+    category: Build & Release
+    criteria: |
+      All releases MUST provide a descriptive log
+      of functional and security modifications.
+    objective: |
+      Provide transparency and accountability for
+      changes made to the project's software
+      releases, enabling users to understand the
+      modifications and improvements included in
+      each release.
+    implementation: |
+      Ensure that all releases include a
+      descriptive change log. 
+
+      It is recommended to ensure that the change
+      log is human-readable and includes details
+      beyond commit messages, such as descriptions 
+      of the security impact or relevance to
+      different use cases.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - # TODO, this might be possible if paired with SI to find the release location
+
   - id: OSPS-DO-01
     maturity_level: 1
     category: Documentation
@@ -216,6 +379,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None yet
+
   - id: OSPS-DO-02
     maturity_level: 1
     category: Documentation
@@ -237,6 +401,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, may not be suitable
+
   - id: OSPS-DO-03
     maturity_level: 2
     category: Documentation
@@ -257,48 +422,176 @@ criteria:
       available, include highly-visible warnings.
     control_mappings: # TODO
     security_insights_value: # TODO
-  - id: OSPS-QA-01
-    maturity_level: 1
-    category: Quality
+
+  - id: OSPS-DO-04
+    maturity_level: 2
+    category: Documentation
     criteria: |
-      The project's source code MUST be publicly
-      readable and have a static URL.
+      The project documentation MUST include a
+      policy for coordinated vulnerability
+      reporting, with a clear timeframe for
+      response.
     objective: |
-      Enable users to access and review the
-      project's source code and history, promoting
-      transparency and collaboration within the
-      project community.
+      Establish a process for reporting and
+      addressing vulnerabilities in the project,
+      ensuring that security issues are handled
+      promptly and transparently.
     implementation: |
-      Use a common VCS such as GitHub, GitLab, or
-      Bitbucket. Ensure the repository is publicly
-      readable. Avoid duplication or mirroring of
-      repositories unless highly visible
-      documentation clarifies the primary source.
-      Avoid frequent changes to the repository
-      that would impact the repository URL.
+      Create a SECURITY.md file at the root of the
+      directory, outlining the project's policy
+      for coordinated vulnerability reporting.
+      Include a method for reporting
+      vulnerabilities. Set expectations for the
+      how the project will respond and address
+      reported issues.
     control_mappings: # TODO
     security_insights_value: # TODO
-  - id: OSPS-QA-02
-    maturity_level: 1
-    category: Quality
+    scorecard_probe:
+      - securityPolicyPresent
+      - securityPolicyContainsVulnerabilityDisclosure
+
+  - id: OSPS-DO-05
+    maturity_level: 2
+    category: Documentation
     criteria: |
-      The version control system MUST contain a
-      publicly readable record of all changes
-      made, who made the changes, and when the
-      changes were made.
+      The project documentation MUST include a
+      mechanism for reporting defects.
     objective: |
-      Provide transparency and accountability for
-      changes made to the project's codebase,
-      enabling users to track modifications and
-      understand the history of the project.
+      Enable users and contributors to report
+      defects or issues with the released software
+      assets, facilitating communication and
+      collaboration on defect fixes and
+      improvements.
     implementation: |
-      Use a common VCS such as GitHub, GitLab, or
-      Bitbucket to maintain a publicly readable
-      commit history. Avoid squashing or rewriting
-      commits in a way that would obscure the
-      author of any commits.
+      It is recommended that projects use their
+      VCS default issue tracker. If an extarnal
+      source is used, ensure that the project
+      documentation and contributing guide clearly
+      and visibly explain how to use the reporting
+      system.
+
+      It is recommended that project documentation
+      also sets expectations for how defects will
+      be triaged and resolved.
     control_mappings: # TODO
     security_insights_value: # TODO
+
+  - id: OSPS-DO-06
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a
+      guide for code contributors that includes
+      requirements for acceptable contributions.
+    objective: |
+      Provide guidance to code contributors on how
+      to submit changes and enhancements to the
+      project's codebase, outlining the standards
+      and expectations for acceptable
+      contributions.
+    implementation: |
+      Extend the CONTRIBUTING.md or CONTRIBUTING/
+      contents in the project documentation to
+      outline the requirements for acceptable
+      contributions, including coding standards,
+      testing requirements, and submission
+      guidelines for code contributors.
+
+      It is recommended that this guide is the
+      source of truth for both contributors and
+      approvers.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-DO-07
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST provide
+      design documentation demonstrating all
+      actions and actors within the system.
+    objective: |
+      Provide an overview of the project's design
+      and architecture, illustrating the
+      interactions and components of the system to
+      help contributors and security reviewers
+      understand the internal logic of the
+      released software assets.
+    implementation: |
+      Include designs in the project documentation
+      that explains the actions and actors. Actors
+      include any subsystem or entity that can
+      influence another segment in the system.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-DO-08
+    maturity_level: 3
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a
+      policy that defines a threshold for remediation
+      of SCA findings related to vulnerabilities and
+      licenses.
+    objective: |
+      Ensure that the project clearly communicates
+      the threshold for remediation of SCA findings,
+      including vulnerabilities and license issues
+      in software dependencies.
+    implementation: |
+      Document a policy in the project that
+      defines a threshold for remediation of SCA
+      findings related to vulnerabilities and
+      licenses. Include the process for
+      identifying, prioritizing, and remediating
+      these findings.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-DO-09
+    maturity_level: 3
+    category: Documentation
+    criteria: |
+      The project documentation MUST include
+      descriptions of all external input and output
+      interfaces of the released software assets.
+    objective: |
+      Provide users and developers with an
+      understanding of how to interact with the
+      project's software and integrate it with
+      other systems, enabling them to use the
+      software effectively.
+    implementation: |
+      Document all input and output interfaces of
+      the released software assets, explaining how
+      users can interact with the software and
+      what data is expected or produced.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-DO-10
+    maturity_level: 3
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a
+      policy to address SCA violations prior to any
+      release.
+    objective: |
+      Ensure that violations of your SCA policy
+      are addressed before software releases,
+      reducing the risk of shipping insecure or
+      non-compliant software.
+    implementation: |
+      Document a policy in the project to address
+      applicable Software Composition Analysis 
+      results before any release, and add status
+      checks that verify compliance with that 
+      policy prior to release.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - # TODO: this is about policy, but we should also look for evidence of SCA
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
@@ -324,6 +617,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, may not be suitable
+
   - id: OSPS-LE-02
     maturity_level: 1
     category: Legal
@@ -356,6 +650,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - hasPermissiveLicense # Check this
+
   - id: OSPS-LE-03
     maturity_level: 1
     category: Legal
@@ -380,6 +675,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - hasLicenseFile
+
   - id: OSPS-LE-04
     maturity_level: 1
     category: Legal
@@ -412,228 +708,51 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, may need to be paired with SI
-  - id: OSPS-AC-05
-    maturity_level: 2
-    category: Access Control
-    criteria: |
-      The project's permissions in CI/CD pipelines
-      MUST be configured to the lowest available
-      privileges except when explicitly elevated.
-    objective: |
-      Reduce the risk of unauthorized access to
-      the project's build and release processes by
-      limiting the permissions granted to steps
-      within the CI/CD pipelines.
-    implementation: |
-      Configure the project's CI/CD pipelines to
-      assign the lowest available permissions to
-      users and services by default, elevating
-      permissions only when necessary for specific
-      tasks. In some version control systems, this
-      may be possible at the organizational or
-      repository level. If not, set permissions at
-      the top level of the pipeline.
-    control_mappings: # TODO
-    scorecard_probe:
-      - topLevelPermissions
-      - jobLevelPermissions
-  - id: OSPS-AC-06
-    maturity_level: 2
-    category: Access Control
-    criteria: |
-      The project documentation MUST have a policy
-      that code contributors are reviewed prior to
-      granting escalated permissions to sensitive
-      resources.
-    objective: |
-      Ensure that code contributors are vetted and
-      reviewed before being granted elevated
-      permissions to sensitive resources within
-      the project, reducing the risk of
-      unauthorized access or misuse.
-    implementation: |
-      Publish an enforceable policy in the project
-      documentation that requires code
-      contributors to be reviewed and approved
-      before being granted escalated permissions
-      to sensitive resources, such as merge
-      approval or access to secrets.
 
-      It is recommended that vetting includes
-      establishing a justifiable lineage of
-      identity such as confirming the
-      contributor's association with a known
-      trusted organization.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-  - id: OSPS-BR-04
-    maturity_level: 2
-    category: Build & Release
+  - id: OSPS-QA-01
+    maturity_level: 1
+    category: Quality
     criteria: |
-      All released software assets MUST be created
-      with consistent, automated build and release
-      pipelines.
+      The project's source code MUST be publicly
+      readable and have a static URL.
     objective: |
-      Ensure that the project's software assets
-      are built and released using consistent and
-      automated processes, reducing the risk of
-      errors or inconsistencies in the deployment
-      and distribution of the software.
+      Enable users to access and review the
+      project's source code and history, promoting
+      transparency and collaboration within the
+      project community.
     implementation: |
-      VCS-integrated pipelines are
-      recommended to ensure consistency and
-      automation in the build and release
-      processes.
+      Use a common VCS such as GitHub, GitLab, or
+      Bitbucket. Ensure the repository is publicly
+      readable. Avoid duplication or mirroring of
+      repositories unless highly visible
+      documentation clarifies the primary source.
+      Avoid frequent changes to the repository
+      that would impact the repository URL.
     control_mappings: # TODO
     security_insights_value: # TODO
-  - id: OSPS-BR-05
-    maturity_level: 2
-    category: Build & Release
+
+  - id: OSPS-QA-02
+    maturity_level: 1
+    category: Quality
     criteria: |
-      All build and release pipelines MUST use
-      standardized tooling where available to
-      ingest dependencies at build time.
-    objective: |
-      Ensure that the project's build and release
-      pipelines use standardized tools and
-      processes to manage dependencies, reducing
-      the risk of compatibility issues or security
-      vulnerabilities in the software.
-    implementation: |
-      Use a common tooling for your ecosystem,
-      such as package managers or dependency
-      management tools to ingest dependencies at
-      build time. This may include using a
-      dependency file, lock file, or manifest to
-      specify the required dependencies, which are
-      then pulled in by the build system.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # TODO
-  - id: OSPS-BR-06
-    maturity_level: 2
-    category: Build & Release
-    criteria: |
-      All releases MUST provide a descriptive log
-      of functional and security modifications.
+      The version control system MUST contain a
+      publicly readable record of all changes
+      made, who made the changes, and when the
+      changes were made.
     objective: |
       Provide transparency and accountability for
-      changes made to the project's software
-      releases, enabling users to understand the
-      modifications and improvements included in
-      each release.
+      changes made to the project's codebase,
+      enabling users to track modifications and
+      understand the history of the project.
     implementation: |
-      Ensure that all releases include a
-      descriptive change log. 
+      Use a common VCS such as GitHub, GitLab, or
+      Bitbucket to maintain a publicly readable
+      commit history. Avoid squashing or rewriting
+      commits in a way that would obscure the
+      author of any commits.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-      It is recommended to ensure that the change
-      log is human-readable and includes details
-      beyond commit messages, such as descriptions 
-      of the security impact or relevance to
-      different use cases.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # TODO, this might be possible if paired with SI to find the release location
-  - id: OSPS-DO-04
-    maturity_level: 2
-    category: Documentation
-    criteria: |
-      The project documentation MUST include a
-      policy for coordinated vulnerability
-      reporting, with a clear timeframe for
-      response.
-    objective: |
-      Establish a process for reporting and
-      addressing vulnerabilities in the project,
-      ensuring that security issues are handled
-      promptly and transparently.
-    implementation: |
-      Create a SECURITY.md file at the root of the
-      directory, outlining the project's policy
-      for coordinated vulnerability reporting.
-      Include a method for reporting
-      vulnerabilities. Set expectations for the
-      how the project will respond and address
-      reported issues.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - securityPolicyPresent
-      - securityPolicyContainsVulnerabilityDisclosure
-  - id: OSPS-DO-05
-    maturity_level: 2
-    category: Documentation
-    criteria: |
-      The project documentation MUST include a
-      mechanism for reporting defects.
-    objective: |
-      Enable users and contributors to report
-      defects or issues with the released software
-      assets, facilitating communication and
-      collaboration on defect fixes and
-      improvements.
-    implementation: |
-      It is recommended that projects use their
-      VCS default issue tracker. If an extarnal
-      source is used, ensure that the project
-      documentation and contributing guide clearly
-      and visibly explain how to use the reporting
-      system.
-
-      It is recommended that project documentation
-      also sets expectations for how defects will
-      be triaged and resolved.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-  - id: OSPS-DO-06
-    maturity_level: 2
-    category: Documentation
-    criteria: |
-      The project documentation MUST include a
-      guide for code contributors that includes
-      requirements for acceptable contributions.
-    objective: |
-      Provide guidance to code contributors on how
-      to submit changes and enhancements to the
-      project's codebase, outlining the standards
-      and expectations for acceptable
-      contributions.
-    implementation: |
-      Extend the CONTRIBUTING.md or CONTRIBUTING/
-      contents in the project documentation to
-      outline the requirements for acceptable
-      contributions, including coding standards,
-      testing requirements, and submission
-      guidelines for code contributors.
-
-      It is recommended that this guide is the
-      source of truth for both contributors and
-      approvers.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-  - id: OSPS-DO-07
-    maturity_level: 2
-    category: Documentation
-    criteria: |
-      The project documentation MUST provide
-      design documentation demonstrating all
-      actions and actors within the system.
-    objective: |
-      Provide an overview of the project's design
-      and architecture, illustrating the
-      interactions and components of the system to
-      help contributors and security reviewers
-      understand the internal logic of the
-      released software assets.
-    implementation: |
-      Include designs in the project documentation
-      that explains the actions and actors. Actors
-      include any subsystem or entity that can
-      influence another segment in the system.
-    control_mappings: # TODO
-    security_insights_value: # TODO
   - id: OSPS-QA-03
     maturity_level: 2
     category: Quality
@@ -698,6 +817,7 @@ criteria:
     scorecard_probe:
       - runsStatusChecksBeforeMerging
       - # TODO: check for checks passing?
+
   - id: OSPS-QA-05
     maturity_level: 3
     category: Quality
@@ -730,6 +850,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # TODO, this may be possible if paired with SI to find the subproject
+
   - id: OSPS-QA-06
     maturity_level: 2
     category: Quality
@@ -755,7 +876,8 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - hasBinaryArtifacts
-  - id: OSPS-QA-07
+
+- id: OSPS-QA-07
     maturity_level: 3
     category: Quality
     criteria: |
@@ -780,95 +902,6 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: # sastToolRunsOnAllCommits 
-  - id: OSPS-AC-07
-    maturity_level: 3
-    category: Access Control
-    criteria: |
-      The project's version control system MUST
-      require multi-factor authentication that
-      does not include SMS for users when
-      modifying the project repository settings or
-      accessing sensitive data.
-    objective: |
-      Ensure that multi-factor authentication
-      does not allow SMS as a factor, because
-      SMS lacks encryption and may be vulnerable
-      to attacks via Signaling System 7,
-      social engineering, or SIM-swapping.
-    implementation: | # NOTE: I don't think this is currently possible in GitHub
-      Require multi-factor authentication methods
-      that do not include SMS for users. Common
-      alternatives include hardware tokens, mobile
-      authenticator apps, or biometric
-      authentication.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # TODO
-  - id: OSPS-BR-07
-    maturity_level: 3
-    category: Build & Release
-    criteria: |
-      The project documentation MUST include a
-      policy to address SCA violations prior to any
-      release.
-    objective: |
-      Ensure that violations of your SCA policy
-      are addressed before software releases,
-      reducing the risk of shipping insecure or
-      non-compliant software.
-    implementation: |
-      Document a policy in the project to address
-      applicable Software Composition Analysis 
-      results before any release, and add status
-      checks that verify compliance with that 
-      policy prior to release.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # TODO: this is about policy, but we should also look for evidence of SCA
-  - id: OSPS-DO-08
-    maturity_level: 3
-    category: Documentation
-    criteria: |
-      The project documentation MUST include a
-      policy that defines a threshold for remediation
-      of SCA findings related to vulnerabilities and
-      licenses.
-    objective: |
-      Ensure that the project clearly communicates
-      the threshold for remediation of SCA findings,
-      including vulnerabilities and license issues
-      in software dependencies.
-    implementation: |
-      Document a policy in the project that
-      defines a threshold for remediation of SCA
-      findings related to vulnerabilities and
-      licenses. Include the process for
-      identifying, prioritizing, and remediating
-      these findings.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-  - id: OSPS-DO-09
-    maturity_level: 3
-    category: Documentation
-    criteria: |
-      The project documentation MUST include
-      descriptions of all external input and output
-      interfaces of the released software assets.
-    objective: |
-      Provide users and developers with an
-      understanding of how to interact with the
-      project's software and integrate it with
-      other systems, enabling them to use the
-      software effectively.
-    implementation: |
-      Document all input and output interfaces of
-      the released software assets, explaining how
-      users can interact with the software and
-      what data is expected or produced.
-    control_mappings: # TODO
-    security_insights_value: # TODO
 
 # # # #
 #
