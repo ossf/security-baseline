@@ -108,8 +108,37 @@ func readYAMLFile() error {
 	if err := decoder.Decode(&baseline); err != nil {
 		return fmt.Errorf("error decoding YAML: %v", err)
 	}
+	var entryIDs []string
+	for i, entry := range baseline.Criteria {
+		// if entry in entryIDs
+		if slices.Contains(entryIDs, entry.ID) {
+			return fmt.Errorf("duplicate ID for criteria entry %d: %s", i, entry.ID)
+		}
+		if entry.ID == "" {
+			return fmt.Errorf("missing ID for criteria entry %d: %s", i, entry.ID)
+		}
+		if entry.CriteriaText == "" {
+			return fmt.Errorf("missing criteria text for entry #%d: %s", i, entry.ID)
+		}
+		if entry.Objective == "" {
+			return fmt.Errorf("missing objective for entry #%d: %s", i, entry.ID)
+		}
+		if entry.Implementation == "" {
+			return fmt.Errorf("missing implementation for entry #%d: %s", i, entry.ID)
+		}
+		entryIDs = append(entryIDs, entry.ID)
+	}
 	Data = baseline
 	return nil
+}
+
+func contains(list []string, term string) bool {
+	for _, item := range list {
+		if item == term {
+			return true
+		}
+	}
+	return false
 }
 
 func containsSynonym(list []string, entryTerm, term string) bool {
