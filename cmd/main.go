@@ -111,7 +111,7 @@ func readYAMLFile() error {
 	var entryIDs []string
 	for i, entry := range baseline.Criteria {
 		// if entry in entryIDs
-		if contains(entryIDs, entry.ID) {
+		if slices.Contains(entryIDs, entry.ID) {
 			return fmt.Errorf("duplicate ID for criteria entry %d: %s", i, entry.ID)
 		}
 		if entry.ID == "" {
