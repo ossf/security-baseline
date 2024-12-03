@@ -877,7 +877,7 @@ criteria:
     scorecard_probe:
       - hasBinaryArtifacts
 
-- id: OSPS-QA-07
+  - id: OSPS-QA-07
     maturity_level: 3
     category: Quality
     criteria: |
