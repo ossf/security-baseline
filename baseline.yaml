@@ -334,6 +334,30 @@ criteria:
     scorecard_probe:
       - # TODO, this might be possible if paired with SI to find the release location
 
+  - id: OSPS-BR-08
+    maturity_level: 2
+    category: Build & Release
+    criteria: |
+      All released software assets MUST be signed
+      or accounted for in a signed manifest
+      including each asset's cryptographic hashes.
+    objective: |
+      Provide users with a mechanism to verify the
+      authenticity and integrity of released 
+      software assets, reducing the risk of
+      tampering or unauthorized modifications.
+    implementation: |
+      Sign all released software assets at build
+      time with a cryptographic signature or
+      attestations, such  as GPG or PGP signature,
+      Sigstore signatures, SLSA provenance, or SLSA
+      VSAs. Include the cryptographic hashes of
+      each asset in a signed manifest or
+      metadata file.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
+
   - id: OSPS-DO-01
     maturity_level: 1
     category: Documentation
@@ -599,6 +623,31 @@ criteria:
       trusted organization.
     control_mappings: # TODO
     security_insights_value: # TODO
+
+  - id: OSPS-DO-12
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST contain
+      instructions to verify the integrity 
+      and authenticity of the release assets,
+      including the expected identity of the person
+      or process authoring the software release.
+    objective: |
+      Enable users to verify the authenticity and
+      integrity of the project's released software
+      assets, reducing the risk of using tampered
+      or unauthorized versions of the software.
+    implementation: |
+      Instructions in the project should contain
+      information about the technology used, the
+      commands to run, and the expected output. The 
+      expected identity may be in the form of key
+      IDs used to sign, issuer and identity from a
+      sigstore certificate, or other similar forms.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # TODO
 
   - id: OSPS-LE-01
     maturity_level: 2
