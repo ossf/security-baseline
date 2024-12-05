@@ -7,7 +7,7 @@
 #
 # # # #
 #
-# Citeria
+# Criteria
 #
 # ID is a unique identifier for the requirement.
 # The form is OSPS-<CAT>-<NUM> where
@@ -56,13 +56,21 @@ criteria:
       Protect against unauthorized access to
       sensitive areas of the project's repository,
       reducing the risk of account compromise or
-      insider threats.
+      insider threats. Passwords are often easily captured,
+      either during communication or on servers,
+      so depending solely on passwords is a weaker
+      form of authentication.
     implementation: |
-      Require multi-factor authentication for the
+      Require multi-factor authentication (MFA) for the
       project's version control system, requiring
       collaborators to provide a second form of
       authentication when accessing sensitive data
       or modifying repository settings.
+      For purposes of this criterion passkeys are considered
+      implementation mechanism even though some implementations
+      [might not strictly meet the MFA definition](https://www.passkeys.com/passkey-vs-mfa), as they require something have the private key
+      (something you have) and often require some additional
+      mechanism to enable.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe:
