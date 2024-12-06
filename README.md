@@ -26,7 +26,7 @@ Each entry has the following values:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
   - The term before MUST/NOT is the _subject_ of the requirement
-  - erms following MUST/NOT describes the _required behavior_
+  - Terms following MUST/NOT describe the _required behavior_
 - **Objective**:
   - A concise statement of the goal of the requirement
   - Written in present tense and describes the desired outcome
