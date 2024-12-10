@@ -129,8 +129,8 @@ criteria:
     maturity_level: 1
     category: Build & Release
     criteria: |
-      A project’s build process that either leads to release
-      or can read secret data MUST NOT execute untrusted external code.
+      A build process that either leads to release or can read secret data
+      MUST NOT execute untrusted code.
     objective: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
