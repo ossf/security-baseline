@@ -196,18 +196,24 @@ criteria:
     maturity_level: 1
     category: Build & Release
     criteria: |
-      The project's build and release pipelines
-      MUST NOT execute arbitrary code that is
-      input from outside of the build script.
+      Build and release pipelines MUST NOT execute
+      untrusted code.
     objective: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
       build and release processes by restricting
-      the execution of external code.
+      the execution of external code in workflows.
     implementation: |
       Ensure that the project's build and release
-      pipelines do not execute arbitrary code
-      provided from external sources.
+      pipelines do not execute untrusted code
+      provided from external sources. Maintainers
+      may establish trust in a variety of ways,
+      including digital signature verification and
+      inspection of external code. For clarity,
+      this criterion does not prohibit the use of
+      software in a package format that executes
+      scripts (e.g. RPM, .deb) so long as the
+      package itself is trusted.
     control_mappings: # TODO
     scorecard_probe:
       - hasDangerousWorkflowScriptInjection
