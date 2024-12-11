@@ -733,39 +733,6 @@ criteria:
     scorecard_probe:
       - hasLicenseFile
 
-  - id: OSPS-LE-04
-    maturity_level: 1
-    category: Legal
-    criteria: |
-      The license for the released software assets
-      MUST meet the OSI Open Source Definition or
-      the FSF Free Software Definition.
-    objective: |
-      Ensure that the project's source code is
-      distributed under a recognized and legally
-      enforceable open source software license,
-      providing clarity on how the code
-      can be used and shared by others.
-    implementation: |
-      If a different license is included with
-      released software assets, ensure it is
-      an approved license by the
-      Open Source Initiative (OSI), or
-      a free license as approved by the
-      Free Software Foundation (FSF).
-      Examples of such licenses include the
-      MIT, BSD 2-clause, BSD 3-clause revised,
-      Apache 2.0, Lesser GNU General Public
-      License (LGPL), and the
-      GNU General Public License (GPL).
-      Note that the license for the released
-      software assets may be different than the
-      source code.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # None, may need to be paired with SI
-
   - id: OSPS-QA-01
     maturity_level: 1
     category: Quality
