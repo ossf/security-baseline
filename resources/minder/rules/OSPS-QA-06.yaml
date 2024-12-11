@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# Derived from https://github.com/mindersec/minder-rules-and-profiles/blob/main/rule-types/github/no_binaries_in_repo.yaml
+version: v1
+release_phase: beta
+type: rule-type
+name: OSPS-QA-06
+display_name: Ensure no binary files are checked in a repository
+short_failure_message: Binary files found in the repository.
+severity:
+  value: medium
+context:
+  provider: github
+description: |
+  Verifies that no binary artifacts are commited to the repository.
+guidance: |
+  This rule scans all files at HEAD trying to find binaries stored
+  in your repository.
+def:
+  in_entity: repository
+  rule_schema: {}
+  ingest:
+    type: git
+    git:
+  eval:
+    type: rego
+    rego:
+      type: constraints
+      def: |
+        package minder
+
+        import future.keywords.in
+        import future.keywords.if
+
+        violations[{"msg": msg}] if {
+          # Walk all files in the repo
+          files_in_repo := file.walk(".")
+
+          some current_file in files_in_repo
+
+          http_type := file.http_type(current_file)
+          http_type == "application/octet-stream"
+
+          msg := sprintf("Binary artifact found: %s", [current_file])
+        }

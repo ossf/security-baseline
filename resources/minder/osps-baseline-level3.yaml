@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# This file is part of a set of Minder security profiles to check a project's
+# compliance with the OSPS Baseline controls.
+#
+# This profiles, as the Baseline itself, are under active development
+# feel free to try them out but expect constant changes as the baseline
+# an support in Minder evolves.
+#
+# For more information about Minder to use this profie, check out the
+# project's documentation at https://github.com/mindersec/minder  
+
+
+version: v1
+type: profile
+name: osps_baseline_l3
+display_name: OSPS Baseline - Level 3
+context:
+  provider: github
+alert: "on"
+remediate: "off"
+
+
+# Checks that require data from the repo
+repository:
+  # - name: OSPS-DO-08
+  #   Policy that defines a threshold for remediation of SCA findings related
+  #   to vulnerabilities and licenses.
+  #
+  #   [] Try to find patterns in SECURITY.md
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-09
+  #   Descriptions of all external input and output interfaces of the released software assets
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-10
+  #   Policy to address SCA violations prior to any release.
+  #
+  #   [] Try to find patterns in SECURITY.md
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-05
+  #   Subproject repositories MUST enforce the same security requirements 
+  #
+  #   [] Look for and evaluate SLSA VSA from trusted Minder
+  #   [] Look for and evaluate VSA from other source
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-07
+  #   Changes to the code must be evaluated against known vulnerabilities and
+  #   blocked in the event of violations except when declared and supressed
+  #   as non exploitable.
+  #
+  #   [] Check for trivy/grype/snyk/etc. action at PR time
+  #   [] Use Minder's built-in OSV vulnreability scan
+  #   [] Read sarif results from step actions
+  #   [] Read vulnerability status attestation
+  #
+  #   [] Read VEX data from repository and supress
+  #   [] Read trivyignore config
+  #
+  #   type: TODO
+  #   displayName: "[OSPS-QA-07] Block vulnerabilities before release"
+  #   def: # TODO
