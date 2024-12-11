@@ -153,15 +153,15 @@ repository:
   #   type: # TODO
   #   def: # TODO
 
-  # - name: OSPS-QA-06
-  #   VCS MUST NOT contain generated executable artifacts.
-  #
-  #   [] Check for binaries in repository
-  #   [] Check for binaries at PR time
-  #
-  #   type: TODO
-  #   displayName: "[OSPS-QA-06] No generated executable artifacts in the repo"
-  #   def: # TODO
+  - name: OSPS-QA-06
+    #   VCS MUST NOT contain generated executable artifacts.
+    #
+    #   [x] Check for binaries in repository
+    #   [] Check for binaries at PR time
+    #
+    type: OSPS-QA-06
+    displayName: "[OSPS-QA-06] No generated executable artifacts in the repo"
+    def: {}
 
   # - name: OSPS-LE-01
   #   VCS MUST require contributors to assert that they are legally authorized
