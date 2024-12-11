@@ -50,16 +50,16 @@ repository:
   #   type: # TODO
   #   def: # TODO
 
-  # - name: OSPS-BR-06
+  - name: OSPS-BR-06
   #   Releases MUST provide a descriptive log of functional and security modifications
   #
-  #   [] Check SI for changelog entries
+  #   [x] Check SI for changelog entries
   #   [] Check common file locations for changelog or release notes patterns
   #   [] Check release assets for release notes
   #   [] Check release for generated release notes
   #
-  #   type: # TODO
-  #   def: # TODO
+    type: # TODO
+    def: # TODO
 
   # - name: OSPS-BR-07
   #   Released assets MUST be signed or accounted for in a signed manifest
