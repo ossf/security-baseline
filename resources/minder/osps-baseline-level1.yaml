@@ -41,14 +41,14 @@ repository:
   #   type: # TODO
   #   def: # TODO
 
-  # - name: OSPS-AC-03
+  - name: OSPS-AC-03
   #   Branch protecton (push)
   #
-  #   [] Check GitHub's branch protection setting prevent direct pushes to main/master
+  #   [x] Check GitHub's branch protection setting to require pull requests 
   #
-  #   type: TODO
-  #   displayName: "[OSPS-AC-03] Prevent commits to main without a pull request"
-  #   def: # TODO
+    type: OSPS-AC-03
+    displayName: "[OSPS-AC-03] Prevent commits to main without a pull request"
+    def: {}
 
   - name: OSPS-AC-04
     #   Branch Prevent deletion of main branch
