@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# Requires the Security Insights data source to be installed:
+# https://github.com/mindersec/minder-rules-and-profiles/blob/main/data-sources/security-insights.yaml
+---
+version: v1
+release_phase: alpha
+type: rule-type
+name: OSPS-DO-02
+display_name: Tests that a project has a published contribution process
+short_failure_message: No contribution process found
+severity:
+  value: low
+context:
+  provider: github
+description: |
+  Checks that the project has a contribution process published
+guidance: |
+  This rule type checks for a contribution policy in the project. 
+  Currently, it will look for an contribution-policy/contributing-policy 
+  entry in the security insights file.
+def:
+  in_entity: repository
+  rule_schema:
+    type: object
+  ingest:
+    type: git
+  eval:
+    type: rego
+    data_sources:
+      - name: securityinsights
+    rego:
+      type: deny-by-default
+      def: |
+        package minder
+        import rego.v1
+
+        default allow := false
+
+        si = minder.datasource.securityinsights.parse({})
+        allow if {
+            count(si["contribution-policy"]["contributing-policy"]) > 0
+        }

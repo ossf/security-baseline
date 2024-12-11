@@ -92,14 +92,14 @@ repository:
   #   type: # TODO
   #   def: # TODO
 
-  # - name: OSPS-DO-02
+  - name: OSPS-DO-02
   #   Project documentation MUST include an explanation of the contribution process.
   #
-  #   [] Check SI for contribution-policy block
+  #   [x] Check SI for contribution-policy block
   #   [] Check repo for CONTRIBUTING.md
   #
-  #   type: # TODO
-  #   def: # TODO
+    type: OSPS-DO-02
+    def: {}
 
   # - name: OSPS-QA-01
   #   Source code MUST be publicly readable and have a static URL
