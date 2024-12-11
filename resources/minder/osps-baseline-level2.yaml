@@ -73,14 +73,14 @@ repository:
   #   type: # TODO
   #   def: # TODO
 
-  # - name: OSPS-DO-03
+  - name: OSPS-DO-03
   #   Project documentation MUST provide user guides for all basic functionality.
   #
-  #   [] Check for documentation in security insights
+  #   [x] Check for documentation in security insights
   #   [] Check for common patterns (eg ./docs)
   #
-  #   type: # TODO
-  #   def: # TODO
+    type: OSPS-DO-03
+    def: {}
 
   # - name: OSPS-DO-04
   #   Policy for coordinated vulnerability reporting, with a clear timeframe for response.
