@@ -1,0 +1,174 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# This file is part of a set of Minder security profiles to check a project's
+# compliance with the OSPS Baseline controls.
+#
+# This profiles, as the Baseline itself, are under active development
+# feel free to try them out but expect constant changes as the baseline
+# an support in Minder evolves.
+#
+# For more information about Minder to use this profie, check out the
+# project's documentation at https://github.com/mindersec/minder  
+
+
+version: v1
+type: profile
+name: osps_baseline_l2
+display_name: OSPS Baseline - Level 2
+context:
+  provider: github
+alert: "on"
+remediate: "off"
+
+
+# Checks that require data from the repo
+repository:
+  # - name: OSPS-AC-05
+  #   CI/CD pipelines MUST be configured to the lowest available privileges,
+  #   explicitly elevated.
+  #
+  #   [] Analize workflows to ensure permissions are pre-set to base
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-04
+  #   Released software assets MUST be created with automated pipelines.
+  #
+  #   [] Check SLSA attestation
+  #   [] Check workflows. Look for common release actions (eg softprops/action-gh-release)  
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-05
+  #   Pipelines MUST use standardized tooling where available
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-06
+  #   Releases MUST provide a descriptive log of functional and security modifications
+  #
+  #   [] Check SI for changelog entries
+  #   [] Check common file locations for changelog or release notes patterns
+  #   [] Check release assets for release notes
+  #   [] Check release for generated release notes
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-07
+  #   Released assets MUST be signed or accounted for in a signed manifest
+  #
+  #   [] Check and verify sigstore signatures
+  #   [] Check and verify GPG signatures
+  #   [] Check signed provenance attestation accounts for assets
+  #   [] Check for a signed SBOM accounting for artifacts
+  #   [] Check for a signed checksums.txt
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-03
+  #   Project documentation MUST provide user guides for all basic functionality.
+  #
+  #   [] Check for documentation in security insights
+  #   [] Check for common patterns (eg ./docs)
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-04
+  #   Policy for coordinated vulnerability reporting, with a clear timeframe for response.
+  #
+  #   [] Check SI for `vulnerability-reporting` block.`
+  #   [] Look for and check test of SECURITY.md for text patterns
+  #
+  #   type: security_policy
+  #   displayName: "[OSPS-DO-04] Ensure there is a security policy file"
+  #   def:
+  #     filename: SECURITY.md
+
+  # - name: OSPS-DO-05
+  #   Project documentation MUST include a mechanism for reporting defects.
+  #
+  #   [] Check for issues enabled in repository
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-06
+  #   Contribution guide
+  #
+  #   TBD   
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-07
+  #   Design documentation demonstrating all actions and actors within the system
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-11
+  #   Policy that code contributors are reviewed prior to granting escalated permissions 
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-12
+  #   Instructions to verify the integrity and authenticity of the release assets
+  #
+  #   [] Check for verification instructions in project docs 
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-03
+  #   Released assets MUST be delivered with a machine-readable list of all
+  #   direct and transitive internal software dependencies
+  #
+  #   [] Check for package manager lockfile
+  #   [] Check release assets for SBOM
+  #   [] Check SI for SBOM location
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-04
+  #   Status checks for commits MUST pass or require manual acknowledgement
+  #   prior to merge
+  #
+  #   [] Check repo settings requiring checks to pass
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-06
+  #   VCS MUST NOT contain generated executable artifacts.
+  #
+  #   [] Check for binaries in repository
+  #   [] Check for binaries at PR time
+  #
+  #   type: TODO
+  #   displayName: "[OSPS-QA-06] No generated executable artifacts in the repo"
+  #   def: # TODO
+
+  # - name: OSPS-LE-01
+  #   VCS MUST require contributors to assert that they are legally authorized
+  #   to commit the associated contributions 
+  #
+  #   [] Check GitHub app installations for DCO
+  #   [] Check GitHub app installations for CLA
+  #
+  #   type: # TODO
+  #   def: # TODO

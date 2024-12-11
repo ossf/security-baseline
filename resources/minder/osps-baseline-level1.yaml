@@ -1,0 +1,118 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# This file is part of a set of Minder security profiles to check a project's
+# compliance with the OSPS Baseline controls.
+#
+# This profiles, as the Baseline itself, are under active development
+# feel free to try them out but expect constant changes as the baseline
+# an support in Minder evolves.
+#
+# For more information about Minder to use this profie, check out the
+# project's documentation at https://github.com/mindersec/minder  
+
+
+version: v1
+type: profile
+name: osps_baseline_l1
+display_name: OSPS Baseline - Level 1
+context:
+  provider: github
+alert: "on"
+remediate: "off"
+
+
+# Checks that require data from the repo
+repository:
+  # - name: OSPS-AC-01
+  #   The project’s version control system MUST require multi-factor authentication
+  #
+  #   [] Check th github organization setting to esure 2fa is enabled
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-AC-02
+  #   Version control system MUST restrict collaborator permissions to the lowest
+  #
+  #   TBD
+  #
+  #   available privileges by default.
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-AC-03
+  #   Branch protecton (push)
+  #
+  #   [] Check GitHub's branch protection setting prevent direct pushes to main/master
+  #
+  #   type: TODO
+  #   displayName: "[OSPS-AC-03] Prevent commits to main without a pull request"
+  #   def: # TODO
+
+  # - name: OSPS-AC-04
+  #   Branch Prevent deletion of main branch
+  #
+  #   [] Check GitHub's branch protection config blocks deletin main branch
+  #
+  #   type: # TODO
+  #   displayName: "[OSPS-AC-04] Prevent deletion of main branch"
+  #   def: # TODO
+
+  # - name: OSPS-BR-01
+  #   Build and release pipelines MUST NOT execute arbitrary code 
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-02
+  #   All releases MUST be assigned a unique version identifier
+  #
+  #   [] Check the release entity for an associtated version label
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-BR-03
+  #   Any services involved in the project development and release
+  #   MUST be delivered using encrypted channels.
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-01
+  #   Project MUST have one or more mechanisms for public discussions about proposed changes
+  #
+  #   TBD
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-DO-02
+  #   Project documentation MUST include an explanation of the contribution process.
+  #
+  #   [] Check SI for contribution-policy block
+  #   [] Check repo for CONTRIBUTING.md
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-01
+  #   Source code MUST be publicly readable and have a static URL
+  #
+  #   [] Check GitHub repository is public 
+  #
+  #   type: # TODO
+  #   def: # TODO
+
+  # - name: OSPS-QA-02
+  #   VCS MUST contain a public record of all changes (commits)
+  #
+  #   [] Check code lives in a git repository
+  #
+  #   type: # TODO
+  #   def: # TODO
