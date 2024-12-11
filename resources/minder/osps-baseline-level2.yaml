@@ -82,17 +82,15 @@ repository:
     type: OSPS-DO-03
     def: {}
 
-  # - name: OSPS-DO-04
+  - name: OSPS-DO-04
   #   Policy for coordinated vulnerability reporting, with a clear timeframe for response.
   #
-  #   [] Check SI for `vulnerability-reporting` block.`
+  #   [x] Check SI for `vulnerability-reporting` block.`
   #   [] Look for and check test of SECURITY.md for text patterns
   #
-  #   type: security_policy
-  #   displayName: "[OSPS-DO-04] Ensure there is a security policy file"
-  #   def:
-  #     filename: SECURITY.md
-
+    type: OSPS-DO-04
+    def: {}
+  
   # - name: OSPS-DO-05
   #   Project documentation MUST include a mechanism for reporting defects.
   #
