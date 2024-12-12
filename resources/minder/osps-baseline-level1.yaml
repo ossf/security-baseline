@@ -47,8 +47,9 @@ repository:
   #   [x] Check GitHub's branch protection setting to require pull requests 
   #
     type: OSPS-AC-03
-    displayName: "[OSPS-AC-03] Prevent commits to main without a pull request"
-    def: {}
+    displayName: "(OSPS-AC-03) Prevent commits to main without a pull request"
+    def:
+      - required_pull_request_reviews: true
 
   - name: OSPS-AC-04
     #   Branch Prevent deletion of main branch
@@ -56,7 +57,7 @@ repository:
     #   [x] Check GitHub's branch protection config blocks deletin main branch
     #
     type: OSPS-AC-04
-    displayName: "[OSPS-AC-04] Prevent deletion of main branch"
+    displayName: "(OSPS-AC-04) Prevent deletion of main branch"
     def: {}
 
   # - name: OSPS-BR-01
