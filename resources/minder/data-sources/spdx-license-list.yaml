@@ -1,0 +1,10 @@
+version: v1
+type: data-source
+name: spdx-license-list
+context: {}
+rest:
+  def:
+    licenses:
+      endpoint: https://raw.githubusercontent.com/spdx/license-list-data/refs/heads/main/json/licenses.json
+      parse: json
+      input_schema: {}

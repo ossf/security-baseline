@@ -101,6 +101,26 @@ repository:
     type: OSPS-DO-02
     def: {}
 
+  - name: OSPS-LE-02
+  #   The license for the source code MUST meet the OSI Open Source
+  #   Definition or the FSF Free Software Definition.
+  #
+  #   [X] Check repo detected license against OSI and FSF approved ones
+  #
+    type: OSPS-LE-02
+    def: {}
+
+  - name: OSPS-LE-03
+  #   The license for the source code MUST be maintained in a standard
+  #   location within the project’s repository.
+  #
+  #   [X] Check repo for LICENSE file
+  #   [X] Check repo for COPYING file
+  #   [X] Check repo for LICENSE/ folder
+  #
+    type: OSPS-LE-03
+    def: {}
+
   # - name: OSPS-QA-01
   #   Source code MUST be publicly readable and have a static URL
   #
