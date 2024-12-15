@@ -166,7 +166,7 @@ criteria:
       - topLevelPermissions
       - jobLevelPermissions
 
-  - id: OSPS-AC-07
+  - id: OSPS-AC-06
     maturity_level: 3
     category: Access Control
     criteria: |
@@ -334,7 +334,7 @@ criteria:
     scorecard_probe:
       - # TODO, this might be possible if paired with SI to find the release location
 
-  - id: OSPS-BR-08
+  - id: OSPS-BR-07
     maturity_level: 2
     category: Build & Release
     criteria: |
@@ -650,32 +650,6 @@ criteria:
     scorecard_probe: # TODO
 
   - id: OSPS-LE-01
-    maturity_level: 2
-    category: Legal
-    criteria: |
-      The version control system MUST require all
-      code contributors to assert that they are
-      legally authorized to commit the associated
-      contributions on every commit.
-    objective: |
-      Ensure that code contributors are aware of
-      and acknowledge their legal responsibility
-      for the contributions they make to the
-      project, reducing the risk of intellectual
-      property disputes.
-    implementation: |
-      Include a DCO or CLA in the project's
-      repository, requiring code contributors to
-      assert that they are legally authorized to
-      commit the associated contributions on every
-      commit. Use a status check to ensure the
-      assertion is made.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe:
-      - # None, may not be suitable
-
-  - id: OSPS-LE-02
     maturity_level: 1
     category: Legal
     criteria: |
@@ -708,7 +682,7 @@ criteria:
     scorecard_probe:
       - hasPermissiveLicense # Check this
 
-  - id: OSPS-LE-03
+  - id: OSPS-LE-02
     maturity_level: 1
     category: Legal
     criteria: |
@@ -733,7 +707,7 @@ criteria:
     scorecard_probe:
       - hasLicenseFile
 
-  - id: OSPS-LE-04
+  - id: OSPS-LE-03
     maturity_level: 1
     category: Legal
     criteria: |
@@ -765,6 +739,32 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # None, may need to be paired with SI
+
+  - id: OSPS-LE-04
+      maturity_level: 2
+      category: Legal
+      criteria: |
+        The version control system MUST require all
+        code contributors to assert that they are
+        legally authorized to commit the associated
+        contributions on every commit.
+      objective: |
+        Ensure that code contributors are aware of
+        and acknowledge their legal responsibility
+        for the contributions they make to the
+        project, reducing the risk of intellectual
+        property disputes.
+      implementation: |
+        Include a DCO or CLA in the project's
+        repository, requiring code contributors to
+        assert that they are legally authorized to
+        commit the associated contributions on every
+        commit. Use a status check to ensure the
+        assertion is made.
+      control_mappings: # TODO
+      security_insights_value: # TODO
+      scorecard_probe:
+        - # None, may not be suitable
 
   - id: OSPS-QA-01
     maturity_level: 1
@@ -876,6 +876,58 @@ criteria:
       - # TODO: check for checks passing?
 
   - id: OSPS-QA-05
+    maturity_level: 2
+    category: Quality
+    criteria: |
+      The version control system MUST NOT contain
+      generated executable artifacts.
+    objective: |
+      Reduce the risk of including generated
+      executable artifacts in the project's
+      version control system, ensuring that only
+      source code and necessary files are stored
+      in the repository.
+    implementation: |
+      Remove generated executable artifacts
+      in the project's version control system.
+
+      It is recommended that any scenario where a
+      generated executable artifact appears
+      critical to a process such as testing, it
+      should be instead be generated at build time
+      or stored separately and fetched during a
+      specific well-documented pipeline step.
+    control_mappings: # TODO
+    scorecard_probe:
+      - hasBinaryArtifacts
+
+  - id: OSPS-QA-06
+    maturity_level: 3
+    category: Quality
+    criteria: |
+      All proposed changes to the project's
+      codebase must be automatically evaluated 
+      against a documented policy for known
+      vulnerabilities and blocked in the
+      event of violations except when declared
+      and supressed as non exploitable.
+    objective: |
+      Identify and address defects and security weaknesses 
+      in the project's codebase early in the 
+      development process, reducing the risk of 
+      shipping insecure software.
+    implementation: |
+      Create a status check in the project's
+      version control system that runs a Static
+      Application Security Testing (SAST) tool on
+      all changes to the codebase. Require that the
+      status check passes before changes can be
+      merged.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: # sastToolRunsOnAllCommits 
+
+  - id: OSPS-QA-07
     maturity_level: 3
     category: Quality
     criteria: |
@@ -907,58 +959,6 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # TODO, this may be possible if paired with SI to find the subproject
-
-  - id: OSPS-QA-06
-    maturity_level: 2
-    category: Quality
-    criteria: |
-      The version control system MUST NOT contain
-      generated executable artifacts.
-    objective: |
-      Reduce the risk of including generated
-      executable artifacts in the project's
-      version control system, ensuring that only
-      source code and necessary files are stored
-      in the repository.
-    implementation: |
-      Remove generated executable artifacts
-      in the project's version control system.
-
-      It is recommended that any scenario where a
-      generated executable artifact appears
-      critical to a process such as testing, it
-      should be instead be generated at build time
-      or stored separately and fetched during a
-      specific well-documented pipeline step.
-    control_mappings: # TODO
-    scorecard_probe:
-      - hasBinaryArtifacts
-
-  - id: OSPS-QA-07
-    maturity_level: 3
-    category: Quality
-    criteria: |
-      All proposed changes to the project's
-      codebase must be automatically evaluated 
-      against a documented policy for known
-      vulnerabilities and blocked in the
-      event of violations except when declared
-      and supressed as non exploitable.
-    objective: |
-      Identify and address defects and security weaknesses 
-      in the project's codebase early in the 
-      development process, reducing the risk of 
-      shipping insecure software.
-    implementation: |
-      Create a status check in the project's
-      version control system that runs a Static
-      Application Security Testing (SAST) tool on
-      all changes to the codebase. Require that the
-      status check passes before changes can be
-      merged.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-    scorecard_probe: # sastToolRunsOnAllCommits 
 
 # # # #
 #
