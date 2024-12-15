@@ -741,29 +741,29 @@ criteria:
       - # None, may need to be paired with SI
 
   - id: OSPS-LE-04
-      maturity_level: 2
-      category: Legal
-      criteria: |
-        The version control system MUST require all
-        code contributors to assert that they are
-        legally authorized to commit the associated
-        contributions on every commit.
-      objective: |
-        Ensure that code contributors are aware of
-        and acknowledge their legal responsibility
-        for the contributions they make to the
-        project, reducing the risk of intellectual
-        property disputes.
-      implementation: |
-        Include a DCO or CLA in the project's
-        repository, requiring code contributors to
-        assert that they are legally authorized to
-        commit the associated contributions on every
-        commit. Use a status check to ensure the
-        assertion is made.
-      control_mappings: # TODO
-      security_insights_value: # TODO
-      scorecard_probe:
+    maturity_level: 2
+    category: Legal
+    criteria: |
+      The version control system MUST require all
+      code contributors to assert that they are
+      legally authorized to commit the associated
+      contributions on every commit.
+    objective: |
+      Ensure that code contributors are aware of
+      and acknowledge their legal responsibility
+      for the contributions they make to the
+      project, reducing the risk of intellectual
+      property disputes.
+    implementation: |
+      Include a DCO or CLA in the project's
+      repository, requiring code contributors to
+      assert that they are legally authorized to
+      commit the associated contributions on every
+      commit. Use a status check to ensure the
+      assertion is made.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
         - # None, may not be suitable
 
   - id: OSPS-QA-01
