@@ -1,0 +1,46 @@
+version: v1
+release_phase: alpha
+type: rule-type
+name: OSPS-LE-02
+display_name: The project's license is an OSI or FSF approved license
+short_failure_message: License not found or is not an OSI or FSF approved license.
+severity:
+  value: info
+context:
+  provider: github
+description: |
+  Ensure that the project's source code is distributed under a recognized and legally enforceable open source software license.
+guidance: |
+  Ensure that the project's source code is distributed under a recognized and legally enforceable open source software license, providing clarity on how the code can be used and shared by others.
+def:
+  in_entity: repository
+  rule_schema: {}
+  ingest:
+    type: git
+  eval:
+    type: rego
+    data_sources:
+      - name: ghapi
+      - name: "spdx-license-list"
+    rego:
+      type: constraints
+      def: |
+        package minder
+
+        import future.keywords.every
+        import future.keywords.if
+
+        violations[{"msg": msg}] {
+          resp := minder.datasource.ghapi.license({"owner": "mindersec", "repo": "minder"})
+          license := resp.body.license.spdx_id
+
+          resp2 := minder.datasource["spdx-license-list"].licenses({})
+          licenses := resp2.body.licenses
+          osi := { license.licenseId | license := licenses[_]; license.isOsiApproved }
+          fsf := { license.licenseId | license := licenses[_]; license.isFsfLibre }
+          approved_licenses := osi | fsf
+
+          not license in approved_licenses          
+
+          msg := sprintf("License '%s' is not approved", [license])
+        }

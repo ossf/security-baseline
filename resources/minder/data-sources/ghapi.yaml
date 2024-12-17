@@ -1,0 +1,16 @@
+version: v1
+type: data-source
+name: ghapi
+context: {}
+rest:
+  def:
+    license:
+      endpoint: https://api.github.com/repos/{owner}/{repo}/license
+      parse: json
+      input_schema:
+        type: object
+        properties:
+          owner:
+            type: string
+          repo:
+            type: string

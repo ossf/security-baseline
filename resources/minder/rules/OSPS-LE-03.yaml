@@ -1,0 +1,55 @@
+version: v1
+release_phase: alpha
+type: rule-type
+name: OSPS-LE-03
+display_name: LICENSE or COPYING files are available available
+short_failure_message: No LICENSE or COPYING file found.
+severity:
+  value: info
+context:
+  provider: github
+description: |
+  Ensure that either LICENSE file, COPYING file, or LICENSE/ folder are available.
+guidance: |
+  Source code must be accompanied by a `LICENSE` or `COPYING` file, or a `LICENSE/` folder at the root of the project source tree.
+def:
+  in_entity: repository
+  rule_schema: {}
+  ingest:
+    type: git
+    git: {}
+  eval:
+    type: rego
+    rego:
+      type: deny-by-default
+      def: |
+        package minder
+
+        import future.keywords.every
+        import future.keywords.if
+
+        default allow := false
+
+        allow if {
+          files := file.ls_glob("./LICENSE*")
+
+          some name
+          content := file.read(files[name])
+          "" != content
+        }
+
+        allow if {
+          files := file.ls_glob("./COPYING*")
+
+          some name
+          content := file.read(files[name])
+          "" != content
+        }
+
+        allow if {
+          files := file.ls_glob("./LICENSE/*")
+
+          some name
+          content := file.read(files[name])
+          "" != content
+        }

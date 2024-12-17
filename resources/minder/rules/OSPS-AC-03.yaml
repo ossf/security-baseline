@@ -1,0 +1,84 @@
+# SPDX-FileCopyrightText: Copyright 2024 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+# Derived from https://github.com/mindersec/minder-rules-and-profiles/blob/main/rule-types/github/branch_protection_require_pull_requests.yaml
+version: v1
+release_phase: beta
+type: rule-type
+name: OSPS-AC-03
+display_name: Only merge code from pull requests
+short_failure_message: Default branch does not require pull requests
+severity:
+  value: medium
+context:
+  provider: github
+description: Verifies that the default branch requires pull requests
+guidance: |
+  Ensure that the setting to require a pull request before merging to
+  a branch is enabled for the branch protection rule.
+
+  Enabling this requires that a pull request be opened before merging to a
+  branch.
+
+def:
+  in_entity: repository
+
+  # Defines the schema for parameters that will be passed to the rule
+  param_schema:
+    properties:
+      branch:
+        type: string
+        description: "The name of the branch to check. If left empty, the default branch will be used."
+        default: ""
+
+  # Defines the schema for writing a rule with this rule being checked
+  rule_schema:
+    properties:
+      required_pull_request_reviews:
+        type: boolean
+        description: |
+          When enabled, all commits must be made to a non-protected branch and
+          submitted via a pull request before they can be merged into a branch
+          that matches this rule.
+    required:
+      - required_pull_request_reviews
+
+  # Defines the configuration for ingesting data relevant for the rule
+  ingest:
+    type: rest
+    rest:
+      endpoint: '{{ $branch_param := index .Params "branch" }}/repos/{{.Entity.Owner}}/{{.Entity.Name}}/branches/{{if ne $branch_param "" }}{{ $branch_param }}{{ else }}{{ .Entity.DefaultBranch }}{{ end }}/protection'
+
+      # This is the method to use to retrieve the data. It should already default to JSON
+      parse: json
+      fallback:
+        - http_code: 404
+          body: |
+            {"http_status": 404, "message": "Not Protected"}
+
+  # Defines the configuration for evaluating data ingested against the given policy
+  eval:
+    type: rego
+    rego:
+      type: deny-by-default
+      def: |
+        package minder
+        
+        import future.keywords.every
+        import future.keywords.if
+        
+        default allow := false
+        default message := "Pull requests are not required"
+        
+        allow if {
+          input.ingested.required_pull_request_reviews.url != ""
+        }
+  # Defines the configuration for remediating the rule
+  remediate:
+    type: gh_branch_protection
+    gh_branch_protection:
+      # Note that this rule will ever only fail if there are no PR settings at all,
+      # so we can safely set the entire PR settings to an empty object. In that case,
+      # GH is actually helpful and selects reasonable defaults
+      patch: |
+        {"required_pull_request_reviews":{}}

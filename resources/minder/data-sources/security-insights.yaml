@@ -1,0 +1,23 @@
+---
+# NOTICE: THIS DATA SOURCE IS EXPERIMENTAL
+#
+# This is an experimental data source that loads the contents of
+# a repo's Security Insights file (https://github.com/ossf/security-insights-spec)
+# and exposes it to the rule evaluation engine.
+version: v1
+type: data-source
+name: securityinsights
+context: {
+ project_id: "29e9eb67-b8dd-49aa-966a-8d691d36799b"
+ }
+structured:
+  def:
+    "parse":
+      path:
+        file_name: SECURITY-INSIGHTS.yaml
+        alternatives:
+        - "SECURITY-INSIGHTS.yml"
+        - "security-insights.yaml"
+        - "security-insights.yml"
+        - "SECURITY_INSIGHTS.yaml"
+        - "SECURITY_INSIGHTS.yml"
