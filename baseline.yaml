@@ -653,7 +653,7 @@ criteria:
     maturity_level: 1
     category: Documentation
     criteria: |
-       The PROJECT DOCUMENTATION MUST include a 
+       The project documentation MUST include a 
        descriptive statement about how the project 
        is supported/maintained and what is not supported. 
        Projects are encouraged to provide "End of 
