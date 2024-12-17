@@ -649,6 +649,29 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-13
+    maturity_level: 1
+    category: Documentation
+    criteria: |
+       The PROJECT DOCUMENTATION MUST include a 
+       descriptive statement about how the project 
+       is supported/maintained and what is not supported. 
+       Projects are encouraged to provide "End of 
+       Support" statements when versions or features 
+       are deprecated or no longer supported.
+    objective: |
+       Identify and set expectations for downstream 
+       consumers around what updates the project may
+       or may not provide and when no further updates
+       will be provided.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for support and/or lifecycle
+       statements.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #  
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
