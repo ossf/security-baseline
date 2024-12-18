@@ -649,6 +649,33 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+      - id: OSPS-DO-18   
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project MUST perform threat modeling and
+       attack surface analysis to understand and protect
+       against critical code paths, functions, and interactions 
+       with the system.
+    objective: |
+       Projects need to conduct threat modeling, attack 
+       surface analysis, and data-flow analysis in order
+       to understand, document, and plan protections
+       to avoid future explotation of threats and weaknesses.
+
+       Identifying these areas helps the project plan on
+        reducing potential attack surface and to harden 
+        the software from specific attacks.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for documented threat 
+       modeling, attack surface analysis, and data flow analysis.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+ 
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
