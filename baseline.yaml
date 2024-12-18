@@ -653,8 +653,9 @@ criteria:
     maturity_level: 3
     category: Documentation
     criteria: |
-       The project MUST perform an external security
-       review or audit to understand the most likely 
+       The project MUST have performed an external security
+       review or audit within the last 4 years or after major 
+       architectural changes to understand the most likely 
        and impactful problems that could occur within the 
        software, and make plans to address those
        problems.
