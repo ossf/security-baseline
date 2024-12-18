@@ -649,6 +649,30 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+      - id: OSPS-DO-15
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project documentation MUST include a 
+       descriptive statement about how the project
+       selects, obtains, and tracks its dependencies.
+    objective: |
+       Projects need to understand the security qualities
+       of the software components they ingest or leverage 
+       as dependencies.  
+       
+       Having a process and policy for what criteria are 
+       used in this evaluation helps downstream consumers 
+       understand the project's rationale.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for this dependency 
+       ingestion review.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
