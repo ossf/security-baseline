@@ -654,8 +654,8 @@ criteria:
     category: Documentation
     criteria: |
        The project documentation MUST include a 
-       descriptive statement about how the project 
-       is supported/maintained and what is not supported. 
+       descriptive statement about the scope and 
+       duration of support. 
     objective: |
        Identify and set expectations for downstream 
        consumers around what updates the project may
