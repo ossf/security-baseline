@@ -649,6 +649,28 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+      - id: OSPS-DO-19   
+    maturity_level: 3
+    category: Documentation
+    criteria: |
+       The project MUST perform an external security
+       review or audit to understand the most likely 
+       and impactful problems that could occur within the 
+       software, and make plans to address those
+       problems.
+    objective: |
+       Projects need to have a formally documented 
+       exteranl security audit/review/assessment and 
+       provide evidence on request.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for evidence or statements
+       that demostrate the project has been reviewed by 
+       an external security professional.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
