@@ -656,7 +656,7 @@ criteria:
        The project documentation MUST include a 
        descriptive statement about how the project 
        is supported/maintained and what is not supported. 
-       Projects are encouraged to provide "End of 
+       Projects should provide "End of 
        Support" statements when versions or features 
        are deprecated or no longer supported.
     objective: |
