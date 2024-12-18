@@ -649,6 +649,26 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-17   
+    maturity_level: 1
+    category: Documentation
+    criteria: |
+       The project MUST perform a risk assessment to 
+       understand the most likely and impactful problems 
+       that could occur within the software.
+    objective: |
+       Projects need to document know threats and 
+       evaluate the likehood and impact of the risks the 
+       project identifies as being of the most concern.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for this risk assessment, 
+       including plans to address any identified risks.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
