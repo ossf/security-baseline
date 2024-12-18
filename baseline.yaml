@@ -649,6 +649,29 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-16  
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project documentation MUST include the Roles
+       and Responsibilities for members of the project.
+    objective: |
+       Projects need to document the Roles and 
+       Responsibilities of the project to provide for 
+       Seperation of Duties, Dual Control, and other 
+       requirements.
+
+       Providing this documentation allows external
+        review and demonstrates maturity of project
+        processes.
+    implementation: |
+       Create a status check that checks the project's
+       version control system for this documentation.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
