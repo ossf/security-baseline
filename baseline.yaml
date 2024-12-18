@@ -663,8 +663,9 @@ criteria:
        will be provided.
     implementation: |
        Create a status check that checks the project's
-       version control system for support and/or lifecycle
-       statements or machine-readable metadata.
+       publicly-available collateral for support 
+       and/or lifecycle statements or machine-readable 
+       metadata.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #  
