@@ -655,10 +655,7 @@ criteria:
     criteria: |
        The project MUST have performed an external security
        review or audit within the last 4 years or after major 
-       architectural changes to understand the most likely 
-       and impactful problems that could occur within the 
-       software, and make plans to address those
-       problems.
+       architectural changes.
     objective: |
        Projects need to have a formally documented 
        exteranl security audit/review/assessment and 
