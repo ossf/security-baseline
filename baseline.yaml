@@ -650,7 +650,7 @@ criteria:
     scorecard_probe: # TODO
 
   - id: OSPS-DO-17   
-    maturity_level: 1
+    maturity_level: 2
     category: Documentation
     criteria: |
        The project MUST perform a risk assessment to 
