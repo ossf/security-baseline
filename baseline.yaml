@@ -665,6 +665,10 @@ criteria:
        version control system for evidence or statements
        that demostrate the project has been reviewed by 
        an external security professional.
+       
+       This information could be recorded in [`security-artifacts.other-artifacts`
+       from `SECURITY-INSIGHTS.yaml`](https://github.com/ossf/security-insights-spec/blob/main/specification/security-artifacts.md),
+       with a well-known `artifact-name` field of `"security-audit-results"`.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #   
