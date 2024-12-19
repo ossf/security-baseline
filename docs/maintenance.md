@@ -13,7 +13,7 @@ Previous versions of the Baseline will remain avialable, but are not maintained.
 
 ## Identifiers
 
-* Identifiers for retired criteria will not be used.
+* Identifiers for retired criteria MUST be marked in the OSPS baseline markup as deprecated and never reused in future revisions.
 * Substantial changes to the meaning of a criterion will be treated as a new criterion, resulting in a new identifier.
 Minor changes, including a change in level, between Baseline versions will not result in a new identifier.
 * The numeric portion of identifiers are assigned sequentially per category.
