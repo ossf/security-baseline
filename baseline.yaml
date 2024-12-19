@@ -192,6 +192,34 @@ criteria:
     scorecard_probe:
       - # TODO
 
+  - id: OSPS-AC-08
+    maturity_level: 1
+    category: Access Control
+    criteria: |
+      The project's version control system MUST require
+      second-party approval of commits before merging
+      changes into the primary branch or release branches.
+    objective: |
+      Ensure that changes to the project's codebase have
+      been reviewed and approved by two distinct
+      individuals before being merged.  This separation
+      of duties raises the difficulty of malicious commits
+      being merged into the project's codebase.
+    implementation: |
+      Configure the project's version control system to
+      require second-party approval of commits before
+      merging.  This may involve setting up a [branch
+      protection rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+      or [GitHub repository rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
+      which requires at least one approval before merging,
+      or configuring a pull request workflow (such as
+      [Prow](https://docs.prow.k8s.io/)) that requires at
+      least one approval before merging.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe:
+      - # TODO
+
   - id: OSPS-BR-01
     maturity_level: 1
     category: Build & Release
