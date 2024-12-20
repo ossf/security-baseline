@@ -197,7 +197,7 @@ criteria:
     category: Build & Release
     criteria: |
       Build and release pipelines MUST only execute
-      code that's present in the repository *or* from external trusted sources.
+      code that's either present in the repository *or* from external sources trusted by the project.
     objective: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
