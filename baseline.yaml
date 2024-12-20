@@ -670,6 +670,11 @@ criteria:
        Create a status check that checks the project's
        version control system for documented threat 
        modeling, attack surface analysis, and data flow analysis.
+       
+       The location of the written threat model MAY be expressed using [the `security-artifacts.threat-model`
+       fields in `SECURITY-INSIGHTS.yaml`](https://github.com/ossf/security-insights-spec/blob/main/specification/security-artifacts.md),
+       or via a [SPDX external reference](https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/ExternalRefType/)
+       of type `securityThreatModel`, for example.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #   
