@@ -649,7 +649,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
-      - id: OSPS-DO-19   
+  - id: OSPS-DO-19   
     maturity_level: 3
     category: Documentation
     criteria: |
