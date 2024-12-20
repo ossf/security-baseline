@@ -196,8 +196,8 @@ criteria:
     maturity_level: 1
     category: Build & Release
     criteria: |
-      Build and release pipelines MUST NOT execute
-      untrusted code.
+      Build and release pipelines MUST only execute
+      code that's present in the repository *or* from external trusted sources.
     objective: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
