@@ -201,8 +201,8 @@ criteria:
       changes into the primary branch or release branches.
     objective: |
       Ensure that changes to the project's codebase have
-      been reviewed and approved by two distinct
-      individuals before being merged.  This separation
+      been reviewed and approved by another person
+      before being merged.  This separation
       of duties raises the difficulty of malicious commits
       being merged into the project's codebase.
     implementation: |
