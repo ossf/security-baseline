@@ -5,38 +5,38 @@
 
 ## Overview
 
-The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
-The criteria are organized by maturity level and category.
-In the detailed subsections you will find the criteria, objectives, and implementation notes.
+The Open Source Project Security (OSPS) Baseline is a set of security criterion that projects should meet to be considered secure.
+The criterion are organized by maturity level and category.
+In the detailed subsections you will find the criterion, rationales, and details notes.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
 ---
 
-## Criteria Overview
+## Criterion Overview
 
-| ID  | Maturity Level | Category | Criteria |
+| ID  | Maturity Level | Category | Criterion |
 | --- | -------------- | -------- | -------- |
 
-{{- range .Criteria }}
-| [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
+{{- range .Criterion }}
+| [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriterionText | collapseNewlines | addLinks }} |
 {{- end }}
 
-## Criteria Details
+## Criterion Details
 
-{{- range .Criteria }}
+{{- range .Criterion }}
 
 ### {{ .ID }}
 
-**Criteria:**
+**Criterion:**
 
-{{ .CriteriaText | addLinks }}
-**Objective:**
+{{ .CriterionText | addLinks }}
+**Rationale:**
 
-{{ .Objective | addLinks}}
-**Implementation:**
+{{ .Rationale | addLinks}}
+**Details:**
 
-{{ .Implementation | addLinks }}
+{{ .Details | addLinks }}
 **Control Mappings:**
 {{ if .ControlMappings }}
 {{ .ControlMappings }}
