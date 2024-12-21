@@ -22,15 +22,15 @@ Each entry has the following values:
   - Documentation
   - Quality
   - Legal
-- **Criteria**: 
+- **Criterion**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
   - The term before MUST/NOT is the _subject_ of the requirement
   - Terms following MUST/NOT describe the _required behavior_
-- **Objective**:
+- **Rationale**:
   - A concise statement of the goal of the requirement
   - Written in present tense and describes the desired outcome
-- **Implementation**: 
+- **Details**:
   - A concise description of how to meet the requirement
   - Written in present tense and describes the steps to take to meet the requirement
   - May outline recommendations, examples, or best practices
