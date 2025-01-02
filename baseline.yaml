@@ -667,6 +667,11 @@ criteria:
         reducing potential attack surface and to harden 
         the software from specific attacks.
     implementation: |
+       Select a threat modeling approach such as STRIDE, DREAD, PASTA, or VAST, then apply it.
+       This will typically involve identifying the scope and purpose of the system,
+       identifying its assets (which need protection), examining the architecture for threats,
+       determining their likelihood and impact, and selecting mitigation strategies.
+     autofill: |
        Create a status check that checks the project's
        version control system for documented threat 
        modeling, attack surface analysis, and data flow analysis.
