@@ -15,11 +15,32 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## Criteria Overview
 
-| ID  | Maturity Level | Category | Criterion |
-| --- | -------------- | -------- | -------- |
+* [Level 1](#level-1)
+* [Level 2](#level-2)
+* [Level 3](#level-3)
+
+### Level 1
 
 {{- range .Criteria }}
-| [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriterionText | collapseNewlines | addLinks }} |
+{{if eq .MaturityLevel 1}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+{{ end }}
+{{- end }}
+
+### Level 2
+
+{{- range .Criteria }}
+{{if eq .MaturityLevel 2}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+{{ end }}
+{{- end }}
+
+### Level 3
+
+{{- range .Criteria }}
+{{if eq .MaturityLevel 3}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+{{ end }}
 {{- end }}
 
 ## Criteria Details
@@ -31,7 +52,13 @@ For more information on the project and to make contributions, visit the [GitHub
 **Criterion:**
 
 {{ .CriterionText | addLinks }}
-**Rationale:**
+**Maturity Level:**
+{{ .MaturityLevel }}
+
+**Category:**
+{{ .Category }}
+
+**Objective:**
 
 {{ .Rationale | addLinks}}
 **Details:**
