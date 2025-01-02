@@ -661,9 +661,15 @@ criteria:
        evaluate the likehood and impact of the risks the 
        project identifies as being of the most concern.
     implementation: |
+       Identify a set of security threats, then estimate their
+       likelihood and impact.
+    autofill: |
        Create a status check that checks the project's
        version control system for this risk assessment, 
        including plans to address any identified risks.
+       Search for terms like "risk assessment" or
+       "risk management plan" where terms like
+       "security" or "vulnerability" are nearby.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #   
