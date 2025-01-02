@@ -653,8 +653,8 @@ criteria:
     maturity_level: 2
     category: Documentation
     criteria: |
-       The project MUST perform a risk assessment to 
-       understand the most likely and impactful problems 
+       The project MUST perform a security risk assessment to 
+       understand the most likely and impactful potential security problems 
        that could occur within the software.
     objective: |
        Projects need to document know threats and 
