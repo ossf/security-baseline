@@ -657,9 +657,6 @@ criteria:
        descriptive statement when releases or 
        versions are no longer supported and that 
        will no longer receive security updates.  
-       
-       This should be provided both in human and 
-       machine-readable formats. 
     objective: |
        To advertise to downstream consumers when software 
        has reached "End of X" [Support, Life, Maintenance, etc.].
