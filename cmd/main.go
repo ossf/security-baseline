@@ -30,8 +30,8 @@ type Criterion struct {
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Criteria []Criterion    `yaml:"criterion"`
-	Lexicon   []LexiconEntry `yaml:"lexicon"`
+	Criteria []Criterion    `yaml:"criteria"`
+	Lexicon  []LexiconEntry `yaml:"lexicon"`
 }
 
 type LexiconEntry struct {
@@ -110,7 +110,7 @@ func readYAMLFile() error {
 		return fmt.Errorf("error decoding YAML: %v", err)
 	}
 	var entryIDs []string
-	for i, entry := range baseline.Criterion {
+	for i, entry := range baseline.Criteria {
 		// if entry in entryIDs
 		if slices.Contains(entryIDs, entry.ID) {
 			return fmt.Errorf("duplicate ID for criterion entry %d: %s", i, entry.ID)

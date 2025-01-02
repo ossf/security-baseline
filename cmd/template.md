@@ -23,15 +23,15 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 1}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
-{{ end }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- end }}
 {{- end }}
 
 ### Level 2
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 2}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
 {{ end }}
 {{- end }}
 
@@ -39,7 +39,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 3}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
 {{ end }}
 {{- end }}
 
