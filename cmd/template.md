@@ -5,9 +5,9 @@
 
 ## Overview
 
-The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
-The criteria are organized by maturity level and category.
-In the detailed subsections you will find the criteria, objectives, and implementation notes.
+The Open Source Project Security (OSPS) Baseline is a set of security criterion that projects should meet to be considered secure.
+The criterion are organized by maturity level and category.
+In the detailed subsections you will find the criterion, rationales, and details notes.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
@@ -23,15 +23,15 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 1}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
-{{ end }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- end }}
 {{- end }}
 
 ### Level 2
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 2}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
 {{ end }}
 {{- end }}
 
@@ -39,7 +39,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{- range .Criteria }}
 {{if eq .MaturityLevel 3}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriteriaText | addLinks }}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
 {{ end }}
 {{- end }}
 
@@ -51,7 +51,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 **Criterion:**
 
-{{ .CriteriaText | addLinks }}
+{{ .CriterionText | addLinks }}
 **Maturity Level:**
 {{ .MaturityLevel }}
 
@@ -60,10 +60,10 @@ For more information on the project and to make contributions, visit the [GitHub
 
 **Objective:**
 
-{{ .Objective | addLinks}}
-**Implementation:**
+{{ .Rationale | addLinks}}
+**Details:**
 
-{{ .Implementation | addLinks }}
+{{ .Details | addLinks }}
 **Control Mappings:**
 {{ if .ControlMappings }}
 {{ .ControlMappings }}
