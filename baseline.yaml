@@ -41,7 +41,7 @@
 # to meet the requirement. It may include
 # recommendations or best practices.
 #
-criterion:
+criteria:
 
   - id: OSPS-AC-01
     maturity_level: 1
