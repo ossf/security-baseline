@@ -655,8 +655,8 @@ criteria:
     criteria: |
        The project MUST perform threat modeling and
        attack surface analysis to understand and protect
-       against critical code paths, functions, and interactions 
-       with the system.
+       against attacks on critical code paths, functions, and interactions 
+       within the system.
     objective: |
        Projects need to conduct threat modeling, attack 
        surface analysis, and data-flow analysis in order
