@@ -30,7 +30,7 @@ type Criterion struct {
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Criterion []Criterion    `yaml:"criterion"`
+	Criteria []Criterion    `yaml:"criterion"`
 	Lexicon   []LexiconEntry `yaml:"lexicon"`
 }
 

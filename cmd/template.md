@@ -13,18 +13,18 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ---
 
-## Criterion Overview
+## Criteria Overview
 
 | ID  | Maturity Level | Category | Criterion |
 | --- | -------------- | -------- | -------- |
 
-{{- range .Criterion }}
+{{- range .Criteria }}
 | [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriterionText | collapseNewlines | addLinks }} |
 {{- end }}
 
-## Criterion Details
+## Criteria Details
 
-{{- range .Criterion }}
+{{- range .Criteria }}
 
 ### {{ .ID }}
 
