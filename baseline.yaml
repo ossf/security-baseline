@@ -665,9 +665,15 @@ criteria:
        used in this evaluation helps downstream consumers 
        understand the project's rationale.
     implementation: |
+       Provide documentation on how dependencies are handled.
+       For selection, document what criteria are considered or refer to a document that does so, e.g., the
+       <a href="https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software">Concise Guide for Evaluating Open Source Software</a>.
+       If a package manager is used to obtain and track dependencies, note that, otherwise
+       explain how dependencies are obtained and tracked.
+    autofill: |
        Create a status check that checks the project's
-       version control system for this dependency 
-       ingestion review.
+       change tracking system (e.g., pull requests or merge requests) for this dependency 
+       ingestion review when a new set of dependencies is proposed.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #   
