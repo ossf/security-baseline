@@ -665,8 +665,16 @@ criteria:
         review and demonstrates maturity of project
         processes.
     implementation: |
+       Document the various roles and responsibilities in your project.
+       Many OSS projects have "Maintainers" who have the authority
+       to directly accept changes, and contrast this with "Contributors"
+       who do not. If a project grows large there may be many
+       different roles.
+    autofill: |
        Create a status check that checks the project's
        version control system for this documentation.
+       Search for terms like "roles and responsibilities",
+       "duties", and "expectations" (if in English).
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: #   
