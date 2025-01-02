@@ -193,7 +193,7 @@ criteria:
       - # TODO
 
   - id: OSPS-AC-08
-    maturity_level: 1
+    maturity_level: 3
     category: Access Control
     criteria: |
       The project's version control system MUST require
