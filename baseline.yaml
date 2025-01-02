@@ -665,6 +665,10 @@ criteria:
        problems. The project must
        provide evidence on request.
     implementation: |
+       Identify who might be able to pay for an external security audit (including major users,
+       government programs, and non-profits).
+       Engage with an external security audit firm to review the project.
+    implementation: |
        Create a status check that checks the project's
        version control system for evidence or statements
        that demostrate the project has been reviewed by 
