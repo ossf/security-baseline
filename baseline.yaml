@@ -658,8 +658,8 @@ criteria:
        against attacks on critical code paths, functions, and interactions 
        within the system.
     objective: |
-       Projects need to conduct threat modeling, attack 
-       surface analysis, and data-flow analysis in order
+       Projects need to conduct threat modeling and attack 
+       surface analysis in order
        to understand, document, and plan protections
        to avoid future explotation of threats and weaknesses.
 
