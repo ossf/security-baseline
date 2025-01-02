@@ -654,7 +654,7 @@ criteria:
     category: Documentation
     criteria: |
        The project documentation MUST include a 
-       descriptive statement about how the project
+       describe how the project
        selects, obtains, and tracks its dependencies.
     objective: |
        Projects need to understand the security qualities
