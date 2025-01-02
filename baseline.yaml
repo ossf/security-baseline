@@ -649,6 +649,43 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-18   
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project MUST perform threat modeling and
+       attack surface analysis to understand and protect
+       against attacks on critical code paths, functions, and interactions 
+       within the system.
+    objective: |
+       Projects need to conduct threat modeling and attack 
+       surface analysis in order
+       to understand, document, and plan protections
+       to avoid future explotation of threats and weaknesses.
+
+       Identifying these areas helps the project plan on
+        reducing potential attack surface and to harden 
+        the software from specific attacks.
+    implementation: |
+       Select a threat modeling approach such as STRIDE, DREAD, PASTA, or VAST, then apply it.
+       This will typically involve identifying the scope and purpose of the system,
+       identifying its assets (which need protection), examining the architecture for threats,
+       determining their likelihood and impact, and selecting mitigation strategies.
+     autofill: |
+       Create a status check that checks the project's
+       version control system for documented threat 
+       modeling, attack surface analysis, and data flow analysis.
+       
+       The location of the written threat model MAY be expressed using [the `security-artifacts.threat-model`
+       fields in `SECURITY-INSIGHTS.yaml`](https://github.com/ossf/security-insights-spec/blob/main/specification/security-artifacts.md),
+       or via a [SPDX external reference](https://spdx.github.io/spdx-spec/v3.0.1/model/Core/Vocabularies/ExternalRefType/)
+       of type `securityThreatModel`, for example.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+ 
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
