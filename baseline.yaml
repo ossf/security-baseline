@@ -404,16 +404,17 @@ criteria:
     scorecard_probe:
       - # None, may not be suitable
 
-  - id: OSPS-DO-03
+  - id: OSPS-TM-01
     maturity_level: 2
-    category: Documentation
+    category: Threat Modeling
     criterion: |
       The project documentation MUST provide user
       guides for all basic functionality.
     rationale: |
-      Ensure that users have a clear and
-      comprehensive understanding of the project's
-      current features in order to prevent damage
+      Ensure that users and threat assessors have a
+      clear and comprehensive understanding of the 
+      project's current features in order to
+      streamline assessments and prevent damage
       from misuse or misconfiguration.
     details: |
       Create user guides or documentation for all
@@ -423,7 +424,8 @@ criteria:
       known dangerous or destructive actions
       available, include highly-visible warnings.
     control_mappings: # TODO
-    security_insights_value: # TODO
+    security_insights_value: |
+      project.documentation.detailed-guide
 
   - id: OSPS-DO-04
     maturity_level: 2
@@ -505,9 +507,9 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-DO-07
+  - id: OSPS-TM-07
     maturity_level: 2
-    category: Documentation
+    category: Threat Modeling
     criterion: |
       The project documentation MUST provide
       design documentation demonstrating all
@@ -550,19 +552,19 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-DO-09
+  - id: OSPS-TM-09
     maturity_level: 3
-    category: Documentation
+    category: Threat Modeling
     criterion: |
       The project documentation MUST include
       descriptions of all external input and output
       interfaces of the released software assets.
     rationale: |
-      Provide users and developers with an
-      understanding of how to interact with the
-      project's software and integrate it with
-      other systems, enabling them to use the
-      software effectively.
+      Provide users, contributors, and assessors
+      with an understanding of how to interact with
+      the project's software to integrate it with
+      other systems, enabling them to fully
+      understand the software's capabilities.
     details: |
       Document all input and output interfaces of
       the released software assets, explaining how

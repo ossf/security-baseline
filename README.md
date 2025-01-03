@@ -17,11 +17,12 @@ Each entry has the following values:
   - Level 2: for any code project that has at least 2 maintainers and a small number of consistent users
   - Level 3: for any code project that has a large number of consistent users
 - **Category**:
-  - Access Control
-  - Build & Release
-  - Documentation
-  - Quality
-  - Legal
+  - AC: Access Control
+  - BR: Build & Release
+  - DO: Documentation
+  - LE: Legal
+  - QA: Quality
+  - TM: Threat Modeling
 - **Criterion**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
