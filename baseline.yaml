@@ -649,6 +649,37 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-16  
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project documentation MUST include the Roles
+       and Responsibilities for members of the project.
+    objective: |
+       Projects need to document the Roles and 
+       Responsibilities of the project's members to provide for 
+       Separation of Duties, Dual Control, and other 
+       requirements.
+
+       Providing this documentation allows external
+        review and demonstrates maturity of project
+        processes.
+    implementation: |
+       Document the various roles and responsibilities in your project.
+       Many OSS projects have "Maintainers" who have the authority
+       to directly accept changes, and contrast this with "Contributors"
+       who do not. If a project grows large there may be many
+       different roles.
+    autofill: |
+       Create a status check that checks the project's
+       version control system for this documentation.
+       Search for terms like "roles and responsibilities",
+       "duties", and "expectations" (if in English).
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #   
+
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
