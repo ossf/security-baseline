@@ -507,7 +507,7 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-TM-07
+  - id: OSPS-TM-02
     maturity_level: 2
     category: Threat Modeling
     criterion: |
@@ -552,7 +552,7 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-TM-09
+  - id: OSPS-TM-03
     maturity_level: 3
     category: Threat Modeling
     criterion: |
@@ -961,6 +961,32 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe: # sastToolRunsOnAllCommits 
+
+  - id: OSPS-TM-04
+    maturity_level: 2
+    category: Threat Modeling
+    criterion: |
+      The project documentation MUST include a
+      document that details the assets, threats,
+      and mitigations for the project.
+    rationale: |
+      Provide a structured approach to identifying
+      and addressing security threats to the
+      project, enabling contributors and users to
+      understand the risks and mitigations in place.
+    details: |
+      Create a threat model or assessment for the 
+      project. This will identify the assets,
+      threats, and mitigations for the project.
+      Include information on the potential threats
+      to the project's assets and the measures in
+      place to mitigate those threats.
+
+      The authoring process will be simplified if
+      including or referencing the output from
+      OSPS-TM-01, OSPS-TM-02, and OSPS-TM-03.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
 # # # #
 #
