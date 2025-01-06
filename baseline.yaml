@@ -652,7 +652,7 @@ criteria:
   - id: OSPS-DO-14
     maturity_level: 3
     category: Documentation
-    criteria: |
+    criterion: |
        The project documentation MUST provide a 
        descriptive statement when releases or 
        versions are no longer supported and that 
