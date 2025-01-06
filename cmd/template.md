@@ -5,9 +5,9 @@
 
 ## Overview
 
-The Open Source Project Security (OSPS) Baseline is a set of security criterion that projects should meet to be considered secure.
-The criterion are organized by maturity level and category.
-In the detailed subsections you will find the criterion, rationales, and details notes.
+The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
+The criteria are organized by maturity level and category.
+In the detailed subsections you will find the criterion, rationale, and details notes.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 

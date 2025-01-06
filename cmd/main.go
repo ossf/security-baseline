@@ -15,7 +15,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Struct for representing each criterion entry
+// Struct for representing each entry
 type Criterion struct {
 	ID                    string   `yaml:"id"`
 	MaturityLevel         int      `yaml:"maturity_level"`
@@ -56,7 +56,7 @@ var (
 	}
 	compileCmd = &cobra.Command{
 		Use:   "compile [file]",
-		Short: "Compile a YAML file of security criterion",
+		Short: "Compile a YAML file of security criteria",
 		Args:  cobra.MinimumNArgs(0),
 		Run: func(cmd *cobra.Command, args []string) {
 			err := readYAMLFile()
