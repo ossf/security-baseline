@@ -359,12 +359,14 @@ criteria:
     scorecard_probe: # TODO
 
   - id: OSPS-DO-01
+    replaced_by: OSPS-GV-01
+
+  - id: OSPS-GV-01
     maturity_level: 1
-    category: Documentation
+    category: Governance
     criterion: |
       The project MUST have one or more mechanisms
-      for public discussions about proposed
-      changes and usage obstacles.
+      for public discussions about project functionality.
     rationale: |
       Encourages open communication and
       collaboration within the project community,
@@ -372,19 +374,24 @@ criteria:
       discuss proposed changes or usage
       challenges.
     details: |
-      Establish one or more mechanisms for public 
+      Establish and document one or more mechanisms for public 
       discussions within the project, such as
       mailing lists, instant messaging, or issue
       trackers, to facilitate open communication
-      and feedback.
+      and feedback.  The presence of a repository-linked issue tracker,
+      wiki, or a "Feedback" section in the project's README file
+      would meet this criterion.
     control_mappings: # TODO
     security_insights_value: # TODO
     scorecard_probe:
       - # None yet
 
   - id: OSPS-DO-02
+    replaced_by: OSPS-GV-02
+  
+  - id: OSPS-GV-02
     maturity_level: 1
-    category: Documentation
+    category: Governance
     criterion: |
       The project documentation MUST include an
       explanation of the contribution process.
@@ -479,8 +486,11 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-DO-06
+    replaced_by: OSPS-GV-03
+
+  - id: OSPS-GV-03
     maturity_level: 2
-    category: Documentation
+    category: Governance
     criterion: |
       The project documentation MUST include a
       guide for code contributors that includes
@@ -595,6 +605,9 @@ criteria:
       - # TODO: this is about policy, but we should also look for evidence of SCA
 
   - id: OSPS-DO-11
+    replaced_by: OSPS-GV-04
+
+  - id: OSPS-GV-04
     maturity_level: 2
     category: Documentation
     criterion: |

@@ -20,8 +20,9 @@ Each entry has the following values:
   - Access Control
   - Build & Release
   - Documentation
-  - Quality
+  - Governance
   - Legal
+  - Quality
 - **Criterion**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense

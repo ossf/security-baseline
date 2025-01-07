@@ -49,6 +49,9 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ### {{ .ID }}
 
+{{ if ne .ReplacedBy "" }}
+**Replaced By:** [{{ .ReplacedBy }}](#{{ .ReplacedBy | toLower }})
+{{ else }}
 **Criterion:**
 
 {{ .CriterionText | addLinks }}
@@ -85,6 +88,8 @@ _No security insights identified._
 {{- end }}
 {{- else }}
 _No scorecard probe identified._
+{{- end }}
+
 {{- end }}
 
 ---

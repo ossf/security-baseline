@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"slices"
 	"strings"
@@ -18,6 +19,8 @@ import (
 // Struct for representing each entry
 type Criterion struct {
 	ID                    string   `yaml:"id"`
+	// If ReplacedBy is set, no other fields (beyond ID) should be set
+	ReplacedBy            string   `yaml:"replaced_by"`
 	MaturityLevel         int      `yaml:"maturity_level"`
 	Category              string   `yaml:"category"`
 	CriterionText         string   `yaml:"criterion"`
@@ -110,6 +113,7 @@ func readYAMLFile() error {
 		return fmt.Errorf("error decoding YAML: %v", err)
 	}
 	var entryIDs []string
+	retiredIDs := map[string]string{}
 	for i, entry := range baseline.Criteria {
 		// if entry in entryIDs
 		if slices.Contains(entryIDs, entry.ID) {
@@ -117,6 +121,14 @@ func readYAMLFile() error {
 		}
 		if entry.ID == "" {
 			return fmt.Errorf("missing ID for criterion entry %d: %s", i, entry.ID)
+		}
+		if entry.ReplacedBy != "" {
+			retiredIDs[entry.ID] = entry.ReplacedBy
+			// minimalEntry := 
+			if !reflect.DeepEqual(entry, Criterion{ID: entry.ID, ReplacedBy: entry.ReplacedBy}){
+				return fmt.Errorf("retired criterion entry %s has additional fields", entry.ID)
+			}
+			continue
 		}
 		if entry.CriterionText == "" {
 			return fmt.Errorf("missing criterion text for entry #%d: %s", i, entry.ID)
@@ -129,6 +141,20 @@ func readYAMLFile() error {
 		}
 		entryIDs = append(entryIDs, entry.ID)
 	}
+	// ensure that retired IDs reference only valid IDs
+	for retired, replacement := range retiredIDs {
+		if !slices.Contains(entryIDs, replacement) {
+			return fmt.Errorf("retired criterion %s references invalid replacement %s", retired, replacement)
+		}
+		if _, ok := retiredIDs[replacement]; ok {
+			return fmt.Errorf("retired criterion %s references another retired criterion %s", retired, replacement)
+		}
+	}
+
+	slices.SortFunc(baseline.Criteria, func(a, b Criterion) int {
+		return strings.Compare(a.ID, b.ID)
+	})
+
 	Data = baseline
 	return nil
 }
@@ -238,6 +264,7 @@ func generateBaselineMdFile() (err error) {
 		"asLink": func(s string) string {
 			return asLinkTemplateFunction(s)
 		},
+		"toLower": strings.ToLower,
 	}).Parse(string(templateContent))
 	if err != nil {
 		return fmt.Errorf("error parsing template: %w", err)
