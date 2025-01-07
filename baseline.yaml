@@ -125,6 +125,38 @@ criteria:
     control_mappings: # TODO
     scorecard_probe:
       - blocksDeleteOnBranches
+  - id: OSPS-TEST
+    maturity_level: 1
+    category: Build & Release
+    criteria: |
+      The project MUST use at least one automated test suite that
+      is publicly released as OSS (this test suite may be maintained
+      as a separate OSS project). It MUST clearly show
+      or document how to run the test suite(s).
+    objective: |
+      Enable modification of the software and/or its dependencies
+      with reasonable confidence that the changed software will
+      continue to work.
+    implementation: |
+      Establish an automated test suite. Enable it via a
+      continuous integration (CI) script where practical (e.g., where
+      hardware is available),  else via documentation in files such
+      as BUILD.md, README.md, or CONTRIBUTING.md.
+    control_mappings: # TODO
+  - id: OSPS-TEST-ADD
+    maturity_level: 1
+    category: Build & Release
+    criteria: |
+      The project MUST have a general policy (formal or not) that
+      as major new functionality is added to the software produced
+      by the project, tests of that functionality should be added
+      to an automated test suite.
+    objective: |
+      As software is modified its automated test suite should be
+      maintained as well.
+    implementation: |
+      Add automated tests when adding new functionality.
+    control_mappings: # TODO
   - id: OSPS-05
     maturity_level: 1
     category: Build & Release
