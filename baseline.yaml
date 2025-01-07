@@ -962,7 +962,7 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # sastToolRunsOnAllCommits 
 
-  - id: OSPS-TM-04
+  - id: OSPS-SA-04
     maturity_level: 2
     category: Security Assessment
     criterion: |
