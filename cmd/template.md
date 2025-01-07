@@ -15,9 +15,9 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## Criteria Overview
 
-* [Level 1](#level-1)
-* [Level 2](#level-2)
-* [Level 3](#level-3)
+* [Level 1](#level-1): for any code or non-code project with any number of maintainers or users
+* [Level 2](#level-2): for any code project that has at least 2 maintainers and a small number of consistent users
+* [Level 3](#level-3): for any code project that has a large number of consistent users
 
 ### Level 1
 
