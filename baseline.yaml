@@ -406,7 +406,7 @@ criteria:
 
   - id: OSPS-SA-01
     maturity_level: 2
-    category: Threat Modeling
+    category: Security Assessment
     criterion: |
       The project documentation MUST provide user
       guides for all basic functionality.
@@ -509,7 +509,7 @@ criteria:
 
   - id: OSPS-SA-02
     maturity_level: 2
-    category: Threat Modeling
+    category: Security Assessment
     criterion: |
       The project documentation MUST provide
       design documentation demonstrating all
@@ -554,7 +554,7 @@ criteria:
 
   - id: OSPS-SA-03
     maturity_level: 3
-    category: Threat Modeling
+    category: Security Assessment
     criterion: |
       The project documentation MUST include
       descriptions of all external input and output
@@ -964,7 +964,7 @@ criteria:
 
   - id: OSPS-TM-04
     maturity_level: 2
-    category: Threat Modeling
+    category: Security Assessment
     criterion: |
       The project documentation MUST include a
       document that details the assets, threats,
