@@ -22,7 +22,7 @@ Each entry has the following values:
   - DO: Documentation
   - LE: Legal
   - QA: Quality
-  - TM: Threat Modeling
+  - SA: Security Assessment
 - **Criterion**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense

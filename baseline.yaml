@@ -404,7 +404,7 @@ criteria:
     scorecard_probe:
       - # None, may not be suitable
 
-  - id: OSPS-TM-01
+  - id: OSPS-SA-01
     maturity_level: 2
     category: Threat Modeling
     criterion: |
@@ -507,7 +507,7 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-TM-02
+  - id: OSPS-SA-02
     maturity_level: 2
     category: Threat Modeling
     criterion: |
@@ -552,7 +552,7 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
-  - id: OSPS-TM-03
+  - id: OSPS-SA-03
     maturity_level: 3
     category: Threat Modeling
     criterion: |
