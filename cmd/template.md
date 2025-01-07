@@ -7,7 +7,7 @@
 
 The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
 The criteria are organized by maturity level and category.
-In the detailed subsections you will find the criteria, objectives, and implementation notes.
+In the detailed subsections you will find the criterion, rationale, and details notes.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
@@ -15,11 +15,32 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## Criteria Overview
 
-| ID  | Maturity Level | Category | Criteria |
-| --- | -------------- | -------- | -------- |
+* [Level 1](#level-1)
+* [Level 2](#level-2)
+* [Level 3](#level-3)
+
+### Level 1
 
 {{- range .Criteria }}
-| [{{ .ID }}]({{ .ID | asLink }}) | {{ .MaturityLevel }} | {{ .Category }} | {{ .CriteriaText | collapseNewlines | addLinks }} |
+{{if eq .MaturityLevel 1}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- end }}
+{{- end }}
+
+### Level 2
+
+{{- range .Criteria }}
+{{if eq .MaturityLevel 2}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{ end }}
+{{- end }}
+
+### Level 3
+
+{{- range .Criteria }}
+{{if eq .MaturityLevel 3}}
+**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{ end }}
 {{- end }}
 
 ## Criteria Details
@@ -28,15 +49,21 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ### {{ .ID }}
 
-**Criteria:**
+**Criterion:**
 
-{{ .CriteriaText | addLinks }}
+{{ .CriterionText | addLinks }}
+**Maturity Level:**
+{{ .MaturityLevel }}
+
+**Category:**
+{{ .Category }}
+
 **Objective:**
 
-{{ .Objective | addLinks}}
-**Implementation:**
+{{ .Rationale | addLinks}}
+**Details:**
 
-{{ .Implementation | addLinks }}
+{{ .Details | addLinks }}
 **Control Mappings:**
 {{ if .ControlMappings }}
 {{ .ControlMappings }}

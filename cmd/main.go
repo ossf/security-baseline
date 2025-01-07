@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
 	"text/template"
 
@@ -14,14 +15,14 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// Struct for representing each criteria entry
-type Criteria struct {
+// Struct for representing each entry
+type Criterion struct {
 	ID                    string   `yaml:"id"`
 	MaturityLevel         int      `yaml:"maturity_level"`
 	Category              string   `yaml:"category"`
-	CriteriaText          string   `yaml:"criteria"`
-	Objective             string   `yaml:"objective"`
-	Implementation        string   `yaml:"implementation"`
+	CriterionText         string   `yaml:"criterion"`
+	Rationale             string   `yaml:"rationale"`
+	Details               string   `yaml:"details"`
 	ControlMappings       string   `yaml:"control_mappings"`
 	SecurityInsightsValue string   `yaml:"security_insights_value"`
 	ScorecardProbe        []string `yaml:"scorecard_probe"`
@@ -29,7 +30,7 @@ type Criteria struct {
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Criteria []Criteria     `yaml:"criteria"`
+	Criteria []Criterion    `yaml:"criteria"`
 	Lexicon  []LexiconEntry `yaml:"lexicon"`
 }
 
@@ -108,8 +109,37 @@ func readYAMLFile() error {
 	if err := decoder.Decode(&baseline); err != nil {
 		return fmt.Errorf("error decoding YAML: %v", err)
 	}
+	var entryIDs []string
+	for i, entry := range baseline.Criteria {
+		// if entry in entryIDs
+		if slices.Contains(entryIDs, entry.ID) {
+			return fmt.Errorf("duplicate ID for criterion entry %d: %s", i, entry.ID)
+		}
+		if entry.ID == "" {
+			return fmt.Errorf("missing ID for criterion entry %d: %s", i, entry.ID)
+		}
+		if entry.CriterionText == "" {
+			return fmt.Errorf("missing criterion text for entry #%d: %s", i, entry.ID)
+		}
+		if entry.Rationale == "" {
+			return fmt.Errorf("missing Rationale for entry #%d: %s", i, entry.ID)
+		}
+		if entry.Details == "" {
+			return fmt.Errorf("missing Details for entry #%d: %s", i, entry.ID)
+		}
+		entryIDs = append(entryIDs, entry.ID)
+	}
 	Data = baseline
 	return nil
+}
+
+func contains(list []string, term string) bool {
+	for _, item := range list {
+		if item == term {
+			return true
+		}
+	}
+	return false
 }
 
 func containsSynonym(list []string, entryTerm, term string) bool {

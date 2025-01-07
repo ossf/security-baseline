@@ -1,0 +1,25 @@
+# Based on sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Test Compile & Jekyll Build
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+            persist-credentials: false
+      - name: Build content from yaml
+        run:  cd cmd && go run main.go compile --output ../docs/index.md
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
+        with:
+          source: ./docs
+          destination: ./_site

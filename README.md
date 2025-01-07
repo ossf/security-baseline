@@ -9,9 +9,9 @@ All definitions are maintained in YAML format for tandem machine and human readi
 Each entry has the following values:
 
 - **ID**:
-  - Entries 1-39 are reserved for maturity level 1
-  - Entries 40-69 are reserved for maturity level 2
-  - Entries 70-99 are reserved for maturity level 3
+  - Entries are of the form OSPS-_Category_-_Index_ where
+    - *Category* is a two-letter abbreviated form of the categories listed below
+    - *Index* is a sequentially-assigned two-digit number. Numbers are unique within a category but not between categories
 - **Maturity Level**:
   - Level 1: for any code or non-code project with any number of maintainers or users
   - Level 2: for any code project that has at least 2 maintainers and a small number of consistent users
@@ -22,15 +22,15 @@ Each entry has the following values:
   - Documentation
   - Quality
   - Legal
-- **Criteria**: 
+- **Criterion**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
   - The term before MUST/NOT is the _subject_ of the requirement
-  - erms following MUST/NOT describes the _required behavior_
-- **Objective**:
+  - Terms following MUST/NOT describe the _required behavior_
+- **Rationale**:
   - A concise statement of the goal of the requirement
   - Written in present tense and describes the desired outcome
-- **Implementation**: 
+- **Details**:
   - A concise description of how to meet the requirement
   - Written in present tense and describes the steps to take to meet the requirement
   - May outline recommendations, examples, or best practices
