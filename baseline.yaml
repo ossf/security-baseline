@@ -110,12 +110,21 @@ criteria:
       primary branch of the project's repository,
       ensuring that due diligence is done before
       commits are merged.
+    implementation: |
+      If the VCS is centralized,
+      set branch protection on the primary branch
+      in the project's VCS
     details: |
       Set branch protection on the primary branch
       in the project's version control system
       requiring changes to be made through
       pull/merge requests or other review
       mechanisms.
+      Alternatively, use a decentralized approach
+      (like the Linux kernel's) where changes are
+      first proposed in another repository, and
+      merging changes into the primary repository
+      requires a specific separate act.
     control_mappings: # TODO
     scorecard_probe:
       - blocksForcePushOnBranches
