@@ -37,7 +37,7 @@ Each entry has the following values:
 
 ## Contribution, Governance, & Security
 
-Contributions are always welcome via pull request or GitHub Discussions. Refer to the governance documentation for information about [how the project operates] and [how to report security-related issues].
+Contributions are always welcome via pull request or as issues, and can also be discussed on the [`#sig-security-baseline` channel on OpenSSF Slack](https://openssf.slack.com/archives/C07DC6TT2QY). Refer to the governance documentation for information about [how the project operates] and [how to report security-related issues].
 
 ### Antitrust Policy Notice
 
