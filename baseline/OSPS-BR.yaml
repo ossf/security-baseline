@@ -16,8 +16,6 @@
     pipelines do not execute arbitrary code
     provided from external sources.
   control_mappings: # TODO
-  scorecard_probe:
-    - hasDangerousWorkflowScriptInjection
 
 - id: OSPS-BR-02
   maturity_level: 1 # TODO: This should be lv2
@@ -42,8 +40,6 @@
     git commit id.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None, would need to be paired with SI
 
 - id: OSPS-BR-03
   maturity_level: 1
@@ -65,8 +61,6 @@
     data transmission.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None, would need to be paired with SI
 
 - id: OSPS-BR-04
   maturity_level: 2
@@ -112,8 +106,6 @@
     then pulled in by the build system.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # TODO
 
 - id: OSPS-BR-06
   maturity_level: 2
@@ -138,8 +130,6 @@
     different use cases.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # TODO, this might be possible if paired with SI to find the release location
 
 - id: OSPS-BR-08
   maturity_level: 2
@@ -163,4 +153,3 @@
     metadata file.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe: # TODO

@@ -21,8 +21,6 @@
     assertion is made.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None, may not be suitable
 
 - id: OSPS-LE-02
   maturity_level: 1
@@ -54,8 +52,6 @@
     other encumbrances (e.g., patents).
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - hasPermissiveLicense # Check this
 
 - id: OSPS-LE-03
   maturity_level: 1
@@ -79,8 +75,6 @@
     have an extension.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - hasLicenseFile
 
 - id: OSPS-LE-04
   maturity_level: 1
@@ -112,6 +106,3 @@
     source code.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None, may need to be paired with SI
-

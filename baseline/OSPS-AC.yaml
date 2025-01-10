@@ -28,8 +28,7 @@
     mechanism to enable.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None yet
+
 
 - id: OSPS-AC-02
   maturity_level: 1
@@ -50,8 +49,7 @@
     when necessary.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # None yet
+
 
 - id: OSPS-AC-03
   maturity_level: 1
@@ -81,8 +79,6 @@
     merging changes into the primary repository
     requires a specific separate act.
   control_mappings: # TODO
-  scorecard_probe:
-    - blocksForcePushOnBranches
 
 - id: OSPS-AC-04
   maturity_level: 1
@@ -101,8 +97,6 @@
     in the project's version control system to
     prevent deletion.
   control_mappings: # TODO
-  scorecard_probe:
-    - blocksDeleteOnBranches
 
 - id: OSPS-AC-05
   maturity_level: 2
@@ -126,9 +120,6 @@
     repository level. If not, set permissions at
     the top level of the pipeline.
   control_mappings: # TODO
-  scorecard_probe:
-    - topLevelPermissions
-    - jobLevelPermissions
 
 - id: OSPS-AC-07
   maturity_level: 3
@@ -153,5 +144,3 @@
     authentication.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # TODO

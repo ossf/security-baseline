@@ -72,10 +72,6 @@
     projects in their environment.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - hasSBOM
-    - hasReleaseSBOM
-    - # TODO: check for non-sbom dependency files
 
 - id: OSPS-QA-04
   maturity_level: 2
@@ -104,9 +100,6 @@
     tempted to bypass.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - runsStatusChecksBeforeMerging
-    - # TODO: check for checks passing?
 
 - id: OSPS-QA-05
   maturity_level: 3
@@ -138,8 +131,6 @@
     for general use.
   control_mappings: # TODO
   security_insights_value: # TODO
-  scorecard_probe:
-    - # TODO, this may be possible if paired with SI to find the subproject
 
 - id: OSPS-QA-06
   maturity_level: 2
@@ -164,34 +155,6 @@
     or stored separately and fetched during a
     specific well-documented pipeline step.
   control_mappings: # TODO
-  scorecard_probe:
-    - hasBinaryArtifacts
-
-- id: OSPS-QA-07
-  maturity_level: 3
-  category: Quality
-  criterion: |
-    All proposed changes to the project's
-    codebase must be automatically evaluated 
-    against a documented policy for known
-    vulnerabilities and blocked in the
-    event of violations except when declared
-    and supressed as non exploitable.
-  rationale: |
-    Identify and address defects and security weaknesses 
-    in the project's codebase early in the 
-    development process, reducing the risk of 
-    shipping insecure software.
-  details: |
-    Create a status check in the project's
-    version control system that runs a Static
-    Application Security Testing (SAST) tool on
-    all changes to the codebase. Require that the
-    status check passes before changes can be
-    merged.
-  control_mappings: # TODO
-  security_insights_value: # TODO
-  scorecard_probe: # sastToolRunsOnAllCommits 
 
 - id: OSPS-QA-08
   maturity_level: 3

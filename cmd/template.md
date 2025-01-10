@@ -78,15 +78,6 @@ _No control mappings identified._
 _No security insights identified._
 {{- end }}
 
-**Scorecard Probe(s):**
-{{ if .ScorecardProbe }}
-{{- range .ScorecardProbe }}
-- {{ . }}
-{{- end }}
-{{- else }}
-_No scorecard probe identified._
-{{- end }}
-
 ---
 
 {{- end }}
