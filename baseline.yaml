@@ -670,6 +670,19 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
+  - id: OSPS-DO-14
+    maturity_level: 3
+    category: Documentation
+    criterion: |
+      The project documentation MUST provide a
+      descriptive statement when releases or
+      versions are no longer supported and that
+      will no longer receive security updates.
+    objective: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
