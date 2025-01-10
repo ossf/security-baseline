@@ -863,7 +863,7 @@ lexicon:
       restriction.
   - term: Automated Test Suite
     definition: |
-      A collection of pre-written test cases that
+      A collection of pre-written test cases that, when invoked,
       execute the software to verify that actual results are expected results
       without requiring manual intervention.
       An automated test suite must return an overall "pass" or "fail" result,
