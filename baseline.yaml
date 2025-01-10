@@ -658,6 +658,28 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
+  - id: OSPS-DO-13
+    maturity_level: 1
+    category: Documentation
+    criteria: |
+       The project documentation MUST include a 
+       descriptive statement about the scope and 
+       duration of support. 
+    objective: |
+       Identify and set expectations for downstream 
+       consumers around what updates the project may
+       or may not provide and when no further updates
+       will be provided.
+    implementation: |
+       Provide text identifying which versions/branches of the project
+       are being supported and at what level (e.g., improvements welcome,
+       bug fixes only, security fixes only, or abandoned).
+       Where practical, provide lifecycle statements or machine-readable 
+       metadata, e.g., via security-insights.yml project-lifecycle.status.       
+    control_mappings: # TODO
+    security_insights_value: # TODO
+    scorecard_probe: #  
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
