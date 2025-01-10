@@ -683,6 +683,18 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
+    - id: OSPS-DO-15
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+      The project documentation MUST include a
+      description of how the project selects,
+      obtains, and tracks its dependencies.
+    objective: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
