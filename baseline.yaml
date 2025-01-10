@@ -695,6 +695,18 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
+    - id: OSPS-GV-01
+    maturity_level: 2
+    category: Governance
+    criteria: |
+      The project documentation MUST include the
+      Roles and Responsibilities for members of the
+      project.
+    objective: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
