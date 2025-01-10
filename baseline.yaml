@@ -987,6 +987,14 @@ lexicon:
       Code provided by an external source that is
       executed by a system without validation or
       restriction.
+  - term: Automated Test Suite
+    definition: |
+      A collection of pre-written test cases that, when invoked,
+      execute the software to verify that actual results are expected results
+      without requiring manual intervention.
+      An automated test suite must return an overall "pass" or "fail" result,
+      and is often implemented using a test framework.
+      Common ways to invoke automated tests include `make check`, `make test`, `npm test`, and `cargo test` manually or as part of a Continuous Integration workflow.
   - term: Build and Release Pipeline
     definition: |
       A series of automated processes that compile
