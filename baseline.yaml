@@ -711,9 +711,24 @@ criteria:
     maturity_level: 3
     category: Documentation
     criteria: |
-       The project MUST perform a security risk assessment to 
-       understand the most likely and impactful potential security problems 
-       that could occur within the software.
+       The project MUST perform a security risk
+       assessment to understand the most likely and
+       impactful potential security problems that
+       could occur within the software.
+    objective: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-03
+    maturity_level: 2
+    category: Documentation
+    criteria: |
+       The project MUST perform threat modeling and
+       attack surface analysis to understand and
+       protect against attacks on critical code
+       paths, functions, and interactions within
+       the system.
     objective: # TODO
     implementation: # TODO
     control_mappings: # TODO
