@@ -1058,6 +1058,33 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # sastToolRunsOnAllCommits 
 
+    - id: OSPS-QA-08
+      maturity_level: 3
+      category: Quality
+      criterion: |
+        The project MUST use at least one automated
+        test suite for the source code repository
+        which clearly documents when and how tests
+        are run.
+      rationale: # TODO
+      details: # TODO
+      control_mappings: # TODO
+      security_insights_value: # TODO
+
+    - id: OSPS-QA-09
+      maturity_level: 3
+      category: Quality
+      criterion: |
+        The project documentation MUST include a
+        policy that all major changes to the
+        software produced by the project should
+        add or update tests of the functionality
+        in an automated test suite.
+      rationale: # TODO
+      details: # TODO
+      control_mappings: # TODO
+      security_insights_value: # TODO
+
 # # # #
 #
 # Lexicon
