@@ -1,0 +1,150 @@
+- id: OSPS-DO-03
+  maturity_level: 2
+  category: Documentation
+  criterion: |
+    The project documentation MUST provide user
+    guides for all basic functionality.
+  rationale: |
+    Ensure that users have a clear and
+    comprehensive understanding of the project's
+    current features in order to prevent damage
+    from misuse or misconfiguration.
+  details: |
+    Create user guides or documentation for all
+    basic functionality of the project,
+    explaining how to install, configure, and
+    use the project's features. If there are any
+    known dangerous or destructive actions
+    available, include highly-visible warnings.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-05
+  maturity_level: 2
+  category: Documentation
+  criterion: |
+    The project documentation MUST include a
+    mechanism for reporting defects.
+  rationale: |
+    Enable users and contributors to report
+    defects or issues with the released software
+    assets, facilitating communication and
+    collaboration on defect fixes and
+    improvements.
+  details: |
+    It is recommended that projects use their
+    VCS default issue tracker. If an extarnal
+    source is used, ensure that the project
+    documentation and contributing guide clearly
+    and visibly explain how to use the reporting
+    system.
+
+    It is recommended that project documentation
+    also sets expectations for how defects will
+    be triaged and resolved.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-07
+  maturity_level: 2
+  category: Documentation
+  criterion: |
+    The project documentation MUST provide
+    design documentation demonstrating all
+    actions and actors within the system.
+  rationale: |
+    Provide an overview of the project's design
+    and architecture, illustrating the
+    interactions and components of the system to
+    help contributors and security reviewers
+    understand the internal logic of the
+    released software assets.
+  details: |
+    Include designs in the project documentation
+    that explains the actions and actors. Actors
+    include any subsystem or entity that can
+    influence another segment in the system.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-09
+  maturity_level: 3
+  category: Documentation
+  criterion: |
+    The project documentation MUST include
+    descriptions of all external input and output
+    interfaces of the released software assets.
+  rationale: |
+    Provide users and developers with an
+    understanding of how to interact with the
+    project's software and integrate it with
+    other systems, enabling them to use the
+    software effectively.
+  details: |
+    Document all input and output interfaces of
+    the released software assets, explaining how
+    users can interact with the software and
+    what data is expected or produced.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-12
+  maturity_level: 2
+  category: Documentation
+  criterion: |
+    The project documentation MUST contain
+    instructions to verify the integrity 
+    and authenticity of the release assets,
+    including the expected identity of the person
+    or process authoring the software release.
+  rationale: |
+    Enable users to verify the authenticity and
+    integrity of the project's released software
+    assets, reducing the risk of using tampered
+    or unauthorized versions of the software.
+  details: |
+    Instructions in the project should contain
+    information about the technology used, the
+    commands to run, and the expected output. The 
+    expected identity may be in the form of key
+    IDs used to sign, issuer and identity from a
+    sigstore certificate, or other similar forms.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-13
+  maturity_level: 1
+  category: Documentation
+  criteria: |
+    The project documentation MUST include a
+    descriptive statement about the scope and
+    duration of support.
+  objective: # TODO
+  implementation: # TODO
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-14
+  maturity_level: 3
+  category: Documentation
+  criterion: |
+    The project documentation MUST provide a
+    descriptive statement when releases or
+    versions are no longer supported and that
+    will no longer receive security updates.
+  objective: # TODO
+  implementation: # TODO
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-DO-15
+  maturity_level: 2
+  category: Vulnerability Management
+  criteria: |
+    The project documentation MUST include a
+    description of how the project selects,
+    obtains, and tracks its dependencies.
+  objective: # TODO
+  implementation: # TODO
+  control_mappings: # TODO
+  security_insights_value: # TODO

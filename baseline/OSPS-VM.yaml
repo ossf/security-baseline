@@ -1,0 +1,92 @@
+- id: OSPS-VM-01
+  maturity_level: 3
+  category: Vulnerability Management
+  criterion: |
+    The project documentation MUST include a
+    policy that defines a threshold for remediation
+    of SCA findings related to vulnerabilities and
+    licenses.
+  rationale: |
+    Ensure that the project clearly communicates
+    the threshold for remediation of SCA findings,
+    including vulnerabilities and license issues
+    in software dependencies.
+  details: |
+    Document a policy in the project that
+    defines a threshold for remediation of SCA
+    findings related to vulnerabilities and
+    licenses. Include the process for
+    identifying, prioritizing, and remediating
+    these findings.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-VM-02
+  maturity_level: 3
+  category: Vulnerability Management
+  criterion: |
+    The project documentation MUST include a
+    policy to address SCA violations prior to any
+    release.
+  rationale: |
+    Ensure that violations of your SCA policy
+    are addressed before software releases,
+    reducing the risk of shipping insecure or
+    non-compliant software.
+  details: |
+    Document a policy in the project to address
+    applicable Software Composition Analysis 
+    results before any release, and add status
+    checks that verify compliance with that 
+    policy prior to release.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-VM-03
+  maturity_level: 2
+  category: Vulnerability Management
+  criterion: |
+    The project documentation MUST include a
+    policy for coordinated vulnerability
+    reporting, with a clear timeframe for
+    response.
+  rationale: |
+    Establish a process for reporting and
+    addressing vulnerabilities in the project,
+    ensuring that security issues are handled
+    promptly and transparently.
+  details: |
+    Create a SECURITY.md file at the root of the
+    directory, outlining the project's policy
+    for coordinated vulnerability reporting.
+    Include a method for reporting
+    vulnerabilities. Set expectations for the
+    how the project will respond and address
+    reported issues.
+  control_mappings: # TODO
+  security_insights_value: # TODO
+
+- id: OSPS-VM-04
+  maturity_level: 3
+  category: Vulnerability Management
+  criterion: |
+    All proposed changes to the project's
+    codebase must be automatically evaluated 
+    against a documented policy for known
+    vulnerabilities and blocked in the
+    event of violations except when declared
+    and supressed as non exploitable.
+  rationale: |
+    Identify and address defects and security weaknesses 
+    in the project's codebase early in the 
+    development process, reducing the risk of 
+    shipping insecure software.
+  details: |
+    Create a status check in the project's
+    version control system that runs a Static
+    Application Security Testing (SAST) tool on
+    all changes to the codebase. Require that the
+    status check passes before changes can be
+    merged.
+  control_mappings: # TODO
+  security_insights_value: # TODO

@@ -42,7 +42,6 @@
 # recommendations or best practices.
 #
 criteria:
-
   - id: OSPS-AC-01
     maturity_level: 1
     category: Access Control
