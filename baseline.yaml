@@ -129,10 +129,8 @@ criteria:
     maturity_level: 1
     category: Build & Release
     criteria: |
-      The project MUST use at least one automated test suite that
-      is publicly released as OSS (this test suite may be maintained
-      as a separate OSS project). It MUST clearly show
-      or document how to run the test suite(s).
+      The project MUST use at least one automated test suite for the source
+      code repository which clearly documents when and how it is run.
     objective: |
       Enable modification of the software and/or its dependencies
       with reasonable confidence that the changed software will
