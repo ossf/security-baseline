@@ -358,9 +358,6 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe: # TODO
 
-  - id: OSPS-DO-01
-    replaced_by: OSPS-GV-01
-
   - id: OSPS-GV-01
     maturity_level: 1
     category: Governance
@@ -386,9 +383,6 @@ criteria:
     scorecard_probe:
       - # None yet
 
-  - id: OSPS-DO-02
-    replaced_by: OSPS-GV-02
-  
   - id: OSPS-GV-02
     maturity_level: 1
     category: Governance
@@ -484,9 +478,6 @@ criteria:
       be triaged and resolved.
     control_mappings: # TODO
     security_insights_value: # TODO
-
-  - id: OSPS-DO-06
-    replaced_by: OSPS-GV-03
 
   - id: OSPS-GV-03
     maturity_level: 2
@@ -603,9 +594,6 @@ criteria:
     security_insights_value: # TODO
     scorecard_probe:
       - # TODO: this is about policy, but we should also look for evidence of SCA
-
-  - id: OSPS-DO-11
-    replaced_by: OSPS-GV-04
 
   - id: OSPS-GV-04
     maturity_level: 2
