@@ -707,6 +707,18 @@ criteria:
     control_mappings: # TODO
     security_insights_value: # TODO
 
+  - id: OSPS-GV-02
+    maturity_level: 3
+    category: Documentation
+    criteria: |
+       The project MUST perform a security risk assessment to 
+       understand the most likely and impactful potential security problems 
+       that could occur within the software.
+    objective: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
   - id: OSPS-LE-01
     maturity_level: 2
     category: Legal
