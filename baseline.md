@@ -247,23 +247,16 @@ release processes.
 
 ### OSPS-AC-01
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 require [multi-factor authentication] for
 [collaborators] modifying the project
 [repository] settings or accessing sensitive
 data.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Protect against unauthorized access to
+**Rationale:** Protect against unauthorized access to
 sensitive areas of the project's [repository],
 reducing the risk of account compromise or
 insider threats. Passwords are often easily captured,
@@ -271,87 +264,60 @@ either during communication or on servers,
 so depending solely on passwords is a weaker
 form of authentication.
 
-**Details:**
 
-Require [multi-factor authentication] ([MFA]) for the
+**Details:** Require [multi-factor authentication] ([MFA]) for the
 project's [version control system], requiring
 [collaborators] to provide a second form of
 authentication when accessing sensitive data
 or modifying [repository] settings.
 Passkeys are acceptable for this criterion.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-AC-02
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 restrict [collaborator] permissions to the
 lowest available privileges by default.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Reduce the risk of unauthorized access to
+**Rationale:** Reduce the risk of unauthorized access to
 the project's [repository] by limiting the
 permissions granted to [collaborators].
 
-**Details:**
 
-Configure the project's version control
+**Details:** Configure the project's version control
 system to assign the lowest available
 permissions to [collaborators] by default when
 added, granting additional permissions only
 when necessary.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-AC-03
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 prevent unintentional direct [commits] against
 the [primary branch].
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Reduce the risk of accidental [changes] to the
+**Rationale:** Reduce the risk of accidental [changes] to the
 [primary branch] of the project's [repository],
 ensuring that due diligence is done before
 [commits] are merged.
 
-**Details:**
 
-Set branch protection on the [primary branch]
+**Details:** Set branch protection on the [primary branch]
 in the project's [version control system]
 requiring [changes] to be made through
 pull/merge requests or other review
@@ -362,77 +328,51 @@ first proposed in another [repository], and
 merging [changes] into the primary [repository]
 requires a specific separate act.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-AC-04
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 prevent unintentional deletion of the
 [primary branch].
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Protect the [primary branch] of the project's
+**Rationale:** Protect the [primary branch] of the project's
 [repository] from accidental deletion,
 ensuring that the project's history and
 [codebase] are preserved.
 
-**Details:**
 
-Set branch protection on the [primary branch]
+**Details:** Set branch protection on the [primary branch]
 in the project's [version control system] to
 prevent deletion.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-AC-05
 
-**Criterion:**
-
-The project's permissions in [CI/CD pipelines]
+**Criterion:** The project's permissions in [CI/CD pipelines]
 MUST be configured to the lowest available
 privileges except when explicitly elevated.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Reduce the risk of unauthorized access to
+**Rationale:** Reduce the risk of unauthorized access to
 the project's build and [release] processes by
 limiting the permissions granted to steps
 within the [CI/CD pipelines].
 
-**Details:**
 
-Configure the project's [CI/CD pipelines] to
+**Details:** Configure the project's [CI/CD pipelines] to
 assign the lowest available permissions to
 users and services by default, elevating
 permissions only when necessary for specific
@@ -441,55 +381,37 @@ may be possible at the organizational or
 [repository] level. If not, set permissions at
 the top level of the pipeline.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-AC-07
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 require [multi-factor authentication] that
 does not include SMS for users when
 modifying the project [repository] settings or
 accessing sensitive data.
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
-
-**Rationale:**
-
-Ensure that [multi-factor authentication]
+**Rationale:** Ensure that [multi-factor authentication]
 does not allow SMS as a factor, because
 SMS lacks encryption and may be vulnerable
 to attacks via Signaling System 7,
 social engineering, or SIM-swapping.
 
-**Details:**
 
-Require [multi-factor authentication] methods
+**Details:** Require [multi-factor authentication] methods
 that do not include SMS for users. Common
 alternatives include hardware tokens, mobile
 authenticator apps, or biometric
 authentication.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -506,66 +428,45 @@ process.
 
 ### OSPS-BR-01
 
-**Criterion:**
-
-The project's [build and release pipelines]
+**Criterion:** The project's [build and release pipelines]
 MUST NOT execute [arbitrary code] that is
 input from outside of the build script.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Reduce the risk of code injection or other
+**Rationale:** Reduce the risk of code injection or other
 security vulnerabilities in the project's
 build and [release] processes by restricting
 the execution of external code.
 
-**Details:**
 
-Ensure that the project's build and [release]
+**Details:** Ensure that the project's build and [release]
 pipelines do not execute [arbitrary code]
 provided from external sources.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-02
 
-**Criterion:**
-
-All [releases] and [released software assets]
+**Criterion:** All [releases] and [released software assets]
 MUST be assigned a unique version
 identifier for each [release] intended to be
 used by users.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that each software asset produced by
+**Rationale:** Ensure that each software asset produced by
 the  project is uniquely identified,
 enabling users to track [changes] and updates
 to the project over time.
 
-**Details:**
 
-Assign a unique [version identifier] to each
+**Details:** Assign a unique [version identifier] to each
 [release] and associated software asset
 produced by the project, following a
 consistent naming convention or numbering
@@ -573,119 +474,80 @@ scheme.
 Examples include SemVer, CalVer, or
 git [commit] id.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-03
 
-**Criterion:**
-
-Any websites, API responses or other
+**Criterion:** Any websites, API responses or other
 services involved in the project development
 and [release] MUST be delivered using SSH,
 HTTPS or other encrypted channels.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Protect the confidentiality and integrity
+**Rationale:** Protect the confidentiality and integrity
 of data transmitted between the project's
 services and users, reducing the risk of
 eavesdropping or data tampering.
 
-**Details:**
 
-Configure the project's websites, API
+**Details:** Configure the project's websites, API
 responses, and other services to use
 encrypted channels such as SSH or HTTPS for
 data transmission.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-04
 
-**Criterion:**
-
-All [released software assets] MUST be created
+**Criterion:** All [released software assets] MUST be created
 with consistent, automated build and [release]
 pipelines.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that the project's software assets
+**Rationale:** Ensure that the project's software assets
 are built and released using consistent and
 automated processes, reducing the risk of
 errors or inconsistencies in the deployment
 and distribution of the software.
 
-**Details:**
 
-[VCS]-integrated pipelines are
+**Details:** [VCS]-integrated pipelines are
 recommended to ensure consistency and
 automation in the build and [release]
 processes.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-05
 
-**Criterion:**
-
-All [build and release pipelines] MUST use
+**Criterion:** All [build and release pipelines] MUST use
 standardized tooling where available to
 ingest dependencies at build time.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that the project's build and [release]
+**Rationale:** Ensure that the project's build and [release]
 pipelines use standardized tools and
 processes to manage dependencies, reducing
 the risk of compatibility issues or security
 vulnerabilities in the software.
 
-**Details:**
 
-Use a common tooling for your ecosystem,
+**Details:** Use a common tooling for your ecosystem,
 such as package managers or dependency
 management tools to ingest dependencies at
 build time. This may include using a
@@ -693,40 +555,27 @@ dependency file, lock file, or manifest to
 specify the required dependencies, which are
 then pulled in by the build system.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-06
 
-**Criterion:**
-
-All [releases] MUST provide a descriptive log
+**Criterion:** All [releases] MUST provide a descriptive log
 of functional and security modifications.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Provide transparency and accountability for
+**Rationale:** Provide transparency and accountability for
 [changes] made to the project's software
 [releases], enabling users to understand the
 modifications and improvements included in
 each [release].
 
-**Details:**
 
-Ensure that all [releases] include a
+**Details:** Ensure that all [releases] include a
 descriptive [change] log. 
 
 It is recommended to ensure that the [change]
@@ -735,40 +584,27 @@ beyond [commit] messages, such as descriptions
 of the security impact or relevance to
 different use cases.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-BR-08
 
-**Criterion:**
-
-All [released software assets] MUST be signed
+**Criterion:** All [released software assets] MUST be signed
 or accounted for in a signed manifest
 including each asset's cryptographic hashes.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Provide users with a mechanism to verify the
+**Rationale:** Provide users with a mechanism to verify the
 authenticity and integrity of released 
 software assets, reducing the risk of
 tampering or unauthorized modifications.
 
-**Details:**
 
-Sign all [released software assets] at build
+**Details:** Sign all [released software assets] at build
 time with a cryptographic signature or
 attestations, such  as GPG or PGP signature,
 Sigstore signatures, SLSA [provenance], or SLSA
@@ -776,13 +612,8 @@ VSAs. Include the cryptographic hashes of
 each asset in a signed manifest or
 metadata file.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -798,67 +629,46 @@ understand the project's features and functionality.
 
 ### OSPS-DO-03
 
-**Criterion:**
-
-The [project documentation] MUST provide user
+**Criterion:** The [project documentation] MUST provide user
 guides for all basic functionality.
 
-**Maturity Level:**
-2
 
-**Category:**
-Documentation
+**Maturity Level:** 2
 
-**Rationale:**
-
-Ensure that users have a clear and
+**Rationale:** Ensure that users have a clear and
 comprehensive understanding of the project's
 current features in order to prevent damage
 from misuse or misconfiguration.
 
-**Details:**
 
-Create user guides or documentation for all
+**Details:** Create user guides or documentation for all
 basic functionality of the project,
 explaining how to install, configure, and
 use the project's features. If there are any
 known dangerous or destructive actions
 available, include highly-visible warnings.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-DO-05
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 mechanism for reporting [defects].
 
-**Maturity Level:**
-2
 
-**Category:**
-Documentation
+**Maturity Level:** 2
 
-**Rationale:**
-
-Enable users and [contributors] to report
+**Rationale:** Enable users and [contributors] to report
 [defects] or issues with the released software
 assets, facilitating communication and
 collaboration on [defect] fixes and
 improvements.
 
-**Details:**
 
-It is recommended that projects use their
+**Details:** It is recommended that projects use their
 [VCS] default issue tracker. If an extarnal
 source is used, ensure that the project
 documentation and contributing guide clearly
@@ -869,146 +679,89 @@ It is recommended that [project documentation]
 also sets expectations for how [defects] will
 be triaged and resolved.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-DO-12
 
-**Criterion:**
-
-The [project documentation] MUST contain
+**Criterion:** The [project documentation] MUST contain
 instructions to verify the integrity 
 and authenticity of the [release] assets,
 including the expected identity of the person
 or process authoring the software [release].
 
-**Maturity Level:**
-2
 
-**Category:**
-Documentation
+**Maturity Level:** 2
 
-**Rationale:**
-
-Enable users to verify the authenticity and
+**Rationale:** Enable users to verify the authenticity and
 integrity of the project's released software
 assets, reducing the risk of using tampered
 or unauthorized versions of the software.
 
-**Details:**
 
-Instructions in the project should contain
+**Details:** Instructions in the project should contain
 information about the technology used, the
 commands to run, and the expected output. The 
 expected identity may be in the form of key
 IDs used to sign, issuer and identity from a
 sigstore certificate, or other similar forms.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-DO-13
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 descriptive statement about the scope and
 duration of support.
 
-**Maturity Level:**
-1
 
-**Category:**
-Documentation
+**Maturity Level:** 1
 
-**Rationale:**
+**Rationale:** 
 
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-DO-14
 
-**Criterion:**
-
-The [project documentation] MUST provide a
+**Criterion:** The [project documentation] MUST provide a
 descriptive statement when [releases] or
 versions are no longer supported and that
 will no longer receive security updates.
 
-**Maturity Level:**
-3
 
-**Category:**
-Documentation
+**Maturity Level:** 3
 
-**Rationale:**
+**Rationale:** 
 
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-DO-15
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 description of how the project selects,
 obtains, and tracks its dependencies.
 
-**Maturity Level:**
-2
 
-**Category:**
-Vulnerability Management
+**Maturity Level:** 2
 
-**Rationale:**
+**Rationale:** 
 
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -1023,137 +776,90 @@ both threats and opportunities.
 
 ### OSPS-GV-01
 
-**Criterion:**
-
-The [project documentation] MUST include the
+**Criterion:** The [project documentation] MUST include the
 Roles and Responsibilities for members of the
 project.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
+**Rationale:** 
 
-**Rationale:**
-
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-GV-02
 
-**Criterion:**
-
-The project MUST have one or more mechanisms
+**Criterion:** The project MUST have one or more mechanisms
 for public discussions about proposed
 [changes] and usage obstacles.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Encourages open communication and
+**Rationale:** Encourages open communication and
 collaboration within the project community,
 enabling users to provide feedback and
 discuss proposed [changes] or usage
 challenges.
 
-**Details:**
 
-Establish one or more mechanisms for public 
+**Details:** Establish one or more mechanisms for public 
 discussions within the project, such as
 mailing lists, instant messaging, or issue
 trackers, to facilitate open communication
 and feedback.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-GV-03
 
-**Criterion:**
-
-The [project documentation] MUST include an
+**Criterion:** The [project documentation] MUST include an
 explanation of the contribution process.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Provide guidance to new [contributors] on how
+**Rationale:** Provide guidance to new [contributors] on how
 to participate in the project, outlining the
 steps required to submit [changes] or
 enhancements to the project's [codebase].
 
-**Details:**
 
-Create a CONTRIBUTING.md or CONTRIBUTING/
+**Details:** Create a CONTRIBUTING.md or CONTRIBUTING/
 directory to outline the contribution
 process including the steps for submitting
 [changes], and engaging with the project
 maintainers.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-GV-04
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 guide for code [contributors] that includes
 requirements for acceptable contributions.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Provide guidance to code [contributors] on how
+**Rationale:** Provide guidance to code [contributors] on how
 to submit [changes] and enhancements to the
 project's [codebase], outlining the standards
 and expectations for acceptable
 contributions.
 
-**Details:**
 
-Extend the CONTRIBUTING.md or CONTRIBUTING/
+**Details:** Extend the CONTRIBUTING.md or CONTRIBUTING/
 contents in the [project documentation] to
 outline the requirements for acceptable
 contributions, including coding standards,
@@ -1164,42 +870,29 @@ It is recommended that this guide is the
 source of truth for both [contributors] and
 approvers.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-GV-05
 
-**Criterion:**
-
-The [project documentation] MUST have a policy
+**Criterion:** The [project documentation] MUST have a policy
 that code [contributors] are reviewed prior to
 granting escalated permissions to sensitive
 resources.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that code [contributors] are vetted and
+**Rationale:** Ensure that code [contributors] are vetted and
 reviewed before being granted elevated
 permissions to sensitive resources within
 the project, reducing the risk of
 unauthorized access or misuse.
 
-**Details:**
 
-Publish an enforceable policy in the project
+**Details:** Publish an enforceable policy in the project
 documentation that requires code
 [contributors] to be reviewed and approved
 before being granted escalated permissions
@@ -1212,13 +905,8 @@ identity such as confirming the
 [contributor]'s association with a known
 trusted organization.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -1236,71 +924,50 @@ disputes or licensing violations.
 
 ### OSPS-LE-01
 
-**Criterion:**
-
-The [version control system] MUST require all
+**Criterion:** The [version control system] MUST require all
 code [contributors] to assert that they are
 legally authorized to [commit] the associated
 contributions on every [commit].
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that code [contributors] are aware of
+**Rationale:** Ensure that code [contributors] are aware of
 and acknowledge their legal responsibility
 for the contributions they make to the
 project, reducing the risk of intellectual
 property disputes against the project.
 
-**Details:**
 
-Include a DCO or CLA in the project's
+**Details:** Include a DCO or CLA in the project's
 [repository], requiring code [contributors] to
 assert that they are legally authorized to
 [commit] the associated contributions on every
 [commit]. Use a [status check] to ensure the
 assertion is made.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-LE-02
 
-**Criterion:**
-
-The [license] for the source code MUST
+**Criterion:** The [license] for the source code MUST
 meet the OSI Open Source Definition or
 the FSF Free Software Definition.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Ensure that the project's source code is
+**Rationale:** Ensure that the project's source code is
 distributed under a recognized and legally
 enforceable open source software [license],
 providing clarity on how the code
 can be used and shared by others.
 
-**Details:**
 
-Add a [LICENSE] file to the project's [repo]
+**Details:** Add a [LICENSE] file to the project's [repo]
 with a [license] that is
 an approved [license] by the
 Open Source Initiative (OSI), or
@@ -1315,82 +982,56 @@ Releasing to the public domain (e.g., CC0)
 meets this criterion if there are no
 other encumbrances (e.g., patents).
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-LE-03
 
-**Criterion:**
-
-The [license] for the source code MUST be
+**Criterion:** The [license] for the source code MUST be
 maintained in a standard location within
 the project's [repository].
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Ensure that the project's source code is
+**Rationale:** Ensure that the project's source code is
 distributed with the appropriate [license]
 terms, making it clear to users and
 [contributors] how the code can be used and
 shared.
 
-**Details:**
 
-Include the project's source code [license] in
+**Details:** Include the project's source code [license] in
 the project's [LICENSE] file, COPYING file,
 or [LICENSE]/
 directory to provide visibility and clarity
 on the licensing terms. The filename MAY
 have an extension.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-LE-04
 
-**Criterion:**
-
-The [license] for the [released software assets]
+**Criterion:** The [license] for the [released software assets]
 MUST meet the OSI Open Source Definition or
 the FSF Free Software Definition.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Ensure that the project's source code is
+**Rationale:** Ensure that the project's source code is
 distributed under a recognized and legally
 enforceable open source software [license],
 providing clarity on how the code
 can be used and shared by others.
 
-**Details:**
 
-If a different [license] is included with
+**Details:** If a different [license] is included with
 [released software assets], ensure it is
 an approved [license] by the
 Open Source Initiative (OSI), or
@@ -1405,13 +1046,8 @@ Note that the [license] for the released
 software assets may be different than the
 source code.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -1429,27 +1065,19 @@ software.
 
 ### OSPS-QA-01
 
-**Criterion:**
-
-The project's source code MUST be publicly
+**Criterion:** The project's source code MUST be publicly
 readable and have a static URL.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Enable users to access and review the
+**Rationale:** Enable users to access and review the
 project's source code and history, promoting
 transparency and collaboration within the
 project community.
 
-**Details:**
 
-Use a common [VCS] such as GitHub, GitLab, or
+**Details:** Use a common [VCS] such as GitHub, GitLab, or
 Bitbucket. Ensure the [repository] is publicly
 readable. Avoid duplication or mirroring of
 [repositories] unless highly visible
@@ -1457,82 +1085,56 @@ documentation clarifies the primary source.
 Avoid frequent [changes] to the [repository]
 that would impact the [repository] URL.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-02
 
-**Criterion:**
-
-The [version control system] MUST contain a
+**Criterion:** The [version control system] MUST contain a
 publicly readable record of all [changes]
 made, who made the [changes], and when the
 [changes] were made.
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Provide transparency and accountability for
+**Rationale:** Provide transparency and accountability for
 [changes] made to the project's [codebase],
 enabling users to track modifications and
 understand the history of the project.
 
-**Details:**
 
-Use a common [VCS] such as GitHub, GitLab, or
+**Details:** Use a common [VCS] such as GitHub, GitLab, or
 Bitbucket to maintain a publicly readable
 [commit] history. Avoid squashing or rewriting
 [commits] in a way that would obscure the
 author of any [commits].
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-03
 
-**Criterion:**
-
-All [released software assets] MUST be
+**Criterion:** All [released software assets] MUST be
 delivered with a machine-readable list of
 all direct and transitive internal software
 dependencies with their associated version
 identifiers.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Provide transparency and accountability for
+**Rationale:** Provide transparency and accountability for
 the project's dependencies, enabling users
 and [contributors] to understand the
 software's dependencies and versions.
 
-**Details:**
 
-This may take the form of a software bill of
+**Details:** This may take the form of a software bill of
 materials (SBOM) or a dependency file that
 lists all direct and transitive dependencies
 such as package.json, Gemfile.lock, or
@@ -1545,42 +1147,29 @@ This enables users to ingest this data in a
 standardized approach alongside other
 projects in their environment.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-04
 
-**Criterion:**
-
-Any automated [status checks] for [commits] MUST
+**Criterion:** Any automated [status checks] for [commits] MUST
 pass or require manual acknowledgement prior to
 merge.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Ensure that the project's approvers do not
+**Rationale:** Ensure that the project's approvers do not
 become accustomed to tolerating failing
 [status checks], even if arbitrary, because it
 increases the risk of overlooking security
 vulnerabilities or [defects] identified by
 automated checks.
 
-**Details:**
 
-Configure the project's version control
+**Details:** Configure the project's version control
 system to require that all automated status
 checks pass or require manual acknowledgement
 before a [commit] can be merged into the
@@ -1591,42 +1180,29 @@ It is recommended that any optional
 or fail requirement that approvers may be
 tempted to bypass.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-05
 
-**Criterion:**
-
-Any additional [subproject] code [repositories]
+**Criterion:** Any additional [subproject] code [repositories]
 produced by the project and compiled into a
 [release] MUST enforce security requirements as
 applicable to the status and intent of the
 respective [codebase].
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
-
-**Rationale:**
-
-Ensure that additional code [repositories] or
+**Rationale:** Ensure that additional code [repositories] or
 [subprojects] produced by the project are held
 to a standard that clear and appropriate
 for that [codebase].
 
-**Details:**
 
-The parent project should maintain a list of
+**Details:** The parent project should maintain a list of
 any [codebases] that are considered
 [subprojects] or additional [repositories].
 [Collaborators] on those [repositories] should
@@ -1640,40 +1216,27 @@ be held to a lower standard if they have
 lower levels of adoption or are not intended
 for general use.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-06
 
-**Criterion:**
-
-The [version control system] MUST NOT contain
+**Criterion:** The [version control system] MUST NOT contain
 generated executable artifacts.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Reduce the risk of including generated
+**Rationale:** Reduce the risk of including generated
 executable artifacts in the project's
 [version control system], ensuring that only
 source code and necessary files are stored
 in the [repository].
 
-**Details:**
 
-Remove generated executable artifacts
+**Details:** Remove generated executable artifacts
 in the project's [version control system].
 
 It is recommended that any scenario where a
@@ -1683,107 +1246,63 @@ should be instead be generated at build time
 or stored separately and fetched during a
 specific well-documented pipeline step.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-08
 
-**Criterion:**
-
-The project MUST use at least one automated
+**Criterion:** The project MUST use at least one automated
 test suite for the source code [repository]
 which clearly documents when and how tests
 are run.
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
+**Rationale:** 
 
-**Rationale:**
-
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-09
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 policy that all major [changes] to the
 software produced by the project should
 add or update tests of the functionality
 in an [automated test suite].
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
+**Rationale:** 
 
-**Rationale:**
-
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-QA-10
 
-**Criterion:**
-
-The project's [version control system] MUST
+**Criterion:** The project's [version control system] MUST
 require at least one non-author approval of
 [changes] before merging into the [release] or
 [primary branch].
 
-**Maturity Level:**
-3
 
-**Category:**
-Governance
+**Maturity Level:** 3
 
-**Rationale:**
+**Rationale:** 
 
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -1797,143 +1316,91 @@ and threats in the software.
 
 ### OSPS-SA-01
 
-**Criterion:**
-
-The [project documentation] MUST provide
+**Criterion:** The [project documentation] MUST provide
 design documentation demonstrating all
 actions and actors within the system.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Provide an overview of the project's design
+**Rationale:** Provide an overview of the project's design
 and architecture, illustrating the
 interactions and components of the system to
 help [contributors] and security reviewers
 understand the internal logic of the
 [released software assets].
 
-**Details:**
 
-Include designs in the [project documentation]
+**Details:** Include designs in the [project documentation]
 that explains the actions and actors. Actors
 include any subsystem or entity that can
 influence another segment in the system.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-SA-02
 
-**Criterion:**
-
-The [project documentation] MUST include
+**Criterion:** The [project documentation] MUST include
 descriptions of all external input and output
 interfaces of the [released software assets].
 
-**Maturity Level:**
-1
 
-**Category:**
+**Maturity Level:** 1
 
-
-**Rationale:**
-
-Provide users and developers with an
+**Rationale:** Provide users and developers with an
 understanding of how to interact with the
 project's software and integrate it with
 other systems, enabling them to use the
 software effectively.
 
-**Details:**
 
-Document all input and output interfaces of
+**Details:** Document all input and output interfaces of
 the [released software assets], explaining how
 users can interact with the software and
 what data is expected or produced.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-SA-04
 
-**Criterion:**
-
-The project MUST perform a security
+**Criterion:** The project MUST perform a security
 assessment to understand the most likely and
 impactful potential security problems that
 could occur within the software.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
+**Rationale:** 
 
-**Rationale:**
-
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-SA-03
 
-**Criterion:**
-
-The project MUST perform a threat modeling and
+**Criterion:** The project MUST perform a threat modeling and
 attack surface analysis to understand and
 protect against attacks on critical code
 paths, functions, and interactions within
 the system.
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
+**Rationale:** 
 
-**Rationale:**
-
-
-**Details:**
+**Details:** 
 
 
-**Control Mappings:**
-
-_No control mappings identified._
-
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
@@ -1949,109 +1416,75 @@ security threats and vulnerabilities in the software.
 
 ### OSPS-VM-01
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 policy that defines a threshold for remediation
 of [SCA] findings related to vulnerabilities and
 [licenses].
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
-
-**Rationale:**
-
-Ensure that the project clearly communicates
+**Rationale:** Ensure that the project clearly communicates
 the threshold for remediation of [SCA] findings,
 including vulnerabilities and [license] issues
 in software dependencies.
 
-**Details:**
 
-Document a policy in the project that
+**Details:** Document a policy in the project that
 defines a threshold for remediation of [SCA]
 findings related to vulnerabilities and
 [licenses]. Include the process for
 identifying, prioritizing, and remediating
 these findings.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-VM-02
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 policy to address [SCA] violations prior to any
 [release].
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
-
-**Rationale:**
-
-Ensure that violations of your [SCA] policy
+**Rationale:** Ensure that violations of your [SCA] policy
 are addressed before software [releases],
 reducing the risk of shipping insecure or
 non-compliant software.
 
-**Details:**
 
-Document a policy in the project to address
+**Details:** Document a policy in the project to address
 applicable [Software Composition Analysis] 
 results before any [release], and add status
 checks that verify compliance with that 
 policy prior to [release].
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-VM-03
 
-**Criterion:**
-
-The [project documentation] MUST include a
+**Criterion:** The [project documentation] MUST include a
 policy for coordinated vulnerability
 reporting, with a clear timeframe for
 response.
 
-**Maturity Level:**
-2
 
-**Category:**
+**Maturity Level:** 2
 
-
-**Rationale:**
-
-Establish a process for reporting and
+**Rationale:** Establish a process for reporting and
 addressing vulnerabilities in the project,
 ensuring that security issues are handled
 promptly and transparently.
 
-**Details:**
 
-Create a SECURITY.md file at the root of the
+**Details:** Create a SECURITY.md file at the root of the
 directory, outlining the project's policy
 for coordinated [vulnerability reporting].
 Include a method for reporting
@@ -2059,56 +1492,38 @@ vulnerabilities. Set expectations for the
 how the project will respond and address
 reported issues.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 
 ### OSPS-VM-04
 
-**Criterion:**
-
-All proposed [changes] to the project's
+**Criterion:** All proposed [changes] to the project's
 [codebase] must be automatically evaluated 
 against a documented policy for known
 vulnerabilities and blocked in the
 event of violations except when declared
 and supressed as non exploitable.
 
-**Maturity Level:**
-3
 
-**Category:**
+**Maturity Level:** 3
 
-
-**Rationale:**
-
-Identify and address [defects] and security weaknesses 
+**Rationale:** Identify and address [defects] and security weaknesses 
 in the project's [codebase] early in the 
 development process, reducing the risk of 
 shipping insecure software.
 
-**Details:**
 
-Create a [status check] in the project's
+**Details:** Create a [status check] in the project's
 [version control system] that runs a Static
 Application Security Testing (SAST) tool on
 all [changes] to the [codebase]. Require that the
 [status check] passes before [changes] can be
 merged.
 
-**Control Mappings:**
 
-_No control mappings identified._
 
-**Security Insights Value:**
-
-_No security insights identified._
 
 ---
 

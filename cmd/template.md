@@ -47,11 +47,9 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 {{- end }}
 
-## Categories
-
 {{ range .Categories }}
 
-### {{ .CategoryName }}
+## {{ .CategoryName }}
 
 {{ .Description }}
 
@@ -60,33 +58,21 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ### {{ .ID }}
 
-**Criterion:**
+**Criterion:** {{ .CriterionText | addLinks }}
 
-{{ .CriterionText | addLinks }}
-**Maturity Level:**
-{{ .MaturityLevel }}
+**Maturity Level:** {{ .MaturityLevel }}
 
-**Category:**
-{{ .Category }}
+**Rationale:** {{ .Rationale | addLinks}}
 
-**Rationale:**
-
-{{ .Rationale | addLinks}}
-**Details:**
-
-{{ .Details | addLinks }}
-**Control Mappings:**
+**Details:** {{ .Details | addLinks }}
 {{ if .ControlMappings }}
-{{ .ControlMappings }}
-{{ else }}
-_No control mappings identified._
+**Control Mappings:**
+{{ range .ControlMappings }}
+- {{ . }}
 {{- end }}
-
-**Security Insights Value:**
+{{- end }}
 {{ if .SecurityInsightsValue }}
-{{ .SecurityInsightsValue }}
-{{ else }}
-_No security insights identified._
+**Security Insights Value:** {{ .SecurityInsightsValue }}
 {{- end }}
 
 ---
