@@ -1,69 +1,72 @@
-- id: OSPS-SA-01
-  maturity_level: 2
-  category: Documentation
-  criterion: |
-    The project documentation MUST provide
-    design documentation demonstrating all
-    actions and actors within the system.
-  rationale: |
-    Provide an overview of the project's design
-    and architecture, illustrating the
-    interactions and components of the system to
-    help contributors and security reviewers
-    understand the internal logic of the
-    released software assets.
-  details: |
-    Include designs in the project documentation
-    that explains the actions and actors. Actors
-    include any subsystem or entity that can
-    influence another segment in the system.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+category: Security Assessment
+description: |
+  Security Assessment criteria encourage practices that
+  help ensure that the project is well positioned
+  to identify and address security vulnerabilities
+  and threats in the software.
+criteria:
+  - id: OSPS-SA-01
+    maturity_level: 2
+    criterion: |
+      The project documentation MUST provide
+      design documentation demonstrating all
+      actions and actors within the system.
+    rationale: |
+      Provide an overview of the project's design
+      and architecture, illustrating the
+      interactions and components of the system to
+      help contributors and security reviewers
+      understand the internal logic of the
+      released software assets.
+    details: |
+      Include designs in the project documentation
+      that explains the actions and actors. Actors
+      include any subsystem or entity that can
+      influence another segment in the system.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-SA-02
-  maturity_level: 1
-  category: Documentation
-  criterion: |
-    The project documentation MUST include
-    descriptions of all external input and output
-    interfaces of the released software assets.
-  rationale: |
-    Provide users and developers with an
-    understanding of how to interact with the
-    project's software and integrate it with
-    other systems, enabling them to use the
-    software effectively.
-  details: |
-    Document all input and output interfaces of
-    the released software assets, explaining how
-    users can interact with the software and
-    what data is expected or produced.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-SA-02
+    maturity_level: 1
+    criterion: |
+      The project documentation MUST include
+      descriptions of all external input and output
+      interfaces of the released software assets.
+    rationale: |
+      Provide users and developers with an
+      understanding of how to interact with the
+      project's software and integrate it with
+      other systems, enabling them to use the
+      software effectively.
+    details: |
+      Document all input and output interfaces of
+      the released software assets, explaining how
+      users can interact with the software and
+      what data is expected or produced.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-SA-04
-  maturity_level: 2
-  category: Documentation
-  criteria: |
-      The project MUST perform a security
-      assessment to understand the most likely and
-      impactful potential security problems that
-      could occur within the software.
-  objective: # TODO
-  implementation: # TODO
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-SA-04
+    maturity_level: 2
+    criterion: |
+        The project MUST perform a security
+        assessment to understand the most likely and
+        impactful potential security problems that
+        could occur within the software.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-SA-03
-  maturity_level: 3
-  category: Documentation
-  criteria: |
-    The project MUST perform a threat modeling and
-    attack surface analysis to understand and
-    protect against attacks on critical code
-    paths, functions, and interactions within
-    the system.
-  objective: # TODO
-  implementation: # TODO
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-SA-03
+    maturity_level: 3
+    criterion: |
+      The project MUST perform a threat modeling and
+      attack surface analysis to understand and
+      protect against attacks on critical code
+      paths, functions, and interactions within
+      the system.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO

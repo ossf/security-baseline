@@ -15,7 +15,7 @@ Jekyll (a static site generator) using scripts from `./cmd` and formatting from
 
 All changes to the repository should be made via PR
 ([OSPS-AC-03](https://baseline.openssf.org/#osps-ac-03)).  In addition to a clear
-title and descriptive commit message, PRs MUST meet the following criteria:
+title and descriptive commit message, PRs MUST meet the following criterion:
 
 * DCO signoff (via `git commit -s` -- [OSPS-LE-01](https://baseline.openssf.org/#osps-le-01))
 * All checks must pass ([OSPS-QA-04](https://baseline.openssf.org/#osps-qa-04))

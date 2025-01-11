@@ -1,155 +1,157 @@
+category: Build and Release
+description: |
+  Build and Release criteria focus on the processes and
+  tools used to compile, package, and distribute the
+  project's software. These criteria help ensure that the
+  project's build and release pipelines are secure,
+  consistent, and reliable, reducing the risk of
+  vulnerabilities or errors in the software distribution
+  process.
+criteria:
+  - id: OSPS-BR-01
+    maturity_level: 1
+    criterion: |
+      The project's build and release pipelines
+      MUST NOT execute arbitrary code that is
+      input from outside of the build script.
+    rationale: |
+      Reduce the risk of code injection or other
+      security vulnerabilities in the project's
+      build and release processes by restricting
+      the execution of external code.
+    details: |
+      Ensure that the project's build and release
+      pipelines do not execute arbitrary code
+      provided from external sources.
+    control_mappings: # TODO
 
-- id: OSPS-BR-01
-  maturity_level: 1
-  category: Build & Release
-  criterion: |
-    The project's build and release pipelines
-    MUST NOT execute arbitrary code that is
-    input from outside of the build script.
-  rationale: |
-    Reduce the risk of code injection or other
-    security vulnerabilities in the project's
-    build and release processes by restricting
-    the execution of external code.
-  details: |
-    Ensure that the project's build and release
-    pipelines do not execute arbitrary code
-    provided from external sources.
-  control_mappings: # TODO
+  - id: OSPS-BR-02
+    maturity_level: 2
+    criterion: |
+      All releases and released software assets
+      MUST be assigned a unique version
+      identifier for each release intended to be
+      used by users.
+    rationale: |
+      Ensure that each software asset produced by
+      the  project is uniquely identified,
+      enabling users to track changes and updates
+      to the project over time.
+    details: |
+      Assign a unique version identifier to each
+      release and associated software asset
+      produced by the project, following a
+      consistent naming convention or numbering
+      scheme.
+      Examples include SemVer, CalVer, or
+      git commit id.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-BR-02
-  maturity_level: 1 # TODO: This should be lv2
-  category: Build & Release
-  criterion: |
-    All releases and released software assets
-    MUST be assigned a unique version
-    identifier for each release intended to be
-    used by users.
-  rationale: |
-    Ensure that each software asset produced by
-    the  project is uniquely identified,
-    enabling users to track changes and updates
-    to the project over time.
-  details: |
-    Assign a unique version identifier to each
-    release and associated software asset
-    produced by the project, following a
-    consistent naming convention or numbering
-    scheme.
-    Examples include SemVer, CalVer, or
-    git commit id.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-BR-03
+    maturity_level: 1
+    criterion: |
+      Any websites, API responses or other
+      services involved in the project development
+      and release MUST be delivered using SSH,
+      HTTPS or other encrypted channels.
+    rationale: |
+      Protect the confidentiality and integrity
+      of data transmitted between the project's
+      services and users, reducing the risk of
+      eavesdropping or data tampering.
+    details: |
+      Configure the project's websites, API
+      responses, and other services to use
+      encrypted channels such as SSH or HTTPS for
+      data transmission.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-BR-03
-  maturity_level: 1
-  category: Build & Release
-  criterion: |
-    Any websites, API responses or other
-    services involved in the project development
-    and release MUST be delivered using SSH,
-    HTTPS or other encrypted channels.
-  rationale: |
-    Protect the confidentiality and integrity
-    of data transmitted between the project's
-    services and users, reducing the risk of
-    eavesdropping or data tampering.
-  details: |
-    Configure the project's websites, API
-    responses, and other services to use
-    encrypted channels such as SSH or HTTPS for
-    data transmission.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-BR-04
+    maturity_level: 2
+    criterion: |
+      All released software assets MUST be created
+      with consistent, automated build and release
+      pipelines.
+    rationale: |
+      Ensure that the project's software assets
+      are built and released using consistent and
+      automated processes, reducing the risk of
+      errors or inconsistencies in the deployment
+      and distribution of the software.
+    details: |
+      VCS-integrated pipelines are
+      recommended to ensure consistency and
+      automation in the build and release
+      processes.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-BR-04
-  maturity_level: 2
-  category: Build & Release
-  criterion: |
-    All released software assets MUST be created
-    with consistent, automated build and release
-    pipelines.
-  rationale: |
-    Ensure that the project's software assets
-    are built and released using consistent and
-    automated processes, reducing the risk of
-    errors or inconsistencies in the deployment
-    and distribution of the software.
-  details: |
-    VCS-integrated pipelines are
-    recommended to ensure consistency and
-    automation in the build and release
-    processes.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-BR-05
+    maturity_level: 2
+    criterion: |
+      All build and release pipelines MUST use
+      standardized tooling where available to
+      ingest dependencies at build time.
+    rationale: |
+      Ensure that the project's build and release
+      pipelines use standardized tools and
+      processes to manage dependencies, reducing
+      the risk of compatibility issues or security
+      vulnerabilities in the software.
+    details: |
+      Use a common tooling for your ecosystem,
+      such as package managers or dependency
+      management tools to ingest dependencies at
+      build time. This may include using a
+      dependency file, lock file, or manifest to
+      specify the required dependencies, which are
+      then pulled in by the build system.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-- id: OSPS-BR-05
-  maturity_level: 2
-  category: Build & Release
-  criterion: |
-    All build and release pipelines MUST use
-    standardized tooling where available to
-    ingest dependencies at build time.
-  rationale: |
-    Ensure that the project's build and release
-    pipelines use standardized tools and
-    processes to manage dependencies, reducing
-    the risk of compatibility issues or security
-    vulnerabilities in the software.
-  details: |
-    Use a common tooling for your ecosystem,
-    such as package managers or dependency
-    management tools to ingest dependencies at
-    build time. This may include using a
-    dependency file, lock file, or manifest to
-    specify the required dependencies, which are
-    then pulled in by the build system.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-BR-06
+    maturity_level: 2
+    criterion: |
+      All releases MUST provide a descriptive log
+      of functional and security modifications.
+    rationale: |
+      Provide transparency and accountability for
+      changes made to the project's software
+      releases, enabling users to understand the
+      modifications and improvements included in
+      each release.
+    details: |
+      Ensure that all releases include a
+      descriptive change log. 
 
-- id: OSPS-BR-06
-  maturity_level: 2
-  category: Build & Release
-  criterion: |
-    All releases MUST provide a descriptive log
-    of functional and security modifications.
-  rationale: |
-    Provide transparency and accountability for
-    changes made to the project's software
-    releases, enabling users to understand the
-    modifications and improvements included in
-    each release.
-  details: |
-    Ensure that all releases include a
-    descriptive change log. 
+      It is recommended to ensure that the change
+      log is human-readable and includes details
+      beyond commit messages, such as descriptions 
+      of the security impact or relevance to
+      different use cases.
+    control_mappings: # TODO
+    security_insights_value: # TODO
 
-    It is recommended to ensure that the change
-    log is human-readable and includes details
-    beyond commit messages, such as descriptions 
-    of the security impact or relevance to
-    different use cases.
-  control_mappings: # TODO
-  security_insights_value: # TODO
-
-- id: OSPS-BR-08
-  maturity_level: 2
-  category: Build & Release
-  criterion: |
-    All released software assets MUST be signed
-    or accounted for in a signed manifest
-    including each asset's cryptographic hashes.
-  rationale: |
-    Provide users with a mechanism to verify the
-    authenticity and integrity of released 
-    software assets, reducing the risk of
-    tampering or unauthorized modifications.
-  details: |
-    Sign all released software assets at build
-    time with a cryptographic signature or
-    attestations, such  as GPG or PGP signature,
-    Sigstore signatures, SLSA provenance, or SLSA
-    VSAs. Include the cryptographic hashes of
-    each asset in a signed manifest or
-    metadata file.
-  control_mappings: # TODO
-  security_insights_value: # TODO
+  - id: OSPS-BR-08
+    maturity_level: 2
+    criterion: |
+      All released software assets MUST be signed
+      or accounted for in a signed manifest
+      including each asset's cryptographic hashes.
+    rationale: |
+      Provide users with a mechanism to verify the
+      authenticity and integrity of released 
+      software assets, reducing the risk of
+      tampering or unauthorized modifications.
+    details: |
+      Sign all released software assets at build
+      time with a cryptographic signature or
+      attestations, such  as GPG or PGP signature,
+      Sigstore signatures, SLSA provenance, or SLSA
+      VSAs. Include the cryptographic hashes of
+      each asset in a signed manifest or
+      metadata file.
+    control_mappings: # TODO
+    security_insights_value: # TODO
