@@ -1,0 +1,113 @@
+category: Governance
+description: |
+  Governance criteria focus on the policies and
+  procedures that guide the project's decision-making
+  and community interactions. These criteria help ensure
+  that the project is well positioned to respond to
+  both threats and opportunities.
+criteria:
+  - id: OSPS-GV-01
+    maturity_level: 2
+    criterion: |
+      The project documentation MUST include the
+      Roles and Responsibilities for members of the
+      project.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-02
+    maturity_level: 1
+    criterion: |
+      The project MUST have one or more mechanisms
+      for public discussions about proposed
+      changes and usage obstacles.
+    rationale: |
+      Encourages open communication and
+      collaboration within the project community,
+      enabling users to provide feedback and
+      discuss proposed changes or usage
+      challenges.
+    details: |
+      Establish one or more mechanisms for public 
+      discussions within the project, such as
+      mailing lists, instant messaging, or issue
+      trackers, to facilitate open communication
+      and feedback.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-03
+    maturity_level: 1
+    criterion: |
+      The project documentation MUST include an
+      explanation of the contribution process.
+    rationale: |
+      Provide guidance to new contributors on how
+      to participate in the project, outlining the
+      steps required to submit changes or
+      enhancements to the project's codebase.
+    details: |
+      Create a CONTRIBUTING.md or CONTRIBUTING/
+      directory to outline the contribution
+      process including the steps for submitting
+      changes, and engaging with the project
+      maintainers.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-04
+    maturity_level: 2
+    criterion: |
+      The project documentation MUST include a
+      guide for code contributors that includes
+      requirements for acceptable contributions.
+    rationale: |
+      Provide guidance to code contributors on how
+      to submit changes and enhancements to the
+      project's codebase, outlining the standards
+      and expectations for acceptable
+      contributions.
+    details: |
+      Extend the CONTRIBUTING.md or CONTRIBUTING/
+      contents in the project documentation to
+      outline the requirements for acceptable
+      contributions, including coding standards,
+      testing requirements, and submission
+      guidelines for code contributors.
+
+      It is recommended that this guide is the
+      source of truth for both contributors and
+      approvers.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-05
+    maturity_level: 2
+    criterion: |
+      The project documentation MUST have a policy
+      that code contributors are reviewed prior to
+      granting escalated permissions to sensitive
+      resources.
+    rationale: |
+      Ensure that code contributors are vetted and
+      reviewed before being granted elevated
+      permissions to sensitive resources within
+      the project, reducing the risk of
+      unauthorized access or misuse.
+    details: |
+      Publish an enforceable policy in the project
+      documentation that requires code
+      contributors to be reviewed and approved
+      before being granted escalated permissions
+      to sensitive resources, such as merge
+      approval or access to secrets.
+
+      It is recommended that vetting includes
+      establishing a justifiable lineage of
+      identity such as confirming the
+      contributor's association with a known
+      trusted organization.
+    control_mappings: # TODO
+    security_insights_value: # TODO
