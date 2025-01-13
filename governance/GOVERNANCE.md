@@ -36,7 +36,7 @@ To reach a decision on an issue or proposal, the proponents must seek maintainer
 
 ## Review Criteria for OSPS Baseline Repository
 
-Any changes intended to be merged in the OSPS Baseline repository shall meet the following minimal criterion:
+Any changes intended to be merged in the OSPS Baseline repository shall meet the following minimal criteria:
 
 - Commits must be signed off.
 - Pull requests must be approved by at least two of the project's maintainers.
