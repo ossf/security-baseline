@@ -19,76 +19,65 @@ For more information on the project and to make contributions, visit the [GitHub
 * [Level 2](#level-2): for any code project that has at least 2 maintainers and a small number of consistent users
 * [Level 3](#level-3): for any code project that has a large number of consistent users
 
-### Level 1
 
+### Level 1
+{{ range .Categories }}
 {{- range .Criteria }}
-{{if eq .MaturityLevel 1}}
+{{- if eq .MaturityLevel 1}}
 **[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- end }}
 {{- end }}
 {{- end }}
 
 ### Level 2
-
+{{ range .Categories }}
 {{- range .Criteria }}
-{{if eq .MaturityLevel 2}}
+{{- if eq .MaturityLevel 2}}
 **[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
-{{ end }}
+{{- end }}
+{{- end }}
 {{- end }}
 
 ### Level 3
-
+{{ range .Categories }}
 {{- range .Criteria }}
-{{if eq .MaturityLevel 3}}
+{{- if eq .MaturityLevel 3}}
 **[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
-{{ end }}
+{{- end }}
+{{- end }}
 {{- end }}
 
-## Criteria Details
+{{ range .Categories }}
+
+## {{ .CategoryName }}
+
+{{ .Description }}
+
 
 {{- range .Criteria }}
 
 ### {{ .ID }}
 
-**Criterion:**
+**Criterion:** {{ .CriterionText | addLinks }}
 
-{{ .CriterionText | addLinks }}
-**Maturity Level:**
-{{ .MaturityLevel }}
+**Maturity Level:** {{ .MaturityLevel }}
 
-**Category:**
-{{ .Category }}
+**Rationale:** {{ .Rationale | addLinks}}
 
-**Objective:**
-
-{{ .Rationale | addLinks}}
-**Details:**
-
-{{ .Details | addLinks }}
-**Control Mappings:**
+**Details:** {{ .Details | addLinks }}
 {{ if .ControlMappings }}
-{{ .ControlMappings }}
-{{ else }}
-_No control mappings identified._
-{{- end }}
-
-**Security Insights Value:**
-{{ if .SecurityInsightsValue }}
-{{ .SecurityInsightsValue }}
-{{ else }}
-_No security insights identified._
-{{- end }}
-
-**Scorecard Probe(s):**
-{{ if .ScorecardProbe }}
-{{- range .ScorecardProbe }}
+**Control Mappings:**
+{{ range .ControlMappings }}
 - {{ . }}
 {{- end }}
-{{- else }}
-_No scorecard probe identified._
+{{- end }}
+{{ if .SecurityInsightsValue }}
+**Security Insights Value:** {{ .SecurityInsightsValue }}
 {{- end }}
 
 ---
 
+{{- end }}
 {{- end }}
 
 

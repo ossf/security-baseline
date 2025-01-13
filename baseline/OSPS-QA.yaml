@@ -1,0 +1,199 @@
+category: Quality
+description: |
+  Quality criteria focus on the processes and
+  practices used to ensure the quality and
+  reliability of the project's source code and
+  software assets. These criteria help ensure
+  that the project's source code is well
+  maintained, secure, and reliable, reducing the
+  risk of defects or vulnerabilities in the
+  software.
+criteria:
+  - id: OSPS-QA-01
+    maturity_level: 1
+    criterion: |
+      The project's source code MUST be publicly
+      readable and have a static URL.
+    rationale: |
+      Enable users to access and review the
+      project's source code and history, promoting
+      transparency and collaboration within the
+      project community.
+    details: |
+      Use a common VCS such as GitHub, GitLab, or
+      Bitbucket. Ensure the repository is publicly
+      readable. Avoid duplication or mirroring of
+      repositories unless highly visible
+      documentation clarifies the primary source.
+      Avoid frequent changes to the repository
+      that would impact the repository URL.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-02
+    maturity_level: 1
+    criterion: |
+      The version control system MUST contain a
+      publicly readable record of all changes
+      made, who made the changes, and when the
+      changes were made.
+    rationale: |
+      Provide transparency and accountability for
+      changes made to the project's codebase,
+      enabling users to track modifications and
+      understand the history of the project.
+    details: |
+      Use a common VCS such as GitHub, GitLab, or
+      Bitbucket to maintain a publicly readable
+      commit history. Avoid squashing or rewriting
+      commits in a way that would obscure the
+      author of any commits.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-03
+    maturity_level: 2
+    criterion: |
+      All released software assets MUST be
+      delivered with a machine-readable list of
+      all direct and transitive internal software
+      dependencies with their associated version
+      identifiers.
+    rationale: |
+      Provide transparency and accountability for
+      the project's dependencies, enabling users
+      and contributors to understand the
+      software's dependencies and versions.
+    details: |
+      This may take the form of a software bill of
+      materials (SBOM) or a dependency file that
+      lists all direct and transitive dependencies
+      such as package.json, Gemfile.lock, or
+      go.sum.
+
+      It is recommended to use a CycloneDX or SPDX
+      file that is auto-generated at build time by
+      a tool that has been vetted for accuracy.
+      This enables users to ingest this data in a
+      standardized approach alongside other
+      projects in their environment.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-04
+    maturity_level: 2
+    criterion: |
+      Any automated status checks for commits MUST
+      pass or require manual acknowledgement prior to
+      merge.
+    rationale: |
+      Ensure that the project's approvers do not
+      become accustomed to tolerating failing
+      status checks, even if arbitrary, because it
+      increases the risk of overlooking security
+      vulnerabilities or defects identified by
+      automated checks.
+    details: |
+      Configure the project's version control
+      system to require that all automated status
+      checks pass or require manual acknowledgement
+      before a commit can be merged into the
+      primary branch.
+
+      It is recommended that any optional
+      status checks are NOT configured as a pass
+      or fail requirement that approvers may be
+      tempted to bypass.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-05
+    maturity_level: 3
+    criterion: |
+      Any additional subproject code repositories
+      produced by the project and compiled into a
+      release MUST enforce security requirements as
+      applicable to the status and intent of the
+      respective codebase.
+    rationale: |
+      Ensure that additional code repositories or
+      subprojects produced by the project are held
+      to a standard that clear and appropriate
+      for that codebase.
+    details: |
+      The parent project should maintain a list of
+      any codebases that are considered
+      subprojects or additional repositories.
+      Collaborators on those repositories should
+      identify the proper maturity level and apply
+      the Open Source Project Security Baseline to
+      the codebase. Any subproject or repository
+      from the project which is compiled into the
+      primary project must be held to the same 
+      standard as the primary project. Others may
+      be held to a lower standard if they have
+      lower levels of adoption or are not intended
+      for general use.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-06
+    maturity_level: 2
+    criterion: |
+      The version control system MUST NOT contain
+      generated executable artifacts.
+    rationale: |
+      Reduce the risk of including generated
+      executable artifacts in the project's
+      version control system, ensuring that only
+      source code and necessary files are stored
+      in the repository.
+    details: |
+      Remove generated executable artifacts
+      in the project's version control system.
+
+      It is recommended that any scenario where a
+      generated executable artifact appears
+      critical to a process such as testing, it
+      should be instead be generated at build time
+      or stored separately and fetched during a
+      specific well-documented pipeline step.
+    control_mappings: # TODO
+
+  - id: OSPS-QA-08
+    maturity_level: 3
+    criterion: |
+      The project MUST use at least one automated
+      test suite for the source code repository
+      which clearly documents when and how tests
+      are run.
+    rationale: # TODO
+    details: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-09
+    maturity_level: 3
+    criterion: |
+      The project documentation MUST include a
+      policy that all major changes to the
+      software produced by the project should
+      add or update tests of the functionality
+      in an automated test suite.
+    rationale: # TODO
+    details: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-10
+    maturity_level: 3
+    category: Governance
+    criterion: |
+      The project's version control system MUST
+      require at least one non-author approval of
+      changes before merging into the release or
+      primary branch.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: # TODO
+    security_insights_value: # TODO

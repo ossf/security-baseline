@@ -1,0 +1,145 @@
+category: Access Control
+description: |
+  Access Control criteria focus on the mechanisms and
+  policies that control access to the project's version
+  control system and CI/CD pipelines. These criteria help
+  ensure that only authorized users can access sensitive
+  data, modify repository settings, or execute build and
+  release processes.
+criteria:
+  - id: OSPS-AC-01
+    maturity_level: 1
+    criterion: |
+      The project's version control system MUST
+      require multi-factor authentication for
+      collaborators modifying the project
+      repository settings or accessing sensitive
+      data.
+    rationale: |
+      Protect against unauthorized access to
+      sensitive areas of the project's repository,
+      reducing the risk of account compromise or
+      insider threats. Passwords are often easily captured,
+      either during communication or on servers,
+      so depending solely on passwords is a weaker
+      form of authentication.
+    details: |
+      Require multi-factor authentication (MFA) for the
+      project's version control system, requiring
+      collaborators to provide a second form of
+      authentication when accessing sensitive data
+      or modifying repository settings.
+      Passkeys are acceptable for this criterion.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+
+  - id: OSPS-AC-02
+    maturity_level: 1
+    criterion: |
+      The project's version control system MUST
+      restrict collaborator permissions to the
+      lowest available privileges by default.
+    rationale: |
+      Reduce the risk of unauthorized access to
+      the project's repository by limiting the
+      permissions granted to collaborators.
+    details: |
+      Configure the project's version control
+      system to assign the lowest available
+      permissions to collaborators by default when
+      added, granting additional permissions only
+      when necessary.
+    control_mappings: # TODO
+    security_insights_value: # TODO
+
+
+  - id: OSPS-AC-03
+    maturity_level: 1
+    criterion: |
+      The project's version control system MUST
+      prevent unintentional direct commits against
+      the primary branch.
+    rationale: |
+      Reduce the risk of accidental changes to the
+      primary branch of the project's repository,
+      ensuring that due diligence is done before
+      commits are merged.
+    implementation: |
+      If the VCS is centralized,
+      set branch protection on the primary branch
+      in the project's VCS
+    details: |
+      Set branch protection on the primary branch
+      in the project's version control system
+      requiring changes to be made through
+      pull/merge requests or other review
+      mechanisms.
+      Alternatively, use a decentralized approach
+      (like the Linux kernel's) where changes are
+      first proposed in another repository, and
+      merging changes into the primary repository
+      requires a specific separate act.
+    control_mappings: # TODO
+
+  - id: OSPS-AC-04
+    maturity_level: 1
+    criterion: |
+      The project's version control system MUST
+      prevent unintentional deletion of the
+      primary branch.
+    rationale: |
+      Protect the primary branch of the project's
+      repository from accidental deletion,
+      ensuring that the project's history and
+      codebase are preserved.
+    details: |
+      Set branch protection on the primary branch
+      in the project's version control system to
+      prevent deletion.
+    control_mappings: # TODO
+
+  - id: OSPS-AC-05
+    maturity_level: 2
+    criterion: |
+      The project's permissions in CI/CD pipelines
+      MUST be configured to the lowest available
+      privileges except when explicitly elevated.
+    rationale: |
+      Reduce the risk of unauthorized access to
+      the project's build and release processes by
+      limiting the permissions granted to steps
+      within the CI/CD pipelines.
+    details: |
+      Configure the project's CI/CD pipelines to
+      assign the lowest available permissions to
+      users and services by default, elevating
+      permissions only when necessary for specific
+      tasks. In some version control systems, this
+      may be possible at the organizational or
+      repository level. If not, set permissions at
+      the top level of the pipeline.
+    control_mappings: # TODO
+
+  - id: OSPS-AC-07
+    maturity_level: 3
+    criterion: |
+      The project's version control system MUST
+      require multi-factor authentication that
+      does not include SMS for users when
+      modifying the project repository settings or
+      accessing sensitive data.
+    rationale: |
+      Ensure that multi-factor authentication
+      does not allow SMS as a factor, because
+      SMS lacks encryption and may be vulnerable
+      to attacks via Signaling System 7,
+      social engineering, or SIM-swapping.
+    details: | # NOTE: I don't think this is currently possible in GitHub
+      Require multi-factor authentication methods
+      that do not include SMS for users. Common
+      alternatives include hardware tokens, mobile
+      authenticator apps, or biometric
+      authentication.
+    control_mappings: # TODO
+    security_insights_value: # TODO
