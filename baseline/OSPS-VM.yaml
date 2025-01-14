@@ -94,4 +94,35 @@ criteria:
       status check passes before changes can be
       merged.
     control_mappings: # TODO
+
+  - id: OSPS-VM-05
+    maturity_level: 1
+    criterion: |
+      The project will publish contacts and process
+      for reporting vulnerabilities discovered within
+      the software code or dependencies.
+    rationale: |
+       # TODO 
+    details: |
+       Create a security.md file that contacts security 
+       contacts for the project and provide project's
+       vulnerability handling process.
+    control_mappings: # TODO    
+    security_insights_value: # TODO
+
+  - id: OSPS-VM-06
+    maturity_level: 2
+    criterion: |
+      The project MUST provide a means for reporting 
+      security vulnerabilities privately to the security
+      experts on within the project.
+    rationale: |
+      Security vulnerabilities should not be shared with 
+      the public until such time the project has been 
+      provide time to analyze and prepare remediations
+      to protect users of the project.
+    details: |
+       Enable private bug reporting through VCS or other
+       infrastrucuture.
+    control_mappings: # TODO    
     security_insights_value: # TODO
