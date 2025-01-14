@@ -114,7 +114,7 @@ criteria:
     criterion: |
       The project MUST provide a means for reporting 
       security vulnerabilities privately to the security
-      experts on within the project.
+      contacts within the project.
     rationale: |
       Security vulnerabilities should not be shared with 
       the public until such time the project has been 
