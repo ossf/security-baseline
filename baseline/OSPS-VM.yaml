@@ -98,9 +98,8 @@ criteria:
   - id: OSPS-VM-05
     maturity_level: 1
     criterion: |
-      The project will publish contacts and process
-      for reporting vulnerabilities discovered within
-      the software code or dependencies.
+      The project publishes contacts and process
+      for reporting vulnerabilities.
     rationale: |
        # TODO 
     details: |
