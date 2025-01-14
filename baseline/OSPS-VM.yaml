@@ -103,9 +103,9 @@ criteria:
     rationale: |
        # TODO 
     details: |
-       Create a security.md file that contacts security 
+       Create a security.md (or similarly-named) file that contains security 
        contacts for the project and provide project's
-       vulnerability handling process.
+      process for handling vulnerabilities in the project or dependencies.
     control_mappings: # TODO    
     security_insights_value: # TODO
 
