@@ -13,14 +13,15 @@ import (
 
 // Struct for representing each entry
 type Criterion struct {
-	ID                    string `yaml:"id"`
-	MaturityLevel         int    `yaml:"maturity_level"`
-	Category              string `yaml:"category"`
-	CriterionText         string `yaml:"criterion"`
-	Rationale             string `yaml:"rationale"`
-	Details               string `yaml:"details"`
-	ControlMappings       string `yaml:"control_mappings"`
-	SecurityInsightsValue string `yaml:"security_insights_value"`
+	ID                    string   `yaml:"id"`
+	MaturityLevel         int      `yaml:"maturity_level"`
+	Category              string   `yaml:"category"`
+	CriterionText         string   `yaml:"criterion"`
+	Rationale             string   `yaml:"rationale"`
+	Implementation        string   `yaml:"implementation"`
+	Details               string   `yaml:"details"`
+	ControlMappings       []string `yaml:"control_mappings"`
+	SecurityInsightsValue string   `yaml:"security_insights_value"`
 }
 
 // Struct for holding the entire YAML structure
@@ -136,6 +137,7 @@ func newCategory(categoryName string) (Category, error) {
 	var category Category
 
 	decoder := yaml.NewDecoder(file)
+	decoder.KnownFields(true)
 	if err := decoder.Decode(&category); err != nil {
 		return category, fmt.Errorf("error decoding YAML: %v", err)
 	}
@@ -152,6 +154,7 @@ func newLexicon() ([]LexiconEntry, error) {
 	var lexicon []LexiconEntry
 
 	decoder := yaml.NewDecoder(file)
+	decoder.KnownFields(true)
 	if err := decoder.Decode(&lexicon); err != nil {
 		return nil, fmt.Errorf("error decoding YAML: %v", err)
 	}
