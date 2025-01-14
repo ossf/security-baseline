@@ -118,7 +118,7 @@ criteria:
     rationale: |
       Security vulnerabilities should not be shared with 
       the public until such time the project has been 
-      provide time to analyze and prepare remediations
+      provided time to analyze and prepare remediations
       to protect users of the project.
     details: |
        Enable private bug reporting through VCS or other
