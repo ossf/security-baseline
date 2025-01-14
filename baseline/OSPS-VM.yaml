@@ -105,7 +105,7 @@ criteria:
     details: |
        Create a security.md (or similarly-named) file that contains security 
        contacts for the project and provide project's
-      process for handling vulnerabilities in the project or dependencies.
+       process for handling vulnerabilities in the project or dependencies.
     control_mappings: # TODO    
     security_insights_value: # TODO
 
