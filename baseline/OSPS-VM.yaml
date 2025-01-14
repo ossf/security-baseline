@@ -128,8 +128,8 @@ criteria:
   - id: OSPS-VM-07
     maturity_level: 2
     criterion: |
-      The project MUST publish data about vulnerabilities
-      discovered within the codebase publicly.
+      The project MUST publicly publish data about vulnerabilities
+      discovered within the codebase.
     rationale: |
       Consumers of the project must be informed about
       known vulnerabilities found within the project.
