@@ -64,6 +64,10 @@ For more information on the project and to make contributions, visit the [GitHub
 
 **Rationale:** {{ .Rationale | addLinks}}
 
+{{- if .Implementation -}}
+**Implementation:** {{ .Implementation | addLinks}}
+{{- end -}}
+
 **Details:** {{ .Details | addLinks }}
 {{ if .ControlMappings }}
 **Control Mappings:**
