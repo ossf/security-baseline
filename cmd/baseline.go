@@ -1,10 +1,12 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"log"
 	"os"
 	"path/filepath"
+	"reflect"
+	"slices"
 	"strings"
 	"text/template"
 
@@ -22,6 +24,8 @@ type Criterion struct {
 	Details               string            `yaml:"details"`
 	ControlMappings       map[string]string `yaml:"control_mappings"`
 	SecurityInsightsValue string            `yaml:"security_insights_value"`
+	// If ReplacedBy is set, no other fields (beyond ID) should be set
+	ReplacedBy string `yaml:"replaced_by"`
 }
 
 // Struct for holding the entire YAML structure
@@ -68,37 +72,43 @@ func newBaseline() (Baseline, error) {
 		Categories: make(map[string]Category),
 		Lexicon:    lexicon,
 	}
-	var failed bool
+	var errs []error
 	for _, categoryName := range hardcodedCategories() {
 		category, err := newCategory(categoryName)
 		if err != nil {
-			failed = true
-			log.Printf("error reading category %s: %s", categoryName, err.Error())
+			errs = append(errs, fmt.Errorf("error reading category %s: %w", categoryName, err))
 		}
 		b.Categories[categoryName] = category
 	}
-	if failed {
-		return b, fmt.Errorf("error setting up baseline")
+	categoryErr := errors.Join(errs...)
+	if categoryErr != nil {
+		return b, categoryErr
 	}
 	return b, b.validate()
 }
 
 func (b Baseline) validate() error {
 	var entryIDs []string
-	var failed bool
+	retiredIDs := map[string]string{}
+	errs := []error{}
 	for _, category := range b.Categories {
 		for _, entry := range category.Criteria {
-			if contains(entryIDs, entry.ID) {
-				failed = true
-				log.Printf("duplicate ID for 'criterion' for %s", entry.ID)
+			if slices.Contains(entryIDs, entry.ID) {
+				errs = append(errs, fmt.Errorf("duplicate ID for 'criterion' for %s", entry.ID))
 			}
+			entryIDs = append(entryIDs, entry.ID)
 			if entry.ID == "" {
-				failed = true
-				log.Printf("missing ID for 'criterion' %s", entry.ID)
+				errs = append(errs, fmt.Errorf("missing ID for 'criterion' %s", entry.ID))
+			}
+			if entry.ReplacedBy != "" {
+				retiredIDs[entry.ID] = entry.ReplacedBy
+				if !reflect.DeepEqual(entry, Criterion{ID: entry.ID, ReplacedBy: entry.ReplacedBy}) {
+					errs = append(errs, fmt.Errorf("retired criterion %s has additional fields", entry.ID))
+				}
+				continue
 			}
 			if entry.CriterionText == "" {
-				failed = true
-				log.Printf("missing 'criterion' text for %s", entry.ID)
+				errs = append(errs, fmt.Errorf("missing 'criterion' text for %s", entry.ID))
 			}
 			// For after all fields are populated:
 			// if entry.Rationale == "" {
@@ -109,22 +119,17 @@ func (b Baseline) validate() error {
 			// 	failed = true
 			// 	log.Printf("missing 'details' for %s", entry.ID)
 			// }
-			entryIDs = append(entryIDs, entry.ID)
 		}
 	}
-	if failed {
-		return fmt.Errorf("error validating baseline")
-	}
-	return nil
-}
-
-func contains(list []string, term string) bool {
-	for _, item := range list {
-		if item == term {
-			return true
+	for retired, replacement := range retiredIDs {
+		if !slices.Contains(entryIDs, replacement) {
+			errs = append(errs, fmt.Errorf("retired criterion %s has invalid replacement %s", retired, replacement))
+		}
+		if _, ok := retiredIDs[replacement]; ok {
+			errs = append(errs, fmt.Errorf("retired criterion %s references another retired criterion %s", retired, replacement))
 		}
 	}
-	return false
+	return errors.Join(errs...)
 }
 
 func newCategory(categoryName string) (Category, error) {
@@ -141,6 +146,9 @@ func newCategory(categoryName string) (Category, error) {
 	if err := decoder.Decode(&category); err != nil {
 		return category, fmt.Errorf("error decoding YAML: %v", err)
 	}
+	slices.SortFunc(category.Criteria, func(a, b Criterion) int {
+		return strings.Compare(a.ID, b.ID)
+	})
 	return category, nil
 }
 

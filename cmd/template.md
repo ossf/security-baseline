@@ -60,6 +60,10 @@ For more information on the project and to make contributions, visit the [GitHub
 
 **Criterion:** {{ .CriterionText | addLinks }}
 
+{{ if .ReplacedBy -}}
+**Replaced By:** {{ .ReplacedBy }}
+{{- else -}}
+
 **Maturity Level:** {{ .MaturityLevel }}
 
 **Rationale:** {{ .Rationale | addLinks}}
@@ -76,11 +80,11 @@ For more information on the project and to make contributions, visit the [GitHub
 {{ if .SecurityInsightsValue }}
 **Security Insights Value:** {{ .SecurityInsightsValue }}
 {{- end }}
-
+{{- end }}
 ---
 
-{{- end }}
-{{- end }}
+{{- end}}
+{{- end}}
 
 
 ## Lexicon
