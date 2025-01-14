@@ -125,4 +125,17 @@ criteria:
        Enable private bug reporting through VCS or other
        infrastrucuture.
     control_mappings: # TODO    
+
+  - id: OSPS-VM-07
+    maturity_level: 2
+    criterion: |
+      The project MUST publish data about vulnerabilities
+      discovered within the codebase publicly.
+    rationale: |
+      Consumers of the project must be informed about
+      known vulnerabilities found within the project.
+    details: |
+       # TOTO
+    control_mappings: # TODO    
+    
     security_insights_value: # TODO
