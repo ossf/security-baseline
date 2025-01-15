@@ -134,7 +134,7 @@ criteria:
       Consumers of the project must be informed about
       known vulnerabilities found within the project.
     details: |
-       # TOTO
+       # TODO
     control_mappings: # TODO    
     
     security_insights_value: # TODO
