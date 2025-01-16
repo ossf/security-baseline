@@ -134,7 +134,11 @@ criteria:
       Consumers of the project must be informed about
       known vulnerabilities found within the project.
     details: |
-       # TODO
+      Provide information about known vulnerabilities in a predictable
+      public channel, such as a CVE entry, blog post, or other
+      medium. To the degree possible, this information should include
+      affected version(s), how a consumer can determine if they are
+      vulnerable, and instructions for mitigation or remediation.
     control_mappings: # TODO    
     
     security_insights_value: # TODO
