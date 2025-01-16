@@ -23,8 +23,13 @@ criteria:
       Ensure that the project's build and release
       pipelines do not execute arbitrary code
       provided from external sources.
-    control_mappings: # TODO
-
+    control_mappings:
+      CRA: 1.2f
+      SSDF: PO3.2, PS1
+      CSF: PR.AA-02
+      OCRE: 483-813, 124-564, 357-352
+    security_insights_value: # TODO
+    
   - id: OSPS-BR-02
     maturity_level: 2
     criterion: |
@@ -45,7 +50,11 @@ criteria:
       scheme.
       Examples include SemVer, CalVer, or
       git commit id.
-    control_mappings: # TODO
+    control_mappings:
+      BPB: CC-B-5, CC-B-6, CC-B-7
+      CRA: 1.2f
+      SSDF: PO3.2, PS1, PS2, PS3
+      OCRE: 483-813, 124-564
     security_insights_value: # TODO
 
   - id: OSPS-BR-03
@@ -65,7 +74,11 @@ criteria:
       responses, and other services to use
       encrypted channels such as SSH or HTTPS for
       data transmission.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-11
+      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 263-184
     security_insights_value: # TODO
 
   - id: OSPS-BR-04
@@ -85,8 +98,13 @@ criteria:
       recommended to ensure consistency and
       automation in the build and release
       processes.
-    control_mappings: # TODO
-    security_insights_value: # TODO
+    control_mappings:  
+      BPB: Q-B-7
+      CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 347-352, 263-184, 208-355
+    security_insights_value: 
+      project-lifecycle: release-process
 
   - id: OSPS-BR-05
     maturity_level: 2
@@ -108,7 +126,11 @@ criteria:
       dependency file, lock file, or manifest to
       specify the required dependencies, which are
       then pulled in by the build system.
-    control_mappings: # TODO
+    control_mappings:
+      BPB: Q-B-2
+      CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j, 2.1
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 347-352, 715-334
     security_insights_value: # TODO
 
   - id: OSPS-BR-06
@@ -131,7 +153,11 @@ criteria:
       beyond commit messages, such as descriptions 
       of the security impact or relevance to
       different use cases.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: CC-B-8, CC-B-9
+      CRA: 1.2l, 2.2
+      SSDF: PS1, PS2, PS3, PW1.2
+      OCRE: 483-813, 124-564, 745-356
     security_insights_value: # TODO
 
   - id: OSPS-BR-08
@@ -153,5 +179,8 @@ criteria:
       VSAs. Include the cryptographic hashes of
       each asset in a signed manifest or
       metadata file.
-    control_mappings: # TODO
-    security_insights_value: # TODO
+    control_mappings:
+      SSDF: PO5.2, PS2.1, PW6.2
+    security_insights_value: 
+      Signed-Releases
+
