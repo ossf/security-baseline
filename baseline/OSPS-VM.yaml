@@ -101,7 +101,11 @@ criteria:
       The project publishes contacts and process
       for reporting vulnerabilities.
     rationale: |
-       # TODO 
+       Reports from researchers and users are an important source for
+       identifying vulnerabilities in a project. People with
+       vulnerabilities to report should have a clear understanding of
+       the process so that they can quickly submit the report to the
+       project.
     details: |
        Create a security.md (or similarly-named) file that contains security 
        contacts for the project and provide project's
