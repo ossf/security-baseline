@@ -23,7 +23,12 @@ criteria:
       that explains the actions and actors. Actors
       include any subsystem or entity that can
       influence another segment in the system.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-1, B-S-7, B-S-8
+      CRA: 1.2a, 1.2b
+      SSDF: PO.1, PO.2, PO3.2
+      CSF: ID.AM-02
+      OCRE: 155-155, 326-704, 068-102, 036-275, 162-655
     security_insights_value: # TODO
 
   - id: OSPS-SA-02
@@ -43,19 +48,13 @@ criteria:
       the released software assets, explaining how
       users can interact with the software and
       what data is expected or produced.
-    control_mappings: # TODO
-    security_insights_value: # TODO
-
-  - id: OSPS-SA-04
-    maturity_level: 2
-    criterion: |
-        The project MUST perform a security
-        assessment to understand the most likely and
-        impactful potential security problems that
-        could occur within the software.
-    rationale: # TODO
-    implementation: # TODO
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-10, B-S-7
+      CRA: 1.2a, 1.2b
+      SSDF: PW1.2
+      CSF: GV.OC-05, ID.AM-01
+      OC: 4.1.4
+      OCRE: 155-155, 068-102, 072-713, 820-878
     security_insights_value: # TODO
 
   - id: OSPS-SA-03
@@ -68,5 +67,29 @@ criteria:
       the system.
     rationale: # TODO
     implementation: # TODO
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-S-8
+      CRA: 1.2j, 1.2k
+      SSDF: PO5.1, PW1.1
+      CSF: ID.RA-01, ID.RA-04, ID.RA-05, DE.AE-07
+      OC: 4.1.5
+      OCRE: 068-102, 154-031, 888-770
+    security_insights_value: # TODO
+
+  - id: OSPS-SA-04
+    maturity_level: 2
+    criterion: |
+        The project MUST perform a security
+        assessment to understand the most likely and
+        impactful potential security problems that
+        could occur within the software.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: 
+      BPB: B-W-8, S-G-1
+      CRA: 1.1, 2.2
+      SSDF: PO5.1, PW1.1
+      CSF: ID.RA-04, ID.RA-05, DE.AE-07
+      OC: 4.1.5
+      OCRE: 068-102, 307-242, 660-867
     security_insights_value: # TODO
