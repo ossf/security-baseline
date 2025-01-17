@@ -200,6 +200,7 @@ func (b *Baseline) Generate() error {
 		"asLink": func(s string) string {
 			return asLinkTemplateFunction(s)
 		},
+		"toLower": strings.ToLower,
 	}).Parse(string(templateContent))
 	if err != nil {
 		return fmt.Errorf("error parsing template: %w", err)

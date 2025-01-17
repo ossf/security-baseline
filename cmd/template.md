@@ -61,11 +61,11 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ### {{ .ID }}
 
-**Criterion:** {{ .CriterionText | addLinks }}
-
 {{ if .ReplacedBy -}}
-**Replaced By:** {{ .ReplacedBy }}
-{{- else -}}
+**Replaced By:** [{{ .ReplacedBy }}](#{{ .ReplacedBy | toLower }})
+
+{{else -}}
+**Criterion:** {{ .CriterionText | addLinks }}
 
 **Maturity Level:** {{ .MaturityLevel }}
 
