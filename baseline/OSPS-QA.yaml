@@ -27,7 +27,11 @@ criteria:
       documentation clarifies the primary source.
       Avoid frequent changes to the repository
       that would impact the repository URL.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: CC-B-1
+      CRA: 1.2b, 1.2j
+      SSDF: PS1, PS2, PS3, PW1.2
+      OCRE: 486-813, 124-564
     security_insights_value: # TODO
 
   - id: OSPS-QA-02
@@ -48,7 +52,13 @@ criteria:
       commit history. Avoid squashing or rewriting
       commits in a way that would obscure the
       author of any commits.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: CC-B-2, CC-B-3, R-B-5
+      CRA: 1.2b, 1.2f, 1.2j
+      SSDF: PO3.2, PS1, PS2, PS3, PW1.2, PW2.1,  
+      CSF: ID.AM-02, ID.RA-01, ID.RA-08
+      OC: 4.1.4
+      OCRE: 486-813, 124-564, 757-271
     security_insights_value: # TODO
 
   - id: OSPS-QA-03
@@ -77,7 +87,13 @@ criteria:
       This enables users to ingest this data in a
       standardized approach alongside other
       projects in their environment.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: Q-S-9
+      CRA: 1.2b, 2.1
+      SSDF: PO4, PS1
+      CSF: ID.AM-02
+      OC: 4.3.1
+      OCRE: 486-813, 124-564, 863-521
     security_insights_value: # TODO
 
   - id: OSPS-QA-04
@@ -104,7 +120,10 @@ criteria:
       status checks are NOT configured as a pass
       or fail requirement that approvers may be
       tempted to bypass.
-    control_mappings: # TODO
+    control_mappings: 
+      CRA: 1.2f, 1.2k
+      SSDF: PO4.1, PS1
+      CSF: ID.IM-02
     security_insights_value: # TODO
 
   - id: OSPS-QA-05
@@ -134,7 +153,10 @@ criteria:
       be held to a lower standard if they have
       lower levels of adoption or are not intended
       for general use.
-    control_mappings: # TODO
+    control_mappings: 
+      CRA: 1.2b, 1.2f
+      SSDF: PO3.2, PO4.1, PS1
+      OCRE: 486-813, 124-564
     security_insights_value: # TODO
 
   - id: OSPS-QA-06
@@ -158,7 +180,11 @@ criteria:
       should be instead be generated at build time
       or stored separately and fetched during a
       specific well-documented pipeline step.
-    control_mappings: # TODO
+    control_mappings: 
+      CRA: 1.2b
+      SSDF: PS1
+      OCRE: 486-813, 124-564
+    security_insights_value: # TODO
 
   - id: OSPS-QA-08
     maturity_level: 3
@@ -169,8 +195,14 @@ criteria:
       are run.
     rationale: # TODO
     details: # TODO
-    control_mappings: # TODO
+    control_mappings:       
+      BPB: Q-B-4
+      CRA: 2.3
+      SSDF: PW8.2
+      OC: 4.1.5
+      OCRE: 207-435, 088-377
     security_insights_value: # TODO
+
 
   - id: OSPS-QA-09
     maturity_level: 3
@@ -182,8 +214,15 @@ criteria:
       in an automated test suite.
     rationale: # TODO
     details: # TODO
-    control_mappings: # TODO
+    control_mappings:       
+      BPB: Q-B-8, Q-B-9, Q-B-10, Q-S-2
+      CRA: 2.3
+      SSDF: PW8.2
+      CSF: ID.IM-02
+      OC: 4.1.5
+      OCRE: 207-435, 088-377
     security_insights_value: # TODO
+
 
   - id: OSPS-QA-10
     maturity_level: 3
@@ -195,5 +234,6 @@ criteria:
       primary branch.
     rationale: # TODO
     implementation: # TODO
-    control_mappings: # TODO
+    control_mappings:       
+      BPB: B-G-3
     security_insights_value: # TODO

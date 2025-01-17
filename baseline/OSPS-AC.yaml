@@ -30,7 +30,12 @@ criteria:
       authentication when accessing sensitive data
       or modifying repository settings.
       Passkeys are acceptable for this criterion.
-    control_mappings: # TODO
+    control_mappings:
+      BPB: CC-G-1 
+      CRA: 1.2d, 1.2e, 1.2f
+      SSDF: PO3.2, PS1
+      CSF: PR.AA-02
+      OCRE: 486-813, 124-564, 347-352, 333-858, 152-725, 201-246
     security_insights_value: # TODO
 
 
@@ -50,7 +55,11 @@ criteria:
       permissions to collaborators by default when
       added, granting additional permissions only
       when necessary.
-    control_mappings: # TODO
+    control_mappings:
+      CRA: 1.2f
+      SSDF: PO3.2, PS1
+      CSF: PR:AA-02
+      OCRE: 486-813, 124-564, 802-056, 368-633, 152-725 
     security_insights_value: # TODO
 
 
@@ -80,7 +89,12 @@ criteria:
       first proposed in another repository, and
       merging changes into the primary repository
       requires a specific separate act.
-    control_mappings: # TODO
+    control_mappings:
+      CRA: 1.2f
+      SSDF: PO3.2, PS1
+      CSF: PR.AA-02
+      OCRE: 486-813, 124-564, 152-725
+    security_insights_value: # TODO
 
   - id: OSPS-AC-04
     maturity_level: 1
@@ -97,7 +111,12 @@ criteria:
       Set branch protection on the primary branch
       in the project's version control system to
       prevent deletion.
-    control_mappings: # TODO
+    control_mappings:
+      CRA: 1.2b, 1.2f
+      SSDF: PO3.2, PS1
+      CSF: PR.AA-02
+      OCRE: 486-813, 124-564,123-124, 152-725
+    security_insights_value: # TODO
 
   - id: OSPS-AC-05
     maturity_level: 2
@@ -119,8 +138,14 @@ criteria:
       may be possible at the organizational or
       repository level. If not, set permissions at
       the top level of the pipeline.
-    control_mappings: # TODO
+    control_mappings:
+      CRA: 1.2d, 1.2e, 1.2f
+      SSDF: PO2, PO3.2, PS1
+      CSF: PR.AA-02, PR.AA-05
+      OCRE: 486-813, 124-564,347-507, 263-284, 123-124
+    security_insights_value: # TODO
 
+    
   - id: OSPS-AC-07
     maturity_level: 3
     criterion: |
@@ -141,5 +166,10 @@ criteria:
       alternatives include hardware tokens, mobile
       authenticator apps, or biometric
       authentication.
-    control_mappings: # TODO
+    control_mappings:
+      BPB: CC-G-1
+      CRA: 1.2d
+      SSDF: PO3.2, PS1
+      CSF: PR.AA-02
+      OCRE: 486-813, 124-564,333-858, 102-811, 354-752
     security_insights_value: # TODO
