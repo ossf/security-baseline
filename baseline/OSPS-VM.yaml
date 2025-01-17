@@ -26,7 +26,13 @@ criteria:
       licenses. Include the process for
       identifying, prioritizing, and remediating
       these findings.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: Q-B-12,  Q-S-9, S-B-14, S-B-15, A-B-3, A-B-8
+      CRA: 1.2a, 1.2b, 1.2c, 2.1, 2.2, 2.3
+      SSDF: PO.4, PW1.2, PW8.1, RV2.1, RV 2.2
+      CSF: GV.RM-05, GV.RM-06, GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08, ID.IM-02
+      OC: 4.1.5, 4.2.1, 4.3.2
+      OCRE: 124-564, 832-555, 611-158, 207-435, 088-377
     security_insights_value: # TODO
 
   - id: OSPS-VM-02
@@ -46,7 +52,13 @@ criteria:
       results before any release, and add status
       checks that verify compliance with that 
       policy prior to release.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: S-B-14, S-B-15, A-B-3, A-B-8
+      CRA: 1,2a, 1.2c, 2.2, 2.3
+      SSDF: PW8.1
+      CSF: GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08
+      OC: 4.1.5
+      OCRE: 486-813, 833-442, 611-158, 207-435, 088-377
     security_insights_value: # TODO
 
   - id: OSPS-VM-03
@@ -69,7 +81,13 @@ criteria:
       vulnerabilities. Set expectations for the
       how the project will respond and address
       reported issues.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: R-B-6, R-B-8, R-S-2, S-B-14, S-B-15
+      CRA: 2.1, 2.3, 2.6, 2.7, 2.8
+      SSDF: RV1.3
+      CSF: GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08
+      OC: 4.1.5, 4.2.1, 4.3.2
+      OCRE: 887-750
     security_insights_value: # TODO
 
   - id: OSPS-VM-04
@@ -93,7 +111,13 @@ criteria:
       all changes to the codebase. Require that the
       status check passes before changes can be
       merged.
-    control_mappings: # TODO
+    control_mappings:       
+      BPB: CC-B-9, A-B-1, A-S-1
+      CRA: 1.2a, 1.2b
+      SSDF: PO4.1, RV1.2, RV2.1, RV2.2
+      OC: 4.1.5
+      OCRE: 486-813, 124-564, 757-271
+    security_insights_value: # TODO
 
   - id: OSPS-VM-05
     maturity_level: 1
@@ -110,7 +134,13 @@ criteria:
        Create a security.md (or similarly-named) file that contains security 
        contacts for the project and provide project's
        process for handling vulnerabilities in the project or dependencies.
-    control_mappings: # TODO    
+    control_mappings: 
+      BPB: B-S-8
+      CRA: 2.5
+      SSDF: RV1.3
+      CSF: GV.PO-01, GV.PO-02, ID.RA-01
+      OC: 4.1.1, 4.1.3, 4.1.5, 4.2.2
+      OCRE: 464-513
     security_insights_value: # TODO
 
   - id: OSPS-VM-06
@@ -127,7 +157,11 @@ criteria:
     details: |
        Enable private bug reporting through VCS or other
        infrastrucuture.
-    control_mappings: # TODO    
+    control_mappings: 
+      BPB:
+      CRA: 1.2a, 1.2b, 2.1, 2.4, 2.6
+      OCRE: 308-514
+    security_insights_value: # TODO
 
   - id: OSPS-VM-07
     maturity_level: 2
@@ -143,6 +177,6 @@ criteria:
       medium. To the degree possible, this information should include
       affected version(s), how a consumer can determine if they are
       vulnerable, and instructions for mitigation or remediation.
-    control_mappings: # TODO    
-    
+    control_mappings:
+      CRA: 1.2a, 1.2b, 2.1, 2.4, 2.6
     security_insights_value: # TODO
