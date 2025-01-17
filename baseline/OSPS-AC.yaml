@@ -40,7 +40,7 @@ criteria:
 
 
   - id: OSPS-AC-02
-    maturity_level: 1
+    maturity_level: 3
     criterion: |
       The project's version control system MUST
       restrict collaborator permissions to the
