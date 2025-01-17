@@ -124,7 +124,7 @@ criteria:
       CRA: 1.2f, 1.2k
       SSDF: PO4.1, PS1
       CSF: ID.IM-02
-     security_insights_value: # TODO
+    security_insights_value: # TODO
 
   - id: OSPS-QA-05
     maturity_level: 3
