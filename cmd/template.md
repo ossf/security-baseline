@@ -63,16 +63,14 @@ For more information on the project and to make contributions, visit the [GitHub
 **Maturity Level:** {{ .MaturityLevel }}
 
 **Rationale:** {{ .Rationale | addLinks}}
-
-{{- if .Implementation -}}
+{{ if .Implementation -}}
 **Implementation:** {{ .Implementation | addLinks}}
-{{- end -}}
-
+{{- end }}
 **Details:** {{ .Details | addLinks }}
 {{ if .ControlMappings }}
 **Control Mappings:**
-{{ range .ControlMappings }}
-- {{ . }}
+{{ range $key, $value := .ControlMappings }}
+- {{ $key }}: {{ $value }}
 {{- end }}
 {{- end }}
 {{ if .SecurityInsightsValue }}
