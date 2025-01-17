@@ -12,17 +12,19 @@ criteria:
     maturity_level: 1
     criterion: |
       The project's build and release pipelines
-      MUST NOT execute arbitrary code that is
-      input from outside of the build script.
+      MUST NOT permit arbitrary input that allows
+      access to privileged resources.
     rationale: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
-      build and release processes by restricting
-      the execution of external code.
+      build and release by preventing untrusted input
+      to access privileged resources (code execution,
+      secret exfiltration, etc.)
     details: |
-      Ensure that the project's build and release
-      pipelines do not execute arbitrary code
-      provided from external sources.
+      Ensure that any build and release pipeline actions
+      that accept externally-controlled input (e.g. git
+      branch names) do not use input in ways that could
+      provide unintended access to privileged resources.
     control_mappings:
       CRA: 1.2f
       SSDF: PO3.2, PS1
