@@ -177,6 +177,6 @@ criteria:
       medium. To the degree possible, this information should include
       affected version(s), how a consumer can determine if they are
       vulnerable, and instructions for mitigation or remediation.
-    control_mappings:       
+    control_mappings:
       CRA: 1.2a, 1.2b, 2.1, 2.4, 2.6
     security_insights_value: # TODO
