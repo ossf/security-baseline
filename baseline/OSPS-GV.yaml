@@ -14,7 +14,9 @@ criteria:
       project.
     rationale: # TODO
     implementation: # TODO
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-S-3, B-S-4
+      OCRE: 013-021
     security_insights_value: # TODO
 
   - id: OSPS-GV-02
@@ -35,7 +37,13 @@ criteria:
       mailing lists, instant messaging, or issue
       trackers, to facilitate open communication
       and feedback.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-3, B-B-12 
+      CRA: 1.2l, 2.3, 2.4, 2.6
+      SSDF: PS3, PW1.2
+      CSF:
+      OC:
+      OCRE:
     security_insights_value: # TODO
 
   - id: OSPS-GV-03
@@ -54,7 +62,10 @@ criteria:
       process including the steps for submitting
       changes, and engaging with the project
       maintainers.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-4, B-S-3, B-B-4+, R-B-1, Q-G-2
+      CRA: 1.2l, 2.4
+      SSDF: PW1.2
     security_insights_value: # TODO
 
   - id: OSPS-GV-04
@@ -80,7 +91,10 @@ criteria:
       It is recommended that this guide is the
       source of truth for both contributors and
       approvers.
-    control_mappings: # TODO
+    control_mappings: 
+      BPB: B-B-5, B-S-3, B-B-4+, Q-G-2
+      CRA: 1.2l, 2.1, 2.2, 2.5, 2.6
+      OC: 4.1.2
     security_insights_value: # TODO
 
   - id: OSPS-GV-05
@@ -109,5 +123,9 @@ criteria:
       identity such as confirming the
       contributor's association with a known
       trusted organization.
-    control_mappings: # TODO
+    control_mappings: 
+      CRA: 1.2d
+      SSDF: PO2, PO3.2 
+      CSF: PR.AA-02, PR.AA-05
+      OCRE: 123-124, 152-725
     security_insights_value: # TODO
