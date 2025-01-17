@@ -83,8 +83,8 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 ---
 
-{{- end}}
-{{- end}}
+{{- end }}
+{{- end }}
 
 
 ## Lexicon
