@@ -103,8 +103,7 @@ criteria:
       CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 347-352, 263-184, 208-355
-    security_insights_value: 
-      project-lifecycle: release-process
+    security_insights_value: project-lifecycle.release-process
 
   - id: OSPS-BR-05
     maturity_level: 2
