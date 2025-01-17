@@ -49,12 +49,15 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{ range .Categories }}
 
+---
+
 ## {{ .CategoryName }}
 
 {{ .Description }}
 
 
 {{- range .Criteria }}
+---
 
 ### {{ .ID }}
 
@@ -81,8 +84,6 @@ For more information on the project and to make contributions, visit the [GitHub
 **Security Insights Value:** {{ .SecurityInsightsValue }}
 {{- end }}
 {{- end }}
----
-
 {{- end }}
 {{- end }}
 
