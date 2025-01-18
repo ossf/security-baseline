@@ -40,7 +40,7 @@ criteria:
 
 
   - id: OSPS-AC-02
-    maturity_level: 3
+    maturity_level: 1
     criterion: |
       The project's version control system MUST
       restrict collaborator permissions to the
@@ -50,7 +50,9 @@ criteria:
       the project's repository by limiting the
       permissions granted to collaborators.
     details: |
-      Configure the project's version control
+      Most public version control systems are configured
+      in this manner.  If using a custom sytsem,
+      configure the project's version control
       system to assign the lowest available
       permissions to collaborators by default when
       added, granting additional permissions only
