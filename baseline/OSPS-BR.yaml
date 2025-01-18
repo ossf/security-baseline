@@ -64,7 +64,7 @@ criteria:
     criterion: |
       Any websites and version control systems
       involved in the project development
-      and release MUST be delivered using SSH,
+      MUST be delivered using SSH,
       HTTPS, or other encrypted channels.
     rationale: |
       Protect the confidentiality and integrity
