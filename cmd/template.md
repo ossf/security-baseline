@@ -83,14 +83,12 @@ For more information on the project and to make contributions, visit the [GitHub
 - [{{ .Name }}]({{ .URL }})
 {{- if .Config }}
 
-```yaml
-{{ .Config }}
-```
-
+   ```yaml
+   {{ .Config }}
+   ```
 {{- end }}
 {{- end }}
 {{- else }}
-_No minder rule identified._
 {{- end }}
 
 ---
