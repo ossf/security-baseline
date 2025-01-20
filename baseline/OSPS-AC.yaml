@@ -95,6 +95,9 @@ criteria:
       CSF: PR.AA-02
       OCRE: 486-813, 124-564, 152-725
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-ac-03
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-ac-03.yaml
 
   - id: OSPS-AC-04
     maturity_level: 1
@@ -117,6 +120,9 @@ criteria:
       CSF: PR.AA-02
       OCRE: 486-813, 124-564,123-124, 152-725
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-ac-04
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-ac-04.yaml
 
   - id: OSPS-AC-05
     maturity_level: 2

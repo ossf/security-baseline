@@ -68,6 +68,9 @@ criteria:
       SSDF: PO3.2
       CSF: GV.OC-03
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-le-02
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-le-02.yaml
 
   - id: OSPS-LE-03
     maturity_level: 1
@@ -93,6 +96,9 @@ criteria:
       CRA: 1.2b
       SSDF: PO3.2
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-le-03
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-le-03.yaml
 
   - id: OSPS-LE-04
     maturity_level: 1

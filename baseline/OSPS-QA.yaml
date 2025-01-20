@@ -33,6 +33,9 @@ criteria:
       SSDF: PS1, PS2, PS3, PW1.2
       OCRE: 486-813, 124-564
     security_insights_value: # TODO
+    minder_rules:
+      - name: osps-qa-01
+        url: https://github.com/mindersec/minder-rules-and-profiles/blob/main/security-baseline/rule-types/github/osps-qa-01.yaml
 
   - id: OSPS-QA-02
     maturity_level: 1
