@@ -62,20 +62,19 @@ criteria:
   - id: OSPS-BR-03
     maturity_level: 1
     criterion: |
-      Any websites, API responses or other
-      services involved in the project development
-      and release MUST be delivered using SSH,
-      HTTPS or other encrypted channels.
+      Any websites and version control systems
+      involved in the project development
+      MUST be delivered using SSH,
+      HTTPS, or other encrypted channels.
     rationale: |
       Protect the confidentiality and integrity
-      of data transmitted between the project's
-      services and users, reducing the risk of
-      eavesdropping or data tampering.
+      of project source code during development,
+      reducing the risk of eavesdropping or data
+      tampering.
     details: |
-      Configure the project's websites, API
-      responses, and other services to use
-      encrypted channels such as SSH or HTTPS for
-      data transmission.
+      Configure the project's websites and version
+      control systems to use encrypted channels
+      such as SSH or HTTPS for data transmission.
     control_mappings: 
       BPB: B-B-11
       CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
@@ -185,3 +184,50 @@ criteria:
     security_insights_value: 
       Signed-Releases
 
+  - id: OSPS-BR-09
+    maturity_level: 1
+    criterion: |
+      Any websites or other services involved in the
+      distribution of released software assets MUST
+      be delivered using HTTPS or other encrypted
+      channels.
+    rationale: |
+      Protect the confidentiality and integrity
+      of release assets consumed by the project's
+      users, reducing the risk of eavesdropping or
+      data tampering.
+    details: |
+      Configure the project's websites and
+      distribution services to use encrypted channels
+      such as HTTPS for data transmission.
+    control_mappings: 
+      BPB: B-B-11
+      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 263-184
+    security_insights_value: # TODO
+
+  - id: OSPS-BR-10
+    maturity_level: 1
+    criterion: |
+      Any websites, API responses or other
+      services involved in release pipelines MUST be
+      fetched using SSH, HTTPS or other encrypted
+      channels.
+    rationale: |
+      Protect the confidentiality and integrity
+      of assets used in the release pipeline,
+      reducing the risk of eavesdropping or data
+      tampering.
+    details: |
+      Configure the project's release pipeline to
+      only fetch data from websites, API
+      responses, and other services which use
+      encrypted channels such as SSH or HTTPS for
+      data transmission.
+    control_mappings: 
+      BPB: B-B-11
+      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 263-184
+    security_insights_value: # TODO
