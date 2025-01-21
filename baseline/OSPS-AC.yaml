@@ -50,8 +50,9 @@ criteria:
       the project's repository by limiting the
       permissions granted to collaborators.
     details: |
-      Configure the project's version control
-      system to assign the lowest available
+      Most public version control systems are configured
+      in this manner. Ensure the project's version control
+      system always assigns the lowest available
       permissions to collaborators by default when
       added, granting additional permissions only
       when necessary.
