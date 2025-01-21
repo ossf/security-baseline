@@ -21,7 +21,7 @@ criteria:
       to access privileged resources
       (secret exfiltration, final release, etc.)
     details: |
-      Ensure that any build and release pipeline actions
+      Ensure that any integration or release pipeline actions
       that accept externally-controlled untrusted input (e.g. git
       branch names) do not use input in ways that could
       provide unintended access to privileged resources.
