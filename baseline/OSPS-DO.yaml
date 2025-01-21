@@ -101,7 +101,14 @@ criteria:
       descriptive statement about the scope and
       duration of support.
     rationale: # TODO
-    implementation: # TODO
+    # TODO: Integrate with advice from https://endoflife.date/recommendations
+    implementation: |
+      The project should have either a "Support"
+      header in the README, a SUPPORT.md file
+      present in the repo root, or a SUPPORT.eox
+      file in the [OpenEOX format](https://github.com/OpenEoX/openeox/blob/main/schema/schema.json)
+      describing the scope and duration of support
+      for the project's released software assets.
     control_mappings: 
       BPB: R-B-3
       SSDF: PO4.2, PS3.1, RV1.3 
