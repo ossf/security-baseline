@@ -12,17 +12,17 @@ criteria:
     maturity_level: 1
     criterion: |
       The project's build and release pipelines
-      MUST NOT permit arbitrary input that allows
+      MUST NOT permit untrusted input that allows
       access to privileged resources.
     rationale: |
       Reduce the risk of code injection or other
       security vulnerabilities in the project's
       build and release by preventing untrusted input
-      to access privileged resources (code execution,
-      secret exfiltration, etc.)
+      to access privileged resources
+      (secret exfiltration, final release, etc.)
     details: |
-      Ensure that any build and release pipeline actions
-      that accept externally-controlled input (e.g. git
+      Ensure that any integration or release pipeline actions
+      that accept externally-controlled untrusted input (e.g. git
       branch names) do not use input in ways that could
       provide unintended access to privileged resources.
     control_mappings:
