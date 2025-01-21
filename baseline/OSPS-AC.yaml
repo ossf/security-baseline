@@ -51,9 +51,8 @@ criteria:
       permissions granted to collaborators.
     details: |
       Most public version control systems are configured
-      in this manner.  If using a custom sytsem,
-      configure the project's version control
-      system to assign the lowest available
+      in this manner. Ensure the project's version control
+      system always assigns the lowest available
       permissions to collaborators by default when
       added, granting additional permissions only
       when necessary.
