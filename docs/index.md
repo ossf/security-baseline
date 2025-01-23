@@ -10,8 +10,10 @@ Downstream consumers of the OSPS Baseline should specify their compliance agains
 Only the version labeled as "current" should be used for new compliance efforts.
 
 * [In-development version](docs/development)
-* Current version: [v1.0]() released YYYY-MM-DD
+<!-- Leave this section out until there are historical and current versions to list.
+* Current version: [2025-04-01]()
 * Previous versions:
-    * [v0.1] released YYYY-MM-DD
+    * (none)
+-->
 
 Versions are managed according to the [Baseline maintenance process](maintenance).
