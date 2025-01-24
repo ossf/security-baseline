@@ -196,6 +196,16 @@
   synonyms:
     - Repo
     - Repositories
+- term: Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA)
+  definition: |
+    2024 European cybersecurity law that goes into full effect 
+    December 2027.  Focses on products sold within the European
+    Union and the cybersecurity and vulnerability management
+    practices used to create and support the product.
+  synonyms: 
+    - CRA
+  references: 
+    - https://eur-lex.europa.eu/eli/reg/2024/2847/oj
 - term: Software Composition Analysis
   definition: |
     The process of identifying and cataloging all
