@@ -19,7 +19,7 @@ criteria:
       understand of who is working on the project
       and what areas of authority they may have.
     implementation: |
-      Documenting project particpants and their roles
+      Document project participants and their roles
       through such artifacts as members.md, governance.md, 
       or similar file within the source code repository
       of the project.
