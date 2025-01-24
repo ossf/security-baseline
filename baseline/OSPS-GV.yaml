@@ -17,7 +17,7 @@ criteria:
       helps project particpants, potential contributors,
       and downstream consumers have an accurate
       understand of who is working on the project
-      and what areas or authority they may have.
+      and what areas of authority they may have.
     implementation: |
       Documenting project particpants and their roles
       through such artifacts as members.md, governance.md, 
