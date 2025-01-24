@@ -21,8 +21,8 @@ criteria:
     implementation: |
       Document project participants and their roles
       through such artifacts as members.md, governance.md, 
-      or similar file within the source code repository
-      of the project.
+      maintainers.md, or similar file within the source 
+      code repository of the project.
     control_mappings: 
       BPB: B-S-3, B-S-4
       OCRE: 013-021
