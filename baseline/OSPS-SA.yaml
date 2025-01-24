@@ -65,8 +65,32 @@ criteria:
       protect against attacks on critical code
       paths, functions, and interactions within
       the system.
-    rationale: # TODO
-    implementation: # TODO
+    rationale: |
+      Providing project maintainers an understand of how
+      the software can be misused or broken allows them
+      to paln mitigations to close off the potential of 
+      those threats from occuring.
+
+      Providing downstream consumers with this threat model
+      can assist them in understanding the security capabilities
+      or gaps that exist within the project and allows them 
+      to apply their own additional controls and mitigations.
+    implementation: |
+      Threat modeling is an activity where the project
+      looks at the codebase, associated processes and 
+      infrastructure, interfaces, key components and 
+      "thinks like a hacker" and brainstorms how the 
+      system be be broken or compromised.
+
+      Each identified threat is listed out so the project
+      can then think about how to proactively avoid or 
+      close off any gaps/vulnerabilities that could arise.
+
+      Threat modeling can be something as simple as using the
+      [Shostack "4 Questions" model](https://github.com/adamshostack/4QuestionFrame), 
+      using a methodology like [STRIDE](https://owasp.org/www-community/Threat_Modeling_Process), 
+      a tool like the [Elevation of Privilege Threat Modeling Card Game](https://www.microsoft.com/en-us/download/details.aspx?id=20303}
+      or tools such as [Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
     control_mappings: 
       BPB: B-S-8
       CRA: 1.2j, 1.2k
@@ -83,8 +107,29 @@ criteria:
         assessment to understand the most likely and
         impactful potential security problems that
         could occur within the software.
-    rationale: # TODO
-    implementation: # TODO
+    rationale: |
+      Performing a security assessment informs both project 
+      members as well as downstream consumers that the 
+      project understands what problems could arise within
+      the software.
+
+      Understanding what threats could be realized helps
+      the project manage and address risk.  This information
+      is useful to downstream consumers to demonstrate
+      the security accumen and practices of the project.
+    implementation: |
+      Security assessments can take many forms in a spectrum
+      ranging from informal to highly rigourous.  At its most 
+      basic, a security assessment lists potential threats, 
+      estimates the likelihood/probability of those threats
+      occuring and the the possible consquences/impact if those
+      threats do occur.
+
+      Software that is deployed into highly-regulated spaces
+      would benefit from more formal risk management practices
+      such as [NIST SP 800-171](https://csrc.nist.gov/projects/risk-management/about-rmf), 
+      [ENISA's Risk Management Framework](https://www.enisa.europa.eu/topics/risk-management), 
+      or a methodolgy such as [OpenFAIR](https://www.opengroup.org/open-fair).
     control_mappings: 
       BPB: B-W-8, S-G-1
       CRA: 1.1, 2.2
