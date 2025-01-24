@@ -85,12 +85,22 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## Lexicon
 {{ range .Lexicon }}
+
 ### {{ .Term }}
 
 {{ .Definition }}
 
+{{ if .References }}
+**References:**
+{{ range $key, $value := .References }}
+- {{ $value }}
 {{- end }}
+{{- end }}
+
 ---
+
+{{- end }}
+
 
 ## Acknowledgments
 

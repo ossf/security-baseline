@@ -40,6 +40,7 @@ type LexiconEntry struct {
 	Term       string   `yaml:"term"`
 	Definition string   `yaml:"definition"`
 	Synonyms   []string `yaml:"synonyms"`
+	References   []string `yaml:"references"`
 }
 
 func hardcodedCategories() []string {
