@@ -100,8 +100,15 @@ criteria:
       The project documentation MUST include a
       descriptive statement about the scope and
       duration of support.
-    rationale: # TODO
-    # TODO: Integrate with advice from https://endoflife.date/recommendations
+    rationale: |
+      Stating the support expecations the project
+      has (in this case when the project will no
+      longer be actively supporting the project and 
+      considering it "end of life") are important
+      for downstream consumers to be aware of
+      and understand so they can take relevant actions 
+      to ensure the required functionality can still 
+      be achieved.
     implementation: |
       The project should have either a "Support"
       header in the README, a SUPPORT.md file
@@ -109,6 +116,14 @@ criteria:
       file in the [OpenEOX format](https://github.com/OpenEoX/openeox/blob/main/schema/schema.json)
       describing the scope and duration of support
       for the project's released software assets.
+
+      [endoflife.date](https://endoflife.date/recommendations) 
+      provides concrete examples of real-life projects (both good
+      and bad) communicating their end of support.
+
+      Alternatively, the project could published their
+      desired support and duration through such outlets 
+      as a project blog, mailing list, or FAQ.
     control_mappings: 
       BPB: R-B-3
       SSDF: PO4.2, PS3.1, RV1.3 
@@ -123,8 +138,28 @@ criteria:
       descriptive statement when releases or
       versions are no longer supported and that
       will no longer receive security updates.
-    rationale: # TODO
-    implementation: # TODO
+    rationale: |
+      Communicating when the project will no longer
+      be suipported and/or will no longer fix
+      defects or security vulnerabilities is 
+      crucial for downstream consumers to be
+      made aware of so they may take appropriate
+      actions to find alternative to the project 
+      or find alternative means of support for the
+      provided functionality.
+    implementation: |
+      [OpenEOX format](https://github.com/OpenEoX/openeox/blob/main/schema/schema.json)
+      from OASIS is a machine-readable method to 
+      express the state of lifecycle.
+      
+      [endoflife.date](https://endoflife.date/recommendations) 
+      provides concrete examples of real-life projects (both good
+      and bad) communicating their end of support.
+
+      Alternatively, the project could provide notice through 
+      a project blog, issue, mailing list, or other means
+      that community leverages to communicate
+      project updates
     control_mappings: 
       CRA: 1.2c, 2.6
       OC: 4.1.1, 4.3.1
@@ -133,13 +168,28 @@ criteria:
 
   - id: OSPS-DO-15
     maturity_level: 2
-    category: Vulnerability Management
+    category: Documentation
     criterion: |
       The project documentation MUST include a
       description of how the project selects,
       obtains, and tracks its dependencies.
-    rationale: # TODO
-    implementation: # TODO
+    rationale: |
+      Providing information about how the project
+      selects, obtains, and tracks dependencies, 
+      libraries, frameworks, etc. help downstream 
+      consumers understand how the project operates
+      in regards to third-party components that are
+      required neccessary for the software to function.
+
+      This information also helps inform downstream
+      consumer of key third-party components they
+      should be monitoring.
+    implementation: |
+      Ideally this information is captured along with the
+      projects technical & design documentation and
+      available through a publicy viewable resource
+      such as the source code repository, project website, 
+      or other channel.
     control_mappings: 
       BPB: A-S-1
       CRA: 2.1
