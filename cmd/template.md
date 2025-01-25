@@ -9,6 +9,11 @@ The Open Source Project Security (OSPS) Baseline is a set of security criteria t
 The criteria are organized by maturity level and category.
 In the detailed subsections you will find the criterion, rationale, and details notes.
 
+
+Where possible, we have added control mappings to external frameworks.
+These are not guaranteed to be 100% matches, but instead serve as references
+when working to meet the corresponding controls.
+
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
 ---
@@ -68,10 +73,10 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 **Details:** {{ .Details | addLinks }}
 {{ if .ControlMappings }}
-**Control Mappings:**
-{{ range $key, $value := .ControlMappings }}
-- {{ $key }}: {{ $value }}
-{{- end }}
+| Catalog | Potential Mappings |
+| ------- | ------------------ |
+{{ range $key, $value := .ControlMappings }}| {{ $key | addLinks }} | {{ $value }} |
+{{ end }}
 {{- end }}
 {{ if .SecurityInsightsValue }}
 **Security Insights Value:** {{ .SecurityInsightsValue }}
@@ -85,11 +90,19 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## Lexicon
 {{ range .Lexicon }}
+
 ### {{ .Term }}
 
 {{ .Definition }}
 
-{{- end }}
+{{ if .References }}
+**References:**
+{{ range .References }}
+  - {{.}}
+{{ end -}}
+{{ end -}}
+{{ end -}}
+
 ---
 
 ## Acknowledgments
