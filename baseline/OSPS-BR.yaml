@@ -208,7 +208,7 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-BR-10
-    maturity_level: 1
+    maturity_level: 2
     criterion: |
       Any websites, API responses or other
       services involved in release pipelines MUST be
