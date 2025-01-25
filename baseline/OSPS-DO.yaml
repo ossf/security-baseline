@@ -8,7 +8,7 @@ description: |
   understand the project's features and functionality.
 criteria:
   - id: OSPS-DO-03
-    maturity_level: 2
+    maturity_level: 1
     category: Documentation
     criterion: |
       The project documentation MUST provide user
@@ -35,7 +35,7 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-DO-05
-    maturity_level: 2
+    maturity_level: 1
     category: Documentation
     criterion: |
       The project documentation MUST include a
@@ -94,7 +94,7 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-DO-13
-    maturity_level: 1
+    maturity_level: 2
     category: Documentation
     criterion: |
       The project documentation MUST include a
