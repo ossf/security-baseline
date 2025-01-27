@@ -69,7 +69,7 @@ criteria:
       when the package management system supports it.
     rationale: |
       Provide transparency and accountability for
-      the project's dependencies by fixing the desired versions
+      the project's dependencies
       while enabling users and contributors to understand the
       software's direct dependencies.
     details: |
