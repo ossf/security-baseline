@@ -7,7 +7,7 @@ description: |
   data, modify repository settings, or execute build and
   release processes.
 criteria:
-  - id: OSPS-AC-01
+  - id: OSPS-AC-101
     maturity_level: 1
     criterion: |
       The project's version control system MUST
@@ -39,7 +39,7 @@ criteria:
     security_insights_value: # TODO
 
 
-  - id: OSPS-AC-02
+  - id: OSPS-AC-102
     maturity_level: 1
     criterion: |
       The project's version control system MUST
@@ -64,7 +64,7 @@ criteria:
     security_insights_value: # TODO
 
 
-  - id: OSPS-AC-03
+  - id: OSPS-AC-103
     maturity_level: 1
     criterion: |
       The project's version control system MUST
@@ -97,7 +97,7 @@ criteria:
       OCRE: 486-813, 124-564, 152-725
     security_insights_value: # TODO
 
-  - id: OSPS-AC-04
+  - id: OSPS-AC-104
     maturity_level: 1
     criterion: |
       The project's version control system MUST
@@ -119,7 +119,7 @@ criteria:
       OCRE: 486-813, 124-564,123-124, 152-725
     security_insights_value: # TODO
 
-  - id: OSPS-AC-05
+  - id: OSPS-AC-201
     maturity_level: 2
     criterion: |
       The project's permissions in CI/CD pipelines
@@ -147,7 +147,7 @@ criteria:
     security_insights_value: # TODO
 
     
-  - id: OSPS-AC-07
+  - id: OSPS-AC-301
     maturity_level: 3
     criterion: |
       The project's version control system MUST
