@@ -6,7 +6,7 @@ description: |
   that the project is well positioned to respond to
   both threats and opportunities.
 criteria:
-  - id: OSPS-GV-01
+  - id: OSPS-GV-201
     maturity_level: 2
     criterion: |
       The project documentation MUST include the
@@ -28,7 +28,7 @@ criteria:
       OCRE: 013-021
     security_insights_value: # TODO
 
-  - id: OSPS-GV-02
+  - id: OSPS-GV-101
     maturity_level: 1
     criterion: |
       The project MUST have one or more mechanisms
@@ -55,7 +55,7 @@ criteria:
       OCRE:
     security_insights_value: # TODO
 
-  - id: OSPS-GV-03
+  - id: OSPS-GV-102
     maturity_level: 1
     criterion: |
       The project documentation MUST include an
@@ -77,7 +77,7 @@ criteria:
       SSDF: PW1.2
     security_insights_value: # TODO
 
-  - id: OSPS-GV-04
+  - id: OSPS-GV-202
     maturity_level: 2
     criterion: |
       The project documentation MUST include a
@@ -106,7 +106,7 @@ criteria:
       OC: 4.1.2
     security_insights_value: # TODO
 
-  - id: OSPS-GV-05
+  - id: OSPS-GV-203
     maturity_level: 2
     criterion: |
       The project documentation MUST have a policy
