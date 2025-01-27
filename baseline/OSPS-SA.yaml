@@ -5,7 +5,7 @@ description: |
   to identify and address security vulnerabilities
   and threats in the software.
 criteria:
-  - id: OSPS-SA-01
+  - id: OSPS-SA-201
     maturity_level: 2
     criterion: |
       The project documentation MUST provide
@@ -31,7 +31,7 @@ criteria:
       OCRE: 155-155, 326-704, 068-102, 036-275, 162-655
     security_insights_value: # TODO
 
-  - id: OSPS-SA-02
+  - id: OSPS-SA-202
     maturity_level: 2
     criterion: |
       The project documentation MUST include
@@ -57,7 +57,7 @@ criteria:
       OCRE: 155-155, 068-102, 072-713, 820-878
     security_insights_value: # TODO
 
-  - id: OSPS-SA-03
+  - id: OSPS-SA-301
     maturity_level: 3
     criterion: |
       The project MUST perform a threat modeling and
@@ -76,7 +76,7 @@ criteria:
       OCRE: 068-102, 154-031, 888-770
     security_insights_value: # TODO
 
-  - id: OSPS-SA-04
+  - id: OSPS-SA-203
     maturity_level: 2
     criterion: |
         The project MUST perform a security
