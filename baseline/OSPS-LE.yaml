@@ -9,7 +9,7 @@ description: |
   reducing the risk of intellectual property
   disputes or licensing violations.
 criteria:
-  - id: OSPS-LE-01
+  - id: OSPS-LE-201
     maturity_level: 2
     criterion: |
       The version control system MUST require all
@@ -35,7 +35,7 @@ criteria:
       SSDF: PO3.2, PS1, PW1.2, PW2.1
     security_insights_value: # TODO
 
-  - id: OSPS-LE-02
+  - id: OSPS-LE-101
     maturity_level: 1
     criterion: |
       The license for the source code MUST
@@ -69,7 +69,7 @@ criteria:
       CSF: GV.OC-03
     security_insights_value: # TODO
 
-  - id: OSPS-LE-03
+  - id: OSPS-LE-102
     maturity_level: 1
     criterion: |
       The license for the source code MUST be
@@ -94,7 +94,7 @@ criteria:
       SSDF: PO3.2
     security_insights_value: # TODO
 
-  - id: OSPS-LE-04
+  - id: OSPS-LE-103
     maturity_level: 1
     criterion: |
       The license for the released software assets
