@@ -7,7 +7,7 @@ description: |
   that the project is well positioned to respond to
   security threats and vulnerabilities in the software.
 criteria:
-  - id: OSPS-VM-01
+  - id: OSPS-VM-301
     maturity_level: 3
     criterion: |
       The project documentation MUST include a
@@ -35,7 +35,7 @@ criteria:
       OCRE: 124-564, 832-555, 611-158, 207-435, 088-377
     security_insights_value: # TODO
 
-  - id: OSPS-VM-02
+  - id: OSPS-VM-302
     maturity_level: 3
     criterion: |
       The project documentation MUST include a
@@ -61,7 +61,7 @@ criteria:
       OCRE: 486-813, 833-442, 611-158, 207-435, 088-377
     security_insights_value: # TODO
 
-  - id: OSPS-VM-03
+  - id: OSPS-VM-202
     maturity_level: 2
     criterion: |
       The project documentation MUST include a
@@ -90,7 +90,7 @@ criteria:
       OCRE: 887-750
     security_insights_value: # TODO
 
-  - id: OSPS-VM-04
+  - id: OSPS-VM-303
     maturity_level: 3
     criterion: |
       All proposed changes to the project's
@@ -119,7 +119,7 @@ criteria:
       OCRE: 486-813, 124-564, 757-271
     security_insights_value: # TODO
 
-  - id: OSPS-VM-05
+  - id: OSPS-VM-101
     maturity_level: 1
     criterion: |
       The project publishes contacts and process
@@ -143,7 +143,7 @@ criteria:
       OCRE: 464-513
     security_insights_value: # TODO
 
-  - id: OSPS-VM-06
+  - id: OSPS-VM-201
     maturity_level: 2
     criterion: |
       The project MUST provide a means for reporting 
@@ -163,7 +163,7 @@ criteria:
       OCRE: 308-514
     security_insights_value: # TODO
 
-  - id: OSPS-VM-07
+  - id: OSPS-VM-203
     maturity_level: 2
     criterion: |
       The project MUST publicly publish data about vulnerabilities
