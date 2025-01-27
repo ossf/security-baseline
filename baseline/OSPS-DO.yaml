@@ -7,7 +7,7 @@ description: |
   accurate, and up-to-date, enabling users to
   understand the project's features and functionality.
 criteria:
-  - id: OSPS-DO-03
+  - id: OSPS-DO-101
     maturity_level: 1
     category: Documentation
     criterion: |
@@ -34,7 +34,7 @@ criteria:
       OCRE: 036-275
     security_insights_value: # TODO
 
-  - id: OSPS-DO-05
+  - id: OSPS-DO-102
     maturity_level: 1
     category: Documentation
     criterion: |
@@ -65,7 +65,7 @@ criteria:
       OC: 4.2.1
     security_insights_value: # TODO
 
-  - id: OSPS-DO-12
+  - id: OSPS-DO-201
     maturity_level: 2
     category: Documentation
     criterion: |
@@ -93,7 +93,7 @@ criteria:
       OCRE: 171-222 
     security_insights_value: # TODO
 
-  - id: OSPS-DO-13
+  - id: OSPS-DO-202
     maturity_level: 2
     category: Documentation
     criterion: |
@@ -115,7 +115,7 @@ criteria:
       OC: 4.1, 4.3.1
     security_insights_value: # TODO
 
-  - id: OSPS-DO-14
+  - id: OSPS-DO-301
     maturity_level: 3
     category: Documentation
     criterion: |
@@ -131,9 +131,9 @@ criteria:
       OCRE: 673-475, 053-751
     security_insights_value: # TODO
 
-  - id: OSPS-DO-15
+  - id: OSPS-DO-203
     maturity_level: 2
-    category: Vulnerability Management
+    category: Documentation
     criterion: |
       The project documentation MUST include a
       description of how the project selects,
