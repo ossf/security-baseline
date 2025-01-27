@@ -68,7 +68,7 @@ criteria:
     rationale: |
       Providing project maintainers an understanding of how
       the software can be misused or broken allows them
-      to paln mitigations to close off the potential of 
+      to plan mitigations to close off the potential of 
       those threats from occuring.
 
       Providing downstream consumers with this threat model
