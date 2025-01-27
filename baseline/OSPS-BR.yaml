@@ -8,7 +8,7 @@ description: |
   vulnerabilities or errors in the software distribution
   process.
 criteria:
-  - id: OSPS-BR-01
+  - id: OSPS-BR-101
     maturity_level: 1
     criterion: |
       The project's build and release pipelines
@@ -32,7 +32,7 @@ criteria:
       OCRE: 483-813, 124-564, 357-352
     security_insights_value: # TODO
     
-  - id: OSPS-BR-02
+  - id: OSPS-BR-201
     maturity_level: 2
     criterion: |
       All releases and released software assets
@@ -59,7 +59,7 @@ criteria:
       OCRE: 483-813, 124-564
     security_insights_value: # TODO
 
-  - id: OSPS-BR-03
+  - id: OSPS-BR-102
     maturity_level: 1
     criterion: |
       Any websites and version control systems
@@ -82,7 +82,7 @@ criteria:
       OCRE: 483-813, 124-564, 263-184
     security_insights_value: # TODO
 
-  - id: OSPS-BR-04
+  - id: OSPS-BR-202
     maturity_level: 2
     criterion: |
       All released software assets MUST be created
@@ -106,7 +106,7 @@ criteria:
       OCRE: 483-813, 124-564, 347-352, 263-184, 208-355
     security_insights_value: project-lifecycle.release-process
 
-  - id: OSPS-BR-05
+  - id: OSPS-BR-203
     maturity_level: 2
     criterion: |
       All build and release pipelines MUST use
@@ -133,7 +133,7 @@ criteria:
       OCRE: 483-813, 124-564, 347-352, 715-334
     security_insights_value: # TODO
 
-  - id: OSPS-BR-06
+  - id: OSPS-BR-204
     maturity_level: 2
     criterion: |
       All releases MUST provide a descriptive log
@@ -160,7 +160,7 @@ criteria:
       OCRE: 483-813, 124-564, 745-356
     security_insights_value: # TODO
 
-  - id: OSPS-BR-08
+  - id: OSPS-BR-205
     maturity_level: 2
     criterion: |
       All released software assets MUST be signed
@@ -184,7 +184,7 @@ criteria:
     security_insights_value: 
       Signed-Releases
 
-  - id: OSPS-BR-09
+  - id: OSPS-BR-103
     maturity_level: 1
     criterion: |
       Any websites or other services involved in the
@@ -207,7 +207,7 @@ criteria:
       OCRE: 483-813, 124-564, 263-184
     security_insights_value: # TODO
 
-  - id: OSPS-BR-10
+  - id: OSPS-BR-206
     maturity_level: 2
     criterion: |
       Any websites, API responses or other
