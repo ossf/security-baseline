@@ -190,6 +190,10 @@ criteria:
       available through a publicy viewable resource
       such as the source code repository, project website, 
       or other channel.
+
+      Having a "dependencies" header in CONTRIBUTING.md or 
+      equivalent contributing documentation could fulfill
+      this criteria.
     control_mappings: 
       BPB: A-S-1
       CRA: 2.1
