@@ -32,7 +32,7 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-SA-02
-    maturity_level: 1
+    maturity_level: 2
     criterion: |
       The project documentation MUST include
       descriptions of all external input and output

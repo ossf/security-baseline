@@ -40,6 +40,7 @@ type LexiconEntry struct {
 	Term       string   `yaml:"term"`
 	Definition string   `yaml:"definition"`
 	Synonyms   []string `yaml:"synonyms"`
+	References []string `yaml:"references"`
 }
 
 func hardcodedCategories() []string {
@@ -191,6 +192,9 @@ func (b *Baseline) Generate() error {
 		},
 		"asLink": func(s string) string {
 			return asLinkTemplateFunction(s)
+		},
+		"subtract": func(a, b int) int {
+			return a - b
 		},
 	}).Parse(string(templateContent))
 	if err != nil {

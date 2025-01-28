@@ -87,6 +87,17 @@
     details such as the modifications made, the
     contributor who made them, and the timestamp
     of the change.
+- term: Cyber Resilience Act
+  definition: |
+    Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA).
+    2024 European cybersecurity law that goes into full effect
+    December 2027.  Focuses on products sold within the European
+    Union and the cybersecurity and vulnerability management
+    practices used to create and support the product.
+  synonyms:
+    - CRA
+  references: 
+    - https://eur-lex.europa.eu/eli/reg/2024/2847/oj
 - term: Defect
   definition: |
     Errors or flaws in the software that cause it
