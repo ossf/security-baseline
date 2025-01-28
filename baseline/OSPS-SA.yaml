@@ -35,7 +35,7 @@ criteria:
     maturity_level: 2
     criterion: |
       The project documentation MUST include
-      descriptions of all external input and output
+      descriptions of all external software
       interfaces of the released software assets.
     rationale: |
       Provide users and developers with an
@@ -43,8 +43,14 @@ criteria:
       project's software and integrate it with
       other systems, enabling them to use the
       software effectively.
+    implementation: |
+      The project README should include a link to
+      the API documentation, often under a header
+      such as "Usage", "API Reference", or "Docs".
+      Documentation badges should also be considered
+      when recognized (e.g. readthedocs, godoc, etc.).
     details: |
-      Document all input and output interfaces of
+      Document all software interfaces (APIs) of
       the released software assets, explaining how
       users can interact with the software and
       what data is expected or produced.
