@@ -66,7 +66,7 @@ criteria:
       paths, functions, and interactions within
       the system.
     rationale: |
-      Providing project maintainers an understanding of how
+      Provides project maintainers an understanding of how
       the software can be misused or broken allows them
       to plan mitigations to close off the potential of 
       those threats from occuring.
