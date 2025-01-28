@@ -85,12 +85,6 @@ criteria:
       Each identified threat is listed out so the project
       can then think about how to proactively avoid or 
       close off any gaps/vulnerabilities that could arise.
-
-      Threat modeling can be something as simple as using the
-      [Shostack "4 Questions" model](https://github.com/adamshostack/4QuestionFrame), 
-      using a methodology like [STRIDE](https://owasp.org/www-community/Threat_Modeling_Process), 
-      a tool like the [Elevation of Privilege Threat Modeling Card Game](https://www.microsoft.com/en-us/download/details.aspx?id=20303}
-      or tools such as [Threat Dragon](https://owasp.org/www-project-threat-dragon/) 
     control_mappings: 
       BPB: B-S-8
       CRA: 1.2j, 1.2k

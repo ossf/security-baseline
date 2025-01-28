@@ -13,6 +13,18 @@
     Code provided by an external source that is
     executed by a system without validation or
     restriction.
+- term: Attack Surface Analysis
+  definition: |
+    Attack Surface Analysis is about mapping out what parts of a system need to
+    be reviewed and tested for security vulnerabilities. The point of Attack
+    Surface Analysis is to understand the risk areas in an application, to make
+    developers and security specialists aware of what parts of the application
+    are open to attack, to find ways of minimizing this, and to notice when and
+    how the Attack Surface changes and what this means from a risk perspective.
+    
+    See OWASP's Attack Surface Analysis Cheat Sheet for more information.
+  references:
+    - https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html
 - term: Automated Test Suite
   definition: |
     A collection of pre-written test cases that, when invoked,
@@ -228,6 +240,27 @@
     maintained in a separate repository.
     Subprojects may be compiled into the primary
     project or used as standalone components.
+- term: Threat Modeling
+  definition: |
+    Threat modeling is an activity where the project
+    looks at the codebase, associated processes and 
+    infrastructure, interfaces, key components and 
+    "thinks like a hacker" to brainstorm how the 
+    system be be broken or compromised.
+
+    Each identified threat is listed out so the project
+    can then think about how to proactively avoid or 
+    close off any gaps/vulnerabilities that could arise.
+
+    Examples of threat modeling methodologies include
+    the Shostack "4 Questions" model, STRIDE, and
+    tools such as the Elevation of Privilege Threat
+    Modeling Card Game or Threat Dragon.
+  references:
+    - https://github.com/adamshostack/4QuestionFrame
+    - https://owasp.org/www-community/Threat_Modeling_Process
+    - https://www.microsoft.com/en-us/download/details.aspx?id=20303
+    - https://owasp.org/www-project-threat-dragon
 - term: Version Identifier
   definition: |
     A label assigned to a specific release of the
