@@ -31,7 +31,53 @@ criteria:
       CSF: PR.AA-02
       OCRE: 483-813, 124-564, 357-352
     security_insights_value: # TODO
-    
+  
+  - id: OSPS-BR-102
+    maturity_level: 1
+    criterion: |
+      Any websites and version control systems
+      involved in the project development
+      MUST be delivered using SSH,
+      HTTPS, or other encrypted channels.
+    rationale: |
+      Protect the confidentiality and integrity
+      of project source code during development,
+      reducing the risk of eavesdropping or data
+      tampering.
+    details: |
+      Configure the project's websites and version
+      control systems to use encrypted channels
+      such as SSH or HTTPS for data transmission.
+    control_mappings: 
+      BPB: B-B-11
+      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 263-184
+    security_insights_value: # TODO
+  
+  - id: OSPS-BR-103
+    maturity_level: 1
+    criterion: |
+      Any websites or other services involved in the
+      distribution of released software assets MUST
+      be delivered using HTTPS or other encrypted
+      channels.
+    rationale: |
+      Protect the confidentiality and integrity
+      of release assets consumed by the project's
+      users, reducing the risk of eavesdropping or
+      data tampering.
+    details: |
+      Configure the project's websites and
+      distribution services to use encrypted channels
+      such as HTTPS for data transmission.
+    control_mappings: 
+      BPB: B-B-11
+      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
+      SSDF: PO3.2, PS1
+      OCRE: 483-813, 124-564, 263-184
+    security_insights_value: # TODO
+  
   - id: OSPS-BR-201
     maturity_level: 2
     criterion: |
@@ -57,29 +103,6 @@ criteria:
       CRA: 1.2f
       SSDF: PO3.2, PS1, PS2, PS3
       OCRE: 483-813, 124-564
-    security_insights_value: # TODO
-
-  - id: OSPS-BR-102
-    maturity_level: 1
-    criterion: |
-      Any websites and version control systems
-      involved in the project development
-      MUST be delivered using SSH,
-      HTTPS, or other encrypted channels.
-    rationale: |
-      Protect the confidentiality and integrity
-      of project source code during development,
-      reducing the risk of eavesdropping or data
-      tampering.
-    details: |
-      Configure the project's websites and version
-      control systems to use encrypted channels
-      such as SSH or HTTPS for data transmission.
-    control_mappings: 
-      BPB: B-B-11
-      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 263-184
     security_insights_value: # TODO
 
   - id: OSPS-BR-202
@@ -183,29 +206,6 @@ criteria:
       SSDF: PO5.2, PS2.1, PW6.2
     security_insights_value: 
       Signed-Releases
-
-  - id: OSPS-BR-103
-    maturity_level: 1
-    criterion: |
-      Any websites or other services involved in the
-      distribution of released software assets MUST
-      be delivered using HTTPS or other encrypted
-      channels.
-    rationale: |
-      Protect the confidentiality and integrity
-      of release assets consumed by the project's
-      users, reducing the risk of eavesdropping or
-      data tampering.
-    details: |
-      Configure the project's websites and
-      distribution services to use encrypted channels
-      such as HTTPS for data transmission.
-    control_mappings: 
-      BPB: B-B-11
-      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 263-184
-    security_insights_value: # TODO
 
   - id: OSPS-BR-206
     maturity_level: 2
