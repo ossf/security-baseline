@@ -57,6 +57,24 @@ criteria:
       OCRE: 155-155, 068-102, 072-713, 820-878
     security_insights_value: # TODO
 
+  - id: OSPS-SA-203
+    maturity_level: 2
+    criterion: |
+        The project MUST perform a security
+        assessment to understand the most likely and
+        impactful potential security problems that
+        could occur within the software.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: 
+      BPB: B-W-8, S-G-1
+      CRA: 1.1, 2.2
+      SSDF: PO5.1, PW1.1
+      CSF: ID.RA-04, ID.RA-05, DE.AE-07
+      OC: 4.1.5
+      OCRE: 068-102, 307-242, 660-867
+    security_insights_value: # TODO
+
   - id: OSPS-SA-301
     maturity_level: 3
     criterion: |
@@ -74,22 +92,4 @@ criteria:
       CSF: ID.RA-01, ID.RA-04, ID.RA-05, DE.AE-07
       OC: 4.1.5
       OCRE: 068-102, 154-031, 888-770
-    security_insights_value: # TODO
-
-  - id: OSPS-SA-203
-    maturity_level: 2
-    criterion: |
-        The project MUST perform a security
-        assessment to understand the most likely and
-        impactful potential security problems that
-        could occur within the software.
-    rationale: # TODO
-    implementation: # TODO
-    control_mappings: 
-      BPB: B-W-8, S-G-1
-      CRA: 1.1, 2.2
-      SSDF: PO5.1, PW1.1
-      CSF: ID.RA-04, ID.RA-05, DE.AE-07
-      OC: 4.1.5
-      OCRE: 068-102, 307-242, 660-867
     security_insights_value: # TODO
