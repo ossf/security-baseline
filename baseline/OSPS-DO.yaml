@@ -115,22 +115,6 @@ criteria:
       OC: 4.1, 4.3.1
     security_insights_value: # TODO
 
-  - id: OSPS-DO-301
-    maturity_level: 3
-    category: Documentation
-    criterion: |
-      The project documentation MUST provide a
-      descriptive statement when releases or
-      versions are no longer supported and that
-      will no longer receive security updates.
-    rationale: # TODO
-    implementation: # TODO
-    control_mappings: 
-      CRA: 1.2c, 2.6
-      OC: 4.1.1, 4.3.1
-      OCRE: 673-475, 053-751
-    security_insights_value: # TODO
-
   - id: OSPS-DO-203
     maturity_level: 2
     category: Documentation
@@ -147,3 +131,18 @@ criteria:
     security_insights_value: 
       Pinned-Dependencies
 
+  - id: OSPS-DO-301
+    maturity_level: 3
+    category: Documentation
+    criterion: |
+      The project documentation MUST provide a
+      descriptive statement when releases or
+      versions are no longer supported and that
+      will no longer receive security updates.
+    rationale: # TODO
+    implementation: # TODO
+    control_mappings: 
+      CRA: 1.2c, 2.6
+      OC: 4.1.1, 4.3.1
+      OCRE: 673-475, 053-751
+    security_insights_value: # TODO
