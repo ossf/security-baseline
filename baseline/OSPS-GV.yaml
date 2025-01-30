@@ -6,28 +6,6 @@ description: |
   that the project is well positioned to respond to
   both threats and opportunities.
 criteria:
-  - id: OSPS-GV-201
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST include the
-      Roles and Responsibilities for members of the
-      project.
-    rationale: |
-      Documenting project roles and responsibilities
-      helps project particpants, potential contributors,
-      and downstream consumers have an accurate
-      understand of who is working on the project
-      and what areas of authority they may have.
-    implementation: |
-      Document project participants and their roles
-      through such artifacts as members.md, governance.md, 
-      maintainers.md, or similar file within the source 
-      code repository of the project.
-    control_mappings: 
-      BPB: B-S-3, B-S-4
-      OCRE: 013-021
-    security_insights_value: # TODO
-
   - id: OSPS-GV-101
     maturity_level: 1
     criterion: |
@@ -75,6 +53,28 @@ criteria:
       BPB: B-B-4, B-S-3, B-B-4+, R-B-1, Q-G-2
       CRA: 1.2l, 2.4
       SSDF: PW1.2
+    security_insights_value: # TODO
+
+  - id: OSPS-GV-201
+    maturity_level: 2
+    criterion: |
+      The project documentation MUST include the
+      Roles and Responsibilities for members of the
+      project.
+    rationale: |
+      Documenting project roles and responsibilities
+      helps project particpants, potential contributors,
+      and downstream consumers have an accurate
+      understand of who is working on the project
+      and what areas of authority they may have.
+    implementation: |
+      Document project participants and their roles
+      through such artifacts as members.md, governance.md, 
+      maintainers.md, or similar file within the source 
+      code repository of the project.
+    control_mappings: 
+      BPB: B-S-3, B-S-4
+      OCRE: 013-021
     security_insights_value: # TODO
 
   - id: OSPS-GV-202
