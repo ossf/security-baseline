@@ -9,32 +9,6 @@ description: |
   reducing the risk of intellectual property
   disputes or licensing violations.
 criteria:
-  - id: OSPS-LE-201
-    maturity_level: 2
-    criterion: |
-      The version control system MUST require all
-      code contributors to assert that they are
-      legally authorized to commit the associated
-      contributions on every commit.
-    rationale: |
-      Ensure that code contributors are aware of
-      and acknowledge their legal responsibility
-      for the contributions they make to the
-      project, reducing the risk of intellectual
-      property disputes against the project.
-    details: |
-      Include a DCO or CLA in the project's
-      repository, requiring code contributors to
-      assert that they are legally authorized to
-      commit the associated contributions on every
-      commit. Use a status check to ensure the
-      assertion is made.
-    control_mappings: 
-      BPB: B-S-1
-      CRA: 1.2b, 1.2f
-      SSDF: PO3.2, PS1, PW1.2, PW2.1
-    security_insights_value: # TODO
-
   - id: OSPS-LE-101
     maturity_level: 1
     criterion: |
@@ -126,4 +100,30 @@ criteria:
       CRA: 1.2b
       SSDF: PO3.2
       CSF: GV.OC-03
+    security_insights_value: # TODO
+
+  - id: OSPS-LE-201
+    maturity_level: 2
+    criterion: |
+      The version control system MUST require all
+      code contributors to assert that they are
+      legally authorized to commit the associated
+      contributions on every commit.
+    rationale: |
+      Ensure that code contributors are aware of
+      and acknowledge their legal responsibility
+      for the contributions they make to the
+      project, reducing the risk of intellectual
+      property disputes against the project.
+    details: |
+      Include a DCO or CLA in the project's
+      repository, requiring code contributors to
+      assert that they are legally authorized to
+      commit the associated contributions on every
+      commit. Use a status check to ensure the
+      assertion is made.
+    control_mappings: 
+      BPB: B-S-1
+      CRA: 1.2b, 1.2f
+      SSDF: PO3.2, PS1, PW1.2, PW2.1
     security_insights_value: # TODO
