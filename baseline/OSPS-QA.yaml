@@ -76,7 +76,7 @@ criteria:
       This may take the form a package manager or
       language dependency file that ennumerates all
       direct and, ideally, transitive build dependencies such as
-      package.json, Gemfile.lock, or go.sum.
+      package-lock.json, Gemfile.lock, or go.sum.
     control_mappings: 
       BPB: Q-S-9
       CRA: 1.2b, 2.1
