@@ -55,7 +55,7 @@ criteria:
     control_mappings: 
       BPB: CC-B-2, CC-B-3, R-B-5
       CRA: 1.2b, 1.2f, 1.2j
-      SSDF: PO3.2, PS1, PS2, PS3, PW1.2, PW2.1,  
+      SSDF: PO3.2, PS1, PS2, PS3, PW1.2, PW2.1
       CSF: ID.AM-02, ID.RA-01, ID.RA-08
       OC: 4.1.4
       OCRE: 486-813, 124-564, 757-271
