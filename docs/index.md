@@ -9,11 +9,9 @@ Previous versions are presented for historical reference.
 Downstream consumers of the OSPS Baseline should specify their compliance against a specific version.
 Only the version labeled as "current" should be used for new compliance efforts.
 
-* [In-development version](docs/development)
-<!-- Leave this section out until there are historical and current versions to list.
-* Current version: [2025-04-01]()
+* [In-development version](versions/devel)
+* Current version: [devel](versions/devel)
 * Previous versions:
     * (none)
--->
 
 Versions are managed according to the [Baseline maintenance process](maintenance).

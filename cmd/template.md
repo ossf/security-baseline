@@ -1,5 +1,7 @@
 # Open Source Project Security Baseline
 
+Version: devel (not for production use)
+
 * Contents
 {:toc}
 
