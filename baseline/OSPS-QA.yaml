@@ -260,16 +260,6 @@ criteria:
   - id: OSPS-QA-12
     maturity_level: 3
     criterion: |
-      The software bill of materials describing the release assets
-      should provide the following data elements for the components
-      used in the build: license, supplier name, filename of the component,
-      component name, component version, software identifiers,
-      relationship between the components, author of the
-      SBOM data and timestamp.
-
-      Assitionally, for deployable and executable components 
-      the SBOM should record their cryptgraphic hashes.
-
       Provide both source and build software bills of materials 
       the following data elements for the components used in the build: 
       - license 
