@@ -256,7 +256,7 @@
     - Repositories
 - term: Secure Software Development Framework
   definition: |
-     The NIST Secure Software Development Framework [(SP) 800-218] is a broadly reviewed and collaborative set of fundamental secure software development practices.
+     The NIST Secure Software Development Framework (SP 800-218) is a broadly reviewed and collaborative set of fundamental secure software development practices.
   synonyms: 
     - SSDF 
     - NIST Secure Software Development Framework
