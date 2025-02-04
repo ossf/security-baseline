@@ -1,0 +1,33 @@
+name: New release
+description: Checklist for creating a new release of the OSPS Baseline
+title: "[Release]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue type is for maintainer use. If you need to file an issue, use the "Blank issue" type.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: New version to release
+      placeholder: e.g. 2025-02-04
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Release checklist
+      options:
+        - label: |
+            Ensure all pull requests targeted for this release are merged
+        - label: |
+            Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md` (replace `2025-02-04` with the version name)
+        - label: |
+            In the `docs/versions/<VERSION>.md` file, change the `Version: devel` to have the version number of the new version
+        - label: |
+            Move the link to the "current" version in `docs/index.md` to the "previous versions" list
+        - label: |
+            Add the link to the new version to the "current version" in `docs/index.md` (e.g. `Current version: [2025-02-04](versions/2025-02-04]`) 
+        - label: |
+            Open a pull request with the above changes
+        - label: |
+            Notify OpenSSF's marketing team that we have a new release so that they can share it with the world
