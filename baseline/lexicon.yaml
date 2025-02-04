@@ -264,7 +264,17 @@
   references: 
     - https://csrc.nist.gov/projects/ssdf 
     - https://csrc.nist.gov/pubs/sp/800/218/final  
-- term: Software Composition Analysis
+- term: Software Bill of Materials
+  definition: |
+    A manifest or list of all components that make up a given piece of software or hardware, preferably in a machine-readable/macine-parseable format.
+  synonyms: 
+    - SBOM 
+  references: 
+    - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
+    - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
+    - https://github.com/spdx
+    - https://cyclonedx.org
+  - term: Software Composition Analysis
   definition: |
     The process of identifying and cataloging all
     components and dependencies in a software
