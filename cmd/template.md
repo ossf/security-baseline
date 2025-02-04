@@ -2,6 +2,28 @@
 
 Version: devel (not for production use)
 
+<!-- A button for returning to the top of the page -->
+<button onclick="toTop()" id="topButton" title="Go to top"
+style="display: none; position: fixed; bottom: 20px; right: 30px; border: none; background-color: CornflowerBlue; color: white; cursor: pointer; padding: 10px; border-radius: 10px; font-size: 18px;">to top</button> 
+
+<script>
+let topButton = document.getElementById("topButton");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.documentElement.scrollTop > 50 ) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+}
+
+function toTop() {
+  document.documentElement.scrollTop = 0;
+}
+</script>
+<!-- That's enough button stuff for now -->
+
 * Contents
 {:toc}
 
