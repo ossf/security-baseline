@@ -3,7 +3,7 @@
 * Normal text fixes to the criteria will be accepted via pull request and reviewed by the baseline project maintainers.
 Allowed changes are corrections to spelling/typos, grammar corrections, or enhancements to the supplementary text supporting the criteria, including: Objective, Implementation, and Control Mappings.
 At least two project maintainers must review and approve these changes.
-* Substantive changes to Criteria, including changes to text that alters the originally stated meaning, new Criteria proposals, or removal of Criteria will be documented in GitHub PR(s) and reviewed regularly by the Baseline project maintainers for inclusion in the next release.
+* Substantive changes to criteria, including changes to text that alters the originally stated meaning, new criteria proposals, or removal of criteria will be documented in GitHub PR(s) and reviewed regularly by the Baseline project maintainers for inclusion in the next release.
 These changes may reflect changes to global cybersecurity regulations and frameworks or changes in norms around application/project security practices.
 Any such substantive changes must be approved by a majority of the project's maintainers.
 * As appropriate, but at least annually, the Baseline project maintainers will evaluate the set of criteria and, if necessary, publish a new version of the Baseline.
@@ -18,5 +18,6 @@ Previous versions of the Baseline will remain available, but are stable and not 
 Retired identifiers will remain in the source yaml files, clearly marked.
 * Substantial changes to the meaning of a criterion will be treated as a new criterion, resulting in a new identifier.
 Minor changes, including a change in level, between Baseline versions will not result in a new identifier.
-* The numeric portion of identifiers are assigned sequentially per category.
-They do not carry additional meaning.
+* The numeric portion of identifiers are assigned sequentially per category and level.
+Within a category and level, identifiers do not carry additional meaning.
+Moving a criterion between levels will (intentionally) result in assigning a new number.
