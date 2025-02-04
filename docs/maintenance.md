@@ -18,6 +18,5 @@ Previous versions of the Baseline will remain available, but are stable and not 
 Retired identifiers will remain in the source yaml files, clearly marked.
 * Substantial changes to the meaning of a criterion will be treated as a new criterion, resulting in a new identifier.
 Minor changes, including a change in level, between Baseline versions will not result in a new identifier.
-* The numeric portion of identifiers are assigned sequentially per category and level.
-Within a category and level, identifiers do not carry additional meaning.
-Moving a criterion between levels will (intentionally) result in assigning a new number.
+* The numeric portion of identifiers are assigned sequentially per category.
+Within a category, identifiers do not carry additional meaning.
