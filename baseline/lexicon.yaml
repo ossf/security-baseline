@@ -35,7 +35,7 @@
     Common ways to invoke automated tests include `make check`, `make test`, `npm test`, and `cargo test` manually or as part of a Continuous Integration workflow.
  - term: Best Practices Badge
   definition: |
-     The OpenSSF Best Practices Badge Identifies FLOSS best practices & implements a badging system for those practices
+     The OpenSSF Best Practices Badge Identifies FLOSS best practices & implements a badging system for those practices.
   synonyms: 
     - BPB
     - OpenSSF Best Practices Badge
