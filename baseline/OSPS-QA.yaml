@@ -260,16 +260,17 @@ criteria:
   - id: OSPS-QA-12
     maturity_level: 3
     criterion: |
-      Provide both source and build software bills of materials 
-      the following data elements for the components used in the build: 
+      The project will provide both source and build software bills 
+      of materials the following data elements for the components 
+      used in the build: 
       - license 
       - supplier name 
-      - filename of the component,
+      - filename of the component
       - component name
       - component version 
       - software identifiers  
       - relationship between the components 
-      - author of the SBOM data and timestamp.  
+      - author of the SBOM data and timestamp  
       
       Additionally, for deployable and executable components
       the SBOM should record their cryptographic hashes.
