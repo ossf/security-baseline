@@ -180,7 +180,7 @@
     multiple forms of identification.
   synonyms:
     - MFA
-- term: Openchain
+- term: OpenChain
   definition: |
     A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
   synonyms: 
@@ -272,7 +272,7 @@
   references: 
     - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
     - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
-    - https://github.com/spdx
+    - https://spdx.dev
     - https://cyclonedx.org
 - term: Software Composition Analysis
   definition: |
