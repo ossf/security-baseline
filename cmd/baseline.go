@@ -22,6 +22,28 @@ type Criterion struct {
 	Details               string            `yaml:"details"`
 	ControlMappings       map[string]string `yaml:"control_mappings"`
 	SecurityInsightsValue string            `yaml:"security_insights_value"`
+	// MinderRules is a collection of references to Minder rules
+	// implementing the criterion.
+	MinderRules []MinderRule `yaml:"minder_rules"`
+}
+
+// MinderRules represents links to Minder rule type definitions along
+// with a configuration snippet.
+type MinderRule struct {
+	// Name is the name of the rule type or any other string to be
+	// shown as the link's anchor text.
+	Name string `yaml:"name"`
+	// URL is the destination of the link. It should preferably
+	// point to a rule type definition, but can also point to
+	// documentation.
+	URL string `yaml:"url"`
+	// Config is an example configuration snippet for the given
+	// rule. Rule configuration might span from simple strings to
+	// structured payloads, and depends on the rule type
+	// definition.
+	//
+	// This is currently rendered as YAML in the final template.
+	Config string `yaml:"config,omitempty"`
 }
 
 // Struct for holding the entire YAML structure

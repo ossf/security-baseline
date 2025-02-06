@@ -106,6 +106,20 @@ For more information on the project and to make contributions, visit the [GitHub
 **Security Insights Value:** {{ .SecurityInsightsValue }}
 {{- end }}
 
+**Minder Rule(s):**
+{{ if .MinderRules }}
+{{- range .MinderRules }}
+- [{{ .Name }}]({{ .URL }})
+{{- if .Config }}
+
+   ```yaml
+   {{ .Config }}
+   ```
+{{- end }}
+{{- end }}
+{{- else }}
+{{- end }}
+
 ---
 
 {{- end }}
