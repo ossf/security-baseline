@@ -33,6 +33,14 @@
     An automated test suite must return an overall "pass" or "fail" result,
     and is often implemented using a test framework.
     Common ways to invoke automated tests include `make check`, `make test`, `npm test`, and `cargo test` manually or as part of a Continuous Integration workflow.
+- term: Best Practices Badge
+  definition: |
+     The OpenSSF Best Practices Badge Identifies FLOSS best practices & implements a badging system for those practices.
+  synonyms: 
+    - BPB
+    - OpenSSF Best Practices Badge
+  references: 
+    -  https://www.bestpractices.dev/en
 - term: Build and Release Pipeline
   definition: |
     A series of automated processes that compile
@@ -110,6 +118,15 @@
     - CRA
   references: 
     - https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+- term: Cybersecurity Framework
+  definition: |
+     The NIST Cyber Security Framework (CSF) helps organizations understand and improve their management of cybersecurity risk.
+  synonyms: 
+    - CSF
+    - NIST Cybersecurity Framework
+  references: 
+    - https://www.nist.gov/cyberframework
+    - https://doi.org/10.6028/NIST.CSWP.29
 - term: Defect
   definition: |
     Errors or flaws in the software that cause it
@@ -163,6 +180,24 @@
     multiple forms of identification.
   synonyms:
     - MFA
+- term: OpenChain
+  definition: |
+    A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
+  synonyms: 
+    - OC 
+    - ISO/IEC 5230
+    - ISO/IEC 18974
+  references: 
+    - https://openchainproject.org/
+    - https://openchainproject.org/license-compliance 
+- term: OpenCRE
+  definition: |
+     An OWASP project that converts cybersecurity requirements into a hierchical, machine-readable format.
+  synonyms: 
+    - OCRE 
+  references: 
+    - https://www.opencre.org/
+    - https://zeljkoobrenovic.github.io/opencre-explorer/ 
 - term: Primary Branch
   definition: |
     The main development branch in the version
@@ -219,6 +254,26 @@
   synonyms:
     - Repo
     - Repositories
+- term: Secure Software Development Framework
+  definition: |
+     The NIST Secure Software Development Framework (SP 800-218) is a broadly reviewed and collaborative set of fundamental secure software development practices.
+  synonyms: 
+    - SSDF 
+    - NIST Secure Software Development Framework
+    - NIST SP 800-218
+  references: 
+    - https://csrc.nist.gov/projects/ssdf 
+    - https://csrc.nist.gov/pubs/sp/800/218/final  
+- term: Software Bill of Materials
+  definition: |
+    A manifest or list of all components that make up a given piece of software or hardware, preferably in a machine-readable/macine-parseable format.
+  synonyms: 
+    - SBOM 
+  references: 
+    - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
+    - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
+    - https://spdx.dev
+    - https://cyclonedx.org
 - term: Software Composition Analysis
   definition: |
     The process of identifying and cataloging all
@@ -240,6 +295,15 @@
     maintained in a separate repository.
     Subprojects may be compiled into the primary
     project or used as standalone components.
+- term: Supply-chain Levels for Software Artifacts
+  definition: |
+    An OpenSSF project that sets guidelines for securing software supply chain infrastrucutre and artifact integrity. 
+  synonyms: 
+    - SLSA 
+    - Supply-chain Levels for Software Artifacts
+  references: 
+    - https://openssf.org/projects/slsa/
+    - https://slsa.dev/
 - term: Threat Modeling
   definition: |
     Threat modeling is an activity where the project
