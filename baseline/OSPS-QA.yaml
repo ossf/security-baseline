@@ -62,38 +62,28 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-QA-03
-    maturity_level: 2
+    maturity_level: 1
     criterion: |
-      All released software assets MUST be
-      delivered with a machine-readable list of
-      all direct and transitive internal software
-      dependencies with their associated version
-      identifiers.
+      The code repository MUST contain a dependency 
+      list that accounts for the direct language dependencies
+      when the package management system supports it.
     rationale: |
       Provide transparency and accountability for
-      the project's dependencies, enabling users
-      and contributors to understand the
-      software's dependencies and versions.
+      the project's dependencies
+      while enabling users and contributors to understand the
+      software's direct dependencies.
     details: |
-      This may take the form of a software bill of
-      materials (SBOM) or a dependency file that
-      lists all direct and transitive dependencies
-      such as package.json, Gemfile.lock, or
-      go.sum.
-
-      It is recommended to use a CycloneDX or SPDX
-      file that is auto-generated at build time by
-      a tool that has been vetted for accuracy.
-      This enables users to ingest this data in a
-      standardized approach alongside other
-      projects in their environment.
+      This may take the form a package manager or
+      language dependency file that ennumerates all
+      direct dependencies such as package.json, 
+      Gemfile, or go.mod.
     control_mappings: 
-      BPB: Q-S-9
-      CRA: 1.2b, 2.1
-      SSDF: PO4, PS1
+      BPB: Q-S-8, Q-S-9
+      CRA: 2.1, 2.3
+      SSDF: PO3.3, PS1
       CSF: ID.AM-02
-      OC: 4.3.1
-      OCRE: 486-813, 124-564, 863-521
+      OC: 4.1.5, 4.3.1
+      OCRE: 486-813, 124-564, 673-475,863-521
     security_insights_value: # TODO
 
   - id: OSPS-QA-04
@@ -236,4 +226,66 @@ criteria:
     implementation: # TODO
     control_mappings:       
       BPB: B-G-3
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-11
+    maturity_level: 3
+    criterion: |
+      All released built software assets MUST be
+      delivered with a software bill of materials
+      (SBOM) in SPDX or CycloneDX format accounting
+      all direct software dependencies with their
+      associated version identifiers.
+    rationale: |
+      Provide transparency and accountability for
+      the project's dependencies in a standard format
+      allowing automated systems to understand the 
+      software's dependencies and versions.
+    details: |
+      It is recommended to use a CycloneDX or SPDX
+      file that is auto-generated at build time by
+      a tool that has been vetted for accuracy.
+      This enables users to ingest this data in a
+      standardized approach alongside other
+      projects in their environment.
+    control_mappings: 
+      BPB: Q-S-9
+      CRA: 13.24, I.II.1, VII.2
+      SSDF: PS3, PW4
+      CSF: ID.AM-02
+      OC: 4.3.1
+      OCRE: 486-813, 124-564, 863-521
+    security_insights_value: # TODO
+
+  - id: OSPS-QA-12
+    maturity_level: 3
+    criterion: |
+      The project will provide both source and build software bills 
+      of materials the following data elements for the components 
+      included in the build: 
+      - license 
+      - supplier name 
+      - filename of the component
+      - component name
+      - component version 
+      - software identifiers  
+      - relationship between the components 
+      - author of the SBOM data and timestamp  
+      
+      Additionally, for deployable and executable components
+      the SBOM should record their cryptographic hashes.
+    rationale: |
+      Provide the minimal data elements required to validate,
+      verify the integrity of software components and assess risk.
+    details: |
+      SBOM generation tools can specialize on one kind of data element.
+      Supplying the required data in multiple software bills of materials 
+      can be done although, ideally, data should be combined into one.
+    control_mappings: 
+      BPB: Q-S-9
+      CRA: 13.24, I.II.1, II.2
+      SSDF: PS3, PW4
+      CSF: ID.AM-02
+      OC: 4.3.1
+      OCRE: 486-813, 124-564, 863-521
     security_insights_value: # TODO
