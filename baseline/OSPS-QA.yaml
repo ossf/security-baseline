@@ -78,12 +78,12 @@ criteria:
       direct dependencies such as package.json, 
       Gemfile, or go.mod.
     control_mappings: 
-      BPB: Q-S-9
-      CRA: 1.2b, 2.1
-      SSDF: PO4, PS1
+      BPB: Q-S-8, Q-S-9
+      CRA: 2.1, 2.3
+      SSDF: PO3.3, PS1
       CSF: ID.AM-02
-      OC: 4.3.1
-      OCRE: 486-813, 124-564, 863-521
+      OC: 4.1.5, 4.3.1
+      OCRE: 486-813, 124-564, 673-475,863-521
     security_insights_value: # TODO
 
   - id: OSPS-QA-04
