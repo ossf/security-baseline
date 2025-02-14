@@ -80,10 +80,10 @@ criteria:
     control_mappings: 
       BPB: Q-S-8, Q-S-9
       CRA: 2.1, 2.3
-      SSDF: PO3.3, PS1
+      SSDF: PO3.3, PS1, PS3.2
       CSF: ID.AM-02
       OC: 4.1.5, 4.3.1
-      OCRE: 486-813, 124-564, 673-475,863-521
+      OCRE: 486-813, 124-564, 673-475,863-521, 613-286
     security_insights_value: # TODO
 
   - id: OSPS-QA-04
@@ -244,10 +244,11 @@ criteria:
       This enables users to ingest this data in a
       standardized approach alongside other
       projects in their environment.
-    control_mappings:
-      BPB: Q-S-9
-      CRA: 13.24, I.II.1, VII.2
-      SSDF: PS3, PW4
-      CSF: ID.AM-02
+    control_mappings: 
+      BPB: Q-S-8, A-S-1
+      CRA: 2.1
+      SSDF: PS3.2, PW4
+      CSF: ID.AM-01, ID.AM-02
       OC: 4.3.1
-      OCRE: 486-813, 124-564, 863-521
+      OCRE: 486-813, 124-564, 863-521, 613-286
+    security_insights_value: # TODO
