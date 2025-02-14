@@ -231,7 +231,7 @@ criteria:
   - id: OSPS-QA-11
     maturity_level: 3
     criterion: |
-      All released built software assets MUST be
+      All compiled released software assets MUST be
       delivered with a software bill of materials.
     rationale: |
       Provide transparency and accountability for
