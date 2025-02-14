@@ -229,7 +229,7 @@ criteria:
     security_insights_value: # TODO
 
   - id: OSPS-QA-11
-    maturity_level: 2
+    maturity_level: 3
     criterion: |
       All released built software assets MUST be
       delivered with a software bill of materials
