@@ -266,10 +266,18 @@
     - https://csrc.nist.gov/pubs/sp/800/218/final  
 - term: Software Bill of Materials
   definition: |
-    A manifest or list of all components that make up a given piece of software or hardware, preferably in a machine-readable/macine-parseable format.
-  synonyms: 
-    - SBOM 
-  references: 
+    A list of all components that make up a given piece of software
+    or hardware, formatted as CycloneDX or SPDX. This list must include
+    the following data elements for the components included in the released
+    software asset: license, supplier name, filename of the component,
+    component name, component version, software identifiers, relationship
+    between the components, author of the SBOM data and timestamp. Additionally,
+    for deployable and executable components, the SBOM should record their
+    cryptographic hashes.
+  synonyms:
+    - SBOM
+    - SBOMs
+  references:
     - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
     - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
     - https://spdx.dev
