@@ -262,7 +262,7 @@ criteria:
     criterion: |
       The project will provide both source and build software bills 
       of materials the following data elements for the components 
-      used in the build: 
+      included in the build: 
       - license 
       - supplier name 
       - filename of the component
