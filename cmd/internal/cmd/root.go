@@ -17,6 +17,7 @@ func Execute() error {
 	// Add the subcommands
 	addCompile(rootCmd)
 	addValidate(rootCmd)
+	addOscal(rootCmd)
 
 	return rootCmd.Execute()
 }
