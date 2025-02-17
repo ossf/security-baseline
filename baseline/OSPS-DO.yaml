@@ -101,29 +101,16 @@ criteria:
       descriptive statement about the scope and
       duration of support.
     rationale: |
-      Stating the support expecations the project
-      has (in this case when the project will no
-      longer be actively supporting the project and 
-      considering it "end of life") are important
-      for downstream consumers to be aware of
-      and understand so they can take relevant actions 
-      to ensure the required functionality can still 
-      be achieved.
+      Provide users with clear expecations regarding
+      the project's support lifecycle. This allows
+      downstream consumers to take relevant actions
+      to ensure the continued functionality and
+      security of their systems.
     implementation: |
-      The project should have either a "Support"
-      header in the README, a SUPPORT.md file
-      present in the repo root, or a SUPPORT.eox
-      file in the [OpenEOX format](https://github.com/OpenEoX/openeox/blob/main/schema/schema.json)
-      describing the scope and duration of support
-      for the project's released software assets.
-
-      [endoflife.date](https://endoflife.date/recommendations) 
-      provides concrete examples of real-life projects (both good
-      and bad) communicating their end of support.
-
-      Alternatively, the project could published their
-      desired support and duration through such outlets 
-      as a project blog, mailing list, or FAQ.
+      In order to communicate the scope and duration of
+      support for the project's released software assets,
+      the project should have a SUPPORT.md or an OpenEoX
+      file in a well known location.
     control_mappings: 
       BPB: R-B-3
       SSDF: PO4.2, PS3.1, RV1.3 
@@ -136,30 +123,18 @@ criteria:
     criterion: |
       The project documentation MUST provide a
       descriptive statement when releases or
-      versions are no longer supported and that
-      will no longer receive security updates.
+      versions will no longer receive security
+      updates.
     rationale: |
-      Communicating when the project will no longer
-      be suipported and/or will no longer fix
-      defects or security vulnerabilities is 
-      crucial for downstream consumers to be
-      made aware of so they may take appropriate
-      actions to find alternative to the project 
-      or find alternative means of support for the
-      provided functionality.
+      Communicating when the project maintainers
+      will no longer fix defects or security
+      vulnerabilities is crucial for downstream
+      consumers to find alternative solutions or
+      alternative means of support for the project.
     implementation: |
-      [OpenEOX format](https://github.com/OpenEoX/openeox/blob/main/schema/schema.json)
-      from OASIS is a machine-readable method to 
-      express the state of lifecycle.
-      
-      [endoflife.date](https://endoflife.date/recommendations) 
-      provides concrete examples of real-life projects (both good
-      and bad) communicating their end of support.
-
-      Alternatively, the project could provide notice through 
-      a project blog, issue, mailing list, or other means
-      that community leverages to communicate
-      project updates
+      While a machine-readable OpenEoX file is recommended,
+      this may also be communicated in a SUPPORT.md or
+      beneath a Support header in the primary README.md.
     control_mappings: 
       CRA: 1.2c, 2.6
       OC: 4.1.1, 4.3.1
