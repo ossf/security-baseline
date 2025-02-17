@@ -1,9 +1,14 @@
-package main
+// SPDX-FileCopyrightText: Copyright 2025 The OSPS Authors
+// SPDX-License-Identifier: Apache-2.0
+
+package baseline
 
 import (
 	"fmt"
 	"regexp"
 	"strings"
+
+	"github.com/ossf/security-baseline/pkg/types"
 )
 
 func containsSynonym(list []string, entryTerm, term string) bool {
@@ -30,7 +35,7 @@ func isWrapped(text string, matched string) bool {
 }
 
 // Function to add links by wrapping terms with square brackets
-func addLinks(text, term string) string {
+func addLinks(lexicon []types.LexiconEntry, text, term string) string {
 	// Escape any special characters in the term to use in regex
 	escapedTerm := regexp.QuoteMeta(term)
 
@@ -44,9 +49,9 @@ func addLinks(text, term string) string {
 			return matched // Skip wrapping if already wrapped in brackets
 		}
 
-		for i, entry := range Lexicon {
+		for i, entry := range lexicon {
 			if entry.Term == term && !containsSynonym(entry.Synonyms, entry.Term, matched) {
-				Lexicon[i].Synonyms = append(entry.Synonyms, matched)
+				lexicon[i].Synonyms = append(entry.Synonyms, matched)
 			}
 		}
 		return fmt.Sprintf("[%s]", matched)
@@ -54,12 +59,12 @@ func addLinks(text, term string) string {
 }
 
 // Main function to apply the term replacements
-func addLinksTemplateFunction(text string) string {
+func addLinksTemplateFunction(lexicon []types.LexiconEntry, text string) string {
 	// Iterate over the lexicon and replace terms with brackets
-	for _, entry := range Lexicon {
-		text = addLinks(text, entry.Term)
+	for _, entry := range lexicon {
+		text = addLinks(lexicon, text, entry.Term)
 		for _, synonym := range entry.Synonyms {
-			text = addLinks(text, synonym)
+			text = addLinks(lexicon, text, synonym)
 		}
 	}
 
