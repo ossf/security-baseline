@@ -29,7 +29,6 @@ criteria:
       SSDF: PO.1, PO.2, PO3.2
       CSF: ID.AM-02
       OCRE: 155-155, 326-704, 068-102, 036-275, 162-655
-    security_insights_value: # TODO
 
   - id: OSPS-SA-02
     maturity_level: 2
@@ -61,7 +60,6 @@ criteria:
       CSF: GV.OC-05, ID.AM-01
       OC: 4.1.4
       OCRE: 155-155, 068-102, 072-713, 820-878
-    security_insights_value: # TODO
 
   - id: OSPS-SA-03
     maturity_level: 3
@@ -98,7 +96,6 @@ criteria:
       CSF: ID.RA-01, ID.RA-04, ID.RA-05, DE.AE-07
       OC: 4.1.5
       OCRE: 068-102, 154-031, 888-770
-    security_insights_value: # TODO
 
   - id: OSPS-SA-04
     maturity_level: 2
@@ -137,4 +134,3 @@ criteria:
       CSF: ID.RA-04, ID.RA-05, DE.AE-07
       OC: 4.1.5
       OCRE: 068-102, 307-242, 660-867
-    security_insights_value: # TODO

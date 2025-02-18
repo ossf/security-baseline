@@ -13,15 +13,14 @@ import (
 
 // Struct for representing each entry
 type Criterion struct {
-	ID                    string            `yaml:"id"`
-	MaturityLevel         int               `yaml:"maturity_level"`
-	Category              string            `yaml:"category"`
-	CriterionText         string            `yaml:"criterion"`
-	Rationale             string            `yaml:"rationale"`
-	Implementation        string            `yaml:"implementation"`
-	Details               string            `yaml:"details"`
-	ControlMappings       map[string]string `yaml:"control_mappings"`
-	SecurityInsightsValue string            `yaml:"security_insights_value"`
+	ID              string            `yaml:"id"`
+	MaturityLevel   int               `yaml:"maturity_level"`
+	Category        string            `yaml:"category"`
+	CriterionText   string            `yaml:"criterion"`
+	Rationale       string            `yaml:"rationale"`
+	Implementation  string            `yaml:"implementation"`
+	Details         string            `yaml:"details"`
+	ControlMappings map[string]string `yaml:"control_mappings"`
 }
 
 // Struct for holding the entire YAML structure

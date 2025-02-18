@@ -32,7 +32,6 @@ criteria:
       CSF: GV.OC-04, GV.OC-05
       OC: 4.1.4
       OCRE: 036-275
-    security_insights_value: # TODO
 
   - id: OSPS-DO-05
     maturity_level: 1
@@ -63,7 +62,6 @@ criteria:
       SSDF: PW1.2, RV1.1, RV2.1, RV1.2
       CSF: RS.MA-02, GV.RM-05
       OC: 4.2.1
-    security_insights_value: # TODO
 
   - id: OSPS-DO-12
     maturity_level: 2
@@ -91,7 +89,6 @@ criteria:
       CRA: 1.2d
       SSDF: PO4.2, PS.2, PS2.1, PS3.1, RV1.3
       OCRE: 171-222 
-    security_insights_value: # TODO
 
   - id: OSPS-DO-13
     maturity_level: 2
@@ -115,7 +112,6 @@ criteria:
       BPB: R-B-3
       SSDF: PO4.2, PS3.1, RV1.3 
       OC: 4.1, 4.3.1
-    security_insights_value: # TODO
 
   - id: OSPS-DO-14
     maturity_level: 3
@@ -139,7 +135,6 @@ criteria:
       CRA: 1.2c, 2.6
       OC: 4.1.1, 4.3.1
       OCRE: 673-475, 053-751
-    security_insights_value: # TODO
 
   - id: OSPS-DO-15
     maturity_level: 2
@@ -165,6 +160,3 @@ criteria:
       BPB: A-S-1
       CRA: 2.1
       OCRE: 613-286, 053-751
-    security_insights_value: 
-      Pinned-Dependencies
-

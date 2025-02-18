@@ -33,7 +33,6 @@ criteria:
       BPB: B-S-1
       CRA: 1.2b, 1.2f
       SSDF: PO3.2, PS1, PW1.2, PW2.1
-    security_insights_value: # TODO
 
   - id: OSPS-LE-02
     maturity_level: 1
@@ -67,7 +66,6 @@ criteria:
       CRA: 1.2b
       SSDF: PO3.2
       CSF: GV.OC-03
-    security_insights_value: # TODO
 
   - id: OSPS-LE-03
     maturity_level: 1
@@ -92,7 +90,6 @@ criteria:
       BPB: B-B-8
       CRA: 1.2b
       SSDF: PO3.2
-    security_insights_value: # TODO
 
   - id: OSPS-LE-04
     maturity_level: 1
@@ -126,4 +123,3 @@ criteria:
       CRA: 1.2b
       SSDF: PO3.2
       CSF: GV.OC-03
-    security_insights_value: # TODO

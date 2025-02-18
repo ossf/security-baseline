@@ -30,7 +30,6 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR.AA-02
       OCRE: 483-813, 124-564, 357-352
-    security_insights_value: # TODO
     
   - id: OSPS-BR-02
     maturity_level: 2
@@ -57,7 +56,6 @@ criteria:
       CRA: 1.2f
       SSDF: PO3.2, PS1, PS2, PS3
       OCRE: 483-813, 124-564
-    security_insights_value: # TODO
 
   - id: OSPS-BR-03
     maturity_level: 1
@@ -80,7 +78,6 @@ criteria:
       CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 263-184
-    security_insights_value: # TODO
 
   - id: OSPS-BR-04
     maturity_level: 2
@@ -104,7 +101,6 @@ criteria:
       CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 347-352, 263-184, 208-355
-    security_insights_value: project-lifecycle.release-process
 
   - id: OSPS-BR-05
     maturity_level: 2
@@ -131,7 +127,6 @@ criteria:
       CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j, 2.1
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 347-352, 715-334
-    security_insights_value: # TODO
 
   - id: OSPS-BR-06
     maturity_level: 2
@@ -158,7 +153,6 @@ criteria:
       CRA: 1.2l, 2.2
       SSDF: PS1, PS2, PS3, PW1.2
       OCRE: 483-813, 124-564, 745-356
-    security_insights_value: # TODO
 
   - id: OSPS-BR-08
     maturity_level: 2
@@ -181,8 +175,6 @@ criteria:
       metadata file.
     control_mappings:
       SSDF: PO5.2, PS2.1, PW6.2
-    security_insights_value: 
-      Signed-Releases
 
   - id: OSPS-BR-09
     maturity_level: 1
@@ -205,7 +197,6 @@ criteria:
       CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 263-184
-    security_insights_value: # TODO
 
   - id: OSPS-BR-10
     maturity_level: 2
@@ -230,4 +221,3 @@ criteria:
       CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
       SSDF: PO3.2, PS1
       OCRE: 483-813, 124-564, 263-184
-    security_insights_value: # TODO
