@@ -102,9 +102,6 @@ For more information on the project and to make contributions, visit the [GitHub
 {{ range $key, $value := .ControlMappings }}| {{ $key | addLinks }} | {{ $value }} |
 {{ end }}
 {{- end }}
-{{ if .SecurityInsightsValue }}
-**Security Insights Value:** {{ .SecurityInsightsValue }}
-{{- end }}
 
 ---
 
