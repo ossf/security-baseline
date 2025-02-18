@@ -149,26 +149,18 @@ criteria:
       description of how the project selects,
       obtains, and tracks its dependencies.
     rationale: |
-      Providing information about how the project
+      Provide information about how the project
       selects, obtains, and tracks dependencies, 
-      libraries, frameworks, etc. help downstream 
+      libraries, frameworks, etc. to help downstream 
       consumers understand how the project operates
       in regards to third-party components that are
       required neccessary for the software to function.
-
-      This information also helps inform downstream
-      consumer of key third-party components they
-      should be monitoring.
     implementation: |
-      Ideally this information is captured along with the
-      projects technical & design documentation and
-      available through a publicy viewable resource
+      It is recommended to publish this information
+      alongside the projects technical & design
+      documentation on a publicy viewable resource
       such as the source code repository, project website, 
       or other channel.
-
-      Having a "dependencies" header in CONTRIBUTING.md or 
-      equivalent contributing documentation could fulfill
-      this criteria.
     control_mappings: 
       BPB: A-S-1
       CRA: 2.1
