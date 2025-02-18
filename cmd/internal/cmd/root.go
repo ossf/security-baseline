@@ -13,7 +13,10 @@ func Execute() error {
 			cmd.Help() //nolint
 		},
 	}
+
+	// Add the subcommands
 	addCompile(rootCmd)
+	addValidate(rootCmd)
 
 	return rootCmd.Execute()
 }
