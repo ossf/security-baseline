@@ -138,6 +138,16 @@
     originally been intentional, but a change in
     environment or understanding has made them
     undesirable.
+- term: OpenEoX
+  definition: |
+    An initiative aimed at standardizing the way
+    End-of-Life and End-of-Support information is 
+    exchanged within the software and hardware industries.
+    Covering both vendors and open-source maintainers,
+    OpenEoX strives to provide a transparent, efficient, 
+    and unified approach to managing product lifecycles.
+  references:
+    - https://openeox.org/
 - term: Exploitable Vulnerabilities
   definition: |
     Defects in the software that can be leveraged
