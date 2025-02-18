@@ -16,6 +16,7 @@ type compileOptions struct {
 	outPath      string
 	baselinePath string
 	templatePath string
+	validate     bool
 }
 
 // Validate the options in context with arguments
@@ -44,6 +45,10 @@ func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
 		&o.templatePath, "template", "t", "template.md", "path to the markdown template file",
 	)
+
+	cmd.PersistentFlags().BoolVarP(
+		&o.validate, "validate", "v", true, "validate data inegrity before rendering",
+	)
 }
 
 // addCompile adds the compile subcommand to the parent command
@@ -71,12 +76,27 @@ func addCompile(parentCmd *cobra.Command) {
 
 			cmd.SilenceUsage = true
 
+			// Load the baseline data
 			loader := baseline.NewLoader()
 			loader.DataPath = opts.baselinePath
 
 			bline, err := loader.Load()
 			if err != nil {
 				return err
+			}
+
+			// Validate the data
+			validator := baseline.NewValidator()
+			err = validator.Check(bline)
+			if err != nil {
+				if opts.validate {
+					fmt.Fprint(os.Stderr, "\n❌ Error validating the baseline data:\n")
+					return err
+				}
+
+				// if the validation flag is off, we still validate but only warn
+				// the user about it
+				fmt.Fprint(os.Stderr, "\n⚠️ Error validating the baseline data (still rendering)")
 			}
 
 			// Generate the rendered version
@@ -87,7 +107,7 @@ func addCompile(parentCmd *cobra.Command) {
 				return fmt.Errorf("writing mardown render: %w", err)
 			}
 
-			fmt.Fprintf(os.Stderr, "\nBaseline rendered to %s:\n\nCategories:\n", opts.outPath)
+			fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s:\n\nCategories:\n", opts.outPath)
 			for c := range bline.Categories {
 				fmt.Fprintf(os.Stderr, " OSPS-%s: %d criteria\n", c, len(bline.Categories[c].Criteria))
 			}
