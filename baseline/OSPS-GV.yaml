@@ -26,7 +26,6 @@ criteria:
     control_mappings: 
       BPB: B-S-3, B-S-4
       OCRE: 013-021
-    security_insights_value: # TODO
 
   - id: OSPS-GV-02
     maturity_level: 1
@@ -53,7 +52,6 @@ criteria:
       CSF:
       OC:
       OCRE:
-    security_insights_value: # TODO
 
   - id: OSPS-GV-03
     maturity_level: 1
@@ -75,7 +73,6 @@ criteria:
       BPB: B-B-4, B-S-3, B-B-4+, R-B-1, Q-G-2
       CRA: 1.2l, 2.4
       SSDF: PW1.2
-    security_insights_value: # TODO
 
   - id: OSPS-GV-04
     maturity_level: 2
@@ -104,7 +101,6 @@ criteria:
       BPB: B-B-5, B-S-3, B-B-4+, Q-G-2
       CRA: 1.2l, 2.1, 2.2, 2.5, 2.6
       OC: 4.1.2
-    security_insights_value: # TODO
 
   - id: OSPS-GV-05
     maturity_level: 2
@@ -137,4 +133,3 @@ criteria:
       SSDF: PO2, PO3.2 
       CSF: PR.AA-02, PR.AA-05
       OCRE: 123-124, 152-725
-    security_insights_value: # TODO

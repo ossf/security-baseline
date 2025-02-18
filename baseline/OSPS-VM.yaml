@@ -33,7 +33,6 @@ criteria:
       CSF: GV.RM-05, GV.RM-06, GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08, ID.IM-02
       OC: 4.1.5, 4.2.1, 4.3.2
       OCRE: 124-564, 832-555, 611-158, 207-435, 088-377
-    security_insights_value: # TODO
 
   - id: OSPS-VM-02
     maturity_level: 3
@@ -59,7 +58,6 @@ criteria:
       CSF: GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08
       OC: 4.1.5
       OCRE: 486-813, 833-442, 611-158, 207-435, 088-377
-    security_insights_value: # TODO
 
   - id: OSPS-VM-03
     maturity_level: 2
@@ -88,7 +86,6 @@ criteria:
       CSF: GV.PO-01, GV.PO-02, ID.RA-01, ID.RA-08
       OC: 4.1.5, 4.2.1, 4.3.2
       OCRE: 887-750
-    security_insights_value: # TODO
 
   - id: OSPS-VM-04
     maturity_level: 3
@@ -117,7 +114,6 @@ criteria:
       SSDF: PO4.1, RV1.2, RV2.1, RV2.2
       OC: 4.1.5
       OCRE: 486-813, 124-564, 757-271
-    security_insights_value: # TODO
 
   - id: OSPS-VM-05
     maturity_level: 1
@@ -141,7 +137,6 @@ criteria:
       CSF: GV.PO-01, GV.PO-02, ID.RA-01
       OC: 4.1.1, 4.1.3, 4.1.5, 4.2.2
       OCRE: 464-513
-    security_insights_value: # TODO
 
   - id: OSPS-VM-06
     maturity_level: 2
@@ -161,7 +156,6 @@ criteria:
       BPB:
       CRA: 1.2a, 1.2b, 2.1, 2.4, 2.6
       OCRE: 308-514
-    security_insights_value: # TODO
 
   - id: OSPS-VM-07
     maturity_level: 2
@@ -179,4 +173,3 @@ criteria:
       vulnerable, and instructions for mitigation or remediation.
     control_mappings:
       CRA: 1.2a, 1.2b, 2.1, 2.4, 2.6
-    security_insights_value: # TODO

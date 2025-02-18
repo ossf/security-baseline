@@ -32,7 +32,6 @@ criteria:
       CRA: 1.2b, 1.2j
       SSDF: PS1, PS2, PS3, PW1.2
       OCRE: 486-813, 124-564
-    security_insights_value: # TODO
 
   - id: OSPS-QA-02
     maturity_level: 1
@@ -59,7 +58,6 @@ criteria:
       CSF: ID.AM-02, ID.RA-01, ID.RA-08
       OC: 4.1.4
       OCRE: 486-813, 124-564, 757-271
-    security_insights_value: # TODO
 
   - id: OSPS-QA-03
     maturity_level: 1
@@ -84,7 +82,6 @@ criteria:
       CSF: ID.AM-02
       OC: 4.1.5, 4.3.1
       OCRE: 486-813, 124-564, 673-475,863-521, 613-286
-    security_insights_value: # TODO
 
   - id: OSPS-QA-04
     maturity_level: 2
@@ -114,7 +111,6 @@ criteria:
       CRA: 1.2f, 1.2k
       SSDF: PO4.1, PS1
       CSF: ID.IM-02
-    security_insights_value: # TODO
 
   - id: OSPS-QA-05
     maturity_level: 3
@@ -147,7 +143,6 @@ criteria:
       CRA: 1.2b, 1.2f
       SSDF: PO3.2, PO4.1, PS1
       OCRE: 486-813, 124-564
-    security_insights_value: # TODO
 
   - id: OSPS-QA-06
     maturity_level: 2
@@ -174,7 +169,6 @@ criteria:
       CRA: 1.2b
       SSDF: PS1
       OCRE: 486-813, 124-564
-    security_insights_value: # TODO
 
   - id: OSPS-QA-08
     maturity_level: 3
@@ -191,7 +185,6 @@ criteria:
       SSDF: PW8.2
       OC: 4.1.5
       OCRE: 207-435, 088-377
-    security_insights_value: # TODO
 
 
   - id: OSPS-QA-09
@@ -211,7 +204,6 @@ criteria:
       CSF: ID.IM-02
       OC: 4.1.5
       OCRE: 207-435, 088-377
-    security_insights_value: # TODO
 
 
   - id: OSPS-QA-10
@@ -226,7 +218,6 @@ criteria:
     implementation: # TODO
     control_mappings:       
       BPB: B-G-3
-    security_insights_value: # TODO
 
   - id: OSPS-QA-11
     maturity_level: 3
@@ -251,4 +242,3 @@ criteria:
       CSF: ID.AM-01, ID.AM-02
       OC: 4.3.1
       OCRE: 486-813, 124-564, 863-521, 613-286
-    security_insights_value: # TODO

@@ -36,7 +36,6 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR.AA-02
       OCRE: 486-813, 124-564, 347-352, 333-858, 152-725, 201-246
-    security_insights_value: # TODO
 
 
   - id: OSPS-AC-02
@@ -61,7 +60,6 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR:AA-02
       OCRE: 486-813, 124-564, 802-056, 368-633, 152-725 
-    security_insights_value: # TODO
 
 
   - id: OSPS-AC-03
@@ -95,7 +93,6 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR.AA-02
       OCRE: 486-813, 124-564, 152-725
-    security_insights_value: # TODO
 
   - id: OSPS-AC-04
     maturity_level: 1
@@ -117,7 +114,6 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR.AA-02
       OCRE: 486-813, 124-564,123-124, 152-725
-    security_insights_value: # TODO
 
   - id: OSPS-AC-05
     maturity_level: 2
@@ -144,7 +140,6 @@ criteria:
       SSDF: PO2, PO3.2, PS1
       CSF: PR.AA-02, PR.AA-05
       OCRE: 486-813, 124-564,347-507, 263-284, 123-124
-    security_insights_value: # TODO
 
     
   - id: OSPS-AC-07
@@ -173,4 +168,3 @@ criteria:
       SSDF: PO3.2, PS1
       CSF: PR.AA-02
       OCRE: 486-813, 124-564,333-858, 102-811, 354-752
-    security_insights_value: # TODO
