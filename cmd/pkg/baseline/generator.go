@@ -8,7 +8,6 @@ import (
 	"html/template"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
@@ -43,18 +42,12 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, path string) error {
 	// Create and parse the template
 	tmpl, err := template.New("baseline").Funcs(template.FuncMap{
 		// Template function to remove newlines and collapse text
-		"collapseNewlines": func(s string) string {
-			return strings.ReplaceAll(s, "\n", " ")
-		},
+		"collapseNewlines": collapseNewlines,
 		"addLinks": func(s string) string {
 			return addLinksTemplateFunction(b.Lexicon, s)
 		},
-		"asLink": func(s string) string {
-			return asLinkTemplateFunction(s)
-		},
-		"subtract": func(a, b int) int {
-			return a - b
-		},
+		"asLink":   asLinkTemplateFunction,
+		"maxLevel": maxLevel,
 	}).Parse(string(templateContent))
 	if err != nil {
 		return fmt.Errorf("error parsing template: %w", err)

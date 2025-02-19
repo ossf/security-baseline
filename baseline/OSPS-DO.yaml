@@ -1,162 +1,259 @@
 category: Documentation
 description: |
-  Documentation criteria focus on the information
+  Documentation focuses on the information
   provided to users, contributors, and maintainers
-  of the project. These criteria help ensure that
+  of the project. These controls help ensure that
   the project's documentation is comprehensive,
   accurate, and up-to-date, enabling users to
   understand the project's features and functionality.
-criteria:
+controls:
+  - id: OSPS-DO-01
+    title: |
+      Provide user guides for all basic functionality in the project
+      documentation
+    objective: |
+      Ensure that users have a clear and comprehensive understanding of the
+      project's current features in order to prevent damage from misuse or
+      misconfiguration.
+    family: Documentation
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-1
+          - B-B-9
+          - B-S-7
+          - B-S-9
+      - reference-id: CRA
+        identifiers:
+          - 1.2b
+          - 1.2j
+          - 1.2k
+      - reference-id: SSDF
+        identifiers:
+          - PW1.2
+      - reference-id: CSF
+        identifiers:
+          - GV.OC-04
+          - GV.OC-05
+      - reference-id: OC
+        identifiers:
+          - 4.1.4
+      - reference-id: OCRE
+        identifiers:
+          - 036-275
+    assessment-requirements:
+      - id: OSPS-DO-01.01
+        text: |
+          The project documentation MUST provide user guides for all basic
+          functionality.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Create user guides or documentation for all basic functionality of the
+          project, explaining how to install, configure, and use the project's
+          features. If there are any known dangerous or destructive actions
+          available, include highly-visible warnings.
+
+  - id: OSPS-DO-02
+    title: |
+      Include a mechanism for reporting defects in the project documentation
+    objective: |
+      Enable users and contributors to report defects or issues with the
+      released software assets, facilitating communication and collaboration on
+      defect fixes and improvements.
+    family: Documentation
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-3
+          - R-B-1+
+          - R-B-1
+          - R-B-2
+          - R-S-2
+      - reference-id: CRA
+        identifiers:
+          - 1.2c
+          - 1.2l
+          - 2.1
+          - 2.2
+          - 2.5
+          - 2.6
+      - reference-id: SSDF
+        identifiers:
+          - PW1.2
+          - RV1.1
+          - RV2.1
+          - RV1.2
+      - reference-id: CSF
+        identifiers:
+          - RS.MA-02
+          - GV.RM-05
+      - reference-id: OC
+        identifiers:
+          - 4.2.1
+    assessment-requirements:
+      - id: OSPS-DO-02.01
+        text: |
+          The project documentation MUST include a mechanism for reporting
+          defects.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          It is recommended that projects use their VCS default issue tracker.
+          If an external source is used, ensure that the project documentation
+          and contributing guide clearly and visibly explain how to use the
+          reporting system. It is recommended that project documentation also
+          sets expectations for how defects will be triaged and resolved.
+
   - id: OSPS-DO-03
-    maturity_level: 1
-    category: Documentation
-    criterion: |
-      The project documentation MUST provide user
-      guides for all basic functionality.
-    rationale: |
-      Ensure that users have a clear and
-      comprehensive understanding of the project's
-      current features in order to prevent damage
-      from misuse or misconfiguration.
-    details: |
-      Create user guides or documentation for all
-      basic functionality of the project,
-      explaining how to install, configure, and
-      use the project's features. If there are any
-      known dangerous or destructive actions
-      available, include highly-visible warnings.
-    control_mappings: 
-      BPB: B-B-1, B-B-9, B-S-7, B-S-9
-      CRA: 1.2b, 1.2j, 1.2k
-      SSDF: PW1.2
-      CSF: GV.OC-04, GV.OC-05
-      OC: 4.1.4
-      OCRE: 036-275
+    title: |
+      Include instructions to verify the integrity and authenticity of release
+      assets in the project documentation
+    objective: |
+      Enable users to verify the authenticity and integrity of the project's
+      released software assets, reducing the risk of using tampered or
+      unauthorized versions of the software.
+    family: Documentation
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - CC-B-8
+      - reference-id: CRA
+        identifiers:
+          - 1.2d
+      - reference-id: SSDF
+        identifiers:
+          - PO4.2
+          - PS.2
+          - PS2.1
+          - PS3.1
+          - RV1.3
+      - reference-id: OCRE
+        identifiers:
+          - 171-222
+    assessment-requirements:
+      - id: OSPS-DO-03.01
+        text: |
+          The project documentation MUST contain instructions to verify the
+          integrity and authenticity of the release assets, including the
+          expected identity of the person or process authoring the software
+          release.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Instructions in the project should contain information about the
+          technology used, the commands to run, and the expected output. The
+          expected identity may be in the form of key IDs used to sign, issuer
+          and identity from a sigstore certificate, or other similar forms.
+          When possible, avoid storing this documentation in the same location
+          as the build and release pipeline to avoid a single breach
+          compromising both the software and the documentation for verifying the
+          integrity of the software.
+
+  - id: OSPS-DO-04
+    title: |
+      Include a descriptive statement about the scope and duration of support
+      in the project documentation
+    objective: |
+      Provide users with clear expectations regarding the project's support
+      lifecycle. This allows downstream consumers to take relevant actions to
+      ensure the continued functionality and security of their systems.
+    family: Documentation
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - R-B-3
+      - reference-id: SSDF
+        identifiers:
+          - PO4.2
+          - PS3.1
+          - RV1.3
+      - reference-id: OC
+        identifiers:
+          - 4.1
+          - 4.3.1
+    assessment-requirements:
+      - id: OSPS-DO-04.01
+        text: |
+          The project documentation MUST include a descriptive statement about
+          the scope and duration of support.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          In order to communicate the scope and duration of support for the
+          project's released software assets, the project should have a
+          SUPPORT.md or an OpenEoX file in a well known location.
 
   - id: OSPS-DO-05
-    maturity_level: 1
-    category: Documentation
-    criterion: |
-      The project documentation MUST include a
-      mechanism for reporting defects.
-    rationale: |
-      Enable users and contributors to report
-      defects or issues with the released software
-      assets, facilitating communication and
-      collaboration on defect fixes and
-      improvements.
-    details: |
-      It is recommended that projects use their
-      VCS default issue tracker. If an extarnal
-      source is used, ensure that the project
-      documentation and contributing guide clearly
-      and visibly explain how to use the reporting
-      system.
+    title: |
+      Provide a descriptive statement when releases or versions will no longer
+      receive security updates in the project documentation
+    objective: |
+      Communicating when the project maintainers will no longer fix defects or
+      security vulnerabilities is crucial for downstream consumers to find
+      alternative solutions or alternative means of support for the project.
+    family: Documentation
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2c
+          - 2.6
+      - reference-id: OC
+        identifiers:
+          - 4.1.1
+          - 4.3.1
+      - reference-id: OCRE
+        identifiers:
+          - 673-475
+          - 053-751
+    assessment-requirements:
+      - id: OSPS-DO-05.01
+        text: |
+          The project documentation MUST provide a descriptive statement when
+          releases or versions will no longer receive security updates.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          While a machine-readable OpenEoX file is recommended, this may also be
+          communicated in a SUPPORT.md or beneath a Support header in the
+          primary README.md.
 
-      It is recommended that project documentation
-      also sets expectations for how defects will
-      be triaged and resolved.
-    control_mappings:
-      BPB: B-B-3, R-B-1+, R-B-1, R-B-2, R-S-2
-      CRA: 1.2c, 1.2l, 2.1, 2.2,2.5, 2.6
-      SSDF: PW1.2, RV1.1, RV2.1, RV1.2
-      CSF: RS.MA-02, GV.RM-05
-      OC: 4.2.1
-
-  - id: OSPS-DO-12
-    maturity_level: 2
-    category: Documentation
-    criterion: |
-      The project documentation MUST contain
-      instructions to verify the integrity 
-      and authenticity of the release assets,
-      including the expected identity of the person
-      or process authoring the software release.
-    rationale: |
-      Enable users to verify the authenticity and
-      integrity of the project's released software
-      assets, reducing the risk of using tampered
-      or unauthorized versions of the software.
-    details: |
-      Instructions in the project should contain
-      information about the technology used, the
-      commands to run, and the expected output. The 
-      expected identity may be in the form of key
-      IDs used to sign, issuer and identity from a
-      sigstore certificate, or other similar forms.
-    control_mappings:  
-      BPB: CC-B-8
-      CRA: 1.2d
-      SSDF: PO4.2, PS.2, PS2.1, PS3.1, RV1.3
-      OCRE: 171-222 
-
-  - id: OSPS-DO-13
-    maturity_level: 2
-    category: Documentation
-    criterion: |
-      The project documentation MUST include a
-      descriptive statement about the scope and
-      duration of support.
-    rationale: |
-      Provide users with clear expecations regarding
-      the project's support lifecycle. This allows
-      downstream consumers to take relevant actions
-      to ensure the continued functionality and
-      security of their systems.
-    implementation: |
-      In order to communicate the scope and duration of
-      support for the project's released software assets,
-      the project should have a SUPPORT.md or an OpenEoX
-      file in a well known location.
-    control_mappings: 
-      BPB: R-B-3
-      SSDF: PO4.2, PS3.1, RV1.3 
-      OC: 4.1, 4.3.1
-
-  - id: OSPS-DO-14
-    maturity_level: 3
-    category: Documentation
-    criterion: |
-      The project documentation MUST provide a
-      descriptive statement when releases or
-      versions will no longer receive security
-      updates.
-    rationale: |
-      Communicating when the project maintainers
-      will no longer fix defects or security
-      vulnerabilities is crucial for downstream
-      consumers to find alternative solutions or
-      alternative means of support for the project.
-    implementation: |
-      While a machine-readable OpenEoX file is recommended,
-      this may also be communicated in a SUPPORT.md or
-      beneath a Support header in the primary README.md.
-    control_mappings: 
-      CRA: 1.2c, 2.6
-      OC: 4.1.1, 4.3.1
-      OCRE: 673-475, 053-751
-
-  - id: OSPS-DO-15
-    maturity_level: 2
-    category: Documentation
-    criterion: |
-      The project documentation MUST include a
-      description of how the project selects,
-      obtains, and tracks its dependencies.
-    rationale: |
-      Provide information about how the project
-      selects, obtains, and tracks dependencies, 
-      libraries, frameworks, etc. to help downstream 
-      consumers understand how the project operates
-      in regards to third-party components that are
-      required neccessary for the software to function.
-    implementation: |
-      It is recommended to publish this information
-      alongside the projects technical & design
-      documentation on a publicy viewable resource
-      such as the source code repository, project website, 
-      or other channel.
-    control_mappings: 
-      BPB: A-S-1
-      CRA: 2.1
-      OCRE: 613-286, 053-751
+  - id: OSPS-DO-06
+    title: |
+      Describe how the project selects, obtains, and tracks its dependencies in
+      the project documentation
+    objective: |
+      Provide information about how the project selects, obtains, and tracks
+      dependencies, libraries, frameworks, etc. to help downstream consumers
+      understand how the project operates in regards to third-party components
+      that are required necessary for the software to function.
+    family: Documentation
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - A-S-1
+      - reference-id: CRA
+        identifiers:
+          - 2.1
+      - reference-id: OCRE
+        identifiers:
+          - 613-286
+          - 053-751
+    assessment-requirements:
+      - id: OSPS-DO-06.01
+        text: |
+          The project documentation MUST include a description of how the
+          project selects, obtains, and tracks its dependencies.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          It is recommended to publish this information alongside the project's
+          technical & design documentation on a publicly viewable resource such
+          as the source code repository, project website, or other channel.

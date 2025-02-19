@@ -56,7 +56,7 @@ func addCompile(parentCmd *cobra.Command) {
 	opts := compileOptions{}
 	compileCmd := &cobra.Command{
 		Use:           "compile [file]",
-		Short:         "Compile a YAML file of security criteria",
+		Short:         "Compile a YAML file of security controls",
 		SilenceUsage:  false,
 		SilenceErrors: true,
 		PreRunE: func(_ *cobra.Command, args []string) error {
@@ -109,7 +109,7 @@ func addCompile(parentCmd *cobra.Command) {
 
 			fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s:\n\nCategories:\n", opts.outPath)
 			for c := range bline.Categories {
-				fmt.Fprintf(os.Stderr, " OSPS-%s: %d criteria\n", c, len(bline.Categories[c].Criteria))
+				fmt.Fprintf(os.Stderr, " OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
 			}
 			fmt.Fprintf(os.Stderr, "\n+ %d lexicon entries\n", len(bline.Lexicon))
 

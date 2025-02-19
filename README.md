@@ -22,7 +22,7 @@ Each entry has the following values:
   - Documentation
   - Quality
   - Legal
-- **Criterion**:
+- **Control**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
   - The term before MUST/NOT is the _subject_ of the requirement

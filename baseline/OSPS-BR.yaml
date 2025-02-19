@@ -1,223 +1,302 @@
 category: Build and Release
 description: |
-  Build and Release criteria focus on the processes and
+  Build and Release focuses on the processes and
   tools used to compile, package, and distribute the
-  project's software. These criteria help ensure that the
+  project's software. These controls help ensure that the
   project's build and release pipelines are secure,
   consistent, and reliable, reducing the risk of
   vulnerabilities or errors in the software distribution
   process.
-criteria:
+controls:
   - id: OSPS-BR-01
-    maturity_level: 1
-    criterion: |
-      The project's build and release pipelines
-      MUST NOT permit untrusted input that allows
-      access to privileged resources.
-    rationale: |
-      Reduce the risk of code injection or other
-      security vulnerabilities in the project's
-      build and release by preventing untrusted input
-      to access privileged resources
-      (secret exfiltration, final release, etc.)
-    details: |
-      Ensure that any integration or release pipeline actions
-      that accept externally-controlled untrusted input (e.g. git
-      branch names) do not use input in ways that could
-      provide unintended access to privileged resources.
-    control_mappings:
-      CRA: 1.2f
-      SSDF: PO3.2, PS1
-      CSF: PR.AA-02
-      OCRE: 483-813, 124-564, 357-352
-    
+    title: |
+      Prevent untrusted input from accessing privileged resources
+    objective: |
+      Reduce the risk of code injection or other security vulnerabilities in the
+      project's build and release pipelines by preventing untrusted input from
+      accessing privileged resources.
+    family: Build and Release
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2f
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PS1
+      - reference-id: CSF
+        identifiers:
+          - PR.AA-02
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+          - 357-352
+    assessment-requirements:
+      - id: OSPS-BR-01.01
+        text: |
+          The project's build and release pipelines MUST NOT permit untrusted
+          input that allows access to privileged resources.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Ensure that any integration or release pipeline actions that accept
+          externally-controlled untrusted input do not use that input in ways
+          that could provide unintended access to privileged resources.
+          An example of a common infraction is improper use of git branch names.
+
   - id: OSPS-BR-02
-    maturity_level: 2
-    criterion: |
-      All releases and released software assets
-      MUST be assigned a unique version
-      identifier for each release intended to be
-      used by users.
-    rationale: |
-      Ensure that each software asset produced by
-      the  project is uniquely identified,
-      enabling users to track changes and updates
-      to the project over time.
-    details: |
-      Assign a unique version identifier to each
-      release and associated software asset
-      produced by the project, following a
-      consistent naming convention or numbering
-      scheme.
-      Examples include SemVer, CalVer, or
-      git commit id.
-    control_mappings:
-      BPB: CC-B-5, CC-B-6, CC-B-7
-      CRA: 1.2f
-      SSDF: PO3.2, PS1, PS2, PS3
-      OCRE: 483-813, 124-564
+    title: |
+      Assign unique version identifiers to all releases and software assets
+    objective: |
+      Ensure that each software asset produced by the project is uniquely
+      identified, enabling users to track changes and updates to the project
+      over time.
+    family: Build and Release
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - CC-B-5
+          - CC-B-6
+          - CC-B-7
+      - reference-id: CRA
+        identifiers:
+          - 1.2f
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PS1
+          - PS2
+          - PS3
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+    assessment-requirements:
+      - id: OSPS-BR-02.01
+        text: |
+          All releases and released software assets MUST be assigned a unique
+          version identifier for each release intended to be used by users.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Assign a unique version identifier to each release and associated
+          software asset produced by the project, following a consistent naming
+          convention or numbering scheme. Examples include SemVer, CalVer, or
+          git commit id.
 
   - id: OSPS-BR-03
-    maturity_level: 1
-    criterion: |
-      Any websites and version control systems
-      involved in the project development
-      MUST be delivered using SSH,
-      HTTPS, or other encrypted channels.
-    rationale: |
-      Protect the confidentiality and integrity
-      of project source code during development,
-      reducing the risk of eavesdropping or data
-      tampering.
-    details: |
-      Configure the project's websites and version
-      control systems to use encrypted channels
-      such as SSH or HTTPS for data transmission.
-    control_mappings: 
-      BPB: B-B-11
-      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 263-184
+    title: |
+      Deliver project websites and version control systems using encrypted
+      channels
+    objective: |
+      Protect the confidentiality and integrity of project source code during
+      development, reducing the risk of eavesdropping or data tampering.
+    family: Build and Release
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-11
+      - reference-id: CRA
+        identifiers:
+          - 1.2d
+          - 1.2e
+          - 1.2f
+          - 1.2i
+          - 1.2j
+          - 1.2k
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PS1
+      - reference-id: OCRE
+        identifiers:
+          - 483-813
+          - 124-564
+          - 263-184
+    assessment-requirements:
+      - id: OSPS-BR-03.01
+        text: |
+          Any websites and version control systems involved in the project
+          development MUST be delivered using SSH, HTTPS, or other encrypted
+          channels.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's websites and version control systems to use
+          encrypted channels such as SSH or HTTPS for data transmission.
 
   - id: OSPS-BR-04
-    maturity_level: 2
-    criterion: |
-      All released software assets MUST be created
-      with consistent, automated build and release
-      pipelines.
-    rationale: |
-      Ensure that the project's software assets
-      are built and released using consistent and
-      automated processes, reducing the risk of
-      errors or inconsistencies in the deployment
-      and distribution of the software.
-    details: |
-      VCS-integrated pipelines are
-      recommended to ensure consistency and
-      automation in the build and release
-      processes.
-    control_mappings:  
-      BPB: Q-B-7
-      CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 347-352, 263-184, 208-355
+    title: |
+      Provide a descriptive log of functional and security modifications in all
+      releases
+    objective: |
+      Provide transparency and accountability for changes made to the project's
+      software releases, enabling users to understand the modifications and
+      improvements included in each release.
+    family: Build and Release
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - CC-B-8
+          - CC-B-9
+      - reference-id: CRA
+        identifiers:
+          - 1.2l
+          - 2.2
+      - reference-id: SSDF
+        identifiers:
+          - PS1
+          - PS2
+          - PS3
+          - PW1.2
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+          - 745-356
+    assessment-requirements:
+      - id: OSPS-BR-04.01
+        text: |
+          All releases MUST provide a descriptive log of functional and security
+          modifications.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Ensure that all releases include a descriptive change log. It is
+          recommended to ensure that the change log is human-readable and
+          includes details beyond commit messages, such as descriptions of the
+          security impact or relevance to different use cases.
 
   - id: OSPS-BR-05
-    maturity_level: 2
-    criterion: |
-      All build and release pipelines MUST use
-      standardized tooling where available to
-      ingest dependencies at build time.
-    rationale: |
-      Ensure that the project's build and release
-      pipelines use standardized tools and
-      processes to manage dependencies, reducing
-      the risk of compatibility issues or security
-      vulnerabilities in the software.
-    details: |
-      Use a common tooling for your ecosystem,
-      such as package managers or dependency
-      management tools to ingest dependencies at
-      build time. This may include using a
-      dependency file, lock file, or manifest to
-      specify the required dependencies, which are
-      then pulled in by the build system.
-    control_mappings:
-      BPB: Q-B-2
-      CRA: 1.2b, 1.2d, 1.2f, 1.2h, 1.2j, 2.1
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 347-352, 715-334
+    title: |
+      Use standardized tooling to ingest dependencies at build time
+    objective: |
+      Ensure that the project's build and release pipelines use standardized tools
+      and processes to manage dependencies, reducing the risk of compatibility
+      issues or security vulnerabilities in the software.
+    family: Build and Release
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - Q-B-2
+      - reference-id: CRA
+        identifiers:
+          - 1.2b
+          - 1.2d
+          - 1.2f
+          - 1.2h
+          - 1.2j
+          - 2.1
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PS1
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+          - 347-352
+          - 715-334
+    assessment-requirements:
+      - id: OSPS-BR-05.01
+        text: |
+          All build and release pipelines MUST use standardized tooling where
+          available to ingest dependencies at build time.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Use a common tooling for your ecosystem, such as package managers or
+          dependency management tools to ingest dependencies at build time. This
+          may include using a dependency file, lock file, or manifest to specify
+          the required dependencies, which are then pulled in by the build
+          system.
 
-  - id: OSPS-BR-06
-    maturity_level: 2
-    criterion: |
-      All releases MUST provide a descriptive log
-      of functional and security modifications.
-    rationale: |
-      Provide transparency and accountability for
-      changes made to the project's software
-      releases, enabling users to understand the
-      modifications and improvements included in
-      each release.
-    details: |
-      Ensure that all releases include a
-      descriptive change log. 
-
-      It is recommended to ensure that the change
-      log is human-readable and includes details
-      beyond commit messages, such as descriptions 
-      of the security impact or relevance to
-      different use cases.
-    control_mappings: 
-      BPB: CC-B-8, CC-B-9
-      CRA: 1.2l, 2.2
-      SSDF: PS1, PS2, PS3, PW1.2
-      OCRE: 483-813, 124-564, 745-356
+  - id: OSPS-BR-07
+    title: |
+      Produce all released software assets with signatures and hashes
+    objective: |
+      Provide users with a mechanism to verify the authenticity and integrity of
+      released software assets, reducing the risk of tampering or unauthorized
+      modifications.
+    family: Build and Release
+    mappings:
+      - reference-id: SSDF
+        identifiers:
+          - PO5.2
+          - PS2.1
+          - PW6.2
+    assessment-requirements:
+      - id: OSPS-BR-07.01
+        text: |
+          All released software assets MUST be signed or accounted for in a
+          signed manifest including each asset's cryptographic hashes.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Sign all released software assets at build time with a cryptographic
+          signature or attestations, such as GPG or PGP signature, Sigstore
+          signatures, SLSA provenance, or SLSA VSAs. Include the cryptographic
+          hashes of each asset in a signed manifest or metadata file.
 
   - id: OSPS-BR-08
-    maturity_level: 2
-    criterion: |
-      All released software assets MUST be signed
-      or accounted for in a signed manifest
-      including each asset's cryptographic hashes.
-    rationale: |
-      Provide users with a mechanism to verify the
-      authenticity and integrity of released 
-      software assets, reducing the risk of
-      tampering or unauthorized modifications.
-    details: |
-      Sign all released software assets at build
-      time with a cryptographic signature or
-      attestations, such  as GPG or PGP signature,
-      Sigstore signatures, SLSA provenance, or SLSA
-      VSAs. Include the cryptographic hashes of
-      each asset in a signed manifest or
-      metadata file.
-    control_mappings:
-      SSDF: PO5.2, PS2.1, PW6.2
-
-  - id: OSPS-BR-09
-    maturity_level: 1
-    criterion: |
-      Any websites or other services involved in the
-      distribution of released software assets MUST
-      be delivered using HTTPS or other encrypted
-      channels.
-    rationale: |
-      Protect the confidentiality and integrity
-      of release assets consumed by the project's
-      users, reducing the risk of eavesdropping or
-      data tampering.
-    details: |
-      Configure the project's websites and
-      distribution services to use encrypted channels
-      such as HTTPS for data transmission.
-    control_mappings: 
-      BPB: B-B-11
-      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 263-184
-
-  - id: OSPS-BR-10
-    maturity_level: 2
-    criterion: |
-      Any websites, API responses or other
-      services involved in release pipelines MUST be
-      fetched using SSH, HTTPS or other encrypted
-      channels.
-    rationale: |
-      Protect the confidentiality and integrity
-      of assets used in the release pipeline,
-      reducing the risk of eavesdropping or data
-      tampering.
-    details: |
-      Configure the project's release pipeline to
-      only fetch data from websites, API
-      responses, and other services which use
-      encrypted channels such as SSH or HTTPS for
-      data transmission.
-    control_mappings: 
-      BPB: B-B-11
-      CRA: 1.2d, 1.2e, 1.2f, 1.2i, 1.2j, 1.2k
-      SSDF: PO3.2, PS1
-      OCRE: 483-813, 124-564, 263-184
+    title: |
+      Deliver project websites and distribution services using encrypted
+      channels
+    objective: |
+      Protect the confidentiality and integrity of release assets consumed by
+      the project's users, reducing the risk of eavesdropping or data tampering.
+    family: Build and Release
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-11
+      - reference-id: CRA
+        identifiers:
+          - 1.2d
+          - 1.2e
+          - 1.2f
+          - 1.2i
+          - 1.2j
+          - 1.2k
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PS1
+      - reference-id: OCRE
+        identifiers:
+          - 483-813
+          - 124-564
+          - 263-184
+    assessment-requirements:
+      - id: OSPS-BR-08.01
+        text: |
+          Any websites or other services involved in the distribution of
+          released software assets MUST be delivered using HTTPS or other
+          encrypted channels.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's websites and distribution services to use
+          encrypted channels such as HTTPS for data transmission.
+      - id: OSPS-BR-08.02
+        text: |
+          Any websites, API responses or other services involved in release
+          pipelines MUST be fetched using encrypted channels.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's release pipeline to only fetch data from
+          websites, API responses, and other services which use encrypted
+          channels such as SSH or HTTPS for data transmission.
