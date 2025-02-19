@@ -48,6 +48,8 @@
     term CI/CD Pipelines, but this term excludes
     some pipelines, such as pre-merge status
     checks.
+  synonyms: 
+    - Build and Release Pipelines
 - term: Change
   definition: |
     Any alteration of the project's codebase,

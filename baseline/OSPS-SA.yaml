@@ -1,136 +1,173 @@
 category: Security Assessment
 description: |
-  Security Assessment criteria encourage practices that
+  Security Assessment encourages practices that
   help ensure that the project is well positioned
   to identify and address security vulnerabilities
   and threats in the software.
-criteria:
+controls:
   - id: OSPS-SA-01
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST provide
-      design documentation demonstrating all
-      actions and actors within the system.
-    rationale: |
-      Provide an overview of the project's design
-      and architecture, illustrating the
-      interactions and components of the system to
-      help contributors and security reviewers
-      understand the internal logic of the
-      released software assets.
-    details: |
-      Include designs in the project documentation
-      that explains the actions and actors. Actors
-      include any subsystem or entity that can
-      influence another segment in the system.
-    control_mappings: 
-      BPB: B-B-1, B-S-7, B-S-8
-      CRA: 1.2a, 1.2b
-      SSDF: PO.1, PO.2, PO3.2
-      CSF: ID.AM-02
-      OCRE: 155-155, 326-704, 068-102, 036-275, 162-655
+    title: |
+      Provide design documentation demonstrating all actions and actors within
+      the system
+    objective: |
+      Provide an overview of the project's design and architecture, illustrating
+      the interactions and components of the system to help contributors and
+      security reviewers understand the internal logic of the released software
+      assets.
+    family: Security Assessment
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-1
+          - B-S-7
+          - B-S-8
+      - reference-id: CRA
+        identifiers:
+          - 1.2a
+          - 1.2b
+      - reference-id: SSDF
+        identifiers:
+          - PO.1
+          - PO.2
+          - PO3.2
+      - reference-id: CSF
+        identifiers:
+          - ID.AM-02
+      - reference-id: OCRE
+        identifiers:
+          - 155-155
+          - 326-704
+          - 068-102
+          - 036-275
+          - 162-655
+    assessment-requirements:
+      - id: OSPS-SA-01.01
+        text: |
+          The project documentation MUST provide design documentation demonstrating
+          all actions and actors within the system.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Include designs in the project documentation that explains the actions and
+          actors. Actors include any subsystem or entity that can influence another
+          segment in the system.
 
   - id: OSPS-SA-02
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST include
-      descriptions of all external software
-      interfaces of the released software assets.
-    rationale: |
-      Provide users and developers with an
-      understanding of how to interact with the
-      project's software and integrate it with
-      other systems, enabling them to use the
-      software effectively.
-    implementation: |
-      The project README should include a link to
-      the API documentation, often under a header
-      such as "Usage", "API Reference", or "Docs".
-      Documentation badges should also be considered
-      when recognized (e.g. readthedocs, godoc, etc.).
-    details: |
-      Document all software interfaces (APIs) of
-      the released software assets, explaining how
-      users can interact with the software and
-      what data is expected or produced.
-    control_mappings: 
-      BPB: B-B-10, B-S-7
-      CRA: 1.2a, 1.2b
-      SSDF: PW1.2
-      CSF: GV.OC-05, ID.AM-01
-      OC: 4.1.4
-      OCRE: 155-155, 068-102, 072-713, 820-878
+    title: |
+      Include descriptions of all external software interfaces of the released
+      software assets
+    objective: |
+      Provide users and developers with an understanding of how to interact with
+      the project's software and integrate it with other systems, enabling them
+      to use the software effectively.
+    family: Security Assessment
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-10
+          - B-S-7
+      - reference-id: CRA
+        identifiers:
+          - 1.2a
+          - 1.2b
+      - reference-id: SSDF
+        identifiers:
+          - PW1.2
+      - reference-id: CSF
+        identifiers:
+          - GV.OC-05
+          - ID.AM-01
+      - reference-id: OC
+        identifiers:
+          - 4.1.4
+      - reference-id: OCRE
+        identifiers:
+          - 155-155
+          - 068-102
+          - 072-713
+          - 820-878
+    assessment-requirements:
+      - id: OSPS-SA-02.01
+        text: |
+          The project documentation MUST include descriptions of all external
+          software interfaces of the released software assets.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Document all software interfaces (APIs) of the released software assets,
+          explaining how users can interact with the software and what data is
+          expected or produced.
+
 
   - id: OSPS-SA-03
-    maturity_level: 3
-    criterion: |
-      The project MUST perform a threat modeling and
-      attack surface analysis to understand and
-      protect against attacks on critical code
-      paths, functions, and interactions within
-      the system.
-    rationale: |
-      Provides project maintainers an understanding of how
-      the software can be misused or broken allows them
-      to plan mitigations to close off the potential of 
-      those threats from occuring.
-
-      Providing downstream consumers with this threat model
-      can assist them in understanding the security capabilities
-      or gaps that exist within the project and allows them 
-      to apply their own additional controls and mitigations.
-    implementation: |
-      Threat modeling is an activity where the project
-      looks at the codebase, associated processes and 
-      infrastructure, interfaces, key components and 
-      "thinks like a hacker" and brainstorms how the 
-      system be be broken or compromised.
-
-      Each identified threat is listed out so the project
-      can then think about how to proactively avoid or 
-      close off any gaps/vulnerabilities that could arise.
-    control_mappings: 
-      BPB: B-S-8
-      CRA: 1.2j, 1.2k
-      SSDF: PO5.1, PW1.1
-      CSF: ID.RA-01, ID.RA-04, ID.RA-05, DE.AE-07
-      OC: 4.1.5
-      OCRE: 068-102, 154-031, 888-770
-
-  - id: OSPS-SA-04
-    maturity_level: 2
-    criterion: |
-        The project MUST perform a security
-        assessment to understand the most likely and
-        impactful potential security problems that
-        could occur within the software.
-    rationale: |
-      Performing a security assessment informs both project 
-      members as well as downstream consumers that the 
-      project understands what problems could arise within
-      the software.
-
-      Understanding what threats could be realized helps
-      the project manage and address risk.  This information
-      is useful to downstream consumers to demonstrate
-      the security accumen and practices of the project.
-    implementation: |
-      Security assessments can take many forms in a spectrum
-      ranging from informal to highly rigourous.  At its most 
-      basic, a security assessment lists potential threats, 
-      estimates the likelihood/probability of those threats
-      occuring and the the possible consquences/impact if those
-      threats do occur.
-
-      Software that is deployed into highly-regulated spaces
-      would benefit from more formal risk management practices
-      such as [NIST SP 800-171](https://csrc.nist.gov/projects/risk-management/about-rmf), 
-      [ENISA's Risk Management Framework](https://www.enisa.europa.eu/topics/risk-management), 
-      or a methodolgy such as [OpenFAIR](https://www.opengroup.org/open-fair).
-    control_mappings: 
-      BPB: B-W-8, S-G-1
-      CRA: 1.1, 2.2
-      SSDF: PO5.1, PW1.1
-      CSF: ID.RA-04, ID.RA-05, DE.AE-07
-      OC: 4.1.5
-      OCRE: 068-102, 307-242, 660-867
+    title: |
+      Perform a threat modeling and attack surface analysis
+    objective: |
+      Provide project maintainers an understanding of how the software can be
+      misused or broken allows them to plan mitigations to close off the potential
+      of those threats from occurring.
+    family: Security Assessment
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-S-8
+          - B-W-8
+          - S-G-1
+      - reference-id: CRA
+        identifiers:
+          - 1.1
+          - 1.2j
+          - 1.2k
+          - 2.2
+      - reference-id: SSDF
+        identifiers:
+          - PO5.1
+          - PW1.1
+      - reference-id: CSF
+        identifiers:
+          - ID.RA-01
+          - ID.RA-04
+          - ID.RA-05
+          - DE.AE-07
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+      - reference-id: OCRE
+        identifiers:
+          - 068-102
+          - 154-031
+          - 888-770
+          - 307-242
+          - 660-867
+    assessment-requirements:
+      - id: OSPS-SA-03.01
+        text: |
+          The project MUST perform a security assessment to understand the most
+          likely and impactful potential security problems that could occur
+          within the software.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Performing a security assessment informs both project members as well
+          as downstream consumers that the project understands what problems
+          could arise within the software. Understanding what threats could be
+          realized helps the project manage and address risk. This information
+          is useful to downstream consumers to demonstrate the security acumen
+          and practices of the project.
+      - id: OSPS-SA-03.02
+        text: |
+          The project MUST perform a threat modeling and attack surface analysis to
+          understand and protect against attacks on critical code paths, functions,
+          and interactions within the system.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Threat modeling is an activity where the project looks at the 
+          codebase, associated processes and infrastructure, interfaces, key
+          components and "thinks like a hacker" and brainstorms how the system
+          be be broken or compromised. Each identified threat is listed out so
+          the project can then think about how to proactively avoid or close off
+          any gaps/vulnerabilities that could arise.
