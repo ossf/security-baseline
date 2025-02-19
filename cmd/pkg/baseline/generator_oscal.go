@@ -61,12 +61,14 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 						Rel:  "reference",
 					},
 				},
-				Parts: &[]oscal.Part{
+				Props: &[]oscal.Property{
 					{
-						ID:    strings.TrimPrefix(criteria.ID, "OSPS-") + "_level",
 						Name:  "maturity-level",
-						Prose: fmt.Sprintf("%d", criteria.MaturityLevel),
+						UUID:  catalogUUID,
+						Value: fmt.Sprintf("%d", criteria.MaturityLevel),
 					},
+				},
+				Parts: &[]oscal.Part{
 					{
 						ID:    strings.TrimPrefix(criteria.ID, "OSPS-") + "_details",
 						Name:  "details",
