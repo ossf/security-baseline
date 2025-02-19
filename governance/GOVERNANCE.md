@@ -36,7 +36,7 @@ To reach a decision on an issue or proposal, the proponents must seek maintainer
 
 ## Review Controls for OSPS Baseline Repository
 
-Any changes intended to be merged in the OSPS Baseline repository shall meet the following minimal controls:
+Any changes intended to be merged in the OSPS Baseline repository shall meet the following minimal criteria:
 
 - Commits must be signed off.
 - Pull requests must be approved by at least two of the project's maintainers.
@@ -56,7 +56,7 @@ After the nomination is filed and deemed valid, [maintainer consensus] may be so
 
 ### Sponsoring Committees
 
-To nominate a community member as a maintainer candidate, a group of maintainers may file a nomination. The committee shall meet the following controls to be qualified to file the nomination:
+To nominate a community member as a maintainer candidate, a group of maintainers may file a nomination. The committee shall meet the following criteria to be qualified to file the nomination:
 
 - The number of members in the committee shall not be less than two (2).
 - Whenever the number of organizations with maintainers in the project is more than two (2), committee members shall be from different organizations.
