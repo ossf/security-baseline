@@ -30,7 +30,7 @@ func (v *Validator) Check(b *types.Baseline) error {
 			if entry.ID == "" {
 				errs = append(errs, fmt.Errorf("missing ID for 'control' %s", entry.ID))
 			}
-			if entry.ControlText == "" {
+			if entry.Title == "" {
 				errs = append(errs, fmt.Errorf("missing 'control' text for %s", entry.ID))
 			}
 			// For after all fields are populated:

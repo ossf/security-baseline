@@ -62,3 +62,7 @@ type FrameworkEntry struct {
 	Version string `yaml:"version"`
 	URL     string `yaml:"url"`
 }
+
+type Frameworks struct {
+	Frameworks []FrameworkEntry `yaml:"mapping-references"`
+}
