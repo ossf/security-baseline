@@ -6,10 +6,15 @@ package baseline
 import (
 	"fmt"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
+
+func collapseNewlines(s string) string {
+	return strings.ReplaceAll(s, "\n", " ")
+}
 
 func containsSynonym(list []string, entryTerm, term string) bool {
 	if strings.EqualFold(entryTerm, term) {
@@ -73,4 +78,24 @@ func addLinksTemplateFunction(lexicon []types.LexiconEntry, text string) string 
 
 func asLinkTemplateFunction(text string) string {
 	return "#" + strings.ToLower(strings.ReplaceAll(text, " ", "-"))
+}
+
+// loop through maturityLevels
+// to see if any are higher than the targetMaturity
+func maxLevel(maturityLevels []string, targetMaturity int) bool {
+	var out bool
+	for _, maturity := range maturityLevels {
+		maturityInt, err := strconv.Atoi(maturity[len(maturity)-1:])
+		if err != nil {
+			fmt.Println(err)
+			return false
+		}
+		if maturityInt == targetMaturity {
+			out = true
+		}
+		if maturityInt < targetMaturity {
+			return false
+		}
+	}
+	return out
 }

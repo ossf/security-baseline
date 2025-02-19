@@ -1,244 +1,345 @@
 category: Quality
 description: |
-  Quality criteria focus on the processes and
+  Quality focuses on the processes and
   practices used to ensure the quality and
   reliability of the project's source code and
-  software assets. These criteria help ensure
+  software assets. These controls help ensure
   that the project's source code is well
   maintained, secure, and reliable, reducing the
   risk of defects or vulnerabilities in the
   software.
-criteria:
+controls:
   - id: OSPS-QA-01
-    maturity_level: 1
-    criterion: |
-      The project's source code MUST be publicly
-      readable and have a static URL.
-    rationale: |
-      Enable users to access and review the
-      project's source code and history, promoting
-      transparency and collaboration within the
-      project community.
-    details: |
-      Use a common VCS such as GitHub, GitLab, or
-      Bitbucket. Ensure the repository is publicly
-      readable. Avoid duplication or mirroring of
-      repositories unless highly visible
-      documentation clarifies the primary source.
-      Avoid frequent changes to the repository
-      that would impact the repository URL.
-    control_mappings: 
-      BPB: CC-B-1
-      CRA: 1.2b, 1.2j
-      SSDF: PS1, PS2, PS3, PW1.2
-      OCRE: 486-813, 124-564
+    title: |
+      Ensure that the project's work processes are publicly transparent
+    objective: |
+      Enable users to access and review the project's source code and history,
+      promoting transparency and collaboration within the project community.
+    family: Quality Assurance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - CC-B-1
+          - CC-B-2
+          - CC-B-3
+          - R-B-5
+      - reference-id: CRA
+        identifiers:
+          - 1.2b
+          - 1.2j
+          - 1.2f
+      - reference-id: SSDF
+        identifiers:
+          - PS1
+          - PS2
+          - PS3
+          - PW1.2
+          - PW2.1
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+          - 757-271
+      - reference-id: CSF
+        identifiers:
+          - ID.AM-02
+          - ID.RA-01
+          - ID.RA-08
+      - reference-id: OC
+        identifiers:
+          - 4.1.4
+    assessment-requirements:
+      - id: OSPS-QA-01.01
+        text: |
+          The project's source code MUST be publicly readable and have a static
+          URL.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Use a common VCS such as GitHub, GitLab, or Bitbucket. Ensure the
+          repository is publicly readable. Avoid duplication or mirroring of
+          repositories unless highly visible documentation clarifies the primary
+          source. Avoid frequent changes to the repository that would impact the
+          repository URL.
+      - id: OSPS-QA-01.02
+        text: |
+          The version control system MUST contain a publicly readable record of
+          all changes made, who made the changes, and when the changes were made.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Use a common VCS such as GitHub, GitLab, or Bitbucket to maintain a
+          publicly readable commit history. Avoid squashing or rewriting commits
+          in a way that would obscure the author of any commits.
 
   - id: OSPS-QA-02
-    maturity_level: 1
-    criterion: |
-      The version control system MUST contain a
-      publicly readable record of all changes
-      made, who made the changes, and when the
-      changes were made.
-    rationale: |
-      Provide transparency and accountability for
-      changes made to the project's codebase,
-      enabling users to track modifications and
-      understand the history of the project.
-    details: |
-      Use a common VCS such as GitHub, GitLab, or
-      Bitbucket to maintain a publicly readable
-      commit history. Avoid squashing or rewriting
-      commits in a way that would obscure the
-      author of any commits.
-    control_mappings: 
-      BPB: CC-B-2, CC-B-3, R-B-5
-      CRA: 1.2b, 1.2f, 1.2j
-      SSDF: PO3.2, PS1, PS2, PS3, PW1.2, PW2.1
-      CSF: ID.AM-02, ID.RA-01, ID.RA-08
-      OC: 4.1.4
-      OCRE: 486-813, 124-564, 757-271
+    title: |
+      Document dependencies for released software assets
+    objective: |
+      Provide transparency and accountability for the project's dependencies
+      while enabling users and contributors to understand the software's direct
+      dependencies.
+    family: Quality Assurance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - Q-S-8
+          - Q-S-9
+      - reference-id: CRA
+        identifiers:
+          - 2.1
+          - 2.3
+      - reference-id: SSDF
+        identifiers:
+          - PO3.3
+          - PS1
+          - PS3.2
+      - reference-id: CSF
+        identifiers:
+          - ID.M-02
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+          - 4.3.1
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+          - 673-475
+          - 863-521
+          - 613-286
+    assessment-requirements:
+      - id: OSPS-QA-02.01
+        text: |
+          The source code repository MUST contain a dependency list that
+          accounts for the direct language dependencies when the package
+          management system supports it.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          This may take the form a package manager or language dependency file
+          that enumerates all direct dependencies such as package.json, Gemfile,
+          or go.mod.
+      - id: OSPS-QA-02.02
+        text: |
+          All compiled released software assets MUST be delivered with a
+          software bill of materials.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          It is recommended to auto-generate SBOMs at build time using a tool
+          that has been vetted for accuracy. This enables users to ingest this
+          data in a standardized approach alongside other projects in their
+          environment.
 
   - id: OSPS-QA-03
-    maturity_level: 1
-    criterion: |
-      The code repository MUST contain a dependency 
-      list that accounts for the direct language dependencies
-      when the package management system supports it.
-    rationale: |
-      Provide transparency and accountability for
-      the project's dependencies
-      while enabling users and contributors to understand the
-      software's direct dependencies.
-    details: |
-      This may take the form a package manager or
-      language dependency file that ennumerates all
-      direct dependencies such as package.json, 
-      Gemfile, or go.mod.
-    control_mappings: 
-      BPB: Q-S-8, Q-S-9
-      CRA: 2.1, 2.3
-      SSDF: PO3.3, PS1, PS3.2
-      CSF: ID.AM-02
-      OC: 4.1.5, 4.3.1
-      OCRE: 486-813, 124-564, 673-475,863-521, 613-286
+    title: |
+      Automated status checks for commits don't fail prior to merge
+    objective: |
+      Ensure that the project's approvers do not become accustomed to tolerating
+      failing status checks, even if arbitrary, because it increases the risk of
+      overlooking security vulnerabilities or defects identified by automated
+      checks.
+    family: Quality Assurance
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2f
+          - 1.2k
+      - reference-id: SSDF
+        identifiers:
+          - PO4.1
+          - PS1
+      - reference-id: CSF
+        identifiers:
+          - ID.IM-02
+    assessment-requirements:
+      - id: OSPS-QA-03.01
+        text: |
+          Any automated status checks for commits MUST pass or require manual
+          acknowledgement prior to merge.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's version control system to require that all
+          automated status checks pass or require manual acknowledgement before a
+          commit can be merged into the primary branch. It is recommended that
+          any optional status checks are NOT configured as a pass or fail
+          requirement that approvers may be tempted to bypass.
 
   - id: OSPS-QA-04
-    maturity_level: 2
-    criterion: |
-      Any automated status checks for commits MUST
-      pass or require manual acknowledgement prior to
-      merge.
-    rationale: |
-      Ensure that the project's approvers do not
-      become accustomed to tolerating failing
-      status checks, even if arbitrary, because it
-      increases the risk of overlooking security
-      vulnerabilities or defects identified by
-      automated checks.
-    details: |
-      Configure the project's version control
-      system to require that all automated status
-      checks pass or require manual acknowledgement
-      before a commit can be merged into the
-      primary branch.
+    title: |
+      Enforce matching requirements for subproject code repositories
+    objective: |
+      Ensure that additional code repositories or subprojects produced by the
+      project are held to a standard that is clear and appropriate for that
+      codebase.
+    family: Quality Assurance
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2b
+          - 1.2f
+      - reference-id: SSDF
+        identifiers:
+          - PO3.2
+          - PO4.1
+          - PS1
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+    assessment-requirements:
+      - id: OSPS-QA-04.01
+        text: |
+          Any additional subproject code repositories produced by the project
+          and compiled into a release MUST enforce security requirements as
+          applicable to the status and intent of the respective codebase.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          The parent project should maintain a list of any codebases that are
+          considered subprojects or additional repositories. Collaborators on
+          those repositories should identify the proper maturity level and apply
+          the Open Source Project Security Baseline to the codebase. Any
+          subproject or repository from the project which is compiled into the
+          primary project must be held to the same standard as the primary
+          project. Others may be held to a lower standard if they have lower
+          levels of adoption or are not intended for general use.
 
-      It is recommended that any optional
-      status checks are NOT configured as a pass
-      or fail requirement that approvers may be
-      tempted to bypass.
-    control_mappings: 
-      CRA: 1.2f, 1.2k
-      SSDF: PO4.1, PS1
-      CSF: ID.IM-02
 
   - id: OSPS-QA-05
-    maturity_level: 3
-    criterion: |
-      Any additional subproject code repositories
-      produced by the project and compiled into a
-      release MUST enforce security requirements as
-      applicable to the status and intent of the
-      respective codebase.
-    rationale: |
-      Ensure that additional code repositories or
-      subprojects produced by the project are held
-      to a standard that clear and appropriate
-      for that codebase.
-    details: |
-      The parent project should maintain a list of
-      any codebases that are considered
-      subprojects or additional repositories.
-      Collaborators on those repositories should
-      identify the proper maturity level and apply
-      the Open Source Project Security Baseline to
-      the codebase. Any subproject or repository
-      from the project which is compiled into the
-      primary project must be held to the same 
-      standard as the primary project. Others may
-      be held to a lower standard if they have
-      lower levels of adoption or are not intended
-      for general use.
-    control_mappings: 
-      CRA: 1.2b, 1.2f
-      SSDF: PO3.2, PO4.1, PS1
-      OCRE: 486-813, 124-564
+    title: |
+      Remove generated executable artifacts from the version control system
+    objective: |
+      Reduce the risk of including generated executable artifacts in the
+      project's version control system, ensuring that only source code and
+      necessary files are stored in the repository.
+    family: Quality Assurance
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2b
+      - reference-id: SSDF
+        identifiers:
+          - PS1
+      - reference-id: OCRE
+        identifiers:
+          - 486-813
+          - 124-564
+    assessment-requirements:
+      - id: OSPS-QA-05.01
+        text: |
+          The version control system MUST NOT contain generated executable
+          artifacts.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Remove generated executable artifacts in the project's version control
+          system. It is recommended that any scenario where a generated
+          executable artifact appears critical to a process such as testing, it
+          should be instead be generated at build time or stored separately and
+          fetched during a specific well-documented pipeline step.
 
   - id: OSPS-QA-06
-    maturity_level: 2
-    criterion: |
-      The version control system MUST NOT contain
-      generated executable artifacts.
-    rationale: |
-      Reduce the risk of including generated
-      executable artifacts in the project's
-      version control system, ensuring that only
-      source code and necessary files are stored
-      in the repository.
-    details: |
-      Remove generated executable artifacts
-      in the project's version control system.
+    title: |
+      Use at least one automated test suite for the source code repository
+    objective: |
+      Ensure that the project uses at least one automated test suite for the
+      source code repository which clearly documents when and how tests are run.
+    family: Quality Assurance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - Q-B-4
+          - Q-B-8
+          - Q-B-9
+          - Q-B-10
+          - Q-S-2
+      - reference-id: CRA
+        identifiers:
+          - 2.3
+      - reference-id: SSDF
+        identifiers:
+          - PW8.2
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+      - reference-id: OCRE
+        identifiers:
+          - 207-435
+          - 088-377
+    assessment-requirements:
+      - id: OSPS-QA-06.01
+        text: |
+          The project MUST use at least one automated test suite for the source
+          code repository.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: | # give examples
+          Automated tests should be run prior to every merge into the primary
+          branch. The test suite should be run in a CI/CD pipeline and the
+          results should be visible to all contributors. The test suite should
+          be run in a consistent environment and should be run in a way that
+          allows contributors to run the tests locally.
+          Examples of test suites include unit tests, integration tests, and
+          end-to-end tests.
+      - id: OSPS-QA-06.02
+        text: |
+          The project's documentation MUST clearly document when and how tests
+          are run.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Add a section to the contributing documentation that explains how to
+          run the tests locally and how to run the tests in the CI/CD pipeline.
+          The documentation should explain what the tests are testing and how to
+          interpret the results.
+      - id: OSPS-QA-06.03
+        text: |
+          The project's documentation MUST include a policy that all major
+          changes to the software produced by the project should add or update
+          tests of the functionality in an automated test suite.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Add a section to the contributing documentation that explains the
+          policy for adding or updating tests. The policy should explain what
+          constitutes a major change and what tests should be added or updated.
 
-      It is recommended that any scenario where a
-      generated executable artifact appears
-      critical to a process such as testing, it
-      should be instead be generated at build time
-      or stored separately and fetched during a
-      specific well-documented pipeline step.
-    control_mappings: 
-      CRA: 1.2b
-      SSDF: PS1
-      OCRE: 486-813, 124-564
-
-  - id: OSPS-QA-08
-    maturity_level: 3
-    criterion: |
-      The project MUST use at least one automated
-      test suite for the source code repository
-      which clearly documents when and how tests
-      are run.
-    rationale: # TODO
-    details: # TODO
-    control_mappings:       
-      BPB: Q-B-4
-      CRA: 2.3
-      SSDF: PW8.2
-      OC: 4.1.5
-      OCRE: 207-435, 088-377
-
-
-  - id: OSPS-QA-09
-    maturity_level: 3
-    criterion: |
-      The project documentation MUST include a
-      policy that all major changes to the
-      software produced by the project should
-      add or update tests of the functionality
-      in an automated test suite.
-    rationale: # TODO
-    details: # TODO
-    control_mappings:       
-      BPB: Q-B-8, Q-B-9, Q-B-10, Q-S-2
-      CRA: 2.3
-      SSDF: PW8.2
-      CSF: ID.IM-02
-      OC: 4.1.5
-      OCRE: 207-435, 088-377
-
-
-  - id: OSPS-QA-10
-    maturity_level: 3
-    category: Governance
-    criterion: |
-      The project's version control system MUST
-      require at least one non-author approval of
-      changes before merging into the release or
-      primary branch.
-    rationale: # TODO
-    implementation: # TODO
-    control_mappings:       
-      BPB: B-G-3
-
-  - id: OSPS-QA-11
-    maturity_level: 3
-    criterion: |
-      All compiled released software assets MUST be
-      delivered with a software bill of materials.
-    rationale: |
-      Provide transparency and accountability for
-      the project's dependencies in a standard format,
-      allowing automated systems to understand the
-      software's dependencies and versions.
-    details: |
-      It is recommended to auto-generate SBOMs at build time
-      using a tool that has been vetted for accuracy.
-      This enables users to ingest this data in a
-      standardized approach alongside other
-      projects in their environment.
-    control_mappings: 
-      BPB: Q-S-8, A-S-1
-      CRA: 2.1
-      SSDF: PS3.2, PW4
-      CSF: ID.AM-01, ID.AM-02
-      OC: 4.3.1
-      OCRE: 486-813, 124-564, 863-521, 613-286
+  - id: OSPS-QA-07
+    title: |
+      Require at least one non-author approval of changes before merging
+    objective: |
+      Ensure that the project's version control system requires at least one
+      non-author approval of changes before merging into the release or primary
+      branch.
+    family: Quality Assurance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-G-3
+    assessment-requirements:
+      - id: OSPS-QA-07.01
+        text: |
+          The project's version control system MUST require at least one
+          non-author approval of changes before merging into the release or
+          primary branch.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's version control system to require at least one
+          non-author approval of changes before merging into the release or
+          primary branch. This can be achieved by requiring a pull request to be
+          reviewed and approved by at least one other contributor before it can
+          be merged.

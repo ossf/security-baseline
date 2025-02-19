@@ -34,7 +34,7 @@ New entries must be added with caution, and breaking changes should be extremely
 
 To reach a decision on an issue or proposal, the proponents must seek maintainer consensus. In the context of this document, "maintainer consensus" means collecting approvals from at least 51% of the current maintainer body, with enough time for all maintainers to review (usually 2 business days), and without a dissenting maintainer opinion.
 
-## Review Criteria for OSPS Baseline Repository
+## Review Controls for OSPS Baseline Repository
 
 Any changes intended to be merged in the OSPS Baseline repository shall meet the following minimal criteria:
 

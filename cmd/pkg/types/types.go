@@ -15,28 +15,38 @@ var Categories = []string{
 }
 
 // Struct for representing each entry
-type Criterion struct {
-	ID                    string            `yaml:"id"`
-	MaturityLevel         int               `yaml:"maturity_level"`
-	Category              string            `yaml:"category"`
-	CriterionText         string            `yaml:"criterion"`
-	Rationale             string            `yaml:"rationale"`
-	Implementation        string            `yaml:"implementation"`
-	Details               string            `yaml:"details"`
-	ControlMappings       map[string]string `yaml:"control_mappings"`
-	SecurityInsightsValue string            `yaml:"security_insights_value"`
+type Control struct {
+	ID           string        `yaml:"id"`
+	Title        string        `yaml:"title"`
+	Objective    string        `yaml:"objective"`
+	Family       string        `yaml:"family"`
+	Mappings     []Mapping     `yaml:"mappings"`
+	Requirements []Requirement `yaml:"assessment-requirements"`
+}
+
+type Mapping struct {
+	ReferenceID string   `yaml:"reference-id"`
+	Identifiers []string `yaml:"identifiers"`
+}
+
+type Requirement struct {
+	ID             string   `yaml:"id"`
+	Text           string   `yaml:"text"`
+	Applicability  []string `yaml:"applicability"`
+	Recommendation string   `yaml:"recommendation"`
 }
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
 	Categories map[string]Category
 	Lexicon    []LexiconEntry
+	Frameworks []FrameworkEntry `yaml:"mapping-references"`
 }
 
 type Category struct {
-	CategoryName string      `yaml:"category"`
-	Description  string      `yaml:"description"`
-	Criteria     []Criterion `yaml:"criteria"`
+	CategoryName string    `yaml:"category"`
+	Description  string    `yaml:"description"`
+	Controls     []Control `yaml:"controls"`
 }
 
 type LexiconEntry struct {
@@ -44,4 +54,15 @@ type LexiconEntry struct {
 	Definition string   `yaml:"definition"`
 	Synonyms   []string `yaml:"synonyms"`
 	References []string `yaml:"references"`
+}
+
+type FrameworkEntry struct {
+	ID      string `yaml:"id"`
+	Title   string `yaml:"title"`
+	Version string `yaml:"version"`
+	URL     string `yaml:"url"`
+}
+
+type Frameworks struct {
+	Frameworks []FrameworkEntry `yaml:"mapping-references"`
 }

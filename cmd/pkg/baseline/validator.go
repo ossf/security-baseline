@@ -23,15 +23,15 @@ func (v *Validator) Check(b *types.Baseline) error {
 	var entryIDs []string
 	var errs = []error{}
 	for _, category := range b.Categories {
-		for _, entry := range category.Criteria {
+		for _, entry := range category.Controls {
 			if slices.Contains(entryIDs, entry.ID) {
-				errs = append(errs, fmt.Errorf("duplicate ID for 'criterion' for %s", entry.ID))
+				errs = append(errs, fmt.Errorf("duplicate ID for 'control' for %s", entry.ID))
 			}
 			if entry.ID == "" {
-				errs = append(errs, fmt.Errorf("missing ID for 'criterion' %s", entry.ID))
+				errs = append(errs, fmt.Errorf("missing ID for 'control' %s", entry.ID))
 			}
-			if entry.CriterionText == "" {
-				errs = append(errs, fmt.Errorf("missing 'criterion' text for %s", entry.ID))
+			if entry.Title == "" {
+				errs = append(errs, fmt.Errorf("missing 'control' text for %s", entry.ID))
 			}
 			// For after all fields are populated:
 			// if entry.Rationale == "" {

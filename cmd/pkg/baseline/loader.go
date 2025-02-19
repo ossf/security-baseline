@@ -13,6 +13,7 @@ import (
 )
 
 const LexiconFilename = "lexicon.yaml"
+const FrameworksFilename = "frameworks.yaml"
 
 // Loader is an object that reads the baseline data
 type Loader struct {
@@ -34,7 +35,13 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error reading lexicon: %w", err)
 	}
+	frameworks, err := l.loadFramework()
+	if err != nil {
+		return nil, fmt.Errorf("error reading frameworks: %w", err)
+	}
+
 	b.Lexicon = lexicon
+	b.Frameworks = frameworks
 
 	for _, catCode := range types.Categories {
 		cat, err := l.loadCategory(catCode)
@@ -64,6 +71,24 @@ func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
 		return nil, fmt.Errorf("error decoding YAML: %v", err)
 	}
 	return lexicon, nil
+}
+
+// loadLexicon
+func (l *Loader) loadFramework() ([]types.FrameworkEntry, error) {
+	file, err := os.Open(filepath.Join(l.DataPath, FrameworksFilename))
+	if err != nil {
+		return nil, fmt.Errorf("error opening file: %w", err)
+	}
+	defer file.Close()
+
+	var frameworks types.Frameworks
+
+	decoder := yaml.NewDecoder(file)
+	decoder.KnownFields(true)
+	if err := decoder.Decode(&frameworks); err != nil {
+		return nil, fmt.Errorf("error decoding YAML: %v", err)
+	}
+	return frameworks.Frameworks, nil
 }
 
 // loadCategory loads a category definition from its YAML source

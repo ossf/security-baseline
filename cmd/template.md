@@ -30,8 +30,8 @@ function toTop() {
 ## Overview
 
 The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to demonstrate a strong security posture.
-The criteria are organized by maturity level and category.
-In the detailed subsections you will find the criterion, rationale, and details notes.
+The controls are organized by maturity level and category.
+In the detailed subsections you will find the control, rationale, and details notes.
 
 
 Where possible, we have added control mappings to external frameworks.
@@ -42,36 +42,44 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ---
 
-## Criteria Overview
+## Controls Overview
 
 * [Level 1](#level-1): for any code or non-code project with any number of maintainers or users
 * [Level 2](#level-2): for any code project that has at least 2 maintainers and a small number of consistent users
 * [Level 3](#level-3): for any code project that has a large number of consistent users
 
-
 ### Level 1
 {{ range .Categories }}
-{{- range .Criteria }}
-{{- if eq .MaturityLevel 1}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- range .Controls }}
+{{- range .Requirements }}
+{{- $req := . }}
+{{- if maxLevel .Applicability 1 }}
+**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
 ### Level 2
 {{ range .Categories }}
-{{- range .Criteria }}
-{{- if eq .MaturityLevel 2}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- range .Controls }}
+{{- range .Requirements }}
+{{- $req := . }}
+{{- if maxLevel .Applicability 2 }}
+**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
 ### Level 3
 {{ range .Categories }}
-{{- range .Criteria }}
-{{- if eq .MaturityLevel 3}}
-**[{{ .ID }}]({{ .ID | asLink }})**: {{ .CriterionText | addLinks }}
+{{- range .Controls }}
+{{- range .Requirements }}
+{{- $req := . }}
+{{- if maxLevel .Applicability 3 }}
+**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
@@ -82,32 +90,43 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{ .Description }}
 
+{{ range .Controls }}
 
-{{- range .Criteria }}
+### {{ .ID }} - {{ .Title | addLinks | collapseNewlines }}
 
-### {{ .ID }}
+{{ .Objective }}
 
-**Criterion:** {{ .CriterionText | addLinks }}
+{{ range .Requirements }}
 
-**Maturity Level:** {{ .MaturityLevel }}
+#### {{ .ID }}
 
-**Rationale:** {{ .Rationale | addLinks}}
-{{ if .Implementation -}}
-**Implementation:** {{ .Implementation | addLinks}}
-{{- end }}
-**Details:** {{ .Details | addLinks }}
-{{ if .ControlMappings }}
-| Catalog | Potential Mappings |
-| ------- | ------------------ |
-{{ range $key, $value := .ControlMappings }}| {{ $key | addLinks }} | {{ $value }} |
+**Requirement:** {{ .Text | addLinks | collapseNewlines }}
+
+**Recommendation:** {{ .Recommendation }}
+
+{{ range .Applicability }}- {{ . }}
 {{ end }}
-{{- end }}
+
+{{ end }}
+
+#### External Framework Mappings
+{{ range .Mappings }}
+  - **{{ .ReferenceID | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
+{{ end }}
 
 ---
 
 {{- end }}
 {{- end }}
 
+## External Frameworks
+
+Controls within this document may map to the following external frameworks:
+
+{{ range .Frameworks }}- [{{ .Title }} ({{ .ID }}): {{ .Version }}]({{ .URL }})
+{{ end }}
+
+---
 
 ## Lexicon
 {{ range .Lexicon }}

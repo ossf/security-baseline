@@ -1,135 +1,174 @@
 category: Governance
 description: |
-  Governance criteria focus on the policies and
+  Governance focuses on the policies and
   procedures that guide the project's decision-making
-  and community interactions. These criteria help ensure
+  and community interactions. These controls help ensure
   that the project is well positioned to respond to
   both threats and opportunities.
-criteria:
+controls:
   - id: OSPS-GV-01
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST include the
-      Roles and Responsibilities for members of the
-      project.
-    rationale: |
-      Documenting project roles and responsibilities
-      helps project particpants, potential contributors,
-      and downstream consumers have an accurate
-      understand of who is working on the project
-      and what areas of authority they may have.
-    implementation: |
-      Document project participants and their roles
-      through such artifacts as members.md, governance.md, 
-      maintainers.md, or similar file within the source 
-      code repository of the project.
-    control_mappings: 
-      BPB: B-S-3, B-S-4
-      OCRE: 013-021
+    title: |
+      Document the Roles and Responsibilities for members of the project in the
+      project documentation
+    objective: |
+      Documenting project roles and responsibilities helps project participants,
+      potential contributors, and downstream consumers have an accurate
+      understanding of who is working on the project and what areas of authority
+      they may have.
+    family: Governance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-S-3
+          - B-S-4
+      - reference-id: OCRE
+        identifiers:
+          - 013-021
+    assessment-requirements:
+      - id: OSPS-GV-01.01
+        text: |
+          The project documentation MUST include the Roles and Responsibilities
+          for members of the project.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Document project participants and their roles through such artifacts
+          as members.md, governance.md, maintainers.md, or similar file within
+          the source code repository of the project.
 
   - id: OSPS-GV-02
-    maturity_level: 1
-    criterion: |
-      The project MUST have one or more mechanisms
-      for public discussions about proposed
-      changes and usage obstacles.
-    rationale: |
-      Encourages open communication and
-      collaboration within the project community,
-      enabling users to provide feedback and
-      discuss proposed changes or usage
-      challenges.
-    details: |
-      Establish one or more mechanisms for public 
-      discussions within the project, such as
-      mailing lists, instant messaging, or issue
-      trackers, to facilitate open communication
-      and feedback.
-    control_mappings: 
-      BPB: B-B-3, B-B-12 
-      CRA: 1.2l, 2.3, 2.4, 2.6
-      SSDF: PS3, PW1.2
-      CSF:
-      OC:
-      OCRE:
+    title: |
+      Establish mechanisms for public discussions about proposed changes and
+      usage obstacles in the project
+    objective: |
+      Encourages open communication and collaboration within the project
+      community, enabling users to provide feedback and discuss proposed changes
+      or usage challenges.
+    family: Governance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-3
+          - B-B-12
+      - reference-id: CRA
+        identifiers:
+          - 1.2l
+          - 2.3
+          - 2.4
+          - 2.6
+      - reference-id: SSDF
+        identifiers:
+          - PS3
+          - PW1.2
+    assessment-requirements:
+      - id: OSPS-GV-02.01
+        text: |
+          The project MUST have one or more mechanisms for public discussions
+          about proposed changes and usage obstacles.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Establish one or more mechanisms for public discussions within the
+          project, such as mailing lists, instant messaging, or issue trackers,
+          to facilitate open communication and feedback.
 
   - id: OSPS-GV-03
-    maturity_level: 1
-    criterion: |
-      The project documentation MUST include an
-      explanation of the contribution process.
-    rationale: |
-      Provide guidance to new contributors on how
-      to participate in the project, outlining the
-      steps required to submit changes or
-      enhancements to the project's codebase.
-    details: |
-      Create a CONTRIBUTING.md or CONTRIBUTING/
-      directory to outline the contribution
-      process including the steps for submitting
-      changes, and engaging with the project
-      maintainers.
-    control_mappings: 
-      BPB: B-B-4, B-S-3, B-B-4+, R-B-1, Q-G-2
-      CRA: 1.2l, 2.4
-      SSDF: PW1.2
+    title: |
+      Include an explanation of the contribution process in the project
+      documentation
+    objective: |
+      Provide guidance to new contributors on how to participate in the project,
+      outlining the steps required to submit changes or enhancements to the
+      project's codebase.
+    family: Governance
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-4
+          - B-S-3
+          - B-B-4+
+          - R-B-1
+          - Q-G-2
+      - reference-id: CRA
+        identifiers:
+          - 1.2l
+          - 2.4
+          - 2.1
+          - 2.2
+          - 2.5
+          - 2.6
+      - reference-id: SSDF
+        identifiers:
+          - PW1.2
+      - reference-id: OC
+        identifiers:
+          - 4.1.2
+    assessment-requirements:
+      - id: OSPS-GV-03.01
+        text: |
+          The project documentation MUST include an explanation of the
+          contribution process.
+        applicability:
+          - Maturity Level 1
+        recommendation: |
+          Create a CONTRIBUTING.md or CONTRIBUTING/ directory to outline the
+          contribution process including the steps for submitting changes, and
+          engaging with the project maintainers.
+      - id: OSPS-GV-03.02
+        text: |
+          The project documentation MUST include a guide for code contributors
+          that includes requirements for acceptable contributions.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Extend the CONTRIBUTING.md or CONTRIBUTING/ contents in the project
+          documentation to outline the requirements for acceptable
+          contributions, including coding standards, testing requirements, and
+          submission guidelines for code contributors. It is recommended that
+          this guide is the source of truth for both contributors and approvers.
 
   - id: OSPS-GV-04
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST include a
-      guide for code contributors that includes
-      requirements for acceptable contributions.
-    rationale: |
-      Provide guidance to code contributors on how
-      to submit changes and enhancements to the
-      project's codebase, outlining the standards
-      and expectations for acceptable
-      contributions.
-    details: |
-      Extend the CONTRIBUTING.md or CONTRIBUTING/
-      contents in the project documentation to
-      outline the requirements for acceptable
-      contributions, including coding standards,
-      testing requirements, and submission
-      guidelines for code contributors.
-
-      It is recommended that this guide is the
-      source of truth for both contributors and
-      approvers.
-    control_mappings: 
-      BPB: B-B-5, B-S-3, B-B-4+, Q-G-2
-      CRA: 1.2l, 2.1, 2.2, 2.5, 2.6
-      OC: 4.1.2
-
-  - id: OSPS-GV-05
-    maturity_level: 2
-    criterion: |
-      The project documentation MUST have a policy
-      that code contributors are reviewed prior to
-      granting escalated permissions to sensitive
-      resources.
-    rationale: |
-      Ensure that code contributors are vetted and
-      reviewed before being granted elevated
-      permissions to sensitive resources within
-      the project, reducing the risk of
-      unauthorized access or misuse.
-    details: |
-      Publish an enforceable policy in the project
-      documentation that requires code
-      contributors to be reviewed and approved
-      before being granted escalated permissions
-      to sensitive resources, such as merge
-      approval or access to secrets.
-
-      It is recommended that vetting includes
-      establishing a justifiable lineage of
-      identity such as confirming the
-      contributor's association with a known
-      trusted organization.
-    control_mappings: 
-      CRA: 1.2d
-      SSDF: PO2, PO3.2 
-      CSF: PR.AA-02, PR.AA-05
-      OCRE: 123-124, 152-725
+    title: |
+      Implement a policy that code contributors are reviewed prior to granting
+      escalated permissions to sensitive resources in the project documentation
+    objective: |
+      Ensure that code contributors are vetted and reviewed before being granted
+      elevated permissions to sensitive resources within the project, reducing
+      the risk of unauthorized access or misuse.
+    family: Governance
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2d
+      - reference-id: SSDF
+        identifiers:
+          - PO2
+          - PO3.2
+      - reference-id: CSF
+        identifiers:
+          - PR.AA-02
+          - PR.AA-05
+      - reference-id: OCRE
+        identifiers:
+          - 123-124
+          - 152-725
+    assessment-requirements:
+      - id: OSPS-GV-04.01
+        text: |
+          The project documentation MUST have a policy that code contributors
+          are reviewed prior to granting escalated permissions to sensitive
+          resources.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Publish an enforceable policy in the project documentation that
+          requires code contributors to be reviewed and approved before being
+          granted escalated permissions to sensitive resources, such as merge
+          approval or access to secrets. It is recommended that vetting includes
+          establishing a justifiable lineage of identity such as confirming the
+          contributor's association with a known trusted organization.
