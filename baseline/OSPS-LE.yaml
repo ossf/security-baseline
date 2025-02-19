@@ -86,7 +86,7 @@ controls:
           such licenses include the MIT, BSD 2-clause, BSD 3-clause revised,
           Apache 2.0, Lesser GNU General Public License (LGPL), and the GNU
           General Public License (GPL). Releasing to the public domain meets
-          this criterion if there are no other encumbrances such as patents.
+          this control if there are no other encumbrances such as patents.
 
   - id: OSPS-LE-03
     title: |

@@ -54,7 +54,7 @@ controls:
           Enforce multi-factor authentication for the project's version
           control system, requiring collaborators to provide a second form of
           authentication when accessing sensitive data or modifying repository
-          settings. Passkeys are acceptable for this criterion.
+          settings. Passkeys are acceptable for this control.
 
   - id: OSPS-AC-02
     title: |

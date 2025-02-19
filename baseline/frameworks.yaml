@@ -2,7 +2,7 @@ mapping-references:
   - id: BPB
     title: OpenSSF Best Practices Badge
     version: 2024
-    url: https://github.com/coreinfrastructure/best-practices-badge/blob/main/criteria/criteria.yml
+    url: https://github.com/coreinfrastructure/best-practices-badge/blob/main/controls/controls.yml
   - id: CSF
     title: NIST Cybersecurity Framework
     version: 2.0

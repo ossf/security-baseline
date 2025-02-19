@@ -29,9 +29,9 @@ function toTop() {
 
 ## Overview
 
-The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to be considered secure.
-The criteria are organized by maturity level and category.
-In the detailed subsections you will find the criterion, rationale, and details notes.
+The Open Source Project Security (OSPS) Baseline is a set of security controls that projects should meet to be considered secure.
+The controls are organized by maturity level and category.
+In the detailed subsections you will find the control, rationale, and details notes.
 
 
 Where possible, we have added control mappings to external frameworks.
@@ -42,7 +42,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ---
 
-## Criteria Overview
+## Controls Overview
 
 * [Level 1](#level-1): for any code or non-code project with any number of maintainers or users
 * [Level 2](#level-2): for any code project that has at least 2 maintainers and a small number of consistent users

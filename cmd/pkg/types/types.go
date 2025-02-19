@@ -15,11 +15,11 @@ var Categories = []string{
 }
 
 // Struct for representing each entry
-type Criterion struct {
+type Control struct {
 	ID                    string            `yaml:"id"`
 	MaturityLevel         int               `yaml:"maturity_level"`
 	Category              string            `yaml:"category"`
-	CriterionText         string            `yaml:"criterion"`
+	ControlText           string            `yaml:"control"`
 	Rationale             string            `yaml:"rationale"`
 	Implementation        string            `yaml:"implementation"`
 	Details               string            `yaml:"details"`
@@ -34,9 +34,9 @@ type Baseline struct {
 }
 
 type Category struct {
-	CategoryName string      `yaml:"category"`
-	Description  string      `yaml:"description"`
-	Criteria     []Criterion `yaml:"criteria"`
+	CategoryName string    `yaml:"category"`
+	Description  string    `yaml:"description"`
+	Controls     []Control `yaml:"controls"`
 }
 
 type LexiconEntry struct {
