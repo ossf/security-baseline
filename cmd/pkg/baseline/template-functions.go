@@ -77,7 +77,9 @@ func addLinksTemplateFunction(lexicon []types.LexiconEntry, text string) string 
 }
 
 func asLinkTemplateFunction(text string) string {
-	return "#" + strings.ToLower(strings.ReplaceAll(text, " ", "-"))
+	return "#" + strings.ToLower(
+		strings.ReplaceAll(
+			strings.ReplaceAll(text, " ", "-"), ".", ""))
 }
 
 // loop through maturityLevels
