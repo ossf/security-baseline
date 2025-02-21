@@ -18,6 +18,9 @@ const (
 	VersionOSPS = "devel"
 	controlHREF = "https://baseline.openssf.org/versions/%s#%s"
 	catalogUUID = "8c222a23-fc7e-4ad8-b6dd-289014f07a9f"
+
+	// OpenSSFNS is the OSCAL namespace URI to define the baseline names.
+	OpenSSFNS = "http://baseline.openssf.org/ns/oscal"
 )
 
 func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
@@ -30,6 +33,7 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 			Links: &[]oscal.Link{
 				{
 					Href: fmt.Sprintf(controlHREF, VersionOSPS, ""),
+					Rel:  "canonical",
 				},
 			},
 			OscalVersion: "1.1.3",
@@ -58,13 +62,20 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 				parts = append(parts, oscal.Part{
 					Class: control.ID,
 					ID:    ar.ID,
-					Links: &[]oscal.Link{},
-					Name:  "",
+					Name:  ar.ID,
 					Ns:    "",
 					Parts: &[]oscal.Part{
 						{
-							ID:    ar.ID + "_recommendation",
+							ID:    ar.ID + ".R",
+							Name:  "recomemendation",
+							Ns:    OpenSSFNS,
 							Prose: ar.Recommendation,
+							Links: &[]oscal.Link{
+								{
+									Href: fmt.Sprintf(controlHREF, VersionOSPS, ar.ID),
+									Rel:  "canonical",
+								},
+							},
 						},
 					},
 					Prose: ar.Text,
@@ -73,12 +84,12 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 			}
 
 			newCtl := oscal.Control{
-				Class: control.ID[0:7], // OSPS-BR-01,
+				Class: code,
 				ID:    control.ID,
 				Links: &[]oscal.Link{
 					{
 						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(control.ID)),
-						Rel:  "reference",
+						Rel:  "canonical",
 					},
 				},
 				Parts: &parts,
@@ -92,9 +103,17 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 	}
 	catalog.Groups = &catalogGroups
 
+	// Wrap the catalog to render the required "catalog" wrapper
+	// in the JSON file:
+	var wrapper = struct {
+		Catalog oscal.Catalog `json:"catalog"`
+	}{
+		Catalog: catalog,
+	}
+
 	enc := json.NewEncoder(w)
 	enc.SetIndent("", "  ")
-	if err := enc.Encode(catalog); err != nil {
+	if err := enc.Encode(wrapper); err != nil {
 		return fmt.Errorf("encoding oscal json data: %w", err)
 	}
 	return nil
