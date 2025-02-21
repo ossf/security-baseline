@@ -67,7 +67,7 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 					Parts: &[]oscal.Part{
 						{
 							ID:    ar.ID + ".R",
-							Name:  "recomemendation",
+							Name:  "recommendation",
 							Ns:    OpenSSFNS,
 							Prose: ar.Recommendation,
 							Links: &[]oscal.Link{
