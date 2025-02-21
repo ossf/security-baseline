@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   verify:
+    name: Setup and Generate
     runs-on: ubuntu-latest
     steps:
       - name: clone-baseline
@@ -32,10 +33,22 @@ jobs:
           check-latest: true
           cache: true
 
+      - name: Setup Java
+        uses: actions/setup-java@c3ac5dd0ed8db40fedb61c32fbe677e6b355e94c
+        id: setup-java
+        with:
+          distribution: adopt
+          java-version: 11
+
       - run: |
           go build -C .build/go-oscal/ -o ${PWD}/go-oscal
           go build -C cmd/  -o ../baseline-compiler
           ./baseline-compiler oscal -b baseline > oscal-sample.json
           ./go-oscal validate --input-file oscal-sample.json 
+
+      - name: Validate Catalog with oscal-club/NIST CLI
+        uses: oscal-club/oscal-cli-action@17a1414ce8a95a96959d5524984a0b4baf8f2158 # v1.0.4
+        with:
+          args: catalog validate oscal-sample.json 
             
             
