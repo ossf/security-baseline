@@ -219,7 +219,7 @@ controls:
           the required dependencies, which are then pulled in by the build
           system.
 
-  - id: OSPS-BR-07
+  - id: OSPS-BR-06
     title: |
       Produce all released software assets with signatures and hashes
     objective: |
@@ -234,7 +234,7 @@ controls:
           - PS2.1
           - PW6.2
     assessment-requirements:
-      - id: OSPS-BR-07.01
+      - id: OSPS-BR-06.01
         text: |
           All released software assets MUST be signed or accounted for in a
           signed manifest including each asset's cryptographic hashes.
@@ -247,7 +247,7 @@ controls:
           signatures, SLSA provenance, or SLSA VSAs. Include the cryptographic
           hashes of each asset in a signed manifest or metadata file.
 
-  - id: OSPS-BR-08
+  - id: OSPS-BR-07
     title: |
       Deliver project websites and distribution services using encrypted
       channels
@@ -277,7 +277,7 @@ controls:
           - 124-564
           - 263-184
     assessment-requirements:
-      - id: OSPS-BR-08.01
+      - id: OSPS-BR-07.01
         text: |
           Any websites or other services involved in the distribution of
           released software assets MUST be delivered using HTTPS or other
@@ -289,7 +289,7 @@ controls:
         recommendation: |
           Configure the project's websites and distribution services to use
           encrypted channels such as HTTPS for data transmission.
-      - id: OSPS-BR-08.02
+      - id: OSPS-BR-07.02
         text: |
           Any websites, API responses or other services involved in release
           pipelines MUST be fetched using encrypted channels.

@@ -194,7 +194,7 @@ controls:
           method for reporting vulnerabilities. Set expectations for the how the
           project will respond and address reported issues.
 
-  - id: OSPS-VM-05
+  - id: OSPS-VM-04
     title: |
       Publish contacts and process for reporting vulnerabilities
     objective: |
@@ -228,7 +228,7 @@ controls:
         identifiers:
           - 464-513
     assessment-requirements:
-      - id: OSPS-VM-05.01
+      - id: OSPS-VM-04.01
         text: |
           The project MUST publish contacts and process for reporting vulnerabilities.
         applicability:
@@ -238,7 +238,7 @@ controls:
           contacts for the project and provide project's process for handling
           vulnerabilities in the project or dependencies.
 
-  - id: OSPS-VM-06
+  - id: OSPS-VM-05
     title: |
       Provide a means for reporting security vulnerabilities privately
     objective: |
@@ -258,7 +258,7 @@ controls:
         identifiers:
           - 308-514
     assessment-requirements:
-      - id: OSPS-VM-06.01
+      - id: OSPS-VM-05.01
         text: |
           The project MUST provide a means for reporting security
           vulnerabilities privately to the security contacts within the project.
@@ -268,7 +268,7 @@ controls:
         recommendation: |
           Enable private bug reporting through VCS or other infrastructure.
 
-  - id: OSPS-VM-07
+  - id: OSPS-VM-06
     title: |
       Publicly publish data about any vulnerabilities discovered
     objective: |
@@ -284,7 +284,7 @@ controls:
           - 2.4
           - 2.6
     assessment-requirements:
-      - id: OSPS-VM-07.01
+      - id: OSPS-VM-06.01
         text: |
           The project MUST publicly publish data about discovered 
           vulnerabilities.
