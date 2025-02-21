@@ -51,47 +51,39 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 
 		controls := []oscal.Control{}
 
-		for _, criteria := range cat.Criteria {
+		for _, control := range cat.Controls {
+
+			parts := []oscal.Part{}
+			for _, ar := range control.Requirements {
+				parts = append(parts, oscal.Part{
+					Class: control.ID,
+					ID:    ar.ID,
+					Links: &[]oscal.Link{},
+					Name:  "",
+					Ns:    "",
+					Parts: &[]oscal.Part{
+						{
+							ID:    ar.ID + "_recommendation",
+							Prose: ar.Recommendation,
+						},
+					},
+					Prose: ar.Text,
+					Title: "",
+				})
+			}
+
 			newCtl := oscal.Control{
-				Class: criteria.Category,
-				ID:    strings.TrimPrefix(criteria.ID, "OSPS-"),
+				Class: control.ID[0:7], // OSPS-BR-01,
+				ID:    control.ID,
 				Links: &[]oscal.Link{
 					{
-						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(criteria.ID)),
+						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(control.ID)),
 						Rel:  "reference",
 					},
 				},
-				Props: &[]oscal.Property{
-					{
-						Name:  "maturity-level",
-						UUID:  catalogUUID,
-						Value: fmt.Sprintf("%d", criteria.MaturityLevel),
-					},
-				},
-				Parts: &[]oscal.Part{
-					{
-						ID:    strings.TrimPrefix(criteria.ID, "OSPS-") + "_details",
-						Name:  "details",
-						Prose: strings.TrimSpace(criteria.Details),
-					},
-					{
-						ID:    strings.TrimPrefix(criteria.ID, "OSPS-") + "_rationale",
-						Name:  "rationale",
-						Prose: strings.TrimSpace(criteria.Rationale),
-					},
-				},
-				Title: strings.TrimSpace(criteria.CriterionText),
+				Parts: &parts,
+				Title: strings.TrimSpace(control.Title),
 			}
-
-			if criteria.Implementation != "" {
-				pts := append(*newCtl.Parts, oscal.Part{
-					ID:    strings.TrimPrefix(criteria.ID, "OSPS-") + "_implementation",
-					Name:  "implementation",
-					Prose: strings.TrimSpace(criteria.Implementation),
-				})
-				newCtl.Parts = &pts
-			}
-
 			controls = append(controls, newCtl)
 		}
 
