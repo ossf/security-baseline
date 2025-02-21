@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: Copyright 2025 The Open Source Project Security Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+name: Validate OSCAL Output
+
+on:
+  pull_request: {}
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Setup and Generate
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone-baseline
+        id: clone-baseline
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+                persist-credentials: false
+
+      - name: clone-go-oscal
+        id: clone-go-oscal
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+            repository: defenseunicorns/go-oscal
+            path: .build/go-oscal/
+            persist-credentials: false
+
+      - uses: actions/setup-go@f111f3307d8850f501ac008e886eec1fd1932a34 # v5.3.0
+        name: setup-go
+        with:
+          go-version: '1.24'
+          check-latest: true
+          cache: true
+
+      - name: Setup Java
+        uses: actions/setup-java@c3ac5dd0ed8db40fedb61c32fbe677e6b355e94c
+        id: setup-java
+        with:
+          distribution: adopt
+          java-version: 11
+
+      - run: |
+          go build -C .build/go-oscal/ -o ${PWD}/go-oscal
+          go build -C cmd/  -o ../baseline-compiler
+          ./baseline-compiler oscal -b baseline > oscal-sample.json
+          ./go-oscal validate --input-file oscal-sample.json 
+
+      - name: Validate Catalog with oscal-club/NIST CLI
+        uses: oscal-club/oscal-cli-action@17a1414ce8a95a96959d5524984a0b4baf8f2158 # v1.0.4
+        with:
+          args: catalog validate oscal-sample.json 
+            
+            
