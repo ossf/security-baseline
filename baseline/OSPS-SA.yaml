@@ -100,7 +100,6 @@ controls:
           explaining how users can interact with the software and what data is
           expected or produced.
 
-
   - id: OSPS-SA-03
     title: |
       Perform a threat modeling and attack surface analysis
