@@ -12,7 +12,7 @@ Downstream consumers of the OSPS Baseline should specify their compliance agains
 Only the version labeled as "current" should be used for new compliance efforts.
 
 * [In-development version](versions/devel)
-* Current version: [devel](versions/devel)
+* Current version: [v2025.02.25-rc](versions/2025-02-25-rc)
 * Previous versions:
     * (none)
 
