@@ -98,10 +98,10 @@ controls:
 
   - id: OSPS-AC-03
     title: |
-      Prevent unintentional direct commits against the primary branch
+      Prevent the primary branch from unintentional or unauthorized changes
     objective: |
-      Reduce the risk of accidental changes to the primary branch of the 
-      project's repository by preventing unintentional direct commits.
+      Reduce the risk of accidental changes or deletion of the primary branch
+      of the project's repository by preventing unintentional modification.
     family: Access Control
     mappings:
       - reference-id: CRA
@@ -118,6 +118,7 @@ controls:
         identifiers:
           - 486-813
           - 124-564
+          - 123-124
           - 152-725
     assessment-requirements:
       - id: OSPS-AC-03.01
@@ -134,34 +135,7 @@ controls:
           like the Linux kernel's, where changes are first proposed in another
           repository, and merging changes into the primary repository requires a
           specific separate act.
-
-  - id: OSPS-AC-04
-    title: |
-      Prevent unintentional deletion of the primary branch
-    objective: |
-      Protect the primary branch of the project's repository from accidental
-      deletion, ensuring that the project's history and codebase are preserved.
-    family: Access Control
-    mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO3.2
-          - PS1
-      - reference-id: CSF
-        identifiers:
-          - PR.AA-02
-      - reference-id: OCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 123-124
-          - 152-725
-    assessment-requirements:
-      - id: OSPS-AC-04.01
+      - id: OSPS-AC-03.02
         text: |
           The project's version control system MUST prevent unintentional
           deletion of the primary branch.
@@ -173,7 +147,7 @@ controls:
           Set branch protection on the primary branch in the project's version
           control system to prevent deletion.
 
-  - id: OSPS-AC-05
+  - id: OSPS-AC-04
     title: |
       Configure the project's permissions in CI/CD pipelines
     objective: |
@@ -204,7 +178,7 @@ controls:
           - 263-284
           - 123-124
     assessment-requirements:
-      - id: OSPS-AC-05.01
+      - id: OSPS-AC-04.01
         text: |
           The project's permissions in CI/CD pipelines MUST be configured to the
           lowest available privileges except when explicitly elevated.
@@ -218,7 +192,7 @@ controls:
           systems, this may be possible at the organizational or repository
           level. If not, set permissions at the top level of the pipeline.
 
-  - id: OSPS-AC-06
+  - id: OSPS-AC-05
     title: |
       Limit the permissions granted to CI/CD pipelines by default
     objective: |
@@ -244,7 +218,7 @@ controls:
           - 263-284
           - 123-124
     assessment-requirements:
-      - id: OSPS-AC-06.01
+      - id: OSPS-AC-05.01
         text: |
           The project's CI/CD pipelines MUST restrict permissions to the lowest
           available privileges by default.
