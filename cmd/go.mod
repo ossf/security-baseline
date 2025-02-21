@@ -3,6 +3,7 @@ module github.com/ossf/security-baseline
 go 1.23
 
 require (
+	github.com/defenseunicorns/go-oscal v0.6.2
 	github.com/spf13/cobra v1.9.1
 	gopkg.in/yaml.v3 v3.0.1
 )
