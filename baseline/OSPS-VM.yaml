@@ -156,6 +156,7 @@ controls:
           The project MUST publicly publish data about discovered 
           vulnerabilities.
         applicability:
+          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Provide information about known vulnerabilities in a predictable
@@ -163,11 +164,22 @@ controls:
           To the degree possible, this information should include affected
           version(s), how a consumer can determine if they are vulnerable, and
           instructions for mitigation or remediation.
+      - id: OSPS-VM-04.02
+        text: |
+          The project's released software assets MUST include VEX data to
+          provide information about the exploitability of vulnerabilities.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Include a VEX file or VEX data in an SBOM as part of the project's 
+          released software assets. This data should provide information about
+          the exploitability of vulnerabilities, including which conditions or
+          configurations are necessary for the vulnerability to be exploited
+          or non-applicable.
 
   - id: OSPS-VM-05
     title: |
-      Define and enforce a threshold for remediation of SCA findings related to
-      vulnerabilities and licenses
+      Define and enforce a threshold for remediation of SCA findings
     objective: |
       Ensure that the project clearly communicates the threshold for remediation
       of SCA findings, including vulnerabilities and license issues in software
