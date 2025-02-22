@@ -247,10 +247,10 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          All changes to the project's codebase with new dependencies MUST
-          be automatically evaluated against a documented policy for known
-          vulnerabilities and blocked in the event of violations except when
-          declared and suppressed as non-exploitable.
+          All changes to the project's codebase MUST be automatically evaluated
+          against a documented policy for malicious dependencies and
+          known vulnerabilities in depenencies and blocked in the event of
+          violations except when declared and suppressed as non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
