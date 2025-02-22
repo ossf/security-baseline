@@ -149,7 +149,7 @@ controls:
 
   - id: OSPS-AC-04
     title: |
-      Configure the project's permissions in CI/CD pipelines
+      Restrict the project's permissions in CI/CD pipelines based on context
     objective: |
       Reduce the risk of unauthorized access to the project's build and release
       processes by limiting the permissions granted to steps within the CI/CD
@@ -183,7 +183,6 @@ controls:
           The project's permissions in CI/CD pipelines MUST be configured to the
           lowest available privileges except when explicitly elevated.
         applicability:
-          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Configure the project's CI/CD pipelines to assign the lowest available
@@ -191,34 +190,7 @@ controls:
           only when necessary for specific tasks. In some version control
           systems, this may be possible at the organizational or repository
           level. If not, set permissions at the top level of the pipeline.
-
-  - id: OSPS-AC-05
-    title: |
-      Limit the permissions granted to CI/CD pipelines by default
-    objective: |
-      Reduce the risk of unauthorized access to the project's build and release
-      processes by limiting the permissions granted to new CI/CD pipelines.
-    family: Access Control
-    mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO3.2
-          - PS1
-      - reference-id: CSF
-        identifiers:
-          - PR.AA-02
-      - reference-id: OCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 347-507
-          - 263-284
-          - 123-124
-    assessment-requirements:
-      - id: OSPS-AC-05.01
+      - id: OSPS-AC-04.02
         text: |
           The project's CI/CD pipelines MUST restrict permissions to the lowest
           available privileges by default.

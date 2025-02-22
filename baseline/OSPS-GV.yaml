@@ -163,7 +163,6 @@ controls:
           are reviewed prior to granting escalated permissions to sensitive
           resources.
         applicability:
-          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Publish an enforceable policy in the project documentation that
