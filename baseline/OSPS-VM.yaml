@@ -261,7 +261,7 @@ controls:
         text: |
           All changes to the project's codebase MUST be automatically evaluated
           against a documented policy for malicious dependencies and
-          known vulnerabilities in depenencies and blocked in the event of
+          known vulnerabilities in dependencies and blocked in the event of
           violations except when declared and suppressed as non-exploitable.
         applicability:
           - Maturity Level 3
