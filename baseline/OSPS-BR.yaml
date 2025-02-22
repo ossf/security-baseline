@@ -294,6 +294,7 @@ controls:
           Any websites, API responses or other services involved in release
           pipelines MUST be fetched using encrypted channels.
         applicability:
+          - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
