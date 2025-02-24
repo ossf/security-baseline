@@ -1,6 +1,9 @@
 # Open Source Project Security Baseline
 
-Version: devel (not for production use)
+Version: devel
+
+{: .warning}
+Not for production use.
 
 <!-- A button for returning to the top of the page -->
 <button onclick="toTop()" id="topButton" title="Go to top"
