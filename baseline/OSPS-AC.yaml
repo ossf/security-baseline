@@ -101,7 +101,8 @@ controls:
 
   - id: OSPS-AC-03
     title: |
-      Protect the primary branch from unintentional or unauthorized changes
+      The project's version control system MUST prevent unintentional
+      modification of the primary branch.
     objective: |
       Reduce the risk of accidental changes or deletion of the primary branch
       of the project's repository by preventing unintentional modification.
@@ -126,8 +127,8 @@ controls:
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
-          The project's version control system MUST prevent unintentional direct
-          commits against the primary branch.
+          When a direct commit is attempted on the project's primary branch,
+          an enforcement mechanism MUST prevent the change from being applied.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -140,8 +141,9 @@ controls:
           specific separate act.
       - id: OSPS-AC-03.02
         text: |
-          The project's version control system MUST prevent unintentional
-          deletion of the primary branch.
+          When an attempt is made to delete the project's primary branch,
+          the version control system MUST treat this as a sensitive activity
+          and require explicit confirmation of intent.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
