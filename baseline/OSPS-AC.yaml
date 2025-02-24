@@ -178,9 +178,20 @@ controls:
           - 263-284
           - 123-124
     assessment-requirements:
+      - id: OSPS-AC-04.02
+        text: |
+          The project's settings for CI/CD pipelines MUST restrict permissions
+          to the lowest available privileges by default.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Configure the project's settings to assign the lowest available
+          permissions to new pipelines by default, granting additional
+          permissions only when necessary for specific tasks.
       - id: OSPS-AC-04.01
         text: |
-          The project's permissions in CI/CD pipelines MUST be configured to the
+          The project's permission assignments in CI/CD pipelines MUST use the
           lowest available privileges except when explicitly elevated.
         applicability:
           - Maturity Level 3
@@ -190,14 +201,3 @@ controls:
           only when necessary for specific tasks. In some version control
           systems, this may be possible at the organizational or repository
           level. If not, set permissions at the top level of the pipeline.
-      - id: OSPS-AC-04.02
-        text: |
-          The project's CI/CD pipelines MUST restrict permissions to the lowest
-          available privileges by default.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's CI/CD pipelines to assign the lowest available
-          permissions to new pipelines by default, granting additional permissions
-          only when necessary for specific tasks.
