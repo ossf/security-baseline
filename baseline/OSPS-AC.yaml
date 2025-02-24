@@ -9,8 +9,9 @@ description: |
 controls:
   - id: OSPS-AC-01
     title: |
-      Protect against unauthorized access to sensitive areas of the project's 
-      repository
+      The project's version control system MUST require multi-factor
+      authentication for collaborators modifying the project repository
+      settings or accessing sensitive data.
     objective: |
       Reduce the risk of account compromise or insider threats by requiring
       multi-factor authentication for collaborators modifying the project
@@ -43,9 +44,9 @@ controls:
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
-          The project's version control system MUST require multi-factor
-          authentication for collaborators modifying the project repository
-          settings or accessing sensitive data.
+          When a user attempts to access a sensitive resource in the project's
+          version control system, the system MUST require the user to complete
+          a multi-factor authentication process.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
