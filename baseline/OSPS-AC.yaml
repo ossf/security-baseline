@@ -178,7 +178,7 @@ controls:
           - 263-284
           - 123-124
     assessment-requirements:
-      - id: OSPS-AC-04.02
+      - id: OSPS-AC-04.01
         text: |
           The project's settings for CI/CD pipelines MUST restrict permissions
           to the lowest available privileges by default.
@@ -189,7 +189,7 @@ controls:
           Configure the project's settings to assign the lowest available
           permissions to new pipelines by default, granting additional
           permissions only when necessary for specific tasks.
-      - id: OSPS-AC-04.01
+      - id: OSPS-AC-04.02
         text: |
           The project's permission assignments in CI/CD pipelines MUST use the
           lowest available privileges except when explicitly elevated.
