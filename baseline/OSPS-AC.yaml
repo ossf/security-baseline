@@ -59,7 +59,8 @@ controls:
 
   - id: OSPS-AC-02
     title: |
-      Limit the permissions granted to collaborators by default
+      The project's version control system MUST restrict collaborator
+      permissions to the lowest available privileges by default.
     objective: |
       Reduce the risk of unauthorized access to the project's repository by
       limiting the permissions granted to new collaborators.
@@ -85,7 +86,8 @@ controls:
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
-          The project's version control system MUST restrict collaborator
+          When a new collaborator is added, the version control system MUST
+          require manual permission assignment, or restrict the collaborator
           permissions to the lowest available privileges by default.
         applicability:
           - Maturity Level 1
