@@ -37,7 +37,7 @@ jobs:
           cache: true
 
       - name: Setup Java
-        uses: actions/setup-java@c3ac5dd0ed8db40fedb61c32fbe677e6b355e94c
+        uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12
         id: setup-java
         with:
           distribution: adopt
