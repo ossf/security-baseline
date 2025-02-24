@@ -171,11 +171,10 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Include a VEX file or VEX data in an SBOM as part of the project's 
-          released software assets. This data should provide information about
-          the exploitability of vulnerabilities, including which conditions or
-          configurations are necessary for the vulnerability to be exploited
-          or non-applicable.
+          Establish a VEX feed communicating the exploitability status of 
+          known vulnerabilities, including assessment details or any
+          mitigations in place preventing vulnerable code from being
+          executed.
 
   - id: OSPS-VM-05
     title: |
