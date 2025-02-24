@@ -24,6 +24,8 @@ body:
         - label: |
             In the `docs/versions/<VERSION>.md` file, change the `Version: devel` to have the version number of the new version
         - label: |
+            In the `docs/versions/<VERSION>.md` file, remove the "not for production use" warning
+        - label: |
             Move the link to the "current" version in `docs/index.md` to the "previous versions" list
         - label: |
             Add the link to the new version to the "current version" in `docs/index.md` (e.g. `Current version: [2025-02-04](versions/2025-02-04]`) 
