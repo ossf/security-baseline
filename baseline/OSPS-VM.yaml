@@ -166,8 +166,9 @@ controls:
           instructions for mitigation or remediation.
       - id: OSPS-VM-04.02
         text: |
-          The project's released software assets MUST include VEX data to
-          provide information about the exploitability of vulnerabilities.
+          Any vulnerabilities in the software components not affecting the
+          project MUST be accounted for in a VEX document, augmenting
+          the vulnerability report with non-exploitability details.
         applicability:
           - Maturity Level 3
         recommendation: |
