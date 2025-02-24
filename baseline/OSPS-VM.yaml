@@ -9,12 +9,185 @@ description: |
 controls:
   - id: OSPS-VM-01
     title: |
-      Define a threshold for remediation of SCA findings related to
-      vulnerabilities and licenses
+      Define a policy for coordinated vulnerability reporting
     objective: |
-      Ensure that the project clearly communicates the threshold for remediation of
-      SCA findings, including vulnerabilities and license issues in software
+      Establish a process for reporting and addressing vulnerabilities in the
+      project, ensuring that security issues are handled promptly and 
+      transparently.
+    family: Vulnerability Management
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - R-B-6
+          - R-B-8
+          - R-S-2
+          - S-B-14
+          - S-B-15
+      - reference-id: CRA
+        identifiers:
+          - 2.1
+          - 2.3
+          - 2.6
+          - 2.7
+          - 2.8
+      - reference-id: SSDF
+        identifiers:
+          - RV1.3
+      - reference-id: CSF
+        identifiers:
+          - GV.PO-01
+          - GV.PO-02
+          - ID.RA-01
+          - ID.RA-08
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+          - 4.2.1
+          - 4.3.2
+      - reference-id: OCRE
+        identifiers:
+          - 887-750
+    assessment-requirements:
+      - id: OSPS-VM-01.01
+        text: |
+          The project documentation MUST include a policy for coordinated
+          vulnerability reporting, with a clear timeframe for response.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Create a SECURITY.md file at the root of the directory, outlining the
+          project's policy for coordinated vulnerability reporting. Include a
+          method for reporting vulnerabilities. Set expectations for the how the
+          project will respond and address reported issues.
+
+  - id: OSPS-VM-02
+    title: |
+      Publish contacts and process for reporting vulnerabilities
+    objective: |
+      Reports from researchers and users are an important source for identifying
+      vulnerabilities in a project. People with vulnerabilities to report should
+      have a clear understanding of the process so that they can quickly submit
+      the report to the project.
+    family: Vulnerability Management
+    mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-S-8
+      - reference-id: CRA
+        identifiers:
+          - 2.5
+      - reference-id: SSDF
+        identifiers:
+          - RV1.3
+      - reference-id: CSF
+        identifiers:
+          - GV.PO-01
+          - GV.PO-02
+          - ID.RA-01
+      - reference-id: OC
+        identifiers:
+          - 4.1.1
+          - 4.1.3
+          - 4.1.5
+          - 4.2.2
+      - reference-id: OCRE
+        identifiers:
+          - 464-513
+    assessment-requirements:
+      - id: OSPS-VM-02.01
+        text: |
+          The project MUST publish contacts and process for reporting vulnerabilities.
+        applicability:
+          - Maturity Level 1
+        recommendation: |
+          Create a security.md (or similarly-named) file that contains security
+          contacts for the project and provide project's process for handling
+          vulnerabilities in the project or dependencies.
+
+  - id: OSPS-VM-03
+    title: |
+      Provide a means for reporting security vulnerabilities privately
+    objective: |
+      Security vulnerabilities should not be shared with the public until such
+      time the project has been provided time to analyze and prepare remediations
+      to protect users of the project.
+    family: Vulnerability Management
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2a
+          - 1.2b
+          - 2.1
+          - 2.4
+          - 2.6
+      - reference-id: OCRE
+        identifiers:
+          - 308-514
+    assessment-requirements:
+      - id: OSPS-VM-03.01
+        text: |
+          The project MUST provide a means for reporting security
+          vulnerabilities privately to the security contacts within the project.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Enable private bug reporting through VCS or other infrastructure.
+
+  - id: OSPS-VM-04
+    title: |
+      Publicly publish data about any vulnerabilities discovered
+    objective: |
+      Consumers of the project must be informed about known vulnerabilities
+      found within the project.
+    family: Vulnerability Management
+    mappings:
+      - reference-id: CRA
+        identifiers:
+          - 1.2a
+          - 1.2b
+          - 2.1
+          - 2.4
+          - 2.6
+    assessment-requirements:
+      - id: OSPS-VM-04.01
+        text: |
+          The project MUST publicly publish data about discovered 
+          vulnerabilities.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Provide information about known vulnerabilities in a predictable
+          public channel, such as a CVE entry, blog post, or other medium.
+          To the degree possible, this information should include affected
+          version(s), how a consumer can determine if they are vulnerable, and
+          instructions for mitigation or remediation.
+      - id: OSPS-VM-04.02
+        text: |
+          Any vulnerabilities in the software components not affecting the
+          project MUST be accounted for in a VEX document, augmenting
+          the vulnerability report with non-exploitability details.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Establish a VEX feed communicating the exploitability status of 
+          known vulnerabilities, including assessment details or any
+          mitigations in place preventing vulnerable code from being
+          executed.
+
+  - id: OSPS-VM-05
+    title: |
+      Define and enforce a threshold for remediation of SCA findings
+    objective: |
+      Ensure that the project clearly communicates the threshold for remediation
+      of SCA findings, including vulnerabilities and license issues in software
       dependencies.
+      Ensure that violations of your SCA policy are addressed before software
+      is merged as well as before it releases, reducing the risk of compromised
+      delivery mechanisms or released software assets that are vulnerable or
+      malicious.
     family: Vulnerability Management
     mappings:
       - reference-id: BPB
@@ -62,10 +235,11 @@ controls:
           - 207-435
           - 088-377
     assessment-requirements:
-      - id: OSPS-VM-01.01
+      - id: OSPS-VM-05.01
         text: |
-          The project documentation MUST include a policy that defines a threshold
-          for remediation of SCA findings related to vulnerabilities and licenses.
+          The project documentation MUST include a policy that defines a
+          threshold for remediation of SCA findings related to vulnerabilities
+          and licenses.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -73,50 +247,7 @@ controls:
           remediation of SCA findings related to vulnerabilities and licenses.
           Include the process for identifying, prioritizing, and remediating
           these findings.
-
-  - id: OSPS-VM-02
-    title: |
-      Address SCA violations prior to merge and release
-    objective: |
-      Ensure that violations of your SCA policy are addressed before software
-      is merged as well as before it releases, reducing the risk of compromised
-      delivery mechanisms or released software assets that are vulnerable or
-      malicious.
-    family: Vulnerability Management
-    mappings:
-      - reference-id: BPB
-        identifiers:
-          - S-B-14
-          - S-B-15
-          - A-B-3
-          - A-B-8
-      - reference-id: CRA
-        identifiers:
-          - 1.2a
-          - 1.2c
-          - 2.2
-          - 2.3
-      - reference-id: SSDF
-        identifiers:
-          - PW8.1
-      - reference-id: CSF
-        identifiers:
-          - GV.PO-01
-          - GV.PO-02
-          - ID.RA-01
-          - ID.RA-08
-      - reference-id: OC
-        identifiers:
-          - 4.1.5
-      - reference-id: OCRE
-        identifiers:
-          - 486-813
-          - 833-442
-          - 611-158
-          - 207-435
-          - 088-377
-    assessment-requirements:
-      - id: OSPS-VM-02.01
+      - id: OSPS-VM-05.02
         text: |
           The project documentation MUST include a policy to address SCA
           violations prior to any release.
@@ -126,12 +257,47 @@ controls:
           Document a policy in the project to address applicable Software
           Composition Analysis results before any release, and add status checks
           that verify compliance with that policy prior to release.
-      - id: OSPS-VM-02.02
+      - id: OSPS-VM-05.03
         text: |
-          All proposed changes to the project's codebase must be automatically
-          evaluated against a documented policy for known vulnerabilities and
-          blocked in the event of violations except when declared and suppressed
-          as non-exploitable.
+          All changes to the project's codebase MUST be automatically evaluated
+          against a documented policy for malicious dependencies and
+          known vulnerabilities in dependencies and blocked in the event of
+          violations except when declared and suppressed as non-exploitable.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Create a status check in the project's version control system that
+          runs a Software Composition Analysis tool on all changes
+          to the codebase. Require that the status check passes before changes
+          can be merged.
+
+  - id: OSPS-VM-06
+    title: |
+      Define and enforce a threshold for remediation of SAST findings
+    objective: |
+      Identify and address defects and security weaknesses in the project's
+      codebase early in the development process, reducing the risk of shipping
+      insecure software.
+    family: Vulnerability Management
+    mappings: []
+    assessment-requirements:
+      - id: OSPS-VM-06.01
+        text: |
+          The project documentation MUST include a policy that defines a
+          threshold for remediation of SAST findings.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Document a policy in the project that defines a threshold for
+          remediation of Static Application Security Testing (SAST) findings.
+          Include the process for identifying, prioritizing, and remediating
+          these findings.
+      - id: OSPS-VM-06.02
+        text: |
+          All changes to the project's codebase MUST be automatically evaluated
+          against a documented policy for security weaknesses and blocked in the
+          event of violations except when declared and suppressed as
+          non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -139,161 +305,3 @@ controls:
           runs a Static Application Security Testing (SAST) tool on all changes
           to the codebase. Require that the status check passes before changes
           can be merged.
-
-  - id: OSPS-VM-03
-    title: |
-      Define a policy for coordinated vulnerability reporting
-    objective: |
-      Establish a process for reporting and addressing vulnerabilities in the
-      project, ensuring that security issues are handled promptly and 
-      transparently.
-    family: Vulnerability Management
-    mappings:
-      - reference-id: BPB
-        identifiers:
-          - R-B-6
-          - R-B-8
-          - R-S-2
-          - S-B-14
-          - S-B-15
-      - reference-id: CRA
-        identifiers:
-          - 2.1
-          - 2.3
-          - 2.6
-          - 2.7
-          - 2.8
-      - reference-id: SSDF
-        identifiers:
-          - RV1.3
-      - reference-id: CSF
-        identifiers:
-          - GV.PO-01
-          - GV.PO-02
-          - ID.RA-01
-          - ID.RA-08
-      - reference-id: OC
-        identifiers:
-          - 4.1.5
-          - 4.2.1
-          - 4.3.2
-      - reference-id: OCRE
-        identifiers:
-          - 887-750
-    assessment-requirements:
-      - id: OSPS-VM-03.01
-        text: |
-          The project documentation MUST include a policy for coordinated
-          vulnerability reporting, with a clear timeframe for response.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Create a SECURITY.md file at the root of the directory, outlining the
-          project's policy for coordinated vulnerability reporting. Include a
-          method for reporting vulnerabilities. Set expectations for the how the
-          project will respond and address reported issues.
-
-  - id: OSPS-VM-04
-    title: |
-      Publish contacts and process for reporting vulnerabilities
-    objective: |
-      Reports from researchers and users are an important source for identifying
-      vulnerabilities in a project. People with vulnerabilities to report should
-      have a clear understanding of the process so that they can quickly submit
-      the report to the project.
-    family: Vulnerability Management
-    mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-S-8
-      - reference-id: CRA
-        identifiers:
-          - 2.5
-      - reference-id: SSDF
-        identifiers:
-          - RV1.3
-      - reference-id: CSF
-        identifiers:
-          - GV.PO-01
-          - GV.PO-02
-          - ID.RA-01
-      - reference-id: OC
-        identifiers:
-          - 4.1.1
-          - 4.1.3
-          - 4.1.5
-          - 4.2.2
-      - reference-id: OCRE
-        identifiers:
-          - 464-513
-    assessment-requirements:
-      - id: OSPS-VM-04.01
-        text: |
-          The project MUST publish contacts and process for reporting vulnerabilities.
-        applicability:
-          - Maturity Level 1
-        recommendation: |
-          Create a security.md (or similarly-named) file that contains security
-          contacts for the project and provide project's process for handling
-          vulnerabilities in the project or dependencies.
-
-  - id: OSPS-VM-05
-    title: |
-      Provide a means for reporting security vulnerabilities privately
-    objective: |
-      Security vulnerabilities should not be shared with the public until such
-      time the project has been provided time to analyze and prepare remediations
-      to protect users of the project.
-    family: Vulnerability Management
-    mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2a
-          - 1.2b
-          - 2.1
-          - 2.4
-          - 2.6
-      - reference-id: OCRE
-        identifiers:
-          - 308-514
-    assessment-requirements:
-      - id: OSPS-VM-05.01
-        text: |
-          The project MUST provide a means for reporting security
-          vulnerabilities privately to the security contacts within the project.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Enable private bug reporting through VCS or other infrastructure.
-
-  - id: OSPS-VM-06
-    title: |
-      Publicly publish data about any vulnerabilities discovered
-    objective: |
-      Consumers of the project must be informed about known vulnerabilities
-      found within the project.
-    family: Vulnerability Management
-    mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2a
-          - 1.2b
-          - 2.1
-          - 2.4
-          - 2.6
-    assessment-requirements:
-      - id: OSPS-VM-06.01
-        text: |
-          The project MUST publicly publish data about discovered 
-          vulnerabilities.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Provide information about known vulnerabilities in a predictable
-          public channel, such as a CVE entry, blog post, or other medium.
-          To the degree possible, this information should include affected
-          version(s), how a consumer can determine if they are vulnerable, and
-          instructions for mitigation or remediation.
