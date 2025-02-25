@@ -11,7 +11,8 @@ description: |
 controls:
   - id: OSPS-QA-01
     title: |
-      Ensure that the project's work processes are publicly transparent
+      The project's source code and change history MUST be publicly readable at
+      a static URL.
     objective: |
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
@@ -51,8 +52,8 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
-          The project's source code MUST be publicly readable and have a static
-          URL.
+          While active, the project's source code repository MUST be publicly
+          readable at a static URL.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -62,11 +63,12 @@ controls:
           repository is publicly readable. Avoid duplication or mirroring of
           repositories unless highly visible documentation clarifies the primary
           source. Avoid frequent changes to the repository that would impact the
-          repository URL.
+          repository URL. Ensure the repository is public.
       - id: OSPS-QA-01.02
         text: |
           The version control system MUST contain a publicly readable record of
-          all changes made, who made the changes, and when the changes were made.
+          all changes made, who made the changes, and when the changes were
+          made.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -78,7 +80,7 @@ controls:
 
   - id: OSPS-QA-02
     title: |
-      Document dependencies for released software assets
+      The project MUST provide a list of dependencies used in the software.
     objective: |
       Provide transparency and accountability for the project's dependencies
       while enabling users and contributors to understand the software's direct
@@ -115,9 +117,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
-          The source code repository MUST contain a dependency list that
-          accounts for the direct language dependencies when the package
-          management system supports it.
+          When the package management system supports it, the source code
+          repository MUST contain a dependency list that accounts for the direct
+          language dependencies.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -128,8 +130,8 @@ controls:
           or go.mod.
       - id: OSPS-QA-02.02
         text: |
-          All compiled released software assets MUST be delivered with a
-          software bill of materials.
+          When the project has made a release, all compiled released software
+          assets MUST be delivered with a software bill of materials.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -140,7 +142,8 @@ controls:
 
   - id: OSPS-QA-03
     title: |
-      Automated status checks for commits don't fail prior to merge
+      Any automated status checks for commits MUST pass or require manual
+      acknowledgement prior to merge.
     objective: |
       Ensure that the project's approvers do not become accustomed to tolerating
       failing status checks, even if arbitrary, because it increases the risk of
@@ -162,8 +165,8 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
-          Any automated status checks for commits MUST pass or require manual
-          acknowledgement prior to merge.
+          When a commit is made to the primary branch, any automated status
+          checks for commits MUST pass or be manually bypassed.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -176,7 +179,9 @@ controls:
 
   - id: OSPS-QA-04
     title: |
-      Enforce matching requirements for subproject code repositories
+      Any additional subproject code repositories produced by the project
+      and compiled into a release MUST enforce security requirements as
+      applicable to the status and intent of the respective codebase.
     objective: |
       Ensure that additional code repositories or subprojects produced by the
       project are held to a standard that is clear and appropriate for that
@@ -199,24 +204,34 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
-          Any additional subproject code repositories produced by the project
-          and compiled into a release MUST enforce security requirements as
-          applicable to the status and intent of the respective codebase.
+          While active, the project documentation MUST contain a list of any
+          codebases that are considered subprojects or additional repositories.
+        applicability:
+          - Maturity Level 1
+        recommendation: |
+          Document any additional subproject code repositories produced by the
+          project and compiled into a release. This documentation should include
+          the status and intent of the respective codebase.
+      - id: OSPS-QA-04.02
+        text: |
+          When the project has made a release comprising multiple source code
+          repositories, all subprojects MUST enforce security requirements that
+          are as strict or stricter than the primary codebase.
         applicability:
           - Maturity Level 3
         recommendation: |
-          The parent project should maintain a list of any codebases that are
-          considered subprojects or additional repositories. Collaborators on
-          those repositories should identify the proper maturity level and apply
-          the Open Source Project Security Baseline to the codebase. Any
-          subproject or repository from the project which is compiled into the
-          primary project must be held to the same standard as the primary
-          project. Others may be held to a lower standard if they have lower
-          levels of adoption or are not intended for general use.
+          Any additional subproject code repositories produced by the project
+          and compiled into a release must enforce security requirements as
+          applicable to the status and intent of the respective codebase.
+          In addition to following the corresponding OSPS Baseline requirements,
+          this may include requiring a security review, ensuring that it is
+          free of vulnerabilities, and ensuring that it is free of known
+          security issues.
 
   - id: OSPS-QA-05
     title: |
-      Remove generated executable artifacts from the version control system
+        The version control system MUST NOT contain generated executable
+        artifacts.
     objective: |
       Reduce the risk of including generated executable artifacts in the
       project's version control system, ensuring that only source code and
@@ -236,9 +251,10 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
-          The version control system MUST NOT contain generated executable
-          artifacts.
+          While active, the version control system MUST NOT contain generated
+          executable artifacts.
         applicability:
+          - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
@@ -250,7 +266,8 @@ controls:
 
   - id: OSPS-QA-06
     title: |
-      Use at least one automated test suite for the source code repository
+        The project MUST use at least one automated test suite for the source
+        code repository.
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository which clearly documents when and how tests are run.
@@ -279,8 +296,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
-          The project MUST use at least one automated test suite for the source
-          code repository.
+          Prior to a commit being accepted, the project's CI/CD pipelines MUST
+          run at least one automated test suite to ensure the changes meet
+          expectations.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -294,8 +312,8 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          The project's documentation MUST clearly document when and how tests
-          are run.
+          While active, project's documentation MUST clearly document when and
+          how tests are run.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -305,9 +323,9 @@ controls:
           interpret the results.
       - id: OSPS-QA-06.03
         text: |
-          The project's documentation MUST include a policy that all major
-          changes to the software produced by the project should add or update
-          tests of the functionality in an automated test suite.
+          While active, the project's documentation MUST include a policy that
+          all major changes to the software produced by the project should add
+          or update tests of the functionality in an automated test suite.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -317,7 +335,8 @@ controls:
 
   - id: OSPS-QA-07
     title: |
-      Require at least one non-author approval of changes before merging
+      The project's version control system MUST require at least one
+      non-author approval of changes to the primary branch.
     objective: |
       Ensure that the project's version control system requires at least one
       non-author approval of changes before merging into the release or primary
@@ -330,9 +349,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
-          The project's version control system MUST require at least one
-          non-author approval of changes before merging into the release or
-          primary branch.
+          When a commit is made to the primary branch, the project's version
+          control system MUST require at least one non-author approval of the
+          changes before merging.
         applicability:
           - Maturity Level 3
         recommendation: |
