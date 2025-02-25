@@ -179,7 +179,9 @@ controls:
 
   - id: OSPS-QA-04
     title: |
-      Enforce matching requirements for subproject code repositories
+      Any additional subproject code repositories produced by the project
+      and compiled into a release MUST enforce security requirements as
+      applicable to the status and intent of the respective codebase.
     objective: |
       Ensure that additional code repositories or subprojects produced by the
       project are held to a standard that is clear and appropriate for that
@@ -202,20 +204,29 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
-          Any additional subproject code repositories produced by the project
-          and compiled into a release MUST enforce security requirements as
-          applicable to the status and intent of the respective codebase.
+          While active, the project documentation MUST contain a list of any
+          codebases that are considered subprojects or additional repositories.
+        applicability:
+          - Maturity Level 1
+        recommendation: |
+          Document any additional subproject code repositories produced by the
+          project and compiled into a release. This documentation should include
+          the status and intent of the respective codebase.
+      - id: OSPS-QA-04.02
+        text: |
+          When the project has made a release comprising multiple source code
+          repositories, all subprojects MUST enforce security requirements that
+          are as strict or stricter than the primary codebase.
         applicability:
           - Maturity Level 3
         recommendation: |
-          The parent project should maintain a list of any codebases that are
-          considered subprojects or additional repositories. Collaborators on
-          those repositories should identify the proper maturity level and apply
-          the Open Source Project Security Baseline to the codebase. Any
-          subproject or repository from the project which is compiled into the
-          primary project must be held to the same standard as the primary
-          project. Others may be held to a lower standard if they have lower
-          levels of adoption or are not intended for general use.
+          Any additional subproject code repositories produced by the project
+          and compiled into a release must enforce security requirements as
+          applicable to the status and intent of the respective codebase.
+          In addition to following the corresponding OSPS Baseline requirements,
+          this may include requiring a security review, ensuring that it is
+          free of vulnerabilities, and ensuring that it is free of known
+          security issues.
 
   - id: OSPS-QA-05
     title: |
