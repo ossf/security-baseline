@@ -11,8 +11,9 @@ description: |
 controls:
   - id: OSPS-LE-01
     title: |
-      Require code contributors to assert that they are legally authorized to
-      commit
+      The version control system MUST require all code contributors to assert
+      that they are legally authorized to make the associated contributions
+      on every commit.
     objective: |
       Ensure that code contributors are aware of and acknowledge their legal
       responsibility for the contributions they make to the project, reducing
@@ -35,9 +36,9 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
-          The version control system MUST require all code contributors to assert
-          that they are legally authorized to commit the associated contributions
-          on every commit.
+          While active, the version control system MUST require all code
+          contributors to assert that they are legally authorized to make the
+          associated contributions on every commit.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -46,6 +47,8 @@ controls:
           contributors to assert that they are legally authorized to commit the
           associated contributions on every commit. Use a status check to ensure
           the assertion is made.
+          Some version control systems, such as GitHub, may include this in the
+          platform terms of service.
 
   - id: OSPS-LE-02
     title: |
