@@ -52,8 +52,8 @@ controls:
 
   - id: OSPS-GV-02
     title: |
-      Establish mechanisms for public discussions about proposed changes and
-      usage obstacles in the project
+      The project MUST have one or more mechanisms for public discussions
+      about proposed changes and usage obstacles.
     objective: |
       Encourages open communication and collaboration within the project
       community, enabling users to provide feedback and discuss proposed changes
@@ -77,8 +77,8 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
-          The project MUST have one or more mechanisms for public discussions
-          about proposed changes and usage obstacles.
+          While active, the project MUST have one or more mechanisms for public
+          discussions about proposed changes and usage obstacles.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
