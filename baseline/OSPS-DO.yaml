@@ -9,8 +9,8 @@ description: |
 controls:
   - id: OSPS-DO-01
     title: |
-      Provide user guides for all basic functionality in the project
-      documentation
+      The project documentation MUST provide user guides for all basic
+      functionality.
     objective: |
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
@@ -44,8 +44,8 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
-          The project documentation MUST provide user guides for all basic
-          functionality.
+          When the project has made a release, the project documentation MUST
+          include user guides for all basic functionality.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
