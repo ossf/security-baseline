@@ -203,8 +203,8 @@ controls:
 
   - id: OSPS-DO-05
     title: |
-      Provide a descriptive statement when releases or versions will no longer
-      receive security updates in the project documentation
+      The project documentation MUST provide a descriptive statement when
+      releases or versions will no longer receive security updates.
     objective: |
       Communicating when the project maintainers will no longer fix defects or
       security vulnerabilities is crucial for downstream consumers to find
@@ -226,8 +226,9 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
-          The project documentation MUST provide a descriptive statement when
-          releases or versions will no longer receive security updates.
+          When the project has made a release, the project documentation MUST
+          provide a descriptive statement when releases or versions will no
+          longer receive security updates.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -237,8 +238,8 @@ controls:
 
   - id: OSPS-DO-06
     title: |
-      Describe how the project selects, obtains, and tracks its dependencies in
-      the project documentation
+      The project documentation MUST include a description of how the
+      project selects, obtains, and tracks its dependencies.
     objective: |
       Provide information about how the project selects, obtains, and tracks
       dependencies, libraries, frameworks, etc. to help downstream consumers
@@ -259,8 +260,9 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
-          The project documentation MUST include a description of how the
-          project selects, obtains, and tracks its dependencies.
+          When the project has made a release, the project documentation MUST
+          include a description of how the project selects, obtains, and tracks
+          its dependencies.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
