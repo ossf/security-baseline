@@ -297,7 +297,7 @@ controls:
       - id: OSPS-QA-06.01
         text: |
           Prior to a commit being accepted, the project's CI/CD pipelines MUST
-          use at least one automated test suite to ensure the changes meet
+          run at least one automated test suite to ensure the changes meet
           expectations.
         applicability:
           - Maturity Level 2
@@ -335,7 +335,8 @@ controls:
 
   - id: OSPS-QA-07
     title: |
-      Require at least one non-author approval of changes before merging
+      The project's version control system MUST require at least one
+      non-author approval of changes to the primary branch.
     objective: |
       Ensure that the project's version control system requires at least one
       non-author approval of changes before merging into the release or primary
@@ -348,9 +349,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
-          The project's version control system MUST require at least one
-          non-author approval of changes before merging into the release or
-          primary branch.
+          When a commit is made to the primary branch, the project's version
+          control system MUST require at least one non-author approval of the
+          changes before merging.
         applicability:
           - Maturity Level 3
         recommendation: |
