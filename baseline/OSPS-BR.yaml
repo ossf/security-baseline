@@ -102,7 +102,6 @@ controls:
           the project, following a consistent naming convention or numbering
           scheme. Examples include SemVer, CalVer, or git commit id.
 
-
   - id: OSPS-BR-03
     title: |
       Any websites and version control systems involved in the project
@@ -150,8 +149,8 @@ controls:
 
   - id: OSPS-BR-04
     title: |
-      Provide a descriptive log of functional and security modifications in all
-      releases
+      All releases MUST provide a descriptive log of functional and security
+      modifications.
     objective: |
       Provide transparency and accountability for changes made to the project's
       software releases, enabling users to understand the modifications and
@@ -180,7 +179,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
-          All releases MUST provide a descriptive log of functional and security
+          When an official release is created, that release MUST contain
+          a descriptive log of functional and security
           modifications.
         applicability:
           - Maturity Level 2
@@ -189,7 +189,9 @@ controls:
           Ensure that all releases include a descriptive change log. It is
           recommended to ensure that the change log is human-readable and
           includes details beyond commit messages, such as descriptions of the
-          security impact or relevance to different use cases.
+          security impact or relevance to different use cases. To ensure
+          machine readability, place the content under a markdown header
+          such as "## Changelog".
 
   - id: OSPS-BR-05
     title: |
