@@ -51,7 +51,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
-          When the project has made a release, the project documentation MUST
+          While active, the project documentation MUST
           include a policy for coordinated vulnerability reporting, with a clear
           timeframe for response.
         applicability:
@@ -131,7 +131,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
-          When the project has made a release, the project documentation MUST
+          While active, the project documentation MUST
           provide a means for reporting security vulnerabilities privately to
           the security contacts within the project.
         applicability:
@@ -161,7 +161,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
-          When the project has made a release, the project documentation MUST
+          While active, the project documentation MUST
           publicly publish data about discovered vulnerabilities.
         applicability:
           - Maturity Level 2
@@ -174,7 +174,7 @@ controls:
           instructions for mitigation or remediation.
       - id: OSPS-VM-04.02
         text: |
-          When the project has made a release, any vulnerabilities in the
+          While active, any vulnerabilities in the
           software components not affecting the project MUST be accounted for
           in a VEX document, augmenting the vulnerability report with
           non-exploitability details.
