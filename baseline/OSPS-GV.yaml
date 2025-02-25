@@ -146,8 +146,9 @@ controls:
 
   - id: OSPS-GV-04
     title: |
-      Implement a policy that code contributors are reviewed prior to granting
-      escalated permissions to sensitive resources in the project documentation
+      The project documentation MUST have a policy that code contributors
+      are reviewed prior to granting escalated permissions to sensitive
+      resources.
     objective: |
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing
@@ -172,9 +173,9 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |
-          The project documentation MUST have a policy that code contributors
-          are reviewed prior to granting escalated permissions to sensitive
-          resources.
+          While active, the project documentation MUST have a policy that code
+          contributors are reviewed prior to granting escalated permissions to
+          sensitive resources.
         applicability:
           - Maturity Level 3
         recommendation: |
