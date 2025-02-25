@@ -126,6 +126,8 @@ controls:
           of the contribution process.
         applicability:
           - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Create a CONTRIBUTING.md or CONTRIBUTING/ directory to outline the
           contribution process including the steps for submitting changes, and
