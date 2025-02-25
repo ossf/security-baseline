@@ -58,7 +58,7 @@ controls:
 
   - id: OSPS-DO-02
     title: |
-      Include a mechanism for reporting defects in the project documentation
+      The project MUST provide a mechanism for reporting defects.
     objective: |
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
@@ -96,8 +96,8 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
-          The project documentation MUST include a mechanism for reporting
-          defects.
+          When the project has made a release, the project documentation MUST
+          include a guide for reporting defects.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
