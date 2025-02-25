@@ -266,7 +266,8 @@ controls:
 
   - id: OSPS-QA-06
     title: |
-      Use at least one automated test suite for the source code repository
+        The project MUST use at least one automated test suite for the source
+        code repository.
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository which clearly documents when and how tests are run.
@@ -295,8 +296,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
-          The project MUST use at least one automated test suite for the source
-          code repository.
+          Prior to a commit being accepted, the project's CI/CD pipelines MUST
+          use at least one automated test suite to ensure the changes meet
+          expectations.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -310,8 +312,8 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          The project's documentation MUST clearly document when and how tests
-          are run.
+          While active, project's documentation MUST clearly document when and
+          how tests are run.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -321,9 +323,9 @@ controls:
           interpret the results.
       - id: OSPS-QA-06.03
         text: |
-          The project's documentation MUST include a policy that all major
-          changes to the software produced by the project should add or update
-          tests of the functionality in an automated test suite.
+          While active, the project's documentation MUST include a policy that
+          all major changes to the software produced by the project should add
+          or update tests of the functionality in an automated test suite.
         applicability:
           - Maturity Level 3
         recommendation: |
