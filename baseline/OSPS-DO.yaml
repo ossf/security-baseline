@@ -111,8 +111,10 @@ controls:
 
   - id: OSPS-DO-03
     title: |
-      Include instructions to verify the integrity and authenticity of release
-      assets in the project documentation
+      The project documentation MUST contain instructions to verify the
+      integrity and authenticity of the release assets, including the
+      expected identity of the person or process authoring the software
+      release.
     objective: |
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
@@ -138,17 +140,27 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
-          The project documentation MUST contain instructions to verify the
-          integrity and authenticity of the release assets, including the
-          expected identity of the person or process authoring the software
-          release.
+          When the project has made a release, the project documentation MUST
+          contain instructions to verify the integrity and authenticity of the
+          release assets.
         applicability:
           - Maturity Level 3
         recommendation: |
           Instructions in the project should contain information about the
-          technology used, the commands to run, and the expected output. The
-          expected identity may be in the form of key IDs used to sign, issuer
-          and identity from a sigstore certificate, or other similar forms.
+          technology used, the commands to run, and the expected output.
+          When possible, avoid storing this documentation in the same location
+          as the build and release pipeline to avoid a single breach
+          compromising both the software and the documentation for verifying the
+          integrity of the software.
+      - id: OSPS-DO-03.02
+        text: |
+          When the project has made a release, the project documentation MUST
+          contain instructions to verify the expected identity of the person or
+          process authoring the software release.
+        recommendations: |
+          The expected identity may be in the form of key IDs used to sign,
+          issuer and identity from a sigstore certificate, or other similar
+          forms.
           When possible, avoid storing this documentation in the same location
           as the build and release pipeline to avoid a single breach
           compromising both the software and the documentation for verifying the
