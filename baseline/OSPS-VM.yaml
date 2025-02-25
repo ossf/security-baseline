@@ -9,7 +9,8 @@ description: |
 controls:
   - id: OSPS-VM-01
     title: |
-      Define a policy for coordinated vulnerability reporting
+        The project documentation MUST include a policy for coordinated
+        vulnerability reporting, with a clear timeframe for response.
     objective: |
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and 
@@ -50,8 +51,9 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
-          The project documentation MUST include a policy for coordinated
-          vulnerability reporting, with a clear timeframe for response.
+          When the project has made a release, the project documentation MUST
+          include a policy for coordinated vulnerability reporting, with a clear
+          timeframe for response.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
