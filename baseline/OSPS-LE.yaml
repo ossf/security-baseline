@@ -109,7 +109,8 @@ controls:
 
   - id: OSPS-LE-03
     title: |
-      Maintain an open source license for the project in a standard location
+      All licenses for the project's source code MUST be maintained in a 
+      standard location within the corresponding repository.
     objective: |
       Ensure that the project's source code and released software assets are
       distributed with the appropriate license terms, making it clear to users
@@ -130,8 +131,9 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |
-          The license for the source code MUST be maintained in a standard
-          location within the project's repository.
+          While active, the license for the source code MUST be maintained in
+          the corresponding repository's LICENSE file, COPYING file, or
+          LICENSE/ directory.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -140,3 +142,22 @@ controls:
           Include the project's source code license in the project's LICENSE
           file, COPYING file, or LICENSE/ directory to provide visibility and
           clarity on the licensing terms. The filename MAY have an extension.
+          If the project has multiple repositories, ensure that each repository
+          includes the license file.
+      - id: OSPS-LE-03.02
+        text: |
+          While active, the license for the released software assets MUST be
+          included in the released source code, or in a LICENSE file, COPYING
+          file, or LICENSE/ directory alongside the corresponding release
+          assets.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Include the project's released software assets license in the released
+          source code, or in a LICENSE file, COPYING file, or LICENSE/ directory
+          alongside the corresponding release assets to provide visibility and
+          clarity on the licensing terms. The filename MAY have an extension.
+          If the project has multiple repositories, ensure that each repository
+          includes the license file.
