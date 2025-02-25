@@ -91,7 +91,7 @@ controls:
   - id: OSPS-GV-03
     title: |
       The project documentation MUST include an explanation of the
-      contribution process
+      contribution process.
     objective: |
       Provide guidance to new contributors on how to participate in the project,
       outlining the steps required to submit changes or enhancements to the
