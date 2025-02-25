@@ -43,11 +43,12 @@ controls:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: # TODO
-      - id: OSPS-BR-01.01
+      - id: OSPS-BR-01.02
         text: |
           When a CI/CD pipeline uses a branch name in its functionality, that
           name value MUST be sanitized and validated prior to use in the
           pipeline.
+        applicability: # TODO
         recommendation: # TODO
 
   - id: OSPS-BR-02
@@ -144,10 +145,11 @@ controls:
           encrypted channels such as SSH or HTTPS for data transmission.
           Ensure all tools and domains referenced in project documentation can
           only be accessed via encrypted channels.
-      - id: OSPS-BR-03.01
+      - id: OSPS-BR-03.02
         text: |
           When the project lists a URI as an official distribution channel,
           that URI MUST be exclusively delivered using encrypted channels.
+        applicability: #TODO
         recommendation: |
           Configure the project's release pipeline to only fetch data from
           websites, API responses, and other services which use encrypted
@@ -247,7 +249,7 @@ controls:
 
   - id: OSPS-BR-06
     title: |
-      Produce all released software assets with signatures and hashes
+      Produce all released software assets with signatures and hashes.
     objective: |
       All released software assets MUST be signed or accounted for in a
       signed manifest including each asset's cryptographic hashes.
