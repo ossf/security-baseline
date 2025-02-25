@@ -142,7 +142,8 @@ controls:
 
   - id: OSPS-QA-03
     title: |
-      Automated status checks for commits don't fail prior to merge
+      Any automated status checks for commits MUST pass or require manual
+      acknowledgement prior to merge.
     objective: |
       Ensure that the project's approvers do not become accustomed to tolerating
       failing status checks, even if arbitrary, because it increases the risk of
@@ -164,8 +165,8 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
-          Any automated status checks for commits MUST pass or require manual
-          acknowledgement prior to merge.
+          When a commit is made to the primary branch, any automated status
+          checks for commits MUST pass or be manually bypassed.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
