@@ -10,7 +10,8 @@ description: |
 controls:
   - id: OSPS-BR-01
     title: |
-      Prevent untrusted input from accessing privileged resources
+      The project's build and release pipelines MUST NOT permit untrusted
+      input that allows access to privileged resources.
     objective: |
       Reduce the risk of code injection or other security vulnerabilities in the
       project's build and release pipelines by preventing untrusted input from
@@ -35,21 +36,24 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
-          The project's build and release pipelines MUST NOT permit untrusted
-          input that allows access to privileged resources.
+          When a CI/CD pipeline accepts an input parameter, that parameter MUST
+          be sanitized and validated prior to use in the pipeline.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
-        recommendation: |
-          Ensure that any integration or release pipeline actions that accept
-          externally-controlled untrusted input do not use that input in ways
-          that could provide unintended access to privileged resources.
-          An example of a common infraction is improper use of git branch names.
+        recommendation: # TODO
+      - id: OSPS-BR-01.01
+        text: |
+          When a CI/CD pipeline uses a branch name in its functionality, that
+          name value MUST be sanitized and validated prior to use in the
+          pipeline.
+        recommendation: # TODO
 
   - id: OSPS-BR-02
     title: |
-      Assign unique version identifiers to all releases and software assets
+      All releases and released software assets MUST be assigned a unique
+      version identifier for each release intended to be used by users.
     objective: |
       Ensure that each software asset produced by the project is uniquely
       identified, enabling users to track changes and updates to the project
@@ -77,21 +81,30 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
-          All releases and released software assets MUST be assigned a unique
-          version identifier for each release intended to be used by users.
+          When an official release is created, that release MUST be assigned a
+          unique version identifier.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Assign a unique version identifier to each release and associated
-          software asset produced by the project, following a consistent naming
-          convention or numbering scheme. Examples include SemVer, CalVer, or
-          git commit id.
+          Assign a unique version identifier to each release produced by the
+          project, following a consistent naming convention or numbering scheme.
+          Examples include SemVer, CalVer, or git commit id.
+      - id: OSPS-BR-02.01
+        text: |
+          When an official release is created, all assets within that release
+          MUST be clearly associated with the release identifier or another
+          unique identifier for the asset.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Assign a unique version identifier to each software asset produced by
+          the project, following a consistent naming convention or numbering
+          scheme. Examples include SemVer, CalVer, or git commit id.
 
   - id: OSPS-BR-03
     title: |
-      Deliver project websites and version control systems using encrypted
-      channels
+      All official project URIs MUST be delivered using encrypted channels.
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
@@ -120,9 +133,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
-          Any websites and version control systems involved in the project
-          development MUST be delivered using SSH, HTTPS, or other encrypted
-          channels.
+          When the project lists a URI as an official project channel, that URI
+          MUST be exclusively delivered using encrypted channels.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -130,11 +142,21 @@ controls:
         recommendation: |
           Configure the project's websites and version control systems to use
           encrypted channels such as SSH or HTTPS for data transmission.
+          Ensure all tools and domains referenced in project documentation can
+          only be accessed via encrypted channels.
+      - id: OSPS-BR-03.01
+        text: |
+          When the project lists a URI as an official distribution channel,
+          that URI MUST be exclusively delivered using encrypted channels.
+        recommendation: |
+          Configure the project's release pipeline to only fetch data from
+          websites, API responses, and other services which use encrypted
+          channels such as SSH or HTTPS for data transmission.
 
   - id: OSPS-BR-04
     title: |
-      Provide a descriptive log of functional and security modifications in all
-      releases
+      All releases MUST provide a descriptive log of functional and security
+      modifications.
     objective: |
       Provide transparency and accountability for changes made to the project's
       software releases, enabling users to understand the modifications and
@@ -163,7 +185,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
-          All releases MUST provide a descriptive log of functional and security
+          When an official release is created, that release MUST contain
+          a descriptive log of functional and security
           modifications.
         applicability:
           - Maturity Level 2
@@ -172,11 +195,14 @@ controls:
           Ensure that all releases include a descriptive change log. It is
           recommended to ensure that the change log is human-readable and
           includes details beyond commit messages, such as descriptions of the
-          security impact or relevance to different use cases.
+          security impact or relevance to different use cases. To ensure
+          machine readability, place the content under a markdown header
+          such as "## Changelog".
 
   - id: OSPS-BR-05
     title: |
-      Use standardized tooling to ingest dependencies at build time
+      All build and release pipelines MUST use standardized tooling where
+      available to ingest dependencies at build time.
     objective: |
       Ensure that the project's build and release pipelines use standardized tools
       and processes to manage dependencies, reducing the risk of compatibility
@@ -207,8 +233,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
-          All build and release pipelines MUST use standardized tooling where
-          available to ingest dependencies at build time.
+          When a build and release pipeline ingests dependencies, it MUST
+          use standardized tooling where available.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -223,9 +249,8 @@ controls:
     title: |
       Produce all released software assets with signatures and hashes
     objective: |
-      Provide users with a mechanism to verify the authenticity and integrity of
-      released software assets, reducing the risk of tampering or unauthorized
-      modifications.
+      All released software assets MUST be signed or accounted for in a
+      signed manifest including each asset's cryptographic hashes.
     family: Build and Release
     mappings:
       - reference-id: SSDF
@@ -236,8 +261,9 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
-          All released software assets MUST be signed or accounted for in a
-          signed manifest including each asset's cryptographic hashes.
+          When an official release is created, that release MUST be signed or
+          accounted for in a signed manifest including each asset's
+          cryptographic hashes.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -246,58 +272,3 @@ controls:
           signature or attestations, such as GPG or PGP signature, Sigstore
           signatures, SLSA provenance, or SLSA VSAs. Include the cryptographic
           hashes of each asset in a signed manifest or metadata file.
-
-  - id: OSPS-BR-07
-    title: |
-      Deliver project websites and distribution services using encrypted
-      channels
-    objective: |
-      Protect the confidentiality and integrity of release assets consumed by
-      the project's users, reducing the risk of eavesdropping or data tampering.
-    family: Build and Release
-    mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-11
-      - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2e
-          - 1.2f
-          - 1.2i
-          - 1.2j
-          - 1.2k
-      - reference-id: SSDF
-        identifiers:
-          - PO3.2
-          - PS1
-      - reference-id: OCRE
-        identifiers:
-          - 483-813
-          - 124-564
-          - 263-184
-    assessment-requirements:
-      - id: OSPS-BR-07.01
-        text: |
-          Any websites or other services involved in the distribution of
-          released software assets MUST be delivered using HTTPS or other
-          encrypted channels.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's websites and distribution services to use
-          encrypted channels such as HTTPS for data transmission.
-      - id: OSPS-BR-07.02
-        text: |
-          Any websites, API responses or other services involved in release
-          pipelines MUST be fetched using encrypted channels.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's release pipeline to only fetch data from
-          websites, API responses, and other services which use encrypted
-          channels such as SSH or HTTPS for data transmission.
