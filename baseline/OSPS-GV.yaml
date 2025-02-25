@@ -8,8 +8,8 @@ description: |
 controls:
   - id: OSPS-GV-01
     title: |
-      Document the Roles and Responsibilities for members of the project in the
-      project documentation
+      The project documentation MUST include the Roles and Responsibilities
+      for members of the project.
     objective: |
       Documenting project roles and responsibilities helps project participants,
       potential contributors, and downstream consumers have an accurate
@@ -27,8 +27,21 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
-          The project documentation MUST include the Roles and Responsibilities
-          for members of the project.
+          While active, the project documentation MUST include a list of
+          project members with access to sensitive resources.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Document project participants and their roles through such artifacts
+          as members.md, governance.md, maintainers.md, or similar file within
+          the source code repository of the project.
+          This may be as simple as including names or account handles in a list
+          of maintainers, or more complex depending on the project's governance.
+      - id: OSPS-GV-01.02
+        text: |
+          While active, the project documentation MUST include descriptions of
+          the roles and responsibilities for members of the project.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
