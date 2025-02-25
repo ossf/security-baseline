@@ -90,8 +90,8 @@ controls:
 
   - id: OSPS-GV-03
     title: |
-      Include an explanation of the contribution process in the project
-      documentation
+      The project documentation MUST include an explanation of the
+      contribution process
     objective: |
       Provide guidance to new contributors on how to participate in the project,
       outlining the steps required to submit changes or enhancements to the
@@ -122,8 +122,8 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
-          The project documentation MUST include an explanation of the
-          contribution process.
+          While active, the project documentation MUST include an explanation
+          of the contribution process.
         applicability:
           - Maturity Level 1
         recommendation: |
@@ -132,8 +132,8 @@ controls:
           engaging with the project maintainers.
       - id: OSPS-GV-03.02
         text: |
-          The project documentation MUST include a guide for code contributors
-          that includes requirements for acceptable contributions.
+          While active, the project documentation MUST include a guide for code
+          contributors that includes requirements for acceptable contributions.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
