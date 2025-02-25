@@ -195,7 +195,8 @@ controls:
 
   - id: OSPS-BR-05
     title: |
-      Use standardized tooling to ingest dependencies at build time
+      All build and release pipelines MUST use standardized tooling where
+      available to ingest dependencies at build time.
     objective: |
       Ensure that the project's build and release pipelines use standardized tools
       and processes to manage dependencies, reducing the risk of compatibility
@@ -226,8 +227,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
-          All build and release pipelines MUST use standardized tooling where
-          available to ingest dependencies at build time.
+          When a build and release pipelines ingests dependencies, it MUST
+          use standardized tooling where available.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
