@@ -188,7 +188,7 @@ controls:
 
   - id: OSPS-VM-05
     title: |
-      Define and enforce a threshold for remediation of SCA findings
+      The project MUST have a policy for addressing SCA findings.
     objective: |
       Ensure that the project clearly communicates the threshold for remediation
       of SCA findings, including vulnerabilities and license issues in software
@@ -246,9 +246,9 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
-          The project documentation MUST include a policy that defines a
-          threshold for remediation of SCA findings related to vulnerabilities
-          and licenses.
+          While active, the project documentation MUST include a policy that
+          defines a threshold for remediation of SCA findings related to
+          vulnerabilities and licenses.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -258,8 +258,8 @@ controls:
           these findings.
       - id: OSPS-VM-05.02
         text: |
-          The project documentation MUST include a policy to address SCA
-          violations prior to any release.
+          While active, the project documentation MUST include a policy to
+          address SCA violations prior to any release.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -268,10 +268,11 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          All changes to the project's codebase MUST be automatically evaluated
-          against a documented policy for malicious dependencies and
-          known vulnerabilities in dependencies and blocked in the event of
-          violations except when declared and suppressed as non-exploitable.
+          While active, all changes to the project's codebase MUST be
+          automatically evaluated against a documented policy for malicious
+          dependencies and known vulnerabilities in dependencies, then blocked
+          in the event of violations, except when declared and suppressed as
+          non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
