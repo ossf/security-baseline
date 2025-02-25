@@ -10,7 +10,8 @@ description: |
 controls:
   - id: OSPS-BR-01
     title: |
-      Prevent untrusted input from accessing privileged resources
+      The project's build and release pipelines MUST NOT permit untrusted
+      input that allows access to privileged resources.
     objective: |
       Reduce the risk of code injection or other security vulnerabilities in the
       project's build and release pipelines by preventing untrusted input from
@@ -35,17 +36,18 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
-          The project's build and release pipelines MUST NOT permit untrusted
-          input that allows access to privileged resources.
+          When a CI/CD pipeline accepts an input parameter, that parameter MUST
+          be sanitized and validated prior to use in the pipeline.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
-        recommendation: |
-          Ensure that any integration or release pipeline actions that accept
-          externally-controlled untrusted input do not use that input in ways
-          that could provide unintended access to privileged resources.
-          An example of a common infraction is improper use of git branch names.
+        recommendation: # TODO
+      - id: OSPS-BR-01.01
+        text: |
+          When a CI/CD pipeline uses a branch name in its functionality, that
+          name value MUST be sanitized and validated prior to use in the
+          pipeline.
 
   - id: OSPS-BR-02
     title: |
