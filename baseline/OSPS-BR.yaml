@@ -105,8 +105,9 @@ controls:
 
   - id: OSPS-BR-03
     title: |
-      Deliver project websites and version control systems using encrypted
-      channels
+      Any websites and version control systems involved in the project
+      development MUST be delivered using SSH, HTTPS, or other encrypted
+      channels.
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
@@ -135,9 +136,8 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
-          Any websites and version control systems involved in the project
-          development MUST be delivered using SSH, HTTPS, or other encrypted
-          channels.
+          When the project lists a URI as an official project channel, that URI
+          MUST be exclusively delivered using encrypted channels.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -145,6 +145,8 @@ controls:
         recommendation: |
           Configure the project's websites and version control systems to use
           encrypted channels such as SSH or HTTPS for data transmission.
+          Ensure all tools and domains referenced in project documentation can
+          only be accessed via encrypted channels.
 
   - id: OSPS-BR-04
     title: |
