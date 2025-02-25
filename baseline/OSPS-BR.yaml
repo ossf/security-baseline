@@ -81,7 +81,7 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
-          When an official release is created, that release MUST assigned a
+          When an official release is created, that release MUST be assigned a
           unique version identifier.
         applicability:
           - Maturity Level 2
