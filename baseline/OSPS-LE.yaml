@@ -52,8 +52,8 @@ controls:
 
   - id: OSPS-LE-02
     title: |
-      Ensure that the license for the source code meets the OSI Open Source
-      Definition or the FSF Free Software Definition
+      All licenses for the project MUST meet the OSI Open Source Definition
+      or the FSF Free Software Definition.
     objective: |
       Ensure that the project's source code is distributed under a recognized
       and legally enforceable open source software license, providing clarity on
@@ -76,8 +76,8 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
-          The license for the source code MUST meet the OSI Open Source Definition
-          or the FSF Free Software Definition.
+          While active, the license for the source code MUST meet the OSI Open
+          Source Definition or the FSF Free Software Definition.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -90,6 +90,22 @@ controls:
           Apache 2.0, Lesser GNU General Public License (LGPL), and the GNU
           General Public License (GPL). Releasing to the public domain meets
           this control if there are no other encumbrances such as patents.
+      - id: OSPS-LE-02.02
+        text: |
+          While active, the license for the released software assets MUST meet
+          the OSI Open Source Definition or the FSF Free Software Definition.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          If a different license is included with released software assets,
+          ensure it is an approved license by the Open Source Initiative (OSI),
+          or a free license as approved by the Free Software Foundation (FSF).
+          Examples of such licenses include the MIT, BSD 2-clause, BSD 3-clause
+          revised, Apache 2.0, Lesser GNU General Public License (LGPL), and the
+          GNU General Public License (GPL). Note that the license for the
+          released software assets may be different than the source code.
 
   - id: OSPS-LE-03
     title: |
@@ -124,19 +140,3 @@ controls:
           Include the project's source code license in the project's LICENSE
           file, COPYING file, or LICENSE/ directory to provide visibility and
           clarity on the licensing terms. The filename MAY have an extension.
-      - id: OSPS-LE-03.02
-        text: |
-          The license for the released software assets MUST meet the OSI Open
-          Source Definition or the FSF Free Software Definition.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          If a different license is included with released software assets,
-          ensure it is an approved license by the Open Source Initiative (OSI),
-          or a free license as approved by the Free Software Foundation (FSF).
-          Examples of such licenses include the MIT, BSD 2-clause, BSD 3-clause
-          revised, Apache 2.0, Lesser GNU General Public License (LGPL), and the
-          GNU General Public License (GPL). Note that the license for the
-          released software assets may be different than the source code.
