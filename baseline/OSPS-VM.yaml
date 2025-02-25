@@ -100,7 +100,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
-          When a release has been made, the project documentation MUST contain
+          While active, the project documentation MUST contain
           security contacts.
         applicability:
           - Maturity Level 1
