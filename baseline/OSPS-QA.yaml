@@ -208,6 +208,8 @@ controls:
           codebases that are considered subprojects or additional repositories.
         applicability:
           - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Document any additional subproject code repositories produced by the
           project and compiled into a release. This documentation should include
