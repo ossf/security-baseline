@@ -154,8 +154,8 @@ controls:
 
   - id: OSPS-AC-04
     title: |
-      The project's permissions in CI/CD pipelines MUST be configured to the
-      lowest available privileges except when explicitly elevated.
+      The project's permissions in CI/CD pipelines MUST follow the principle
+      of least privilege.
     objective: |
       Reduce the risk of unauthorized access to the project's build and release
       processes by limiting the permissions granted to steps within the CI/CD
