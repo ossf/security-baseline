@@ -11,7 +11,8 @@ description: |
 controls:
   - id: OSPS-QA-01
     title: |
-      Ensure that the project's work processes are publicly transparent
+      The project's source code and change history MUST be publicly readable at
+      a static URL.
     objective: |
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
@@ -51,8 +52,8 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
-          The project's source code MUST be publicly readable and have a static
-          URL.
+          While active, the project's source code repository MUST be publicly
+          readable at a static URL.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -62,11 +63,12 @@ controls:
           repository is publicly readable. Avoid duplication or mirroring of
           repositories unless highly visible documentation clarifies the primary
           source. Avoid frequent changes to the repository that would impact the
-          repository URL.
+          repository URL. Ensure the repository is public.
       - id: OSPS-QA-01.02
         text: |
           The version control system MUST contain a publicly readable record of
-          all changes made, who made the changes, and when the changes were made.
+          all changes made, who made the changes, and when the changes were
+          made.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
