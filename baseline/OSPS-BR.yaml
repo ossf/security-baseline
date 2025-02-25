@@ -98,7 +98,7 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Assign a unique version identifier to each oftware asset produced by
+          Assign a unique version identifier to each software asset produced by
           the project, following a consistent naming convention or numbering
           scheme. Examples include SemVer, CalVer, or git commit id.
 
