@@ -9,7 +9,8 @@ description: |
 controls:
   - id: OSPS-VM-01
     title: |
-      Define a policy for coordinated vulnerability reporting
+        The project documentation MUST include a policy for coordinated
+        vulnerability reporting, with a clear timeframe for response.
     objective: |
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and 
@@ -50,8 +51,9 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
-          The project documentation MUST include a policy for coordinated
-          vulnerability reporting, with a clear timeframe for response.
+          While active, the project documentation MUST
+          include a policy for coordinated vulnerability reporting, with a clear
+          timeframe for response.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -63,7 +65,8 @@ controls:
 
   - id: OSPS-VM-02
     title: |
-      Publish contacts and process for reporting vulnerabilities
+      The project MUST publish contacts and process for reporting
+      vulnerabilities.
     objective: |
       Reports from researchers and users are an important source for identifying
       vulnerabilities in a project. People with vulnerabilities to report should
@@ -97,21 +100,22 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
-          The project MUST publish contacts and process for reporting vulnerabilities.
+          While active, the project documentation MUST contain
+          security contacts.
         applicability:
           - Maturity Level 1
         recommendation: |
           Create a security.md (or similarly-named) file that contains security
-          contacts for the project and provide project's process for handling
-          vulnerabilities in the project or dependencies.
+          contacts for the project.
 
   - id: OSPS-VM-03
     title: |
-      Provide a means for reporting security vulnerabilities privately
+      The project MUST provide a means for reporting security
+      vulnerabilities privately to the security contacts within the project.
     objective: |
       Security vulnerabilities should not be shared with the public until such
-      time the project has been provided time to analyze and prepare remediations
-      to protect users of the project.
+      time the project has been provided time to analyze and prepare 
+      remediations to protect users of the project.
     family: Vulnerability Management
     mappings:
       - reference-id: CRA
@@ -127,17 +131,21 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
-          The project MUST provide a means for reporting security
-          vulnerabilities privately to the security contacts within the project.
+          While active, the project documentation MUST
+          provide a means for reporting security vulnerabilities privately to
+          the security contacts within the project.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Enable private bug reporting through VCS or other infrastructure.
+          Provide a means for security researchers to report vulnerabilities
+          privately to the project. This may be a dedicated email address, a
+          web form, VSC specialized tools, email addresses for security
+          contacts, or other methods.
 
   - id: OSPS-VM-04
     title: |
-      Publicly publish data about any vulnerabilities discovered
+      The project MUST publicly publish data about discovered vulnerabilities.
     objective: |
       Consumers of the project must be informed about known vulnerabilities
       found within the project.
@@ -153,8 +161,8 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
-          The project MUST publicly publish data about discovered 
-          vulnerabilities.
+          While active, the project documentation MUST
+          publicly publish data about discovered vulnerabilities.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -166,9 +174,10 @@ controls:
           instructions for mitigation or remediation.
       - id: OSPS-VM-04.02
         text: |
-          Any vulnerabilities in the software components not affecting the
-          project MUST be accounted for in a VEX document, augmenting
-          the vulnerability report with non-exploitability details.
+          While active, any vulnerabilities in the
+          software components not affecting the project MUST be accounted for
+          in a VEX document, augmenting the vulnerability report with
+          non-exploitability details.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -179,7 +188,7 @@ controls:
 
   - id: OSPS-VM-05
     title: |
-      Define and enforce a threshold for remediation of SCA findings
+      The project MUST enforce a policy for addressing SCA findings.
     objective: |
       Ensure that the project clearly communicates the threshold for remediation
       of SCA findings, including vulnerabilities and license issues in software
@@ -237,9 +246,9 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
-          The project documentation MUST include a policy that defines a
-          threshold for remediation of SCA findings related to vulnerabilities
-          and licenses.
+          While active, the project documentation MUST include a policy that
+          defines a threshold for remediation of SCA findings related to
+          vulnerabilities and licenses.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -249,8 +258,8 @@ controls:
           these findings.
       - id: OSPS-VM-05.02
         text: |
-          The project documentation MUST include a policy to address SCA
-          violations prior to any release.
+          While active, the project documentation MUST include a policy to
+          address SCA violations prior to any release.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -259,10 +268,11 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          All changes to the project's codebase MUST be automatically evaluated
-          against a documented policy for malicious dependencies and
-          known vulnerabilities in dependencies and blocked in the event of
-          violations except when declared and suppressed as non-exploitable.
+          While active, all changes to the project's codebase MUST be
+          automatically evaluated against a documented policy for malicious
+          dependencies and known vulnerabilities in dependencies, then blocked
+          in the event of violations, except when declared and suppressed as
+          non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -273,7 +283,8 @@ controls:
 
   - id: OSPS-VM-06
     title: |
-      Define and enforce a threshold for remediation of SAST findings
+      The project documentation MUST enforce a policy that defines a
+      threshold for remediation of SAST findings.
     objective: |
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
@@ -283,8 +294,8 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
-          The project documentation MUST include a policy that defines a
-          threshold for remediation of SAST findings.
+          While active, the project documentation MUST include a policy that
+          defines a threshold for remediation of SAST findings.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -294,10 +305,10 @@ controls:
           these findings.
       - id: OSPS-VM-06.02
         text: |
-          All changes to the project's codebase MUST be automatically evaluated
-          against a documented policy for security weaknesses and blocked in the
-          event of violations except when declared and suppressed as
-          non-exploitable.
+          While active, all changes to the project's codebase MUST be
+          automatically evaluated against a documented policy for security
+          weaknesses and blocked in the event of violations except when declared
+          and suppressed as non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
