@@ -104,9 +104,7 @@ controls:
 
   - id: OSPS-BR-03
     title: |
-      Any websites and version control systems involved in the project
-      development MUST be delivered using SSH, HTTPS, or other encrypted
-      channels.
+      All official project URIs MUST be delivered using encrypted channels.
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
@@ -146,6 +144,14 @@ controls:
           encrypted channels such as SSH or HTTPS for data transmission.
           Ensure all tools and domains referenced in project documentation can
           only be accessed via encrypted channels.
+      - id: OSPS-BR-03.01
+        text: |
+          When the project lists a URI as an official distribution channel,
+          that URI MUST be exclusively delivered using encrypted channels.
+        recommendation: |
+          Configure the project's release pipeline to only fetch data from
+          websites, API responses, and other services which use encrypted
+          channels such as SSH or HTTPS for data transmission.
 
   - id: OSPS-BR-04
     title: |
@@ -266,58 +272,3 @@ controls:
           signature or attestations, such as GPG or PGP signature, Sigstore
           signatures, SLSA provenance, or SLSA VSAs. Include the cryptographic
           hashes of each asset in a signed manifest or metadata file.
-
-  - id: OSPS-BR-07
-    title: |
-      Deliver project websites and distribution services using encrypted
-      channels
-    objective: |
-      Protect the confidentiality and integrity of release assets consumed by
-      the project's users, reducing the risk of eavesdropping or data tampering.
-    family: Build and Release
-    mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-11
-      - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2e
-          - 1.2f
-          - 1.2i
-          - 1.2j
-          - 1.2k
-      - reference-id: SSDF
-        identifiers:
-          - PO3.2
-          - PS1
-      - reference-id: OCRE
-        identifiers:
-          - 483-813
-          - 124-564
-          - 263-184
-    assessment-requirements:
-      - id: OSPS-BR-07.01
-        text: |
-          Any websites or other services involved in the distribution of
-          released software assets MUST be delivered using HTTPS or other
-          encrypted channels.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's websites and distribution services to use
-          encrypted channels such as HTTPS for data transmission.
-      - id: OSPS-BR-07.02
-        text: |
-          Any websites, API responses or other services involved in release
-          pipelines MUST be fetched using encrypted channels.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's release pipeline to only fetch data from
-          websites, API responses, and other services which use encrypted
-          channels such as SSH or HTTPS for data transmission.
