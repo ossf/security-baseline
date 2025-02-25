@@ -7,8 +7,8 @@ description: |
 controls:
   - id: OSPS-SA-01
     title: |
-      Provide design documentation demonstrating all actions and actors within
-      the system
+      The project documentation MUST provide design documentation demonstrating
+      all actions and actors within the system.
     objective: |
       Provide an overview of the project's design and architecture, illustrating
       the interactions and components of the system to help contributors and
@@ -43,15 +43,16 @@ controls:
     assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
-          The project documentation MUST provide design documentation demonstrating
-          all actions and actors within the system.
+          When the project has made a release, the project documentation MUST
+          include design documentation demonstrating all actions and actors
+          within the system.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Include designs in the project documentation that explains the actions and
-          actors. Actors include any subsystem or entity that can influence another
-          segment in the system.
+          Include designs in the project documentation that explains the actions
+          and actors. Actors include any subsystem or entity that can influence
+          another segment in the system.
 
   - id: OSPS-SA-02
     title: |
