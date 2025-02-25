@@ -48,9 +48,9 @@ controls:
           version control system, the system MUST require the user to complete
           a multi-factor authentication process.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           Enforce multi-factor authentication for the project's version
           control system, requiring collaborators to provide a second form of
@@ -90,9 +90,9 @@ controls:
           require manual permission assignment, or restrict the collaborator
           permissions to the lowest available privileges by default.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           Most public version control systems are configured in this manner.
           Ensure the project's version control system always assigns the lowest
@@ -130,9 +130,9 @@ controls:
           When a direct commit is attempted on the project's primary branch,
           an enforcement mechanism MUST prevent the change from being applied.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           If the VCS is centralized, set branch protection on the primary branch
           in the project's VCS. Alternatively, use a decentralized approach,
@@ -145,9 +145,9 @@ controls:
           the version control system MUST treat this as a sensitive activity
           and require explicit confirmation of intent.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           Set branch protection on the primary branch in the project's version
           control system to prevent deletion.
@@ -190,8 +190,8 @@ controls:
           project's version control system MUST default to the lowest available
           permissions for all activities in the pipeline.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - M2
+          - M3
         recommendation: |
           Configure the project's settings to assign the lowest available
           permissions to new pipelines by default, granting additional
@@ -202,7 +202,7 @@ controls:
           code or configuration MUST only assign the minimum privileges
           necessary for the corresponding activity.
         applicability:
-          - Maturity Level 3
+          - M3
         recommendation: |
           Configure the project's CI/CD pipelines to assign the lowest available
           permissions to users and services by default, elevating permissions

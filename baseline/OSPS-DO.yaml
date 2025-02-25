@@ -47,9 +47,9 @@ controls:
           When the project has made a release, the project documentation MUST
           include user guides for all basic functionality.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           Create user guides or documentation for all basic functionality of the
           project, explaining how to install, configure, and use the project's
@@ -99,9 +99,9 @@ controls:
           When the project has made a release, the project documentation MUST
           include a guide for reporting defects.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - M1
+          - M2
+          - M3
         recommendation: |
           It is recommended that projects use their VCS default issue tracker.
           If an external source is used, ensure that the project documentation
@@ -144,7 +144,7 @@ controls:
           contain instructions to verify the integrity and authenticity of the
           release assets.
         applicability:
-          - Maturity Level 3
+          - M3
         recommendation: |
           Instructions in the project should contain information about the
           technology used, the commands to run, and the expected output.
@@ -195,7 +195,7 @@ controls:
           include a descriptive statement about the scope and duration of
           support for each release.
         applicability:
-          - Maturity Level 3
+          - M3
         recommendation: |
           In order to communicate the scope and duration of support for the
           project's released software assets, the project should have a
@@ -230,7 +230,7 @@ controls:
           provide a descriptive statement when releases or versions will no
           longer receive security updates.
         applicability:
-          - Maturity Level 3
+          - M3
         recommendation: |
           While a machine-readable OpenEoX file is recommended, this may also be
           communicated in a SUPPORT.md or beneath a Support header in the
@@ -264,8 +264,8 @@ controls:
           include a description of how the project selects, obtains, and tracks
           its dependencies.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - M2
+          - M3
         recommendation: |
           It is recommended to publish this information alongside the project's
           technical & design documentation on a publicly viewable resource such

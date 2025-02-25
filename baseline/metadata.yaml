@@ -1,0 +1,414 @@
+metadata:
+  id: OSPS-B
+  title: Open Source Project Security Baseline
+  description: |
+    The Open Source Project Security (OSPS) Baseline is a set of security
+    criteria that projects should meet to demonstrate a strong security posture.
+  applicability-categories:
+    - id: M1
+      name: Maturity Level 1
+      description: |
+        Any code or non-code project with any number of maintainers or users
+    - id: M2
+      name: Maturity Level 2
+      description: |
+        Any code project that has at least 2 maintainers and a small number of
+        consistent users
+    - id: M3
+      name: Maturity Level 3
+      description: |
+        Any code project that has a large number of consistent users
+  mapping-references:
+    - id: BPB
+      title: OpenSSF Best Practices Badge
+      version: 2024
+      url: https://github.com/coreinfrastructure/best-practices-badge/blob/main/controls/controls.yml
+    - id: CSF
+      title: NIST Cybersecurity Framework
+      version: 2.0
+      url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+    - id: CRA
+      title: Cyber Resilience Act
+      version: 20.11.2024
+      url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#tit_1
+    - id: SSDF
+      title: Software Security Development Framework
+      version: 1.1
+      url: https://csrc.nist.gov/pubs/sp/800/218/final
+    - id: OC
+      title: ISO/IEC 18974
+      version: 1.0 - 2023-12
+      url: https://openchainproject.org/security-assurance
+    - id: OCRE
+      title: Open Cybersecurity Reference Architecture
+      version: 2024
+      url: https://github.com/OWASP/OpenCRE
+    - id: SLSA
+      title: Supply Chain Levels for Software Artifacts
+      version: 1.0
+      url: https://github.com/slsa-framework/slsa
+  lexicon:
+    - term: Arbitrary Code
+      definition: |
+        Code provided by an external source that is
+        executed by a system without validation or
+        restriction.
+    - term: Attack Surface Analysis
+      definition: |
+        Attack Surface Analysis is about mapping out what parts of a system need to
+        be reviewed and tested for security vulnerabilities. The point of Attack
+        Surface Analysis is to understand the risk areas in an application, to make
+        developers and security specialists aware of what parts of the application
+        are open to attack, to find ways of minimizing this, and to notice when and
+        how the Attack Surface changes and what this means from a risk perspective.
+        
+        See OWASP's Attack Surface Analysis Cheat Sheet for more information.
+      references:
+        - https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html
+    - term: Automated Test Suite
+      definition: |
+        A collection of pre-written test cases that, when invoked,
+        execute the software to verify that actual results are expected results
+        without requiring manual intervention.
+        An automated test suite must return an overall "pass" or "fail" result,
+        and is often implemented using a test framework.
+        Common ways to invoke automated tests include `make check`, `make test`, `npm test`, and `cargo test` manually or as part of a Continuous Integration workflow.
+    - term: Best Practices Badge
+      definition: |
+        The OpenSSF Best Practices Badge Identifies FLOSS best practices & implements a badging system for those practices.
+      synonyms: 
+        - BPB
+        - OpenSSF Best Practices Badge
+      references: 
+        -  https://www.bestpractices.dev/en
+    - term: Build and Release Pipeline
+      definition: |
+        A series of automated processes that compile
+        and deploy software. Similar to the generic
+        term CI/CD Pipelines, but this term excludes
+        some pipelines, such as pre-merge status
+        checks.
+      synonyms: 
+        - Build and Release Pipelines
+    - term: Change
+      definition: |
+        Any alteration of the project's codebase,
+        CI/CD Pipelines, or documentation. This may
+        include addition, deletion, or modification
+        of content.
+    - term: CI/CD Pipeline
+      definition: |
+        Automated pipelines for Continuous
+        Integration and Continuous Delivery.
+        Responsible for building, testing, and
+        delivering changes. These pipelines integrate
+        contributions frequently, enabling rapid and
+        reliable software delivery. CI focuses on
+        testing and building code, while CD delivers
+        software to location such as a package
+        registry.
+
+        In the context of the Open Source Project
+        Security Baseline, CD refers only to
+        continuous delivery, not to continuous
+        deployment, as sometimes used elsewhere.
+    - term: Contributor
+      definition: |
+        Entities who commit code or documentation to
+        the project. Code contributors include
+        collaborators or external participants who
+        submit changes.
+
+        In the context of the Open Source Project
+        Security Baseline, code contributors does not
+        address non-code contributions such as
+        designing, triaging, reviewing, or testing.
+    - term: Codebase
+      definition: |
+        The collection of source code and related
+        assets that make up the project. The codebase
+        includes all files necessary to build and
+        test the software. Lives in the repository,
+        sometimes alongside documentation and CI/CD
+        pipelines. The contents of the codebase are
+        the primary deliverable in a release.
+    - term: Collaborator
+      definition: |
+        A user with a role on the project's version
+        control system who can approve changes or
+        manage the repository settings. Collaborators
+        may have varying permission levels based on
+        their role in the project. This does not
+        include contributors whose changes only
+        originate through a request from a repository
+        fork.
+    - term: Commit
+      definition: |
+        A record of a single change submitted to the
+        version control system. Each commit includes
+        details such as the modifications made, the
+        contributor who made them, and the timestamp
+        of the change.
+    - term: Cyber Resilience Act
+      definition: |
+        Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA).
+        2024 European cybersecurity law that goes into full effect
+        December 2027.  Focuses on products sold within the European
+        Union and the cybersecurity and vulnerability management
+        practices used to create and support the product.
+      synonyms:
+        - CRA
+      references: 
+        - https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+    - term: Cybersecurity Framework
+      definition: |
+        The NIST Cyber Security Framework (CSF) helps organizations understand and improve their management of cybersecurity risk.
+      synonyms: 
+        - CSF
+        - NIST Cybersecurity Framework
+      references: 
+        - https://www.nist.gov/cyberframework
+        - https://doi.org/10.6028/NIST.CSWP.29
+    - term: Defect
+      definition: |
+        Errors or flaws in the software that cause it
+        to produce incorrect or unintended results, 
+        or to behave in an unintended way. Defects
+        can include bugs, vulnerabilities, or other
+        issues that impact the software's
+        functionality or security. Defects may have
+        originally been intentional, but a change in
+        environment or understanding has made them
+        undesirable.
+    - term: OpenEoX
+      definition: |
+        An initiative aimed at standardizing the way
+        End-of-Life and End-of-Support information is 
+        exchanged within the software and hardware industries.
+        Covering both vendors and open-source maintainers,
+        OpenEoX strives to provide a transparent, efficient, 
+        and unified approach to managing product lifecycles.
+      references:
+        - https://openeox.org/
+    - term: Exploitable Vulnerabilities
+      definition: |
+        Defects in the software that can be leveraged
+        by attackers to gain unauthorized access,
+        execute arbitrary code, or cause other
+        undesired outcomes.
+      synonyms:
+        - Exploitable Vulnerability
+    - term: License
+      definition: |
+        A legal document that defines the terms under
+        which the software can be used, modified, and
+        distributed. May be stored at the top level
+        of the repository in a file named `LICENSE`
+        or within files in a directory named
+        `LICENSE/`. The license applies to repository
+        contents and any released software assets,
+        unless otherwise stated.
+    - term: Known Vulnerabilities
+      definition: |
+        Publicly acknowledged exploitable
+        vulnerabilities that have been identified
+        within the software. These vulnerabilities
+        often have associated advisories, patches, or
+        recommended mitigations.
+
+        All proposed changes to the project's
+        codebase must be automatically evaluated 
+        against a documented policy for known
+        vulnerabilities and blocked in the
+        event of violations.
+      synonyms:
+        - Known Vulnerability
+    - term: Multi-factor Authentication
+      definition: |
+        An authentication method that requires two or
+        more verification factors (e.g., a password
+        and a token) to gain access to a resource.
+        This method strengthens security by requiring
+        multiple forms of identification.
+      synonyms:
+        - MFA
+    - term: OpenChain
+      definition: |
+        A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
+      synonyms: 
+        - OC 
+        - ISO/IEC 5230
+        - ISO/IEC 18974
+      references: 
+        - https://openchainproject.org/
+        - https://openchainproject.org/license-compliance 
+    - term: OpenCRE
+      definition: |
+        An OWASP project that converts cybersecurity requirements into a hierchical, machine-readable format.
+      synonyms: 
+        - OCRE 
+      references: 
+        - https://www.opencre.org/
+        - https://zeljkoobrenovic.github.io/opencre-explorer/ 
+    - term: Primary Branch
+      definition: |
+        The main development branch in the version
+        control system, representing the latest
+        stable codebase. Releases are typically made
+        from this branch. Commonly named `main` or
+        `master`. In some situations where branches
+        are not featured, a repository with forked
+        repositories will have the original repo
+        acting as an equivalent to the primary
+        branch.
+    - term: Project Documentation
+      definition: |
+        Written materials related to the project,
+        such as user guides, developer guides, and
+        contribution guidelines. These documents help
+        users and developers understand, contribute
+        to, and interact with the software. At
+        release time, this may include provenance
+        information, licensing details, and other
+        metadata.
+    - term: Software Provenance
+      definition: |
+        Information about the origin and history of
+        the released software assets. This may
+        include details about its development,
+        dependencies, vulnerabilities, contributors,
+        and licensing.
+      synonyms:
+        - Provenance
+    - term: Release
+      definition: |
+        - _(verb)_ The process of making a version
+        controlled bundle of assets available to
+        users, such as through a package registry.
+        - _(noun)_ A version-controlled bundle of
+        code, documentation, and other assets made
+        available to users. A release often includes
+        release notes that describe the changes.
+    - term: Released Software Asset
+      definition: |
+        Deliverables provided to users as part of a
+        release. These assets can include binaries,
+        libraries, or containers.
+    - term: Repository
+      definition: |
+        A storage location managed by a version
+        control system where the project's code,
+        documentation, and other resources are
+        stored. It tracks changes, manages
+        collaborator permissions, and includes
+        configuration options such as branch
+        protection and access controls.
+      synonyms:
+        - Repo
+        - Repositories
+    - term: Secure Software Development Framework
+      definition: |
+        The NIST Secure Software Development Framework (SP 800-218) is a broadly reviewed and collaborative set of fundamental secure software development practices.
+      synonyms: 
+        - SSDF 
+        - NIST Secure Software Development Framework
+        - NIST SP 800-218
+      references: 
+        - https://csrc.nist.gov/projects/ssdf 
+        - https://csrc.nist.gov/pubs/sp/800/218/final  
+    - term: Software Bill of Materials
+      definition: |
+        A list of all components that make up a given piece of software
+        or hardware, formatted as CycloneDX or SPDX. This list must include
+        the following data elements for the components included in the released
+        software asset: license, supplier name, filename of the component,
+        component name, component version, software identifiers, relationship
+        between the components, author of the SBOM data and timestamp. Additionally,
+        for deployable and executable components, the SBOM should record their
+        cryptographic hashes.
+      synonyms:
+        - SBOM
+        - SBOMs
+      references:
+        - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
+        - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
+        - https://spdx.dev
+        - https://cyclonedx.org
+    - term: Software Composition Analysis
+      definition: |
+        The process of identifying and cataloging all
+        components and dependencies in a software
+        codebase. SCA is essential for managing
+        security vulnerabilities and ensuring
+        compliance with organizational policies.
+      synonyms:
+        - SCA
+    - term: Status Check
+      definition: |
+        Automated tests or validations that run on
+        commits before they are merged. Status checks
+        ensure that any changes meet the project's
+        quality and security standards.
+    - term: Subproject
+      definition: |
+        A codebase that is part of the project but
+        maintained in a separate repository.
+        Subprojects may be compiled into the primary
+        project or used as standalone components.
+    - term: Supply-chain Levels for Software Artifacts
+      definition: |
+        An OpenSSF project that sets guidelines for securing software supply chain infrastrucutre and artifact integrity. 
+      synonyms: 
+        - SLSA 
+        - Supply-chain Levels for Software Artifacts
+      references: 
+        - https://openssf.org/projects/slsa/
+        - https://slsa.dev/
+    - term: Threat Modeling
+      definition: |
+        Threat modeling is an activity where the project
+        looks at the codebase, associated processes and 
+        infrastructure, interfaces, key components and 
+        "thinks like a hacker" to brainstorm how the 
+        system be be broken or compromised.
+
+        Each identified threat is listed out so the project
+        can then think about how to proactively avoid or 
+        close off any gaps/vulnerabilities that could arise.
+
+        Examples of threat modeling methodologies include
+        the Shostack "4 Questions" model, STRIDE, and
+        tools such as the Elevation of Privilege Threat
+        Modeling Card Game or Threat Dragon.
+      references:
+        - https://github.com/adamshostack/4QuestionFrame
+        - https://owasp.org/www-community/Threat_Modeling_Process
+        - https://www.microsoft.com/en-us/download/details.aspx?id=20303
+        - https://owasp.org/www-project-threat-dragon
+    - term: Version Identifier
+      definition: |
+        A label assigned to a specific release of the
+        software, such as `v1.2.3`. Commonly
+        recommended formats are Semantic Versioning
+        or Calendar Versioning.
+      synonyms:
+    - term: Version Control System
+      definition: |
+        A tool that tracks changes to files over time
+        and facilitates collaboration among
+        contributors. Examples of version control
+        systems include Git, Subversion, and
+        Mercurial.
+      synonyms:
+        - VCS
+    - term: Vulnerability Reporting
+      definition: |
+        The act of identifying and documenting
+        exploitable vulnerabilities in released
+        software assets. This may include privately
+        or openly reporting vulnerabilities to
+        maintainers, security teams, or the public,
+        as well as tracking the resolution of these
+        vulnerabilities.
+      synonyms:
+        - Coordinated Vulnerability Reporting
