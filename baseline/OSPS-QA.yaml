@@ -214,7 +214,6 @@ controls:
           project. Others may be held to a lower standard if they have lower
           levels of adoption or are not intended for general use.
 
-
   - id: OSPS-QA-05
     title: |
       Remove generated executable artifacts from the version control system
@@ -298,7 +297,6 @@ controls:
           The project's documentation MUST clearly document when and how tests
           are run.
         applicability:
-          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Add a section to the contributing documentation that explains how to

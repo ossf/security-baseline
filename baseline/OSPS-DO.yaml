@@ -143,7 +143,6 @@ controls:
           expected identity of the person or process authoring the software
           release.
         applicability:
-          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Instructions in the project should contain information about the
@@ -183,7 +182,6 @@ controls:
           The project documentation MUST include a descriptive statement about
           the scope and duration of support.
         applicability:
-          - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           In order to communicate the scope and duration of support for the
