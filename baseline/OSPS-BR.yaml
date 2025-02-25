@@ -48,10 +48,12 @@ controls:
           When a CI/CD pipeline uses a branch name in its functionality, that
           name value MUST be sanitized and validated prior to use in the
           pipeline.
+        recommendation: # TODO
 
   - id: OSPS-BR-02
     title: |
-      Assign unique version identifiers to all releases and software assets
+      All releases and released software assets MUST be assigned a unique
+      version identifier for each release intended to be used by users.
     objective: |
       Ensure that each software asset produced by the project is uniquely
       identified, enabling users to track changes and updates to the project
@@ -79,16 +81,27 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
-          All releases and released software assets MUST be assigned a unique
-          version identifier for each release intended to be used by users.
+          When an official release is created, that release MUST assigned a
+          unique version identifier.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Assign a unique version identifier to each release and associated
-          software asset produced by the project, following a consistent naming
-          convention or numbering scheme. Examples include SemVer, CalVer, or
-          git commit id.
+          Assign a unique version identifier to each release produced by the
+          project, following a consistent naming convention or numbering scheme.
+          Examples include SemVer, CalVer, or git commit id.
+      - id: OSPS-BR-02.01
+        text: |
+          When an official release is created, all assets within that release
+          MUST be clearly associated with the release identifier or another
+          unique identifier for the asset.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Assign a unique version identifier to each oftware asset produced by
+          the project, following a consistent naming convention or numbering
+          scheme. Examples include SemVer, CalVer, or git commit id.
+
 
   - id: OSPS-BR-03
     title: |
