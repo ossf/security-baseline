@@ -188,7 +188,7 @@ controls:
 
   - id: OSPS-VM-05
     title: |
-      The project MUST have a policy for addressing SCA findings.
+      The project MUST enforce a policy for addressing SCA findings.
     objective: |
       Ensure that the project clearly communicates the threshold for remediation
       of SCA findings, including vulnerabilities and license issues in software
@@ -283,7 +283,8 @@ controls:
 
   - id: OSPS-VM-06
     title: |
-      Define and enforce a threshold for remediation of SAST findings
+      The project documentation MUST enforce a policy that defines a
+      threshold for remediation of SAST findings.
     objective: |
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
@@ -293,8 +294,8 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
-          The project documentation MUST include a policy that defines a
-          threshold for remediation of SAST findings.
+          While active, the project documentation MUST include a policy that
+          defines a threshold for remediation of SAST findings.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -304,10 +305,10 @@ controls:
           these findings.
       - id: OSPS-VM-06.02
         text: |
-          All changes to the project's codebase MUST be automatically evaluated
-          against a documented policy for security weaknesses and blocked in the
-          event of violations except when declared and suppressed as
-          non-exploitable.
+          While active, all changes to the project's codebase MUST be
+          automatically evaluated against a documented policy for security
+          weaknesses and blocked in the event of violations except when declared
+          and suppressed as non-exploitable.
         applicability:
           - Maturity Level 3
         recommendation: |
