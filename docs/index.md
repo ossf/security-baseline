@@ -11,9 +11,9 @@ Previous versions are presented for historical reference.
 Downstream consumers of the OSPS Baseline should specify their compliance against a specific version.
 Only the version labeled as "current" should be used for new compliance efforts.
 
-* [In-development version](versions/devel)
-* Current version: [v2025.02.25-rc](versions/2025-02-25-rc)
+* Current version: [v2025.02.25](versions/2025-02-25)
 * Previous versions:
     * (none)
+* [In-development version](versions/devel)
 
 Versions are managed according to the [Baseline maintenance process](maintenance).
