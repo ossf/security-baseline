@@ -53,11 +53,13 @@ controls:
           Include designs in the project documentation that explains the actions
           and actors. Actors include any subsystem or entity that can influence
           another segment in the system.
+          Ensure this is updated for new features or breaking changes.
+
 
   - id: OSPS-SA-02
     title: |
-      Include descriptions of all external software interfaces of the released
-      software assets
+      The project documentation MUST include descriptions of all external
+      software interfaces of the released software assets.
     objective: |
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
@@ -91,19 +93,21 @@ controls:
     assessment-requirements:
       - id: OSPS-SA-02.01
         text: |
-          The project documentation MUST include descriptions of all external
-          software interfaces of the released software assets.
+          When the project has made a release, the project documentation MUST
+          include descriptions of all external software interfaces of the
+          released software assets.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Document all software interfaces (APIs) of the released software assets,
-          explaining how users can interact with the software and what data is
-          expected or produced.
+          Document all software interfaces (APIs) of the released software
+          assets, explaining how users can interact with the software and what
+          data is expected or produced.
+          Ensure this is updated for new features or breaking changes.
 
   - id: OSPS-SA-03
     title: |
-      Perform a threat modeling and attack surface analysis
+      The project MUST assess the security posture of all software assets.
     objective: |
       Provide project maintainers an understanding of how the software can be
       misused or broken allows them to plan mitigations to close off the potential
@@ -144,9 +148,9 @@ controls:
     assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
-          The project MUST perform a security assessment to understand the most
-          likely and impactful potential security problems that could occur
-          within the software.
+          When the project has made a release, the project MUST perform a
+          security assessment to understand the most likely and impactful
+          potential security problems that could occur within the software.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
@@ -157,11 +161,13 @@ controls:
           realized helps the project manage and address risk. This information
           is useful to downstream consumers to demonstrate the security acumen
           and practices of the project.
+          Ensure this is updated for new features or breaking changes.
       - id: OSPS-SA-03.02
         text: |
-          The project MUST perform a threat modeling and attack surface analysis to
-          understand and protect against attacks on critical code paths, functions,
-          and interactions within the system.
+          When the project has made a release, the project MUST perform a threat
+          modeling and attack surface analysis to understand and protect against
+          attacks on critical code paths, functions, and interactions within the
+          system.
         applicability:
           - Maturity Level 3
         recommendation: |
@@ -171,3 +177,4 @@ controls:
           be be broken or compromised. Each identified threat is listed out so
           the project can then think about how to proactively avoid or close off
           any gaps/vulnerabilities that could arise.
+          Ensure this is updated for new features or breaking changes.
