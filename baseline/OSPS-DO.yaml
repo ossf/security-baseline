@@ -168,8 +168,8 @@ controls:
 
   - id: OSPS-DO-04
     title: |
-      Include a descriptive statement about the scope and duration of support
-      in the project documentation
+      The project documentation MUST include a descriptive statement about
+      the scope and duration of support.
     objective: |
       Provide users with clear expectations regarding the project's support
       lifecycle. This allows downstream consumers to take relevant actions to
@@ -191,8 +191,9 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
-          The project documentation MUST include a descriptive statement about
-          the scope and duration of support.
+          When the project has made a release, the project documentation MUST
+          include a descriptive statement about the scope and duration of
+          support for each release.
         applicability:
           - Maturity Level 3
         recommendation: |
