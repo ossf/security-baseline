@@ -230,7 +230,8 @@ controls:
 
   - id: OSPS-QA-05
     title: |
-      Remove generated executable artifacts from the version control system
+        The version control system MUST NOT contain generated executable
+        artifacts.
     objective: |
       Reduce the risk of including generated executable artifacts in the
       project's version control system, ensuring that only source code and
@@ -250,9 +251,10 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
-          The version control system MUST NOT contain generated executable
-          artifacts.
+          While active, the version control system MUST NOT contain generated
+          executable artifacts.
         applicability:
+          - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
