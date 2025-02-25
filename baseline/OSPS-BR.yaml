@@ -243,9 +243,8 @@ controls:
     title: |
       Produce all released software assets with signatures and hashes
     objective: |
-      Provide users with a mechanism to verify the authenticity and integrity of
-      released software assets, reducing the risk of tampering or unauthorized
-      modifications.
+      All released software assets MUST be signed or accounted for in a
+      signed manifest including each asset's cryptographic hashes.
     family: Build and Release
     mappings:
       - reference-id: SSDF
@@ -256,8 +255,9 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
-          All released software assets MUST be signed or accounted for in a
-          signed manifest including each asset's cryptographic hashes.
+          When an official release is created, that release MUST be signed or
+          accounted for in a signed manifest including each asset's
+          cryptographic hashes.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
