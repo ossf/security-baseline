@@ -80,7 +80,7 @@ controls:
 
   - id: OSPS-QA-02
     title: |
-      Document dependencies for released software assets
+      The project MUST provide a list of dependencies used in the software.
     objective: |
       Provide transparency and accountability for the project's dependencies
       while enabling users and contributors to understand the software's direct
@@ -117,9 +117,9 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
-          The source code repository MUST contain a dependency list that
-          accounts for the direct language dependencies when the package
-          management system supports it.
+          When the package management system supports it, the source code
+          repository MUST contain a dependency list that accounts for the direct
+          language dependencies.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
@@ -130,8 +130,8 @@ controls:
           or go.mod.
       - id: OSPS-QA-02.02
         text: |
-          All compiled released software assets MUST be delivered with a
-          software bill of materials.
+          When the project has made a release, all compiled released software
+          assets MUST be delivered with a software bill of materials.
         applicability:
           - Maturity Level 3
         recommendation: |
