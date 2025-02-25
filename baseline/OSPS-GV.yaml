@@ -8,7 +8,7 @@ description: |
 controls:
   - id: OSPS-GV-01
     title: |
-      The project documentation MUST include the Roles and Responsibilities
+      The project documentation MUST include the roles and responsibilities
       for members of the project.
     objective: |
       Documenting project roles and responsibilities helps project participants,
