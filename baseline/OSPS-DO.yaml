@@ -157,7 +157,7 @@ controls:
           When the project has made a release, the project documentation MUST
           contain instructions to verify the expected identity of the person or
           process authoring the software release.
-        recommendations: |
+        recommendation: |
           The expected identity may be in the form of key IDs used to sign,
           issuer and identity from a sigstore certificate, or other similar
           forms.
