@@ -214,7 +214,7 @@
   definition: |
      An OpenSSF project that helps users assesses open 
      source projects for security risks through a series 
-     of automated checksIt was created by OSS developers 
+     of automated checks. It was created by OSS developers 
      to help improve the health of critical projects
      that the community depends on.
   synonyms: 
