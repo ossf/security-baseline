@@ -117,7 +117,6 @@ controls:
       - reference-id: BPB
         identifiers:
           - B-S-8
-          - B-W-8
           - S-G-1
       - reference-id: CRA
         identifiers:
@@ -143,8 +142,6 @@ controls:
           - 068-102
           - 154-031
           - 888-770
-          - 307-242
-          - 660-867
     assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
