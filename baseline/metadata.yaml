@@ -47,3 +47,7 @@ metadata:
       title: Supply Chain Levels for Software Artifacts
       version: 1.0
       url: https://github.com/slsa-framework/slsa
+    - id: Scorecard
+      title: OpenSSF Scorecard
+      version: v5.1.1
+      url: https://scorecard.dev/
