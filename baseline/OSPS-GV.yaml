@@ -109,10 +109,6 @@ controls:
         identifiers:
           - 1.2l
           - 2.4
-          - 2.1
-          - 2.2
-          - 2.5
-          - 2.6
       - reference-id: SSDF
         identifiers:
           - PW1.2
@@ -157,9 +153,20 @@ controls:
       the risk of unauthorized access or misuse.
     family: Governance
     mappings:
+      - reference-id: BPB
+        identifiers:
+          - B-B-5
+          - B-S-3
+          - B-B-4+
+          - Q-G-2
       - reference-id: CRA
         identifiers:
           - 1.2d
+          - 1.2l
+          - 2.1
+          - 2.2
+          - 2.5
+          - 2.6
       - reference-id: SSDF
         identifiers:
           - PO2
@@ -172,6 +179,9 @@ controls:
         identifiers:
           - 123-124
           - 152-725
+      - reference-id: OC
+        identifiers:
+          - 4.1.2     
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |
