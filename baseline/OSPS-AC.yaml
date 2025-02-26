@@ -30,9 +30,11 @@ controls:
         identifiers:
           - PO3.2
           - PS1
+          - PS2
       - reference-id: CSF
         identifiers:
           - PR.A-02
+          - PR.A-05
       - reference-id: OCRE
         identifiers:
           - 486-813
@@ -71,11 +73,14 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
+          - PO2
           - PO3.2
           - PS1
+          - PS2
       - reference-id: CSF
         identifiers:
-          - PR:AA-02
+          - PR.AA-02
+          - PR.AA-05
       - reference-id: OCRE
         identifiers:
           - 486-813
@@ -115,15 +120,19 @@ controls:
         identifiers:
           - PO3.2
           - PS1
+          - PS2
       - reference-id: CSF
         identifiers:
           - PR.A-02
+          - PR.A-05
       - reference-id: OCRE
         identifiers:
           - 486-813
           - 124-564
-          - 123-124
           - 152-725
+      - reference-id: ScCrd
+        identifiers:
+          - Branch-Protection 
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
@@ -172,6 +181,7 @@ controls:
           - PO2
           - PO3.2
           - PS1
+          - PS2
       - reference-id: CSF
         identifiers:
           - PR.AA-02
@@ -183,6 +193,10 @@ controls:
           - 347-507
           - 263-284
           - 123-124
+        - reference-id: SLSA
+        identifiers:
+          - Producer - Choose an appropriate build platform
+          - Build platform - Isolation strength - Isolated
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |
