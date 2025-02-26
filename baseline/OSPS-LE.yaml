@@ -40,8 +40,8 @@ controls:
           contributors to assert that they are legally authorized to make the
           associated contributions on every commit.
         applicability:
-          - M2
-          - M3
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Include a DCO or CLA in the project's repository, requiring code
           contributors to assert that they are legally authorized to commit the
@@ -79,9 +79,9 @@ controls:
           While active, the license for the source code MUST meet the OSI Open
           Source Definition or the FSF Free Software Definition.
         applicability:
-          - M1
-          - M2
-          - M3
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Add a LICENSE file to the project's repo with a license that is an
           approved license by the Open Source Initiative (OSI), or a free
@@ -95,9 +95,9 @@ controls:
           While active, the license for the released software assets MUST meet
           the OSI Open Source Definition or the FSF Free Software Definition.
         applicability:
-          - M1
-          - M2
-          - M3
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           If a different license is included with released software assets,
           ensure it is an approved license by the Open Source Initiative (OSI),
@@ -135,9 +135,9 @@ controls:
           the corresponding repository's LICENSE file, COPYING file, or
           LICENSE/ directory.
         applicability:
-          - M1
-          - M2
-          - M3
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Include the project's source code license in the project's LICENSE
           file, COPYING file, or LICENSE/ directory to provide visibility and
@@ -151,9 +151,9 @@ controls:
           file, or LICENSE/ directory alongside the corresponding release
           assets.
         applicability:
-          - M1
-          - M2
-          - M3
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Include the project's released software assets license in the released
           source code, or in a LICENSE file, COPYING file, or LICENSE/ directory
