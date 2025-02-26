@@ -5,14 +5,17 @@ metadata:
     The Open Source Project Security (OSPS) Baseline is a set of security
     criteria that projects should meet to demonstrate a strong security posture.
   applicability-categories:
-    - id: Maturity Level 1
+    - id: Level1
+      title: Maturity Level 1
       description: |
         Any code or non-code project with any number of maintainers or users
-    - id: Maturity Level 2
+    - id: Level2
+      title: Maturity Level 2
       description: |
         Any code project that has at least 2 maintainers and a small number of
         consistent users
-    - id: Maturity Level 3
+    - id: Level3
+      title: Maturity Level 3
       description: |
         Any code project that has a large number of consistent users
   mapping-references:

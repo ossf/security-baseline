@@ -47,8 +47,8 @@ controls:
           include design documentation demonstrating all actions and actors
           within the system.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Include designs in the project documentation that explains the actions
           and actors. Actors include any subsystem or entity that can influence
@@ -97,8 +97,8 @@ controls:
           include descriptions of all external software interfaces of the
           released software assets.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Document all software interfaces (APIs) of the released software
           assets, explaining how users can interact with the software and what
@@ -152,8 +152,8 @@ controls:
           security assessment to understand the most likely and impactful
           potential security problems that could occur within the software.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Performing a security assessment informs both project members as well
           as downstream consumers that the project understands what problems
@@ -169,7 +169,7 @@ controls:
           attacks on critical code paths, functions, and interactions within the
           system.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Threat modeling is an activity where the project looks at the 
           codebase, associated processes and infrastructure, interfaces, key

@@ -55,8 +55,8 @@ controls:
           include a policy for coordinated vulnerability reporting, with a clear
           timeframe for response.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Create a SECURITY.md file at the root of the directory, outlining the
           project's policy for coordinated vulnerability reporting. Include a
@@ -103,7 +103,7 @@ controls:
           While active, the project documentation MUST contain
           security contacts.
         applicability:
-          - Maturity Level 1
+          - Level1
         recommendation: |
           Create a security.md (or similarly-named) file that contains security
           contacts for the project.
@@ -135,8 +135,8 @@ controls:
           provide a means for reporting security vulnerabilities privately to
           the security contacts within the project.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Provide a means for security researchers to report vulnerabilities
           privately to the project. This may be a dedicated email address, a
@@ -164,8 +164,8 @@ controls:
           While active, the project documentation MUST
           publicly publish data about discovered vulnerabilities.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - Level2
+          - Level3
         recommendation: |
           Provide information about known vulnerabilities in a predictable
           public channel, such as a CVE entry, blog post, or other medium.
@@ -179,7 +179,7 @@ controls:
           in a VEX document, augmenting the vulnerability report with
           non-exploitability details.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Establish a VEX feed communicating the exploitability status of 
           known vulnerabilities, including assessment details or any
@@ -250,7 +250,7 @@ controls:
           defines a threshold for remediation of SCA findings related to
           vulnerabilities and licenses.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Document a policy in the project that defines a threshold for
           remediation of SCA findings related to vulnerabilities and licenses.
@@ -261,7 +261,7 @@ controls:
           While active, the project documentation MUST include a policy to
           address SCA violations prior to any release.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Document a policy in the project to address applicable Software
           Composition Analysis results before any release, and add status checks
@@ -274,7 +274,7 @@ controls:
           in the event of violations, except when declared and suppressed as
           non-exploitable.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Create a status check in the project's version control system that
           runs a Software Composition Analysis tool on all changes
@@ -297,7 +297,7 @@ controls:
           While active, the project documentation MUST include a policy that
           defines a threshold for remediation of SAST findings.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Document a policy in the project that defines a threshold for
           remediation of Static Application Security Testing (SAST) findings.
@@ -310,7 +310,7 @@ controls:
           weaknesses and blocked in the event of violations except when declared
           and suppressed as non-exploitable.
         applicability:
-          - Maturity Level 3
+          - Level3
         recommendation: |
           Create a status check in the project's version control system that
           runs a Static Application Security Testing (SAST) tool on all changes
