@@ -194,7 +194,7 @@ controls:
           - 263-284
           - 123-124
         - reference-id: SLSA
-        identifiers:
+          identifiers:
           - Producer - Choose an appropriate build platform
           - Build platform - Isolation strength - Isolated
     assessment-requirements:
