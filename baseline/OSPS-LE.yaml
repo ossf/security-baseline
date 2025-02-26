@@ -119,8 +119,6 @@ controls:
     mappings:
       - reference-id: BPB
         identifiers:
-          - B-B-6
-          - B-B-7
           - B-B-8
       - reference-id: CRA
         identifiers:
