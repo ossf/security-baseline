@@ -55,9 +55,9 @@ controls:
           While active, the project's source code repository MUST be publicly
           readable at a static URL.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: |
           Use a common VCS such as GitHub, GitLab, or Bitbucket. Ensure the
           repository is publicly readable. Avoid duplication or mirroring of
@@ -70,9 +70,9 @@ controls:
           all changes made, who made the changes, and when the changes were
           made.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: |
           Use a common VCS such as GitHub, GitLab, or Bitbucket to maintain a
           publicly readable commit history. Avoid squashing or rewriting commits
@@ -121,9 +121,9 @@ controls:
           repository MUST contain a dependency list that accounts for the direct
           language dependencies.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: |
           This may take the form a package manager or language dependency file
           that enumerates all direct dependencies such as package.json, Gemfile,
@@ -133,7 +133,7 @@ controls:
           When the project has made a release, all compiled released software
           assets MUST be delivered with a software bill of materials.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           It is recommended to auto-generate SBOMs at build time using a tool
           that has been vetted for accuracy. This enables users to ingest this
@@ -168,8 +168,8 @@ controls:
           When a commit is made to the primary branch, any automated status
           checks for commits MUST pass or be manually bypassed.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: |
           Configure the project's version control system to require that all
           automated status checks pass or require manual acknowledgement before a
@@ -207,7 +207,7 @@ controls:
           While active, the project documentation MUST contain a list of any
           codebases that are considered subprojects or additional repositories.
         applicability:
-          - Level1
+          - Lv1
         recommendation: |
           Document any additional subproject code repositories produced by the
           project and compiled into a release. This documentation should include
@@ -218,7 +218,7 @@ controls:
           repositories, all subprojects MUST enforce security requirements that
           are as strict or stricter than the primary codebase.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           Any additional subproject code repositories produced by the project
           and compiled into a release must enforce security requirements as
@@ -254,9 +254,9 @@ controls:
           While active, the version control system MUST NOT contain generated
           executable artifacts.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: |
           Remove generated executable artifacts in the project's version control
           system. It is recommended that any scenario where a generated
@@ -300,8 +300,8 @@ controls:
           run at least one automated test suite to ensure the changes meet
           expectations.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: | # give examples
           Automated tests should be run prior to every merge into the primary
           branch. The test suite should be run in a CI/CD pipeline and the
@@ -315,7 +315,7 @@ controls:
           While active, project's documentation MUST clearly document when and
           how tests are run.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           Add a section to the contributing documentation that explains how to
           run the tests locally and how to run the tests in the CI/CD pipeline.
@@ -327,7 +327,7 @@ controls:
           all major changes to the software produced by the project should add
           or update tests of the functionality in an automated test suite.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           Add a section to the contributing documentation that explains the
           policy for adding or updating tests. The policy should explain what
@@ -353,7 +353,7 @@ controls:
           control system MUST require at least one non-author approval of the
           changes before merging.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           Configure the project's version control system to require at least one
           non-author approval of changes before merging into the release or

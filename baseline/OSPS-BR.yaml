@@ -39,9 +39,9 @@ controls:
           When a CI/CD pipeline accepts an input parameter, that parameter MUST
           be sanitized and validated prior to use in the pipeline.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: # TODO
       - id: OSPS-BR-01.02
         text: |
@@ -85,8 +85,8 @@ controls:
           When an official release is created, that release MUST be assigned a
           unique version identifier.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: |
           Assign a unique version identifier to each release produced by the
           project, following a consistent naming convention or numbering scheme.
@@ -97,7 +97,7 @@ controls:
           MUST be clearly associated with the release identifier or another
           unique identifier for the asset.
         applicability:
-          - Level3
+          - Lv3
         recommendation: |
           Assign a unique version identifier to each software asset produced by
           the project, following a consistent naming convention or numbering
@@ -137,9 +137,9 @@ controls:
           When the project lists a URI as an official project channel, that URI
           MUST be exclusively delivered using encrypted channels.
         applicability:
-          - Level1
-          - Level2
-          - Level3
+          - Lv1
+          - Lv2
+          - Lv3
         recommendation: |
           Configure the project's websites and version control systems to use
           encrypted channels such as SSH or HTTPS for data transmission.
@@ -191,8 +191,8 @@ controls:
           a descriptive log of functional and security
           modifications.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: |
           Ensure that all releases include a descriptive change log. It is
           recommended to ensure that the change log is human-readable and
@@ -238,8 +238,8 @@ controls:
           When a build and release pipeline ingests dependencies, it MUST
           use standardized tooling where available.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: |
           Use a common tooling for your ecosystem, such as package managers or
           dependency management tools to ingest dependencies at build time. This
@@ -267,8 +267,8 @@ controls:
           accounted for in a signed manifest including each asset's
           cryptographic hashes.
         applicability:
-          - Level2
-          - Level3
+          - Lv2
+          - Lv3
         recommendation: |
           Sign all released software assets at build time with a cryptographic
           signature or attestations, such as GPG or PGP signature, Sigstore
