@@ -166,10 +166,10 @@ controls:
           - 2.4
           - 2.6
        - reference-id: SSDF
-        identifiers:
-          - PO4.1
-          - RV2.1
-          - RV2.2
+         identifiers:
+            - PO4.1
+            - RV2.1
+            - RV2.2
       - reference-id: CSF
         identifiers:
           - ID.RA-01
