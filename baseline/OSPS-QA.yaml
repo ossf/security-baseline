@@ -27,8 +27,8 @@ controls:
       - reference-id: CRA
         identifiers:
           - 1.2b
-          - 1.2j
           - 1.2f
+          - 1.2j
       - reference-id: SSDF
         identifiers:
           - PS1
@@ -49,6 +49,9 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.1.4
+      - reference-id: SLSA
+        identifiers:
+          - Build platform - isolation strength - Isolated
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
@@ -94,15 +97,19 @@ controls:
       - reference-id: CRA
         identifiers:
           - 2.1
+          - 2.2
           - 2.3
       - reference-id: SSDF
         identifiers:
           - PO3.3
           - PS1
+          - PS2
           - PS3.2
+          - PW4
       - reference-id: CSF
         identifiers:
-          - ID.M-02
+          - ID.AM.01
+          - ID.AM-02
       - reference-id: OC
         identifiers:
           - 4.1.5
@@ -159,9 +166,18 @@ controls:
         identifiers:
           - PO4.1
           - PS1
+          - PS2
+          - RV1.2
       - reference-id: CSF
         identifiers:
           - ID.IM-02
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+      - reference-id: OCRE
+        identifiers:
+          - 263-184
+          - 253-452
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
@@ -197,10 +213,15 @@ controls:
           - PO3.2
           - PO4.1
           - PS1
+          - PS2
+          - RV1.2
       - reference-id: OCRE
         identifiers:
           - 486-813
           - 124-564
+      - reference-id: SLSA
+        identifiers:
+          - Build platform - isolation strength - Isolated
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -246,6 +267,7 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PS1
+          - PS2
       - reference-id: OCRE
         identifiers:
           - 486-813
@@ -288,6 +310,9 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PW8.2
+      - reference-id: CSF
+        identifiers:
+          - ID.AM-02
       - reference-id: OC
         identifiers:
           - 4.1.5
