@@ -210,6 +210,17 @@
   references: 
     - https://www.opencre.org/
     - https://zeljkoobrenovic.github.io/opencre-explorer/ 
+- term: OpenSSF Scorecard
+  definition: |
+     An OpenSSF project that helps users assesses open 
+     source projects for security risks through a series 
+     of automated checks. It was created by OSS developers 
+     to help improve the health of critical projects
+     that the community depends on.
+  synonyms: 
+  references: 
+    - https://github.com/ossf/scorecard
+    - https://scorecard.dev/
 - term: Primary Branch
   definition: |
     The main development branch in the version
