@@ -37,8 +37,8 @@ controls:
           - 357-352
       - reference-id: SLSA
         identifiers:
-          - Choose an appropriate build platform 
-       assessment-requirements:
+          - Choose an appropriate build platform
+    assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
           When a CI/CD pipeline accepts an input parameter, that parameter MUST
@@ -147,7 +147,7 @@ controls:
           - 263-184
       - reference-id: SLSA
         identifiers:
-          - Choose an appropriate build platform                
+          - Choose an appropriate build platform
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -272,7 +272,7 @@ controls:
           - 715-334
       - reference-id: SLSA
         identifiers:
-          - Isolation strength - isolated  
+          - Isolation strength - isolated
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -307,7 +307,7 @@ controls:
           - Signed-Releases
       - reference-id: SLSA
         identifiers:
-          - Distribute provenance - Exists    
+          - Distribute provenance - Exists
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
