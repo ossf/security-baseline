@@ -159,7 +159,7 @@ controls:
           process authoring the software release.
         applicability:
           - Maturity Level 3
-         recommendation: |
+        recommendation: |
           The expected identity may be in the form of key IDs used to sign,
           issuer and identity from a sigstore certificate, or other similar
           forms.
