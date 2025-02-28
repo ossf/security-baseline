@@ -24,7 +24,9 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO3.2
+          - PO5.2
           - PS1
+          - PS2
       - reference-id: CSF
         identifiers:
           - PR.AA-02
@@ -33,6 +35,9 @@ controls:
           - 486-813
           - 124-564
           - 357-352
+      - reference-id: SLSA
+        identifiers:
+          - Choose an appropriate build platform
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
@@ -48,7 +53,10 @@ controls:
           When a CI/CD pipeline uses a branch name in its functionality, that
           name value MUST be sanitized and validated prior to use in the
           pipeline.
-        applicability: # TODO
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: # TODO
 
   - id: OSPS-BR-02
@@ -79,6 +87,10 @@ controls:
         identifiers:
           - 486-813
           - 124-564
+      - reference-id: SLSA
+        identifiers:
+          - Follow a consistent build process
+          - Provenance generation- Exists, Authentic
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -125,12 +137,17 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO3.2
+          - PO5.2
           - PS1
+          - PS2
       - reference-id: OCRE
         identifiers:
           - 483-813
           - 124-564
           - 263-184
+      - reference-id: SLSA
+        identifiers:
+          - Choose an appropriate build platform
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -169,10 +186,17 @@ controls:
         identifiers:
           - CC-B-8
           - CC-B-9
+          - Q-B-7
+          - A-B-1
+          - A-S-1
       - reference-id: CRA
         identifiers:
+          - 1.2d
+          - 1.2f
+          - 1.2h
+          - 1.2j
           - 1.2l
-          - 2.2
+          - 2.5
       - reference-id: SSDF
         identifiers:
           - PS1
@@ -181,9 +205,20 @@ controls:
           - PW1.2
       - reference-id: OCRE
         identifiers:
-          - 486-813
+          - 483-813
+          - 068-486
           - 124-564
+          - 757-271
+          - 347-352
+          - 263-184
+          - 208-355
           - 745-356
+          - 732-148
+      - reference-id: SLSA
+        identifiers:
+          - Choose an appropriate build platform
+          - Follow a consistent build process
+          - Build platform - Isolation strength - isolated
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -222,16 +257,22 @@ controls:
           - 1.2h
           - 1.2j
           - 2.1
+          - 2.2
+          - 2.3
       - reference-id: SSDF
         identifiers:
           - PO3.2
           - PS1
+          - PS2
       - reference-id: OCRE
         identifiers:
           - 486-813
           - 124-564
           - 347-352
           - 715-334
+      - reference-id: SLSA
+        identifiers:
+          - Isolation strength - isolated
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -258,8 +299,15 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO5.2
+          - PS2
           - PS2.1
           - PW6.2
+      - reference-id: ScCrd
+        identifiers:
+          - Signed-Releases
+      - reference-id: SLSA
+        identifiers:
+          - Distribute provenance - Exists
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
