@@ -27,6 +27,7 @@ controls:
       - reference-id: CRA
         identifiers:
           - 2.1
+          - 2.2
           - 2.3
           - 2.6
           - 2.7
@@ -48,6 +49,9 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 887-750
+      - reference-id: ScCrd
+        identifiers:
+          - Security-policy          
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -97,6 +101,9 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 464-513
+      - reference-id: ScCrd
+        identifiers:
+          - Security-policy                  
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -118,12 +125,12 @@ controls:
       remediations to protect users of the project.
     family: Vulnerability Management
     mappings:
+      - reference-id: BPB
+        identifiers:
+          - R-B-7
       - reference-id: CRA
         identifiers:
-          - 1.2a
-          - 1.2b
-          - 2.1
-          - 2.4
+          - 2.5
           - 2.6
       - reference-id: OCRE
         identifiers:
@@ -158,6 +165,17 @@ controls:
           - 2.1
           - 2.4
           - 2.6
+      - reference-id: SSDF
+        identifiers:
+          - PO4.1
+          - RV2.1
+          - RV2.2
+      - reference-id: CSF
+        identifiers:
+          - ID.RA-01
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -201,12 +219,15 @@ controls:
     mappings:
       - reference-id: BPB
         identifiers:
+          - B-S-8
           - Q-B-12
           - Q-S-9
           - S-B-14
           - S-B-15
+          - A-B-1
           - A-B-3
           - A-B-8
+          - A-S-1
       - reference-id: CRA
         identifiers:
           - 1.2a
@@ -215,11 +236,14 @@ controls:
           - 2.1
           - 2.2
           - 2.3
+          - 2.4
       - reference-id: SSDF
         identifiers:
           - PO.4
           - PW1.2
           - PW8.1
+          - RV1.2
+          - RV1.3
           - RV2.1
           - RV 2.2
       - reference-id: CSF
@@ -235,14 +259,21 @@ controls:
         identifiers:
           - 4.1.5
           - 4.2.1
+          - 4.2.2
           - 4.3.2
       - reference-id: OCRE
         identifiers:
+          - 155-155
           - 124-564
-          - 832-555
+          - 757-271
+          - 464-513
           - 611-158
           - 207-435
           - 088-377
+      - reference-id: ScCrd
+        identifiers:
+          - Security-policy  
+          - Vulnerabilities
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -290,7 +321,64 @@ controls:
       codebase early in the development process, reducing the risk of shipping
       insecure software.
     family: Vulnerability Management
-    mappings: []
+    mappings: 
+      - reference-id: BPB
+        identifiers:
+          - B-S-8
+          - Q-B-12
+          - Q-S-9
+          - S-B-14
+          - S-B-15
+          - A-B-1
+          - A-B-3
+          - A-B-8
+          - A-S-1
+      - reference-id: CRA
+        identifiers:
+          - 1.2a
+          - 1.2b
+          - 1.2c
+          - 2.1
+          - 2.2
+          - 2.3
+          - 2.4
+      - reference-id: SSDF
+        identifiers:
+          - PO.4
+          - PW1.2
+          - PW8.1
+          - RV1.2
+          - RV1.3
+          - RV2.1
+          - RV 2.2
+      - reference-id: CSF
+        identifiers:
+          - GV.RM-05
+          - GV.RM-06
+          - GV.PO-01
+          - GV.PO-02
+          - ID.RA-01
+          - ID.RA-08
+          - ID.IM-02
+      - reference-id: OC
+        identifiers:
+          - 4.1.5
+          - 4.2.1
+          - 4.2.2
+          - 4.3.2
+      - reference-id: OCRE
+        identifiers:
+          - 155-155
+          - 124-564
+          - 757-271
+          - 464-513
+          - 611-158
+          - 207-435
+          - 088-377
+      - reference-id: ScCrd
+        identifiers:
+          - Security-policy  
+          - Vulnerabilities
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
