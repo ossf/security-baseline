@@ -166,7 +166,10 @@ controls:
         text: |
           When the project lists a URI as an official distribution channel,
           that URI MUST be exclusively delivered using encrypted channels.
-        applicability: #TODO
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
         recommendation: |
           Configure the project's release pipeline to only fetch data from
           websites, API responses, and other services which use encrypted
