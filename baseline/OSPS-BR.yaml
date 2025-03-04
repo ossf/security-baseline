@@ -103,7 +103,7 @@ controls:
           Assign a unique version identifier to each release produced by the
           project, following a consistent naming convention or numbering scheme.
           Examples include SemVer, CalVer, or git commit id.
-      - id: OSPS-BR-02.01
+      - id: OSPS-BR-02.02
         text: |
           When an official release is created, all assets within that release
           MUST be clearly associated with the release identifier or another
