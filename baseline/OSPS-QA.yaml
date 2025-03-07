@@ -222,6 +222,9 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Build platform - isolation strength - Isolated
+      - reference-id: ScCrd
+        identifiers:
+          - Binary-Artifacts          
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -320,6 +323,9 @@ controls:
         identifiers:
           - 207-435
           - 088-377
+      - reference-id: ScCrd
+        identifiers:
+          - CI-Tests          
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
@@ -373,6 +379,9 @@ controls:
       - reference-id: BPB
         identifiers:
           - B-G-3
+      - reference-id: ScCrd
+        identifiers:
+          - Code-Review          
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |

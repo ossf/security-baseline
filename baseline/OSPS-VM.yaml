@@ -51,7 +51,7 @@ controls:
           - 887-750
       - reference-id: ScCrd
         identifiers:
-          - Security-policy          
+          - Security-Policy          
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -103,7 +103,7 @@ controls:
           - 464-513
       - reference-id: ScCrd
         identifiers:
-          - Security-policy                  
+          - Security-Policy                  
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -272,7 +272,7 @@ controls:
           - 088-377
       - reference-id: ScCrd
         identifiers:
-          - Security-policy  
+          - Security-Policy  
           - Vulnerabilities
     assessment-requirements:
       - id: OSPS-VM-05.01
@@ -377,8 +377,9 @@ controls:
           - 088-377
       - reference-id: ScCrd
         identifiers:
-          - Security-policy  
+          - Security-Policy  
           - Vulnerabilities
+          - SAST
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |

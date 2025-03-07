@@ -259,9 +259,9 @@ controls:
         identifiers:
           - 613-286
           - 053-751
-      - reference-id: CRA
+      - reference-id: ScCrd
         identifiers:
-          - Pinned-Dependencies
+          - Pinned-Dependencies       
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
