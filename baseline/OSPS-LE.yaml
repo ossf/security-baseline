@@ -29,10 +29,10 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PS1
-          - PW1.2
-          - PW2.1
+          - PO.3.2
+          - PS.1
+          - PW.1.2
+          - PW.2.1
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
@@ -69,7 +69,7 @@ controls:
           - 1.2b
       - reference-id: SSDF
         identifiers:
-          - PO3.2
+          - PO.3.2
       - reference-id: CSF
         identifiers:
           - GV.OC-03
@@ -128,7 +128,7 @@ controls:
           - 1.2b
       - reference-id: SSDF
         identifiers:
-          - PO3.2
+          - PO.3.2
       - reference-id: ScCrd
         identifiers:
           - License          

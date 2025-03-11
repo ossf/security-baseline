@@ -28,9 +28,9 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PS1
-          - PS2
+          - PO.3.2
+          - PS.1
+          - PS.2
       - reference-id: CSF
         identifiers:
           - PR.A-02
@@ -73,10 +73,10 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO2
-          - PO3.2
-          - PS1
-          - PS2
+          - PO.2
+          - PO.3.2
+          - PS.1
+          - PS.2
       - reference-id: CSF
         identifiers:
           - PR.AA-02
@@ -118,9 +118,9 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PS1
-          - PS2
+          - PO.3.2
+          - PS.1
+          - PS.2
       - reference-id: CSF
         identifiers:
           - PR.A-02
@@ -178,10 +178,10 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO2
-          - PO3.2
-          - PS1
-          - PS2
+          - PO.2
+          - PO.3.2
+          - PS.1
+          - PS.2
       - reference-id: CSF
         identifiers:
           - PR.AA-02
