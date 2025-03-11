@@ -72,8 +72,8 @@ controls:
           - 2.6
       - reference-id: SSDF
         identifiers:
-          - PS3
-          - PW1.2
+          - PS.3
+          - PW.1.2
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
@@ -111,7 +111,7 @@ controls:
           - 2.4
       - reference-id: SSDF
         identifiers:
-          - PW1.2
+          - PW.1.2
       - reference-id: OC
         identifiers:
           - 4.1.2
@@ -169,8 +169,8 @@ controls:
           - 2.6
       - reference-id: SSDF
         identifiers:
-          - PO2
-          - PO3.2
+          - PO.2
+          - PO.3.2
       - reference-id: CSF
         identifiers:
           - PR.AA-02

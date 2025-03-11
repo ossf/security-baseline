@@ -30,7 +30,7 @@ controls:
           - 1.2k
       - reference-id: SSDF
         identifiers:
-          - PW1.2
+          - PW.1.2
       - reference-id: CSF
         identifiers:
           - GV.OC-04
@@ -82,10 +82,10 @@ controls:
           - 2.6
       - reference-id: SSDF
         identifiers:
-          - PW1.2
-          - RV1.1
-          - RV2.1
-          - RV1.2
+          - PW.1.2
+          - RV.1.1
+          - RV.2.1
+          - RV.1.2
       - reference-id: CSF
         identifiers:
           - RS.MA-02
@@ -129,11 +129,11 @@ controls:
           - 1.2d
       - reference-id: SSDF
         identifiers:
-          - PO4.2
+          - PO.4.2
           - PS.2
-          - PS2.1
-          - PS3.1
-          - RV1.3
+          - PS.2.1
+          - PS.3.1
+          - RV.1.3
       - reference-id: OCRE
         identifiers:
           - 171-222
@@ -183,9 +183,9 @@ controls:
           - R-B-3
       - reference-id: SSDF
         identifiers:
-          - PO4.2
-          - PS3.1
-          - RV1.3
+          - PO.4.2
+          - PS.3.1
+          - RV.1.3
       - reference-id: OC
         identifiers:
           - 4.1

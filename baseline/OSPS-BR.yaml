@@ -23,10 +23,10 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PO5.2
-          - PS1
-          - PS2
+          - PO.3.2
+          - PO.5.2
+          - PS.1
+          - PS.2
       - reference-id: CSF
         identifiers:
           - PR.AA-02
@@ -79,10 +79,10 @@ controls:
           - 1.2f
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PS1
-          - PS2
-          - PS3
+          - PO.3.2
+          - PS.1
+          - PS.2
+          - PS.3
       - reference-id: OCRE
         identifiers:
           - 486-813
@@ -136,10 +136,10 @@ controls:
           - 1.2k
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PO5.2
-          - PS1
-          - PS2
+          - PO.3.2
+          - PO.5.2
+          - PS.1
+          - PS.2
       - reference-id: OCRE
         identifiers:
           - 483-813
@@ -202,10 +202,10 @@ controls:
           - 2.5
       - reference-id: SSDF
         identifiers:
-          - PS1
-          - PS2
-          - PS3
-          - PW1.2
+          - PS.1
+          - PS.2
+          - PS.3
+          - PW.1.2
       - reference-id: OCRE
         identifiers:
           - 483-813
@@ -264,9 +264,9 @@ controls:
           - 2.3
       - reference-id: SSDF
         identifiers:
-          - PO3.2
-          - PS1
-          - PS2
+          - PO.3.2
+          - PS.1
+          - PS.2
       - reference-id: OCRE
         identifiers:
           - 486-813
@@ -301,10 +301,10 @@ controls:
     mappings:
       - reference-id: SSDF
         identifiers:
-          - PO5.2
-          - PS2
-          - PS2.1
-          - PW6.2
+          - PO.5.2
+          - PS.2
+          - PS.2.1
+          - PW.6.2
       - reference-id: ScCrd
         identifiers:
           - Signed-Releases

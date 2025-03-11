@@ -34,7 +34,7 @@ controls:
           - 2.8
       - reference-id: SSDF
         identifiers:
-          - RV1.3
+          - RV.1.3
       - reference-id: CSF
         identifiers:
           - GV.PO-01
@@ -86,7 +86,7 @@ controls:
           - 2.5
       - reference-id: SSDF
         identifiers:
-          - RV1.3
+          - RV.1.3
       - reference-id: CSF
         identifiers:
           - GV.PO-01
@@ -167,9 +167,9 @@ controls:
           - 2.6
       - reference-id: SSDF
         identifiers:
-          - PO4.1
-          - RV2.1
-          - RV2.2
+          - PO.4.1
+          - RV.2.1
+          - RV.2.2
       - reference-id: CSF
         identifiers:
           - ID.RA-01
@@ -240,12 +240,12 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO.4
-          - PW1.2
-          - PW8.1
-          - RV1.2
-          - RV1.3
-          - RV2.1
-          - RV 2.2
+          - PW.1.2
+          - PW.8.1
+          - RV.1.2
+          - RV.1.3
+          - RV.2.1
+          - RV.2.2
       - reference-id: CSF
         identifiers:
           - GV.RM-05
@@ -345,11 +345,11 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO.4
-          - PW1.2
-          - PW8.1
-          - RV1.2
-          - RV1.3
-          - RV2.1
+          - PW.1.2
+          - PW.8.1
+          - RV.1.2
+          - RV.1.3
+          - RV.2.1
           - RV 2.2
       - reference-id: CSF
         identifiers:

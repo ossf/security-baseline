@@ -29,7 +29,7 @@ controls:
         identifiers:
           - PO.1
           - PO.2
-          - PO3.2
+          - PO.3.2
       - reference-id: CSF
         identifiers:
           - ID.AM-02
@@ -76,7 +76,7 @@ controls:
           - 1.2b
       - reference-id: SSDF
         identifiers:
-          - PW1.2
+          - PW.1.2
       - reference-id: CSF
         identifiers:
           - GV.OC-05
@@ -126,8 +126,8 @@ controls:
           - 2.2
       - reference-id: SSDF
         identifiers:
-          - PO5.1
-          - PW1.1
+          - PO.5.1
+          - PW.1.1
       - reference-id: CSF
         identifiers:
           - ID.RA-01
