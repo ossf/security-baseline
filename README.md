@@ -40,7 +40,7 @@ Each entry has the following values:
 Contributions are always welcome via pull request or as issues, and can also be discussed on the [`#sig-security-baseline` channel on OpenSSF Slack](https://openssf.slack.com/archives/C07DC6TT2QY). Refer to the governance documentation for information about [how the project operates] and [how to report security-related issues].
 
 You can also join the biweekly meeting.
-See the [OpenSSF calendar] for details.
+See the [OpenSSF calendar](https://calendar.google.com/calendar/u/0?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) for details.
 
 ### Antitrust Policy Notice
 
