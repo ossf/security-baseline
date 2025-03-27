@@ -5,7 +5,8 @@ description: |
   of the project. These controls help ensure that
   the project's documentation is comprehensive,
   accurate, and up-to-date, enabling users to
-  understand the project's features and functionality.
+  understand the project's features and functionality, maintenance, support,
+  security and release practices.
 controls:
   - id: OSPS-DO-01
     title: |
@@ -201,7 +202,10 @@ controls:
         recommendation: |
           In order to communicate the scope and duration of support for the
           project's released software assets, the project should have a
-          SUPPORT.md or an OpenEoX file in a well known location.
+          SUPPORT.md or other documentation explaining the support lifecycle,
+          including the expected duration of support for each release, the
+          types of support provided (e.g., bug fixes, security updates), and
+          any relevant policies or procedures for obtaining support.
 
   - id: OSPS-DO-05
     title: |
@@ -234,9 +238,9 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          While a machine-readable OpenEoX file is recommended, this may also be
-          communicated in a SUPPORT.md or beneath a Support header in the
-          primary README.md.
+          In order to communicate the scope and duration of support for security
+          fixes, the project should have a SUPPORT.md or other documentation
+          explaining the project's policy for security updates.
 
   - id: OSPS-DO-06
     title: |
