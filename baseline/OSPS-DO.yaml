@@ -202,7 +202,8 @@ controls:
         recommendation: |
           In order to communicate the scope and duration of support for the
           project's released software assets, the project should have a
-          SUPPORT.md or other documentation explaining the support lifecycle,
+          SUPPORT.md file, a "Support" section in SECURITY.md, or
+          other documentation explaining the support lifecycle,
           including the expected duration of support for each release, the
           types of support provided (e.g., bug fixes, security updates), and
           any relevant policies or procedures for obtaining support.
