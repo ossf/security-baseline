@@ -109,6 +109,18 @@
     details such as the modifications made, the
     contributor who made them, and the timestamp
     of the change.
+- term: Coordinated Vulnerability Disclosure
+  definition: |
+    A process of gathering information from vulnerability finders, coordinating
+    the sharing of that information between relevant stakeholders, and
+    disclosing the existence of software vulnerabilities and their mitigations
+    to various stakeholders including the public.
+  synonyms:
+    - CVD
+  references:
+    - https://certcc.github.io/CERT-Guide-to-CVD/
+    - https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1-1
+    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/about-coordinated-disclosure-of-security-vulnerabilities
 - term: Cyber Resilience Act
   definition: |
     Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA).
@@ -232,6 +244,18 @@
     repositories will have the original repo
     acting as an equivalent to the primary
     branch.
+- term: Private Vulnerability Reporting
+  definition: |
+    The process of privately reporting a
+    vulnerability to the project maintainers or
+    security team before disclosing it publicly.
+    This allows the project to address the issue
+    before it becomes widely known.
+  synonyms:
+    - Private Vulnerability Disclosure
+    - Private Security Vulnerability Reporting
+  references:
+    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
 - term: Project Documentation
   definition: |
     Written materials related to the project,
@@ -382,4 +406,6 @@
     as well as tracking the resolution of these
     vulnerabilities.
   synonyms:
-    - Coordinated Vulnerability Reporting
+    - Coordinated Vulnerability Disclosure
+  references:
+    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
