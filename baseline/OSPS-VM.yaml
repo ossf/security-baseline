@@ -10,7 +10,7 @@ controls:
   - id: OSPS-VM-01
     title: |
         The project documentation MUST include a policy for coordinated
-        vulnerability reporting, with a clear timeframe for response.
+        vulnerability disclosure, with a clear timeframe for response.
     objective: |
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and 
@@ -56,15 +56,15 @@ controls:
       - id: OSPS-VM-01.01
         text: |
           While active, the project documentation MUST
-          include a policy for coordinated vulnerability reporting, with a clear
+          include a policy for coordinated vulnerability disclosure (CVD), with a clear
           timeframe for response.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Create a SECURITY.md file at the root of the directory, outlining the
-          project's policy for coordinated vulnerability reporting. Include a
-          method for reporting vulnerabilities. Set expectations for the how the
+          project's policy for coordinated vulnerability disclosure. Include a
+          method for reporting vulnerabilities. Set expectations for how the
           project will respond and address reported issues.
 
   - id: OSPS-VM-02
@@ -139,7 +139,7 @@ controls:
       - id: OSPS-VM-03.01
         text: |
           While active, the project documentation MUST
-          provide a means for reporting security vulnerabilities privately to
+          provide a means for private vulnerability reporting directly to
           the security contacts within the project.
         applicability:
           - Maturity Level 2
@@ -147,7 +147,7 @@ controls:
         recommendation: |
           Provide a means for security researchers to report vulnerabilities
           privately to the project. This may be a dedicated email address, a
-          web form, VSC specialized tools, email addresses for security
+          web form, VCS specialized tools, email addresses for security
           contacts, or other methods.
 
   - id: OSPS-VM-04
