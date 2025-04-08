@@ -290,6 +290,20 @@ controls:
           executable artifact appears critical to a process such as testing, it
           should be instead be generated at build time or stored separately and
           fetched during a specific well-documented pipeline step.
+      - id: OSPS-QA-05.02
+        text: |
+          While active, the version control system MUST NOT contain unreviewable
+          binary artifacts.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Do not add any unreviewable binary artifacts to the project's version
+          control system. This includes exectuable application binaries, library
+          files, and similar artifacts. It does not include assets such as
+          graphical images, sound or music files, and similar content typically
+          stored in a binary format.
 
   - id: OSPS-QA-06
     title: |
