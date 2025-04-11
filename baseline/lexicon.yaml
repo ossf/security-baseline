@@ -266,6 +266,23 @@
     release time, this may include provenance
     information, licensing details, and other
     metadata.
+- term: Sensitive Data
+  definition: |
+    Information that, if disclosed to unauthorized
+    parties, would lead to unauthorized access,
+    data exfiltration, financial loss, or other
+    undesirable outcomes. This includes secrets
+    (like passwords, access tokens, etc.),
+    financial account information, personally
+    identifiable information (PII), and data about
+    embargoed vulnerabilities.
+- term: Sensitive Resource
+  definition: |
+    Resources that, if compromised, would provide a
+    vector for further compromising software build
+    and delivery or for disclosing sensitive data to
+    unauthorized parties. This includes build systems,
+    image repositories, and data storage.
 - term: Software Provenance
   definition: |
     Information about the origin and history of
