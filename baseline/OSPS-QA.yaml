@@ -132,7 +132,7 @@ controls:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          This may take the form a package manager or language dependency file
+          This may take the form of a package manager or language dependency file
           that enumerates all direct dependencies such as package.json, Gemfile,
           or go.mod.
       - id: OSPS-QA-02.02
@@ -290,6 +290,20 @@ controls:
           executable artifact appears critical to a process such as testing, it
           should be instead be generated at build time or stored separately and
           fetched during a specific well-documented pipeline step.
+      - id: OSPS-QA-05.02
+        text: |
+          While active, the version control system MUST NOT contain unreviewable
+          binary artifacts.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Do not add any unreviewable binary artifacts to the project's version
+          control system. This includes executable application binaries, library
+          files, and similar artifacts. It does not include assets such as
+          graphical images, sound or music files, and similar content typically
+          stored in a binary format.
 
   - id: OSPS-QA-06
     title: |
@@ -297,7 +311,7 @@ controls:
         code repository.
     objective: |
       Ensure that the project uses at least one automated test suite for the
-      source code repository which clearly documents when and how tests are run.
+      source code repository and clearly documents when and how tests are run.
     family: Quality Assurance
     mappings:
       - reference-id: BPB
