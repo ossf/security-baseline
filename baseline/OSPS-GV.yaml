@@ -181,7 +181,7 @@ controls:
           - 152-725
       - reference-id: OC
         identifiers:
-          - 4.1.2     
+          - 4.1.2
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |
