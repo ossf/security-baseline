@@ -216,7 +216,7 @@
     - https://openchainproject.org/license-compliance 
 - term: OpenCRE
   definition: |
-     An OWASP project that converts cybersecurity requirements into a hierchical, machine-readable format.
+     An OWASP project that converts cybersecurity requirements into a hierarchical, machine-readable format.
   synonyms: 
     - OCRE 
   references: 
@@ -369,7 +369,7 @@
     project or used as standalone components.
 - term: Supply-chain Levels for Software Artifacts
   definition: |
-    An OpenSSF project that sets guidelines for securing software supply chain infrastrucutre and artifact integrity. 
+    An OpenSSF project that sets guidelines for securing software supply chain infrastructure and artifact integrity. 
   synonyms: 
     - SLSA 
     - Supply-chain Levels for Software Artifacts

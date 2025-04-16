@@ -16,8 +16,15 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
             persist-credentials: false
+
+      - name: Spellcheck all content
+        uses: streetsidesoftware/cspell-action@8485bb4b688c68384c2f6db7ad931f5e3e63f21c # v6.10.1
+        with:
+          config: .cspell.yaml
+
       - name: Build content from yaml
         run:  cd cmd && go run . compile --output ../docs/versions/devel.md
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
         with:
