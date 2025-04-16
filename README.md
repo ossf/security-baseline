@@ -16,21 +16,24 @@ Each entry has the following values:
   - Level 1: for any code or non-code project with any number of maintainers or users
   - Level 2: for any code project that has at least 2 maintainers and a small number of consistent users
   - Level 3: for any code project that has a large number of consistent users
-- **Category**:
-  - Access Control
-  - Build & Release
-  - Documentation
-  - Quality
-  - Legal
-- **Control**:
+- **Family** (see corresponding yaml files for descriptions):
+  - [Access Control](baseline/OSPS-AC.yaml)
+  - [Build & Release](baseline/OSPS-BR.yaml)
+  - [Documentation](baseline/OSPS-DO.yaml)
+  - [Governance](baseline/OSPS-GV.yaml)
+  - [Legal](baseline/OSPS-LE.yaml)
+  - [Quality](baseline/OSPS-QA.yaml)
+  - [Security Assessment](baseline/OSPS-SA.yaml)
+  - [Vulnerability Management](baseline/OSPS-VM.yaml)
+- **Title**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
   - The term before MUST/NOT is the _subject_ of the requirement
   - Terms following MUST/NOT describe the _required behavior_
-- **Rationale**:
+- **Objective**:
   - A concise statement of the goal of the requirement
   - Written in present tense and describes the desired outcome
-- **Details**:
+- **Assessment requirement(s)**:
   - A concise description of how to meet the requirement
   - Written in present tense and describes the steps to take to meet the requirement
   - May outline recommendations, examples, or best practices
