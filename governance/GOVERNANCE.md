@@ -12,7 +12,7 @@ The Open Source Project Security Baseline (OSPS Baseline) is produced by the Ope
 
 Refer to the [OpenSSF Community Calendar](https://openssf.org/getinvolved/) for SIG meeting times, meeting notes, and links to past recordings.
 
-- **SIG Lead:** Eddie Knight (@eddie-knight)
+- **SIG Lead:** Ben Cotton (@funnnelfiasco)
 
 ## Guiding Governance Principles
 
