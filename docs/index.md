@@ -17,3 +17,16 @@ Only the version labeled as "current" should be used for new compliance efforts.
 * [In-development version](versions/devel)
 
 Versions are managed according to the [Baseline maintenance process](maintenance).
+
+## Guiding principles
+
+The OSPS Baseline controls help project maintainers understand security best practices and expectations.
+Assessing a project's compliance against the controls helps maintainers and project consumers understand where the project excels at security and where it has room to improve.
+Project consumers can then use the assessment results to understand how their usage of the project impacts their own security and compliance goals.
+Therefore, OSPS Baseline work is:
+
+* **Focused:** Controls only contain *MUST* entries, not *SHOULD*.
+* **Realistic:** Controls are practical for project maintainers to implement at the appropriate level for their project.
+* **Actionable:** Controls provide specific recommendations.
+* **Meaningful:** Controls have an impact on a project's security posture.
+Ineffective controls add to maintainer burden.
