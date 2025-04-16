@@ -20,8 +20,9 @@ Versions are managed according to the [Baseline maintenance process](maintenance
 
 ## Guiding principles
 
-The goal of the OSPS Baseline is to be useful to maintainers as a mechanism for evaluating and communicating a project's security posture.
-In addition, OSPS Baseline must help consumers of open source software more easily evaluate their compliance requirements.
+The OSPS Baseline controls help project maintainers understand security best practices and expectations.
+Assessing a project's compliance against the controls helps maintainers and project consumers understand where the project excels at security and where it has room to improve.
+Project consumers can then use the assessment results to understand how their usage of the project impacts their own security and compliance goals.
 Therefore, OSPS Baseline work is:
 
 * **Focused:** Controls only contain *MUST* entries, not *SHOULD*.
