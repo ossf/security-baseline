@@ -17,3 +17,15 @@ Only the version labeled as "current" should be used for new compliance efforts.
 * [In-development version](versions/devel)
 
 Versions are managed according to the [Baseline maintenance process](maintenance).
+
+## Guiding principles
+
+The goal of the OSPS Baseline is to be useful to maintainers as a mechanism for evaluating and communicating a project's security posture.
+In addition, OSPS Baseline must help consumers of open source software more easily evaluate their compliance requirements.
+Therefore, OSPS Baseline work is:
+
+* **Focused:** Controls only contain *MUST* entries, not *SHOULD*.
+* **Realistic:** Controls are practical for project maintainers to implement at the appropriate level for their project.
+* **Actionable:** Controls provide specific recommendations.
+* **Meaningful:** Controls have an impact on a project's security posture.
+Ineffective controls add to maintainer burden.

@@ -14,13 +14,7 @@ Refer to the [OpenSSF Community Calendar](https://openssf.org/getinvolved/) for 
 
 - **SIG Lead:** Eddie Knight (@eddie-knight)
 
-## Guiding Governance Principles
-
-Any issues or proposals brought to the project's maintainers shall be framed in the OSPS Baseline guiding principles. Proposals not adhering to said principles shall not be considered for consensus.
-
-### Favor Simplicity
-
-The goal of OSPS Baseline is to create a minimal and efficient standard that can be quickly ingested by any project. Simple is better.
+## Release Governance Principles
 
 ### Ensure Stability
 
