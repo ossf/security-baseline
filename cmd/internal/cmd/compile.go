@@ -115,9 +115,9 @@ func addCompile(parentCmd *cobra.Command) {
 				fmt.Fprintf(os.Stderr, "\n⚠️  No output path specified. Not rendering Baseline.")
 			} else {
 				if err := gen.ExportMarkdown(bline, opts.templatePath, opts.outPath); err != nil {
-					return fmt.Errorf("writing mardown render: %w", err)
+					return fmt.Errorf("writing markdown render: %w", err)
 				}
-				fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s:\n\nCategories:\n", opts.outPath)
+				fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
 			fmt.Fprintf(os.Stderr, "\nℹ️  Counts\n")
@@ -132,7 +132,7 @@ func addCompile(parentCmd *cobra.Command) {
 					return fmt.Errorf("checklist creation: %w", err)
 				}
 
-				fmt.Fprintf(os.Stderr, "\n✅ Checklist rendered to %s:",
+				fmt.Fprintf(os.Stderr, "\n✅ Checklist rendered to %s",
 					opts.checklistOutPath)
 			}
 
