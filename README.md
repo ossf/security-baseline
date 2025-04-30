@@ -38,6 +38,38 @@ Each entry has the following values:
   - Written in present tense and describes the steps to take to meet the requirement
   - May outline recommendations, examples, or best practices
 
+## baseline-compiler
+
+The Security Baseline SIG maintains a Golang tool for validating and rendering Baseline controls. It includes the following commands:
+
+* [compile](#compile): Compile a YAML file of security controls
+* completion  Generate the autocompletion script for the specified shell
+* help        Help about any command
+* [oscal](#oscal): Write the Baseline definition to an OSCAL json catalog
+* [validate](#validate): Validate the baseline data files
+
+From the `cmd/` directory, run `go run . [command] [arguments]`
+
+### compile
+
+This command reads the yaml contents and generates two optional Markdown files: a listing of all OSPS Baseline controls for use in a static site generator and a checklist of controls by level.
+
+To produce a file for use in a static site generator (which is how we create baseline.openssf.org!), specify a file argument to `--output`.
+
+To produce a checklist file to use as an aid to evaluating your project's conformance to OSPS Baseline, specify a file argument to `--checklist-output`.
+
+Use the `--help` flag for more options.
+
+### oscal
+
+This command validates the OSPS Baseline output against [OSCAL](https://pages.nist.gov/OSCAL/). By default, it writes the JSON output to STDOUT. You can specify a file with `--out`. 
+
+Use the `--help` flag for more options.
+
+### validate
+
+This command validates the correctness of the OSPS Baseline input.
+
 ## Contribution, Governance, & Security
 
 Contributions are always welcome via pull request or as issues, and can also be discussed on the [`#sig-security-baseline` channel on OpenSSF Slack](https://openssf.slack.com/archives/C07DC6TT2QY). Refer to the governance documentation for information about [how the project operates] and [how to report security-related issues].
