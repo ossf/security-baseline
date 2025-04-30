@@ -17,13 +17,12 @@ func NewGenerator() *Generator {
 }
 
 type Generator struct {
-	TemplatePath string
 }
 
 // ExportMarkdown runs the baseline data through the markdown template
-func (g *Generator) ExportMarkdown(b *types.Baseline, path string) error {
+func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath string, path string) error {
 	// Read the markdown template from the external file
-	templateContent, err := os.ReadFile(g.TemplatePath)
+	templateContent, err := os.ReadFile(templatePath)
 	if err != nil {
 		return fmt.Errorf("error reading markdown template: %w", err)
 	}
