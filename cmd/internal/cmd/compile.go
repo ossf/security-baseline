@@ -13,19 +13,18 @@ import (
 )
 
 type compileOptions struct {
-	outPath      string
-	baselinePath string
-	templatePath string
-	validate     bool
+	outPath               string
+	checklistOutPath      string
+	baselinePath          string
+	checklistTemplatePath string
+	templatePath          string
+	checklist             bool
+	validate              bool
 }
 
 // Validate the options in context with arguments
 func (o *compileOptions) Validate() error {
 	errs := []error{}
-
-	if o.outPath == "" {
-		errs = append(errs, errors.New("output path not specified"))
-	}
 
 	if o.baselinePath == "" {
 		errs = append(errs, errors.New("baseline path not specified"))
@@ -39,7 +38,17 @@ func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 	)
 
 	cmd.PersistentFlags().StringVarP(
-		&o.outPath, "output", "o", "", "path to output file (defaults to STDOUT)",
+		&o.checklistOutPath, "checklist-output", "", "",
+		"path to checklist output file (checklist only generated if specified)",
+	)
+
+	cmd.PersistentFlags().StringVarP(
+		&o.checklistTemplatePath, "checklist-template", "", "template-checklist.md",
+		"path to the checklist template file",
+	)
+
+	cmd.PersistentFlags().StringVarP(
+		&o.outPath, "output", "o", "", "path to output file",
 	)
 
 	cmd.PersistentFlags().StringVarP(
@@ -101,17 +110,31 @@ func addCompile(parentCmd *cobra.Command) {
 
 			// Generate the rendered version
 			gen := baseline.NewGenerator()
-			gen.TemplatePath = opts.templatePath
 
-			if err := gen.ExportMarkdown(bline, opts.outPath); err != nil {
-				return fmt.Errorf("writing mardown render: %w", err)
+			if opts.outPath == "" {
+				fmt.Fprintf(os.Stderr, "\n⚠️  No output path specified. Not rendering Baseline.")
+			} else {
+				if err := gen.ExportMarkdown(bline, opts.templatePath, opts.outPath); err != nil {
+					return fmt.Errorf("writing markdown render: %w", err)
+				}
+				fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
-			fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s:\n\nCategories:\n", opts.outPath)
+			fmt.Fprintf(os.Stderr, "\nℹ️  Counts\n")
 			for c := range bline.Categories {
 				fmt.Fprintf(os.Stderr, " OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
 			}
 			fmt.Fprintf(os.Stderr, "\n+ %d lexicon entries\n", len(bline.Lexicon))
+
+			// Print a checklist if they asked for it
+			if opts.checklistOutPath != "" {
+				if err := gen.ExportMarkdown(bline, opts.checklistTemplatePath, opts.checklistOutPath); err != nil {
+					return fmt.Errorf("checklist creation: %w", err)
+				}
+
+				fmt.Fprintf(os.Stderr, "\n✅ Checklist rendered to %s",
+					opts.checklistOutPath)
+			}
 
 			return nil
 		},
