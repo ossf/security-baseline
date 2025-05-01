@@ -1,4 +1,4 @@
-category: Security Assessment
+title: Security Assessment
 description: |
   Security Assessment encourages practices that
   help ensure that the project is well positioned
@@ -14,7 +14,6 @@ controls:
       the interactions and components of the system to help contributors and
       security reviewers understand the internal logic of the released software
       assets.
-    family: Security Assessment
     mappings:
       - reference-id: BPB
         identifiers:
@@ -90,7 +89,6 @@ controls:
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
       to use the software effectively.
-    family: Security Assessment
     mappings:
       - reference-id: BPB
         identifiers:
@@ -152,7 +150,6 @@ controls:
       Provide project maintainers an understanding of how the software can be
       misused or broken allows them to plan mitigations to close off the potential
       of those threats from occurring.
-    family: Security Assessment
     mappings:
       - reference-id: BPB
         identifiers:

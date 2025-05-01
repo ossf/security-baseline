@@ -1,4 +1,4 @@
-category: Quality
+title: Quality
 description: |
   Quality focuses on the processes and
   practices used to ensure the quality and
@@ -16,7 +16,6 @@ controls:
     objective: |
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
-    family: Quality Assurance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -101,7 +100,6 @@ controls:
       Provide transparency and accountability for the project's dependencies
       while enabling users and contributors to understand the software's direct
       dependencies.
-    family: Quality Assurance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -188,7 +186,6 @@ controls:
       failing status checks, even if arbitrary, because it increases the risk of
       overlooking security vulnerabilities or defects identified by automated
       checks.
-    family: Quality Assurance
     mappings:
       - reference-id: CRA
         identifiers:
@@ -254,7 +251,6 @@ controls:
       Ensure that additional code repositories or subprojects produced by the
       project are held to a standard that is clear and appropriate for that
       codebase.
-    family: Quality Assurance
     mappings:
       - reference-id: CRA
         identifiers:
@@ -321,7 +317,6 @@ controls:
       Reduce the risk of including generated executable artifacts in the
       project's version control system, ensuring that only source code and
       necessary files are stored in the repository.
-    family: Quality Assurance
     mappings:
       - reference-id: CRA
         identifiers:
@@ -374,7 +369,6 @@ controls:
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository and clearly documents when and how tests are run.
-    family: Quality Assurance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -470,7 +464,6 @@ controls:
       Ensure that the project's version control system requires at least one
       non-author approval of changes before merging into the release or primary
       branch.
-    family: Quality Assurance
     mappings:
       - reference-id: BPB
         identifiers:
