@@ -2,29 +2,26 @@
 
 The Open Source Project Security Baseline (OSPS Baseline) is designed to act as a minimum definition of requirements for a project relative to its maturity level.
 
-All definitions are maintained in YAML format for tandem machine and human readability.
+All definitions are maintained in YAML format using the [Simplified Compliance Infrastructure Layer 2 schema](https://github.com/revanite-io/sci?tab=readme-ov-file#layer-2-controls) for tandem machine and human readability.
 
 ## Baseline Structure
 
-Each entry has the following values:
+The baseline is a set of Control Families where each Family has a set of Controls.
 
-- **ID**:
-  - Entries are of the form OSPS-_Category_-_Index_ where
-    - *Category* is a two-letter abbreviated form of the categories listed below
-    - *Index* is a sequentially-assigned two-digit number. Numbers are unique within a category but not between categories
-- **Maturity Level**:
-  - Level 1: for any code or non-code project with any number of maintainers or users
-  - Level 2: for any code project that has at least 2 maintainers and a small number of consistent users
-  - Level 3: for any code project that has a large number of consistent users
-- **Family** (see corresponding yaml files for descriptions):
-  - [Access Control](baseline/OSPS-AC.yaml)
-  - [Build & Release](baseline/OSPS-BR.yaml)
-  - [Documentation](baseline/OSPS-DO.yaml)
-  - [Governance](baseline/OSPS-GV.yaml)
-  - [Legal](baseline/OSPS-LE.yaml)
-  - [Quality](baseline/OSPS-QA.yaml)
-  - [Security Assessment](baseline/OSPS-SA.yaml)
-  - [Vulnerability Management](baseline/OSPS-VM.yaml)
+- [Access Control](baseline/OSPS-AC.yaml)
+- [Build & Release](baseline/OSPS-BR.yaml)
+- [Documentation](baseline/OSPS-DO.yaml)
+- [Governance](baseline/OSPS-GV.yaml)
+- [Legal](baseline/OSPS-LE.yaml)
+- [Quality](baseline/OSPS-QA.yaml)
+- [Security Assessment](baseline/OSPS-SA.yaml)
+- [Vulnerability Management](baseline/OSPS-VM.yaml)
+
+Controls are identified by an ID in the format: `OSPS-${ControlFamilyAbbreviated}`.
+For example, Control ID: `OSPS-AC-01` refers to the Access Control (AC) control family.
+
+Controls are described with these attributes:
+
 - **Title**:
   - A concise statement of the requirement
   - Contains `MUST` or `MUST NOT` and is written in present tense
@@ -33,10 +30,29 @@ Each entry has the following values:
 - **Objective**:
   - A concise statement of the goal of the requirement
   - Written in present tense and describes the desired outcome
-- **Assessment requirement(s)**:
-  - A concise description of how to meet the requirement
+
+Each Control has 1 or more Assessment Requirements. These requirements are
+identified by an ID in the format `OSPS-${ControlFamilyAbbreviated}-${IndexWithinControlFamily}`.
+For example, `OSPS-AC-01.01` refers to the first
+Assessment Requirement in the first Control of the Access Control Family:
+
+> When a user attempts to access a sensitive resource in the project's
+  version control system, the system MUST require the user to complete
+  a multi-factor authentication process.
+
+Each Assessment Requirement has:
+
+- **Text**:
+  - A concise statement of the requirement
+  - Contains `MUST` or `MUST NOT` and is written in present tense
+  - The term before `MUST/NOT` is the subject of the requirement
+  - Terms following `MUST/NOT` describe the required behavior
+- **Recommendation**:
+  - description of how to meet the requirement
   - Written in present tense and describes the steps to take to meet the requirement
-  - May outline recommendations, examples, or best practices
+  - May provide examples and reference best practices
+- **Applicability**:
+  - One or more project maturity levels to which the assessment requirement applies
 
 ## baseline-compiler
 

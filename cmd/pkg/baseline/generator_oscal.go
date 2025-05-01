@@ -46,33 +46,32 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 
 	catalogGroups := []oscal.Group{}
 
-	for code, cat := range b.Categories {
+	for _, family := range b.Catalog.ControlFamilies {
 		group := oscal.Group{
 			Class:    "OSPS",
 			Controls: nil,
-			ID:       code,
-			Title:    cat.Description,
+			ID:       b.ControlFamilyIDs[family.Title],
+			Title:    family.Description,
 		}
 
 		controls := []oscal.Control{}
-
-		for _, control := range cat.Controls {
+		for _, control := range family.Controls {
 			parts := []oscal.Part{}
-			for _, ar := range control.Requirements {
+			for _, ar := range control.AssessmentRequirements {
 				parts = append(parts, oscal.Part{
-					Class: control.ID,
-					ID:    ar.ID,
-					Name:  ar.ID,
+					Class: control.Id,
+					ID:    ar.Id,
+					Name:  ar.Id,
 					Ns:    "",
 					Parts: &[]oscal.Part{
 						{
-							ID:    ar.ID + ".R",
+							ID:    ar.Id + ".R",
 							Name:  "recommendation",
 							Ns:    OpenSSFNS,
 							Prose: ar.Recommendation,
 							Links: &[]oscal.Link{
 								{
-									Href: fmt.Sprintf(controlHREF, VersionOSPS, ar.ID),
+									Href: fmt.Sprintf(controlHREF, VersionOSPS, ar.Id),
 									Rel:  "canonical",
 								},
 							},
@@ -84,11 +83,11 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 			}
 
 			newCtl := oscal.Control{
-				Class: code,
-				ID:    control.ID,
+				Class: b.ControlFamilyIDs[family.Title],
+				ID:    control.Id,
 				Links: &[]oscal.Link{
 					{
-						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(control.ID)),
+						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(control.Id)),
 						Rel:  "canonical",
 					},
 				},

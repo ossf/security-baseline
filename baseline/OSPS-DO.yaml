@@ -1,4 +1,4 @@
-category: Documentation
+title: Documentation
 description: |
   Documentation focuses on the information
   provided to users, contributors, and maintainers
@@ -16,7 +16,6 @@ controls:
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
       misconfiguration.
-    family: Documentation
     mappings:
       - reference-id: BPB
         identifiers:
@@ -81,7 +80,6 @@ controls:
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
       defect fixes and improvements.
-    family: Documentation
     mappings:
       - reference-id: BPB
         identifiers:
@@ -148,7 +146,6 @@ controls:
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
       unauthorized versions of the software.
-    family: Documentation
     mappings:
       - reference-id: BPB
         identifiers:
@@ -225,7 +222,6 @@ controls:
       Provide users with clear expectations regarding the project's support
       lifecycle. This allows downstream consumers to take relevant actions to
       ensure the continued functionality and security of their systems.
-    family: Documentation
     mappings:
       - reference-id: BPB
         identifiers:
@@ -282,7 +278,6 @@ controls:
       Communicating when the project maintainers will no longer fix defects or
       security vulnerabilities is crucial for downstream consumers to find
       alternative solutions or alternative means of support for the project.
-    family: Documentation
     mappings:
       - reference-id: CRA
         identifiers:
@@ -336,7 +331,6 @@ controls:
       dependencies, libraries, frameworks, etc. to help downstream consumers
       understand how the project operates in regards to third-party components
       that are required necessary for the software to function.
-    family: Documentation
     mappings:
       - reference-id: BPB
         identifiers:

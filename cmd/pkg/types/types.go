@@ -3,7 +3,9 @@
 
 package types
 
-var Categories = []string{
+import "github.com/revanite-io/sci/layer2"
+
+var ControlFamilies = []string{
 	"AC",
 	"BR",
 	"DO",
@@ -14,39 +16,13 @@ var Categories = []string{
 	"VM",
 }
 
-// Struct for representing each entry
-type Control struct {
-	ID           string        `yaml:"id"`
-	Title        string        `yaml:"title"`
-	Objective    string        `yaml:"objective"`
-	Family       string        `yaml:"family"`
-	Mappings     []Mapping     `yaml:"mappings"`
-	Requirements []Requirement `yaml:"assessment-requirements"`
-}
-
-type Mapping struct {
-	ReferenceID string   `yaml:"reference-id"`
-	Identifiers []string `yaml:"identifiers"`
-}
-
-type Requirement struct {
-	ID             string   `yaml:"id"`
-	Text           string   `yaml:"text"`
-	Applicability  []string `yaml:"applicability"`
-	Recommendation string   `yaml:"recommendation"`
-}
-
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Categories map[string]Category
-	Lexicon    []LexiconEntry
-	Frameworks []FrameworkEntry `yaml:"mapping-references"`
-}
-
-type Category struct {
-	CategoryName string    `yaml:"category"`
-	Description  string    `yaml:"description"`
-	Controls     []Control `yaml:"controls"`
+	// map of family names to IDs to support OSCAL groups
+	ControlFamilyIDs map[string]string
+	Catalog          layer2.Layer2
+	Lexicon          []LexiconEntry
+	Frameworks       []FrameworkEntry `yaml:"mapping-references"`
 }
 
 type LexiconEntry struct {
