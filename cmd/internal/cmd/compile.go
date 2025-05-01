@@ -120,11 +120,11 @@ func addCompile(parentCmd *cobra.Command) {
 				fmt.Printf("\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
-			fmt.Fprintf(os.Stdout, "\nℹ️  Counts\n")
+			fmt.Printf("\nℹ️  Counts\n")
 			for c := range bline.Categories {
-				fmt.Fprintf(os.Stdout, " OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
+				fmt.Printf(" OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
 			}
-			fmt.Fprintf(os.Stdout, "\n+ %d lexicon entries\n", len(bline.Lexicon))
+			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))
 
 			// Print a checklist if they asked for it
 			if opts.checklistOutPath != "" {
@@ -132,7 +132,7 @@ func addCompile(parentCmd *cobra.Command) {
 					return fmt.Errorf("checklist creation: %w", err)
 				}
 
-				fmt.Fprintf(os.Stdout, "\n✅ Checklist rendered to %s",
+				fmt.Printf("\n✅ Checklist rendered to %s",
 					opts.checklistOutPath)
 			}
 

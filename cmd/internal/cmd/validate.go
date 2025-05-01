@@ -74,7 +74,7 @@ func addValidate(parentCmd *cobra.Command) {
 				fmt.Fprint(os.Stderr, "\n❌ Error validating the baseline data:\n")
 				return err
 			}
-			fmt.Fprint(os.Stdout, "\n✅ Baseline YAML data OK\n\n")
+			fmt.Printf("\n✅ Baseline YAML data OK\n\n")
 			return nil
 		},
 	}
