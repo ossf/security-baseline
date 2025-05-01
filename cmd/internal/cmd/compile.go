@@ -117,14 +117,14 @@ func addCompile(parentCmd *cobra.Command) {
 				if err := gen.ExportMarkdown(bline, opts.templatePath, opts.outPath); err != nil {
 					return fmt.Errorf("writing markdown render: %w", err)
 				}
-				fmt.Fprintf(os.Stderr, "\n✅ Baseline rendered to %s\n", opts.outPath)
+				fmt.Printf("\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
-			fmt.Fprintf(os.Stderr, "\nℹ️  Counts\n")
+			fmt.Fprintf(os.Stdout, "\nℹ️  Counts\n")
 			for c := range bline.Categories {
-				fmt.Fprintf(os.Stderr, " OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
+				fmt.Fprintf(os.Stdout, " OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
 			}
-			fmt.Fprintf(os.Stderr, "\n+ %d lexicon entries\n", len(bline.Lexicon))
+			fmt.Fprintf(os.Stdout, "\n+ %d lexicon entries\n", len(bline.Lexicon))
 
 			// Print a checklist if they asked for it
 			if opts.checklistOutPath != "" {
@@ -132,7 +132,7 @@ func addCompile(parentCmd *cobra.Command) {
 					return fmt.Errorf("checklist creation: %w", err)
 				}
 
-				fmt.Fprintf(os.Stderr, "\n✅ Checklist rendered to %s",
+				fmt.Fprintf(os.Stdout, "\n✅ Checklist rendered to %s",
 					opts.checklistOutPath)
 			}
 
