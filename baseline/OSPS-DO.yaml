@@ -42,6 +42,10 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 036-275
+      - reference-id: PSSCRM
+        identifiers: 
+          - G5.1
+          - E3.5  
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -138,7 +142,16 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 171-222
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.3
+          - G2.5
+          - P1.2
+          - P3.1
+          - P3.2
+          - P3.3
+          - E2.6
+      assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -191,6 +204,9 @@ controls:
         identifiers:
           - 4.1
           - 4.3.1
+      - reference-id: PSSCRM
+        identifiers: 
+          - E1.6  
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -230,6 +246,9 @@ controls:
         identifiers:
           - 673-475
           - 053-751
+      - reference-id: PSSCRM
+        identifiers: 
+          - E1.6  
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -267,7 +286,14 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Pinned-Dependencies       
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.4
+          - G2.4
+          - P3.1
+          - P3.2
+          - P3.4
+      assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
           When the project has made a release, the project documentation MUST

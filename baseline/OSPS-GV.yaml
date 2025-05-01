@@ -24,6 +24,11 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 013-021
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.3
+          - E3.1
+          - E3.3
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
@@ -74,6 +79,7 @@ controls:
         identifiers:
           - PS.3
           - PW.1.2
+
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
@@ -115,6 +121,10 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.1.2
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.4
+          - P2.2
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
@@ -182,6 +192,10 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.1.2
+      - reference-id: PSSCRM
+        identifiers: 
+          - E3.1
+          - E3.3
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |

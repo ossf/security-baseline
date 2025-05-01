@@ -38,6 +38,14 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Choose an appropriate build platform
+      - reference-id: PSSCRM
+        identifiers: 
+          - P2.3
+          - P3.2
+          - P3.5
+          - E2.4
+          - E2.5
+          - D2.2       
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
@@ -91,6 +99,12 @@ controls:
         identifiers:
           - Follow a consistent build process
           - Provenance generation- Exists, Authentic
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.4
+          - E1.2
+          - E2.1
+          - E2.6   
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -148,6 +162,12 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Choose an appropriate build platform
+      - reference-id: PSSCRM
+        identifiers: 
+          - E1.1
+          - E2.2
+          - E2.4
+          - E2.5   
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -222,6 +242,14 @@ controls:
           - Choose an appropriate build platform
           - Follow a consistent build process
           - Build platform - Isolation strength - isolated
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.4
+          - E2.1
+          - E2.4
+          - E2.5
+          - E3.1
+          - E3.6
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -276,7 +304,15 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Isolation strength - isolated
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - P3.1
+          - P3.5
+          - E2.2
+          - E2.3
+          - E2.4
+          - E2.5
+       assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
           When a build and release pipeline ingests dependencies, it MUST
@@ -311,6 +347,14 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Distribute provenance - Exists
+      - reference-id: PSSCRM
+        identifiers: 
+          - P1.2
+          - P3.2
+          - P3.3
+          - E2.1
+          - E2.2
+          - E2.6
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |

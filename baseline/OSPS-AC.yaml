@@ -43,6 +43,14 @@ controls:
           - 333-858
           - 152-725
           - 201-246
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.6
+          - P3.3
+          - E1.2
+          - E1.3
+          - E1.4
+          - E3.1
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -88,6 +96,11 @@ controls:
           - 802-056
           - 368-633
           - 152-725
+       - reference-id: PSSCRM
+        identifiers: 
+          - P2.3
+          - E1.2
+          - E3.3
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -133,7 +146,13 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Branch-Protection 
-    assessment-requirements:
+       - reference-id: PSSCRM
+        identifiers: 
+          - P3.2
+          - P3.5
+          - E1.5
+          - E3.1
+       assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
           When a direct commit is attempted on the project's primary branch,
@@ -197,6 +216,9 @@ controls:
         identifiers:
           - Producer - Choose an appropriate build platform
           - Build platform - Isolation strength - Isolated
+      - reference-id: PSSCRM
+        identifiers: 
+          - P3.2   
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

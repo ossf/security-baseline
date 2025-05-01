@@ -52,7 +52,13 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Security-Policy          
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - D1.1
+          - D1.2
+          - D1.3
+          - D1.5
+     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
           While active, the project documentation MUST
@@ -176,7 +182,11 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.1.5
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.2
+          - D1.1
+     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
           While active, the project documentation MUST
@@ -274,7 +284,15 @@ controls:
         identifiers:
           - Security-Policy  
           - Vulnerabilities
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G5.4
+          - P4.1
+          - P4.2
+          - P4.3
+          - P4.4
+          - P4.5
+     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
           While active, the project documentation MUST include a policy that
@@ -380,6 +398,14 @@ controls:
           - Security-Policy  
           - Vulnerabilities
           - SAST
+      - reference-id: PSSCRM
+        identifiers: 
+          - G5.4
+          - P4.1
+          - P4.2
+          - P4.3
+          - P4.4
+          - P4.5
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |

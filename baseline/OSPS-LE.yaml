@@ -33,6 +33,9 @@ controls:
           - PS.1
           - PW.1.2
           - PW.2.1
+      - reference-id: PSSCRM
+        identifiers: 
+          - E3.1 
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
@@ -76,6 +79,9 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - License          
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.2 
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
@@ -132,6 +138,9 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - License          
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.2 
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |

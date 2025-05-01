@@ -40,7 +40,13 @@ controls:
           - 068-102
           - 036-275
           - 162-655
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G5.1
+          - P1.1
+          - E3.4
+          - E3.7
+      assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -90,6 +96,10 @@ controls:
           - 068-102
           - 072-713
           - 820-878
+      - reference-id: PSSCRM
+        identifiers: 
+          - E3.4
+          - E3.7  
     assessment-requirements:
       - id: OSPS-SA-02.01
         text: |
@@ -142,7 +152,12 @@ controls:
           - 068-102
           - 154-031
           - 888-770
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G4.3
+          - G5.2
+          - P2.1
+      assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
           When the project has made a release, the project MUST perform a

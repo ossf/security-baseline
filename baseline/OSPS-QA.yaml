@@ -52,7 +52,11 @@ controls:
       - reference-id: SLSA
         identifiers:
           - Build platform - isolation strength - Isolated
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - P3.5
+          - E2.2
+       assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
           While active, the project's source code repository MUST be publicly
@@ -121,7 +125,18 @@ controls:
           - 673-475
           - 863-521
           - 613-286
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G1.4
+          - G1.5
+          - G2.5
+          - P3.1
+          - P3.2
+          - P5.1
+          - P5.2
+          - E2.1
+          - E2.2
+       assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
           When the package management system supports it, the source code
@@ -178,7 +193,15 @@ controls:
         identifiers:
           - 263-184
           - 253-452
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.2
+          - G5.3
+          - G5.4
+          - P3.5
+          - P4.1
+          - P4.2
+       assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
           When a commit is made to the primary branch, any automated status
@@ -225,6 +248,10 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Binary-Artifacts          
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.2
+          - G5.4   
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -340,7 +367,15 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - CI-Tests          
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - P4.1
+          - P4.2
+          - P4.3
+          - P4.4
+          - E2.4
+          - E2.5
+       assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
           Prior to a commit being accepted, the project's CI/CD pipelines MUST
@@ -396,7 +431,12 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Code-Review          
-    assessment-requirements:
+      - reference-id: PSSCRM
+        identifiers: 
+          - G2.4
+          - P3.3
+          - P3.5
+       assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
           When a commit is made to the primary branch, the project's version

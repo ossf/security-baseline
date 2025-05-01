@@ -27,3 +27,19 @@ mapping-references:
     title: Supply Chain Levels for Software Artifacts
     version: 1.0
     url: https://github.com/slsa-framework/slsa
+  - id: PSSCRM
+    title: Proactive Software Supply Chain Risk Management Framework
+    version: 1.0
+    url:  https://arxiv.org/pdf/2404.12300
+  - id: SAMM
+    title: OWASP Software Assurance Maturity Model 
+    version: 2.0
+    url:  https://owaspsamm.org/model/
+  - id: PCIDSS
+    title: Payment Card Industry Data Security Standard
+    version: 4.0.1
+    url:   https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf   
+  - id: 800-161
+    title: NIST Special Publication 800-161 - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations
+    version: r1-upd1
+    url:  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
