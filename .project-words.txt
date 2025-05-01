@@ -8,7 +8,9 @@ Fintech
 Gesmer
 incentivizing
 lifecycles
+openssf
 OCRE
+OSCAL
 OSPS
 remediations
 Shostack
