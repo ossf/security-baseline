@@ -117,7 +117,7 @@ func addCompile(parentCmd *cobra.Command) {
 				if err := gen.ExportMarkdown(bline, opts.templatePath, opts.outPath); err != nil {
 					return fmt.Errorf("writing markdown render: %w", err)
 				}
-				fmt.Fprintf(os.Stdout, "\n✅ Baseline rendered to %s\n", opts.outPath)
+				fmt.Printf("\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
 			fmt.Fprintf(os.Stdout, "\nℹ️  Counts\n")
