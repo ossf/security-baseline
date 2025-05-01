@@ -52,7 +52,7 @@ From the `cmd/` directory, run `go run . [command] [arguments]`
 
 ### compile
 
-This command reads the yaml contents and generates two optional Markdown files: a listing of all OSPS Baseline controls for use in a static site generator and a checklist of controls by level.
+This command reads the YAML data describing the Baseline controls in `/baseline` and generates two optional Markdown files: a listing of all OSPS Baseline controls for use in a static site generator and a checklist of controls by level.
 
 To produce a file for use in a static site generator (which is how we create baseline.openssf.org!), specify a file argument to `--output`.
 
@@ -62,7 +62,7 @@ Use the `--help` flag for more options.
 
 ### oscal
 
-This command validates the OSPS Baseline output against [OSCAL](https://pages.nist.gov/OSCAL/). By default, it writes the JSON output to STDOUT. You can specify a file with `--out`. 
+This command reads the YAML OSPS Baseline data files and translates the catalog of controls into [OSCAL](https://pages.nist.gov/OSCAL/) format. It writes the JSON output to STDOUT by default. You can specify a file with `--out`.
 
 Use the `--help` flag for more options.
 
