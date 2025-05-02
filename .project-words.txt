@@ -6,12 +6,14 @@ exploitability
 FINOS
 Fintech
 Gesmer
+golangci
 incentivizing
 lifecycles
 openssf
 OCRE
 OSCAL
 OSPS
+PSSCRM
 remediations
 Shostack
 sigstore
