@@ -312,7 +312,10 @@ controls:
           - E2.3
           - E2.4
           - E2.5
-       assessment-requirements:
+      - reference-id: SAMM
+        identifiers: 
+          - Implementaton -Secure Build -Build Process Lvl2
+    assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
           When a build and release pipeline ingests dependencies, it MUST
@@ -355,6 +358,9 @@ controls:
           - E2.1
           - E2.2
           - E2.6
+      - reference-id: SAMM
+        identifiers: 
+          - Implementaton -Secure Deployment -Deployment Process Lvl3
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |

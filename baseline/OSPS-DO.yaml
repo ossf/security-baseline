@@ -98,6 +98,10 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.2.1
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Defect Management -Defect Tracking Lvl1
+          - Implementation -Defect Management -Defect Tracking Lvl2
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -207,6 +211,9 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - E1.6  
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl1
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -249,6 +256,10 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - E1.6  
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl1
+          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl2
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -293,6 +304,9 @@ controls:
           - P3.1
           - P3.2
           - P3.4
+      - reference-id: SAMM
+        identifiers: 
+          - Design -Security Requirements -Supplier Security Lvl2
       assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
