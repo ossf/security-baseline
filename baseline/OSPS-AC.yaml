@@ -99,7 +99,7 @@ controls:
           - 802-056
           - 368-633
           - 152-725
-       - reference-id: PSSCRM
+      - reference-id: PSSCRM
         identifiers: 
           - P2.3
           - E1.2
@@ -149,13 +149,13 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Branch-Protection 
-       - reference-id: PSSCRM
+      - reference-id: PSSCRM
         identifiers: 
           - P3.2
           - P3.5
           - E1.5
           - E3.1
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
           When a direct commit is attempted on the project's primary branch,

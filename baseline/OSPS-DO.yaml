@@ -155,7 +155,7 @@ controls:
           - P3.2
           - P3.3
           - E2.6
-      assessment-requirements:
+        assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -307,7 +307,7 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Design -Security Requirements -Supplier Security Lvl2
-      assessment-requirements:
+        assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
           When the project has made a release, the project documentation MUST
