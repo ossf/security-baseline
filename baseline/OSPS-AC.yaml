@@ -224,7 +224,7 @@ controls:
           - P3.2   
       - reference-id: SAMM
         identifiers: 
-          - Operations -Environment Mgmt -Configuration Hardening Lvl1
+          - Operations -Environment Management -Configuration Hardening Lvl1
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |
