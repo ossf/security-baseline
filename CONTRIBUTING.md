@@ -20,6 +20,23 @@ title and descriptive commit message, PRs MUST meet the following criteria:
 * DCO signoff (via `git commit -s` -- [OSPS-LE-01](https://baseline.openssf.org/#osps-le-01))
 * All checks must pass ([OSPS-QA-04](https://baseline.openssf.org/#osps-qa-04))
 
+### Check Go Tooling Linter
+
+The OSPS Baseline tools are written in Go and the repository enforces linting on
+every pull request. Before opening a PR, you can test your changes make the linter
+happy by running [golangci-lint](https://golangci-lint.run/) locally in
+the `cmd/` directory:
+
+```bash
+cd cmd/
+golangci-lint run
+```
+
+### CSpell Check and Dictionary
+
+The repo will enforce spell checks across the codebase. If you introduce new words
+that the spell checker does not recognize, just add them to the `.cspell.yaml` file.
+
 ## Maintainer Status
 
 See [./governance/GOVERNANCE.md](./governance/GOVERNANCE.md#maintainer-status) for
