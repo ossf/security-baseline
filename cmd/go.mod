@@ -1,6 +1,6 @@
 module github.com/ossf/security-baseline
 
-go 1.23
+go 1.24
 
 require (
 	github.com/defenseunicorns/go-oscal v0.6.2
