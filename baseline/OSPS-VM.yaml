@@ -58,7 +58,7 @@ controls:
           - D1.2
           - D1.3
           - D1.5
-     assessment-requirements:
+        assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
           While active, the project documentation MUST
@@ -186,7 +186,7 @@ controls:
         identifiers: 
           - G2.2
           - D1.1
-     assessment-requirements:
+        assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
           While active, the project documentation MUST
@@ -292,7 +292,7 @@ controls:
           - P4.3
           - P4.4
           - P4.5
-     assessment-requirements:
+        assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
           While active, the project documentation MUST include a policy that

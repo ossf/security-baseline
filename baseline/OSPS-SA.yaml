@@ -46,7 +46,7 @@ controls:
           - P1.1
           - E3.4
           - E3.7
-      assessment-requirements:
+        assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -157,7 +157,7 @@ controls:
           - G4.3
           - G5.2
           - P2.1
-      assessment-requirements:
+        assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
           When the project has made a release, the project MUST perform a

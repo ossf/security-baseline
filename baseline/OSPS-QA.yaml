@@ -56,7 +56,7 @@ controls:
         identifiers: 
           - P3.5
           - E2.2
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
           While active, the project's source code repository MUST be publicly
@@ -136,7 +136,7 @@ controls:
           - P5.2
           - E2.1
           - E2.2
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
           When the package management system supports it, the source code
@@ -201,7 +201,7 @@ controls:
           - P3.5
           - P4.1
           - P4.2
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
           When a commit is made to the primary branch, any automated status
@@ -375,7 +375,7 @@ controls:
           - P4.4
           - E2.4
           - E2.5
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
           Prior to a commit being accepted, the project's CI/CD pipelines MUST
@@ -436,7 +436,7 @@ controls:
           - G2.4
           - P3.3
           - P3.5
-       assessment-requirements:
+        assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
           When a commit is made to the primary branch, the project's version
