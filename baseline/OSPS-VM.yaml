@@ -312,8 +312,8 @@ controls:
         identifiers: 
           - Implementation -Secure Build-Build Process Lvl3
           - Implementation -Software Dependencies Lvl3
-          - Verification -Security Testing -Scaleable Baseline Lvl1
-          - Verification -Security Testing -Scaleable Baseline Lvl3 
+          - Verification -Security Testing -Scalable Baseline Lvl1
+          - Verification -Security Testing -Scalable Baseline Lvl3 
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -432,8 +432,8 @@ controls:
         identifiers: 
           - Implementation -Secure Build-Build Process Lvl3
           - Implementation -Software Dependencies Lvl3
-          - Verification -Security Testing -Scaleable Baseline Lvl1
-          - Verification -Security Testing -Scaleable Baseline Lvl3 
+          - Verification -Security Testing -Scalable Baseline Lvl1
+          - Verification -Security Testing -Scalable Baseline Lvl3 
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
