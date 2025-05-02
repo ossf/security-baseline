@@ -141,7 +141,7 @@ controls:
           - E2.2
       - reference-id: SAMM
         identifiers: 
-          - Implementation -Secure Build -Software Dpendencies Lvl1
+          - Implementation -Secure Build -Software Dependencies Lvl1
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
