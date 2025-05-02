@@ -155,7 +155,7 @@ controls:
           - P3.5
           - E1.5
           - E3.1
-        assessment-requirements:
+    assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
           When a direct commit is attempted on the project's primary branch,
