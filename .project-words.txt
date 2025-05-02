@@ -13,6 +13,7 @@ OCRE
 OSCAL
 OSPS
 remediations
+SAMM
 Shostack
 sigstore
 Sigstore
