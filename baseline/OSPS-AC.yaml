@@ -53,7 +53,7 @@ controls:
           - E3.1
       - reference-id: SAMM
         identifiers: 
-          - Operations -Environment Mgmt -Configuration Hardening Lvl1
+          - Operations -Environment Management -Configuration Hardening Lvl1
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
