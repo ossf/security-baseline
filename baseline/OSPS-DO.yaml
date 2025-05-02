@@ -213,7 +213,7 @@ controls:
           - E1.6  
       - reference-id: SAMM
         identifiers: 
-          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl1
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -258,8 +258,8 @@ controls:
           - E1.6  
       - reference-id: SAMM
         identifiers: 
-          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl1
-          - Operations -Operational Management -System Decomissioning -Legacy Management Lvl2
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl2
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
