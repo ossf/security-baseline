@@ -312,7 +312,7 @@ controls:
           - E2.3
           - E2.4
           - E2.5
-       assessment-requirements:
+    assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
           When a build and release pipeline ingests dependencies, it MUST
