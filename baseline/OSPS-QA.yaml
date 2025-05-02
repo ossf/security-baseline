@@ -390,9 +390,9 @@ controls:
           - E2.5
       - reference-id: SAMM
         identifiers: 
-          - Verification-Requirements -Testing-Control Verification Lvl1
-          - Verification-Requirements -Testing-Control Verification Lvl2 
-          - Verification-Requirements -Testing-Control Verification Lvl3 
+          - Verification-Requirements -Testing -Control Verification Lvl1
+          - Verification-Requirements -Testing -Control Verification Lvl2 
+          - Verification-Requirements -Testing -Control Verification Lvl3 
           - Verification -Security Testing -Scalable Baseline Lvl3
     assessment-requirements:
       - id: OSPS-QA-06.01
