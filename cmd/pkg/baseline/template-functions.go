@@ -29,8 +29,11 @@ func containsSynonym(list []string, entryTerm, term string) bool {
 }
 
 // Check whether there's an unmatched open bracket before the term
-func isWrapped(text string, matched string) bool {
+func isWrapped(text, matched string) bool {
 	beforeIndex := strings.Index(text, matched)
+	if beforeIndex == -1 {
+		return true
+	}
 	substrBeforeTerm := text[:beforeIndex]
 
 	openBrackets := strings.Count(substrBeforeTerm, "[")
@@ -56,7 +59,7 @@ func addLinks(lexicon []types.LexiconEntry, text, term string) string {
 
 		for i, entry := range lexicon {
 			if entry.Term == term && !containsSynonym(entry.Synonyms, entry.Term, matched) {
-				lexicon[i].Synonyms = append(entry.Synonyms, matched)
+				lexicon[i].Synonyms = append(entry.Synonyms, matched) //nolint:gocritic
 			}
 		}
 		return fmt.Sprintf("[%s]", matched)

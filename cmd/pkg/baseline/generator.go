@@ -16,11 +16,10 @@ func NewGenerator() *Generator {
 	return &Generator{}
 }
 
-type Generator struct {
-}
+type Generator struct{}
 
 // ExportMarkdown runs the baseline data through the markdown template
-func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath string, path string) error {
+func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string) error {
 	// Read the markdown template from the external file
 	templateContent, err := os.ReadFile(templatePath)
 	if err != nil {
@@ -28,7 +27,7 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath string, path 
 	}
 
 	// Open or create the output file
-	if err := os.MkdirAll(filepath.Dir(path), os.ModePerm); err != nil {
+	if err := os.MkdirAll(filepath.Dir(path), os.FileMode(0o750)); err != nil {
 		return fmt.Errorf("error creating output directory %s: %w", filepath.Dir(path), err)
 	}
 
@@ -36,7 +35,7 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath string, path 
 	if err != nil {
 		return fmt.Errorf("error creating output file %s: %w", path, err)
 	}
-	defer outputFile.Close()
+	defer outputFile.Close() //nolint:errcheck
 
 	// Create and parse the template
 	tmpl, err := template.New("baseline").Funcs(template.FuncMap{

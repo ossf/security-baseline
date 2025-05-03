@@ -8,8 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ossf/security-baseline/pkg/baseline"
 	"github.com/spf13/cobra"
+
+	"github.com/ossf/security-baseline/pkg/baseline"
 )
 
 var appname = "baseline"

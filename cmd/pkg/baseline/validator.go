@@ -15,13 +15,12 @@ func NewValidator() *Validator {
 	return &Validator{}
 }
 
-type Validator struct {
-}
+type Validator struct{}
 
 // Check verifies the data parsed for consistency and completeness
 func (v *Validator) Check(b *types.Baseline) error {
 	var entryIDs []string
-	var errs = []error{}
+	errs := []error{}
 	for _, category := range b.Categories {
 		for _, entry := range category.Controls {
 			if slices.Contains(entryIDs, entry.ID) {
