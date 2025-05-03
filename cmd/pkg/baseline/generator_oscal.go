@@ -11,6 +11,7 @@ import (
 	"time"
 
 	oscal "github.com/defenseunicorns/go-oscal/src/types/oscal-1-1-3"
+
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
@@ -56,7 +57,6 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 		controls := []oscal.Control{}
 
 		for _, control := range cat.Controls {
-
 			parts := []oscal.Part{}
 			for _, ar := range control.Requirements {
 				parts = append(parts, oscal.Part{
@@ -105,7 +105,7 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 
 	// Wrap the catalog to render the required "catalog" wrapper
 	// in the JSON file:
-	var wrapper = struct {
+	wrapper := struct {
 		Catalog oscal.Catalog `json:"catalog"`
 	}{
 		Catalog: catalog,

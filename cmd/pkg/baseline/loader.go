@@ -8,12 +8,15 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ossf/security-baseline/pkg/types"
 	"gopkg.in/yaml.v3"
+
+	"github.com/ossf/security-baseline/pkg/types"
 )
 
-const LexiconFilename = "lexicon.yaml"
-const FrameworksFilename = "frameworks.yaml"
+const (
+	LexiconFilename    = "lexicon.yaml"
+	FrameworksFilename = "frameworks.yaml"
+)
 
 // Loader is an object that reads the baseline data
 type Loader struct {
@@ -51,7 +54,6 @@ func (l *Loader) Load() (*types.Baseline, error) {
 		b.Categories[catCode] = *cat
 	}
 
-	// return b, b.validate()
 	return b, nil
 }
 
@@ -61,14 +63,14 @@ func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error opening file: %w", err)
 	}
-	defer file.Close()
+	defer file.Close() //nolint:errcheck
 
 	var lexicon []types.LexiconEntry
 
 	decoder := yaml.NewDecoder(file)
 	decoder.KnownFields(true)
 	if err := decoder.Decode(&lexicon); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %v", err)
+		return nil, fmt.Errorf("error decoding YAML: %w", err)
 	}
 	return lexicon, nil
 }
@@ -79,14 +81,14 @@ func (l *Loader) loadFramework() ([]types.FrameworkEntry, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error opening file: %w", err)
 	}
-	defer file.Close()
+	defer file.Close() //nolint:errcheck
 
 	var frameworks types.Frameworks
 
 	decoder := yaml.NewDecoder(file)
 	decoder.KnownFields(true)
 	if err := decoder.Decode(&frameworks); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %v", err)
+		return nil, fmt.Errorf("error decoding YAML: %w", err)
 	}
 	return frameworks.Frameworks, nil
 }
@@ -95,11 +97,11 @@ func (l *Loader) loadFramework() ([]types.FrameworkEntry, error) {
 func (l *Loader) loadCategory(catCode string) (*types.Category, error) {
 	file, err := os.Open(filepath.Join(l.DataPath, fmt.Sprintf("OSPS-%s.yaml", catCode)))
 	if err != nil {
-		return nil, fmt.Errorf("error opening file: %v", err)
+		return nil, fmt.Errorf("error opening file: %w", err)
 	}
-	defer file.Close()
+	defer file.Close() //nolint:errcheck
 
-	var category = &types.Category{}
+	category := &types.Category{}
 
 	decoder := yaml.NewDecoder(file)
 	decoder.KnownFields(true)

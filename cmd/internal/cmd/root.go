@@ -9,8 +9,8 @@ func Execute() error {
 	rootCmd := &cobra.Command{
 		Use:  "baseline-compiler",
 		Long: `Baseline Compiler reads the Basline YAML and outputs it as a markdown document.`,
-		Run: func(cmd *cobra.Command, args []string) {
-			cmd.Help() //nolint
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return cmd.Help()
 		},
 	}
 

@@ -8,8 +8,11 @@ dictionaryDefinitions:
 dictionaries:
   - project-words
 ignorePaths:
+  - '.cspell.yaml'
   - 'governance/'
   - '*.{csv,go,mod,scss,sum}'
   - 'CNAME'
   - 'LICENSE'
   - 'docs/versions/'
+  - '.github/workflows'
+  - '.golangci.yaml'
