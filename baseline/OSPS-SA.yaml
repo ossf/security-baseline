@@ -46,6 +46,9 @@ controls:
           - P1.1
           - E3.4
           - E3.7
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Operational Management -Data Protection Lvl2
     assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
@@ -157,6 +160,12 @@ controls:
           - G4.3
           - G5.2
           - P2.1
+      - reference-id: SAMM
+        identifiers: 
+          - Governance -Create and Promote Lvl1  
+          - Design -Threat Assessment -Application Risk Profile Lvl1  
+          - Design -Threat Assessment -Threat Modeling Lvl1 
+          - Verification -Architecture Assessment -Architecture Mitigation Lvl2
     assessment-requirements:
       - id: OSPS-SA-03.01
         text: |

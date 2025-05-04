@@ -312,6 +312,9 @@ controls:
           - E2.3
           - E2.4
           - E2.5
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build -Build Process Lvl2
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -355,6 +358,9 @@ controls:
           - E2.1
           - E2.2
           - E2.6
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Deployment -Deployment Process Lvl3
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |

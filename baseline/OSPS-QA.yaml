@@ -56,6 +56,9 @@ controls:
         identifiers: 
           - P3.5
           - E2.2
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build -Build Process Lvl1
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
@@ -136,6 +139,9 @@ controls:
           - P5.2
           - E2.1
           - E2.2
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build -Software Dependencies Lvl1
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
@@ -201,6 +207,13 @@ controls:
           - P3.5
           - P4.1
           - P4.2
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build -Build Process Lvl3
+          - Implementation -Secure Build -Software Dependencies Lvl3
+          - Verification -Requirements Testing -Control Verification Lvl1
+          - Verification -Requirements Testing -Control Verification Lvl2
+          - Verification -Requirements Testing -Control Verification Lvl3
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
@@ -375,6 +388,12 @@ controls:
           - P4.4
           - E2.4
           - E2.5
+      - reference-id: SAMM
+        identifiers: 
+          - Verification-Requirements -Testing -Control Verification Lvl1
+          - Verification-Requirements -Testing -Control Verification Lvl2 
+          - Verification-Requirements -Testing -Control Verification Lvl3 
+          - Verification -Security Testing -Scalable Baseline Lvl3
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |

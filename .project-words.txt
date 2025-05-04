@@ -15,6 +15,7 @@ OSCAL
 OSPS
 PSSCRM
 remediations
+SAMM
 Shostack
 sigstore
 Sigstore

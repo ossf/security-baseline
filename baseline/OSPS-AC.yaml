@@ -51,6 +51,9 @@ controls:
           - E1.3
           - E1.4
           - E3.1
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Environment Management -Configuration Hardening Lvl1
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -219,6 +222,9 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - P3.2   
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Environment Management -Configuration Hardening Lvl1
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

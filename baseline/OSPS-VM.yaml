@@ -58,6 +58,16 @@ controls:
           - D1.2
           - D1.3
           - D1.5
+      - reference-id: SAMM
+        identifiers: 
+          - Governance -Create and Promote Lvl2  
+          - Governance -Policy & Compliance -Policy & Standards Lvl1  
+          - Implementation -Defect Management -Defect Tracking Lvl1
+          - Implementation -Defect Management -Defect Tracking Lvl2
+          - Implementation -Defect Management -Defect Tracking Lvl3
+          - Operations -Incident Management -Incident Response Lvl1
+          - Operations -Incident Management -Incident Response Lvl2
+          - Operations -Incident Management -Incident Response Lvl3
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -110,6 +120,9 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Security-Policy                  
+      - reference-id: SAMM
+        identifiers: 
+          - Governance -Policy&Compliance -Policy&Standards Lvl2 
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -141,6 +154,9 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 308-514
+      - reference-id: SAMM
+        identifiers: 
+          - Operations -Incident Management -Incident Response Lvl3 
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -292,6 +308,12 @@ controls:
           - P4.3
           - P4.4
           - P4.5
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build-Build Process Lvl3
+          - Implementation -Software Dependencies Lvl3
+          - Verification -Security Testing -Scalable Baseline Lvl1
+          - Verification -Security Testing -Scalable Baseline Lvl3 
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -406,6 +428,12 @@ controls:
           - P4.3
           - P4.4
           - P4.5
+      - reference-id: SAMM
+        identifiers: 
+          - Implementation -Secure Build-Build Process Lvl3
+          - Implementation -Software Dependencies Lvl3
+          - Verification -Security Testing -Scalable Baseline Lvl1
+          - Verification -Security Testing -Scalable Baseline Lvl3 
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
