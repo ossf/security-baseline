@@ -46,6 +46,19 @@ controls:
         identifiers: 
           - G5.1
           - E3.5  
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.1.1
+          - 2.2.1
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 12.10.5
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -98,10 +111,20 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.2.1
+<<<<<<< Updated upstream
+=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Defect Management -Defect Tracking Lvl1
           - Implementation -Defect Management -Defect Tracking Lvl2
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.3.2
+          - 6.3.3
+          - 6.5.1
+          - 6.5.2
+          - 12.10.2
+>>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -155,7 +178,22 @@ controls:
           - P3.2
           - P3.3
           - E2.6
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
+      - reference-id: PCIDSS
+        identifiers: 
+          - 3.1.1
+          - 3.5.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-DO-03.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -211,9 +249,24 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - E1.6  
+<<<<<<< Updated upstream
+=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.1.1
+          - 3.1.1
+          - 3.2.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.3
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+>>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -256,10 +309,24 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - E1.6  
+<<<<<<< Updated upstream
+=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
           - Operations -Operational Management -System Decommissioning -Legacy Management Lvl2
+      - reference-id: PCIDSS
+        identifiers: 
+          - 3.1.1
+          - 3.2.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.2
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+>>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -304,10 +371,27 @@ controls:
           - P3.1
           - P3.2
           - P3.4
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
       - reference-id: SAMM
         identifiers: 
           - Design -Security Requirements -Supplier Security Lvl2
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.1.1
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.2
+          - 6.4.3
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1 
+          - 12.5.2
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-DO-06.01
         text: |
           When the project has made a release, the project documentation MUST

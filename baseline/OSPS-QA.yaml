@@ -56,10 +56,20 @@ controls:
         identifiers: 
           - P3.5
           - E2.2
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build -Build Process Lvl1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.1.1
+          - 6.2.1
+          - 6.5.1
+          - 6.5.2
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-QA-01.01
         text: |
           While active, the project's source code repository MUST be publicly
@@ -139,10 +149,19 @@ controls:
           - P5.2
           - E2.1
           - E2.2
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build -Software Dependencies Lvl1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.3.2
+          - 6.4.3
+          - 12.5.1
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-QA-02.01
         text: |
           When the package management system supports it, the source code
@@ -207,6 +226,9 @@ controls:
           - P3.5
           - P4.1
           - P4.2
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build -Build Process Lvl3
@@ -214,7 +236,13 @@ controls:
           - Verification -Requirements Testing -Control Verification Lvl1
           - Verification -Requirements Testing -Control Verification Lvl2
           - Verification -Requirements Testing -Control Verification Lvl3
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.3.1
+          - 6.3.2
+          - 6.5.2
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-QA-03.01
         text: |
           When a commit is made to the primary branch, any automated status
@@ -265,6 +293,9 @@ controls:
         identifiers: 
           - G2.2
           - G5.4   
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.4.2
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -315,6 +346,9 @@ controls:
         identifiers:
           - 486-813
           - 124-564
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.4.3
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
@@ -388,13 +422,23 @@ controls:
           - P4.4
           - E2.4
           - E2.5
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
       - reference-id: SAMM
         identifiers: 
           - Verification-Requirements -Testing -Control Verification Lvl1
           - Verification-Requirements -Testing -Control Verification Lvl2 
           - Verification-Requirements -Testing -Control Verification Lvl3 
           - Verification -Security Testing -Scalable Baseline Lvl3
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.2.3
+          - 6.3.1
+          - 6.3.2
+          - 6.4.2
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-QA-06.01
         text: |
           Prior to a commit being accepted, the project's CI/CD pipelines MUST
@@ -455,7 +499,16 @@ controls:
           - G2.4
           - P3.3
           - P3.5
+<<<<<<< Updated upstream
+        assessment-requirements:
+=======
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.2.3.1
+          - 6.4.2
+          - 6.5.4
     assessment-requirements:
+>>>>>>> Stashed changes
       - id: OSPS-QA-07.01
         text: |
           When a commit is made to the primary branch, the project's version

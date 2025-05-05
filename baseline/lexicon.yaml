@@ -204,6 +204,14 @@
     multiple forms of identification.
   synonyms:
     - MFA
+- term: NIST Special Publication 800-161 - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations
+  definition: |
+     Provides guidance to organizations on identifying, 
+     assessing, and mitigating cybersecurity risks throughout 
+     the supply chain at all levels of their organizations.
+  synonyms: 800-161
+  references: 
+    - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
 - term: OpenChain
   definition: |
     A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
@@ -229,10 +237,17 @@
      of automated checks. It was created by OSS developers 
      to help improve the health of critical projects
      that the community depends on.
-  synonyms: 
+  synonyms: ScrCrd
   references: 
     - https://github.com/ossf/scorecard
     - https://scorecard.dev/
+- term: Payment Card Industry Data Security Standard
+  definition: |
+     PCI DSS provides a baseline of technical and operational 
+     requirements designed to protect payment account data.
+  synonyms: PCIDSS
+  references: 
+    - https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
 - term: Primary Branch
   definition: |
     The main development branch in the version
@@ -256,6 +271,19 @@
     - Private Security Vulnerability Reporting
   references:
     - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
+- term: Proactive Software Supply Chain Risk Management Framework
+  definition: |
+    A holistic framework that an organization can use to 
+    proactively mitigate software supply chain risk through 
+    guided adoption of tasks; and that supports assessment,
+    scoring, and comparison against industry peers, 
+    standards, and guidelines. The P-SSCRM contextualizes and
+    quantifies the tasks contained across multiple standards 
+    and frameworks to those carried out by various kinds of organizations.
+  synonyms: 
+    - P-SSCRM 
+  references: 
+    - https://arxiv.org/pdf/2404.12300 
 - term: Project Documentation
   definition: |
     Written materials related to the project,
@@ -266,6 +294,18 @@
     release time, this may include provenance
     information, licensing details, and other
     metadata.
+- term: Proactive Software Supply Chain Risk Management Framework
+  definition: |
+    A maturity model for software assurance that provides an 
+    effective and measurable way for all types of organizations 
+    to analyze and improve their software security posture. 
+    OWASP SAMM supports the complete software lifecycle, including 
+    development and acquisition, and is technology and process agnostic. 
+    It is intentionally built to be evolutive and risk-driven in nature.
+  synonyms: 
+    - SAMM 
+  references: 
+    - https://owaspsamm.org/model/
 - term: Sensitive Data
   definition: |
     Information that, if disclosed to unauthorized
@@ -320,7 +360,9 @@
     - Repositories
 - term: Secure Software Development Framework
   definition: |
-     The NIST Secure Software Development Framework (SP 800-218) is a broadly reviewed and collaborative set of fundamental secure software development practices.
+     The NIST Secure Software Development Framework (SP 800-218) is a 
+     broadly reviewed and collaborative set of fundamental secure software 
+     development practices.
   synonyms: 
     - SSDF 
     - NIST Secure Software Development Framework
