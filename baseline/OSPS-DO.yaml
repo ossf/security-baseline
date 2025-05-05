@@ -175,7 +175,6 @@ controls:
           - P3.2
           - P3.3
           - E2.6
-    assessment-requirements:
       - reference-id: PCIDSS
         identifiers: 
           - 3.1.1
@@ -359,7 +358,6 @@ controls:
           - P3.1
           - P3.2
           - P3.4
-    assessment-requirements:
       - reference-id: SAMM
         identifiers: 
           - Design -Security Requirements -Supplier Security Lvl2
