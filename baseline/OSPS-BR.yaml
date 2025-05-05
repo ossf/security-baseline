@@ -50,6 +50,7 @@ controls:
         identifiers: 
           - 2.2.1
           - 6.4.1
+    assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
           When a CI/CD pipeline accepts an input parameter, that parameter MUST
