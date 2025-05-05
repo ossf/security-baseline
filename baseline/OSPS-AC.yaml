@@ -51,7 +51,6 @@ controls:
           - E1.3
           - E1.4
           - E3.1
-    assessment-requirements:
       - reference-id: SAMM
         identifiers: 
           - Operations -Environment Management -Configuration Hardening Lvl1
@@ -113,7 +112,6 @@ controls:
       - reference-id: PCIDSS
         identifiers: 
           - 2.2.1
-    assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
           When a new collaborator is added, the version control system MUST
@@ -164,7 +162,6 @@ controls:
           - P3.5
           - E1.5
           - E3.1
-    assessment-requirements:
       - reference-id: PCIDSS
         identifiers: 
           - 2.2.1
