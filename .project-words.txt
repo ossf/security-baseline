@@ -13,6 +13,7 @@ openssf
 OCRE
 OSCAL
 OSPS
+PCIDSS
 PSSCRM
 remediations
 SAMM
