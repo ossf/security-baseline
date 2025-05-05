@@ -46,9 +46,6 @@ controls:
           - P1.1
           - E3.4
           - E3.7
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Operational Management -Data Protection Lvl2
@@ -70,7 +67,6 @@ controls:
           - 12.3.1
           - 12.5.3
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-SA-01.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -191,9 +187,6 @@ controls:
           - G4.3
           - G5.2
           - P2.1
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
       - reference-id: SAMM
         identifiers: 
           - Governance -Create and Promote Lvl1  
@@ -212,7 +205,6 @@ controls:
           - 11.3.1
           - 12.3.1
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-SA-03.01
         text: |
           When the project has made a release, the project MUST perform a
