@@ -58,9 +58,6 @@ controls:
           - D1.2
           - D1.3
           - D1.5
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
       - reference-id: SAMM
         identifiers: 
           - Governance -Create and Promote Lvl2  
@@ -87,7 +84,6 @@ controls:
           - 12.1.1
           - 12.1.3
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-VM-01.01
         text: |
           While active, the project documentation MUST
@@ -139,8 +135,6 @@ controls:
       - reference-id: ScCrd
         identifiers:
           - Security-Policy                  
-<<<<<<< Updated upstream
-=======
       - reference-id: SAMM
         identifiers: 
           - Governance -Policy&Compliance -Policy&Standards Lvl2 
@@ -149,7 +143,6 @@ controls:
           - 6.3.3
           - 12.1.1
           - 12.10.2
->>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -181,8 +174,6 @@ controls:
       - reference-id: OCRE
         identifiers:
           - 308-514
-<<<<<<< Updated upstream
-=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Incident Management -Incident Response Lvl3 
@@ -191,7 +182,6 @@ controls:
           - 6.3.1
           - 6.3.3
           - 12.10.2
->>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -237,9 +227,6 @@ controls:
         identifiers: 
           - G2.2
           - D1.1
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
       - reference-id: PCIDSS
         identifiers: 
           - 6.2.3
@@ -248,7 +235,6 @@ controls:
           - 6.3.3
           - 11.3.1
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-VM-04.01
         text: |
           While active, the project documentation MUST
@@ -354,9 +340,6 @@ controls:
           - P4.3
           - P4.4
           - P4.5
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build-Build Process Lvl3
@@ -371,7 +354,6 @@ controls:
           - 6.4.1
           - 6.4.2
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-VM-05.01
         text: |
           While active, the project documentation MUST include a policy that
@@ -485,8 +467,6 @@ controls:
           - P4.3
           - P4.4
           - P4.5
-<<<<<<< Updated upstream
-=======
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build-Build Process Lvl3
@@ -501,7 +481,6 @@ controls:
           - 6.4.1
           - 6.4.2
           - 6.5.2
->>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
