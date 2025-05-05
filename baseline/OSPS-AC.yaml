@@ -51,9 +51,7 @@ controls:
           - E1.3
           - E1.4
           - E3.1
-<<<<<<< Updated upstream
     assessment-requirements:
-=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Environment Management -Configuration Hardening Lvl1
@@ -63,7 +61,6 @@ controls:
           - 8.2.1
           - 8.3.1
      assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-AC-01.01
         text: |
           When a user attempts to access a sensitive resource in the project's
@@ -167,14 +164,11 @@ controls:
           - P3.5
           - E1.5
           - E3.1
-<<<<<<< Updated upstream
-        assessment-requirements:
-=======
+    assessment-requirements:
       - reference-id: PCIDSS
         identifiers: 
           - 2.2.1
     assessment-requirements:
->>>>>>> Stashed changes
       - id: OSPS-AC-03.01
         text: |
           When a direct commit is attempted on the project's primary branch,
@@ -241,8 +235,6 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - P3.2   
-<<<<<<< Updated upstream
-=======
       - reference-id: SAMM
         identifiers: 
           - Operations -Environment Management -Configuration Hardening Lvl1
@@ -250,7 +242,6 @@ controls:
         identifiers: 
           - 2.2.1
           - 8.2.1
->>>>>>> Stashed changes
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |
