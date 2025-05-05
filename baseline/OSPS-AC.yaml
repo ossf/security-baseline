@@ -59,7 +59,7 @@ controls:
           - 2.2.1
           - 8.2.1
           - 8.3.1
-     assessment-requirements:
+    assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
           When a user attempts to access a sensitive resource in the project's
