@@ -29,7 +29,7 @@ func (o *validateOptions) Validate() error {
 
 func (o *validateOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
-		&o.baselinePath, "baseline", "b", "", "path to directory containing the baseline YAML definitions",
+		&o.baselinePath, "baseline", "b", defaultBaselinePath, "path to directory containing the baseline YAML definitions",
 	)
 }
 
