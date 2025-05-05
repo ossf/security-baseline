@@ -112,6 +112,7 @@ controls:
       - reference-id: PCIDSS
         identifiers: 
           - 2.2.1
+    assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
           When a new collaborator is added, the version control system MUST
