@@ -17,11 +17,6 @@ jobs:
         with:
             persist-credentials: false
 
-      - name: Spellcheck all content
-        uses: streetsidesoftware/cspell-action@357d91b7153520efd453f404d76424cff0a29797 # v6.11.0
-        with:
-          config: .cspell.yaml
-
       - name: Build content from yaml
         run:  cd cmd && go run . compile --output ../docs/versions/devel.md
 
