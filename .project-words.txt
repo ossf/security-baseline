@@ -3,6 +3,7 @@ crosswalked
 devel
 exfiltration
 exploitability
+evolutive
 FINOS
 Fintech
 Gesmer
@@ -16,6 +17,7 @@ OSPS
 PSSCRM
 remediations
 SAMM
+SSCRM
 Shostack
 sigstore
 Sigstore
