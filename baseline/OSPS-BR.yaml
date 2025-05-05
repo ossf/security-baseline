@@ -111,6 +111,7 @@ controls:
       - reference-id: PCIDSS
         identifiers: 
           - 6.4.3
+    assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
           When an official release is created, that release MUST be assigned a
