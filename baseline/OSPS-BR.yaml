@@ -50,7 +50,6 @@ controls:
         identifiers: 
           - 2.2.1
           - 6.4.1
-    assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
           When a CI/CD pipeline accepts an input parameter, that parameter MUST
@@ -112,7 +111,6 @@ controls:
       - reference-id: PCIDSS
         identifiers: 
           - 6.4.3
-    assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
           When an official release is created, that release MUST be assigned a
@@ -334,7 +332,6 @@ controls:
           - E2.3
           - E2.4
           - E2.5
-        assessment-requirements:
       - reference-id: SAMM
         identifiers: 
           - Implementation -Secure Build -Build Process Lvl2
