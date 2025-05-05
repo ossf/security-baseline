@@ -209,7 +209,8 @@
      Provides guidance to organizations on identifying, 
      assessing, and mitigating cybersecurity risks throughout 
      the supply chain at all levels of their organizations.
-  synonyms: 800-161
+  synonyms: 
+    - 800-161
   references: 
     - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
 - term: OpenChain
@@ -237,7 +238,8 @@
      of automated checks. It was created by OSS developers 
      to help improve the health of critical projects
      that the community depends on.
-  synonyms: ScrCrd
+  synonyms: 
+    - ScrCrd
   references: 
     - https://github.com/ossf/scorecard
     - https://scorecard.dev/
@@ -245,7 +247,8 @@
   definition: |
      PCI DSS provides a baseline of technical and operational 
      requirements designed to protect payment account data.
-  synonyms: PCIDSS
+  synonyms: 
+    - PCIDSS
   references: 
     - https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
 - term: Primary Branch
