@@ -54,6 +54,11 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Operations -Environment Management -Configuration Hardening Lvl1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
+          - 8.2.1
+          - 8.3.1
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -104,6 +109,9 @@ controls:
           - P2.3
           - E1.2
           - E3.3
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -155,6 +163,9 @@ controls:
           - P3.5
           - E1.5
           - E3.1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
@@ -225,6 +236,10 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Operations -Environment Management -Configuration Hardening Lvl1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
+          - 8.2.1
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

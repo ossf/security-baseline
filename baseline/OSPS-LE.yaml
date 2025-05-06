@@ -36,6 +36,9 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - E3.1 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 12.8.5
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
@@ -82,6 +85,9 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - G1.2 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 3.2.1
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
@@ -141,6 +147,9 @@ controls:
       - reference-id: PSSCRM
         identifiers: 
           - G1.2 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 3.2.1
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |

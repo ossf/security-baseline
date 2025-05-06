@@ -49,6 +49,23 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Operations -Operational Management -Data Protection Lvl2
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
+          - 2.2.3
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 12.3.1
+          - 12.5.3
     assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
@@ -103,6 +120,16 @@ controls:
         identifiers: 
           - E3.4
           - E3.7  
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.1
+          - 2.2.3
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 6.2.1
+          - 12.3.1
+          - 12.8.1
     assessment-requirements:
       - id: OSPS-SA-02.01
         text: |
@@ -166,6 +193,17 @@ controls:
           - Design -Threat Assessment -Application Risk Profile Lvl1  
           - Design -Threat Assessment -Threat Modeling Lvl1 
           - Verification -Architecture Assessment -Architecture Mitigation Lvl2
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 6.2.1
+          - 6.2.3.1
+          - 6.3.2
+          - 6.4.2
+          - 11.3.1
+          - 12.3.1
     assessment-requirements:
       - id: OSPS-SA-03.01
         text: |

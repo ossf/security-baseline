@@ -68,6 +68,21 @@ controls:
           - Operations -Incident Management -Incident Response Lvl1
           - Operations -Incident Management -Incident Response Lvl2
           - Operations -Incident Management -Incident Response Lvl3
+      - reference-id: PCIDSS
+        identifiers: 
+          - 2.1.1
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.1
+          - 6.3.2
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 11.2.1
+          - 12.1.1
+          - 12.1.3
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -123,6 +138,11 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Governance -Policy&Compliance -Policy&Standards Lvl2 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.3.3
+          - 12.1.1
+          - 12.10.2
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -157,6 +177,11 @@ controls:
       - reference-id: SAMM
         identifiers: 
           - Operations -Incident Management -Incident Response Lvl3 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.3.1
+          - 6.3.3
+          - 12.10.2
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -202,6 +227,13 @@ controls:
         identifiers: 
           - G2.2
           - D1.1
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.2.3
+          - 6.3.1
+          - 6.3.2
+          - 6.3.3
+          - 11.3.1
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -314,6 +346,13 @@ controls:
           - Implementation -Software Dependencies Lvl3
           - Verification -Security Testing -Scalable Baseline Lvl1
           - Verification -Security Testing -Scalable Baseline Lvl3 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.2.3
+          - 6.3.1
+          - 6.3.2
+          - 6.4.1
+          - 6.4.2
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -434,6 +473,14 @@ controls:
           - Implementation -Software Dependencies Lvl3
           - Verification -Security Testing -Scalable Baseline Lvl1
           - Verification -Security Testing -Scalable Baseline Lvl3 
+      - reference-id: PCIDSS
+        identifiers: 
+          - 6.2.3
+          - 6.3.1
+          - 6.3.2
+          - 6.4.1
+          - 6.4.2
+          - 6.5.2
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
