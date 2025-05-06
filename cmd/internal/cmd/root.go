@@ -5,6 +5,12 @@ package cmd
 
 import "github.com/spf13/cobra"
 
+const (
+	// defaultBaselinePath is the default location where the CLI will look for
+	// the baseline YAML files
+	defaultBaselinePath = "../baseline"
+)
+
 func Execute() error {
 	rootCmd := &cobra.Command{
 		Use:  "baseline-compiler",
