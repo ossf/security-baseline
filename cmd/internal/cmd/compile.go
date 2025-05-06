@@ -34,7 +34,7 @@ func (o *compileOptions) Validate() error {
 
 func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
-		&o.baselinePath, "baseline", "b", "../baseline", "path to directory containing the baseline YAML data",
+		&o.baselinePath, "baseline", "b", defaultBaselinePath, "path to directory containing the baseline YAML data",
 	)
 
 	cmd.PersistentFlags().StringVarP(
