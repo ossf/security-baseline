@@ -10,7 +10,7 @@ controls:
   - id: OSPS-AC-01
     title: |
       The project's version control system MUST require multi-factor
-      authentication for collaborators modifying the project repository
+      authentication for users modifying the project repository
       settings or accessing sensitive data.
     objective: |
       Reduce the risk of account compromise or insider threats by requiring
