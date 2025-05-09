@@ -448,6 +448,14 @@
     recommended formats are Semantic Versioning
     or Calendar Versioning.
   synonyms:
+- term: User
+  definition: |
+    A human making use of project resources, such as
+    the software, documentation, or other community
+    resources. This includes both end-users and
+    contributors.
+  synonyms:
+    - Person
 - term: Version Control System
   definition: |
     A tool that tracks changes to files over time
