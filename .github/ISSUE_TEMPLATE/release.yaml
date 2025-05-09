@@ -20,15 +20,17 @@ body:
         - label: |
             Ensure all pull requests targeted for this release are merged
         - label: |
-            Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md` (replace `2025-02-04` with the version name)
+            Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md --checklist-output ../docs/versions/2025-02-04-checklist.md` (replace `2025-02-04` with the version name)
         - label: |
             In the `docs/versions/<VERSION>.md` file, change the `Version: devel` to have the version number of the new version
+        - label: |
+            In the `docs/versions/<VERSION>-checklist.md` file, change the header to have the version number of the new version
         - label: |
             In the `docs/versions/<VERSION>.md` file, remove the "not for production use" warning
         - label: |
             Move the link to the "current" version in `docs/index.md` to the "previous versions" list
         - label: |
-            Add the link to the new version to the "current version" in `docs/index.md` (e.g. `Current version: [2025-02-04](versions/2025-02-04]`) 
+            Add the link to the new version to the "current version" in `docs/index.md` (e.g. `Current version: [2025-02-04](versions/2025-02-04]`). Be sure to use the HTML syntax for the link to the checklist in order to have Jekyll link to the markdown version instead of an html version.
         - label: |
             Open a pull request with the above changes
         - label: |
