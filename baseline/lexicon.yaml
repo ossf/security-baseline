@@ -75,9 +75,9 @@
 - term: Contributor
   definition: |
     Entities who commit code or documentation to
-    the project. Code contributors include
-    collaborators or external participants who
-    submit changes.
+    the project. This includes both human
+    and non-human actors and makes no distinctions
+    based on their role within the project.
 
     In the context of the Open Source Project
     Security Baseline, code contributors does not
@@ -94,10 +94,9 @@
     the primary deliverable in a release.
 - term: Collaborator
   definition: |
-    A user with a role on the project's version
-    control system who can approve changes or
-    manage the repository settings. Collaborators
-    may have varying permission levels based on
+    A human or non-human entity with permissions to
+    approve changes or manage the repository settings.
+    Collaborators may have varying permission levels based on
     their role in the project. This does not
     include contributors whose changes only
     originate through a request from a repository
