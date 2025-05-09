@@ -49,12 +49,16 @@ controls:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Include a DCO or CLA in the project's repository, requiring code
+          Include a DCO in the project's repository, requiring code
           contributors to assert that they are legally authorized to commit the
           associated contributions on every commit. Use a status check to ensure
-          the assertion is made.
+          the assertion is made. A CLA also satisfies this requirement.
           Some version control systems, such as GitHub, may include this in the
           platform terms of service.
+
+          It is understood that projects with a lengthy history prior to
+          adopting OSPS Baseline may not be able to retroactively enforce this
+          requirement.
 
   - id: OSPS-LE-02
     title: |

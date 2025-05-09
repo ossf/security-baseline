@@ -72,6 +72,15 @@
     Security Baseline, CD refers only to
     continuous delivery, not to continuous
     deployment, as sometimes used elsewhere.
+- term: Contributor License Agreement
+  definition: |
+    A legal agreement used to assign some of a contributor's
+    rights covered by copyright laws to a project. This is
+    often used to enable a project to make future changes to
+    a work's license without requiring the assent of every
+    contributor.
+  synonyms:
+    - CLA
 - term: Contributor
   definition: |
     Entities who commit code or documentation to
@@ -152,6 +161,16 @@
     originally been intentional, but a change in
     environment or understanding has made them
     undesirable.
+- term: Developer Certificate of Origin
+  definition: |
+    An assertion made by a contributor that they have the
+    legal right to make a specific contribution to a
+    project. This is often indicated by using the
+    `--signoff` option to `git commit`.
+  synonyms:
+    - DCO
+  references:
+    - https://developercertificate.org/
 - term: OpenEoX
   definition: |
     An initiative aimed at standardizing the way
