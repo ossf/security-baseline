@@ -1,4 +1,4 @@
-category: Governance
+title: Governance
 description: |
   Governance focuses on the policies and
   procedures that guide the project's decision-making
@@ -15,7 +15,6 @@ controls:
       potential contributors, and downstream consumers have an accurate
       understanding of who is working on the project and what areas of authority
       they may have.
-    family: Governance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -83,7 +82,6 @@ controls:
       Encourages open communication and collaboration within the project
       community, enabling users to provide feedback and discuss proposed changes
       or usage challenges.
-    family: Governance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -124,7 +122,6 @@ controls:
       Provide guidance to new contributors on how to participate in the project,
       outlining the steps required to submit changes or enhancements to the
       project's codebase.
-    family: Governance
     mappings:
       - reference-id: BPB
         identifiers:
@@ -189,7 +186,6 @@ controls:
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing
       the risk of unauthorized access or misuse.
-    family: Governance
     mappings:
       - reference-id: BPB
         identifiers:

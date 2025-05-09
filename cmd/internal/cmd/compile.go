@@ -121,8 +121,8 @@ func addCompile(parentCmd *cobra.Command) {
 			}
 
 			fmt.Printf("\nℹ️  Counts\n")
-			for c := range bline.Categories {
-				fmt.Printf(" OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
+			for _, family := range bline.Catalog.ControlFamilies {
+				fmt.Printf(" OSPS-%s: %d controls\n", bline.ControlFamilyIDs[family.Title], len(family.Controls))
 			}
 			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))
 

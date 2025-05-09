@@ -1,4 +1,4 @@
-category: Build and Release
+title: Build and Release
 description: |
   Build and Release focuses on the processes and
   tools used to compile, package, and distribute the
@@ -16,7 +16,6 @@ controls:
       Reduce the risk of code injection or other security vulnerabilities in the
       project's build and release pipelines by preventing untrusted input from
       accessing privileged resources.
-    family: Build and Release
     mappings:
       - reference-id: CRA
         identifiers:
@@ -79,7 +78,6 @@ controls:
       Ensure that each software asset produced by the project is uniquely
       identified, enabling users to track changes and updates to the project
       over time.
-    family: Build and Release
     mappings:
       - reference-id: BPB
         identifiers:
@@ -142,7 +140,6 @@ controls:
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
-    family: Build and Release
     mappings:
       - reference-id: BPB
         identifiers:
@@ -218,7 +215,6 @@ controls:
       Provide transparency and accountability for changes made to the project's
       software releases, enabling users to understand the modifications and
       improvements included in each release.
-    family: Build and Release
     mappings:
       - reference-id: BPB
         identifiers:
@@ -297,7 +293,6 @@ controls:
       Ensure that the project's build and release pipelines use standardized tools
       and processes to manage dependencies, reducing the risk of compatibility
       issues or security vulnerabilities in the software.
-    family: Build and Release
     mappings:
       - reference-id: BPB
         identifiers:
@@ -361,7 +356,6 @@ controls:
     objective: |
       All released software assets MUST be signed or accounted for in a
       signed manifest including each asset's cryptographic hashes.
-    family: Build and Release
     mappings:
       - reference-id: SSDF
         identifiers:
