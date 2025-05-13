@@ -1,4 +1,4 @@
-# OSPS Baseline checklist
+# OSPS Baseline checklist, version: devel
 
 ## Level 1
 {{ range .Catalog.ControlFamilies }}
