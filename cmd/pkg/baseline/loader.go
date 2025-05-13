@@ -8,7 +8,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"gopkg.in/yaml.v3"
+	"github.com/goccy/go-yaml"
+	"github.com/revanite-io/sci/layer2"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
@@ -29,9 +30,7 @@ func NewLoader() *Loader {
 
 // Load reads the baseline data and returns the representation types
 func (l *Loader) Load() (*types.Baseline, error) {
-	b := &types.Baseline{
-		Categories: make(map[string]types.Category, len(types.Categories)),
-	}
+	b := &types.Baseline{}
 
 	// Load the lexicon:
 	lexicon, err := l.loadLexicon()
@@ -45,15 +44,21 @@ func (l *Loader) Load() (*types.Baseline, error) {
 
 	b.Lexicon = lexicon
 	b.Frameworks = frameworks
+	controlFamilies := []layer2.ControlFamily{}
+	familyIDs := map[string]string{}
 
-	for _, catCode := range types.Categories {
-		cat, err := l.loadCategory(catCode)
+	for _, familyID := range types.ControlFamilies {
+		cf, err := l.loadControlFamily(familyID)
 		if err != nil {
-			return nil, fmt.Errorf("loading category %q: %w", catCode, err)
+			return nil, fmt.Errorf("loading control family %s: %w", familyID, err)
 		}
-		b.Categories[catCode] = *cat
+		familyIDs[cf.Title] = familyID
+		controlFamilies = append(controlFamilies, *cf)
 	}
-
+	b.ControlFamilyIDs = familyIDs
+	b.Catalog = layer2.Layer2{
+		ControlFamilies: controlFamilies,
+	}
 	return b, nil
 }
 
@@ -67,8 +72,7 @@ func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
 
 	var lexicon []types.LexiconEntry
 
-	decoder := yaml.NewDecoder(file)
-	decoder.KnownFields(true)
+	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
 	if err := decoder.Decode(&lexicon); err != nil {
 		return nil, fmt.Errorf("error decoding YAML: %w", err)
 	}
@@ -85,28 +89,26 @@ func (l *Loader) loadFramework() ([]types.FrameworkEntry, error) {
 
 	var frameworks types.Frameworks
 
-	decoder := yaml.NewDecoder(file)
-	decoder.KnownFields(true)
+	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
 	if err := decoder.Decode(&frameworks); err != nil {
 		return nil, fmt.Errorf("error decoding YAML: %w", err)
 	}
 	return frameworks.Frameworks, nil
 }
 
-// loadCategory loads a category definition from its YAML source
-func (l *Loader) loadCategory(catCode string) (*types.Category, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, fmt.Sprintf("OSPS-%s.yaml", catCode)))
+// loadControlFamily loads a ControlFamily definition from its YAML source
+func (l *Loader) loadControlFamily(familyID string) (*layer2.ControlFamily, error) {
+	file, err := os.Open(filepath.Join(l.DataPath, fmt.Sprintf("OSPS-%s.yaml", familyID)))
 	if err != nil {
 		return nil, fmt.Errorf("error opening file: %w", err)
 	}
 	defer file.Close() //nolint:errcheck
 
-	category := &types.Category{}
+	controlFamily := &layer2.ControlFamily{}
 
 	decoder := yaml.NewDecoder(file)
-	decoder.KnownFields(true)
-	if err := decoder.Decode(category); err != nil {
-		return nil, fmt.Errorf("error decoding %s YAML: %w", catCode, err)
+	if err := decoder.Decode(controlFamily); err != nil {
+		return nil, fmt.Errorf("error decoding %s YAML: %w", familyID, err)
 	}
-	return category, nil
+	return controlFamily, nil
 }

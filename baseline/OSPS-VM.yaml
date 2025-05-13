@@ -1,4 +1,4 @@
-category: Vulnerability Management
+title: Vulnerability Management
 description: |
   Vulnerability Management focuses on the
   processes and practices used to identify and
@@ -15,7 +15,6 @@ controls:
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and 
       transparently.
-    family: Vulnerability Management
     mappings:
       - reference-id: BPB
         identifiers:
@@ -107,7 +106,6 @@ controls:
       vulnerabilities in a project. People with vulnerabilities to report should
       have a clear understanding of the process so that they can quickly submit
       the report to the project.
-    family: Vulnerability Management
     mappings:
       - reference-id: BPB
         identifiers:
@@ -162,7 +160,6 @@ controls:
       Security vulnerabilities should not be shared with the public until such
       time the project has been provided time to analyze and prepare 
       remediations to protect users of the project.
-    family: Vulnerability Management
     mappings:
       - reference-id: BPB
         identifiers:
@@ -203,7 +200,6 @@ controls:
     objective: |
       Consumers of the project must be informed about known vulnerabilities
       found within the project.
-    family: Vulnerability Management
     mappings:
       - reference-id: CRA
         identifiers:
@@ -273,7 +269,6 @@ controls:
       is merged as well as before it releases, reducing the risk of compromised
       delivery mechanisms or released software assets that are vulnerable or
       malicious.
-    family: Vulnerability Management
     mappings:
       - reference-id: BPB
         identifiers:
@@ -399,7 +394,6 @@ controls:
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
       insecure software.
-    family: Vulnerability Management
     mappings: 
       - reference-id: BPB
         identifiers:
