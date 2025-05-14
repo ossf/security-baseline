@@ -22,7 +22,6 @@ type Baseline struct {
 	ControlFamilyIDs map[string]string
 	Catalog          layer2.Layer2
 	Lexicon          []LexiconEntry
-	Frameworks       []FrameworkEntry `yaml:"mapping-references"`
 }
 
 type LexiconEntry struct {
@@ -30,15 +29,4 @@ type LexiconEntry struct {
 	Definition string   `yaml:"definition"`
 	Synonyms   []string `yaml:"synonyms"`
 	References []string `yaml:"references"`
-}
-
-type FrameworkEntry struct {
-	ID      string `yaml:"id"`
-	Title   string `yaml:"title"`
-	Version string `yaml:"version"`
-	URL     string `yaml:"url"`
-}
-
-type Frameworks struct {
-	Frameworks []FrameworkEntry `yaml:"mapping-references"`
 }

@@ -18,6 +18,8 @@ PCIDSS
 PSSCRM
 remediations
 SAMM
+SCRM
+SDLC
 Shostack
 sigstore
 Sigstore

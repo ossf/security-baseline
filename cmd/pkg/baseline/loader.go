@@ -37,13 +37,12 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error reading lexicon: %w", err)
 	}
-	frameworks, err := l.loadFramework()
+	frameworks, err := l.loadFrameworks()
 	if err != nil {
 		return nil, fmt.Errorf("error reading frameworks: %w", err)
 	}
 
 	b.Lexicon = lexicon
-	b.Frameworks = frameworks
 	controlFamilies := []layer2.ControlFamily{}
 	familyIDs := map[string]string{}
 
@@ -58,6 +57,9 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	b.ControlFamilyIDs = familyIDs
 	b.Catalog = layer2.Layer2{
 		ControlFamilies: controlFamilies,
+		Metadata: &layer2.Metadata{
+			MappingReferences: frameworks,
+		},
 	}
 	return b, nil
 }
@@ -79,21 +81,20 @@ func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
 	return lexicon, nil
 }
 
-// loadLexicon
-func (l *Loader) loadFramework() ([]types.FrameworkEntry, error) {
+func (l *Loader) loadFrameworks() ([]layer2.MappingReference, error) {
 	file, err := os.Open(filepath.Join(l.DataPath, FrameworksFilename))
 	if err != nil {
 		return nil, fmt.Errorf("error opening file: %w", err)
 	}
 	defer file.Close() //nolint:errcheck
 
-	var frameworks types.Frameworks
+	var metadata layer2.Metadata
 
 	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
-	if err := decoder.Decode(&frameworks); err != nil {
+	if err := decoder.Decode(&metadata); err != nil {
 		return nil, fmt.Errorf("error decoding YAML: %w", err)
 	}
-	return frameworks.Frameworks, nil
+	return metadata.MappingReferences, nil
 }
 
 // loadControlFamily loads a ControlFamily definition from its YAML source

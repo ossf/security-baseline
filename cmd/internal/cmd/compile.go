@@ -124,6 +124,7 @@ func addCompile(parentCmd *cobra.Command) {
 			for _, family := range bline.Catalog.ControlFamilies {
 				fmt.Printf(" OSPS-%s: %d controls\n", bline.ControlFamilyIDs[family.Title], len(family.Controls))
 			}
+			fmt.Printf("\n+ %d mapped frameworks\n", len(bline.Catalog.Metadata.MappingReferences))
 			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))
 
 			// Print a checklist if they asked for it
