@@ -16,7 +16,7 @@ controls:
       Reduce the risk of code injection or other security vulnerabilities in the
       project's build and release pipelines by preventing untrusted input from
       accessing privileged resources.
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2f
@@ -38,15 +38,15 @@ controls:
         identifiers:
           - Choose an appropriate build platform
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P2.3
           - P3.2
           - P3.5
           - E2.4
           - E2.5
-          - D2.2       
+          - D2.2
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.1
           - 6.4.1
     assessment-requirements:
@@ -78,7 +78,7 @@ controls:
       Ensure that each software asset produced by the project is uniquely
       identified, enabling users to track changes and updates to the project
       over time.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - CC-B-5
@@ -102,13 +102,13 @@ controls:
           - Follow a consistent build process
           - Provenance generation- Exists, Authentic
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G1.4
           - E1.2
           - E2.1
-          - E2.6   
+          - E2.6
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.4.3
     assessment-requirements:
       - id: OSPS-BR-02.01
@@ -140,7 +140,7 @@ controls:
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-11
@@ -167,13 +167,13 @@ controls:
         identifiers:
           - Choose an appropriate build platform
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - E1.1
           - E2.2
           - E2.4
-          - E2.5   
+          - E2.5
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.1
           - 2.2.7
           - 4.2.1
@@ -215,7 +215,7 @@ controls:
       Provide transparency and accountability for changes made to the project's
       software releases, enabling users to understand the modifications and
       improvements included in each release.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - CC-B-8
@@ -254,7 +254,7 @@ controls:
           - Follow a consistent build process
           - Build platform - Isolation strength - isolated
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G1.4
           - E2.1
           - E2.4
@@ -262,7 +262,7 @@ controls:
           - E3.1
           - E3.6
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.2.1
           - 6.4.1
           - 6.5.1
@@ -293,7 +293,7 @@ controls:
       Ensure that the project's build and release pipelines use standardized tools
       and processes to manage dependencies, reducing the risk of compatibility
       issues or security vulnerabilities in the software.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - Q-B-2
@@ -322,7 +322,7 @@ controls:
         identifiers:
           - Isolation strength - isolated
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P3.1
           - P3.5
           - E2.2
@@ -330,10 +330,10 @@ controls:
           - E2.4
           - E2.5
       - reference-id: SAMM
-        identifiers: 
+        identifiers:
           - Implementation -Secure Build -Build Process Lvl2
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.4.3
     assessment-requirements:
       - id: OSPS-BR-05.01
@@ -356,7 +356,7 @@ controls:
     objective: |
       All released software assets MUST be signed or accounted for in a
       signed manifest including each asset's cryptographic hashes.
-    mappings:
+    guideline-mappings:
       - reference-id: SSDF
         identifiers:
           - PO.5.2
@@ -370,7 +370,7 @@ controls:
         identifiers:
           - Distribute provenance - Exists
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P1.2
           - P3.2
           - P3.3
@@ -378,10 +378,10 @@ controls:
           - E2.2
           - E2.6
       - reference-id: SAMM
-        identifiers: 
+        identifiers:
           - Implementation -Secure Deployment -Deployment Process Lvl3
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.1
           - 2.2.7
           - 3.5.1

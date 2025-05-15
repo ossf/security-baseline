@@ -106,6 +106,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 **Recommendation:** {{ .Recommendation }}
 
+**Control applies to:**
 {{ range .Applicability }}- {{ . }}
 {{ end }}
 
@@ -114,8 +115,8 @@ For more information on the project and to make contributions, visit the [GitHub
 #### External Framework Mappings
 {{ if  .GuidelineMappings }}
   {{ range .GuidelineMappings }}
-  - **{{ .ReferenceID | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
-  {{ end }}
+  - **{{ .ReferenceId | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
+  {{- end }}
 {{ end }}
 
 ---
