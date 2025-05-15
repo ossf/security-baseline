@@ -13,9 +13,9 @@ controls:
         vulnerability disclosure, with a clear timeframe for response.
     objective: |
       Establish a process for reporting and addressing vulnerabilities in the
-      project, ensuring that security issues are handled promptly and 
+      project, ensuring that security issues are handled promptly and
       transparently.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - R-B-6
@@ -50,17 +50,17 @@ controls:
           - 887-750
       - reference-id: ScCrd
         identifiers:
-          - Security-Policy          
+          - Security-Policy
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - D1.1
           - D1.2
           - D1.3
           - D1.5
       - reference-id: SAMM
-        identifiers: 
-          - Governance -Create and Promote Lvl2  
-          - Governance -Policy & Compliance -Policy & Standards Lvl1  
+        identifiers:
+          - Governance -Create and Promote Lvl2
+          - Governance -Policy & Compliance -Policy & Standards Lvl1
           - Implementation -Defect Management -Defect Tracking Lvl1
           - Implementation -Defect Management -Defect Tracking Lvl2
           - Implementation -Defect Management -Defect Tracking Lvl3
@@ -68,7 +68,7 @@ controls:
           - Operations -Incident Management -Incident Response Lvl2
           - Operations -Incident Management -Incident Response Lvl3
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.1.1
           - 3.1.1
           - 4.1.1
@@ -106,7 +106,7 @@ controls:
       vulnerabilities in a project. People with vulnerabilities to report should
       have a clear understanding of the process so that they can quickly submit
       the report to the project.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-8
@@ -132,12 +132,12 @@ controls:
           - 464-513
       - reference-id: ScCrd
         identifiers:
-          - Security-Policy                  
+          - Security-Policy
       - reference-id: SAMM
-        identifiers: 
-          - Governance -Policy&Compliance -Policy&Standards Lvl2 
+        identifiers:
+          - Governance -Policy&Compliance -Policy&Standards Lvl2
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.3.3
           - 12.1.1
           - 12.10.2
@@ -158,9 +158,9 @@ controls:
       vulnerabilities privately to the security contacts within the project.
     objective: |
       Security vulnerabilities should not be shared with the public until such
-      time the project has been provided time to analyze and prepare 
+      time the project has been provided time to analyze and prepare
       remediations to protect users of the project.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - R-B-7
@@ -172,10 +172,10 @@ controls:
         identifiers:
           - 308-514
       - reference-id: SAMM
-        identifiers: 
-          - Operations -Incident Management -Incident Response Lvl3 
+        identifiers:
+          - Operations -Incident Management -Incident Response Lvl3
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.3.1
           - 6.3.3
           - 12.10.2
@@ -200,7 +200,7 @@ controls:
     objective: |
       Consumers of the project must be informed about known vulnerabilities
       found within the project.
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2a
@@ -220,11 +220,11 @@ controls:
         identifiers:
           - 4.1.5
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.2
           - D1.1
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.2.3
           - 6.3.1
           - 6.3.2
@@ -253,7 +253,7 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Establish a VEX feed communicating the exploitability status of 
+          Establish a VEX feed communicating the exploitability status of
           known vulnerabilities, including assessment details or any
           mitigations in place preventing vulnerable code from being
           executed.
@@ -269,7 +269,7 @@ controls:
       is merged as well as before it releases, reducing the risk of compromised
       delivery mechanisms or released software assets that are vulnerable or
       malicious.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-8
@@ -325,10 +325,10 @@ controls:
           - 088-377
       - reference-id: ScCrd
         identifiers:
-          - Security-Policy  
+          - Security-Policy
           - Vulnerabilities
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G5.4
           - P4.1
           - P4.2
@@ -336,13 +336,13 @@ controls:
           - P4.4
           - P4.5
       - reference-id: SAMM
-        identifiers: 
+        identifiers:
           - Implementation -Secure Build-Build Process Lvl3
           - Implementation -Software Dependencies Lvl3
           - Verification -Security Testing -Scalable Baseline Lvl1
-          - Verification -Security Testing -Scalable Baseline Lvl3 
+          - Verification -Security Testing -Scalable Baseline Lvl3
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.2.3
           - 6.3.1
           - 6.3.2
@@ -394,7 +394,7 @@ controls:
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
       insecure software.
-    mappings: 
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-8
@@ -450,11 +450,11 @@ controls:
           - 088-377
       - reference-id: ScCrd
         identifiers:
-          - Security-Policy  
+          - Security-Policy
           - Vulnerabilities
           - SAST
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G5.4
           - P4.1
           - P4.2
@@ -462,13 +462,13 @@ controls:
           - P4.4
           - P4.5
       - reference-id: SAMM
-        identifiers: 
+        identifiers:
           - Implementation -Secure Build-Build Process Lvl3
           - Implementation -Software Dependencies Lvl3
           - Verification -Security Testing -Scalable Baseline Lvl1
-          - Verification -Security Testing -Scalable Baseline Lvl3 
+          - Verification -Security Testing -Scalable Baseline Lvl3
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 6.2.3
           - 6.3.1
           - 6.3.2

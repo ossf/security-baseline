@@ -14,7 +14,7 @@ controls:
       the interactions and components of the system to help contributors and
       security reviewers understand the internal logic of the released software
       assets.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-1
@@ -40,16 +40,16 @@ controls:
           - 036-275
           - 162-655
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G5.1
           - P1.1
           - E3.4
           - E3.7
       - reference-id: SAMM
-        identifiers: 
+        identifiers:
           - Operations -Operational Management -Data Protection Lvl2
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.1
           - 2.2.3
           - 2.2.4
@@ -89,7 +89,7 @@ controls:
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
       to use the software effectively.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-10
@@ -115,11 +115,11 @@ controls:
           - 072-713
           - 820-878
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - E3.4
-          - E3.7  
+          - E3.7
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.1
           - 2.2.3
           - 2.2.4
@@ -150,7 +150,7 @@ controls:
       Provide project maintainers an understanding of how the software can be
       misused or broken allows them to plan mitigations to close off the potential
       of those threats from occurring.
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-8
@@ -180,18 +180,18 @@ controls:
           - 154-031
           - 888-770
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G4.3
           - G5.2
           - P2.1
       - reference-id: SAMM
-        identifiers: 
-          - Governance -Create and Promote Lvl1  
-          - Design -Threat Assessment -Application Risk Profile Lvl1  
-          - Design -Threat Assessment -Threat Modeling Lvl1 
+        identifiers:
+          - Governance -Create and Promote Lvl1
+          - Design -Threat Assessment -Application Risk Profile Lvl1
+          - Design -Threat Assessment -Threat Modeling Lvl1
           - Verification -Architecture Assessment -Architecture Mitigation Lvl2
       - reference-id: PCIDSS
-        identifiers: 
+        identifiers:
           - 2.2.4
           - 2.2.5
           - 2.2.6
@@ -227,7 +227,7 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Threat modeling is an activity where the project looks at the 
+          Threat modeling is an activity where the project looks at the
           codebase, associated processes and infrastructure, interfaces, key
           components and "thinks like a hacker" and brainstorms how the system
           be be broken or compromised. Each identified threat is listed out so

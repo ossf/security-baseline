@@ -107,7 +107,7 @@ func (l *Loader) loadControlFamily(familyID string) (*layer2.ControlFamily, erro
 
 	controlFamily := &layer2.ControlFamily{}
 
-	decoder := yaml.NewDecoder(file)
+	decoder := yaml.NewDecoder(file, yaml.Strict())
 	if err := decoder.Decode(controlFamily); err != nil {
 		return nil, fmt.Errorf("error decoding %s YAML: %w", familyID, err)
 	}
