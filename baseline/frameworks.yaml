@@ -3,43 +3,54 @@ mapping-references:
     title: OpenSSF Best Practices Badge
     version: 2024
     url: https://github.com/coreinfrastructure/best-practices-badge/blob/main/criteria/criteria.yml
+    description: "The Open Source Security Foundation (OpenSSF) Best Practices Badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices. Projects can voluntarily self-certify, at no cost, by using this web application to explain how they follow each best practice. The OpenSSF Best Practices Badge is inspired by the many badges available to projects on GitHub. Consumers of the badge can quickly assess which FLOSS projects are following best practices and, as a result, are more likely to produce higher-quality secure software."
   - id: CSF
     title: NIST Cybersecurity Framework
     version: 2.0
     url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+    description: "The NIST Cybersecurity Framework (CSF) 2.0 provides guidance to industry, government agencies, and other organizations to manage cybersecurity risks. It offers a taxonomy of high level cybersecurity outcomes that can be used by any organization — regardless of its size, sector, or maturity — to better understand, assess, prioritize, and communicate its cybersecurity efforts. The CSF does not prescribe how outcomes should be achieved. Rather, it links to online resources that provide additional guidance on practices and controls that could be used to achieve those outcomes."
   - id: CRA
     title: Cyber Resilience Act
     version: 20.11.2024
     url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#tit_1
+    description: "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements and amending Regulations (EU) No 168/2013 and (EU) 2019/1020 and Directive (EU) 2020/1828 (Cyber Resilience Act) (Text with EEA relevance)"
   - id: SSDF
-    title: Software Security Development Framework
+    title: Secure Software Development Framework
     version: 1.1
     url: https://csrc.nist.gov/pubs/sp/800/218/final
+    description: "The Secure Software Development Framework (SSDF) is a set of fundamental, sound, and secure software development practices based on established secure software development practice documents from organizations such as BSA, OWASP, and SAFECode. Few software development life cycle (SDLC) models explicitly address software security in detail, so practices like those in the SSDF need to be added to and integrated with each SDLC implementation. Following the SSDF practices should help software producers reduce the number of vulnerabilities in released software, reduce the potential impact of the exploitation of undetected or unaddressed vulnerabilities, and address the root causes of vulnerabilities to prevent recurrences. Also, because the SSDF provides a common language for describing secure software development practices, software producers and acquirers can use it to foster their communications for procurement processes and other management activities."
   - id: OC
     title: ISO/IEC 18974
     version: 1.0 - 2023-12
     url: https://openchainproject.org/security-assurance
+    description: "ISO/IEC 18974 helps organizations check open source for known security vulnerability issues like CVEs, GitHub dependency alerts or package manager alerts. ISO/IEC 18974 identifies: The key places to have security processes, How to assign roles and responsibilities, And how to ensure sustainability of the processes. ISO/IEC 18974 is lightweight, easy to read and is supported by our global community with free reference material and conformance resources."
   - id: OCRE
     title: Open Cybersecurity Reference Architecture
     version: 2024
     url: https://github.com/OWASP/OpenCRE
+    description: "OpenCRE stands for Open Common Requirement enumeration. It is an interactive content linking platform for uniting security standards and guidelines. It offers easy and robust access to relevant information when designing, developing, testing and procuring secure software."
   - id: SLSA
     title: Supply Chain Levels for Software Artifacts
     version: 1.0
     url: https://github.com/slsa-framework/slsa
+    description: "SLSA (pronounced \"salsa\") is a security framework from source to service, giving anyone working with software a common language for increasing levels of software security and supply chain integrity. It’s how you get from safe enough to being as resilient as possible, at any link in the chain."
   - id: PSSCRM
     title: Proactive Software Supply Chain Risk Management Framework
     version: 1.0
     url:  https://arxiv.org/pdf/2404.12300
+    description: "The Proactive-Software Supply Chain Risk Management (P-SSCRM) Framework is designed to help you understand and plan a secure software supply chain risk management initiative. P-SSCRM was created through a process of understanding and analyzing real-world data from nine industry-leading software supply chain risk management initiatives as well as through the analysis and unification of ten government and industry documents, frameworks, and standards. Although individual methodologies and standards differ, many initiatives and standards share common ground. P-SSCRM describes this common ground and presents a model for understanding, quantifying, and developing a secure software supply chain risk management program and determining where your organization’s existing efforts stand when contrasted with other real-world software supply chain risk management initiatives."
   - id: SAMM
     title: OWASP Software Assurance Maturity Model 
     version: 2.0
     url:  https://owaspsamm.org/model/
+    description: "The mission of OWASP Software Assurance Maturity Model (SAMM) is to be the prime maturity model for software assurance that provides an effective and measurable way for all types of organizations to analyze and improve their software security posture. OWASP SAMM supports the complete software lifecycle, including development and acquisition, and is technology and process agnostic. It is intentionally built to be evolutive and risk-driven in nature."
   - id: PCIDSS
     title: Payment Card Industry Data Security Standard
     version: 4.0.1
-    url:   https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf   
+    url: https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
+    description: "PCI Security Standards are technical and operational requirements set by the PCI Security Standards Council (PCI SSC) to protect cardholder data. The standards apply to all entities that store, process or transmit cardholder data – with requirements for software developers and manufacturers of applications and devices used in those transactions. The Council is responsible for managing the security standards, while compliance with the PCI set of standards is enforced by the founding members of the Council: American Express, Discover Financial Services, JCB, MasterCard and Visa Inc. The PCI Data Security Standard (PCI DSS) applies to all entities that store, process, and/or transmit cardholder data. It covers technical and operational system components included in or connected to cardholder data. If you accept or process payment cards, PCI DSS applies to you."
   - id: 800-161
     title: NIST Special Publication 800-161 - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations
     version: r1-upd1
     url:  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
+    description: "This publication provides guidance to organizations on identifying, assessing, and mitigating cybersecurity risks throughout the supply chain at all levels of their organizations. The publication integrates cybersecurity supply chain risk management (C-SCRM) into risk management activities by applying a multilevel, C-SCRM-specific approach, including guidance on the development of C-SCRM strategy implementation plans, C-SCRM policies, C-SCRM plans, and risk assessments for products and services."

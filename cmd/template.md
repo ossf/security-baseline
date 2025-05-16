@@ -128,7 +128,10 @@ For more information on the project and to make contributions, visit the [GitHub
 
 Controls within this document may map to the following external frameworks:
 
-{{ range .Frameworks }}- [{{ .Title }} ({{ .ID }}): {{ .Version }}]({{ .URL }})
+| ID | Title | Version | Description |
+|----|-------|---------|-------------|
+{{ range .Catalog.Metadata.MappingReferences -}}
+| {{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} |
 {{ end }}
 
 ---
