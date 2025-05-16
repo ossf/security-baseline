@@ -82,6 +82,11 @@ controls:
           - 11.2.1
           - 12.1.1
           - 12.1.3
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.2
+          - 3.4
+          - 3.5
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -141,6 +146,9 @@ controls:
           - 6.3.3
           - 12.1.1
           - 12.10.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.2
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -179,6 +187,9 @@ controls:
           - 6.3.1
           - 6.3.3
           - 12.10.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.2
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -230,6 +241,11 @@ controls:
           - 6.3.2
           - 6.3.3
           - 11.3.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.4
+          - 3.5
+          - 4.3
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -348,6 +364,10 @@ controls:
           - 6.3.2
           - 6.4.1
           - 6.4.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.2
+          - 3.3
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -475,6 +495,10 @@ controls:
           - 6.4.1
           - 6.4.2
           - 6.5.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.3
+          - 1.4
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |

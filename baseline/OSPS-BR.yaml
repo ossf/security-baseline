@@ -110,6 +110,9 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 6.4.3
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.1
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -180,6 +183,9 @@ controls:
           - 4.2.2
           - 6.4.1
           - 8.3.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.1
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -268,6 +274,10 @@ controls:
           - 6.5.1
           - 6.5.2
           - 10.2.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.1
+          - 3.5
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -335,6 +345,10 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 6.4.3
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.1
+          - 1.2
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -389,6 +403,9 @@ controls:
           - 4.2.2
           - 6.4.1
           - 8.3.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.1
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |

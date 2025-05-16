@@ -54,3 +54,8 @@ mapping-references:
     version: r1-upd1
     url:  https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
     description: "This publication provides guidance to organizations on identifying, assessing, and mitigating cybersecurity risks throughout the supply chain at all levels of their organizations. The publication integrates cybersecurity supply chain risk management (C-SCRM) into risk management activities by applying a multilevel, C-SCRM-specific approach, including guidance on the development of C-SCRM strategy implementation plans, C-SCRM policies, C-SCRM plans, and risk assessments for products and services."
+  - id: UKSSCOP
+    title: United Kingdom National Cyber Security Centre Software Security Code of Practice
+    version: 2025-05-07
+    url: https://www.ncsc.gov.uk/guidance/software-security-code-of-practice-assurance-principles-claims
+    description: "The Software Code of Practice has been created by DSIT and the National Cyber Security Centre (NCSC), the UK’s technical authority for cyber security, and is co-sealed by the Canadian Centre for Cyber Security (CCCS). The Code reflects the government’s ongoing focus on codifying minimum standards for technology providers to reduce cyber risk. It is aimed at professionals who are responsible for overseeing the development of ‘commodity’ software, including technical, compliance, and risk experts. For those organisations that require a higher level of assurance in the resilience of their connected products and technology, consider using the NCSC’s Cyber Resilience Testing scheme."
