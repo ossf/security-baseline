@@ -1,4 +1,4 @@
-category: Access Control
+title: Access Control
 description: |
   Access Control focuses on the mechanisms and
   policies that control access to the project's version
@@ -10,14 +10,13 @@ controls:
   - id: OSPS-AC-01
     title: |
       The project's version control system MUST require multi-factor
-      authentication for collaborators modifying the project repository
+      authentication for users modifying the project repository
       settings or accessing sensitive data.
     objective: |
       Reduce the risk of account compromise or insider threats by requiring
       multi-factor authentication for collaborators modifying the project
       repository settings or accessing sensitive data.
-    family: Access Control
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - CC-G-1
@@ -44,13 +43,24 @@ controls:
           - 152-725
           - 201-246
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.6
           - P3.3
           - E1.2
           - E1.3
           - E1.4
           - E3.1
+      - reference-id: SAMM
+        identifiers:
+          - Operations -Environment Management -Configuration Hardening Lvl1
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+          - 8.2.1
+          - 8.3.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 2.1
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -74,8 +84,7 @@ controls:
     objective: |
       Reduce the risk of unauthorized access to the project's repository by
       limiting the permissions granted to new collaborators.
-    family: Access Control
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2f
@@ -97,10 +106,16 @@ controls:
           - 368-633
           - 152-725
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P2.3
           - E1.2
           - E3.3
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 2.1
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -124,8 +139,7 @@ controls:
     objective: |
       Reduce the risk of accidental changes or deletion of the primary branch
       of the project's repository by preventing unintentional modification.
-    family: Access Control
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2f
@@ -145,14 +159,21 @@ controls:
           - 152-725
       - reference-id: ScCrd
         identifiers:
-          - Branch-Protection 
+          - Branch-Protection
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P3.2
           - P3.5
           - E1.5
           - E3.1
-        assessment-requirements:
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 2.1
+          - 2.2
+    assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
           When a direct commit is attempted on the project's primary branch,
@@ -188,8 +209,7 @@ controls:
       Reduce the risk of unauthorized access to the project's build and release
       processes by limiting the permissions granted to steps within the CI/CD
       pipelines.
-    family: Access Control
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2d
@@ -217,8 +237,19 @@ controls:
           - Producer - Choose an appropriate build platform
           - Build platform - Isolation strength - Isolated
       - reference-id: PSSCRM
-        identifiers: 
-          - P3.2   
+        identifiers:
+          - P3.2
+      - reference-id: SAMM
+        identifiers:
+          - Operations -Environment Management -Configuration Hardening Lvl1
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+          - 8.2.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 2.1
+          - 2.2
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

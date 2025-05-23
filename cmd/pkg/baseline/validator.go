@@ -15,32 +15,24 @@ func NewValidator() *Validator {
 	return &Validator{}
 }
 
-type Validator struct {
-}
+type Validator struct{}
 
 // Check verifies the data parsed for consistency and completeness
 func (v *Validator) Check(b *types.Baseline) error {
 	var entryIDs []string
-	var errs = []error{}
-	for _, category := range b.Categories {
+	errs := []error{}
+	for _, category := range b.Catalog.ControlFamilies {
 		for _, entry := range category.Controls {
-			if slices.Contains(entryIDs, entry.ID) {
-				errs = append(errs, fmt.Errorf("duplicate ID for 'control' for %s", entry.ID))
+			if slices.Contains(entryIDs, entry.Id) {
+				errs = append(errs, fmt.Errorf("duplicate ID for 'control' for %s", entry.Id))
 			}
-			if entry.ID == "" {
-				errs = append(errs, fmt.Errorf("missing ID for 'control' %s", entry.ID))
+			if entry.Id == "" {
+				errs = append(errs, fmt.Errorf("missing ID for 'control' %s", entry.Id))
 			}
 			if entry.Title == "" {
-				errs = append(errs, fmt.Errorf("missing 'control' text for %s", entry.ID))
+				errs = append(errs, fmt.Errorf("missing 'control' text for %s", entry.Id))
 			}
-			// For after all fields are populated:
-			// if entry.Rationale == "" {
-			//   errs = append(errs, fmt.Errorf("missing 'rationale' for %s", entry.ID))
-			// }
-			// if entry.Details == "" {
-			//   errs = append(errs, fmt.Errorf("missing 'details' for %s", entry.ID))
-			// }
-			entryIDs = append(entryIDs, entry.ID)
+			entryIDs = append(entryIDs, entry.Id)
 		}
 	}
 

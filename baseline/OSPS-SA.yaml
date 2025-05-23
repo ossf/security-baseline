@@ -1,4 +1,4 @@
-category: Security Assessment
+title: Security Assessment
 description: |
   Security Assessment encourages practices that
   help ensure that the project is well positioned
@@ -14,8 +14,7 @@ controls:
       the interactions and components of the system to help contributors and
       security reviewers understand the internal logic of the released software
       assets.
-    family: Security Assessment
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-1
@@ -41,12 +40,35 @@ controls:
           - 036-275
           - 162-655
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G5.1
           - P1.1
           - E3.4
           - E3.7
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Operations -Operational Management -Data Protection Lvl2
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+          - 2.2.3
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 12.3.1
+          - 12.5.3
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.4
+    assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -70,8 +92,7 @@ controls:
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
       to use the software effectively.
-    family: Security Assessment
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-10
@@ -97,9 +118,19 @@ controls:
           - 072-713
           - 820-878
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - E3.4
-          - E3.7  
+          - E3.7
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.1
+          - 2.2.3
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 6.2.1
+          - 12.3.1
+          - 12.8.1
     assessment-requirements:
       - id: OSPS-SA-02.01
         text: |
@@ -122,8 +153,7 @@ controls:
       Provide project maintainers an understanding of how the software can be
       misused or broken allows them to plan mitigations to close off the potential
       of those threats from occurring.
-    family: Security Assessment
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-8
@@ -153,11 +183,32 @@ controls:
           - 154-031
           - 888-770
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G4.3
           - G5.2
           - P2.1
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Governance -Create and Promote Lvl1
+          - Design -Threat Assessment -Application Risk Profile Lvl1
+          - Design -Threat Assessment -Threat Modeling Lvl1
+          - Verification -Architecture Assessment -Architecture Mitigation Lvl2
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.2.4
+          - 2.2.5
+          - 2.2.6
+          - 6.2.1
+          - 6.2.3.1
+          - 6.3.2
+          - 6.4.2
+          - 11.3.1
+          - 12.3.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.4
+          - 3.3
+    assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
           When the project has made a release, the project MUST perform a
@@ -183,7 +234,7 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Threat modeling is an activity where the project looks at the 
+          Threat modeling is an activity where the project looks at the
           codebase, associated processes and infrastructure, interfaces, key
           components and "thinks like a hacker" and brainstorms how the system
           be be broken or compromised. Each identified threat is listed out so

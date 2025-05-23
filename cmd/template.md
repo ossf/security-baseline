@@ -7,7 +7,7 @@ Not for production use.
 
 <!-- A button for returning to the top of the page -->
 <button onclick="toTop()" id="topButton" title="Go to top"
-style="display: none; position: fixed; bottom: 20px; right: 30px; border: none; background-color: CornflowerBlue; color: white; cursor: pointer; padding: 10px; border-radius: 10px; font-size: 18px;">to top</button> 
+style="display: none; position: fixed; bottom: 20px; right: 30px; border: none; background-color: CornflowerBlue; color: white; cursor: pointer; padding: 10px; border-radius: 10px; font-size: 18px;">to top</button>
 
 <script>
 let topButton = document.getElementById("topButton");
@@ -36,7 +36,6 @@ The Open Source Project Security (OSPS) Baseline is a set of security criteria t
 The controls are organized by maturity level and category.
 In the detailed subsections you will find the control, rationale, and details notes.
 
-
 Where possible, we have added control mappings to external frameworks.
 These are not guaranteed to be 100% matches, but instead serve as references
 when working to meet the corresponding controls.
@@ -52,69 +51,72 @@ For more information on the project and to make contributions, visit the [GitHub
 * [Level 3](#level-3): for any code project that has a large number of consistent users
 
 ### Level 1
-{{ range .Categories }}
+{{ range .Catalog.ControlFamilies }}
 {{- range .Controls }}
-{{- range .Requirements }}
+{{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 1 }}
-**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+**[{{ $req.Id }}]({{ $req.Id | asLink }})**: {{ $req.Text | addLinks }}
 {{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
 ### Level 2
-{{ range .Categories }}
+{{ range .Catalog.ControlFamilies }}
 {{- range .Controls }}
-{{- range .Requirements }}
+{{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 2 }}
-**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+**[{{ $req.Id }}]({{ $req.Id | asLink }})**: {{ $req.Text | addLinks }}
 {{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
 ### Level 3
-{{ range .Categories }}
+{{ range .Catalog.ControlFamilies }}
 {{- range .Controls }}
-{{- range .Requirements }}
+{{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 3 }}
-**[{{ $req.ID }}]({{ $req.ID | asLink }})**: {{ $req.Text | addLinks }}
+**[{{ $req.Id }}]({{ $req.Id | asLink }})**: {{ $req.Text | addLinks }}
 {{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
-{{ range .Categories }}
+{{ range .Catalog.ControlFamilies }}
 
-## {{ .CategoryName }}
+## {{ .Title }}
 
 {{ .Description }}
 
 {{ range .Controls }}
 
-### {{ .ID }} - {{ .Title | addLinks | collapseNewlines }}
+### {{ .Id }} - {{ .Title | addLinks | collapseNewlines }}
 
 {{ .Objective }}
 
-{{ range .Requirements }}
+{{ range .AssessmentRequirements }}
 
-#### {{ .ID }}
+#### {{ .Id }}
 
 **Requirement:** {{ .Text | addLinks | collapseNewlines }}
 
 **Recommendation:** {{ .Recommendation }}
 
+**Control applies to:**
 {{ range .Applicability }}- {{ . }}
 {{ end }}
 
 {{ end }}
 
 #### External Framework Mappings
-{{ range .Mappings }}
-  - **{{ .ReferenceID | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
+{{ if  .GuidelineMappings }}
+  {{ range .GuidelineMappings }}
+  - **{{ .ReferenceId | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
+  {{- end }}
 {{ end }}
 
 ---
@@ -126,7 +128,10 @@ For more information on the project and to make contributions, visit the [GitHub
 
 Controls within this document may map to the following external frameworks:
 
-{{ range .Frameworks }}- [{{ .Title }} ({{ .ID }}): {{ .Version }}]({{ .URL }})
+| ID | Title | Version | Description |
+|----|-------|---------|-------------|
+{{ range .Catalog.Metadata.MappingReferences -}}
+| {{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} |
 {{ end }}
 
 ---

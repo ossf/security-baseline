@@ -1,0 +1,182 @@
+# SPDX-FileCopyrightText: Copyright 2025 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+version: "2"
+run:
+  concurrency: 6
+  timeout: 5m
+issues:
+  # Maximum issues count per one linter. Set to 0 to disable. Default is 50.
+  max-issues-per-linter: 0
+
+  # Maximum count of issues with the same text. Set to 0 to disable. Default is 3.
+  max-same-issues: 0
+formatters:
+  # Enable specific formatter.
+  # Default: [] (uses standard Go formatting)
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+    # - golines
+  settings: 
+    gci:
+      no-inline-comments: false
+      no-prefix-comments: true
+      sections:
+        - standard
+        - default
+        - prefix(github.com/ossf/security-baseline)
+linters:
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - canonicalheader
+    - containedctx
+    - contextcheck
+    - copyloopvar
+    - decorder
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - errchkjson
+    - errname
+    - errorlint
+    - exhaustive
+    - exptostd
+    - fatcontext
+    - forcetypeassert
+    - ginkgolinter
+    - gocheckcompilerdirectives
+    - gochecksumtype
+    - goconst
+    - gocritic
+    - gocyclo
+    # - godot
+    - godox
+    - goheader
+    - gomoddirectives
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - gosmopolitan
+    - govet
+    - grouper
+    - iface
+    - importas
+    - ineffassign
+    - intrange
+    - loggercheck
+    - makezero
+    - mirror
+    - misspell
+    - musttag
+    - nakedret
+    - nilerr
+    - nilnesserr
+    # - nlreturn
+    - noctx
+    - nolintlint
+    - nosprintfhostport
+    # - perfsprint
+    - prealloc
+    - predeclared
+    - promlinter
+    # - protogetter
+    - reassign
+    - recvcheck
+    # - revive
+    - rowserrcheck
+    - sloglint
+    - spancheck
+    - sqlclosecheck
+    - staticcheck
+    - tagalign
+    - testableexamples
+    - testifylint
+    - tparallel
+    - unconvert
+    - unparam
+    - unused
+    - usestdlibvars
+    - usetesting
+    - wastedassign
+    - whitespace
+    # - wsl
+    - zerologlint
+
+  settings:
+    gocyclo:
+      min-complexity: 35
+    godox:
+      keywords:
+        - BUG
+        - FIXME
+        - HACK
+    gosmopolitan:
+      # Allow and ignore `time.Local` usages.
+      #
+      # Default: false
+      allow-time-local: true
+    perfsprint:
+      integer-format: false
+    errcheck:
+      check-type-assertions: true
+      check-blank: true
+    gocritic:
+      enabled-checks:
+        # Diagnostic
+        - commentedOutCode
+        - nilValReturn
+        - sloppyReassign
+        - weakCond
+        - octalLiteral
+
+        # Performance
+        - appendCombine
+        - equalFold
+        - hugeParam
+        - indexAlloc
+        - rangeExprCopy
+        - rangeValCopy
+
+        # Style
+        - boolExprSimplify
+        - commentedOutImport
+        - docStub
+        - emptyFallthrough
+        - emptyStringTest
+        - hexLiteral
+        - methodExprCall
+        - stringXbytes
+        - typeAssertChain
+        - unlabelStmt
+        - yodaStyleExpr
+
+        # Opinionated
+        - builtinShadow
+        - importShadow
+        - initClause
+        - nestingReduce
+        - paramTypeCombine
+        - ptrToRefParam
+        - typeUnparen
+        - unnamedResult
+        - unnecessaryBlock
+    gosec:
+      excludes:
+        - G304
+    nolintlint:
+      # Enable to ensure that nolint directives are all used. Default is true.
+      allow-unused: false
+      # Exclude following linters from requiring an explanation.  Default is [].
+      allow-no-explanation: []
+      # Enable to require an explanation of nonzero length after each nolint directive. Default is false.
+      # TODO(lint): Enforce explanations for `nolint` directives
+      require-explanation: false
+      # Enable to require nolint directives to mention the specific linter being suppressed. Default is false.
+      require-specific: true

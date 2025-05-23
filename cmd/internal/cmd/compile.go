@@ -8,8 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ossf/security-baseline/pkg/baseline"
 	"github.com/spf13/cobra"
+
+	"github.com/ossf/security-baseline/pkg/baseline"
 )
 
 type compileOptions struct {
@@ -18,7 +19,6 @@ type compileOptions struct {
 	baselinePath          string
 	checklistTemplatePath string
 	templatePath          string
-	checklist             bool
 	validate              bool
 }
 
@@ -34,7 +34,7 @@ func (o *compileOptions) Validate() error {
 
 func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
-		&o.baselinePath, "baseline", "b", "../baseline", "path to directory containing the baseline YAML data",
+		&o.baselinePath, "baseline", "b", defaultBaselinePath, "path to directory containing the baseline YAML data",
 	)
 
 	cmd.PersistentFlags().StringVarP(
@@ -121,9 +121,10 @@ func addCompile(parentCmd *cobra.Command) {
 			}
 
 			fmt.Printf("\nℹ️  Counts\n")
-			for c := range bline.Categories {
-				fmt.Printf(" OSPS-%s: %d controls\n", c, len(bline.Categories[c].Controls))
+			for _, family := range bline.Catalog.ControlFamilies {
+				fmt.Printf(" OSPS-%s: %d controls\n", bline.ControlFamilyIDs[family.Title], len(family.Controls))
 			}
+			fmt.Printf("\n+ %d mapped frameworks\n", len(bline.Catalog.Metadata.MappingReferences))
 			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))
 
 			// Print a checklist if they asked for it

@@ -8,8 +8,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ossf/security-baseline/pkg/baseline"
 	"github.com/spf13/cobra"
+
+	"github.com/ossf/security-baseline/pkg/baseline"
 )
 
 type validateOptions struct {
@@ -28,9 +29,8 @@ func (o *validateOptions) Validate() error {
 
 func (o *validateOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
-		&o.baselinePath, "baseline", "b", "", "path to directory containing the baseline YAML definitions",
+		&o.baselinePath, "baseline", "b", defaultBaselinePath, "path to directory containing the baseline YAML definitions",
 	)
-
 }
 
 // addValidate adds the compile subcommand to the parent command

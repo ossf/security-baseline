@@ -1,4 +1,4 @@
-category: Governance
+title: Governance
 description: |
   Governance focuses on the policies and
   procedures that guide the project's decision-making
@@ -15,8 +15,7 @@ controls:
       potential contributors, and downstream consumers have an accurate
       understanding of who is working on the project and what areas of authority
       they may have.
-    family: Governance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-3
@@ -25,10 +24,30 @@ controls:
         identifiers:
           - 013-021
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.3
           - E3.1
           - E3.3
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.2
+          - 3.1.1
+          - 3.1.2
+          - 4.1.1
+          - 4.1.2
+          - 5.1.1
+          - 5.1.2
+          - 6.1.1
+          - 6.1.2
+          - 6.5.4
+          - 7.1.1
+          - 7.1.2
+          - 8.1.1
+          - 8.1.2
+          - 11.1.1
+          - 11.1.2
+          - 12.1.3
+          - 12.5.2
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
@@ -63,8 +82,7 @@ controls:
       Encourages open communication and collaboration within the project
       community, enabling users to provide feedback and discuss proposed changes
       or usage challenges.
-    family: Governance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-3
@@ -79,7 +97,9 @@ controls:
         identifiers:
           - PS.3
           - PW.1.2
-
+      - reference-id: PCIDSS
+        identifiers:
+          - 12.5.2
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
@@ -102,8 +122,7 @@ controls:
       Provide guidance to new contributors on how to participate in the project,
       outlining the steps required to submit changes or enhancements to the
       project's codebase.
-    family: Governance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-4
@@ -122,9 +141,15 @@ controls:
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.4
           - P2.2
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 6.5.4
+          - 8.2.1
+          - 12.5.2
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
@@ -161,8 +186,7 @@ controls:
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing
       the risk of unauthorized access or misuse.
-    family: Governance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-5
@@ -193,9 +217,15 @@ controls:
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - E3.1
           - E3.3
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 6.5.4
+          - 8.2.1
+          - 8.2.2
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |

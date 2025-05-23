@@ -1,4 +1,4 @@
-category: Quality
+title: Quality
 description: |
   Quality focuses on the processes and
   practices used to ensure the quality and
@@ -16,8 +16,7 @@ controls:
     objective: |
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - CC-B-1
@@ -53,10 +52,19 @@ controls:
         identifiers:
           - Build platform - isolation strength - Isolated
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P3.5
           - E2.2
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Implementation -Secure Build -Build Process Lvl1
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 6.2.1
+          - 6.5.1
+          - 6.5.2
+    assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
           While active, the project's source code repository MUST be publicly
@@ -92,8 +100,7 @@ controls:
       Provide transparency and accountability for the project's dependencies
       while enabling users and contributors to understand the software's direct
       dependencies.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - Q-S-8
@@ -126,7 +133,7 @@ controls:
           - 863-521
           - 613-286
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G1.4
           - G1.5
           - G2.5
@@ -136,7 +143,18 @@ controls:
           - P5.2
           - E2.1
           - E2.2
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Implementation -Secure Build -Software Dependencies Lvl1
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.3.2
+          - 6.4.3
+          - 12.5.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.2
+    assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
           When the package management system supports it, the source code
@@ -171,8 +189,7 @@ controls:
       failing status checks, even if arbitrary, because it increases the risk of
       overlooking security vulnerabilities or defects identified by automated
       checks.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2f
@@ -194,14 +211,26 @@ controls:
           - 263-184
           - 253-452
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.2
           - G5.3
           - G5.4
           - P3.5
           - P4.1
           - P4.2
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Implementation -Secure Build -Build Process Lvl3
+          - Implementation -Secure Build -Software Dependencies Lvl3
+          - Verification -Requirements Testing -Control Verification Lvl1
+          - Verification -Requirements Testing -Control Verification Lvl2
+          - Verification -Requirements Testing -Control Verification Lvl3
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.3.1
+          - 6.3.2
+          - 6.5.2
+    assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
           When a commit is made to the primary branch, any automated status
@@ -225,8 +254,7 @@ controls:
       Ensure that additional code repositories or subprojects produced by the
       project are held to a standard that is clear and appropriate for that
       codebase.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2b
@@ -247,11 +275,14 @@ controls:
           - Build platform - isolation strength - Isolated
       - reference-id: ScCrd
         identifiers:
-          - Binary-Artifacts          
+          - Binary-Artifacts
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.2
-          - G5.4   
+          - G5.4
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.4.2
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -289,8 +320,7 @@ controls:
       Reduce the risk of including generated executable artifacts in the
       project's version control system, ensuring that only source code and
       necessary files are stored in the repository.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2b
@@ -302,6 +332,9 @@ controls:
         identifiers:
           - 486-813
           - 124-564
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.4.3
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
@@ -339,8 +372,7 @@ controls:
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository and clearly documents when and how tests are run.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - Q-B-4
@@ -366,16 +398,28 @@ controls:
           - 088-377
       - reference-id: ScCrd
         identifiers:
-          - CI-Tests          
+          - CI-Tests
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - P4.1
           - P4.2
           - P4.3
           - P4.4
           - E2.4
           - E2.5
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Verification-Requirements -Testing -Control Verification Lvl1
+          - Verification-Requirements -Testing -Control Verification Lvl2
+          - Verification-Requirements -Testing -Control Verification Lvl3
+          - Verification -Security Testing -Scalable Baseline Lvl3
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.2.3
+          - 6.3.1
+          - 6.3.2
+          - 6.4.2
+    assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
           Prior to a commit being accepted, the project's CI/CD pipelines MUST
@@ -423,20 +467,24 @@ controls:
       Ensure that the project's version control system requires at least one
       non-author approval of changes before merging into the release or primary
       branch.
-    family: Quality Assurance
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-G-3
       - reference-id: ScCrd
         identifiers:
-          - Code-Review          
+          - Code-Review
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G2.4
           - P3.3
           - P3.5
-        assessment-requirements:
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.2.3.1
+          - 6.4.2
+          - 6.5.4
+    assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
           When a commit is made to the primary branch, the project's version

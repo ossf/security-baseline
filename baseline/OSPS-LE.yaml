@@ -1,4 +1,4 @@
-category: Legal
+title: Legal
 description: |
   Legal focuses on the policies and
   procedures that govern the project's licensing
@@ -18,8 +18,7 @@ controls:
       Ensure that code contributors are aware of and acknowledge their legal
       responsibility for the contributions they make to the project, reducing
       the risk of intellectual property disputes against the project.
-    family: Legal
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-S-1
@@ -34,8 +33,11 @@ controls:
           - PW.1.2
           - PW.2.1
       - reference-id: PSSCRM
-        identifiers: 
-          - E3.1 
+        identifiers:
+          - E3.1
+      - reference-id: PCIDSS
+        identifiers:
+          - 12.8.5
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
@@ -46,12 +48,16 @@ controls:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Include a DCO or CLA in the project's repository, requiring code
+          Include a DCO in the project's repository, requiring code
           contributors to assert that they are legally authorized to commit the
           associated contributions on every commit. Use a status check to ensure
-          the assertion is made.
+          the assertion is made. A CLA also satisfies this requirement.
           Some version control systems, such as GitHub, may include this in the
           platform terms of service.
+
+          It is understood that projects with a lengthy history prior to
+          adopting OSPS Baseline may not be able to retroactively enforce this
+          requirement.
 
   - id: OSPS-LE-02
     title: |
@@ -61,8 +67,7 @@ controls:
       Ensure that the project's source code is distributed under a recognized
       and legally enforceable open source software license, providing clarity on
       how the code can be used and shared by others.
-    family: Legal
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-6
@@ -78,10 +83,13 @@ controls:
           - GV.OC-03
       - reference-id: ScCrd
         identifiers:
-          - License          
+          - License
       - reference-id: PSSCRM
-        identifiers: 
-          - G1.2 
+        identifiers:
+          - G1.2
+      - reference-id: PCIDSS
+        identifiers:
+          - 3.2.1
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
@@ -118,14 +126,13 @@ controls:
 
   - id: OSPS-LE-03
     title: |
-      All licenses for the project's source code MUST be maintained in a 
+      All licenses for the project's source code MUST be maintained in a
       standard location within the corresponding repository.
     objective: |
       Ensure that the project's source code and released software assets are
       distributed with the appropriate license terms, making it clear to users
       and contributors how each can be used and shared.
-    family: Legal
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-8
@@ -137,10 +144,13 @@ controls:
           - PO.3.2
       - reference-id: ScCrd
         identifiers:
-          - License          
+          - License
       - reference-id: PSSCRM
-        identifiers: 
-          - G1.2 
+        identifiers:
+          - G1.2
+      - reference-id: PCIDSS
+        identifiers:
+          - 3.2.1
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |

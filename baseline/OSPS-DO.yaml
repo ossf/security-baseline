@@ -1,4 +1,4 @@
-category: Documentation
+title: Documentation
 description: |
   Documentation focuses on the information
   provided to users, contributors, and maintainers
@@ -16,8 +16,7 @@ controls:
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
       misconfiguration.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-1
@@ -43,9 +42,25 @@ controls:
         identifiers:
           - 036-275
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G5.1
-          - E3.5  
+          - E3.5
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 2.2.1
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 12.10.5
+      - reference-id: UKSSCOP
+        identifiers:
+          - 4.1
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -68,8 +83,7 @@ controls:
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
       defect fixes and improvements.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - B-B-3
@@ -98,6 +112,21 @@ controls:
       - reference-id: OC
         identifiers:
           - 4.2.1
+      - reference-id: SAMM
+        identifiers:
+          - Implementation -Defect Management -Defect Tracking Lvl1
+          - Implementation -Defect Management -Defect Tracking Lvl2
+      - reference-id: PCIDSS
+        identifiers:
+          - 6.3.2
+          - 6.3.3
+          - 6.5.1
+          - 6.5.2
+          - 12.10.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.1
+          - 1.3
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -124,8 +153,7 @@ controls:
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
       unauthorized versions of the software.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - CC-B-8
@@ -143,7 +171,7 @@ controls:
         identifiers:
           - 171-222
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G1.3
           - G2.5
           - P1.2
@@ -151,7 +179,21 @@ controls:
           - P3.2
           - P3.3
           - E2.6
-        assessment-requirements:
+      - reference-id: PCIDSS
+        identifiers:
+          - 3.1.1
+          - 3.5.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.2.1
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.1
+    assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
           When the project has made a release, the project documentation MUST
@@ -190,8 +232,7 @@ controls:
       Provide users with clear expectations regarding the project's support
       lifecycle. This allows downstream consumers to take relevant actions to
       ensure the continued functionality and security of their systems.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - R-B-3
@@ -205,8 +246,27 @@ controls:
           - 4.1
           - 4.3.1
       - reference-id: PSSCRM
-        identifiers: 
-          - E1.6  
+        identifiers:
+          - E1.6
+      - reference-id: SAMM
+        identifiers:
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 3.1.1
+          - 3.2.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.3
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 4.1
+          - 4.2
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -232,8 +292,7 @@ controls:
       Communicating when the project maintainers will no longer fix defects or
       security vulnerabilities is crucial for downstream consumers to find
       alternative solutions or alternative means of support for the project.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: CRA
         identifiers:
           - 1.2c
@@ -247,8 +306,27 @@ controls:
           - 673-475
           - 053-751
       - reference-id: PSSCRM
-        identifiers: 
-          - E1.6  
+        identifiers:
+          - E1.6
+      - reference-id: SAMM
+        identifiers:
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl2
+      - reference-id: PCIDSS
+        identifiers:
+          - 3.1.1
+          - 3.2.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.2
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+      - reference-id: UKSSCOP
+        identifiers:
+          - 3.5
+          - 4.1
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -271,8 +349,7 @@ controls:
       dependencies, libraries, frameworks, etc. to help downstream consumers
       understand how the project operates in regards to third-party components
       that are required necessary for the software to function.
-    family: Documentation
-    mappings:
+    guideline-mappings:
       - reference-id: BPB
         identifiers:
           - A-S-1
@@ -285,15 +362,35 @@ controls:
           - 053-751
       - reference-id: ScCrd
         identifiers:
-          - Pinned-Dependencies       
+          - Pinned-Dependencies
       - reference-id: PSSCRM
-        identifiers: 
+        identifiers:
           - G1.4
           - G2.4
           - P3.1
           - P3.2
           - P3.4
-        assessment-requirements:
+      - reference-id: SAMM
+        identifiers:
+          - Design -Security Requirements -Supplier Security Lvl2
+      - reference-id: PCIDSS
+        identifiers:
+          - 2.1.1
+          - 3.1.1
+          - 4.1.1
+          - 5.1.1
+          - 6.1.1
+          - 6.3.2
+          - 6.4.3
+          - 7.1.1
+          - 8.1.1
+          - 11.1.1
+          - 12.5.2
+      - reference-id: UKSSCOP
+        identifiers:
+          - 1.2
+          - 3.3
+    assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
           When the project has made a release, the project documentation MUST

@@ -72,12 +72,21 @@
     Security Baseline, CD refers only to
     continuous delivery, not to continuous
     deployment, as sometimes used elsewhere.
+- term: Contributor License Agreement
+  definition: |
+    A legal agreement used to assign some of a contributor's
+    rights covered by copyright laws to a project. This is
+    often used to enable a project to make future changes to
+    a work's license without requiring the assent of every
+    contributor.
+  synonyms:
+    - CLA
 - term: Contributor
   definition: |
     Entities who commit code or documentation to
-    the project. Code contributors include
-    collaborators or external participants who
-    submit changes.
+    the project. This includes both human
+    and non-human actors and makes no distinctions
+    based on their role within the project.
 
     In the context of the Open Source Project
     Security Baseline, code contributors does not
@@ -94,10 +103,9 @@
     the primary deliverable in a release.
 - term: Collaborator
   definition: |
-    A user with a role on the project's version
-    control system who can approve changes or
-    manage the repository settings. Collaborators
-    may have varying permission levels based on
+    A human or non-human entity with permissions to
+    approve changes or manage the repository settings.
+    Collaborators may have varying permission levels based on
     their role in the project. This does not
     include contributors whose changes only
     originate through a request from a repository
@@ -152,6 +160,16 @@
     originally been intentional, but a change in
     environment or understanding has made them
     undesirable.
+- term: Developer Certificate of Origin
+  definition: |
+    An assertion made by a contributor that they have the
+    legal right to make a specific contribution to a
+    project. This is often indicated by using the
+    `--signoff` option to `git commit`.
+  synonyms:
+    - DCO
+  references:
+    - https://developercertificate.org/
 - term: OpenEoX
   definition: |
     An initiative aimed at standardizing the way
@@ -204,6 +222,15 @@
     multiple forms of identification.
   synonyms:
     - MFA
+- term: NIST Special Publication 800-161 - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations
+  definition: |
+     Provides guidance to organizations on identifying, 
+     assessing, and mitigating cybersecurity risks throughout 
+     the supply chain at all levels of their organizations.
+  synonyms: 
+    - 800-161
+  references: 
+    - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
 - term: OpenChain
   definition: |
     A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
@@ -230,9 +257,18 @@
      to help improve the health of critical projects
      that the community depends on.
   synonyms: 
+    - ScrCrd
   references: 
     - https://github.com/ossf/scorecard
     - https://scorecard.dev/
+- term: Payment Card Industry Data Security Standard
+  definition: |
+     PCI DSS provides a baseline of technical and operational 
+     requirements designed to protect payment account data.
+  synonyms: 
+    - PCIDSS
+  references: 
+    - https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
 - term: Primary Branch
   definition: |
     The main development branch in the version
@@ -256,6 +292,19 @@
     - Private Security Vulnerability Reporting
   references:
     - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
+- term: Proactive Software Supply Chain Risk Management Framework
+  definition: |
+    A holistic framework that an organization can use to 
+    proactively mitigate software supply chain risk through 
+    guided adoption of tasks; and that supports assessment,
+    scoring, and comparison against industry peers, 
+    standards, and guidelines. The P-SSCRM contextualizes and
+    quantifies the tasks contained across multiple standards 
+    and frameworks to those carried out by various kinds of organizations.
+  synonyms: 
+    - P-SSCRM 
+  references: 
+    - https://arxiv.org/pdf/2404.12300 
 - term: Project Documentation
   definition: |
     Written materials related to the project,
@@ -266,6 +315,18 @@
     release time, this may include provenance
     information, licensing details, and other
     metadata.
+- term: Proactive Software Supply Chain Risk Management Framework
+  definition: |
+    A maturity model for software assurance that provides an 
+    effective and measurable way for all types of organizations 
+    to analyze and improve their software security posture. 
+    OWASP SAMM supports the complete software lifecycle, including 
+    development and acquisition, and is technology and process agnostic. 
+    It is intentionally built to be evolutive and risk-driven in nature.
+  synonyms: 
+    - SAMM 
+  references: 
+    - https://owaspsamm.org/model/
 - term: Sensitive Data
   definition: |
     Information that, if disclosed to unauthorized
@@ -320,7 +381,9 @@
     - Repositories
 - term: Secure Software Development Framework
   definition: |
-     The NIST Secure Software Development Framework (SP 800-218) is a broadly reviewed and collaborative set of fundamental secure software development practices.
+     The NIST Secure Software Development Framework (SP 800-218) is a 
+     broadly reviewed and collaborative set of fundamental secure software 
+     development practices.
   synonyms: 
     - SSDF 
     - NIST Secure Software Development Framework
@@ -404,6 +467,14 @@
     recommended formats are Semantic Versioning
     or Calendar Versioning.
   synonyms:
+- term: User
+  definition: |
+    A human making use of project resources, such as
+    the software, documentation, or other community
+    resources. This includes both end-users and
+    contributors.
+  synonyms:
+    - Person
 - term: Version Control System
   definition: |
     A tool that tracks changes to files over time
