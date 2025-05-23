@@ -61,6 +61,13 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 2.1
+      - reference-id: 800-161
+        identifiers:
+          - AC-4(21)
+          - AC-17
+          - CM-5
+          - IA-2
+          - IA-5         
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -116,6 +123,15 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 2.1
+      - reference-id: 800-161
+        identifiers: 
+          - AC-2
+          - AC-3
+          - AC-4(21)
+          - AC-5
+          - AC-6
+          - CM-5
+          - CM-7         
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -173,6 +189,13 @@ controls:
         identifiers:
           - 2.1
           - 2.2
+      - reference-id: 800-161
+        identifiers: 
+          - AC-3
+          - AC-5
+          - CM-3
+          - CM-3(2)
+          - CM-5          
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
@@ -250,6 +273,16 @@ controls:
         identifiers:
           - 2.1
           - 2.2
+      - reference-id: 800-161
+        identifiers: 
+          - AC-3(8)
+          - AC-4
+          - AC-4(6)
+          - AC-6
+          - AC-20
+          - AC-20(1)
+          - CM-5
+          - CM-7          
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

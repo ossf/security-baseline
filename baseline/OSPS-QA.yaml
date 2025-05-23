@@ -64,6 +64,12 @@ controls:
           - 6.2.1
           - 6.5.1
           - 6.5.2
+      - reference-id: 800-161
+        identifiers:
+          - PL-8
+          - RA-5
+          - SA-11
+          - SA-15          
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
@@ -154,6 +160,18 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 1.2
+      - reference-id: 800-161
+        identifiers:
+          - CA-7
+          - CM-2
+          - CM-8
+          - PL-8
+          - RA-3(1)
+          - RA-5
+          - SA-11
+          - SA-15
+          - SR-3
+          - SR-4                
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
@@ -230,6 +248,14 @@ controls:
           - 6.3.1
           - 6.3.2
           - 6.5.2
+      - reference-id: 800-161
+        identifiers:
+          - AU-6
+          - CM-6
+          - PL-8
+          - SA-11
+          - SA-15
+          - SR-3                
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
@@ -283,6 +309,10 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 6.4.2
+      - reference-id: 800-161
+        identifiers:
+          - PL-8
+          - SA-15                
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -335,6 +365,11 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 6.4.3
+      - reference-id: 800-161
+        identifiers:
+          - PL-8
+          - SA-15
+          - SR-3                
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
@@ -419,6 +454,11 @@ controls:
           - 6.3.1
           - 6.3.2
           - 6.4.2
+      - reference-id: 800-161
+        identifiers:
+          - SA-11
+          - SA-15
+          - SR-3                
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
@@ -484,6 +524,12 @@ controls:
           - 6.2.3.1
           - 6.4.2
           - 6.5.4
+      - reference-id: 800-161
+        identifiers:
+          - AU-6
+          - PL-8
+          - SA-15
+          - SR-3                
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
