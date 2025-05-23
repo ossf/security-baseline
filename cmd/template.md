@@ -149,7 +149,7 @@ Controls within this document may map to the following external frameworks:
   - {{.}}
 {{ end -}}
 {{ end -}}
-{{ end -}}
+{{ end }}
 
 ---
 
