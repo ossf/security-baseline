@@ -50,7 +50,7 @@ jobs:
           ./go-oscal validate --input-file oscal-sample.json 
 
       - name: Validate Catalog with oscal-club/NIST CLI
-        uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49 # v2.0.0
+        uses: oscal-club/oscal-cli-action@1a210b84bc1fd6adf15c9cf0d46a51d15a3d8301 # v2.0.1
         with:
           args: catalog validate oscal-sample.json 
             
