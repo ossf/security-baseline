@@ -526,6 +526,7 @@ controls:
           - 6.5.4
       - reference-id: 800-161
         identifiers:
+          - AC-5
           - AU-6
           - PL-8
           - SA-15
