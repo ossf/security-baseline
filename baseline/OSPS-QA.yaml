@@ -251,6 +251,7 @@ controls:
       - reference-id: 800-161
         identifiers:
           - AU-6
+          - CM-3
           - CM-6
           - PL-8
           - SA-11
