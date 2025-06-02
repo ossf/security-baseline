@@ -73,6 +73,12 @@ Since the Baseline is designed for the developers of a project, not the consumer
 OSPS Baseline compliance is a point-in-time status.
 We encourage projects using the OSPS Baseline to say something like “As of April 31, 2025, this project complies with OSPS Baseline version 2025-02-30 level 2.”
 
+## What is in scope for the Open Source Project Security Baseline, and what is out of scope?
+
+This baseline seeks to address security hygiene elements — those which lock down the ways of working, delivering the product, and equipping its users to adopt it safely.  To use an analogy, it’s like home builders who lock up tools, secure the construction site, and control who enters, but also ensure the finished house is handed over with clear instructions for safe use. It’s not about changing the blueprint—it’s about protecting the build process and delivering a home that’s ready to live in securely.
+
+By contrast, secure design and development are out of scope for this activity. Continuing the analogy, those activities would be the responsibility of the architects and builders who create the blueprint and decide how the house is constructed to prevent break-ins—with reinforced doors, secure locks, strategic layouts/no backdoors, or built-in security systems. It’s about designing security into the structure itself, not just safeguarding the build and handoff. 
+
 ## How can I get involved in the OSPS Baseline project?
 The OSPS Baseline project welcomes contributions in the [GitHub repository](https://github.com/ossf/security-baseline/pull/24/files).
 For discussion, join us in [#sig-security-baseline](https://openssf.slack.com/archives/C07DC6TT2QY) in the OpenSSF Slack instance.
