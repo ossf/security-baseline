@@ -20,7 +20,7 @@ var ControlFamilies = []string{
 type Baseline struct {
 	// map of family names to IDs to support OSCAL groups
 	ControlFamilyIDs map[string]string
-	Catalog          layer2.Layer2
+	Catalog          layer2.Catalog
 	Lexicon          []LexiconEntry
 }
 

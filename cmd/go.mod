@@ -7,7 +7,7 @@ toolchain go1.24.1
 require (
 	github.com/defenseunicorns/go-oscal v0.6.2
 	github.com/goccy/go-yaml v1.18.0
-	github.com/revanite-io/sci v0.3.6
+	github.com/revanite-io/sci v0.3.7
 	github.com/spf13/cobra v1.9.1
 )
 
