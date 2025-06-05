@@ -1,6 +1,8 @@
+CCCS
 CISA
 crosswalked
 devel
+DSIT
 exfiltration
 exploitability
 evolutive
@@ -10,7 +12,9 @@ Gesmer
 golangci
 incentivizing
 lifecycles
+NCSC
 openssf
+organisations
 OCRE
 OSCAL
 OSPS
@@ -32,4 +36,5 @@ subprojects
 Subprojects
 triaging
 unreviewable
+UKSSCOP
 Updegrove
