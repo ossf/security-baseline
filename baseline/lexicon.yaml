@@ -24,7 +24,7 @@
     
     See OWASP's Attack Surface Analysis Cheat Sheet for more information.
   references:
-    - https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html
+    - [https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html)
 - term: Automated Test Suite
   definition: |
     A collection of pre-written test cases that, when invoked,
@@ -40,7 +40,7 @@
     - BPB
     - OpenSSF Best Practices Badge
   references: 
-    -  https://www.bestpractices.dev/en
+    -  [https://www.bestpractices.dev/en](https://www.bestpractices.dev/en)
 - term: Build and Release Pipeline
   definition: |
     A series of automated processes that compile
@@ -126,9 +126,9 @@
   synonyms:
     - CVD
   references:
-    - https://certcc.github.io/CERT-Guide-to-CVD/
-    - https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1-1
-    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/about-coordinated-disclosure-of-security-vulnerabilities
+    - [https://certcc.github.io/CERT-Guide-to-CVD/](https://certcc.github.io/CERT-Guide-to-CVD/)
+    - [https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1-1](https://www.first.org/global/sigs/vulnerability-coordination/multiparty/guidelines-v1-1)
+    - [https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/about-coordinated-disclosure-of-security-vulnerabilities](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/about-coordinated-disclosure-of-security-vulnerabilities)
 - term: Cyber Resilience Act
   definition: |
     Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA).
@@ -139,7 +139,7 @@
   synonyms:
     - CRA
   references: 
-    - https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+    - [https://eur-lex.europa.eu/eli/reg/2024/2847/oj](https://eur-lex.europa.eu/eli/reg/2024/2847/oj)
 - term: Cybersecurity Framework
   definition: |
      The NIST Cyber Security Framework (CSF) helps organizations understand and improve their management of cybersecurity risk.
@@ -147,8 +147,8 @@
     - CSF
     - NIST Cybersecurity Framework
   references: 
-    - https://www.nist.gov/cyberframework
-    - https://doi.org/10.6028/NIST.CSWP.29
+    - [https://www.nist.gov/cyberframework](https://www.nist.gov/cyberframework)
+    - [https://doi.org/10.6028/NIST.CSWP.29](https://doi.org/10.6028/NIST.CSWP.29)
 - term: Defect
   definition: |
     Errors or flaws in the software that cause it
@@ -169,7 +169,7 @@
   synonyms:
     - DCO
   references:
-    - https://developercertificate.org/
+    - [https://developercertificate.org/](https://developercertificate.org/)
 - term: OpenEoX
   definition: |
     An initiative aimed at standardizing the way
@@ -179,7 +179,7 @@
     OpenEoX strives to provide a transparent, efficient, 
     and unified approach to managing product lifecycles.
   references:
-    - https://openeox.org/
+    - [https://openeox.org/](https://openeox.org/)
 - term: Exploitable Vulnerabilities
   definition: |
     Defects in the software that can be leveraged
@@ -230,7 +230,7 @@
   synonyms: 
     - 800-161
   references: 
-    - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf
+    - [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf)
 - term: OpenChain
   definition: |
     A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
@@ -239,16 +239,16 @@
     - ISO/IEC 5230
     - ISO/IEC 18974
   references: 
-    - https://openchainproject.org/
-    - https://openchainproject.org/license-compliance 
+    - [https://openchainproject.org/](https://openchainproject.org/)
+    - [https://openchainproject.org/license-compliance](https://openchainproject.org/license-compliance)
 - term: OpenCRE
   definition: |
      An OWASP project that converts cybersecurity requirements into a hierarchical, machine-readable format.
   synonyms: 
     - OCRE 
   references: 
-    - https://www.opencre.org/
-    - https://zeljkoobrenovic.github.io/opencre-explorer/ 
+    - [https://www.opencre.org/](https://www.opencre.org/)
+    - [https://zeljkoobrenovic.github.io/opencre-explorer/](https://zeljkoobrenovic.github.io/opencre-explorer/)
 - term: OpenSSF Scorecard
   definition: |
      An OpenSSF project that helps users assesses open 
@@ -259,8 +259,8 @@
   synonyms: 
     - ScrCrd
   references: 
-    - https://github.com/ossf/scorecard
-    - https://scorecard.dev/
+    - [https://github.com/ossf/scorecard](https://github.com/ossf/scorecard)
+    - [https://scorecard.dev/](https://scorecard.dev/)
 - term: Payment Card Industry Data Security Standard
   definition: |
      PCI DSS provides a baseline of technical and operational 
@@ -268,7 +268,7 @@
   synonyms: 
     - PCIDSS
   references: 
-    - https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf
+    - [https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf](https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf)
 - term: Primary Branch
   definition: |
     The main development branch in the version
@@ -291,7 +291,7 @@
     - Private Vulnerability Disclosure
     - Private Security Vulnerability Reporting
   references:
-    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
+    - [https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)
 - term: Proactive Software Supply Chain Risk Management Framework
   definition: |
     A holistic framework that an organization can use to 
@@ -304,7 +304,7 @@
   synonyms: 
     - P-SSCRM 
   references: 
-    - https://arxiv.org/pdf/2404.12300 
+    - [https://arxiv.org/pdf/2404.12300](https://arxiv.org/pdf/2404.12300)
 - term: Project Documentation
   definition: |
     Written materials related to the project,
@@ -326,7 +326,7 @@
   synonyms: 
     - SAMM 
   references: 
-    - https://owaspsamm.org/model/
+    - [https://owaspsamm.org/model/](https://owaspsamm.org/model/)
 - term: Sensitive Data
   definition: |
     Information that, if disclosed to unauthorized
@@ -389,8 +389,8 @@
     - NIST Secure Software Development Framework
     - NIST SP 800-218
   references: 
-    - https://csrc.nist.gov/projects/ssdf 
-    - https://csrc.nist.gov/pubs/sp/800/218/final  
+    - [https://csrc.nist.gov/projects/ssdf](https://csrc.nist.gov/projects/ssdf)
+    - [https://csrc.nist.gov/pubs/sp/800/218/final](https://csrc.nist.gov/pubs/sp/800/218/final)
 - term: Software Bill of Materials
   definition: |
     A list of all components that make up a given piece of software
@@ -405,10 +405,10 @@
     - SBOM
     - SBOMs
   references:
-    - https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf
-    - https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf
-    - https://spdx.dev
-    - https://cyclonedx.org
+    - [https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf](https://www.ntia.gov/sites/default/files/publications/sbom_minimum_elements_report_0.pdf)
+    - [https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf)
+    - [https://spdx.dev](https://spdx.dev)
+    - [https://cyclonedx.org](https://cyclonedx.org)
 - term: Software Composition Analysis
   definition: |
     The process of identifying and cataloging all
@@ -437,8 +437,8 @@
     - SLSA 
     - Supply-chain Levels for Software Artifacts
   references: 
-    - https://openssf.org/projects/slsa/
-    - https://slsa.dev/
+    - [https://openssf.org/projects/slsa/](https://openssf.org/projects/slsa/)
+    - [https://slsa.dev/](https://slsa.dev/)
 - term: Threat Modeling
   definition: |
     Threat modeling is an activity where the project
@@ -456,10 +456,10 @@
     tools such as the Elevation of Privilege Threat
     Modeling Card Game or Threat Dragon.
   references:
-    - https://github.com/adamshostack/4QuestionFrame
-    - https://owasp.org/www-community/Threat_Modeling_Process
-    - https://www.microsoft.com/en-us/download/details.aspx?id=20303
-    - https://owasp.org/www-project-threat-dragon
+    - [https://github.com/adamshostack/4QuestionFrame](https://github.com/adamshostack/4QuestionFrame)
+    - [https://owasp.org/www-community/Threat_Modeling_Process](https://owasp.org/www-community/Threat_Modeling_Process)
+    - [https://www.microsoft.com/en-us/download/details.aspx?id=20303](https://www.microsoft.com/en-us/download/details.aspx?id=20303)
+    - [https://owasp.org/www-project-threat-dragon](https://owasp.org/www-project-threat-dragon)
 - term: Version Identifier
   definition: |
     A label assigned to a specific release of the
@@ -496,4 +496,4 @@
   synonyms:
     - Coordinated Vulnerability Disclosure
   references:
-    - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
+    - [https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability)
