@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 
 	"github.com/goccy/go-yaml"
-	"github.com/revanite-io/sci/layer2"
+	"github.com/ossf/gemara/layer2"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
