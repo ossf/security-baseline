@@ -32,8 +32,8 @@ mapping-references:
       FLOSS projects are following best practices and, as a result, are more
       likely to produce higher-quality secure software.
   - id: CRA
-    title: Cyber Resilience Act
-    version: "2024/2847"
+    title: Cyber Resilience Act (Regulation 2024/2847)
+    version: "20.11.2024"
     url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847
     description: |
       Regulation (EU) 2024/2847 of the European Parliament and of the
