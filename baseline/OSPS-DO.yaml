@@ -35,10 +35,10 @@ controls:
         identifiers:
           - GV.OC-04
           - GV.OC-05
-      - reference-id: OC
+      - reference-id: "18974"
         identifiers:
           - 4.1.4
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 036-275
       - reference-id: PSSCRM
@@ -109,7 +109,7 @@ controls:
         identifiers:
           - RS.MA-02
           - GV.RM-05
-      - reference-id: OC
+      - reference-id: "18974"
         identifiers:
           - 4.2.1
       - reference-id: SAMM
@@ -167,7 +167,7 @@ controls:
           - PS.2.1
           - PS.3.1
           - RV.1.3
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 171-222
       - reference-id: PSSCRM
@@ -241,7 +241,7 @@ controls:
           - PO.4.2
           - PS.3.1
           - RV.1.3
-      - reference-id: OC
+      - reference-id: "18974"
         identifiers:
           - 4.1
           - 4.3.1
@@ -297,11 +297,11 @@ controls:
         identifiers:
           - 1.2c
           - 2.6
-      - reference-id: OC
+      - reference-id: "18974"
         identifiers:
           - 4.1.1
           - 4.3.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 673-475
           - 053-751
@@ -356,11 +356,11 @@ controls:
       - reference-id: CRA
         identifiers:
           - 2.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 613-286
           - 053-751
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Pinned-Dependencies
       - reference-id: PSSCRM
