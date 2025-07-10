@@ -108,7 +108,7 @@ controls:
         identifiers:
           - GV.OC-05
           - ID.AM-01
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.4
       - reference-id: OpenCRE
@@ -174,7 +174,7 @@ controls:
           - ID.RA-04
           - ID.RA-05
           - DE.AE-07
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
       - reference-id: OpenCRE

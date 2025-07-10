@@ -137,7 +137,7 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PW.1.2
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
@@ -213,7 +213,7 @@ controls:
         identifiers:
           - 123-124
           - 152-725
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM

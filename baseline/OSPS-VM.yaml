@@ -40,7 +40,7 @@ controls:
           - GV.PO-02
           - ID.RA-01
           - ID.RA-08
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1
@@ -126,7 +126,7 @@ controls:
           - GV.PO-01
           - GV.PO-02
           - ID.RA-01
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.1
           - 4.1.3
@@ -227,7 +227,7 @@ controls:
       - reference-id: CSF
         identifiers:
           - ID.RA-01
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
       - reference-id: PSSCRM
@@ -324,7 +324,7 @@ controls:
           - ID.RA-01
           - ID.RA-08
           - ID.IM-02
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1
@@ -453,7 +453,7 @@ controls:
           - ID.RA-01
           - ID.RA-08
           - ID.IM-02
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1

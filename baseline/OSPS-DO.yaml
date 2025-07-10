@@ -35,7 +35,7 @@ controls:
         identifiers:
           - GV.OC-04
           - GV.OC-05
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.4
       - reference-id: OpenCRE
@@ -109,7 +109,7 @@ controls:
         identifiers:
           - RS.MA-02
           - GV.RM-05
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.2.1
       - reference-id: SAMM
@@ -241,7 +241,7 @@ controls:
           - PO.4.2
           - PS.3.1
           - RV.1.3
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1
           - 4.3.1
@@ -297,7 +297,7 @@ controls:
         identifiers:
           - 1.2c
           - 2.6
-      - reference-id: "18974"
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.1
           - 4.3.1
