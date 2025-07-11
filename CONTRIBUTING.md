@@ -2,14 +2,17 @@
 
 ## Contributing to the Controls:
 
-Currently, all the baseline controls are in `baseline.yaml`; follow the structure
-[in the README](./README.md#baseline-structure) when proposing new entries.
+Currently, all the baseline controls are in [`baseline/OSPS-$FAMILY.yaml`](./baseline/);
+follow the structure [in the README](./README.md#baseline-structure) when proposing
+new entries.
 
 ## Contributing to the Tooling:
 
 The baseline is published to https://baseline.openssf.org/ (via GitHub Pages) via
 Jekyll (a static site generator) using scripts from `./cmd` and formatting from
-`./docs`, using GitHub Actions.
+`./docs`, using [GitHub Actions](./.github/workflows/web-publish.yml).  Changes
+to the baseline will be published to the `devel` version until a new version is
+[explicitly published](./docs/maintenance.md#osps-baseline-maintenance-process).
 
 ## PR guidelines
 
