@@ -20,7 +20,7 @@ controls:
         identifiers:
           - B-S-3
           - B-S-4
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 013-021
       - reference-id: PSSCRM
@@ -137,7 +137,7 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PW.1.2
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
@@ -209,11 +209,11 @@ controls:
         identifiers:
           - PR.AA-02
           - PR.AA-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 123-124
           - 152-725
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM

@@ -81,7 +81,7 @@ controls:
       - reference-id: CSF
         identifiers:
           - GV.OC-03
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - License
       - reference-id: PSSCRM
@@ -142,7 +142,7 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PO.3.2
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - License
       - reference-id: PSSCRM

@@ -117,7 +117,7 @@ mapping-references:
       increasing levels of software security and supply chain integrity. It’s how
       you get from safe enough to being as resilient as possible, at any link in
       the chain.
-  - id: "18974"
+  - id: ISO-18974
     title: ISO/IEC 18974
     version: "1.0 - 2023-12"
     url: https://openchainproject.org/security-assurance

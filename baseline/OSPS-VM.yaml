@@ -40,15 +40,15 @@ controls:
           - GV.PO-02
           - ID.RA-01
           - ID.RA-08
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1
           - 4.3.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 887-750
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Security-Policy
       - reference-id: PSSCRM
@@ -126,16 +126,16 @@ controls:
           - GV.PO-01
           - GV.PO-02
           - ID.RA-01
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.1
           - 4.1.3
           - 4.1.5
           - 4.2.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 464-513
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Security-Policy
       - reference-id: SAMM
@@ -176,7 +176,7 @@ controls:
         identifiers:
           - 2.5
           - 2.6
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 308-514
       - reference-id: SAMM
@@ -227,7 +227,7 @@ controls:
       - reference-id: CSF
         identifiers:
           - ID.RA-01
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
       - reference-id: PSSCRM
@@ -324,13 +324,13 @@ controls:
           - ID.RA-01
           - ID.RA-08
           - ID.IM-02
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1
           - 4.2.2
           - 4.3.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 155-155
           - 124-564
@@ -339,7 +339,7 @@ controls:
           - 611-158
           - 207-435
           - 088-377
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Security-Policy
           - Vulnerabilities
@@ -453,13 +453,13 @@ controls:
           - ID.RA-01
           - ID.RA-08
           - ID.IM-02
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.2.1
           - 4.2.2
           - 4.3.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 155-155
           - 124-564
@@ -468,7 +468,7 @@ controls:
           - 611-158
           - 207-435
           - 088-377
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Security-Policy
           - Vulnerabilities
