@@ -57,7 +57,7 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	b.ControlFamilyIDs = familyIDs
 	b.Catalog = layer2.Catalog{
 		ControlFamilies: controlFamilies,
-		Metadata: &layer2.Metadata{
+		Metadata: layer2.Metadata{
 			MappingReferences: frameworks,
 		},
 	}
