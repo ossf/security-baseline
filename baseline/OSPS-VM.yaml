@@ -87,6 +87,14 @@ controls:
           - 3.2
           - 3.4
           - 3.5
+      - reference-id: 800-161
+        identifiers:
+          - IR-1
+          - IR-4
+          - IR-6
+          - IR-7(1)
+          - IR-8
+          - SI-2          
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -149,6 +157,12 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 3.2
+      - reference-id: 800-161
+        identifiers:
+          - IR-1
+          - IR-4
+          - IR-6
+          - IR-8                
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -190,6 +204,9 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 3.2
+      - reference-id: 800-161
+        identifiers:
+          - IR-6                
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -246,6 +263,15 @@ controls:
           - 3.4
           - 3.5
           - 4.3
+      - reference-id: 800-161
+        identifiers:
+          - CA-7
+          - CM-3
+          - CM-8
+          - IR-5
+          - SI-2
+          - SI-4
+          - SI-5                
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -368,6 +394,13 @@ controls:
         identifiers:
           - 1.2
           - 3.3
+      - reference-id: 800-161
+        identifiers:
+          - CA-7
+          - RA-5
+          - SA-11
+          - SI-2
+          - SI-3                
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -499,6 +532,13 @@ controls:
         identifiers:
           - 1.3
           - 1.4
+      - reference-id: 800-161
+        identifiers:
+          - CA-7
+          - RA-5
+          - SA-11
+          - SI-2
+          - SI-3                
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
