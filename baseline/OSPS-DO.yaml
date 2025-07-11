@@ -75,6 +75,20 @@ controls:
           project, explaining how to install, configure, and use the project's
           features. If there are any known dangerous or destructive actions
           available, include highly-visible warnings.
+      - id: OSPS-DO-01.02
+        text: |
+          If the project is designed only for use in non-sensitive contexts, the
+          project MUST indicate these restrictions in prominently alongside
+          usage instructions.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Some projects may not be designed or intended for use in
+          security-sensitive contexts (for example, when dealing with untrusted
+          inputs or privacy-sensitive data).  To prevent accidental misuse,
+          a prominent disclaimer should be included alongside usage
+          documentation.
 
   - id: OSPS-DO-02
     title: |

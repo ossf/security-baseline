@@ -1,4 +1,5 @@
 docs/versions/devel.md
+docs/versions/devel-checklist.md
 .DS_Store
 
 # generated output from go run ./... compile
