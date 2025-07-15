@@ -15,7 +15,7 @@ lifecycles
 NCSC
 openssf
 organisations
-OCRE
+OpenCRE
 OSCAL
 OSPS
 PCIDSS
