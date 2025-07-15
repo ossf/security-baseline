@@ -32,7 +32,7 @@ controls:
       - reference-id: CSF
         identifiers:
           - ID.AM-02
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 155-155
           - 326-704
@@ -108,10 +108,10 @@ controls:
         identifiers:
           - GV.OC-05
           - ID.AM-01
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.4
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 155-155
           - 068-102
@@ -174,10 +174,10 @@ controls:
           - ID.RA-04
           - ID.RA-05
           - DE.AE-07
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 068-102
           - 154-031

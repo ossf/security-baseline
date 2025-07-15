@@ -35,7 +35,7 @@ controls:
           - PS.3
           - PW.1.2
           - PW.2.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -45,7 +45,7 @@ controls:
           - ID.AM-02
           - ID.RA-01
           - ID.RA-08
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.4
       - reference-id: SLSA
@@ -121,11 +121,11 @@ controls:
         identifiers:
           - ID.AM.01
           - ID.AM-02
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
           - 4.3.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -203,10 +203,10 @@ controls:
       - reference-id: CSF
         identifiers:
           - ID.IM-02
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 263-184
           - 253-452
@@ -266,14 +266,14 @@ controls:
           - PS.1
           - PS.2
           - RV.1.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
       - reference-id: SLSA
         identifiers:
           - Build platform - isolation strength - Isolated
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Binary-Artifacts
       - reference-id: PSSCRM
@@ -328,7 +328,7 @@ controls:
         identifiers:
           - PS.1
           - PS.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -389,14 +389,14 @@ controls:
       - reference-id: CSF
         identifiers:
           - ID.AM-02
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.5
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 207-435
           - 088-377
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - CI-Tests
       - reference-id: PSSCRM
@@ -471,7 +471,7 @@ controls:
       - reference-id: BPB
         identifiers:
           - B-G-3
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Code-Review
       - reference-id: PSSCRM

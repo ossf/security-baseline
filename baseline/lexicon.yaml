@@ -235,7 +235,7 @@
   definition: |
     A Linux Foundation project that oversee two ISO/IEC standards to better understand and manage software supply chains. 
   synonyms: 
-    - OC 
+    - "18974" 
     - ISO/IEC 5230
     - ISO/IEC 18974
   references: 
@@ -245,7 +245,7 @@
   definition: |
      An OWASP project that converts cybersecurity requirements into a hierarchical, machine-readable format.
   synonyms: 
-    - OCRE 
+    - OpenCRE 
   references: 
     - [https://www.opencre.org/](https://www.opencre.org/)
     - [https://zeljkoobrenovic.github.io/opencre-explorer/](https://zeljkoobrenovic.github.io/opencre-explorer/)

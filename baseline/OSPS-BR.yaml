@@ -29,7 +29,7 @@ controls:
       - reference-id: CSF
         identifiers:
           - PR.AA-02
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -93,7 +93,7 @@ controls:
           - PS.1
           - PS.2
           - PS.3
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -161,7 +161,7 @@ controls:
           - PO.5.2
           - PS.1
           - PS.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 483-813
           - 124-564
@@ -243,7 +243,7 @@ controls:
           - PS.2
           - PS.3
           - PW.1.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 483-813
           - 068-486
@@ -322,7 +322,7 @@ controls:
           - PO.3.2
           - PS.1
           - PS.2
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -377,7 +377,7 @@ controls:
           - PS.2
           - PS.2.1
           - PW.6.2
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Signed-Releases
       - reference-id: SLSA
