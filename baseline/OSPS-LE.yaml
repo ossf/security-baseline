@@ -38,6 +38,9 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 12.8.5
+      - reference-id: 800-161
+        identifiers:
+          - PL-4          
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
@@ -90,6 +93,9 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 3.2.1
+      - reference-id: 800-161
+        identifiers:
+          - PL-4                 
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
@@ -151,6 +157,9 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 3.2.1
+      - reference-id: 800-161
+        identifiers:
+          - PL-4                 
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |
