@@ -73,7 +73,7 @@ controls:
       - id: OSPS-AC-01.01
         text: |
           When a user attempts to read or modify a sensitive resource in the project's
-          central repository, the system MUST require the user to complete
+          authoritative repository, the system MUST require the user to complete
           a multi-factor authentication process.
         applicability:
           - Maturity Level 1
