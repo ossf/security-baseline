@@ -8,6 +8,7 @@
 - David A Wheeler, OpenSSF (@david-a-wheeler)
 - Ben Cotton, Kusari (@funnelfiasco)
 - Evan Anderson, Custcodian (@evankanderson)
+- Travis Truman, CVS Health (@trumant)
 
 ## Emeritus Maintainers
 
