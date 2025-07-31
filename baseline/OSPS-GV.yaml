@@ -20,7 +20,7 @@ controls:
         identifiers:
           - B-S-3
           - B-S-4
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 013-021
       - reference-id: PSSCRM
@@ -48,6 +48,14 @@ controls:
           - 11.1.2
           - 12.1.3
           - 12.5.2
+      - reference-id: 800-161
+        identifiers:
+          - AC-2
+          - AC-3
+          - IA-2
+          - PL-1
+          - PL-4
+          - PM-30          
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
@@ -100,6 +108,11 @@ controls:
       - reference-id: PCIDSS
         identifiers:
           - 12.5.2
+      - reference-id: 800-161
+        identifiers:
+          - AC-21
+          - AU-6
+          - PL-1          
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
@@ -137,7 +150,7 @@ controls:
       - reference-id: SSDF
         identifiers:
           - PW.1.2
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
@@ -150,6 +163,11 @@ controls:
           - 6.5.4
           - 8.2.1
           - 12.5.2
+      - reference-id: 800-161
+        identifiers:
+          - AC-3
+          - AC-20
+          - PL-1          
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
@@ -209,11 +227,11 @@ controls:
         identifiers:
           - PR.AA-02
           - PR.AA-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 123-124
           - 152-725
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.2
       - reference-id: PSSCRM
@@ -226,6 +244,18 @@ controls:
           - 6.5.4
           - 8.2.1
           - 8.2.2
+      - reference-id: 800-161
+        identifiers:
+          - AC-2
+          - AC-3
+          - AC-4(21)
+          - AC-5
+          - AC-6
+          - AC-20
+          - CM-7
+          - IR-4(6)
+          - PM-30
+          - SI-4          
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |
