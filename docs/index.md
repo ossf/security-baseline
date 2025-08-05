@@ -1,6 +1,11 @@
+---
+nav-title: About
+---
+
 # Open Source Project Security Baseline
 
-The Open Source Project Security Baseline (OSPS Baseline) is designed to act as a minimum definition of requirements for a project relative to it's maturity level.
+<img align="right" src="/assets/baseline_logo.png" alt="OSPS Baseline Logo" width="200">
+The Open Source Project Security Baseline (OSPS Baseline) is designed to act as a minimum definition of requirements for a project relative to its maturity level.
 It is maintained by the [OpenSSF Security Baseline SIG](https://github.com/ossf/security-baseline/blob/main/governance/MAINTAINERS.md) according to the [project governance documentation](https://github.com/ossf/security-baseline/blob/main/governance/GOVERNANCE.md).
 
 For more information on the motivation and purpose, see the [FAQ](faq).

@@ -3,3 +3,6 @@ docs/versions/devel.md
 
 # generated output from go run ./... compile
 checklist.md
+Gemfile
+Gemfile.lock
+docs/_site
