@@ -1,3 +1,7 @@
+---
+nav-title: Maintenance Process
+---
+
 # OSPS Baseline Maintenance Process
 
 * Normal text fixes to the controls will be accepted via pull request and reviewed by the baseline project maintainers.
