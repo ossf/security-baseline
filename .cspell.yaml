@@ -13,6 +13,7 @@ ignorePaths:
   - '*.{csv,go,mod,scss,sum}'
   - 'CNAME'
   - 'LICENSE'
+  - 'docs/assets/'
   - 'docs/versions/'
   - '.github/workflows'
   - '.golangci.yaml'
