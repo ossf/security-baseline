@@ -1,8 +1,6 @@
 docs/versions/devel.md
 .DS_Store
+docs/_site
 
 # generated output from go run ./... compile
 checklist.md
-Gemfile
-Gemfile.lock
-docs/_site
