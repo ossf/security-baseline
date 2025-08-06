@@ -10,6 +10,7 @@ FINOS
 Fintech
 Gesmer
 golangci
+hyperpage
 incentivizing
 lifecycles
 NCSC
@@ -38,3 +39,4 @@ triaging
 unreviewable
 UKSSCOP
 Updegrove
+webfonts
