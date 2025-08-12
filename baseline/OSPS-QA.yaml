@@ -317,7 +317,7 @@ controls:
       - id: OSPS-QA-04.01
         text: |
           While active, the project documentation MUST contain a list of any
-          codebases that are considered subprojects or additional repositories.
+          codebases that are considered subprojects.
         applicability:
           - Maturity Level 1
           - Maturity Level 2

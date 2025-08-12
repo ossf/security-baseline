@@ -72,8 +72,8 @@ controls:
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
-          When a user attempts to access a sensitive resource in the project's
-          version control system, the system MUST require the user to complete
+          When a user attempts to read or modify a sensitive resource in the project's
+          authoritative repository, the system MUST require the user to complete
           a multi-factor authentication process.
         applicability:
           - Maturity Level 1
