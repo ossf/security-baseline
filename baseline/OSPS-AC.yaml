@@ -34,7 +34,7 @@ controls:
         identifiers:
           - PR.A-02
           - PR.A-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -61,11 +61,19 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 2.1
+      - reference-id: 800-161
+        identifiers:
+          - AC-4(21)
+          - AC-17
+          - CM-5
+          - CM-6
+          - IA-2
+          - IA-5         
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
-          When a user attempts to access a sensitive resource in the project's
-          version control system, the system MUST require the user to complete
+          When a user attempts to read or modify a sensitive resource in the project's
+          authoritative repository, the system MUST require the user to complete
           a multi-factor authentication process.
         applicability:
           - Maturity Level 1
@@ -98,7 +106,7 @@ controls:
         identifiers:
           - PR.AA-02
           - PR.AA-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -116,6 +124,15 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 2.1
+      - reference-id: 800-161
+        identifiers: 
+          - AC-2
+          - AC-3
+          - AC-4(21)
+          - AC-5
+          - AC-6
+          - CM-5
+          - CM-7         
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -152,12 +169,12 @@ controls:
         identifiers:
           - PR.A-02
           - PR.A-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
           - 152-725
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Branch-Protection
       - reference-id: PSSCRM
@@ -173,6 +190,13 @@ controls:
         identifiers:
           - 2.1
           - 2.2
+      - reference-id: 800-161
+        identifiers: 
+          - AC-3
+          - AC-5
+          - CM-3
+          - CM-3(2)
+          - CM-5          
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
@@ -225,7 +249,7 @@ controls:
         identifiers:
           - PR.AA-02
           - PR.AA-05
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 486-813
           - 124-564
@@ -250,6 +274,16 @@ controls:
         identifiers:
           - 2.1
           - 2.2
+      - reference-id: 800-161
+        identifiers: 
+          - AC-3(8)
+          - AC-4
+          - AC-4(6)
+          - AC-6
+          - AC-20
+          - AC-20(1)
+          - CM-5
+          - CM-7          
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |

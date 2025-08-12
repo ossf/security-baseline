@@ -35,10 +35,10 @@ controls:
         identifiers:
           - GV.OC-04
           - GV.OC-05
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.4
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 036-275
       - reference-id: PSSCRM
@@ -61,6 +61,12 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 4.1
+      - reference-id: 800-161
+        identifiers:
+          - CM-2
+          - PL-2
+          - PL-8
+          - SA-15
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -123,7 +129,7 @@ controls:
         identifiers:
           - RS.MA-02
           - GV.RM-05
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.2.1
       - reference-id: SAMM
@@ -141,6 +147,11 @@ controls:
         identifiers:
           - 1.1
           - 1.3
+      - reference-id: 800-161
+        identifiers:
+          - IR-6
+          - SI-4
+          - SI-5          
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -181,7 +192,7 @@ controls:
           - PS.2.1
           - PS.3.1
           - RV.1.3
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 171-222
       - reference-id: PSSCRM
@@ -207,6 +218,14 @@ controls:
       - reference-id: UKSSCOP
         identifiers:
           - 3.1
+      - reference-id: 800-161
+        identifiers:
+          - CM-2
+          - IR-1
+          - MP-1
+          - SA-15
+          - SI-7
+          - SI-7(14)          
     assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
@@ -255,7 +274,7 @@ controls:
           - PO.4.2
           - PS.3.1
           - RV.1.3
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1
           - 4.3.1
@@ -281,6 +300,11 @@ controls:
         identifiers:
           - 4.1
           - 4.2
+      - reference-id: 800-161
+        identifiers:
+          - PL-1
+          - PL-2
+          - SI-4          
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -311,11 +335,11 @@ controls:
         identifiers:
           - 1.2c
           - 2.6
-      - reference-id: OC
+      - reference-id: ISO-18974
         identifiers:
           - 4.1.1
           - 4.3.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 673-475
           - 053-751
@@ -341,6 +365,12 @@ controls:
         identifiers:
           - 3.5
           - 4.1
+      - reference-id: 800-161
+        identifiers:
+          - PL-1
+          - PL-2
+          - SI-4
+          - SI-5          
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -370,11 +400,11 @@ controls:
       - reference-id: CRA
         identifiers:
           - 2.1
-      - reference-id: OCRE
+      - reference-id: OpenCRE
         identifiers:
           - 613-286
           - 053-751
-      - reference-id: ScCrd
+      - reference-id: Scorecard
         identifiers:
           - Pinned-Dependencies
       - reference-id: PSSCRM
@@ -404,6 +434,19 @@ controls:
         identifiers:
           - 1.2
           - 3.3
+      - reference-id: 800-161
+        identifiers:
+          - CA-7
+          - CM-7(5)
+          - CM-8
+          - PM-30
+          - RA-3(1)
+          - SA-11
+          - SI-4
+          - SR-3
+          - SR-5
+          - SR-6
+          - SR-7          
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
