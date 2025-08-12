@@ -560,12 +560,11 @@ controls:
         identifiers:
           - PO.1.1
           - PO.1.2
-          - PO.1.3
       - reference-id: SAMM
         identifiers:
-          - Governance -Strategy & Metrics -Create and Promote Lvl1
-          - Governance -Strategy & Metrics -Create and Promote Lvl2
-          - Governance -Strategy & Metrics -Create and Promote Lvl3
+          - Governance -Policy & Compliance -Policy & Standards Lvl1
+          - Governance -Policy & Compliance -Policy & Standards Lvl2
+          - Governance -Policy & Compliance -Policy & Standards Lvl3
       - reference-id: PSSCRM
         identifiers:
           - G1.1
