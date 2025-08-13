@@ -545,3 +545,25 @@ controls:
           primary branch. This can be achieved by requiring a pull request to be
           reviewed and approved by at least one other contributor before it can
           be merged.
+  - id: OSPS-QA-08
+    title: |
+      The project MUST store and manage all secrets and credentials used by the project in a secure manner.
+    objective: |
+      Ensure that sensitive data is not disclosed, compromised or misused leading to security vulnerabilities or data breaches.
+    # TODO - TBT
+    # guideline-mappings:
+    assessment-requirements:
+      - id: OSPS-QA-08.01
+        text: |
+          The project MUST define a policy for managing secrets and credentials used by the project. The policy should include guidelines for storing, accessing, and rotating secrets and credentials.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Document how secrets and credentials are managed and used within the project. This should include details on how secrets are stored (e.g., using a secrets management tool), how access is controlled, and how secrets are rotated or updated. Ensure that sensitive information is not hard-coded in the source code or stored in version control systems.
+      - id: OSPS-QA-08.02
+        text: |
+          The project MUST prevent the unintentional storage of unencrypted sensitive data, such as secrets and credentials, in the version control system.
+        applicability:
+          - Maturity Level 1
+        recommendation: |
+          Configure .gitignore or equivalent to exclude files that may contain sensitive information. Use pre-commit hooks and automated scanning tools to detect and prevent the inclusion of sensitive data in commits. Periodically audit the version control history to ensure that no sensitive information has been inadvertently committed.
