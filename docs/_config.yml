@@ -1,12 +1,79 @@
-# Configure generation of web page(s).
-name: OpenSSF Security Baseline
-title: null
+title: Open Source Project Security Baseline
+author:
+  name: OpenSSF Security Baseline SIG
+  email: openssf-sig-security-baseline+subscribe@lists.openssf.org
+logo: /assets/logo.svg
+url: "https://baseline.openssf.org"
+description: > 
+  The Open Source Project Security (OSPS) Baseline is a set of security 
+  controls that projects should meet to demonstrate a strong security posture. 
+  The controls are organized by maturity level and category.
+
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+
 kramdown:
   toc_levels: "2"
 
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-    values:
-      author: Open Source Security Foundation (OpenSSF) Security Baseline SIG
+# Add to plugins: list
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+remote_theme: jekyll/minima
+
+# Minima-specific settings (applicable to Minima v3 and above only)
+# -----------------------------------------------------------------
+#
+#  *All described config keys below should be nested under the top-level
+#   `minima` key.*
+#
+minima:
+#   Minima skin selection. Available skins are:
+#     * classic            Default, light color scheme.
+#     * dark               Dark variant of the classic skin.
+#     * auto               Adaptive skin based on the classic and dark skins.
+#     * solarized-light    Light variant of solarized color scheme.
+#     * solarized-dark     Dark variant of solarized color scheme.
+#     * solarized          Adaptive skin for solarized color scheme skins.
+   skin: classic
+#
+#   Specific pages for site navigation.
+#     If you wish to link only specific pages in the site-navigation, use this
+#     and list the `path` property (as represented via Liquid) of the pages in
+#     the order they should be rendered.
+   nav_pages:
+     - index.md
+     - versions/2025-02-25.md
+     - faq.md
+     - maintenance.md
+#
+#   Set to `true` to show excerpts on the homepage.
+   show_excerpts: false
+#
+#   Minima date format.
+#     The default value is "%b %d, %Y" (e.g. Nov 14, 2023).
+#     Refer to https://shopify.github.io/liquid/filters/date/ for valid values
+#   date_format: "%b-%d-%Y"
+#
+#   Social Media Links.
+#     Renders icons via Font Awesome Free webfonts CDN, based on ordered list of
+#     entries. Valid entry keys:
+#       * title    Tooltip rendered on hovering over icon.
+#       * icon     Font Awesome icon id. `github` corresponds to `fa-github`.
+#       * url      Full URL of social profile.
+   social_links:
+     - title: OpenSSF GitHub
+       icon: github
+       url: "https://github.com/ossf"
+     - title: OpenSSF at X (formerly Twitter)
+       icon: x-twitter
+       url: "https://x.com/openssf"
+     - title: OpenSSF at BlueSky
+       icon: bluesky
+       url: "https://bsky.app/profile/openssf.org"
+     - title: OpenSSF at LinkedIn
+       icon: linkedin
+       url: "https://www.linkedin.com/company/openssf/"
