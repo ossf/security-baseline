@@ -8,7 +8,3 @@ Sources:
   - Licensed under the Open Font License (OFL)
   - IBM Plex Sans is used for headlines per
     https://openssf.org/brand-guidelines/ 
-
-* https://fonts.google.com/specimen/Teko
-  - This *was* the recommended heading font, but is no longer.
-    Many found it hard to read.
