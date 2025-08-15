@@ -5,9 +5,9 @@ go 1.24
 toolchain go1.24.1
 
 require (
-	github.com/defenseunicorns/go-oscal v0.6.2
+	github.com/defenseunicorns/go-oscal v0.6.3
 	github.com/goccy/go-yaml v1.18.0
-	github.com/ossf/gemara v0.3.9
+	github.com/ossf/gemara v0.3.10
 	github.com/spf13/cobra v1.9.1
 )
 
