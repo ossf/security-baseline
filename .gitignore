@@ -4,3 +4,6 @@ docs/_site
 
 # generated output from go run ./... compile
 checklist.md
+
+# compiled binaries
+cmd/security-baseline
