@@ -18,83 +18,83 @@ controls:
     guideline-mappings:
       - reference-id: BPB
         entries:
-          - identifiers: R-B-6
-          - identifiers: R-B-8
-          - identifiers: R-S-2
-          - identifiers: S-B-14
-          - identifiers: S-B-15
+          - reference-id: R-B-6
+          - reference-id: R-B-8
+          - reference-id: R-S-2
+          - reference-id: S-B-14
+          - reference-id: S-B-15
       - reference-id: CRA
         entries:
-          - identifiers: 2.1
-          - identifiers: 2.2
-          - identifiers: 2.3
-          - identifiers: 2.6
-          - identifiers: 2.7
-          - identifiers: 2.8
+          - reference-id: 2.1
+          - reference-id: 2.2
+          - reference-id: 2.3
+          - reference-id: 2.6
+          - reference-id: 2.7
+          - reference-id: 2.8
       - reference-id: SSDF
         entries:
-          - identifiers: RV.1.3
+          - reference-id: RV.1.3
       - reference-id: CSF
         entries:
-          - identifiers: GV.PO-01
-          - identifiers: GV.PO-02
-          - identifiers: ID.RA-01
-          - identifiers: ID.RA-08
+          - reference-id: GV.PO-01
+          - reference-id: GV.PO-02
+          - reference-id: ID.RA-01
+          - reference-id: ID.RA-08
       - reference-id: ISO-18974
         entries:
-          - identifiers: 4.1.5
-          - identifiers: 4.2.1
-          - identifiers: 4.3.2
+          - reference-id: 4.1.5
+          - reference-id: 4.2.1
+          - reference-id: 4.3.2
       - reference-id: OpenCRE
         entries:
-          - identifiers: 887-750
+          - reference-id: 887-750
       - reference-id: Scorecard
         entries:
-          - identifiers: Security-Policy
+          - reference-id: Security-Policy
       - reference-id: PSSCRM
         entries:
-          - identifiers: D1.1
-          - identifiers: D1.2
-          - identifiers: D1.3
-          - identifiers: D1.5
+          - reference-id: D1.1
+          - reference-id: D1.2
+          - reference-id: D1.3
+          - reference-id: D1.5
       - reference-id: SAMM
         entries:
-          - identifiers: Governance -Create and Promote Lvl2
-          - identifiers: Governance -Policy & Compliance -Policy & Standards Lvl1
-          - identifiers: Implementation -Defect Management -Defect Tracking Lvl1
-          - identifiers: Implementation -Defect Management -Defect Tracking Lvl2
-          - identifiers: Implementation -Defect Management -Defect Tracking Lvl3
-          - identifiers: Operations -Incident Management -Incident Response Lvl1
-          - identifiers: Operations -Incident Management -Incident Response Lvl2
-          - identifiers: Operations -Incident Management -Incident Response Lvl3
+          - reference-id: Governance -Create and Promote Lvl2
+          - reference-id: Governance -Policy & Compliance -Policy & Standards Lvl1
+          - reference-id: Implementation -Defect Management -Defect Tracking Lvl1
+          - reference-id: Implementation -Defect Management -Defect Tracking Lvl2
+          - reference-id: Implementation -Defect Management -Defect Tracking Lvl3
+          - reference-id: Operations -Incident Management -Incident Response Lvl1
+          - reference-id: Operations -Incident Management -Incident Response Lvl2
+          - reference-id: Operations -Incident Management -Incident Response Lvl3
       - reference-id: PCIDSS
         entries:
-          - identifiers: 2.1.1
-          - identifiers: 3.1.1
-          - identifiers: 4.1.1
-          - identifiers: 5.1.1
-          - identifiers: 6.1.1
-          - identifiers: 6.3.1
-          - identifiers: 6.3.2
-          - identifiers: 7.1.1
-          - identifiers: 8.1.1
-          - identifiers: 11.1.1
-          - identifiers: 11.2.1
-          - identifiers: 12.1.1
-          - identifiers: 12.1.3
+          - reference-id: 2.1.1
+          - reference-id: 3.1.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.3.1
+          - reference-id: 6.3.2
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
+          - reference-id: 11.2.1
+          - reference-id: 12.1.1
+          - reference-id: 12.1.3
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 3.2
-          - identifiers: 3.4
-          - identifiers: 3.5
+          - reference-id: 3.2
+          - reference-id: 3.4
+          - reference-id: 3.5
       - reference-id: 800-161
         entries:
-          - identifiers: IR-1
-          - identifiers: IR-4
-          - identifiers: IR-6
-          - identifiers: IR-7(1)
-          - identifiers: IR-8
-          - identifiers: SI-2          
+          - reference-id: IR-1
+          - reference-id: IR-4
+          - reference-id: IR-6
+          - reference-id: IR-7(1)
+          - reference-id: IR-8
+          - reference-id: SI-2          
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -122,47 +122,47 @@ controls:
     guideline-mappings:
       - reference-id: BPB
         entries:
-          - identifiers: B-S-8
+          - reference-id: B-S-8
       - reference-id: CRA
         entries:
-          - identifiers: 2.5
+          - reference-id: 2.5
       - reference-id: SSDF
         entries:
-          - identifiers: RV.1.3
+          - reference-id: RV.1.3
       - reference-id: CSF
         entries:
-          - identifiers: GV.PO-01
-          - identifiers: GV.PO-02
-          - identifiers: ID.RA-01
+          - reference-id: GV.PO-01
+          - reference-id: GV.PO-02
+          - reference-id: ID.RA-01
       - reference-id: ISO-18974
         entries:
-          - identifiers: 4.1.1
-          - identifiers: 4.1.3
-          - identifiers: 4.1.5
-          - identifiers: 4.2.2
+          - reference-id: 4.1.1
+          - reference-id: 4.1.3
+          - reference-id: 4.1.5
+          - reference-id: 4.2.2
       - reference-id: OpenCRE
         entries:
-          - identifiers: 464-513
+          - reference-id: 464-513
       - reference-id: Scorecard
         entries:
-          - identifiers: Security-Policy
+          - reference-id: Security-Policy
       - reference-id: SAMM
         entries:
-          - identifiers: Governance -Policy&Compliance -Policy&Standards Lvl2
+          - reference-id: Governance -Policy&Compliance -Policy&Standards Lvl2
       - reference-id: PCIDSS
         entries:
-          - identifiers: 6.3.3
-          - identifiers: 12.1.1
-          - identifiers: 12.10.2
+          - reference-id: 6.3.3
+          - reference-id: 12.1.1
+          - reference-id: 12.10.2
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 3.2
+          - reference-id: 3.2
       - reference-id: 800-161
         entries:
-          - identifiers: IR-1
-          - identifiers: IR-4
-          - identifiers: IR-6
-          - identifiers: IR-8                
+          - reference-id: IR-1
+          - reference-id: IR-4
+          - reference-id: IR-6
+          - reference-id: IR-8                
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -185,28 +185,28 @@ controls:
     guideline-mappings:
       - reference-id: BPB
         entries:
-          - identifiers: R-B-7
+          - reference-id: R-B-7
       - reference-id: CRA
         entries:
-          - identifiers: 2.5
-          - identifiers: 2.6
+          - reference-id: 2.5
+          - reference-id: 2.6
       - reference-id: OpenCRE
         entries:
-          - identifiers: 308-514
+          - reference-id: 308-514
       - reference-id: SAMM
         entries:
-          - identifiers: Operations -Incident Management -Incident Response Lvl3
+          - reference-id: Operations -Incident Management -Incident Response Lvl3
       - reference-id: PCIDSS
         entries:
-          - identifiers: 6.3.1
-          - identifiers: 6.3.3
-          - identifiers: 12.10.2
+          - reference-id: 6.3.1
+          - reference-id: 6.3.3
+          - reference-id: 12.10.2
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 3.2
+          - reference-id: 3.2
       - reference-id: 800-161
         entries:
-          - identifiers: IR-6                
+          - reference-id: IR-6                
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -231,47 +231,47 @@ controls:
     guideline-mappings:
       - reference-id: CRA
         entries:
-          - identifiers: 1.2a
-          - identifiers: 1.2b
-          - identifiers: 2.1
-          - identifiers: 2.4
-          - identifiers: 2.6
+          - reference-id: 1.2a
+          - reference-id: 1.2b
+          - reference-id: 2.1
+          - reference-id: 2.4
+          - reference-id: 2.6
       - reference-id: SSDF
         entries:
-          - identifiers: PO.4.1
-          - identifiers: RV.2.1
-          - identifiers: RV.2.2
+          - reference-id: PO.4.1
+          - reference-id: RV.2.1
+          - reference-id: RV.2.2
       - reference-id: CSF
         entries:
-          - identifiers: ID.RA-01
+          - reference-id: ID.RA-01
       - reference-id: ISO-18974
         entries:
-          - identifiers: 4.1.5
+          - reference-id: 4.1.5
       - reference-id: PSSCRM
         entries:
-          - identifiers: G2.2
-          - identifiers: D1.1
+          - reference-id: G2.2
+          - reference-id: D1.1
       - reference-id: PCIDSS
         entries:
-          - identifiers: 6.2.3
-          - identifiers: 6.3.1
-          - identifiers: 6.3.2
-          - identifiers: 6.3.3
-          - identifiers: 11.3.1
+          - reference-id: 6.2.3
+          - reference-id: 6.3.1
+          - reference-id: 6.3.2
+          - reference-id: 6.3.3
+          - reference-id: 11.3.1
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 3.4
-          - identifiers: 3.5
-          - identifiers: 4.3
+          - reference-id: 3.4
+          - reference-id: 3.5
+          - reference-id: 4.3
       - reference-id: 800-161
         entries:
-          - identifiers: CA-7
-          - identifiers: CM-3
-          - identifiers: CM-8
-          - identifiers: IR-5
-          - identifiers: SI-2
-          - identifiers: SI-4
-          - identifiers: SI-5                
+          - reference-id: CA-7
+          - reference-id: CM-3
+          - reference-id: CM-8
+          - reference-id: IR-5
+          - reference-id: SI-2
+          - reference-id: SI-4
+          - reference-id: SI-5                
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -314,93 +314,93 @@ controls:
     guideline-mappings:
       - reference-id: BPB
         entries:
-          - identifiers: B-S-8
-          - identifiers: Q-B-12
-          - identifiers: Q-S-9
-          - identifiers: S-B-14
-          - identifiers: S-B-15
-          - identifiers: A-B-1
-          - identifiers: A-B-3
-          - identifiers: A-B-8
-          - identifiers: A-S-1
+          - reference-id: B-S-8
+          - reference-id: Q-B-12
+          - reference-id: Q-S-9
+          - reference-id: S-B-14
+          - reference-id: S-B-15
+          - reference-id: A-B-1
+          - reference-id: A-B-3
+          - reference-id: A-B-8
+          - reference-id: A-S-1
       - reference-id: CRA
         entries:
-          - identifiers: 1.2a
-          - identifiers: 1.2b
-          - identifiers: 1.2c
-          - identifiers: 2.1
-          - identifiers: 2.2
-          - identifiers: 2.3
-          - identifiers: 2.4
+          - reference-id: 1.2a
+          - reference-id: 1.2b
+          - reference-id: 1.2c
+          - reference-id: 2.1
+          - reference-id: 2.2
+          - reference-id: 2.3
+          - reference-id: 2.4
       - reference-id: SSDF
         entries:
-          - identifiers: PO.4
-          - identifiers: PW.1.2
-          - identifiers: PW.8.1
-          - identifiers: RV.1.2
-          - identifiers: RV.1.3
-          - identifiers: RV.2.1
-          - identifiers: RV.2.2
+          - reference-id: PO.4
+          - reference-id: PW.1.2
+          - reference-id: PW.8.1
+          - reference-id: RV.1.2
+          - reference-id: RV.1.3
+          - reference-id: RV.2.1
+          - reference-id: RV.2.2
       - reference-id: CSF
         entries:
-          - identifiers: GV.RM-05
-          - identifiers: GV.RM-06
-          - identifiers: GV.PO-01
-          - identifiers: GV.PO-02
-          - identifiers: ID.RA-01
-          - identifiers: ID.RA-08
-          - identifiers: ID.IM-02
+          - reference-id: GV.RM-05
+          - reference-id: GV.RM-06
+          - reference-id: GV.PO-01
+          - reference-id: GV.PO-02
+          - reference-id: ID.RA-01
+          - reference-id: ID.RA-08
+          - reference-id: ID.IM-02
       - reference-id: ISO-18974
         entries:
-          - identifiers: 4.1.5
-          - identifiers: 4.2.1
-          - identifiers: 4.2.2
-          - identifiers: 4.3.2
+          - reference-id: 4.1.5
+          - reference-id: 4.2.1
+          - reference-id: 4.2.2
+          - reference-id: 4.3.2
       - reference-id: OpenCRE
         entries:
-          - identifiers: 155-155
-          - identifiers: 124-564
-          - identifiers: 757-271
-          - identifiers: 464-513
-          - identifiers: 611-158
-          - identifiers: 207-435
-          - identifiers: 088-377
+          - reference-id: 155-155
+          - reference-id: 124-564
+          - reference-id: 757-271
+          - reference-id: 464-513
+          - reference-id: 611-158
+          - reference-id: 207-435
+          - reference-id: 088-377
       - reference-id: Scorecard
         entries:
-          - identifiers: Security-Policy
-          - identifiers: Vulnerabilities
+          - reference-id: Security-Policy
+          - reference-id: Vulnerabilities
       - reference-id: PSSCRM
         entries:
-          - identifiers: G5.4
-          - identifiers: P4.1
-          - identifiers: P4.2
-          - identifiers: P4.3
-          - identifiers: P4.4
-          - identifiers: P4.5
+          - reference-id: G5.4
+          - reference-id: P4.1
+          - reference-id: P4.2
+          - reference-id: P4.3
+          - reference-id: P4.4
+          - reference-id: P4.5
       - reference-id: SAMM
         entries:
-          - identifiers: Implementation -Secure Build-Build Process Lvl3
-          - identifiers: Implementation -Software Dependencies Lvl3
-          - identifiers: Verification -Security Testing -Scalable Baseline Lvl1
-          - identifiers: Verification -Security Testing -Scalable Baseline Lvl3
+          - reference-id: Implementation -Secure Build-Build Process Lvl3
+          - reference-id: Implementation -Software Dependencies Lvl3
+          - reference-id: Verification -Security Testing -Scalable Baseline Lvl1
+          - reference-id: Verification -Security Testing -Scalable Baseline Lvl3
       - reference-id: PCIDSS
         entries:
-          - identifiers: 6.2.3
-          - identifiers: 6.3.1
-          - identifiers: 6.3.2
-          - identifiers: 6.4.1
-          - identifiers: 6.4.2
+          - reference-id: 6.2.3
+          - reference-id: 6.3.1
+          - reference-id: 6.3.2
+          - reference-id: 6.4.1
+          - reference-id: 6.4.2
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 1.2
-          - identifiers: 3.3
+          - reference-id: 1.2
+          - reference-id: 3.3
       - reference-id: 800-161
         entries:
-          - identifiers: CA-7
-          - identifiers: RA-5
-          - identifiers: SA-11
-          - identifiers: SI-2
-          - identifiers: SI-3                
+          - reference-id: CA-7
+          - reference-id: RA-5
+          - reference-id: SA-11
+          - reference-id: SI-2
+          - reference-id: SI-3                
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
@@ -450,95 +450,95 @@ controls:
     guideline-mappings:
       - reference-id: BPB
         entries:
-          - identifiers: B-S-8
-          - identifiers: Q-B-12
-          - identifiers: Q-S-9
-          - identifiers: S-B-14
-          - identifiers: S-B-15
-          - identifiers: A-B-1
-          - identifiers: A-B-3
-          - identifiers: A-B-8
-          - identifiers: A-S-1
+          - reference-id: B-S-8
+          - reference-id: Q-B-12
+          - reference-id: Q-S-9
+          - reference-id: S-B-14
+          - reference-id: S-B-15
+          - reference-id: A-B-1
+          - reference-id: A-B-3
+          - reference-id: A-B-8
+          - reference-id: A-S-1
       - reference-id: CRA
         entries:
-          - identifiers: 1.2a
-          - identifiers: 1.2b
-          - identifiers: 1.2c
-          - identifiers: 2.1
-          - identifiers: 2.2
-          - identifiers: 2.3
-          - identifiers: 2.4
+          - reference-id: 1.2a
+          - reference-id: 1.2b
+          - reference-id: 1.2c
+          - reference-id: 2.1
+          - reference-id: 2.2
+          - reference-id: 2.3
+          - reference-id: 2.4
       - reference-id: SSDF
         entries:
-          - identifiers: PO.4
-          - identifiers: PW.1.2
-          - identifiers: PW.8.1
-          - identifiers: RV.1.2
-          - identifiers: RV.1.3
-          - identifiers: RV.2.1
-          - identifiers: RV 2.2
+          - reference-id: PO.4
+          - reference-id: PW.1.2
+          - reference-id: PW.8.1
+          - reference-id: RV.1.2
+          - reference-id: RV.1.3
+          - reference-id: RV.2.1
+          - reference-id: RV 2.2
       - reference-id: CSF
         entries:
-          - identifiers: GV.RM-05
-          - identifiers: GV.RM-06
-          - identifiers: GV.PO-01
-          - identifiers: GV.PO-02
-          - identifiers: ID.RA-01
-          - identifiers: ID.RA-08
-          - identifiers: ID.IM-02
+          - reference-id: GV.RM-05
+          - reference-id: GV.RM-06
+          - reference-id: GV.PO-01
+          - reference-id: GV.PO-02
+          - reference-id: ID.RA-01
+          - reference-id: ID.RA-08
+          - reference-id: ID.IM-02
       - reference-id: ISO-18974
         entries:
-          - identifiers: 4.1.5
-          - identifiers: 4.2.1
-          - identifiers: 4.2.2
-          - identifiers: 4.3.2
+          - reference-id: 4.1.5
+          - reference-id: 4.2.1
+          - reference-id: 4.2.2
+          - reference-id: 4.3.2
       - reference-id: OpenCRE
         entries:
-          - identifiers: 155-155
-          - identifiers: 124-564
-          - identifiers: 757-271
-          - identifiers: 464-513
-          - identifiers: 611-158
-          - identifiers: 207-435
-          - identifiers: 088-377
+          - reference-id: 155-155
+          - reference-id: 124-564
+          - reference-id: 757-271
+          - reference-id: 464-513
+          - reference-id: 611-158
+          - reference-id: 207-435
+          - reference-id: 088-377
       - reference-id: Scorecard
         entries:
-          - identifiers: Security-Policy
-          - identifiers: Vulnerabilities
-          - identifiers: SAST
+          - reference-id: Security-Policy
+          - reference-id: Vulnerabilities
+          - reference-id: SAST
       - reference-id: PSSCRM
         entries:
-          - identifiers: G5.4
-          - identifiers: P4.1
-          - identifiers: P4.2
-          - identifiers: P4.3
-          - identifiers: P4.4
-          - identifiers: P4.5
+          - reference-id: G5.4
+          - reference-id: P4.1
+          - reference-id: P4.2
+          - reference-id: P4.3
+          - reference-id: P4.4
+          - reference-id: P4.5
       - reference-id: SAMM
         entries:
-          - identifiers: Implementation -Secure Build-Build Process Lvl3
-          - identifiers: Implementation -Software Dependencies Lvl3
-          - identifiers: Verification -Security Testing -Scalable Baseline Lvl1
-          - identifiers: Verification -Security Testing -Scalable Baseline Lvl3
+          - reference-id: Implementation -Secure Build-Build Process Lvl3
+          - reference-id: Implementation -Software Dependencies Lvl3
+          - reference-id: Verification -Security Testing -Scalable Baseline Lvl1
+          - reference-id: Verification -Security Testing -Scalable Baseline Lvl3
       - reference-id: PCIDSS
         entries:
-          - identifiers: 6.2.3
-          - identifiers: 6.3.1
-          - identifiers: 6.3.2
-          - identifiers: 6.4.1
-          - identifiers: 6.4.2
-          - identifiers: 6.5.2
+          - reference-id: 6.2.3
+          - reference-id: 6.3.1
+          - reference-id: 6.3.2
+          - reference-id: 6.4.1
+          - reference-id: 6.4.2
+          - reference-id: 6.5.2
       - reference-id: UKSSCOP
         entries:
-          - identifiers: 1.3
-          - identifiers: 1.4
+          - reference-id: 1.3
+          - reference-id: 1.4
       - reference-id: 800-161
         entries:
-          - identifiers: CA-7
-          - identifiers: RA-5
-          - identifiers: SA-11
-          - identifiers: SI-2
-          - identifiers: SI-3                
+          - reference-id: CA-7
+          - reference-id: RA-5
+          - reference-id: SA-11
+          - reference-id: SI-2
+          - reference-id: SI-3                
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
