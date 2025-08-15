@@ -16,64 +16,64 @@ controls:
       assets.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-B-1
-          - B-S-7
-          - B-S-8
+        entries:
+          - identifiers: B-B-1
+          - identifiers: B-S-7
+          - identifiers: B-S-8
       - reference-id: CRA
-        identifiers:
-          - 1.2a
-          - 1.2b
+        entries:
+          - identifiers: 1.2a
+          - identifiers: 1.2b
       - reference-id: SSDF
-        identifiers:
-          - PO.1
-          - PO.2
-          - PO.3.2
+        entries:
+          - identifiers: PO.1
+          - identifiers: PO.2
+          - identifiers: PO.3.2
       - reference-id: CSF
-        identifiers:
-          - ID.AM-02
+        entries:
+          - identifiers: ID.AM-02
       - reference-id: OpenCRE
-        identifiers:
-          - 155-155
-          - 326-704
-          - 068-102
-          - 036-275
-          - 162-655
+        entries:
+          - identifiers: 155-155
+          - identifiers: 326-704
+          - identifiers: 068-102
+          - identifiers: 036-275
+          - identifiers: 162-655
       - reference-id: PSSCRM
-        identifiers:
-          - G5.1
-          - P1.1
-          - E3.4
-          - E3.7
+        entries:
+          - identifiers: G5.1
+          - identifiers: P1.1
+          - identifiers: E3.4
+          - identifiers: E3.7
       - reference-id: SAMM
-        identifiers:
-          - Operations -Operational Management -Data Protection Lvl2
+        entries:
+          - identifiers: Operations -Operational Management -Data Protection Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 2.2.3
-          - 2.2.4
-          - 2.2.5
-          - 2.2.6
-          - 3.1.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.2.1
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
-          - 12.3.1
-          - 12.5.3
+        entries:
+          - identifiers: 2.2.1
+          - identifiers: 2.2.3
+          - identifiers: 2.2.4
+          - identifiers: 2.2.5
+          - identifiers: 2.2.6
+          - identifiers: 3.1.1
+          - identifiers: 4.1.1
+          - identifiers: 5.1.1
+          - identifiers: 6.1.1
+          - identifiers: 6.2.1
+          - identifiers: 7.1.1
+          - identifiers: 8.1.1
+          - identifiers: 11.1.1
+          - identifiers: 12.3.1
+          - identifiers: 12.5.3
       - reference-id: UKSSCOP
-        identifiers:
-          - 1.4
+        entries:
+          - identifiers: 1.4
       - reference-id: 800-161
-        identifiers:
-          - CM-2
-          - PL-8
-          - RA-3
-          - SA-15          
+        entries:
+          - identifiers: CM-2
+          - identifiers: PL-8
+          - identifiers: RA-3
+          - identifiers: SA-15          
     assessment-requirements:
       - id: OSPS-SA-01.01
         text: |
@@ -100,50 +100,50 @@ controls:
       to use the software effectively.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-B-10
-          - B-S-7
+        entries:
+          - identifiers: B-B-10
+          - identifiers: B-S-7
       - reference-id: CRA
-        identifiers:
-          - 1.2a
-          - 1.2b
+        entries:
+          - identifiers: 1.2a
+          - identifiers: 1.2b
       - reference-id: SSDF
-        identifiers:
-          - PW.1.2
+        entries:
+          - identifiers: PW.1.2
       - reference-id: CSF
-        identifiers:
-          - GV.OC-05
-          - ID.AM-01
+        entries:
+          - identifiers: GV.OC-05
+          - identifiers: ID.AM-01
       - reference-id: ISO-18974
-        identifiers:
-          - 4.1.4
+        entries:
+          - identifiers: 4.1.4
       - reference-id: OpenCRE
-        identifiers:
-          - 155-155
-          - 068-102
-          - 072-713
-          - 820-878
+        entries:
+          - identifiers: 155-155
+          - identifiers: 068-102
+          - identifiers: 072-713
+          - identifiers: 820-878
       - reference-id: PSSCRM
-        identifiers:
-          - E3.4
-          - E3.7
+        entries:
+          - identifiers: E3.4
+          - identifiers: E3.7
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 2.2.3
-          - 2.2.4
-          - 2.2.5
-          - 2.2.6
-          - 6.2.1
-          - 12.3.1
-          - 12.8.1
+        entries:
+          - identifiers: 2.2.1
+          - identifiers: 2.2.3
+          - identifiers: 2.2.4
+          - identifiers: 2.2.5
+          - identifiers: 2.2.6
+          - identifiers: 6.2.1
+          - identifiers: 12.3.1
+          - identifiers: 12.8.1
       - reference-id: 800-161
-        identifiers:
-          - CM-2
-          - PL-2
-          - PL-8
-          - RA-3
-          - SA-15           
+        entries:
+          - identifiers: CM-2
+          - identifiers: PL-2
+          - identifiers: PL-8
+          - identifiers: RA-3
+          - identifiers: SA-15           
     assessment-requirements:
       - id: OSPS-SA-02.01
         text: |
@@ -168,74 +168,74 @@ controls:
       of those threats from occurring.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-S-8
-          - S-G-1
+        entries:
+          - identifiers: B-S-8
+          - identifiers: S-G-1
       - reference-id: CRA
-        identifiers:
-          - 1.1
-          - 1.2j
-          - 1.2k
-          - 2.2
+        entries:
+          - identifiers: 1.1
+          - identifiers: 1.2j
+          - identifiers: 1.2k
+          - identifiers: 2.2
       - reference-id: SSDF
-        identifiers:
-          - PO.5.1
-          - PW.1.1
+        entries:
+          - identifiers: PO.5.1
+          - identifiers: PW.1.1
       - reference-id: CSF
-        identifiers:
-          - ID.RA-01
-          - ID.RA-04
-          - ID.RA-05
-          - DE.AE-07
+        entries:
+          - identifiers: ID.RA-01
+          - identifiers: ID.RA-04
+          - identifiers: ID.RA-05
+          - identifiers: DE.AE-07
       - reference-id: ISO-18974
-        identifiers:
-          - 4.1.5
+        entries:
+          - identifiers: 4.1.5
       - reference-id: OpenCRE
-        identifiers:
-          - 068-102
-          - 154-031
-          - 888-770
+        entries:
+          - identifiers: 068-102
+          - identifiers: 154-031
+          - identifiers: 888-770
       - reference-id: PSSCRM
-        identifiers:
-          - G4.3
-          - G5.2
-          - P2.1
+        entries:
+          - identifiers: G4.3
+          - identifiers: G5.2
+          - identifiers: P2.1
       - reference-id: SAMM
-        identifiers:
-          - Governance -Create and Promote Lvl1
-          - Design -Threat Assessment -Application Risk Profile Lvl1
-          - Design -Threat Assessment -Threat Modeling Lvl1
-          - Verification -Architecture Assessment -Architecture Mitigation Lvl2
+        entries:
+          - identifiers: Governance -Create and Promote Lvl1
+          - identifiers: Design -Threat Assessment -Application Risk Profile Lvl1
+          - identifiers: Design -Threat Assessment -Threat Modeling Lvl1
+          - identifiers: Verification -Architecture Assessment -Architecture Mitigation Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.4
-          - 2.2.5
-          - 2.2.6
-          - 6.2.1
-          - 6.2.3.1
-          - 6.3.2
-          - 6.4.2
-          - 11.3.1
-          - 12.3.1
+        entries:
+          - identifiers: 2.2.4
+          - identifiers: 2.2.5
+          - identifiers: 2.2.6
+          - identifiers: 6.2.1
+          - identifiers: 6.2.3.1
+          - identifiers: 6.3.2
+          - identifiers: 6.4.2
+          - identifiers: 11.3.1
+          - identifiers: 12.3.1
       - reference-id: UKSSCOP
-        identifiers:
-          - 1.4
-          - 3.3
+        entries:
+          - identifiers: 1.4
+          - identifiers: 3.3
       - reference-id: 800-161
-        identifiers:
-          - CA-2
-          - CA-2(3)
-          - PM-30
-          - RA-3
-          - SA-11
-          - SA-15
-          - SA-15(3)
-          - SA-15(8)
-          - SI-3
-          - SR-3
-          - SR-3(3)
-          - SR-6
-          - SR-7           
+        entries:
+          - identifiers: CA-2
+          - identifiers: CA-2(3)
+          - identifiers: PM-30
+          - identifiers: RA-3
+          - identifiers: SA-11
+          - identifiers: SA-15
+          - identifiers: SA-15(3)
+          - identifiers: SA-15(8)
+          - identifiers: SI-3
+          - identifiers: SR-3
+          - identifiers: SR-3(3)
+          - identifiers: SR-6
+          - identifiers: SR-7           
     assessment-requirements:
       - id: OSPS-SA-03.01
         text: |
