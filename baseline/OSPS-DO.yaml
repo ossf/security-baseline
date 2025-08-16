@@ -18,55 +18,55 @@ controls:
       misconfiguration.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-B-1
-          - B-B-9
-          - B-S-7
-          - B-S-9
+        entries:
+          - reference-id: B-B-1
+          - reference-id: B-B-9
+          - reference-id: B-S-7
+          - reference-id: B-S-9
       - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2j
-          - 1.2k
+        entries:
+          - reference-id: 1.2b
+          - reference-id: 1.2j
+          - reference-id: 1.2k
       - reference-id: SSDF
-        identifiers:
-          - PW.1.2
+        entries:
+          - reference-id: PW.1.2
       - reference-id: CSF
-        identifiers:
-          - GV.OC-04
-          - GV.OC-05
+        entries:
+          - reference-id: GV.OC-04
+          - reference-id: GV.OC-05
       - reference-id: ISO-18974
-        identifiers:
-          - 4.1.4
+        entries:
+          - reference-id: 4.1.4
       - reference-id: OpenCRE
-        identifiers:
-          - 036-275
+        entries:
+          - reference-id: 036-275
       - reference-id: PSSCRM
-        identifiers:
-          - G5.1
-          - E3.5
+        entries:
+          - reference-id: G5.1
+          - reference-id: E3.5
       - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 2.2.1
-          - 3.1.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.2.1
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
-          - 12.10.5
+        entries:
+          - reference-id: 2.1.1
+          - reference-id: 2.2.1
+          - reference-id: 3.1.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.2.1
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
+          - reference-id: 12.10.5
       - reference-id: UKSSCOP
-        identifiers:
-          - 4.1
+        entries:
+          - reference-id: 4.1
       - reference-id: 800-161
-        identifiers:
-          - CM-2
-          - PL-2
-          - PL-8
-          - SA-15
+        entries:
+          - reference-id: CM-2
+          - reference-id: PL-2
+          - reference-id: PL-8
+          - reference-id: SA-15
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -91,53 +91,53 @@ controls:
       defect fixes and improvements.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-B-3
-          - R-B-1+
-          - R-B-1
-          - R-B-2
-          - R-S-2
+        entries:
+          - reference-id: B-B-3
+          - reference-id: R-B-1+
+          - reference-id: R-B-1
+          - reference-id: R-B-2
+          - reference-id: R-S-2
       - reference-id: CRA
-        identifiers:
-          - 1.2c
-          - 1.2l
-          - 2.1
-          - 2.2
-          - 2.5
-          - 2.6
+        entries:
+          - reference-id: 1.2c
+          - reference-id: 1.2l
+          - reference-id: 2.1
+          - reference-id: 2.2
+          - reference-id: 2.5
+          - reference-id: 2.6
       - reference-id: SSDF
-        identifiers:
-          - PW.1.2
-          - RV.1.1
-          - RV.2.1
-          - RV.1.2
+        entries:
+          - reference-id: PW.1.2
+          - reference-id: RV.1.1
+          - reference-id: RV.2.1
+          - reference-id: RV.1.2
       - reference-id: CSF
-        identifiers:
-          - RS.MA-02
-          - GV.RM-05
+        entries:
+          - reference-id: RS.MA-02
+          - reference-id: GV.RM-05
       - reference-id: ISO-18974
-        identifiers:
-          - 4.2.1
+        entries:
+          - reference-id: 4.2.1
       - reference-id: SAMM
-        identifiers:
-          - Implementation -Defect Management -Defect Tracking Lvl1
-          - Implementation -Defect Management -Defect Tracking Lvl2
+        entries:
+          - reference-id: Implementation -Defect Management -Defect Tracking Lvl1
+          - reference-id: Implementation -Defect Management -Defect Tracking Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 6.3.2
-          - 6.3.3
-          - 6.5.1
-          - 6.5.2
-          - 12.10.2
+        entries:
+          - reference-id: 6.3.2
+          - reference-id: 6.3.3
+          - reference-id: 6.5.1
+          - reference-id: 6.5.2
+          - reference-id: 12.10.2
       - reference-id: UKSSCOP
-        identifiers:
-          - 1.1
-          - 1.3
+        entries:
+          - reference-id: 1.1
+          - reference-id: 1.3
       - reference-id: 800-161
-        identifiers:
-          - IR-6
-          - SI-4
-          - SI-5          
+        entries:
+          - reference-id: IR-6
+          - reference-id: SI-4
+          - reference-id: SI-5          
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -166,52 +166,52 @@ controls:
       unauthorized versions of the software.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - CC-B-8
+        entries:
+          - reference-id: CC-B-8
       - reference-id: CRA
-        identifiers:
-          - 1.2d
+        entries:
+          - reference-id: 1.2d
       - reference-id: SSDF
-        identifiers:
-          - PO.4.2
-          - PS.2
-          - PS.2.1
-          - PS.3.1
-          - RV.1.3
+        entries:
+          - reference-id: PO.4.2
+          - reference-id: PS.2
+          - reference-id: PS.2.1
+          - reference-id: PS.3.1
+          - reference-id: RV.1.3
       - reference-id: OpenCRE
-        identifiers:
-          - 171-222
+        entries:
+          - reference-id: 171-222
       - reference-id: PSSCRM
-        identifiers:
-          - G1.3
-          - G2.5
-          - P1.2
-          - P3.1
-          - P3.2
-          - P3.3
-          - E2.6
+        entries:
+          - reference-id: G1.3
+          - reference-id: G2.5
+          - reference-id: P1.2
+          - reference-id: P3.1
+          - reference-id: P3.2
+          - reference-id: P3.3
+          - reference-id: E2.6
       - reference-id: PCIDSS
-        identifiers:
-          - 3.1.1
-          - 3.5.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.2.1
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
+        entries:
+          - reference-id: 3.1.1
+          - reference-id: 3.5.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.2.1
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.1
+        entries:
+          - reference-id: 3.1
       - reference-id: 800-161
-        identifiers:
-          - CM-2
-          - IR-1
-          - MP-1
-          - SA-15
-          - SI-7
-          - SI-7(14)          
+        entries:
+          - reference-id: CM-2
+          - reference-id: IR-1
+          - reference-id: MP-1
+          - reference-id: SA-15
+          - reference-id: SI-7
+          - reference-id: SI-7(14)          
     assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
@@ -253,44 +253,44 @@ controls:
       ensure the continued functionality and security of their systems.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - R-B-3
+        entries:
+          - reference-id: R-B-3
       - reference-id: SSDF
-        identifiers:
-          - PO.4.2
-          - PS.3.1
-          - RV.1.3
+        entries:
+          - reference-id: PO.4.2
+          - reference-id: PS.3.1
+          - reference-id: RV.1.3
       - reference-id: ISO-18974
-        identifiers:
-          - 4.1
-          - 4.3.1
+        entries:
+          - reference-id: 4.1
+          - reference-id: 4.3.1
       - reference-id: PSSCRM
-        identifiers:
-          - E1.6
+        entries:
+          - reference-id: E1.6
       - reference-id: SAMM
-        identifiers:
-          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+        entries:
+          - reference-id: Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
       - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 3.1.1
-          - 3.2.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.3.3
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
+        entries:
+          - reference-id: 2.1.1
+          - reference-id: 3.1.1
+          - reference-id: 3.2.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.3.3
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
       - reference-id: UKSSCOP
-        identifiers:
-          - 4.1
-          - 4.2
+        entries:
+          - reference-id: 4.1
+          - reference-id: 4.2
       - reference-id: 800-161
-        identifiers:
-          - PL-1
-          - PL-2
-          - SI-4          
+        entries:
+          - reference-id: PL-1
+          - reference-id: PL-2
+          - reference-id: SI-4          
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -318,45 +318,45 @@ controls:
       alternative solutions or alternative means of support for the project.
     guideline-mappings:
       - reference-id: CRA
-        identifiers:
-          - 1.2c
-          - 2.6
+        entries:
+          - reference-id: 1.2c
+          - reference-id: 2.6
       - reference-id: ISO-18974
-        identifiers:
-          - 4.1.1
-          - 4.3.1
+        entries:
+          - reference-id: 4.1.1
+          - reference-id: 4.3.1
       - reference-id: OpenCRE
-        identifiers:
-          - 673-475
-          - 053-751
+        entries:
+          - reference-id: 673-475
+          - reference-id: 053-751
       - reference-id: PSSCRM
-        identifiers:
-          - E1.6
+        entries:
+          - reference-id: E1.6
       - reference-id: SAMM
-        identifiers:
-          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
-          - Operations -Operational Management -System Decommissioning -Legacy Management Lvl2
+        entries:
+          - reference-id: Operations -Operational Management -System Decommissioning -Legacy Management Lvl1
+          - reference-id: Operations -Operational Management -System Decommissioning -Legacy Management Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 3.1.1
-          - 3.2.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.3.2
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
+        entries:
+          - reference-id: 3.1.1
+          - reference-id: 3.2.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.3.2
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.5
-          - 4.1
+        entries:
+          - reference-id: 3.5
+          - reference-id: 4.1
       - reference-id: 800-161
-        identifiers:
-          - PL-1
-          - PL-2
-          - SI-4
-          - SI-5          
+        entries:
+          - reference-id: PL-1
+          - reference-id: PL-2
+          - reference-id: SI-4
+          - reference-id: SI-5          
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -381,58 +381,58 @@ controls:
       that are required necessary for the software to function.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - A-S-1
+        entries:
+          - reference-id: A-S-1
       - reference-id: CRA
-        identifiers:
-          - 2.1
+        entries:
+          - reference-id: 2.1
       - reference-id: OpenCRE
-        identifiers:
-          - 613-286
-          - 053-751
+        entries:
+          - reference-id: 613-286
+          - reference-id: 053-751
       - reference-id: Scorecard
-        identifiers:
-          - Pinned-Dependencies
+        entries:
+          - reference-id: Pinned-Dependencies
       - reference-id: PSSCRM
-        identifiers:
-          - G1.4
-          - G2.4
-          - P3.1
-          - P3.2
-          - P3.4
+        entries:
+          - reference-id: G1.4
+          - reference-id: G2.4
+          - reference-id: P3.1
+          - reference-id: P3.2
+          - reference-id: P3.4
       - reference-id: SAMM
-        identifiers:
-          - Design -Security Requirements -Supplier Security Lvl2
+        entries:
+          - reference-id: Design -Security Requirements -Supplier Security Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 3.1.1
-          - 4.1.1
-          - 5.1.1
-          - 6.1.1
-          - 6.3.2
-          - 6.4.3
-          - 7.1.1
-          - 8.1.1
-          - 11.1.1
-          - 12.5.2
+        entries:
+          - reference-id: 2.1.1
+          - reference-id: 3.1.1
+          - reference-id: 4.1.1
+          - reference-id: 5.1.1
+          - reference-id: 6.1.1
+          - reference-id: 6.3.2
+          - reference-id: 6.4.3
+          - reference-id: 7.1.1
+          - reference-id: 8.1.1
+          - reference-id: 11.1.1
+          - reference-id: 12.5.2
       - reference-id: UKSSCOP
-        identifiers:
-          - 1.2
-          - 3.3
+        entries:
+          - reference-id: 1.2
+          - reference-id: 3.3
       - reference-id: 800-161
-        identifiers:
-          - CA-7
-          - CM-7(5)
-          - CM-8
-          - PM-30
-          - RA-3(1)
-          - SA-11
-          - SI-4
-          - SR-3
-          - SR-5
-          - SR-6
-          - SR-7          
+        entries:
+          - reference-id: CA-7
+          - reference-id: CM-7(5)
+          - reference-id: CM-8
+          - reference-id: PM-30
+          - reference-id: RA-3(1)
+          - reference-id: SA-11
+          - reference-id: SI-4
+          - reference-id: SR-3
+          - reference-id: SR-5
+          - reference-id: SR-6
+          - reference-id: SR-7          
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |

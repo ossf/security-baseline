@@ -115,7 +115,7 @@ For more information on the project and to make contributions, visit the [GitHub
 #### External Framework Mappings
 {{ if  .GuidelineMappings }}
   {{ range .GuidelineMappings }}
-  - **{{ .ReferenceId | addLinks }}**: {{ range $index, $id := .Identifiers }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
+  - **{{ .ReferenceId | addLinks }}**: {{ range $index, $id := .Entries }}{{ if $index }}, {{ end }}{{ $id }}{{ end }}
   {{- end }}
 {{ end }}
 
