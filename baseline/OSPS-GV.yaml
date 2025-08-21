@@ -1,273 +1,275 @@
-title: Governance
-description: |
-  Governance focuses on the policies and
-  procedures that guide the project's decision-making
-  and community interactions. These controls help ensure
-  that the project is well positioned to respond to
-  both threats and opportunities.
-controls:
-  - id: OSPS-GV-01
-    title: |
-      The project documentation MUST include the roles and responsibilities
-      for members of the project.
-    objective: |
-      Documenting project roles and responsibilities helps project participants,
-      potential contributors, and downstream consumers have an accurate
-      understanding of who is working on the project and what areas of authority
-      they may have.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-S-3
-          - B-S-4
-      - reference-id: OpenCRE
-        identifiers:
-          - 013-021
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.3
-          - E3.1
-          - E3.3
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.1.2
-          - 3.1.1
-          - 3.1.2
-          - 4.1.1
-          - 4.1.2
-          - 5.1.1
-          - 5.1.2
-          - 6.1.1
-          - 6.1.2
-          - 6.5.4
-          - 7.1.1
-          - 7.1.2
-          - 8.1.1
-          - 8.1.2
-          - 11.1.1
-          - 11.1.2
-          - 12.1.3
-          - 12.5.2
-      - reference-id: 800-161
-        identifiers:
-          - AC-2
-          - AC-3
-          - IA-2
-          - PL-1
-          - PL-4
-          - PM-30          
-    assessment-requirements:
-      - id: OSPS-GV-01.01
-        text: |
-          While active, the project documentation MUST include a list of
-          project members with access to sensitive resources.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Document project participants and their roles through such artifacts
-          as members.md, governance.md, maintainers.md, or similar file within
-          the source code repository of the project.
-          This may be as simple as including names or account handles in a list
-          of maintainers, or more complex depending on the project's governance.
-      - id: OSPS-GV-01.02
-        text: |
-          While active, the project documentation MUST include descriptions of
-          the roles and responsibilities for members of the project.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Document project participants and their roles through such artifacts
-          as members.md, governance.md, maintainers.md, or similar file within
-          the source code repository of the project.
+control-families:
+  - id: GV
+    title: Governance
+    description: |
+      Governance focuses on the policies and
+      procedures that guide the project's decision-making
+      and community interactions. These controls help ensure
+      that the project is well positioned to respond to
+      both threats and opportunities.
+    controls:
+      - id: OSPS-GV-01
+        title: |
+          The project documentation MUST include the roles and responsibilities
+          for members of the project.
+        objective: |
+          Documenting project roles and responsibilities helps project participants,
+          potential contributors, and downstream consumers have an accurate
+          understanding of who is working on the project and what areas of authority
+          they may have.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-S-3
+              - reference-id: B-S-4
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 013-021
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.3
+              - reference-id: E3.1
+              - reference-id: E3.3
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.1.2
+              - reference-id: 3.1.1
+              - reference-id: 3.1.2
+              - reference-id: 4.1.1
+              - reference-id: 4.1.2
+              - reference-id: 5.1.1
+              - reference-id: 5.1.2
+              - reference-id: 6.1.1
+              - reference-id: 6.1.2
+              - reference-id: 6.5.4
+              - reference-id: 7.1.1
+              - reference-id: 7.1.2
+              - reference-id: 8.1.1
+              - reference-id: 8.1.2
+              - reference-id: 11.1.1
+              - reference-id: 11.1.2
+              - reference-id: 12.1.3
+              - reference-id: 12.5.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-2
+              - reference-id: AC-3
+              - reference-id: IA-2
+              - reference-id: PL-1
+              - reference-id: PL-4
+              - reference-id: PM-30          
+        assessment-requirements:
+          - id: OSPS-GV-01.01
+            text: |
+              While active, the project documentation MUST include a list of
+              project members with access to sensitive resources.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Document project participants and their roles through such artifacts
+              as members.md, governance.md, maintainers.md, or similar file within
+              the source code repository of the project.
+              This may be as simple as including names or account handles in a list
+              of maintainers, or more complex depending on the project's governance.
+          - id: OSPS-GV-01.02
+            text: |
+              While active, the project documentation MUST include descriptions of
+              the roles and responsibilities for members of the project.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Document project participants and their roles through such artifacts
+              as members.md, governance.md, maintainers.md, or similar file within
+              the source code repository of the project.
 
-  - id: OSPS-GV-02
-    title: |
-      The project MUST have one or more mechanisms for public discussions
-      about proposed changes and usage obstacles.
-    objective: |
-      Encourages open communication and collaboration within the project
-      community, enabling users to provide feedback and discuss proposed changes
-      or usage challenges.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-3
-          - B-B-12
-      - reference-id: CRA
-        identifiers:
-          - 1.2l
-          - 2.3
-          - 2.4
-          - 2.6
-      - reference-id: SSDF
-        identifiers:
-          - PS.3
-          - PW.1.2
-      - reference-id: PCIDSS
-        identifiers:
-          - 12.5.2
-      - reference-id: 800-161
-        identifiers:
-          - AC-21
-          - AU-6
-          - PL-1          
-    assessment-requirements:
-      - id: OSPS-GV-02.01
-        text: |
-          While active, the project MUST have one or more mechanisms for public
-          discussions about proposed changes and usage obstacles.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Establish one or more mechanisms for public discussions within the
-          project, such as mailing lists, instant messaging, or issue trackers,
-          to facilitate open communication and feedback.
+      - id: OSPS-GV-02
+        title: |
+          The project MUST have one or more mechanisms for public discussions
+          about proposed changes and usage obstacles.
+        objective: |
+          Encourages open communication and collaboration within the project
+          community, enabling users to provide feedback and discuss proposed changes
+          or usage challenges.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-3
+              - reference-id: B-B-12
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2l
+              - reference-id: 2.3
+              - reference-id: 2.4
+              - reference-id: 2.6
+          - reference-id: SSDF
+            entries:
+              - reference-id: PS.3
+              - reference-id: PW.1.2
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 12.5.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-21
+              - reference-id: AU-6
+              - reference-id: PL-1          
+        assessment-requirements:
+          - id: OSPS-GV-02.01
+            text: |
+              While active, the project MUST have one or more mechanisms for public
+              discussions about proposed changes and usage obstacles.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Establish one or more mechanisms for public discussions within the
+              project, such as mailing lists, instant messaging, or issue trackers,
+              to facilitate open communication and feedback.
 
-  - id: OSPS-GV-03
-    title: |
-      The project documentation MUST include an explanation of the
-      contribution process.
-    objective: |
-      Provide guidance to new contributors on how to participate in the project,
-      outlining the steps required to submit changes or enhancements to the
-      project's codebase.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-4
-          - B-S-3
-          - B-B-4+
-          - R-B-1
-          - Q-G-2
-      - reference-id: CRA
-        identifiers:
-          - 1.2l
-          - 2.4
-      - reference-id: SSDF
-        identifiers:
-          - PW.1.2
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.2
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.4
-          - P2.2
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 6.5.4
-          - 8.2.1
-          - 12.5.2
-      - reference-id: 800-161
-        identifiers:
-          - AC-3
-          - AC-20
-          - PL-1          
-    assessment-requirements:
-      - id: OSPS-GV-03.01
-        text: |
-          While active, the project documentation MUST include an explanation
-          of the contribution process.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Create a CONTRIBUTING.md or CONTRIBUTING/ directory to outline the
-          contribution process including the steps for submitting changes, and
-          engaging with the project maintainers.
-      - id: OSPS-GV-03.02
-        text: |
-          While active, the project documentation MUST include a guide for code
-          contributors that includes requirements for acceptable contributions.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Extend the CONTRIBUTING.md or CONTRIBUTING/ contents in the project
-          documentation to outline the requirements for acceptable
-          contributions, including coding standards, testing requirements, and
-          submission guidelines for code contributors. It is recommended that
-          this guide is the source of truth for both contributors and approvers.
+      - id: OSPS-GV-03
+        title: |
+          The project documentation MUST include an explanation of the
+          contribution process.
+        objective: |
+          Provide guidance to new contributors on how to participate in the project,
+          outlining the steps required to submit changes or enhancements to the
+          project's codebase.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-4
+              - reference-id: B-S-3
+              - reference-id: B-B-4+
+              - reference-id: R-B-1
+              - reference-id: Q-G-2
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2l
+              - reference-id: 2.4
+          - reference-id: SSDF
+            entries:
+              - reference-id: PW.1.2
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.2
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.4
+              - reference-id: P2.2
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.1.1
+              - reference-id: 6.5.4
+              - reference-id: 8.2.1
+              - reference-id: 12.5.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-3
+              - reference-id: AC-20
+              - reference-id: PL-1          
+        assessment-requirements:
+          - id: OSPS-GV-03.01
+            text: |
+              While active, the project documentation MUST include an explanation
+              of the contribution process.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Create a CONTRIBUTING.md or CONTRIBUTING/ directory to outline the
+              contribution process including the steps for submitting changes, and
+              engaging with the project maintainers.
+          - id: OSPS-GV-03.02
+            text: |
+              While active, the project documentation MUST include a guide for code
+              contributors that includes requirements for acceptable contributions.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Extend the CONTRIBUTING.md or CONTRIBUTING/ contents in the project
+              documentation to outline the requirements for acceptable
+              contributions, including coding standards, testing requirements, and
+              submission guidelines for code contributors. It is recommended that
+              this guide is the source of truth for both contributors and approvers.
 
-  - id: OSPS-GV-04
-    title: |
-      The project documentation MUST have a policy that code contributors
-      are reviewed prior to granting escalated permissions to sensitive
-      resources.
-    objective: |
-      Ensure that code contributors are vetted and reviewed before being granted
-      elevated permissions to sensitive resources within the project, reducing
-      the risk of unauthorized access or misuse.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-5
-          - B-S-3
-          - B-B-4+
-          - Q-G-2
-      - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2l
-          - 2.1
-          - 2.2
-          - 2.5
-          - 2.6
-      - reference-id: SSDF
-        identifiers:
-          - PO.2
-          - PO.3.2
-      - reference-id: CSF
-        identifiers:
-          - PR.AA-02
-          - PR.AA-05
-      - reference-id: OpenCRE
-        identifiers:
-          - 123-124
-          - 152-725
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.2
-      - reference-id: PSSCRM
-        identifiers:
-          - E3.1
-          - E3.3
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 6.5.4
-          - 8.2.1
-          - 8.2.2
-      - reference-id: 800-161
-        identifiers:
-          - AC-2
-          - AC-3
-          - AC-4(21)
-          - AC-5
-          - AC-6
-          - AC-20
-          - CM-7
-          - IR-4(6)
-          - PM-30
-          - SI-4          
-    assessment-requirements:
-      - id: OSPS-GV-04.01
-        text: |
-          While active, the project documentation MUST have a policy that code
-          contributors are reviewed prior to granting escalated permissions to
-          sensitive resources.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Publish an enforceable policy in the project documentation that
-          requires code contributors to be reviewed and approved before being
-          granted escalated permissions to sensitive resources, such as merge
-          approval or access to secrets. It is recommended that vetting includes
-          establishing a justifiable lineage of identity such as confirming the
-          contributor's association with a known trusted organization.
+      - id: OSPS-GV-04
+        title: |
+          The project documentation MUST have a policy that code contributors
+          are reviewed prior to granting escalated permissions to sensitive
+          resources.
+        objective: |
+          Ensure that code contributors are vetted and reviewed before being granted
+          elevated permissions to sensitive resources within the project, reducing
+          the risk of unauthorized access or misuse.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-5
+              - reference-id: B-S-3
+              - reference-id: B-B-4+
+              - reference-id: Q-G-2
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2d
+              - reference-id: 1.2l
+              - reference-id: 2.1
+              - reference-id: 2.2
+              - reference-id: 2.5
+              - reference-id: 2.6
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.2
+              - reference-id: PO.3.2
+          - reference-id: CSF
+            entries:
+              - reference-id: PR.AA-02
+              - reference-id: PR.AA-05
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 123-124
+              - reference-id: 152-725
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.2
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: E3.1
+              - reference-id: E3.3
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.1.1
+              - reference-id: 6.5.4
+              - reference-id: 8.2.1
+              - reference-id: 8.2.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-2
+              - reference-id: AC-3
+              - reference-id: AC-4(21)
+              - reference-id: AC-5
+              - reference-id: AC-6
+              - reference-id: AC-20
+              - reference-id: CM-7
+              - reference-id: IR-4(6)
+              - reference-id: PM-30
+              - reference-id: SI-4          
+        assessment-requirements:
+          - id: OSPS-GV-04.01
+            text: |
+              While active, the project documentation MUST have a policy that code
+              contributors are reviewed prior to granting escalated permissions to
+              sensitive resources.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Publish an enforceable policy in the project documentation that
+              requires code contributors to be reviewed and approved before being
+              granted escalated permissions to sensitive resources, such as merge
+              approval or access to secrets. It is recommended that vetting includes
+              establishing a justifiable lineage of identity such as confirming the
+              contributor's association with a known trusted organization.
