@@ -18,45 +18,45 @@ controls:
       accessing privileged resources.
     guideline-mappings:
       - reference-id: CRA
-        identifiers:
-          - 1.2f
+        entries:
+          - reference-id: 1.2f
       - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PO.5.2
-          - PS.1
-          - PS.2
+        entries:
+          - reference-id: PO.3.2
+          - reference-id: PO.5.2
+          - reference-id: PS.1
+          - reference-id: PS.2
       - reference-id: CSF
-        identifiers:
-          - PR.AA-02
+        entries:
+          - reference-id: PR.AA-02
       - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 357-352
+        entries:
+          - reference-id: 486-813
+          - reference-id: 124-564
+          - reference-id: 357-352
       - reference-id: SLSA
-        identifiers:
-          - Choose an appropriate build platform
+        entries:
+          - reference-id: Choose an appropriate build platform
       - reference-id: PSSCRM
-        identifiers:
-          - P2.3
-          - P3.2
-          - P3.5
-          - E2.4
-          - E2.5
-          - D2.2
+        entries:
+          - reference-id: P2.3
+          - reference-id: P3.2
+          - reference-id: P3.5
+          - reference-id: E2.4
+          - reference-id: E2.5
+          - reference-id: D2.2
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 6.4.1
+        entries:
+          - reference-id: 2.2.1
+          - reference-id: 6.4.1
       - reference-id: 800-161
-        identifiers:
-          - AC-3
-          - AC-4
-          - AC-4(21)
-          - CM-5
-          - CM-7
-          - SI-7         
+        entries:
+          - reference-id: AC-3
+          - reference-id: AC-4
+          - reference-id: AC-4(21)
+          - reference-id: CM-5
+          - reference-id: CM-7
+          - reference-id: SI-7
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
@@ -88,45 +88,45 @@ controls:
       over time.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - CC-B-5
-          - CC-B-6
-          - CC-B-7
+        entries:
+          - reference-id: CC-B-5
+          - reference-id: CC-B-6
+          - reference-id: CC-B-7
       - reference-id: CRA
-        identifiers:
-          - 1.2f
+        entries:
+          - reference-id: 1.2f
       - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PS.1
-          - PS.2
-          - PS.3
+        entries:
+          - reference-id: PO.3.2
+          - reference-id: PS.1
+          - reference-id: PS.2
+          - reference-id: PS.3
       - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
+        entries:
+          - reference-id: 486-813
+          - reference-id: 124-564
       - reference-id: SLSA
-        identifiers:
-          - Follow a consistent build process
-          - Provenance generation- Exists, Authentic
+        entries:
+          - reference-id: Follow a consistent build process
+          - reference-id: Provenance generation- Exists, Authentic
       - reference-id: PSSCRM
-        identifiers:
-          - G1.4
-          - E1.2
-          - E2.1
-          - E2.6
+        entries:
+          - reference-id: G1.4
+          - reference-id: E1.2
+          - reference-id: E2.1
+          - reference-id: E2.6
       - reference-id: PCIDSS
-        identifiers:
-          - 6.4.3
+        entries:
+          - reference-id: 6.4.3
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.1
+        entries:
+          - reference-id: 3.1
       - reference-id: 800-161
-        identifiers: 
-          - IA-4
-          - SA-15
-          - SI-7
-          - SR-4          
+        entries:
+          - reference-id: IA-4
+          - reference-id: SA-15
+          - reference-id: SI-7
+          - reference-id: SR-4
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -159,51 +159,51 @@ controls:
       development, reducing the risk of eavesdropping or data tampering.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - B-B-11
+        entries:
+          - reference-id: B-B-11
       - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2e
-          - 1.2f
-          - 1.2i
-          - 1.2j
-          - 1.2k
+        entries:
+          - reference-id: 1.2d
+          - reference-id: 1.2e
+          - reference-id: 1.2f
+          - reference-id: 1.2i
+          - reference-id: 1.2j
+          - reference-id: 1.2k
       - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PO.5.2
-          - PS.1
-          - PS.2
+        entries:
+          - reference-id: PO.3.2
+          - reference-id: PO.5.2
+          - reference-id: PS.1
+          - reference-id: PS.2
       - reference-id: OpenCRE
-        identifiers:
-          - 483-813
-          - 124-564
-          - 263-184
+        entries:
+          - reference-id: 483-813
+          - reference-id: 124-564
+          - reference-id: 263-184
       - reference-id: SLSA
-        identifiers:
-          - Choose an appropriate build platform
+        entries:
+          - reference-id: Choose an appropriate build platform
       - reference-id: PSSCRM
-        identifiers:
-          - E1.1
-          - E2.2
-          - E2.4
-          - E2.5
+        entries:
+          - reference-id: E1.1
+          - reference-id: E2.2
+          - reference-id: E2.4
+          - reference-id: E2.5
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 2.2.7
-          - 4.2.1
-          - 4.2.2
-          - 6.4.1
-          - 8.3.2
+        entries:
+          - reference-id: 2.2.1
+          - reference-id: 2.2.7
+          - reference-id: 4.2.1
+          - reference-id: 4.2.2
+          - reference-id: 6.4.1
+          - reference-id: 8.3.2
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.1
+        entries:
+          - reference-id: 3.1
       - reference-id: 800-161
-        identifiers: 
-          - AC-4
-          - AC-4(21)          
+        entries:
+          - reference-id: AC-4
+          - reference-id: AC-4(21)
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -241,72 +241,72 @@ controls:
       improvements included in each release.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - CC-B-8
-          - CC-B-9
-          - Q-B-7
-          - A-B-1
-          - A-S-1
+        entries:
+          - reference-id: CC-B-8
+          - reference-id: CC-B-9
+          - reference-id: Q-B-7
+          - reference-id: A-B-1
+          - reference-id: A-S-1
       - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2f
-          - 1.2h
-          - 1.2j
-          - 1.2l
-          - 2.5
+        entries:
+          - reference-id: 1.2d
+          - reference-id: 1.2f
+          - reference-id: 1.2h
+          - reference-id: 1.2j
+          - reference-id: 1.2l
+          - reference-id: 2.5
       - reference-id: SSDF
-        identifiers:
-          - PS.1
-          - PS.2
-          - PS.3
-          - PW.1.2
+        entries:
+          - reference-id: PS.1
+          - reference-id: PS.2
+          - reference-id: PS.3
+          - reference-id: PW.1.2
       - reference-id: OpenCRE
-        identifiers:
-          - 483-813
-          - 068-486
-          - 124-564
-          - 757-271
-          - 347-352
-          - 263-184
-          - 208-355
-          - 745-356
-          - 732-148
+        entries:
+          - reference-id: 483-813
+          - reference-id: 068-486
+          - reference-id: 124-564
+          - reference-id: 757-271
+          - reference-id: 347-352
+          - reference-id: 263-184
+          - reference-id: 208-355
+          - reference-id: 745-356
+          - reference-id: 732-148
       - reference-id: SLSA
-        identifiers:
-          - Choose an appropriate build platform
-          - Follow a consistent build process
-          - Build platform - Isolation strength - isolated
+        entries:
+          - reference-id: Choose an appropriate build platform
+          - reference-id: Follow a consistent build process
+          - reference-id: Build platform - Isolation strength - isolated
       - reference-id: PSSCRM
-        identifiers:
-          - G1.4
-          - E2.1
-          - E2.4
-          - E2.5
-          - E3.1
-          - E3.6
+        entries:
+          - reference-id: G1.4
+          - reference-id: E2.1
+          - reference-id: E2.4
+          - reference-id: E2.5
+          - reference-id: E3.1
+          - reference-id: E3.6
       - reference-id: PCIDSS
-        identifiers:
-          - 6.2.1
-          - 6.4.1
-          - 6.5.1
-          - 6.5.2
-          - 10.2.2
+        entries:
+          - reference-id: 6.2.1
+          - reference-id: 6.4.1
+          - reference-id: 6.5.1
+          - reference-id: 6.5.2
+          - reference-id: 10.2.2
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.1
-          - 3.5
+        entries:
+          - reference-id: 3.1
+          - reference-id: 3.5
       - reference-id: 800-161
-        identifiers: 
-          - AU-2
-          - AU-6
-          - AU-10
-          - CM-5
-          - CM-6
-          - MA-1
-          - MA-8
-          - SI-4
-          - SI-5          
+        entries:
+          - reference-id: AU-2
+          - reference-id: AU-6
+          - reference-id: AU-10
+          - reference-id: CM-5
+          - reference-id: CM-6
+          - reference-id: MA-1
+          - reference-id: MA-8
+          - reference-id: SI-4
+          - reference-id: SI-5
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -334,59 +334,59 @@ controls:
       issues or security vulnerabilities in the software.
     guideline-mappings:
       - reference-id: BPB
-        identifiers:
-          - Q-B-2
+        entries:
+          - reference-id: Q-B-2
       - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2d
-          - 1.2f
-          - 1.2h
-          - 1.2j
-          - 2.1
-          - 2.2
-          - 2.3
+        entries:
+          - reference-id: 1.2b
+          - reference-id: 1.2d
+          - reference-id: 1.2f
+          - reference-id: 1.2h
+          - reference-id: 1.2j
+          - reference-id: 2.1
+          - reference-id: 2.2
+          - reference-id: 2.3
       - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PS.1
-          - PS.2
+        entries:
+          - reference-id: PO.3.2
+          - reference-id: PS.1
+          - reference-id: PS.2
       - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 347-352
-          - 715-334
+        entries:
+          - reference-id: 486-813
+          - reference-id: 124-564
+          - reference-id: 347-352
+          - reference-id: 715-334
       - reference-id: SLSA
-        identifiers:
-          - Isolation strength - isolated
+        entries:
+          - reference-id: Isolation strength - isolated
       - reference-id: PSSCRM
-        identifiers:
-          - P3.1
-          - P3.5
-          - E2.2
-          - E2.3
-          - E2.4
-          - E2.5
+        entries:
+          - reference-id: P3.1
+          - reference-id: P3.5
+          - reference-id: E2.2
+          - reference-id: E2.3
+          - reference-id: E2.4
+          - reference-id: E2.5
       - reference-id: SAMM
-        identifiers:
-          - Implementation -Secure Build -Build Process Lvl2
+        entries:
+          - reference-id: Implementation -Secure Build -Build Process Lvl2
       - reference-id: PCIDSS
-        identifiers:
-          - 6.4.3
+        entries:
+          - reference-id: 6.4.3
       - reference-id: UKSSCOP
-        identifiers:
-          - 1.1
-          - 1.2
+        entries:
+          - reference-id: 1.1
+          - reference-id: 1.2
       - reference-id: 800-161
-        identifiers: 
-          - AC-4
-          - CM-2
-          - CM-7(4)
-          - CM-7(5)
-          - RA-5
-          - SA-15
-          - SR-3          
+        entries:
+          - reference-id: AC-4
+          - reference-id: CM-2
+          - reference-id: CM-7(4)
+          - reference-id: CM-7(5)
+          - reference-id: RA-5
+          - reference-id: SA-15
+          - reference-id: SR-3
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -410,47 +410,47 @@ controls:
       signed manifest including each asset's cryptographic hashes.
     guideline-mappings:
       - reference-id: SSDF
-        identifiers:
-          - PO.5.2
-          - PS.2
-          - PS.2.1
-          - PW.6.2
+        entries:
+          - reference-id: PO.5.2
+          - reference-id: PS.2
+          - reference-id: PS.2.1
+          - reference-id: PW.6.2
       - reference-id: Scorecard
-        identifiers:
-          - Signed-Releases
+        entries:
+          - reference-id: Signed-Releases
       - reference-id: SLSA
-        identifiers:
-          - Distribute provenance - Exists
+        entries:
+          - reference-id: Distribute provenance - Exists
       - reference-id: PSSCRM
-        identifiers:
-          - P1.2
-          - P3.2
-          - P3.3
-          - E2.1
-          - E2.2
-          - E2.6
+        entries:
+          - reference-id: P1.2
+          - reference-id: P3.2
+          - reference-id: P3.3
+          - reference-id: E2.1
+          - reference-id: E2.2
+          - reference-id: E2.6
       - reference-id: SAMM
-        identifiers:
-          - Implementation -Secure Deployment -Deployment Process Lvl3
+        entries:
+          - reference-id: Implementation -Secure Deployment -Deployment Process Lvl3
       - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 2.2.7
-          - 3.5.1
-          - 4.2.1
-          - 4.2.2
-          - 6.4.1
-          - 8.3.2
+        entries:
+          - reference-id: 2.2.1
+          - reference-id: 2.2.7
+          - reference-id: 3.5.1
+          - reference-id: 4.2.1
+          - reference-id: 4.2.2
+          - reference-id: 6.4.1
+          - reference-id: 8.3.2
       - reference-id: UKSSCOP
-        identifiers:
-          - 3.1
+        entries:
+          - reference-id: 3.1
       - reference-id: 800-161
-        identifiers: 
-          - AU-10
-          - MP-1
-          - SA-15
-          - SI-7
-          - SI-7(14)          
+        entries:
+          - reference-id: AU-10
+          - reference-id: MP-1
+          - reference-id: SA-15
+          - reference-id: SI-7
+          - reference-id: SI-7(14)
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
