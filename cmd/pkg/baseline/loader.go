@@ -9,9 +9,7 @@ import (
 	"path/filepath"
 
 	"github.com/goccy/go-yaml"
-	"github.com/revanite-io/sci/layer2"
-
-	"github.com/ossf/security-baseline/pkg/types"
+	"github.com/ossf/gemara/layer2"
 )
 
 const (
@@ -21,7 +19,15 @@ const (
 
 // Loader is an object that reads the baseline data
 type Loader struct {
-	DataPath string
+	layer2.Catalog
+	Lexicon []LexiconEntry
+}
+
+type LexiconEntry struct {
+	Term       string   `yaml:"term"`
+	Definition string   `yaml:"definition"`
+	Synonyms   []string `yaml:"synonyms"`
+	References []string `yaml:"references"`
 }
 
 func NewLoader() *Loader {
@@ -29,87 +35,45 @@ func NewLoader() *Loader {
 }
 
 // Load reads the baseline data and returns the representation types
-func (l *Loader) Load() (*types.Baseline, error) {
-	b := &types.Baseline{}
-
-	// Load the lexicon:
-	lexicon, err := l.loadLexicon()
+func (l *Loader) Load(dataPath string) error {
+	lexicon, err := loadLexicon(dataPath)
 	if err != nil {
-		return nil, fmt.Errorf("error reading lexicon: %w", err)
+		return fmt.Errorf("error reading lexicon: %w", err)
 	}
-	frameworks, err := l.loadFrameworks()
+	l.Lexicon = lexicon
+
+	dirFiles, err := os.ReadDir(dataPath)
 	if err != nil {
-		return nil, fmt.Errorf("error reading frameworks: %w", err)
+		return fmt.Errorf("error reading data path: %w", err)
 	}
-
-	b.Lexicon = lexicon
-	controlFamilies := []layer2.ControlFamily{}
-	familyIDs := map[string]string{}
-
-	for _, familyID := range types.ControlFamilies {
-		cf, err := l.loadControlFamily(familyID)
-		if err != nil {
-			return nil, fmt.Errorf("loading control family %s: %w", familyID, err)
+	var filepaths []string
+	for _, file := range dirFiles {
+		if file.Name() != LexiconFilename {
+			path := filepath.Join(dataPath, file.Name())
+			filepaths = append(filepaths, path)
 		}
-		familyIDs[cf.Title] = familyID
-		controlFamilies = append(controlFamilies, *cf)
 	}
-	b.ControlFamilyIDs = familyIDs
-	b.Catalog = layer2.Catalog{
-		ControlFamilies: controlFamilies,
-		Metadata: layer2.Metadata{
-			MappingReferences: frameworks,
-		},
+
+	err = l.LoadFiles(filepaths)
+	if err != nil {
+		return fmt.Errorf("Error loading baseline directory (%s)\n%w", dataPath, err)
 	}
-	return b, nil
+	return nil
 }
 
 // loadLexicon
-func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, LexiconFilename))
+func loadLexicon(dataPath string) ([]LexiconEntry, error) {
+	file, err := os.Open(filepath.Join(dataPath, LexiconFilename))
 	if err != nil {
 		return nil, fmt.Errorf("error opening file: %w", err)
 	}
 	defer file.Close() //nolint:errcheck
 
-	var lexicon []types.LexiconEntry
+	var lexicon []LexiconEntry
 
 	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
 	if err := decoder.Decode(&lexicon); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %w", err)
+		return nil, fmt.Errorf("error decoding YAML: %s\n %w", file.Name(), err)
 	}
 	return lexicon, nil
-}
-
-func (l *Loader) loadFrameworks() ([]layer2.MappingReference, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, FrameworksFilename))
-	if err != nil {
-		return nil, fmt.Errorf("error opening file: %w", err)
-	}
-	defer file.Close() //nolint:errcheck
-
-	var metadata layer2.Metadata
-
-	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
-	if err := decoder.Decode(&metadata); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %w", err)
-	}
-	return metadata.MappingReferences, nil
-}
-
-// loadControlFamily loads a ControlFamily definition from its YAML source
-func (l *Loader) loadControlFamily(familyID string) (*layer2.ControlFamily, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, fmt.Sprintf("OSPS-%s.yaml", familyID)))
-	if err != nil {
-		return nil, fmt.Errorf("error opening file: %w", err)
-	}
-	defer file.Close() //nolint:errcheck
-
-	controlFamily := &layer2.ControlFamily{}
-
-	decoder := yaml.NewDecoder(file, yaml.Strict())
-	if err := decoder.Decode(controlFamily); err != nil {
-		return nil, fmt.Errorf("error decoding %s YAML: %w", familyID, err)
-	}
-	return controlFamily, nil
 }

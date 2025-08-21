@@ -8,8 +8,6 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
-
-	"github.com/ossf/security-baseline/pkg/types"
 )
 
 func collapseNewlines(s string) string {
@@ -43,7 +41,7 @@ func isWrapped(text, matched string) bool {
 }
 
 // Function to add links by wrapping terms with square brackets
-func addLinks(lexicon []types.LexiconEntry, text, term string) string {
+func addLinks(lexicon []LexiconEntry, text, term string) string {
 	// Escape any special characters in the term to use in regex
 	escapedTerm := regexp.QuoteMeta(term)
 
@@ -67,7 +65,7 @@ func addLinks(lexicon []types.LexiconEntry, text, term string) string {
 }
 
 // Main function to apply the term replacements
-func addLinksTemplateFunction(lexicon []types.LexiconEntry, text string) string {
+func addLinksTemplateFunction(lexicon []LexiconEntry, text string) string {
 	// Iterate over the lexicon and replace terms with brackets
 	for _, entry := range lexicon {
 		text = addLinks(lexicon, text, entry.Term)

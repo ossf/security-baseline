@@ -60,17 +60,14 @@ func addValidate(parentCmd *cobra.Command) {
 
 			// Parse the data files
 			loader := baseline.NewLoader()
-			loader.DataPath = opts.baselinePath
-
-			bline, err := loader.Load()
+			err := loader.Load(opts.baselinePath)
 			if err != nil {
 				return err
 			}
 
 			// Generate the rendered version
-			validator := baseline.NewValidator()
-
-			if err = validator.Check(bline); err != nil {
+			err = loader.Validate()
+			if err != nil {
 				fmt.Fprint(os.Stderr, "\n❌ Error validating the baseline data:\n")
 				return err
 			}

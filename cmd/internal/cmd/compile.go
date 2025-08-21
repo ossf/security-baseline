@@ -87,16 +87,13 @@ func addCompile(parentCmd *cobra.Command) {
 
 			// Load the baseline data
 			loader := baseline.NewLoader()
-			loader.DataPath = opts.baselinePath
-
-			bline, err := loader.Load()
+			err := loader.Load(opts.baselinePath)
 			if err != nil {
 				return err
 			}
 
 			// Validate the data
-			validator := baseline.NewValidator()
-			err = validator.Check(bline)
+			err = loader.Validate()
 			if err != nil {
 				if opts.validate {
 					fmt.Fprint(os.Stderr, "\n❌ Error validating the baseline data:\n")
@@ -108,28 +105,18 @@ func addCompile(parentCmd *cobra.Command) {
 				fmt.Fprint(os.Stderr, "\n⚠️ Error validating the baseline data (still rendering)")
 			}
 
-			// Generate the rendered version
-			gen := baseline.NewGenerator()
-
 			if opts.outPath == "" {
 				fmt.Fprintf(os.Stderr, "\n⚠️  No output path specified. Not rendering Baseline.")
 			} else {
-				if err := gen.ExportMarkdown(bline, opts.templatePath, opts.outPath); err != nil {
+				if err := loader.ExportMarkdown(opts.templatePath, opts.outPath); err != nil {
 					return fmt.Errorf("writing markdown render: %w", err)
 				}
 				fmt.Printf("\n✅ Baseline rendered to %s\n", opts.outPath)
 			}
 
-			fmt.Printf("\nℹ️  Counts\n")
-			for _, family := range bline.Catalog.ControlFamilies {
-				fmt.Printf(" OSPS-%s: %d controls\n", bline.ControlFamilyIDs[family.Title], len(family.Controls))
-			}
-			fmt.Printf("\n+ %d mapped frameworks\n", len(bline.Catalog.Metadata.MappingReferences))
-			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))
-
 			// Print a checklist if they asked for it
 			if opts.checklistOutPath != "" {
-				if err := gen.ExportMarkdown(bline, opts.checklistTemplatePath, opts.checklistOutPath); err != nil {
+				if err := loader.ExportMarkdown(opts.checklistTemplatePath, opts.checklistOutPath); err != nil {
 					return fmt.Errorf("checklist creation: %w", err)
 				}
 
