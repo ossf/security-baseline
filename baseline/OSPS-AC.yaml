@@ -1,312 +1,314 @@
-title: Access Control
-description: |
-  Access Control focuses on the mechanisms and
-  policies that control access to the project's version
-  control system and CI/CD pipelines. These controls help
-  ensure that only authorized users can access sensitive
-  data, modify repository settings, or execute build and
-  release processes.
-controls:
-  - id: OSPS-AC-01
-    title: |
-      The project's version control system MUST require multi-factor
-      authentication for users modifying the project repository
-      settings or accessing sensitive data.
-    objective: |
-      Reduce the risk of account compromise or insider threats by requiring
-      multi-factor authentication for collaborators modifying the project
-      repository settings or accessing sensitive data.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - CC-G-1
-      - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2e
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PS.1
-          - PS.2
-      - reference-id: CSF
-        identifiers:
-          - PR.A-02
-          - PR.A-05
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 347-352
-          - 333-858
-          - 152-725
-          - 201-246
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.6
-          - P3.3
-          - E1.2
-          - E1.3
-          - E1.4
-          - E3.1
-      - reference-id: SAMM
-        identifiers:
-          - Operations -Environment Management -Configuration Hardening Lvl1
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 8.2.1
-          - 8.3.1
-      - reference-id: UKSSCOP
-        identifiers:
-          - 2.1
-      - reference-id: 800-161
-        identifiers:
-          - AC-4(21)
-          - AC-17
-          - CM-5
-          - CM-6
-          - IA-2
-          - IA-5         
-    assessment-requirements:
-      - id: OSPS-AC-01.01
-        text: |
-          When a user attempts to read or modify a sensitive resource in the project's
-          authoritative repository, the system MUST require the user to complete
-          a multi-factor authentication process.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Enforce multi-factor authentication for the project's version
-          control system, requiring collaborators to provide a second form of
-          authentication when accessing sensitive data or modifying repository
-          settings. Passkeys are acceptable for this control.
+control-families:
+  - id: AC
+    title: Access Control
+    description: |
+      Access Control focuses on the mechanisms and
+      policies that control access to the project's version
+      control system and CI/CD pipelines. These controls help
+      ensure that only authorized users can access sensitive
+      data, modify repository settings, or execute build and
+      release processes.
+    controls:
+      - id: OSPS-AC-01
+        title: |
+          The project's version control system MUST require multi-factor
+          authentication for users modifying the project repository
+          settings or accessing sensitive data.
+        objective: |
+          Reduce the risk of account compromise or insider threats by requiring
+          multi-factor authentication for collaborators modifying the project
+          repository settings or accessing sensitive data.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: CC-G-1
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2d
+              - reference-id: 1.2e
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+              - reference-id: PS.1
+              - reference-id: PS.2
+          - reference-id: CSF
+            entries:
+              - reference-id: PR.A-02
+              - reference-id: PR.A-05
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 347-352
+              - reference-id: 333-858
+              - reference-id: 152-725
+              - reference-id: 201-246
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.6
+              - reference-id: P3.3
+              - reference-id: E1.2
+              - reference-id: E1.3
+              - reference-id: E1.4
+              - reference-id: E3.1
+          - reference-id: SAMM
+            entries:
+              - reference-id: Operations -Environment Management -Configuration Hardening Lvl1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.2.1
+              - reference-id: 8.2.1
+              - reference-id: 8.3.1
+          - reference-id: UKSSCOP
+            entries:
+              - reference-id: 2.1
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-4(21)
+              - reference-id: AC-17
+              - reference-id: CM-5
+              - reference-id: CM-6
+              - reference-id: IA-2
+              - reference-id: IA-5         
+        assessment-requirements:
+          - id: OSPS-AC-01.01
+            text: |
+              When a user attempts to read or modify a sensitive resource in the project's
+              authoritative repository, the system MUST require the user to complete
+              a multi-factor authentication process.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Enforce multi-factor authentication for the project's version
+              control system, requiring collaborators to provide a second form of
+              authentication when accessing sensitive data or modifying repository
+              settings. Passkeys are acceptable for this control.
 
-  - id: OSPS-AC-02
-    title: |
-      The project's version control system MUST restrict collaborator
-      permissions to the lowest available privileges by default.
-    objective: |
-      Reduce the risk of unauthorized access to the project's repository by
-      limiting the permissions granted to new collaborators.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.2
-          - PO.3.2
-          - PS.1
-          - PS.2
-      - reference-id: CSF
-        identifiers:
-          - PR.AA-02
-          - PR.AA-05
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 802-056
-          - 368-633
-          - 152-725
-      - reference-id: PSSCRM
-        identifiers:
-          - P2.3
-          - E1.2
-          - E3.3
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-      - reference-id: UKSSCOP
-        identifiers:
-          - 2.1
-      - reference-id: 800-161
-        identifiers: 
-          - AC-2
-          - AC-3
-          - AC-4(21)
-          - AC-5
-          - AC-6
-          - CM-5
-          - CM-7         
-    assessment-requirements:
-      - id: OSPS-AC-02.01
-        text: |
-          When a new collaborator is added, the version control system MUST
-          require manual permission assignment, or restrict the collaborator
+      - id: OSPS-AC-02
+        title: |
+          The project's version control system MUST restrict collaborator
           permissions to the lowest available privileges by default.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Most public version control systems are configured in this manner.
-          Ensure the project's version control system always assigns the lowest
-          available permissions to collaborators by default when added, granting
-          additional permissions only when necessary.
+        objective: |
+          Reduce the risk of unauthorized access to the project's repository by
+          limiting the permissions granted to new collaborators.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.2
+              - reference-id: PO.3.2
+              - reference-id: PS.1
+              - reference-id: PS.2
+          - reference-id: CSF
+            entries:
+              - reference-id: PR.AA-02
+              - reference-id: PR.AA-05
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 802-056
+              - reference-id: 368-633
+              - reference-id: 152-725
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: P2.3
+              - reference-id: E1.2
+              - reference-id: E3.3
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.2.1
+          - reference-id: UKSSCOP
+            entries:
+              - reference-id: 2.1
+          - reference-id: 800-161
+            entries: 
+              - reference-id: AC-2
+              - reference-id: AC-3
+              - reference-id: AC-4(21)
+              - reference-id: AC-5
+              - reference-id: AC-6
+              - reference-id: CM-5
+              - reference-id: CM-7         
+        assessment-requirements:
+          - id: OSPS-AC-02.01
+            text: |
+              When a new collaborator is added, the version control system MUST
+              require manual permission assignment, or restrict the collaborator
+              permissions to the lowest available privileges by default.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Most public version control systems are configured in this manner.
+              Ensure the project's version control system always assigns the lowest
+              available permissions to collaborators by default when added, granting
+              additional permissions only when necessary.
 
-  - id: OSPS-AC-03
-    title: |
-      The project's version control system MUST prevent unintentional
-      modification of the primary branch.
-    objective: |
-      Reduce the risk of accidental changes or deletion of the primary branch
-      of the project's repository by preventing unintentional modification.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PS.1
-          - PS.2
-      - reference-id: CSF
-        identifiers:
-          - PR.A-02
-          - PR.A-05
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 152-725
-      - reference-id: Scorecard
-        identifiers:
-          - Branch-Protection
-      - reference-id: PSSCRM
-        identifiers:
-          - P3.2
-          - P3.5
-          - E1.5
-          - E3.1
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-      - reference-id: UKSSCOP
-        identifiers:
-          - 2.1
-          - 2.2
-      - reference-id: 800-161
-        identifiers: 
-          - AC-3
-          - AC-5
-          - CM-3
-          - CM-3(2)
-          - CM-5          
-    assessment-requirements:
-      - id: OSPS-AC-03.01
-        text: |
-          When a direct commit is attempted on the project's primary branch,
-          an enforcement mechanism MUST prevent the change from being applied.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          If the VCS is centralized, set branch protection on the primary branch
-          in the project's VCS. Alternatively, use a decentralized approach,
-          like the Linux kernel's, where changes are first proposed in another
-          repository, and merging changes into the primary repository requires a
-          specific separate act.
-      - id: OSPS-AC-03.02
-        text: |
-          When an attempt is made to delete the project's primary branch,
-          the version control system MUST treat this as a sensitive activity
-          and require explicit confirmation of intent.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Set branch protection on the primary branch in the project's version
-          control system to prevent deletion.
+      - id: OSPS-AC-03
+        title: |
+          The project's version control system MUST prevent unintentional
+          modification of the primary branch.
+        objective: |
+          Reduce the risk of accidental changes or deletion of the primary branch
+          of the project's repository by preventing unintentional modification.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+              - reference-id: PS.1
+              - reference-id: PS.2
+          - reference-id: CSF
+            entries:
+              - reference-id: PR.A-02
+              - reference-id: PR.A-05
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 152-725
+          - reference-id: Scorecard
+            entries:
+              - reference-id: Branch-Protection
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: P3.2
+              - reference-id: P3.5
+              - reference-id: E1.5
+              - reference-id: E3.1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.2.1
+          - reference-id: UKSSCOP
+            entries:
+              - reference-id: 2.1
+              - reference-id: 2.2
+          - reference-id: 800-161
+            entries: 
+              - reference-id: AC-3
+              - reference-id: AC-5
+              - reference-id: CM-3
+              - reference-id: CM-3(2)
+              - reference-id: CM-5          
+        assessment-requirements:
+          - id: OSPS-AC-03.01
+            text: |
+              When a direct commit is attempted on the project's primary branch,
+              an enforcement mechanism MUST prevent the change from being applied.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              If the VCS is centralized, set branch protection on the primary branch
+              in the project's VCS. Alternatively, use a decentralized approach,
+              like the Linux kernel's, where changes are first proposed in another
+              repository, and merging changes into the primary repository requires a
+              specific separate act.
+          - id: OSPS-AC-03.02
+            text: |
+              When an attempt is made to delete the project's primary branch,
+              the version control system MUST treat this as a sensitive activity
+              and require explicit confirmation of intent.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Set branch protection on the primary branch in the project's version
+              control system to prevent deletion.
 
-  - id: OSPS-AC-04
-    title: |
-      The project's permissions in CI/CD pipelines MUST follow the principle
-      of least privilege.
-    objective: |
-      Reduce the risk of unauthorized access to the project's build and release
-      processes by limiting the permissions granted to steps within the CI/CD
-      pipelines.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2d
-          - 1.2e
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.2
-          - PO.3.2
-          - PS.1
-          - PS.2
-      - reference-id: CSF
-        identifiers:
-          - PR.AA-02
-          - PR.AA-05
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 347-507
-          - 263-284
-          - 123-124
-      - reference-id: SLSA
-        identifiers:
-          - Producer - Choose an appropriate build platform
-          - Build platform - Isolation strength - Isolated
-      - reference-id: PSSCRM
-        identifiers:
-          - P3.2
-      - reference-id: SAMM
-        identifiers:
-          - Operations -Environment Management -Configuration Hardening Lvl1
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.2.1
-          - 8.2.1
-      - reference-id: UKSSCOP
-        identifiers:
-          - 2.1
-          - 2.2
-      - reference-id: 800-161
-        identifiers: 
-          - AC-3(8)
-          - AC-4
-          - AC-4(6)
-          - AC-6
-          - AC-20
-          - AC-20(1)
-          - CM-5
-          - CM-7          
-    assessment-requirements:
-      - id: OSPS-AC-04.01
-        text: |
-          When a CI/CD task is executed with no permissions specified, the
-          project's version control system MUST default to the lowest available
-          permissions for all activities in the pipeline.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's settings to assign the lowest available
-          permissions to new pipelines by default, granting additional
-          permissions only when necessary for specific tasks.
-      - id: OSPS-AC-04.02
-        text: |
-          When a job is assigned permissions in a CI/CD pipeline, the source
-          code or configuration MUST only assign the minimum privileges
-          necessary for the corresponding activity.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's CI/CD pipelines to assign the lowest available
-          permissions to users and services by default, elevating permissions
-          only when necessary for specific tasks. In some version control
-          systems, this may be possible at the organizational or repository
-          level. If not, set permissions at the top level of the pipeline.
+      - id: OSPS-AC-04
+        title: |
+          The project's permissions in CI/CD pipelines MUST follow the principle
+          of least privilege.
+        objective: |
+          Reduce the risk of unauthorized access to the project's build and release
+          processes by limiting the permissions granted to steps within the CI/CD
+          pipelines.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2d
+              - reference-id: 1.2e
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.2
+              - reference-id: PO.3.2
+              - reference-id: PS.1
+              - reference-id: PS.2
+          - reference-id: CSF
+            entries:
+              - reference-id: PR.AA-02
+              - reference-id: PR.AA-05
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 347-507
+              - reference-id: 263-284
+              - reference-id: 123-124
+          - reference-id: SLSA
+            entries:
+              - reference-id: Producer - Choose an appropriate build platform
+              - reference-id: Build platform - Isolation strength - Isolated
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: P3.2
+          - reference-id: SAMM
+            entries:
+              - reference-id: Operations -Environment Management -Configuration Hardening Lvl1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.2.1
+              - reference-id: 8.2.1
+          - reference-id: UKSSCOP
+            entries:
+              - reference-id: 2.1
+              - reference-id: 2.2
+          - reference-id: 800-161
+            entries: 
+              - reference-id: AC-3(8)
+              - reference-id: AC-4
+              - reference-id: AC-4(6)
+              - reference-id: AC-6
+              - reference-id: AC-20
+              - reference-id: AC-20(1)
+              - reference-id: CM-5
+              - reference-id: CM-7          
+        assessment-requirements:
+          - id: OSPS-AC-04.01
+            text: |
+              When a CI/CD task is executed with no permissions specified, the
+              project's version control system MUST default to the lowest available
+              permissions for all activities in the pipeline.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Configure the project's settings to assign the lowest available
+              permissions to new pipelines by default, granting additional
+              permissions only when necessary for specific tasks.
+          - id: OSPS-AC-04.02
+            text: |
+              When a job is assigned permissions in a CI/CD pipeline, the source
+              code or configuration MUST only assign the minimum privileges
+              necessary for the corresponding activity.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Configure the project's CI/CD pipelines to assign the lowest available
+              permissions to users and services by default, elevating permissions
+              only when necessary for specific tasks. In some version control
+              systems, this may be possible at the organizational or repository
+              level. If not, set permissions at the top level of the pipeline.

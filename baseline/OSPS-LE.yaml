@@ -1,195 +1,197 @@
-title: Legal
-description: |
-  Legal focuses on the policies and
-  procedures that govern the project's licensing
-  and intellectual property. These controls help
-  ensure that the project's source code is
-  distributed under a recognized and legally
-  enforceable open source software license,
-  reducing the risk of intellectual property
-  disputes or licensing violations.
-controls:
-  - id: OSPS-LE-01
-    title: |
-      The version control system MUST require all code contributors to assert
-      that they are legally authorized to make the associated contributions
-      on every commit.
-    objective: |
-      Ensure that code contributors are aware of and acknowledge their legal
-      responsibility for the contributions they make to the project, reducing
-      the risk of intellectual property disputes against the project.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-S-1
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PS.1
-          - PW.1.2
-          - PW.2.1
-      - reference-id: PSSCRM
-        identifiers:
-          - E3.1
-      - reference-id: PCIDSS
-        identifiers:
-          - 12.8.5
-      - reference-id: 800-161
-        identifiers:
-          - PL-4          
-    assessment-requirements:
-      - id: OSPS-LE-01.01
-        text: |
-          While active, the version control system MUST require all code
-          contributors to assert that they are legally authorized to make the
-          associated contributions on every commit.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Include a DCO in the project's repository, requiring code
-          contributors to assert that they are legally authorized to commit the
-          associated contributions on every commit. Use a status check to ensure
-          the assertion is made. A CLA also satisfies this requirement.
-          Some version control systems, such as GitHub, may include this in the
-          platform terms of service.
+control-families:
+  - id: LE
+    title: Legal
+    description: |
+      Legal focuses on the policies and
+      procedures that govern the project's licensing
+      and intellectual property. These controls help
+      ensure that the project's source code is
+      distributed under a recognized and legally
+      enforceable open source software license,
+      reducing the risk of intellectual property
+      disputes or licensing violations.
+    controls:
+      - id: OSPS-LE-01
+        title: |
+          The version control system MUST require all code contributors to assert
+          that they are legally authorized to make the associated contributions
+          on every commit.
+        objective: |
+          Ensure that code contributors are aware of and acknowledge their legal
+          responsibility for the contributions they make to the project, reducing
+          the risk of intellectual property disputes against the project.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-S-1
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+              - reference-id: PS.1
+              - reference-id: PW.1.2
+              - reference-id: PW.2.1
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: E3.1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 12.8.5
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-4          
+        assessment-requirements:
+          - id: OSPS-LE-01.01
+            text: |
+              While active, the version control system MUST require all code
+              contributors to assert that they are legally authorized to make the
+              associated contributions on every commit.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Include a DCO in the project's repository, requiring code
+              contributors to assert that they are legally authorized to commit the
+              associated contributions on every commit. Use a status check to ensure
+              the assertion is made. A CLA also satisfies this requirement.
+              Some version control systems, such as GitHub, may include this in the
+              platform terms of service.
 
-          It is understood that projects with a lengthy history prior to
-          adopting OSPS Baseline may not be able to retroactively enforce this
-          requirement.
+              It is understood that projects with a lengthy history prior to
+              adopting OSPS Baseline may not be able to retroactively enforce this
+              requirement.
 
-  - id: OSPS-LE-02
-    title: |
-      All licenses for the project MUST meet the OSI Open Source Definition
-      or the FSF Free Software Definition.
-    objective: |
-      Ensure that the project's source code is distributed under a recognized
-      and legally enforceable open source software license, providing clarity on
-      how the code can be used and shared by others.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-6
-          - B-B-7
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-      - reference-id: CSF
-        identifiers:
-          - GV.OC-03
-      - reference-id: Scorecard
-        identifiers:
-          - License
-      - reference-id: PSSCRM
-        identifiers:
-          - G1.2
-      - reference-id: PCIDSS
-        identifiers:
-          - 3.2.1
-      - reference-id: 800-161
-        identifiers:
-          - PL-4                 
-    assessment-requirements:
-      - id: OSPS-LE-02.01
-        text: |
-          While active, the license for the source code MUST meet the OSI Open
-          Source Definition or the FSF Free Software Definition.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Add a LICENSE file to the project's repo with a license that is an
-          approved license by the Open Source Initiative (OSI), or a free
-          license as approved by the Free Software Foundation (FSF). Examples of
-          such licenses include the MIT, BSD 2-clause, BSD 3-clause revised,
-          Apache 2.0, Lesser GNU General Public License (LGPL), and the GNU
-          General Public License (GPL). Releasing to the public domain meets
-          this control if there are no other encumbrances such as patents.
-      - id: OSPS-LE-02.02
-        text: |
-          While active, the license for the released software assets MUST meet
-          the OSI Open Source Definition or the FSF Free Software Definition.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          If a different license is included with released software assets,
-          ensure it is an approved license by the Open Source Initiative (OSI),
-          or a free license as approved by the Free Software Foundation (FSF).
-          Examples of such licenses include the MIT, BSD 2-clause, BSD 3-clause
-          revised, Apache 2.0, Lesser GNU General Public License (LGPL), and the
-          GNU General Public License (GPL). Note that the license for the
-          released software assets may be different than the source code.
+      - id: OSPS-LE-02
+        title: |
+          All licenses for the project MUST meet the OSI Open Source Definition
+          or the FSF Free Software Definition.
+        objective: |
+          Ensure that the project's source code is distributed under a recognized
+          and legally enforceable open source software license, providing clarity on
+          how the code can be used and shared by others.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-6
+              - reference-id: B-B-7
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+          - reference-id: CSF
+            entries:
+              - reference-id: GV.OC-03
+          - reference-id: Scorecard
+            entries:
+              - reference-id: License
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G1.2
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 3.2.1
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-4                 
+        assessment-requirements:
+          - id: OSPS-LE-02.01
+            text: |
+              While active, the license for the source code MUST meet the OSI Open
+              Source Definition or the FSF Free Software Definition.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Add a LICENSE file to the project's repo with a license that is an
+              approved license by the Open Source Initiative (OSI), or a free
+              license as approved by the Free Software Foundation (FSF). Examples of
+              such licenses include the MIT, BSD 2-clause, BSD 3-clause revised,
+              Apache 2.0, Lesser GNU General Public License (LGPL), and the GNU
+              General Public License (GPL). Releasing to the public domain meets
+              this control if there are no other encumbrances such as patents.
+          - id: OSPS-LE-02.02
+            text: |
+              While active, the license for the released software assets MUST meet
+              the OSI Open Source Definition or the FSF Free Software Definition.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              If a different license is included with released software assets,
+              ensure it is an approved license by the Open Source Initiative (OSI),
+              or a free license as approved by the Free Software Foundation (FSF).
+              Examples of such licenses include the MIT, BSD 2-clause, BSD 3-clause
+              revised, Apache 2.0, Lesser GNU General Public License (LGPL), and the
+              GNU General Public License (GPL). Note that the license for the
+              released software assets may be different than the source code.
 
-  - id: OSPS-LE-03
-    title: |
-      All licenses for the project's source code MUST be maintained in a
-      standard location within the corresponding repository.
-    objective: |
-      Ensure that the project's source code and released software assets are
-      distributed with the appropriate license terms, making it clear to users
-      and contributors how each can be used and shared.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-B-8
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-      - reference-id: Scorecard
-        identifiers:
-          - License
-      - reference-id: PSSCRM
-        identifiers:
-          - G1.2
-      - reference-id: PCIDSS
-        identifiers:
-          - 3.2.1
-      - reference-id: 800-161
-        identifiers:
-          - PL-4                 
-    assessment-requirements:
-      - id: OSPS-LE-03.01
-        text: |
-          While active, the license for the source code MUST be maintained in
-          the corresponding repository's LICENSE file, COPYING file, or
-          LICENSE/ directory.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Include the project's source code license in the project's LICENSE
-          file, COPYING file, or LICENSE/ directory to provide visibility and
-          clarity on the licensing terms. The filename MAY have an extension.
-          If the project has multiple repositories, ensure that each repository
-          includes the license file.
-      - id: OSPS-LE-03.02
-        text: |
-          While active, the license for the released software assets MUST be
-          included in the released source code, or in a LICENSE file, COPYING
-          file, or LICENSE/ directory alongside the corresponding release
-          assets.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Include the project's released software assets license in the released
-          source code, or in a LICENSE file, COPYING file, or LICENSE/ directory
-          alongside the corresponding release assets to provide visibility and
-          clarity on the licensing terms. The filename MAY have an extension.
-          If the project has multiple repositories, ensure that each repository
-          includes the license file.
+      - id: OSPS-LE-03
+        title: |
+          All licenses for the project's source code MUST be maintained in a
+          standard location within the corresponding repository.
+        objective: |
+          Ensure that the project's source code and released software assets are
+          distributed with the appropriate license terms, making it clear to users
+          and contributors how each can be used and shared.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-B-8
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+          - reference-id: Scorecard
+            entries:
+              - reference-id: License
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G1.2
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 3.2.1
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-4                 
+        assessment-requirements:
+          - id: OSPS-LE-03.01
+            text: |
+              While active, the license for the source code MUST be maintained in
+              the corresponding repository's LICENSE file, COPYING file, or
+              LICENSE/ directory.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Include the project's source code license in the project's LICENSE
+              file, COPYING file, or LICENSE/ directory to provide visibility and
+              clarity on the licensing terms. The filename MAY have an extension.
+              If the project has multiple repositories, ensure that each repository
+              includes the license file.
+          - id: OSPS-LE-03.02
+            text: |
+              While active, the license for the released software assets MUST be
+              included in the released source code, or in a LICENSE file, COPYING
+              file, or LICENSE/ directory alongside the corresponding release
+              assets.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Include the project's released software assets license in the released
+              source code, or in a LICENSE file, COPYING file, or LICENSE/ directory
+              alongside the corresponding release assets to provide visibility and
+              clarity on the licensing terms. The filename MAY have an extension.
+              If the project has multiple repositories, ensure that each repository
+              includes the license file.

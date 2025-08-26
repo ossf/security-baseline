@@ -1,547 +1,549 @@
-title: Quality
-description: |
-  Quality focuses on the processes and
-  practices used to ensure the quality and
-  reliability of the project's source code and
-  software assets. These controls help ensure
-  that the project's source code is well
-  maintained, secure, and reliable, reducing the
-  risk of defects or vulnerabilities in the
-  software.
-controls:
-  - id: OSPS-QA-01
-    title: |
-      The project's source code and change history MUST be publicly readable at
-      a static URL.
-    objective: |
-      Enable users to access and review the project's source code and history,
-      promoting transparency and collaboration within the project community.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - CC-B-1
-          - CC-B-2
-          - CC-B-3
-          - R-B-5
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2f
-          - 1.2j
-      - reference-id: SSDF
-        identifiers:
-          - PS.1
-          - PS.2
-          - PS.3
-          - PW.1.2
-          - PW.2.1
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 757-271
-      - reference-id: CSF
-        identifiers:
-          - ID.AM-02
-          - ID.RA-01
-          - ID.RA-08
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.4
-      - reference-id: SLSA
-        identifiers:
-          - Build platform - isolation strength - Isolated
-      - reference-id: PSSCRM
-        identifiers:
-          - P3.5
-          - E2.2
-      - reference-id: SAMM
-        identifiers:
-          - Implementation -Secure Build -Build Process Lvl1
-      - reference-id: PCIDSS
-        identifiers:
-          - 2.1.1
-          - 6.2.1
-          - 6.5.1
-          - 6.5.2
-      - reference-id: 800-161
-        identifiers:
-          - RA-5
-          - SA-11
-          - SA-15          
-    assessment-requirements:
-      - id: OSPS-QA-01.01
-        text: |
-          While active, the project's source code repository MUST be publicly
-          readable at a static URL.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Use a common VCS such as GitHub, GitLab, or Bitbucket. Ensure the
-          repository is publicly readable. Avoid duplication or mirroring of
-          repositories unless highly visible documentation clarifies the primary
-          source. Avoid frequent changes to the repository that would impact the
-          repository URL. Ensure the repository is public.
-      - id: OSPS-QA-01.02
-        text: |
-          The version control system MUST contain a publicly readable record of
-          all changes made, who made the changes, and when the changes were
-          made.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Use a common VCS such as GitHub, GitLab, or Bitbucket to maintain a
-          publicly readable commit history. Avoid squashing or rewriting commits
-          in a way that would obscure the author of any commits.
+control-families:
+  - id: QA
+    title: Quality
+    description: |
+      Quality focuses on the processes and
+      practices used to ensure the quality and
+      reliability of the project's source code and
+      software assets. These controls help ensure
+      that the project's source code is well
+      maintained, secure, and reliable, reducing the
+      risk of defects or vulnerabilities in the
+      software.
+    controls:
+      - id: OSPS-QA-01
+        title: |
+          The project's source code and change history MUST be publicly readable at
+          a static URL.
+        objective: |
+          Enable users to access and review the project's source code and history,
+          promoting transparency and collaboration within the project community.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: CC-B-1
+              - reference-id: CC-B-2
+              - reference-id: CC-B-3
+              - reference-id: R-B-5
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+              - reference-id: 1.2f
+              - reference-id: 1.2j
+          - reference-id: SSDF
+            entries:
+              - reference-id: PS.1
+              - reference-id: PS.2
+              - reference-id: PS.3
+              - reference-id: PW.1.2
+              - reference-id: PW.2.1
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 757-271
+          - reference-id: CSF
+            entries:
+              - reference-id: ID.AM-02
+              - reference-id: ID.RA-01
+              - reference-id: ID.RA-08
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.4
+          - reference-id: SLSA
+            entries:
+              - reference-id: Build platform - isolation strength - Isolated
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: P3.5
+              - reference-id: E2.2
+          - reference-id: SAMM
+            entries:
+              - reference-id: Implementation -Secure Build -Build Process Lvl1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 2.1.1
+              - reference-id: 6.2.1
+              - reference-id: 6.5.1
+              - reference-id: 6.5.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: RA-5
+              - reference-id: SA-11
+              - reference-id: SA-15          
+        assessment-requirements:
+          - id: OSPS-QA-01.01
+            text: |
+              While active, the project's source code repository MUST be publicly
+              readable at a static URL.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Use a common VCS such as GitHub, GitLab, or Bitbucket. Ensure the
+              repository is publicly readable. Avoid duplication or mirroring of
+              repositories unless highly visible documentation clarifies the primary
+              source. Avoid frequent changes to the repository that would impact the
+              repository URL. Ensure the repository is public.
+          - id: OSPS-QA-01.02
+            text: |
+              The version control system MUST contain a publicly readable record of
+              all changes made, who made the changes, and when the changes were
+              made.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Use a common VCS such as GitHub, GitLab, or Bitbucket to maintain a
+              publicly readable commit history. Avoid squashing or rewriting commits
+              in a way that would obscure the author of any commits.
 
-  - id: OSPS-QA-02
-    title: |
-      The project MUST provide a list of dependencies used in the software.
-    objective: |
-      Provide transparency and accountability for the project's dependencies
-      while enabling users and contributors to understand the software's direct
-      dependencies.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - Q-S-8
-          - Q-S-9
-      - reference-id: CRA
-        identifiers:
-          - 2.1
-          - 2.2
-          - 2.3
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.3
-          - PS.1
-          - PS.2
-          - PS.3.2
-          - PW.4
-      - reference-id: CSF
-        identifiers:
-          - ID.AM.01
-          - ID.AM-02
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.5
-          - 4.3.1
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-          - 673-475
-          - 863-521
-          - 613-286
-      - reference-id: PSSCRM
-        identifiers:
-          - G1.4
-          - G1.5
-          - G2.5
-          - P3.1
-          - P3.2
-          - P5.1
-          - P5.2
-          - E2.1
-          - E2.2
-      - reference-id: SAMM
-        identifiers:
-          - Implementation -Secure Build -Software Dependencies Lvl1
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.3.2
-          - 6.4.3
-          - 12.5.1
-      - reference-id: UKSSCOP
-        identifiers:
-          - 1.2
-      - reference-id: 800-161
-        identifiers:
-          - CA-7
-          - CM-2
-          - CM-8
-          - PL-8
-          - RA-3(1)
-          - RA-5
-          - SA-11
-          - SA-15
-          - SR-3
-          - SR-4                
-    assessment-requirements:
-      - id: OSPS-QA-02.01
-        text: |
-          When the package management system supports it, the source code
-          repository MUST contain a dependency list that accounts for the direct
-          language dependencies.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          This may take the form of a package manager or language dependency file
-          that enumerates all direct dependencies such as package.json, Gemfile,
-          or go.mod.
-      - id: OSPS-QA-02.02
-        text: |
-          When the project has made a release, all compiled released software
-          assets MUST be delivered with a software bill of materials.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          It is recommended to auto-generate SBOMs at build time using a tool
-          that has been vetted for accuracy. This enables users to ingest this
-          data in a standardized approach alongside other projects in their
-          environment.
+      - id: OSPS-QA-02
+        title: |
+          The project MUST provide a list of dependencies used in the software.
+        objective: |
+          Provide transparency and accountability for the project's dependencies
+          while enabling users and contributors to understand the software's direct
+          dependencies.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: Q-S-8
+              - reference-id: Q-S-9
+          - reference-id: CRA
+            entries:
+              - reference-id: 2.1
+              - reference-id: 2.2
+              - reference-id: 2.3
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.3
+              - reference-id: PS.1
+              - reference-id: PS.2
+              - reference-id: PS.3.2
+              - reference-id: PW.4
+          - reference-id: CSF
+            entries:
+              - reference-id: ID.AM.01
+              - reference-id: ID.AM-02
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.5
+              - reference-id: 4.3.1
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+              - reference-id: 673-475
+              - reference-id: 863-521
+              - reference-id: 613-286
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G1.4
+              - reference-id: G1.5
+              - reference-id: G2.5
+              - reference-id: P3.1
+              - reference-id: P3.2
+              - reference-id: P5.1
+              - reference-id: P5.2
+              - reference-id: E2.1
+              - reference-id: E2.2
+          - reference-id: SAMM
+            entries:
+              - reference-id: Implementation -Secure Build -Software Dependencies Lvl1
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.3.2
+              - reference-id: 6.4.3
+              - reference-id: 12.5.1
+          - reference-id: UKSSCOP
+            entries:
+              - reference-id: 1.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: CA-7
+              - reference-id: CM-2
+              - reference-id: CM-8
+              - reference-id: PL-8
+              - reference-id: RA-3(1)
+              - reference-id: RA-5
+              - reference-id: SA-11
+              - reference-id: SA-15
+              - reference-id: SR-3
+              - reference-id: SR-4                
+        assessment-requirements:
+          - id: OSPS-QA-02.01
+            text: |
+              When the package management system supports it, the source code
+              repository MUST contain a dependency list that accounts for the direct
+              language dependencies.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              This may take the form of a package manager or language dependency file
+              that enumerates all direct dependencies such as package.json, Gemfile,
+              or go.mod.
+          - id: OSPS-QA-02.02
+            text: |
+              When the project has made a release, all compiled released software
+              assets MUST be delivered with a software bill of materials.
+            applicability:
+              - maturity-3
+            recommendation: |
+              It is recommended to auto-generate SBOMs at build time using a tool
+              that has been vetted for accuracy. This enables users to ingest this
+              data in a standardized approach alongside other projects in their
+              environment.
 
-  - id: OSPS-QA-03
-    title: |
-      Any automated status checks for commits MUST pass or require manual
-      acknowledgement prior to merge.
-    objective: |
-      Ensure that the project's approvers do not become accustomed to tolerating
-      failing status checks, even if arbitrary, because it increases the risk of
-      overlooking security vulnerabilities or defects identified by automated
-      checks.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2f
-          - 1.2k
-      - reference-id: SSDF
-        identifiers:
-          - PO.4.1
-          - PS.1
-          - PS.2
-          - RV.1.2
-      - reference-id: CSF
-        identifiers:
-          - ID.IM-02
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.5
-      - reference-id: OpenCRE
-        identifiers:
-          - 263-184
-          - 253-452
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.2
-          - G5.3
-          - G5.4
-          - P3.5
-          - P4.1
-          - P4.2
-      - reference-id: SAMM
-        identifiers:
-          - Implementation -Secure Build -Build Process Lvl3
-          - Implementation -Secure Build -Software Dependencies Lvl3
-          - Verification -Requirements Testing -Control Verification Lvl1
-          - Verification -Requirements Testing -Control Verification Lvl2
-          - Verification -Requirements Testing -Control Verification Lvl3
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.3.1
-          - 6.3.2
-          - 6.5.2
-      - reference-id: 800-161
-        identifiers:
-          - AU-6
-          - CM-3
-          - CM-6
-          - PL-8
-          - SA-11
-          - SA-15
-          - SR-3                
-    assessment-requirements:
-      - id: OSPS-QA-03.01
-        text: |
-          When a commit is made to the primary branch, any automated status
-          checks for commits MUST pass or be manually bypassed.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's version control system to require that all
-          automated status checks pass or require manual acknowledgement before a
-          commit can be merged into the primary branch. It is recommended that
-          any optional status checks are NOT configured as a pass or fail
-          requirement that approvers may be tempted to bypass.
+      - id: OSPS-QA-03
+        title: |
+          Any automated status checks for commits MUST pass or require manual
+          acknowledgement prior to merge.
+        objective: |
+          Ensure that the project's approvers do not become accustomed to tolerating
+          failing status checks, even if arbitrary, because it increases the risk of
+          overlooking security vulnerabilities or defects identified by automated
+          checks.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2f
+              - reference-id: 1.2k
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.4.1
+              - reference-id: PS.1
+              - reference-id: PS.2
+              - reference-id: RV.1.2
+          - reference-id: CSF
+            entries:
+              - reference-id: ID.IM-02
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.5
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 263-184
+              - reference-id: 253-452
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.2
+              - reference-id: G5.3
+              - reference-id: G5.4
+              - reference-id: P3.5
+              - reference-id: P4.1
+              - reference-id: P4.2
+          - reference-id: SAMM
+            entries:
+              - reference-id: Implementation -Secure Build -Build Process Lvl3
+              - reference-id: Implementation -Secure Build -Software Dependencies Lvl3
+              - reference-id: Verification -Requirements Testing -Control Verification Lvl1
+              - reference-id: Verification -Requirements Testing -Control Verification Lvl2
+              - reference-id: Verification -Requirements Testing -Control Verification Lvl3
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.3.1
+              - reference-id: 6.3.2
+              - reference-id: 6.5.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: AU-6
+              - reference-id: CM-3
+              - reference-id: CM-6
+              - reference-id: PL-8
+              - reference-id: SA-11
+              - reference-id: SA-15
+              - reference-id: SR-3                
+        assessment-requirements:
+          - id: OSPS-QA-03.01
+            text: |
+              When a commit is made to the primary branch, any automated status
+              checks for commits MUST pass or be manually bypassed.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Configure the project's version control system to require that all
+              automated status checks pass or require manual acknowledgement before a
+              commit can be merged into the primary branch. It is recommended that
+              any optional status checks are NOT configured as a pass or fail
+              requirement that approvers may be tempted to bypass.
 
-  - id: OSPS-QA-04
-    title: |
-      Any additional subproject code repositories produced by the project
-      and compiled into a release MUST enforce security requirements as
-      applicable to the status and intent of the respective codebase.
-    objective: |
-      Ensure that additional code repositories or subprojects produced by the
-      project are held to a standard that is clear and appropriate for that
-      codebase.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-          - 1.2f
-      - reference-id: SSDF
-        identifiers:
-          - PO.3.2
-          - PO.4.1
-          - PS.1
-          - PS.2
-          - RV.1.2
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-      - reference-id: SLSA
-        identifiers:
-          - Build platform - isolation strength - Isolated
-      - reference-id: Scorecard
-        identifiers:
-          - Binary-Artifacts
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.2
-          - G5.4
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.4.2
-      - reference-id: 800-161
-        identifiers:
-          - PL-8
-          - SA-15                
-    assessment-requirements:
-      - id: OSPS-QA-04.01
-        text: |
-          While active, the project documentation MUST contain a list of any
-          codebases that are considered subprojects.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Document any additional subproject code repositories produced by the
-          project and compiled into a release. This documentation should include
-          the status and intent of the respective codebase.
-      - id: OSPS-QA-04.02
-        text: |
-          When the project has made a release comprising multiple source code
-          repositories, all subprojects MUST enforce security requirements that
-          are as strict or stricter than the primary codebase.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
+      - id: OSPS-QA-04
+        title: |
           Any additional subproject code repositories produced by the project
-          and compiled into a release must enforce security requirements as
+          and compiled into a release MUST enforce security requirements as
           applicable to the status and intent of the respective codebase.
-          In addition to following the corresponding OSPS Baseline requirements,
-          this may include requiring a security review, ensuring that it is
-          free of vulnerabilities, and ensuring that it is free of known
-          security issues.
+        objective: |
+          Ensure that additional code repositories or subprojects produced by the
+          project are held to a standard that is clear and appropriate for that
+          codebase.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+              - reference-id: 1.2f
+          - reference-id: SSDF
+            entries:
+              - reference-id: PO.3.2
+              - reference-id: PO.4.1
+              - reference-id: PS.1
+              - reference-id: PS.2
+              - reference-id: RV.1.2
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+          - reference-id: SLSA
+            entries:
+              - reference-id: Build platform - isolation strength - Isolated
+          - reference-id: Scorecard
+            entries:
+              - reference-id: Binary-Artifacts
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.2
+              - reference-id: G5.4
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.4.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-8
+              - reference-id: SA-15                
+        assessment-requirements:
+          - id: OSPS-QA-04.01
+            text: |
+              While active, the project documentation MUST contain a list of any
+              codebases that are considered subprojects.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Document any additional subproject code repositories produced by the
+              project and compiled into a release. This documentation should include
+              the status and intent of the respective codebase.
+          - id: OSPS-QA-04.02
+            text: |
+              When the project has made a release comprising multiple source code
+              repositories, all subprojects MUST enforce security requirements that
+              are as strict or stricter than the primary codebase.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Any additional subproject code repositories produced by the project
+              and compiled into a release must enforce security requirements as
+              applicable to the status and intent of the respective codebase.
+              In addition to following the corresponding OSPS Baseline requirements,
+              this may include requiring a security review, ensuring that it is
+              free of vulnerabilities, and ensuring that it is free of known
+              security issues.
 
-  - id: OSPS-QA-05
-    title: |
-        The version control system MUST NOT contain generated executable
-        artifacts.
-    objective: |
-      Reduce the risk of including generated executable artifacts in the
-      project's version control system, ensuring that only source code and
-      necessary files are stored in the repository.
-    guideline-mappings:
-      - reference-id: CRA
-        identifiers:
-          - 1.2b
-      - reference-id: SSDF
-        identifiers:
-          - PS.1
-          - PS.2
-      - reference-id: OpenCRE
-        identifiers:
-          - 486-813
-          - 124-564
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.4.3
-      - reference-id: 800-161
-        identifiers:
-          - PL-8
-          - SA-15
-          - SR-3                
-    assessment-requirements:
-      - id: OSPS-QA-05.01
-        text: |
-          While active, the version control system MUST NOT contain generated
-          executable artifacts.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Remove generated executable artifacts in the project's version control
-          system. It is recommended that any scenario where a generated
-          executable artifact appears critical to a process such as testing, it
-          should be instead be generated at build time or stored separately and
-          fetched during a specific well-documented pipeline step.
-      - id: OSPS-QA-05.02
-        text: |
-          While active, the version control system MUST NOT contain unreviewable
-          binary artifacts.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: |
-          Do not add any unreviewable binary artifacts to the project's version
-          control system. This includes executable application binaries, library
-          files, and similar artifacts. It does not include assets such as
-          graphical images, sound or music files, and similar content typically
-          stored in a binary format.
+      - id: OSPS-QA-05
+        title: |
+            The version control system MUST NOT contain generated executable
+            artifacts.
+        objective: |
+          Reduce the risk of including generated executable artifacts in the
+          project's version control system, ensuring that only source code and
+          necessary files are stored in the repository.
+        guideline-mappings:
+          - reference-id: CRA
+            entries:
+              - reference-id: 1.2b
+          - reference-id: SSDF
+            entries:
+              - reference-id: PS.1
+              - reference-id: PS.2
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 486-813
+              - reference-id: 124-564
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.4.3
+          - reference-id: 800-161
+            entries:
+              - reference-id: PL-8
+              - reference-id: SA-15
+              - reference-id: SR-3                
+        assessment-requirements:
+          - id: OSPS-QA-05.01
+            text: |
+              While active, the version control system MUST NOT contain generated
+              executable artifacts.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Remove generated executable artifacts in the project's version control
+              system. It is recommended that any scenario where a generated
+              executable artifact appears critical to a process such as testing, it
+              should be instead be generated at build time or stored separately and
+              fetched during a specific well-documented pipeline step.
+          - id: OSPS-QA-05.02
+            text: |
+              While active, the version control system MUST NOT contain unreviewable
+              binary artifacts.
+            applicability:
+              - maturity-1
+              - maturity-2
+              - maturity-3
+            recommendation: |
+              Do not add any unreviewable binary artifacts to the project's version
+              control system. This includes executable application binaries, library
+              files, and similar artifacts. It does not include assets such as
+              graphical images, sound or music files, and similar content typically
+              stored in a binary format.
 
-  - id: OSPS-QA-06
-    title: |
-        The project MUST use at least one automated test suite for the source
-        code repository.
-    objective: |
-      Ensure that the project uses at least one automated test suite for the
-      source code repository and clearly documents when and how tests are run.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - Q-B-4
-          - Q-B-8
-          - Q-B-9
-          - Q-B-10
-          - Q-S-2
-      - reference-id: CRA
-        identifiers:
-          - 2.3
-      - reference-id: SSDF
-        identifiers:
-          - PW.8.2
-      - reference-id: CSF
-        identifiers:
-          - ID.AM-02
-      - reference-id: ISO-18974
-        identifiers:
-          - 4.1.5
-      - reference-id: OpenCRE
-        identifiers:
-          - 207-435
-          - 088-377
-      - reference-id: Scorecard
-        identifiers:
-          - CI-Tests
-      - reference-id: PSSCRM
-        identifiers:
-          - P4.1
-          - P4.2
-          - P4.3
-          - P4.4
-          - E2.4
-          - E2.5
-      - reference-id: SAMM
-        identifiers:
-          - Verification-Requirements -Testing -Control Verification Lvl1
-          - Verification-Requirements -Testing -Control Verification Lvl2
-          - Verification-Requirements -Testing -Control Verification Lvl3
-          - Verification -Security Testing -Scalable Baseline Lvl3
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.2.3
-          - 6.3.1
-          - 6.3.2
-          - 6.4.2
-      - reference-id: 800-161
-        identifiers:
-          - SA-11
-          - SA-15
-          - SR-3                
-    assessment-requirements:
-      - id: OSPS-QA-06.01
-        text: |
-          Prior to a commit being accepted, the project's CI/CD pipelines MUST
-          run at least one automated test suite to ensure the changes meet
-          expectations.
-        applicability:
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: | # give examples
-          Automated tests should be run prior to every merge into the primary
-          branch. The test suite should be run in a CI/CD pipeline and the
-          results should be visible to all contributors. The test suite should
-          be run in a consistent environment and should be run in a way that
-          allows contributors to run the tests locally.
-          Examples of test suites include unit tests, integration tests, and
-          end-to-end tests.
-      - id: OSPS-QA-06.02
-        text: |
-          While active, project's documentation MUST clearly document when and
-          how tests are run.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Add a section to the contributing documentation that explains how to
-          run the tests locally and how to run the tests in the CI/CD pipeline.
-          The documentation should explain what the tests are testing and how to
-          interpret the results.
-      - id: OSPS-QA-06.03
-        text: |
-          While active, the project's documentation MUST include a policy that
-          all major changes to the software produced by the project should add
-          or update tests of the functionality in an automated test suite.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Add a section to the contributing documentation that explains the
-          policy for adding or updating tests. The policy should explain what
-          constitutes a major change and what tests should be added or updated.
+      - id: OSPS-QA-06
+        title: |
+            The project MUST use at least one automated test suite for the source
+            code repository.
+        objective: |
+          Ensure that the project uses at least one automated test suite for the
+          source code repository and clearly documents when and how tests are run.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: Q-B-4
+              - reference-id: Q-B-8
+              - reference-id: Q-B-9
+              - reference-id: Q-B-10
+              - reference-id: Q-S-2
+          - reference-id: CRA
+            entries:
+              - reference-id: 2.3
+          - reference-id: SSDF
+            entries:
+              - reference-id: PW.8.2
+          - reference-id: CSF
+            entries:
+              - reference-id: ID.AM-02
+          - reference-id: ISO-18974
+            entries:
+              - reference-id: 4.1.5
+          - reference-id: OpenCRE
+            entries:
+              - reference-id: 207-435
+              - reference-id: 088-377
+          - reference-id: Scorecard
+            entries:
+              - reference-id: CI-Tests
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: P4.1
+              - reference-id: P4.2
+              - reference-id: P4.3
+              - reference-id: P4.4
+              - reference-id: E2.4
+              - reference-id: E2.5
+          - reference-id: SAMM
+            entries:
+              - reference-id: Verification-Requirements -Testing -Control Verification Lvl1
+              - reference-id: Verification-Requirements -Testing -Control Verification Lvl2
+              - reference-id: Verification-Requirements -Testing -Control Verification Lvl3
+              - reference-id: Verification -Security Testing -Scalable Baseline Lvl3
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.2.3
+              - reference-id: 6.3.1
+              - reference-id: 6.3.2
+              - reference-id: 6.4.2
+          - reference-id: 800-161
+            entries:
+              - reference-id: SA-11
+              - reference-id: SA-15
+              - reference-id: SR-3                
+        assessment-requirements:
+          - id: OSPS-QA-06.01
+            text: |
+              Prior to a commit being accepted, the project's CI/CD pipelines MUST
+              run at least one automated test suite to ensure the changes meet
+              expectations.
+            applicability:
+              - maturity-2
+              - maturity-3
+            recommendation: | # give examples
+              Automated tests should be run prior to every merge into the primary
+              branch. The test suite should be run in a CI/CD pipeline and the
+              results should be visible to all contributors. The test suite should
+              be run in a consistent environment and should be run in a way that
+              allows contributors to run the tests locally.
+              Examples of test suites include unit tests, integration tests, and
+              end-to-end tests.
+          - id: OSPS-QA-06.02
+            text: |
+              While active, project's documentation MUST clearly document when and
+              how tests are run.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Add a section to the contributing documentation that explains how to
+              run the tests locally and how to run the tests in the CI/CD pipeline.
+              The documentation should explain what the tests are testing and how to
+              interpret the results.
+          - id: OSPS-QA-06.03
+            text: |
+              While active, the project's documentation MUST include a policy that
+              all major changes to the software produced by the project should add
+              or update tests of the functionality in an automated test suite.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Add a section to the contributing documentation that explains the
+              policy for adding or updating tests. The policy should explain what
+              constitutes a major change and what tests should be added or updated.
 
-  - id: OSPS-QA-07
-    title: |
-      The project's version control system MUST require at least one
-      non-author approval of changes to the primary branch.
-    objective: |
-      Ensure that the project's version control system requires at least one
-      non-author approval of changes before merging into the release or primary
-      branch.
-    guideline-mappings:
-      - reference-id: BPB
-        identifiers:
-          - B-G-3
-      - reference-id: Scorecard
-        identifiers:
-          - Code-Review
-      - reference-id: PSSCRM
-        identifiers:
-          - G2.4
-          - P3.3
-          - P3.5
-      - reference-id: PCIDSS
-        identifiers:
-          - 6.2.3.1
-          - 6.4.2
-          - 6.5.4
-      - reference-id: 800-161
-        identifiers:
-          - AC-5
-          - AU-6
-          - PL-8
-          - SA-15
-          - SR-3                
-    assessment-requirements:
-      - id: OSPS-QA-07.01
-        text: |
-          When a commit is made to the primary branch, the project's version
-          control system MUST require at least one non-author approval of the
-          changes before merging.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Configure the project's version control system to require at least one
-          non-author approval of changes before merging into the release or
-          primary branch. This can be achieved by requiring a pull request to be
-          reviewed and approved by at least one other contributor before it can
-          be merged.
+      - id: OSPS-QA-07
+        title: |
+          The project's version control system MUST require at least one
+          non-author approval of changes to the primary branch.
+        objective: |
+          Ensure that the project's version control system requires at least one
+          non-author approval of changes before merging into the release or primary
+          branch.
+        guideline-mappings:
+          - reference-id: BPB
+            entries:
+              - reference-id: B-G-3
+          - reference-id: Scorecard
+            entries:
+              - reference-id: Code-Review
+          - reference-id: PSSCRM
+            entries:
+              - reference-id: G2.4
+              - reference-id: P3.3
+              - reference-id: P3.5
+          - reference-id: PCIDSS
+            entries:
+              - reference-id: 6.2.3.1
+              - reference-id: 6.4.2
+              - reference-id: 6.5.4
+          - reference-id: 800-161
+            entries:
+              - reference-id: AC-5
+              - reference-id: AU-6
+              - reference-id: PL-8
+              - reference-id: SA-15
+              - reference-id: SR-3                
+        assessment-requirements:
+          - id: OSPS-QA-07.01
+            text: |
+              When a commit is made to the primary branch, the project's version
+              control system MUST require at least one non-author approval of the
+              changes before merging.
+            applicability:
+              - maturity-3
+            recommendation: |
+              Configure the project's version control system to require at least one
+              non-author approval of changes before merging into the release or
+              primary branch. This can be achieved by requiring a pull request to be
+              reviewed and approved by at least one other contributor before it can
+              be merged.
