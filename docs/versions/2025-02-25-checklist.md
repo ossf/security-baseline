@@ -47,7 +47,7 @@
 ## Level 3
 
 - [ ] **OSPS-AC-04.02**: When a job is assigned permissions in a CI/CD pipeline, the source code or configuration MUST only assign the minimum privileges necessary for the corresponding activity. 
-- [ ] **OSPS-BR-02.01**: When an official release is created, all assets within that release MUST be clearly associated with the release identifier or another unique identifier for the asset. 
+- [ ] **OSPS-BR-02.02**: When an official release is created, all assets within that release MUST be clearly associated with the release identifier or another unique identifier for the asset. 
 - [ ] **OSPS-DO-03.01**: When the project has made a release, the project documentation MUST contain instructions to verify the integrity and authenticity of the release assets. 
 - [ ] **OSPS-DO-04.01**: When the project has made a release, the project documentation MUST include a descriptive statement about the scope and duration of support for each release. 
 - [ ] **OSPS-DO-05.01**: When the project has made a release, the project documentation MUST provide a descriptive statement when releases or versions will no longer receive security updates. 
