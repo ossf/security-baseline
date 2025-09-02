@@ -8,6 +8,9 @@
 # streamline automation in the event that other
 # words or phrases should link to the term.
 #
+- term: Administrator
+  definition: |
+    Any human who can modify settings on the target resource.
 - term: Arbitrary Code
   definition: |
     Code provided by an external source that is
@@ -50,6 +53,10 @@
     checks.
   synonyms: 
     - Build and Release Pipelines
+- term: Code
+  definition: |
+    A set of deterministic instructions that a
+    computer can execute to perform specific tasks.
 - term: Change
   definition: |
     Any alteration of the project's codebase,
@@ -83,33 +90,11 @@
     - CLA
 - term: Contributor
   definition: |
-    Entities who commit code or documentation to
-    the project. This includes both human
-    and non-human actors and makes no distinctions
-    based on their role within the project.
-
-    In the context of the Open Source Project
-    Security Baseline, code contributors does not
-    address non-code contributions such as
-    designing, triaging, reviewing, or testing.
-- term: Codebase
-  definition: |
-    The collection of source code and related
-    assets that make up the project. The codebase
-    includes all files necessary to build and
-    test the software. Lives in the repository,
-    sometimes alongside documentation and CI/CD
-    pipelines. The contents of the codebase are
-    the primary deliverable in a release.
+    Any entity that has made a change to the contents of a repository.
 - term: Collaborator
   definition: |
-    A human or non-human entity with permissions to
-    approve changes or manage the repository settings.
-    Collaborators may have varying permission levels based on
-    their role in the project. This does not
-    include contributors whose changes only
-    originate through a request from a repository
-    fork.
+    Any entity who has any level of permissions issued by administrators
+    of the repository.
 - term: Commit
   definition: |
     A record of a single change submitted to the
@@ -213,6 +198,10 @@
     event of violations.
   synonyms:
     - Known Vulnerability
+- term: Maintainer
+  definition: |
+    A human collaborator who is able to authorize
+    changes to the contents of a repository.
 - term: Multi-factor Authentication
   definition: |
     An authentication method that requires two or
@@ -305,6 +294,10 @@
     - P-SSCRM 
   references: 
     - https://arxiv.org/pdf/2404.12300 
+- term: Project
+  definition: |
+    A group of people and resources that coordinate to
+    produce a release.
 - term: Project Documentation
   definition: |
     Written materials related to the project,
@@ -355,13 +348,11 @@
     - Provenance
 - term: Release
   definition: |
-    - _(verb)_ The process of making a version
-    controlled bundle of assets available to
-    users, such as through a package registry.
-    - _(noun)_ A version-controlled bundle of
-    code, documentation, and other assets made
-    available to users. A release often includes
-    release notes that describe the changes.
+    - _(verb)_ The process of making a
+    version-controlled bundle of assets available
+    to users, such as through a package registry.
+    - _(noun)_  A version-controlled bundle of
+    assets made available to users.
 - term: Released Software Asset
   definition: |
     Deliverables provided to users as part of a
@@ -369,13 +360,9 @@
     libraries, or containers.
 - term: Repository
   definition: |
-    A storage location managed by a version
-    control system where the project's code,
-    documentation, and other resources are
-    stored. It tracks changes, manages
-    collaborator permissions, and includes
-    configuration options such as branch
-    protection and access controls.
+    A storage location managed by a version control
+    system where the project's code, documentation,
+    and other resources are stored.
   synonyms:
     - Repo
     - Repositories
@@ -477,11 +464,11 @@
     - Person
 - term: Version Control System
   definition: |
-    A tool that tracks changes to files over time
-    and facilitates collaboration among
-    contributors. Examples of version control
-    systems include Git, Subversion, and
-    Mercurial.
+    A tool that facilitates collaboration among
+    contributors by tracking changes, managing
+    collaborator permissions, and providing configuration
+    options. Examples of version control systems include
+    Git, Subversion, and Mercurial.
   synonyms:
     - VCS
 - term: Vulnerability Reporting
