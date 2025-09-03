@@ -8,18 +8,10 @@ import (
 	"html/template"
 	"os"
 	"path/filepath"
-
-	"github.com/ossf/security-baseline/pkg/types"
 )
 
-func NewGenerator() *Generator {
-	return &Generator{}
-}
-
-type Generator struct{}
-
 // ExportMarkdown runs the baseline data through the markdown template
-func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string) error {
+func (l *Loader) ExportMarkdown(templatePath, outPath string) error {
 	// Read the markdown template from the external file
 	templateContent, err := os.ReadFile(templatePath)
 	if err != nil {
@@ -27,13 +19,13 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 	}
 
 	// Open or create the output file
-	if err := os.MkdirAll(filepath.Dir(path), os.FileMode(0o750)); err != nil {
-		return fmt.Errorf("error creating output directory %s: %w", filepath.Dir(path), err)
+	if err := os.MkdirAll(filepath.Dir(outPath), os.FileMode(0o750)); err != nil {
+		return fmt.Errorf("error creating output directory %s: %w", filepath.Dir(outPath), err)
 	}
 
-	outputFile, err := os.Create(path)
+	outputFile, err := os.Create(outPath)
 	if err != nil {
-		return fmt.Errorf("error creating output file %s: %w", path, err)
+		return fmt.Errorf("error creating output file %s: %w", outPath, err)
 	}
 	defer outputFile.Close() //nolint:errcheck
 
@@ -42,7 +34,7 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 		// Template function to remove newlines and collapse text
 		"collapseNewlines": collapseNewlines,
 		"addLinks": func(s string) string {
-			return addLinksTemplateFunction(b.Lexicon, s)
+			return addLinksTemplateFunction(l.Lexicon, s)
 		},
 		"asLink":   asLinkTemplateFunction,
 		"maxLevel": maxLevel,
@@ -52,7 +44,7 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 	}
 
 	// Execute the template and write to the output file
-	if err := tmpl.Execute(outputFile, b); err != nil {
+	if err := tmpl.Execute(outputFile, l); err != nil {
 		return fmt.Errorf("error executing template: %w", err)
 	}
 

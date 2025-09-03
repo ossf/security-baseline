@@ -6,7 +6,7 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"os"
+	"log"
 
 	"github.com/spf13/cobra"
 
@@ -73,20 +73,18 @@ OSCAL controls.
 			cmd.SilenceUsage = true
 
 			loader := baseline.NewLoader()
-			loader.DataPath = opts.baselinePath
-
-			bline, err := loader.Load()
+			err := loader.Load(opts.baselinePath)
 			if err != nil {
 				return err
 			}
 
-			// TODO: Open the output file
+			url := fmt.Sprintf("https://baseline.openssf.org/versions/%s.html", loader.Catalog.Metadata.Version)
 
-			gen := baseline.NewGenerator()
-			if err := gen.ExportOSCAL(bline, os.Stdout); err != nil {
+			oscalCatalog, err := loader.Catalog.ToOSCAL(url)
+			if err != nil {
 				return err
 			}
-
+			log.Print(oscalCatalog)
 			return nil
 		},
 	}
