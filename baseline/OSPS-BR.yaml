@@ -486,15 +486,15 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-07.01
         text: |
-          The project MUST define a policy for managing secrets and credentials used by the project. The policy should include guidelines for storing, accessing, and rotating secrets and credentials.
-        applicability:
-          - Maturity Level 3
-        recommendation: |
-          Document how secrets and credentials are managed and used within the project. This should include details on how secrets are stored (e.g., using a secrets management tool), how access is controlled, and how secrets are rotated or updated.
-      - id: OSPS-BR-07.02
-        text: |
           The project MUST prevent the unintentional storage of unencrypted sensitive data, such as secrets and credentials, in the version control system.
         applicability:
           - Maturity Level 1
         recommendation: |
-          Configure .gitignore or equivalent to exclude files that may contain sensitive information. Use pre-commit hooks and automated scanning tools to detect and prevent the inclusion of sensitive data in commits. Periodically audit the version control history to ensure that no sensitive information has been inadvertently committed.
+          Configure .gitignore or equivalent to exclude files that may contain sensitive information. Use pre-commit hooks and automated scanning tools to detect and prevent the inclusion of sensitive data in commits.
+      - id: OSPS-BR-07.02
+        text: |
+          The project MUST define a policy for managing secrets and credentials used by the project. The policy should include guidelines for storing, accessing, and rotating secrets and credentials.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Document how secrets and credentials are managed and used within the project. This should include details on how secrets are stored (e.g., using a secrets management tool), how access is controlled, and how secrets are rotated or updated. Ensure that sensitive information is not hard-coded in the source code or stored in version control systems.
