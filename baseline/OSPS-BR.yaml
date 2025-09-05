@@ -490,7 +490,7 @@ controls:
         applicability:
           - Maturity Level 3
         recommendation: |
-          Document how secrets and credentials are managed and used within the project. This should include details on how secrets are stored (e.g., using a secrets management tool), how access is controlled, and how secrets are rotated or updated. Ensure that sensitive information is not hard-coded in the source code or stored in version control systems.
+          Document how secrets and credentials are managed and used within the project. This should include details on how secrets are stored (e.g., using a secrets management tool), how access is controlled, and how secrets are rotated or updated.
       - id: OSPS-BR-07.02
         text: |
           The project MUST prevent the unintentional storage of unencrypted sensitive data, such as secrets and credentials, in the version control system.
