@@ -469,7 +469,7 @@ controls:
     title: |
       The project MUST store and manage all secrets and credentials used by the project in a secure manner.
     objective: |
-      Ensure that sensitive data is not disclosed, compromised or misused leading to security vulnerabilities or data breaches.
+      Ensure that sensitive data is not disclosed, compromised or misused leading to security vulnerabilities or supply chain compromise.
     guideline-mappings:
       - reference-id: BPB
         identifiers:
