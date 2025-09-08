@@ -3,7 +3,7 @@
 
 package types
 
-import "github.com/revanite-io/sci/layer2"
+import "github.com/ossf/gemara/layer2"
 
 var ControlFamilies = []string{
 	"AC",
