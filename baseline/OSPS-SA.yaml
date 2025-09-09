@@ -269,3 +269,115 @@ controls:
           the project can then think about how to proactively avoid or close off
           any gaps/vulnerabilities that could arise.
           Ensure this is updated for new features or breaking changes.
+
+
+  - id: OSPS-SA-04
+    title: |
+      The project MUST assess the security risks inherent in their software supply chain practices.
+    objective: |
+      Provide project maintainers an understanding of the risks in their software 
+      supply chain tooling allows them to plan mitigations to close off the potential
+      of those threats from occurring.
+    guideline-mappings:
+      - reference-id: BPB
+        entries:
+          - reference-id: B-S-8
+          - reference-id: S-G-1
+      - reference-id: CRA
+        entries:
+          - reference-id: 1.1
+          - reference-id: 1.2j
+          - reference-id: 1.2k
+          - reference-id: 2.2
+      - reference-id: SSDF
+        entries:
+          - reference-id: PO.5.1
+          - reference-id: PW.1.1
+      - reference-id: CSF
+        entries:
+          - reference-id: ID.RA-01
+          - reference-id: ID.RA-04
+          - reference-id: ID.RA-05
+          - reference-id: DE.AE-07
+      - reference-id: ISO-18974
+        entries:
+          - reference-id: 4.1.5
+      - reference-id: OpenCRE
+        entries:
+          - reference-id: 068-102
+          - reference-id: 154-031
+          - reference-id: 888-770
+      - reference-id: PSSCRM
+        entries:
+          - reference-id: G4.3
+          - reference-id: G5.2
+          - reference-id: P2.1
+      - reference-id: SAMM
+        entries:
+          - reference-id: Governance -Create and Promote Lvl1
+          - reference-id: Design -Threat Assessment -Application Risk Profile Lvl1
+          - reference-id: Design -Threat Assessment -Threat Modeling Lvl1
+          - reference-id: Verification -Architecture Assessment -Architecture Mitigation Lvl2
+      - reference-id: PCIDSS
+        entries:
+          - reference-id: 2.2.4
+          - reference-id: 2.2.5
+          - reference-id: 2.2.6
+          - reference-id: 6.2.1
+          - reference-id: 6.2.3.1
+          - reference-id: 6.3.2
+          - reference-id: 6.4.2
+          - reference-id: 11.3.1
+          - reference-id: 12.3.1
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: 1.4
+          - reference-id: 3.3
+      - reference-id: 800-161
+        entries:
+          - reference-id: CA-2
+          - reference-id: CA-2(3)
+          - reference-id: PM-30
+          - reference-id: RA-3
+          - reference-id: SA-11
+          - reference-id: SA-15
+          - reference-id: SA-15(3)
+          - reference-id: SA-15(8)
+          - reference-id: SI-3
+          - reference-id: SR-3
+          - reference-id: SR-3(3)
+          - reference-id: SR-6
+          - reference-id: SR-7           
+    assessment-requirements:
+      - id: OSPS-SA-04.01
+        text: |
+          A project MUST perform a security assessment of the software 
+          supply chain security practices of the project.  This should 
+          examine the most likely and impactful potential security problems 
+          that could occur in the supply chain of the software, including
+          both the tool.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          Performing a security assessment informs both project members as well
+          as downstream consumers that the project understands what risks it 
+          faces in its software supply chain.  Understanding threats helps a 
+          project understand the value of moving to more secure design 
+          practices.   Ensure this is updated as practices change.
+          
+      - id: OSPS-SA-04.02
+        text: |
+          When the project has made a release, the project MUST perform a
+          security assessment of their software supply chain practices and
+          have analyzed their dependencies.   This should also include means
+          to provide effective security practices for outside contributions.
+          This needs to include a security assessment of software supply 
+          chain security practices from dependencies.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          Threat modeling of the software supply chain is an essential part
+          of a project's security as a whole.  This needs to include some
+          assessment of dependencies and outside contributions practices.
+          Ensure this is updated as dependencies and practices are changed.
