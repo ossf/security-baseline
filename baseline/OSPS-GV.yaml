@@ -260,13 +260,13 @@ controls:
       - id: OSPS-GV-04.01
         text: |
           While active, the project documentation MUST have a policy that code
-          contributors are reviewed prior to granting escalated permissions to
+          collaborators are reviewed prior to granting escalated permissions to
           sensitive resources.
         applicability:
           - Maturity Level 3
         recommendation: |
           Publish an enforceable policy in the project documentation that
-          requires code contributors to be reviewed and approved before being
+          requires code collaborators to be reviewed and approved before being
           granted escalated permissions to sensitive resources, such as merge
           approval or access to secrets. It is recommended that vetting includes
           establishing a justifiable lineage of identity such as confirming the
