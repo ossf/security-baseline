@@ -543,5 +543,5 @@ controls:
           Configure the project's version control system to require at least one
           non-author approval of changes before merging into the release or
           primary branch. This can be achieved by requiring a pull request to be
-          reviewed and approved by at least one other contributor before it can
+          reviewed and approved by at least one other collaborator before it can
           be merged.
