@@ -73,6 +73,12 @@ Since the Baseline is designed for the developers of a project, not the consumer
 OSPS Baseline compliance is a point-in-time status.
 We encourage projects using the OSPS Baseline to say something like “As of April 31, 2025, this project complies with OSPS Baseline version 2025-02-30 level 2.”
 
+## What is in scope for OSPS Baseline?
+
+OSPS Baseline seeks to address security hygiene elements — those which secure the ways of working, delivering the product, and equipping its users to adopt it safely.
+
+To use an analogy, Baseline is similar to health department guidelines that require a food processing plant to have practices that ensure safe food products: wearing hair nets, regularly cleaning and sanitizing equipment, monitoring refrigerator temperatures, handling recalls, etc.
+	
 ## How can I get involved in the OSPS Baseline project?
 The OSPS Baseline project welcomes contributions in the [GitHub repository](https://github.com/ossf/security-baseline/pull/24/files).
 For discussion, join us in [#sig-security-baseline](https://openssf.slack.com/archives/C07DC6TT2QY) in the OpenSSF Slack instance.
