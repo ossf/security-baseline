@@ -290,8 +290,8 @@ controls:
       - id: OSPS-AC-04.01
         text: |
           When a CI/CD task is executed with no permissions specified, the
-          project's version control system MUST default to the lowest available
-          permissions for all activities in the pipeline.
+          CI/CD system MUST default the task's permissions to the lowest
+          permissions granted in the pipeline.
         applicability:
           - Maturity Level 2
           - Maturity Level 3
