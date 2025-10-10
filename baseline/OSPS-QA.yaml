@@ -502,10 +502,10 @@ controls:
   - id: OSPS-QA-07
     title: |
       The project's version control system MUST require at least one
-      non-author approval of changes to the primary branch.
+      non-author human approval of changes to the primary branch.
     objective: |
       Ensure that the project's version control system requires at least one
-      non-author approval of changes before merging into the release or primary
+      non-author human approval of changes before merging into the release or primary
       branch.
     guideline-mappings:
       - reference-id: BPB
@@ -535,13 +535,13 @@ controls:
       - id: OSPS-QA-07.01
         text: |
           When a commit is made to the primary branch, the project's version
-          control system MUST require at least one non-author approval of the
+          control system MUST require at least one non-author human approval of the
           changes before merging.
         applicability:
           - Maturity Level 3
         recommendation: |
           Configure the project's version control system to require at least one
-          non-author approval of changes before merging into the release or
+          non-author human approval of changes before merging into the release or
           primary branch. This can be achieved by requiring a pull request to be
           reviewed and approved by at least one other collaborator before it can
           be merged.
