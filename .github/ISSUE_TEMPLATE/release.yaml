@@ -22,11 +22,22 @@ body:
         - label: |
             Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md --checklist-output ../docs/versions/2025-02-04-checklist.md` (replace `2025-02-04` with the version name)
         - label: |
+            In the `docs/versions/<PREVIOUS_VERSION>.md` file, remove the nav-title header block
+        - label: |
             In the `docs/versions/<VERSION>.md` file, change the `Version: devel` to have the version number of the new version
         - label: |
-            In the `docs/versions/<VERSION>-checklist.md` file, change the header to have the version number of the new version
-        - label: |
             In the `docs/versions/<VERSION>.md` file, remove the "not for production use" warning
+        - label: |
+            In the `docs/versions/<VERSION>.md` file, add the nav-title:
+            ```
+            ---
+            nav-title: Current Version
+            ---
+            ```
+        - label: |
+            In the `docs/_config.yml` file, update the listing in the `nav_pages` group to point to the new release
+        - label: |
+            In the `docs/versions/<VERSION>-checklist.md` file, change the header to have the version number of the new version
         - label: |
             Move the link to the "current" version in `docs/index.md` to the "previous versions" list
         - label: |
