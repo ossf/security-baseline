@@ -16,7 +16,7 @@ Previous versions are presented for historical reference.
 Downstream consumers of the OSPS Baseline should specify their compliance against a specific version.
 Only the version labeled as "current" should be used for new compliance efforts.
 
-* Current version: [v2025.10.10](versions/2025-10-10) (<a href="versions/2025-10-10-checklist.md">checklist</a>)
+* Current version: [v2025.10.10](versions/2025-10-10) (<a href="versions/2025-10-10-checklist.md">checklist</a>) ([release notes](release_notes.md#2025-10-10))
 * Previous versions:
     * [v2025.02.25](versions/2025-02-25) (<a href="versions/2025-02-25-checklist.md">checklist</a>)
 * [In-development version](versions/devel) (<a href="versions/devel-checklist.md">checklist</a>)
