@@ -10,11 +10,15 @@ At least two project maintainers must review and approve these changes.
 * Substantive changes to controls, including changes to text that alters the originally stated meaning, new controls proposals, or removal of controls will be documented in GitHub PR(s) and reviewed regularly by the Baseline project maintainers for inclusion in the next release.
 These changes may reflect changes to global cybersecurity regulations and frameworks or changes in norms around application/project security practices.
 Any such substantive changes must be approved by a majority of the project's maintainers.
+* Any changes to the Baseline will be reflected within the Compliance Matrix, with new requirements flagged where the Baseline Controls are appropriate.
+
+## Versions/releases
+
 * As appropriate, but at least annually, the Baseline project maintainers will evaluate the set of controls and, if necessary, publish a new version of the Baseline.
 Previous versions of the Baseline will remain available, but are stable and not subject to change, except for minor changes to fix technical or typographic errors.
-* Any changes to the Baseline will be reflected within the Compliance Matrix, with new requirements flagged where the Baseline Controls are appropriate.
+* Git tags are used as a convenience, but may not be updated if changes are made as described above.
 * Versions will follow a calendar-based identification system, using the `YYYY-MM-DD` format.
-* Downstream stakeholders will be notified via the project's mailing list on the changes and updates.
+* Downstream stakeholders will be notified via the [project's mailing list](https://lists.openssf.org/g/openssf-sig-security-baseline) on the changes and updates.
 
 ## Identifiers
 

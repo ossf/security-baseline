@@ -45,4 +45,8 @@ body:
         - label: |
             Open a pull request with the above changes
         - label: |
-            Notify OpenSSF's marketing team that we have a new release so that they can share it with the world
+            After the pull request is merged, git tag the commit
+        - label: |
+            After the pull request is merged, send an email to the [mailing list](https://lists.openssf.org/g/openssf-sig-security-baseline)
+        - label: |
+            After the pull request is merged, notify OpenSSF's marketing team that we have a new release so that they can share it with the world
