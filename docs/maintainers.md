@@ -30,7 +30,7 @@ If your project is not already included in LFX Insights, you can [add it](https:
 Your project does not need to be a part of the Linux Foundation.
 * [Privateer Plugin for GitHub Repositories](https://github.com/revanite-io/pvtr-github-repo) performs automated checks of some Baseline controls.
 This is what powers the LFX Insights evaluation.
-It is also available as a [GitHub Action](https://github.com/revanite-io/pvtr-github-repo-action).
+It is also available as a [GitHub Action](https://github.com/marketplace/actions/osps-security-assessment).
 
 ## Additional information
 
