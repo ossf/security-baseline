@@ -47,6 +47,7 @@ minima:
    nav_pages:
      - index.md
      - versions/2025-10-10.md
+     - maintainers.md
      - faq.md
      - maintenance.md
 #

@@ -9,6 +9,7 @@ evolutive
 FINOS
 Fintech
 Gesmer
+GUAC
 golangci
 hyperpage
 incentivizing
