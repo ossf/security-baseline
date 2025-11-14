@@ -6,8 +6,10 @@ package baseline
 import (
 	"fmt"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
+	"unicode"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
@@ -42,14 +44,25 @@ func isWrapped(text, matched string) bool {
 	return openBrackets > closeBrackets
 }
 
-// Function to add links by wrapping terms with square brackets
+// Function to add links by wrapping terms with square brackets.
+// `term` should be either a Term in a LexiconEntry, or a Synonyms entry.
 func addLinks(lexicon []types.LexiconEntry, text, term string) string {
 	// Escape any special characters in the term to use in regex
 	escapedTerm := regexp.QuoteMeta(term)
 
-	// Create a regular expression to match the term as a whole word
+	// Create a regular expression to match the term as a whole word,
+	// and the plural of the word (using a simple "add s" rule).
 	// The `(?i)` part makes it case-insensitive, and `\b` ensures whole word matching
 	termRegex := regexp.MustCompile(`(?i)\b` + escapedTerm + `(?:s)?\b`)
+
+	termIdx := slices.IndexFunc(lexicon, func(t types.LexiconEntry) bool {
+		return containsSynonym(t.Synonyms, t.Term, term)
+	})
+	if termIdx == -1 {
+		// This should never happen (logic error elsewhere)
+		panic(fmt.Sprintf("Attempted to add links for non-lexicon string %q", term))
+	}
+	canonicalTerm := lexicon[termIdx].Term
 
 	// Replace the term with the same term wrapped in brackets, and avoid rewrapping terms
 	return termRegex.ReplaceAllStringFunc(text, func(matched string) string {
@@ -57,12 +70,7 @@ func addLinks(lexicon []types.LexiconEntry, text, term string) string {
 			return matched // Skip wrapping if already wrapped in brackets
 		}
 
-		for i, entry := range lexicon {
-			if entry.Term == term && !containsSynonym(entry.Synonyms, entry.Term, matched) {
-				lexicon[i].Synonyms = append(entry.Synonyms, matched) //nolint:gocritic
-			}
-		}
-		return fmt.Sprintf("[%s]", matched)
+		return fmt.Sprintf("[%s][%s]", matched, canonicalTerm)
 	})
 }
 
@@ -80,9 +88,16 @@ func addLinksTemplateFunction(lexicon []types.LexiconEntry, text string) string 
 }
 
 func asLinkTemplateFunction(text string) string {
-	return "#" + strings.ToLower(
-		strings.ReplaceAll(
-			strings.ReplaceAll(text, " ", "-"), ".", ""))
+	return "#" + strings.Map(func(r rune) rune {
+		switch {
+		case unicode.IsLetter(r) || unicode.IsNumber(r):
+			return unicode.ToLower(r)
+		case r == '.':
+			return -1 // Existing versions drop ".", rather than mapping to "-"
+		default:
+			return '-'
+		}
+	}, text)
 }
 
 // loop through maturityLevels
