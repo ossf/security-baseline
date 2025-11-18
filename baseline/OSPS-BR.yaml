@@ -57,6 +57,10 @@ controls:
           - reference-id: CM-5
           - reference-id: CM-7
           - reference-id: SI-7
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 2.2.2          
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
@@ -127,6 +131,10 @@ controls:
           - reference-id: SA-15
           - reference-id: SI-7
           - reference-id: SR-4
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.1.4
+          - reference-id: Claim 3.1.1  
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -204,6 +212,10 @@ controls:
         entries:
           - reference-id: AC-4
           - reference-id: AC-4(21)
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 3.1.2  
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -307,6 +319,11 @@ controls:
           - reference-id: MA-8
           - reference-id: SI-4
           - reference-id: SI-5
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.1.4
+          - reference-id: Claim 2.2.3
+          - reference-id: Claim 3.1.1
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -387,6 +404,10 @@ controls:
           - reference-id: RA-5
           - reference-id: SA-15
           - reference-id: SR-3
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 3.1.1  
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -451,6 +472,10 @@ controls:
           - reference-id: SA-15
           - reference-id: SI-7
           - reference-id: SI-7(14)
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.2.2
+          - reference-id: Claim 3.1.1  
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
@@ -483,6 +508,9 @@ controls:
           - reference-id: PW.1.2
           - reference-id: PW.1.3
           - reference-id: PW.5.1
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 3.1.2
     assessment-requirements:
       - id: OSPS-BR-07.01
         text: |
