@@ -56,6 +56,9 @@ controls:
           - reference-id: PL-1
           - reference-id: PL-4
           - reference-id: PM-30          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.1 
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
@@ -168,7 +171,10 @@ controls:
           - reference-id: AC-3
           - reference-id: AC-20
           - reference-id: PL-1          
-    assessment-requirements:
+      - reference-id: 800-161
+        entries:
+          - reference-id: Claim 2.1.1
+     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
           While active, the project documentation MUST include an explanation
