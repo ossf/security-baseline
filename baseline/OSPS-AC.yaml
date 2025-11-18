@@ -71,6 +71,11 @@ controls:
           - reference-id: IA-5
           - reference-id: 1.2e
           - reference-id: 1.2f
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.4.2
+          - reference-id: Claim 2.1.5   
+          - reference-id: Claim 2.2.2   
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -135,6 +140,10 @@ controls:
           - reference-id: AC-6
           - reference-id: CM-5
           - reference-id: CM-7
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 2.2.2   
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -199,6 +208,9 @@ controls:
           - reference-id: CM-3
           - reference-id: CM-3(2)
           - reference-id: CM-5
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.2.2
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
@@ -286,6 +298,11 @@ controls:
           - reference-id: AC-20(1)
           - reference-id: CM-5
           - reference-id: CM-7
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 2.1.3   
+          - reference-id: Claim 2.2.2   
     assessment-requirements:
       - id: OSPS-AC-04.01
         text: |
