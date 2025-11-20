@@ -18,8 +18,8 @@ Many tools for Baseline evaluation will use this to evaluate controls that are n
 
 To get started with Security Insights:
 
-. Adopt the Security Insights specification by creating a security-insights.yml file in your repository.
-. Populate the security-insights.yml file with security data for your project following the example-full.yml template.
+* Adopt the Security Insights specification by creating a security-insights.yml file in your repository.
+* Populate the security-insights.yml file with security data for your project following the example-full.yml template.
 
 ## Evaluation tooling
 
