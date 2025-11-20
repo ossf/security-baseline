@@ -171,7 +171,7 @@ controls:
           - reference-id: AC-3
           - reference-id: AC-20
           - reference-id: PL-1          
-      - reference-id: UKSSCP
+      - reference-id: UKSSCOP
         entries:
           - reference-id: Claim 2.1.1
     assessment-requirements:
