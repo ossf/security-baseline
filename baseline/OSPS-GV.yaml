@@ -171,10 +171,10 @@ controls:
           - reference-id: AC-3
           - reference-id: AC-20
           - reference-id: PL-1          
-      - reference-id: 800-161
+      - reference-id: UKSSCP
         entries:
           - reference-id: Claim 2.1.1
-     assessment-requirements:
+    assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
           While active, the project documentation MUST include an explanation
