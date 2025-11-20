@@ -73,7 +73,7 @@ mapping-references:
     title: CISA Secure by Design Pledge
     version: 2024-05-08 
     url: https://www.cisa.gov/sites/default/files/2024-05/CISA%20Secure%20by%20Design%20Pledge_508c.pdf
-    description: "A voluntary pledge focused on seven goals to work towards, in addition to context and example approaches to achieve the goal and demonstrate measurable progress woithin enterprise software products and services."  
+    description: "A voluntary pledge focused on seven goals to work towards, in addition to context and example approaches to achieve the goal and demonstrate measurable progress within enterprise software products and services."  
   - id: CSAG
     title: CISA Software Acquisition Guide
     version: 2024-08-01 
