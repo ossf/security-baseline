@@ -3,7 +3,7 @@ docs/versions/devel.md
 docs/_site
 
 # generated output from go run ./... compile
-checklist.md
+docs/versions/devel-checklist.md
 
 # go build artifacts
 cmd/security-baseline

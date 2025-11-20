@@ -164,10 +164,4 @@ This baseline was created by community leaders from across the Linux Foundation,
 - [OSPS Baseline contributors](https://github.com/ossf/security-baseline/graphs/contributors)
 {{ range .Lexicon }}
 [{{ .Term }}]: {{ .Term | asLink }}
-{{- if .Synonyms }}
-{{- $term := .Term }}
-{{- range .Synonyms }}
-[{{.}}]: {{ $term | asLink }}
-{{- end }}
-{{- end }}
 {{- end }}
