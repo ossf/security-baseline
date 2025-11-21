@@ -1,5 +1,6 @@
 CCCS
 CISA
+CSAG
 crosswalked
 devel
 DSIT
@@ -15,9 +16,11 @@ hyperpage
 incentivizing
 lifecycles
 NCSC
+openchain
 openssf
 organisations
 OpenCRE
+OCRE
 OSCAL
 OSPS
 PCIDSS
@@ -39,5 +42,6 @@ Subprojects
 triaging
 unreviewable
 UKSSCOP
+USCTM
 Updegrove
 webfonts

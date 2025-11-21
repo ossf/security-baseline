@@ -59,3 +59,33 @@ mapping-references:
     version: 2025-05-07
     url: https://www.ncsc.gov.uk/guidance/software-security-code-of-practice-assurance-principles-claims
     description: "The Software Code of Practice has been created by DSIT and the National Cyber Security Centre (NCSC), the UK’s technical authority for cyber security, and is co-sealed by the Canadian Centre for Cyber Security (CCCS). The Code reflects the government’s ongoing focus on codifying minimum standards for technology providers to reduce cyber risk. It is aimed at professionals who are responsible for overseeing the development of ‘commodity’ software, including technical, compliance, and risk experts. For those organisations that require a higher level of assurance in the resilience of their connected products and technology, consider using the NCSC’s Cyber Resilience Testing scheme."
+  - id: DORA
+    title: EU Digital Operational Resilience Act (DORA)
+    version: 2022-12-14
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2554&from=FR
+    description: "On digital operational resilience for the financial sector and amending Regulations (EC) No 1060/2009, (EU) No 648/2012, (EU) No 600/2014, (EU) No 909/2014 and (EU) 2016/1011."
+  - id: NIS2
+    title: EU Network and Information Security Directive 2
+    version: 2024-10-17 
+    url: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402690#tit_1
+    description: "Laying down rules for the application of Directive (EU) 2022/2555 as regards technical and methodological requirements of cybersecurity risk-management measures and further specification of the cases in which an incident is considered to be significant with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers."  
+  - id: CSbDP
+    title: CISA Secure by Design Pledge
+    version: 2024-05-08 
+    url: https://www.cisa.gov/sites/default/files/2024-05/CISA%20Secure%20by%20Design%20Pledge_508c.pdf
+    description: "A voluntary pledge focused on seven goals to work towards, in addition to context and example approaches to achieve the goal and demonstrate measurable progress within enterprise software products and services."  
+  - id: CSAG
+    title: CISA Software Acquisition Guide
+    version: 2024-08-01 
+    url: https://www.cisa.gov/resources-tools/resources/software-acquisition-guide-government-enterprise-consumers-software-assurance-cyber-supply-chain
+    description: "The Software Acquisition Guide for Government Enterprise Consumers: Software Assurance in the Cyber-Supply Chain Risk Management (C-SCRM) Lifecycle product was developed in response to the core challenges of software assurance and cybersecurity transparency in the acquisition process, focusing primarily on software lifecycle activities."
+  - id: USCTM
+    title: US Cyber Trust Mark
+    version: 2023-07-18 
+    url: https://www.fcc.gov/CyberTrustMark  
+    description: "A voluntary cybersecurity labeling program for wireless consumer IoT products. "
+  - id: MAF
+    title: MITRE ATT&CK Framework
+    version: v18 
+    url: https://attack.mitre.org/ 
+    description: "A globally-accessible knowledge base of adversary tactics and techniques based on real-world observations."
