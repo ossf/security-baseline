@@ -142,7 +142,6 @@ controls:
           - reference-id: CM-7
       - reference-id: UKSSCOP
         entries:
-          - reference-id: Claim 2.1.2
           - reference-id: Claim 2.2.2   
     assessment-requirements:
       - id: OSPS-AC-02.01
