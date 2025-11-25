@@ -509,7 +509,8 @@ controls:
           - reference-id: PW.5.1
       - reference-id: UKSSCOP
         entries:
-          - reference-id: Claim 3.1.2
+          - reference-id: Claim 1.4.3
+          - reference-id: Claim 1.4.5
     assessment-requirements:
       - id: OSPS-BR-07.01
         text: |
