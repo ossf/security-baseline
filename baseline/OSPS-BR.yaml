@@ -405,8 +405,8 @@ controls:
           - reference-id: SR-3
       - reference-id: UKSSCOP
         entries:
-          - reference-id: Claim 2.1.2
-          - reference-id: Claim 3.1.1  
+          - reference-id: Claim 1.2.1
+          - reference-id: Claim 1.2.5  
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
