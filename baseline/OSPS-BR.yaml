@@ -233,15 +233,18 @@ controls:
       - id: OSPS-BR-03.02
         text: |
           When the project lists a URI as an official distribution channel,
-          that URI MUST be exclusively delivered using encrypted channels.
+          that distribution MUST be protected from adversary-in-the-middle
+          attacks.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Configure the project's release pipeline to only fetch data from
-          websites, API responses, and other services which use encrypted
-          channels such as SSH or HTTPS for data transmission.
+          Artifacts distributed by the project should be distributed through
+          channels which ensure integrity and authenticity. Use of HTTPS for
+          downloads, signed releases, or distribution through trusted package
+          managers are all acceptable methods to protect against
+          adversary-in-the-middle attacks.
 
   - id: OSPS-BR-04
     title: |
