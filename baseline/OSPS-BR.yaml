@@ -233,7 +233,7 @@ controls:
       - id: OSPS-BR-03.02
         text: |
           When the project lists a URI as an official distribution channel,
-          that distribution MUST be protected from adversary-in-the-middle
+          that channel MUST be protected from adversary-in-the-middle
           attacks.
         applicability:
           - Maturity Level 1
