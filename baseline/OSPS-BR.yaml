@@ -26,6 +26,9 @@ controls:
           - reference-id: PO.5.2
           - reference-id: PS.1
           - reference-id: PS.2
+      - reference-id: Scorecard
+        entries:
+          - reference-id: Dangerous-Workflow
       - reference-id: CSF
         entries:
           - reference-id: PR.AA-02
@@ -64,23 +67,43 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
-          When a CI/CD pipeline accepts an input parameter, that parameter MUST
-          be sanitized and validated prior to use in the pipeline.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: # TODO
-      - id: OSPS-BR-01.02
-        text: |
-          When a CI/CD pipeline uses a branch name in its functionality, that
-          name value MUST be sanitized and validated prior to use in the
+          When a CI/CD pipeline operates on attacker-selected metadata, those
+          parameters MUST be sanitized and validated prior to use in the
           pipeline.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
-        recommendation: # TODO
+        recommendation: |
+          CI/CD pipelines should sanitize (quote, escape or exit on expected
+          values) all metadata inputs which correspond to untrusted sources.
+          This includes data such as commit messages, tags, pull request titles,
+          and author information.
+      - id: OSPS-BR-01.03
+        text: |
+          When a CI/CD pipeline operates on untrusted code snapshots, it MUST
+          prevent access to privileged CI/CD credentials and assets.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          CI/CD pipelines should isolate untrusted code snapshots from
+          privileged credentials and assets. In particular, projects should be
+          careful to ensure that workflows which build or execute code prior
+          to review by a collaborator do not have access to CI/CD credentials.
+      - id: OSPS-BR-01.04
+        text: |
+          CI/CD pipelines which accept collaborator input MUST sanitize and
+          validate that input prior to use in the pipeline.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          CI/CD pipelines should sanitize (quote, escape or exit on expected
+          values) all collaborator inputs on explicit workflow executions.
+          While collaborators are generally trusted, manual inputs to a
+          workflow cannot be reviewed and could be abused by an account
+          takeover.
 
   - id: OSPS-BR-02
     title: |
