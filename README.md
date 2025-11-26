@@ -2,7 +2,7 @@
 
 The Open Source Project Security Baseline (OSPS Baseline) is designed to act as a minimum definition of requirements for a project relative to its maturity level.
 
-All definitions are maintained in YAML format using the [Simplified Compliance Infrastructure Layer 2 schema](https://github.com/revanite-io/sci?tab=readme-ov-file#layer-2-controls) for tandem machine and human readability.
+All definitions are maintained in YAML format using the [Gemara Layer 2 schema](https://github.com/ossf/gemara?tab=readme-ov-file#layer-2-controls) for tandem machine and human readability.
 
 ## Baseline Structure
 
