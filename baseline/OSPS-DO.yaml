@@ -291,6 +291,11 @@ controls:
           - reference-id: PL-1
           - reference-id: PL-2
           - reference-id: SI-4          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 4.1.1
+          - reference-id: Claim 4.1.2
+          - reference-id: Claim 4.2.1
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -357,6 +362,10 @@ controls:
           - reference-id: PL-2
           - reference-id: SI-4
           - reference-id: SI-5          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 4.1.1
+          - reference-id: Claim 4.2.1
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -433,6 +442,10 @@ controls:
           - reference-id: SR-5
           - reference-id: SR-6
           - reference-id: SR-7          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.2.1
+          - reference-id: Claim 1.2.2
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
