@@ -135,6 +135,7 @@ controls:
         entries:
           - reference-id: Claim 1.1.4
           - reference-id: Claim 3.1.1  
+          - reference-id: Claim 3.4.2 
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
