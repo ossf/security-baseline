@@ -82,11 +82,6 @@ controls:
           - reference-id: 11.2.1
           - reference-id: 12.1.1
           - reference-id: 12.1.3
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 3.2
-          - reference-id: 3.4
-          - reference-id: 3.5
       - reference-id: 800-161
         entries:
           - reference-id: IR-1
@@ -95,6 +90,11 @@ controls:
           - reference-id: IR-7(1)
           - reference-id: IR-8
           - reference-id: SI-2          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 3.4.1
+          - reference-id: Claim 3.5.1
+          - reference-id: Claim 4.1.2
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
