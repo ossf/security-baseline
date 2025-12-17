@@ -40,8 +40,8 @@ jobs:
         uses: actions/setup-java@f2beeb24e141e01a676f977032f5a29d81c9e27e
         id: setup-java
         with:
-          distribution: adopt
-          java-version: 11
+          distribution: temurin
+          java-version: 17
 
       - run: |
           go build -C .build/go-oscal/ -o ${PWD}/go-oscal
