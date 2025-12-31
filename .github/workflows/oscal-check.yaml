@@ -40,8 +40,8 @@ jobs:
         uses: actions/setup-java@f2beeb24e141e01a676f977032f5a29d81c9e27e
         id: setup-java
         with:
-          distribution: adopt
-          java-version: 11
+          distribution: temurin
+          java-version: 17
 
       - run: |
           go build -C .build/go-oscal/ -o ${PWD}/go-oscal
@@ -49,9 +49,15 @@ jobs:
           ./baseline-compiler oscal -b baseline > oscal-sample.json
           ./go-oscal validate --input-file oscal-sample.json 
 
-      - name: Validate Catalog with oscal-club/NIST CLI
-        uses: oscal-club/oscal-cli-action@1a210b84bc1fd6adf15c9cf0d46a51d15a3d8301 # v2.0.1
+      - name: Validate Catalog with oscal-club/metaschema CLI
+        uses: oscal-club/oscal-cli-action@6a8b6368885714e46fa1d4a65a6ce665902e08b7 # v2.1.0
         with:
+          args: catalog validate oscal-sample.json 
+
+      - name: Validate Catalog with oscal-club/NIST CLI
+        uses: oscal-club/oscal-cli-action@6a8b6368885714e46fa1d4a65a6ce665902e08b7 # v2.1.0
+        with:
+          oscalCliPackageUrl: https://repo1.maven.org/maven2/gov/nist/secauto/oscal/tools/oscal-cli/cli-core/1.0.3/cli-core-1.0.3-oscal-cli.tar.bz2
           args: catalog validate oscal-sample.json 
             
             
