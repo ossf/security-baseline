@@ -58,9 +58,6 @@ controls:
           - reference-id: 2.2.1
           - reference-id: 8.2.1
           - reference-id: 8.3.1
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 2.1
       - reference-id: 800-161
         entries:
           - reference-id: AC-4(21)
@@ -128,9 +125,6 @@ controls:
       - reference-id: PCIDSS
         entries:
           - reference-id: 2.2.1
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 2.1
       - reference-id: 800-161
         entries:
           - reference-id: AC-2
@@ -196,10 +190,6 @@ controls:
       - reference-id: PCIDSS
         entries:
           - reference-id: 2.2.1
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 2.1
-          - reference-id: 2.2
       - reference-id: 800-161
         entries:
           - reference-id: AC-3
@@ -284,10 +274,6 @@ controls:
         entries:
           - reference-id: 2.2.1
           - reference-id: 8.2.1
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 2.1
-          - reference-id: 2.2
       - reference-id: 800-161
         entries:
           - reference-id: AC-3(8)
