@@ -7,7 +7,7 @@ description: |
 controls:
   - id: OSPS-SA-01
     title: |
-      Publish Internal System Design Documentation
+      Publish Internal System Design Descriptions
     objective: |
       Provide an overview of the project's design and architecture, illustrating
       the interactions and components of the system to help contributors and
@@ -90,7 +90,7 @@ controls:
 
   - id: OSPS-SA-02
     title: |
-      Publish External Interface Documation
+      Publish External Interface Descriptions
     objective: |
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
