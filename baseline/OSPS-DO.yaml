@@ -10,8 +10,7 @@ description: |
 controls:
   - id: OSPS-DO-01
     title: |
-      The project documentation MUST provide user guides for all basic
-      functionality.
+      Publish User Guides for All Basic Functionality
     objective: |
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
@@ -84,7 +83,7 @@ controls:
 
   - id: OSPS-DO-02
     title: |
-      The project MUST provide a mechanism for reporting defects.
+      Provide Mechanism for Reporting Defects
     objective: |
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
@@ -156,10 +155,7 @@ controls:
 
   - id: OSPS-DO-03
     title: |
-      The project documentation MUST contain instructions to verify the
-      integrity and authenticity of the release assets, including the
-      expected identity of the person or process authoring the software
-      release.
+      Publish Providence Verification Instructions
     objective: |
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
@@ -245,12 +241,11 @@ controls:
 
   - id: OSPS-DO-04
     title: |
-      The project documentation MUST include a descriptive statement about
-      the scope and duration of support.
+      Publish Support Scope and Duration
     objective: |
       Provide users with clear expectations regarding the project's support
-      lifecycle. This allows downstream consumers to take relevant actions to
-      ensure the continued functionality and security of their systems.
+      lifecycle in such a way that enables downstream consumers to ensure the
+      continued functionality and security of their systems.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -315,12 +310,10 @@ controls:
 
   - id: OSPS-DO-05
     title: |
-      The project documentation MUST provide a descriptive statement when
-      releases or versions will no longer receive security updates.
+      Document Security Update Scope and Duration
     objective: |
-      Communicating when the project maintainers will no longer fix defects or
-      security vulnerabilities is crucial for downstream consumers to find
-      alternative solutions or alternative means of support for the project.
+      Communicate when the project maintainers will no longer fix defects or
+      security vulnerabilities.
     guideline-mappings:
       - reference-id: CRA
         entries:
@@ -381,13 +374,10 @@ controls:
 
   - id: OSPS-DO-06
     title: |
-      The project documentation MUST include a description of how the
-      project selects, obtains, and tracks its dependencies.
+      Publish Dependency Management Policy
     objective: |
       Provide information about how the project selects, obtains, and tracks
-      dependencies, libraries, frameworks, etc. to help downstream consumers
-      understand how the project operates in regards to third-party components
-      that are required necessary for the software to function.
+      imported software.
     guideline-mappings:
       - reference-id: BPB
         entries:

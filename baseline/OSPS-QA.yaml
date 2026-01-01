@@ -11,8 +11,7 @@ description: |
 controls:
   - id: OSPS-QA-01
     title: |
-      The project's source code and change history MUST be publicly readable at
-      a static URL.
+      Publish Source Code and Change History
     objective: |
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
@@ -100,7 +99,7 @@ controls:
 
   - id: OSPS-QA-02
     title: |
-      The project MUST provide a list of dependencies used in the software.
+      Publish Software Dependencies
     objective: |
       Provide transparency and accountability for the project's dependencies
       while enabling users and contributors to understand the software's direct
@@ -199,8 +198,7 @@ controls:
 
   - id: OSPS-QA-03
     title: |
-      Any automated status checks for commits MUST pass or require manual
-      acknowledgement prior to merge.
+      Address Pass/Fail Checks Before Accepting Changes
     objective: |
       Ensure that the project's approvers do not become accustomed to tolerating
       failing status checks, even if arbitrary, because it increases the risk of
@@ -273,9 +271,7 @@ controls:
 
   - id: OSPS-QA-04
     title: |
-      Any additional subproject code repositories produced by the project
-      and compiled into a release MUST enforce security requirements as
-      applicable to the status and intent of the respective codebase.
+      Enforce Security Requirements on All Codebases
     objective: |
       Ensure that additional code repositories or subprojects produced by the
       project are held to a standard that is clear and appropriate for that
@@ -344,8 +340,7 @@ controls:
 
   - id: OSPS-QA-05
     title: |
-        The version control system MUST NOT contain generated executable
-        artifacts.
+      Prevent Executables in the Codebase
     objective: |
       Reduce the risk of including generated executable artifacts in the
       project's version control system, ensuring that only source code and
@@ -402,8 +397,7 @@ controls:
 
   - id: OSPS-QA-06
     title: |
-        The project MUST use at least one automated test suite for the source
-        code repository.
+      Use Automated Testing in CI
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository and clearly documents when and how tests are run.
@@ -501,12 +495,11 @@ controls:
 
   - id: OSPS-QA-07
     title: |
-      The project's version control system MUST require at least one
-      non-author human approval of changes to the primary branch.
+      Require Merge Approvals
     objective: |
       Ensure that the project's version control system requires at least one
-      non-author human approval of changes before merging into the release or primary
-      branch.
+      non-author human approval of changes before merging into the release or
+      primary branch.
     guideline-mappings:
       - reference-id: BPB
         entries:
