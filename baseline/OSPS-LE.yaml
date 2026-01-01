@@ -11,9 +11,7 @@ description: |
 controls:
   - id: OSPS-LE-01
     title: |
-      The version control system MUST require all code contributors to assert
-      that they are legally authorized to make the associated contributions
-      on every commit.
+      Require Code Contributors to Assert Right to Commit
     objective: |
       Ensure that code contributors are aware of and acknowledge their legal
       responsibility for the contributions they make to the project, reducing
@@ -64,8 +62,7 @@ controls:
 
   - id: OSPS-LE-02
     title: |
-      All licenses for the project MUST meet the OSI Open Source Definition
-      or the FSF Free Software Definition.
+      Ensure Project Licenses are Fully Open Source
     objective: |
       Ensure that the project's source code is distributed under a recognized
       and legally enforceable open source software license, providing clarity on
@@ -132,8 +129,7 @@ controls:
 
   - id: OSPS-LE-03
     title: |
-      All licenses for the project's source code MUST be maintained in a
-      standard location within the corresponding repository.
+      Maintain and Release Licenses in a Well Known Location
     objective: |
       Ensure that the project's source code and released software assets are
       distributed with the appropriate license terms, making it clear to users
