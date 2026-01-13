@@ -15,7 +15,9 @@ import (
 )
 
 func collapseNewlines(s string) string {
-	return strings.ReplaceAll(s, "\n", " ")
+	s = strings.ReplaceAll(s, "\r\n", " ")
+	s = strings.ReplaceAll(s, "\n", " ")
+	return strings.TrimSpace(s)
 }
 
 func containsSynonym(list []string, entryTerm, term string) bool {
