@@ -89,3 +89,8 @@ mapping-references:
     version: v18 
     url: https://attack.mitre.org/ 
     description: "A globally-accessible knowledge base of adversary tactics and techniques based on real-world observations."
+  - id: BSI-TR-03185-2 
+    title: BSI TR-03185-2 Secure Software Lifecycle for Open Source Software
+    version: v1.1.0
+    url: https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03185/BSI-TR-03185-2.pdf?__blob=publicationFile&v=5
+    description: "Secure software is essential for the use of IT products in governments, businesses and societies."
