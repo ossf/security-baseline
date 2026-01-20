@@ -67,7 +67,7 @@ controls:
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
-          When a CI/CD pipeline operates on attacker-selected metadata, those
+          When a CI/CD pipeline operates on untrusted metadata, those
           parameters MUST be sanitized and validated prior to use in the
           pipeline.
         applicability:
