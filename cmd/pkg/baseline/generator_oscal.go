@@ -51,50 +51,65 @@ func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
 			Class:    "OSPS",
 			Controls: nil,
 			ID:       b.ControlFamilyIDs[family.Title],
-			Title:    family.Description,
+			Parts: &[]oscal.Part{
+				{
+					Name:  "overview",
+					Prose: family.Description,
+				},
+			},
+			Title: family.Title,
 		}
 
 		controls := []oscal.Control{}
 		for _, control := range family.Controls {
-			parts := []oscal.Part{}
-			for _, ar := range control.AssessmentRequirements {
-				parts = append(parts, oscal.Part{
-					Class: control.Id,
-					ID:    ar.Id,
-					Name:  ar.Id,
-					Ns:    "",
-					Parts: &[]oscal.Part{
-						{
-							ID:    ar.Id + ".R",
-							Name:  "recommendation",
-							Ns:    OpenSSFNS,
-							Prose: ar.Recommendation,
-							Links: &[]oscal.Link{
-								{
-									Href: fmt.Sprintf(controlHREF, VersionOSPS, ar.Id),
-									Rel:  "canonical",
-								},
-							},
-						},
-					},
-					Prose: ar.Text,
-					Title: "",
-				})
-			}
-
-			newCtl := oscal.Control{
+			// Create the new OSCAL control.
+			newOscalCtl := oscal.Control{
 				Class: b.ControlFamilyIDs[family.Title],
 				ID:    control.Id,
+				Title: strings.TrimSpace(control.Id), // For some reason, control.Title is the full description
 				Links: &[]oscal.Link{
 					{
 						Href: fmt.Sprintf(controlHREF, VersionOSPS, strings.ToLower(control.Id)),
 						Rel:  "canonical",
 					},
 				},
-				Parts: &parts,
-				Title: strings.TrimSpace(control.Title),
+				// The main prose of the control lives in the statement part
+				Parts: &[]oscal.Part{
+					{
+						ID:    control.Id + "_smt",
+						Name:  "statement",
+						Ns:    OpenSSFNS,
+						Prose: control.Title,
+					},
+					{
+						ID:    control.Id + "_obj",
+						Name:  "objective",
+						Ns:    OpenSSFNS,
+						Prose: control.Objective,
+					},
+				},
 			}
-			controls = append(controls, newCtl)
+
+			items := []oscal.Part{}
+			for _, ar := range control.AssessmentRequirements {
+				items = append(items, oscal.Part{
+					ID:    ar.Id,
+					Name:  "item",
+					Ns:    OpenSSFNS,
+					Prose: ar.Text,
+					Title: ar.Id,
+					Parts: &[]oscal.Part{
+						{
+							ID:    ar.Id + "_obj",
+							Name:  "assessment-objective",
+							Prose: ar.Recommendation,
+						},
+					},
+				})
+			}
+
+			(*newOscalCtl.Parts)[0].Parts = &items
+			controls = append(controls, newOscalCtl)
 		}
 
 		group.Controls = &controls
