@@ -553,6 +553,9 @@ controls:
           - reference-id: PL-8
           - reference-id: SA-15
           - reference-id: SR-3                
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.06
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |
