@@ -470,7 +470,7 @@ controls:
           - reference-id: Claim 3.1.1  
       - reference-id: BSI-TR-03185-2
         entries:
-          - reference-id: BR.06
+          - reference-id: BR.03
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
