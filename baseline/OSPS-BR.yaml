@@ -133,6 +133,9 @@ controls:
           - reference-id: Claim 1.1.4
           - reference-id: Claim 3.1.1  
           - reference-id: Claim 3.4.2 
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.02    
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -210,6 +213,9 @@ controls:
       - reference-id: UKSSCOP
         entries:
           - reference-id: Claim 3.1.2  
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.03             
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -314,6 +320,9 @@ controls:
           - reference-id: Claim 1.1.4
           - reference-id: Claim 2.2.3
           - reference-id: Claim 3.1.1
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.04         
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -459,6 +468,9 @@ controls:
         entries:
           - reference-id: Claim 1.2.2
           - reference-id: Claim 3.1.1  
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.03
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
