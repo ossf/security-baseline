@@ -9,8 +9,7 @@ description: |
 controls:
   - id: OSPS-VM-01
     title: |
-        The project documentation MUST include a policy for coordinated
-        vulnerability disclosure, with a clear timeframe for response.
+      Publish Coordinated Vulnerability Disclosure Policy
     objective: |
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and
@@ -112,13 +111,11 @@ controls:
 
   - id: OSPS-VM-02
     title: |
-      The project MUST publish contacts and process for reporting
-      vulnerabilities.
+      Publish Contacts and Process for Reporting Vulnerabilities.
     objective: |
-      Reports from researchers and users are an important source for identifying
-      vulnerabilities in a project. People with vulnerabilities to report should
-      have a clear understanding of the process so that they can quickly submit
-      the report to the project.
+      Enable external parties to easily understand who they should contact
+      in the event that a vulnerability is found, and what process they should
+      follow.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -176,11 +173,11 @@ controls:
 
   - id: OSPS-VM-03
     title: |
-      The project MUST provide a means for reporting security
-      vulnerabilities privately to the security contacts within the project.
+      Maintain Private Vulnerability Reporting Process
     objective: |
-      Security vulnerabilities should not be shared with the public until such
-      time the project has been provided time to analyze and prepare
+      Provide a means for reporting privately to the security contacts within
+      the project so that security vulnerabilities are not be shared with the
+      public until the project has been provided time to analyze and prepare
       remediations to protect users of the project.
     guideline-mappings:
       - reference-id: BPB
@@ -224,10 +221,10 @@ controls:
 
   - id: OSPS-VM-04
     title: |
-      The project MUST publicly publish data about discovered vulnerabilities.
+      Publish Data About Discovered Vulnerabilities
     objective: |
-      Consumers of the project must be informed about known vulnerabilities
-      found within the project.
+      Ensure that project end users have a well known mechanism to understand
+      vulnerabilities found within the project.
     guideline-mappings:
       - reference-id: CRA
         entries:
@@ -302,15 +299,11 @@ controls:
 
   - id: OSPS-VM-05
     title: |
-      The project MUST enforce a policy for addressing SCA findings.
+      Publish and Enforce a Dependency Remediation Policy
     objective: |
-      Ensure that the project clearly communicates the threshold for remediation
-      of SCA findings, including vulnerabilities and license issues in software
-      dependencies.
-      Ensure that violations of your SCA policy are addressed before software
-      is merged as well as before it releases, reducing the risk of compromised
-      delivery mechanisms or released software assets that are vulnerable or
-      malicious.
+      Identify and address defects and security weaknesses in the project's
+      imported code early in the development process, reducing the risk of
+      shipping insecure software.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -441,8 +434,7 @@ controls:
 
   - id: OSPS-VM-06
     title: |
-      The project documentation MUST enforce a policy that defines a
-      threshold for remediation of SAST findings.
+      Publish and Enforce an Application Security Testing Policy
     objective: |
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
