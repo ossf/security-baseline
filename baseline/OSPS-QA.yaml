@@ -286,9 +286,8 @@ controls:
       and compiled into a release MUST enforce security requirements as
       applicable to the status and intent of the respective codebase.
     objective: |
-      Ensure that additional code repositories or subprojects produced by the
-      project are held to a standard that is clear and appropriate for that
-      codebase.
+      Ensure that all codebases produced by the project are well
+      documented and held to the same security standard.
     guideline-mappings:
       - reference-id: CRA
         entries:
@@ -325,9 +324,10 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
-          Projects with additional subproject repositories MUST document a list
-          of any codebases that are considered subprojects.
+          Projects with multiple repositories MUST document a list of codebases
+          that are part of the project.
         applicability:
+          - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
