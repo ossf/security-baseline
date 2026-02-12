@@ -79,6 +79,11 @@ controls:
           values) all metadata inputs which correspond to untrusted sources.
           This includes data such as branch names, commit messages, tags, pull request titles,
           and author information.
+      - id: OSPS-BR-01.02
+        text: |
+          Retired in https://github.com/ossf/security-baseline/pull/443
+        applicability:
+          - retired
       - id: OSPS-BR-01.03
         text: |
           When a CI/CD pipeline operates on untrusted code snapshots, it MUST
