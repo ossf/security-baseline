@@ -77,7 +77,7 @@ controls:
         recommendation: |
           CI/CD pipelines should sanitize (quote, escape or exit on expected
           values) all metadata inputs which correspond to untrusted sources.
-          This includes data such as commit messages, tags, pull request titles,
+          This includes data such as branch names, commit messages, tags, pull request titles,
           and author information.
       - id: OSPS-BR-01.03
         text: |
@@ -94,7 +94,7 @@ controls:
           to review by a collaborator do not have access to CI/CD credentials.
       - id: OSPS-BR-01.04
         text: |
-          CI/CD pipelines which accept collaborator input MUST sanitize and
+          CI/CD pipelines which accept trusted collaborator input MUST sanitize and
           validate that input prior to use in the pipeline.
         applicability:
           - Maturity Level 3
@@ -103,7 +103,7 @@ controls:
           values) all collaborator inputs on explicit workflow executions.
           While collaborators are generally trusted, manual inputs to a
           workflow cannot be reviewed and could be abused by an account
-          takeover.
+          takeover or insider threat.
 
   - id: OSPS-BR-02
     title: |
