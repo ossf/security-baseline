@@ -281,7 +281,7 @@ controls:
           - reference-id: SI-2
           - reference-id: SI-4
           - reference-id: SI-5                
-       - reference-id: BSI-TR-03185-2
+      - reference-id: BSI-TR-03185-2
         entries:
           - reference-id: VM.02
     assessment-requirements:
