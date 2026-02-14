@@ -221,7 +221,7 @@ controls:
 
   - id: OSPS-VM-04
     title: |
-      Publish Data About Discovered Vulnerabilities
+      Publish Discovered Vulnerabilities
     objective: |
       Ensure that project end users have a well known mechanism to understand
       vulnerabilities found within the project.

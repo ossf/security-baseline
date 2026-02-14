@@ -10,7 +10,7 @@ description: |
 controls:
   - id: OSPS-DO-01
     title: |
-      Publish User Guides for All Basic Functionality
+      Publish User Guides for Basic Functionality
     objective: |
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
@@ -83,7 +83,7 @@ controls:
 
   - id: OSPS-DO-02
     title: |
-      Provide Mechanism for Reporting Defects
+      Provide Mechanisms for Reporting Defects
     objective: |
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
@@ -377,7 +377,7 @@ controls:
       Publish Dependency Management Policy
     objective: |
       Provide information about how the project selects, obtains, and tracks
-      imported software.
+      third-party components that are required for the software to function.
     guideline-mappings:
       - reference-id: BPB
         entries:

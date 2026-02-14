@@ -85,7 +85,7 @@ controls:
 
   - id: OSPS-GV-02
     title: |
-      Provide Public Discussion Mechanism
+      Provide Public Discussion Mechanisms
     objective: |
       Encourage open communication and collaboration within the project
       community by enabling users to provide feedback and discuss proposed
@@ -198,7 +198,7 @@ controls:
 
   - id: OSPS-GV-04
     title: |
-      Require Formal Review of Permission Escalation
+      Require Formal Review of Permission Grants
     objective: |
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing

@@ -397,7 +397,7 @@ controls:
 
   - id: OSPS-QA-06
     title: |
-      Use Automated Testing in CI
+      Use Automated Testing in CI/CD Pipelines
     objective: |
       Ensure that the project uses at least one automated test suite for the
       source code repository and clearly documents when and how tests are run.

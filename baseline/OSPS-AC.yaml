@@ -150,7 +150,7 @@ controls:
 
   - id: OSPS-AC-03
     title: |
-      Protect the Primary Branch.
+      Protect the Primary Branch from Accidental Modification
     objective: |
       Reduce the risk of accidental changes or deletion of the primary branch
       of the project's repository by preventing unintentional modification.
