@@ -113,9 +113,9 @@ controls:
     title: |
       Publish Contacts and Process for Reporting Vulnerabilities.
     objective: |
-      Enable external parties to easily understand who they should contact
-      in the event that a vulnerability is found, and what process they should
-      follow.
+      Enable external parties, such as researchers, to easily understand who they 
+      should contact in the event that a vulnerability is found, and what process
+      they should follow.
     guideline-mappings:
       - reference-id: BPB
         entries:

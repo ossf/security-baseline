@@ -155,7 +155,7 @@ controls:
 
   - id: OSPS-DO-03
     title: |
-      Publish Providence Verification Instructions
+      Publish Provenance Verification Instructions
     objective: |
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
