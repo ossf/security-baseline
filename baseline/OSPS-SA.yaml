@@ -7,8 +7,7 @@ description: |
 controls:
   - id: OSPS-SA-01
     title: |
-      The project documentation MUST provide design documentation demonstrating
-      all actions and actors within the system.
+      Publish Design Descriptions of System Actors and Actions
     objective: |
       Provide an overview of the project's design and architecture, illustrating
       the interactions and components of the system to help contributors and
@@ -89,11 +88,9 @@ controls:
           another segment in the system.
           Ensure this is updated for new features or breaking changes.
 
-
   - id: OSPS-SA-02
     title: |
-      The project documentation MUST include descriptions of all external
-      software interfaces of the released software assets.
+      Publish External Interface Descriptions
     objective: |
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
@@ -164,11 +161,10 @@ controls:
 
   - id: OSPS-SA-03
     title: |
-      The project MUST assess the security posture of all software assets.
+      Maintain a Project Security Assessment
     objective: |
       Provide project maintainers an understanding of how the software can be
-      misused or broken allows them to plan mitigations to close off the potential
-      of those threats from occurring.
+      misused or broken, enabling them to plan mitigations accordingly.
     guideline-mappings:
       - reference-id: BPB
         entries:
