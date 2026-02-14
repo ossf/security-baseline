@@ -102,6 +102,9 @@ For more information on the project and to make contributions, visit the [GitHub
 
 #### {{ .Id }}
 
+{{ if eq (index .Applicability 0) "retired" -}}
+{{ .Text | collapseNewlines }}
+{{ else -}}
 **Requirement:** {{ .Text | addLinks | collapseNewlines }}
 
 **Recommendation:** {{ .Recommendation }}
@@ -109,6 +112,8 @@ For more information on the project and to make contributions, visit the [GitHub
 **Control applies to:**
 {{ range .Applicability }}- {{ . }}
 {{ end }}
+
+{{- end -}}
 
 {{ end }}
 
