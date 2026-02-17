@@ -24,10 +24,12 @@ The OSPS Baseline is a minimal security checklist – you can think of it like t
 It is intended to account for gaps and challenges open source projects experience with achieving [OpenSSF Scorecard](https://scorecard.dev), an automated grading tool.
 OSPS baseline covers security-impacting criteria not reflected in the [Best Practices Badges](https://www.bestpractices.dev/en); a holistic self-assessment covering more than just security.
 
-There may be some overlap in the OSPS baselines with other open source security initiatives, and we cannot possibly know what all is out there (CISA has one, NIST has the SSDF).
+There may be some overlap in the OSPS Baseline with other open source security initiatives, and we cannot possibly know what all is out there (CISA has one, NIST has the SSDF).
 However, the OSPS Baseline was developed with special attention and consideration by open source contributors, maintainers, and technical leaders who have been working in and alongside open source projects for decades, facilitating feedback, and driving these criteria through open governance and practices in order for them to be achievable by all projects.
 We are partnering with all manner of projects to test these criteria for viability, and continually refining and clarifying the verbiage for everyone’s benefit.
 We have also provided a crosswalk with mappings to existing standards, frameworks, and other control schemas to make it easier to understand how fulfilling criteria are applicable across multiple sets of requirements and how a project with an OSPS Baseline level meets those controls.
+These mappings are intended to show a relationship between OSPS Baseline and external control catalogs.
+*Mappings are not a guarantee of compliance with listed external catalogs and are not a substitute for audits.*
 
 ## How does the baseline relate to established frameworks such as NIST Cybersecurity Framework, ISO/IEC 27001, and LFX GenAI Framework? Is it a substitute for formal regulatory compliance or certification processes (ie. IEEE has a certification 'badge')?
 

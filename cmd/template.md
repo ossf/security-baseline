@@ -38,7 +38,7 @@ In the detailed subsections you will find the control, rationale, and details no
 
 Where possible, we have added control mappings to external frameworks.
 These are not guaranteed to be 100% matches, but instead serve as references
-when working to meet the corresponding controls.
+for external catalogs that relate to the  corresponding controls.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 
@@ -117,7 +117,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 {{ end }}
 
-#### External Framework Mappings
+#### External Framework Relations
 {{ if  .GuidelineMappings }}
   {{ range .GuidelineMappings }}
   - **{{ .ReferenceId | addLinks }}**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry.ReferenceId }}{{ end }}
@@ -131,7 +131,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## External Frameworks
 
-Controls within this document may map to the following external frameworks:
+Controls within this document may relate to the following external frameworks:
 
 | ID | Title | Version | Description |
 |----|-------|---------|-------------|
