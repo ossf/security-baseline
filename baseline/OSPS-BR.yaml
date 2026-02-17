@@ -10,8 +10,7 @@ description: |
 controls:
   - id: OSPS-BR-01
     title: |
-      The project's build and release pipelines MUST NOT permit untrusted
-      input that allows access to privileged resources.
+      Prevent Untrusted Input When Building & Releasing
     objective: |
       Reduce the risk of code injection or other security vulnerabilities in the
       project's build and release pipelines by preventing untrusted input from
@@ -112,8 +111,7 @@ controls:
 
   - id: OSPS-BR-02
     title: |
-      All releases and released software assets MUST be assigned a unique
-      version identifier for each release intended to be used by users.
+      Assign Unique Version Identifiers
     objective: |
       Ensure that each software asset produced by the project is uniquely
       identified, enabling users to track changes and updates to the project
@@ -189,8 +187,8 @@ controls:
           scheme. Examples include SemVer, CalVer, or git commit id.
 
   - id: OSPS-BR-03
-    title: |
-      All official project URIs MUST be delivered using encrypted channels.
+    title: | # TODO: These ARs need to be refined or split into two entries
+      Use Encrypted Channels for Development & Release Activity
     objective: |
       Protect the confidentiality and integrity of project source code during
       development, reducing the risk of eavesdropping or data tampering.
@@ -276,12 +274,11 @@ controls:
 
   - id: OSPS-BR-04
     title: |
-      All releases MUST provide a descriptive log of functional and security
-      modifications.
+      Publish Change Log With Release
     objective: |
       Provide transparency and accountability for changes made to the project's
-      software releases, enabling users to understand the modifications and
-      improvements included in each release.
+      software releases in such a way that users can understand the
+      modifications and improvements included in each release.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -373,8 +370,7 @@ controls:
 
   - id: OSPS-BR-05
     title: |
-      All build and release pipelines MUST use standardized tooling where
-      available to ingest dependencies at build time.
+      Use Standardized Dependency Management Tools
     objective: |
       Ensure that the project's build and release pipelines use standardized tools
       and processes to manage dependencies, reducing the risk of compatibility
@@ -451,10 +447,10 @@ controls:
 
   - id: OSPS-BR-06
     title: |
-      Produce all released software assets with signatures and hashes.
+      Include Signatures and Hashes With Release
     objective: |
-      All released software assets MUST be signed or accounted for in a
-      signed manifest including each asset's cryptographic hashes.
+      Ensure released software assets can be verified by users to ensure
+      integrity of each asset when it is used.
     guideline-mappings:
       - reference-id: SSDF
         entries:
@@ -516,11 +512,13 @@ controls:
           signature or attestations, such as GPG or PGP signature, Sigstore
           signatures, SLSA provenance, or SLSA VSAs. Include the cryptographic
           hashes of each asset in a signed manifest or metadata file.
+
   - id: OSPS-BR-07
     title: |
-      The project MUST store and manage all secrets and credentials used by the project in a secure manner.
+      Secure Secrets and Credentials
     objective: |
-      Ensure that sensitive data is not disclosed, compromised or misused leading to security vulnerabilities or supply chain compromise.
+      Ensure that data which can lead to security vulnerabilities or
+      supply chain compromise is not disclosed, compromised, or misused.
     guideline-mappings:
       - reference-id: BPB
         entries:

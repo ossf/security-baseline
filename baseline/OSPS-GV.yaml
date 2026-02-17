@@ -8,13 +8,11 @@ description: |
 controls:
   - id: OSPS-GV-01
     title: |
-      The project documentation MUST include the roles and responsibilities
-      for members of the project.
+      Publish Project Roles and Responsibilities
     objective: |
-      Documenting project roles and responsibilities helps project participants,
-      potential contributors, and downstream consumers have an accurate
-      understanding of who is working on the project and what areas of authority
-      they may have.
+      Document project roles and responsibilities to help project participants,
+      potential contributors, and downstream consumers understand who is working
+      on the project and what areas of authority they may have.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -87,12 +85,11 @@ controls:
 
   - id: OSPS-GV-02
     title: |
-      The project MUST have one or more mechanisms for public discussions
-      about proposed changes and usage obstacles.
+      Provide Public Discussion Mechanisms
     objective: |
-      Encourages open communication and collaboration within the project
-      community, enabling users to provide feedback and discuss proposed changes
-      or usage challenges.
+      Encourage open communication and collaboration within the project
+      community by enabling users to provide feedback and discuss proposed
+      changes or usage challenges.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -132,12 +129,10 @@ controls:
 
   - id: OSPS-GV-03
     title: |
-      The project documentation MUST include an explanation of the
-      contribution process.
+      Publish Contribution Guide
     objective: |
-      Provide guidance to new contributors on how to participate in the project,
-      outlining the steps required to submit changes or enhancements to the
-      project's codebase.
+      Provide guidance on how to participate in the project, outlining the steps
+      required to submit changes or enhancements to the project's codebase.
     guideline-mappings:
       - reference-id: BPB
         entries:
@@ -203,9 +198,7 @@ controls:
 
   - id: OSPS-GV-04
     title: |
-      The project documentation MUST have a policy that code contributors
-      are reviewed prior to granting escalated permissions to sensitive
-      resources.
+      Require Formal Review of Permission Grants
     objective: |
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing

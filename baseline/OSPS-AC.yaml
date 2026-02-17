@@ -9,9 +9,7 @@ description: |
 controls:
   - id: OSPS-AC-01
     title: |
-      The project's version control system MUST require multi-factor
-      authentication for users modifying the project repository
-      settings or accessing sensitive data.
+      Use MFA for Sensitive Actions
     objective: |
       Reduce the risk of account compromise or insider threats by requiring
       multi-factor authentication for collaborators modifying the project
@@ -94,8 +92,7 @@ controls:
 
   - id: OSPS-AC-02
     title: |
-      The project's version control system MUST restrict collaborator
-      permissions to the lowest available privileges by default.
+      Restrict Collaborator Permissions
     objective: |
       Reduce the risk of unauthorized access to the project's repository by
       limiting the permissions granted to new collaborators.
@@ -161,8 +158,7 @@ controls:
 
   - id: OSPS-AC-03
     title: |
-      The project's version control system MUST prevent unintentional
-      modification of the primary branch.
+      Protect the Primary Branch from Accidental Modification
     objective: |
       Reduce the risk of accidental changes or deletion of the primary branch
       of the project's repository by preventing unintentional modification.
@@ -241,8 +237,7 @@ controls:
 
   - id: OSPS-AC-04
     title: |
-      The project's permissions in CI/CD pipelines MUST follow the principle
-      of least privilege.
+      Enforce Least Privilege on CI/CD Pipelines
     objective: |
       Reduce the risk of unauthorized access to the project's build and release
       processes by limiting the permissions granted to steps within the CI/CD
