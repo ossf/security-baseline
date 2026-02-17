@@ -38,7 +38,9 @@ In the detailed subsections you will find the control, rationale, and details no
 
 Where possible, we have added control mappings to external frameworks.
 These are not guaranteed to be 100% matches, but instead serve as references
-for external catalogs that relate to the  corresponding controls.
+to external elements that the Baseline maintainers believe relate to the Baseline
+control. This is not a functional connection, and does not imply that
+progress on one will necessarily result in progress on the other.
 
 For more information on the project and to make contributions, visit the [GitHub repo](https://github.com/ossf/security-baseline).
 

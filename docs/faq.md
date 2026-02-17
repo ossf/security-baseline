@@ -29,7 +29,7 @@ However, the OSPS Baseline was developed with special attention and consideratio
 We are partnering with all manner of projects to test these criteria for viability, and continually refining and clarifying the verbiage for everyone’s benefit.
 We have also provided a crosswalk with mappings to existing standards, frameworks, and other control schemas to make it easier to understand how fulfilling criteria are applicable across multiple sets of requirements and how a project with an OSPS Baseline level meets those controls.
 These mappings are intended to show a relationship between OSPS Baseline and external control catalogs.
-*Mappings are not a guarantee of compliance with listed external catalogs and are not a substitute for audits.*
+*Mappings provide no claim of compliance with listed external catalogs and are not a substitute for audits.*
 
 ## How does the baseline relate to established frameworks such as NIST Cybersecurity Framework, ISO/IEC 27001, and LFX GenAI Framework? Is it a substitute for formal regulatory compliance or certification processes (ie. IEEE has a certification 'badge')?
 
