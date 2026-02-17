@@ -550,7 +550,10 @@ controls:
           - reference-id: RA-5
           - reference-id: SA-11
           - reference-id: SI-2
-          - reference-id: SI-3                
+          - reference-id: SI-3     
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.05
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
