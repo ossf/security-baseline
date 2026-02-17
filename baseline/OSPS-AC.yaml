@@ -143,7 +143,7 @@ controls:
       - reference-id: BSI-TR-03185-2
         entries:
           - reference-id: GV.02      
-      assessment-requirements:
+    assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
           When a new collaborator is added, the version control system MUST
