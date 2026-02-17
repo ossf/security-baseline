@@ -271,6 +271,9 @@ controls:
         entries:
           - reference-id: Claim 1.3.2
           - reference-id: Claim 1.3.3
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.04
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
