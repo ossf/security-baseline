@@ -66,6 +66,9 @@ controls:
           - reference-id: PL-2
           - reference-id: PL-8
           - reference-id: SA-15
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.01          
     assessment-requirements:
       - id: OSPS-DO-01.01
         text: |
@@ -137,6 +140,9 @@ controls:
           - reference-id: IR-6
           - reference-id: SI-4
           - reference-id: SI-5          
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.03
     assessment-requirements:
       - id: OSPS-DO-02.01
         text: |
@@ -208,6 +214,10 @@ controls:
           - reference-id: SA-15
           - reference-id: SI-7
           - reference-id: SI-7(14)          
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.01
+          - reference-id: BR.03          
     assessment-requirements:
       - id: OSPS-DO-03.01
         text: |
@@ -291,6 +301,9 @@ controls:
           - reference-id: Claim 4.1.1
           - reference-id: Claim 4.1.2
           - reference-id: Claim 4.2.1
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: DE.01       
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
@@ -359,6 +372,9 @@ controls:
         entries:
           - reference-id: Claim 4.1.1
           - reference-id: Claim 4.2.1
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: DE.01        
     assessment-requirements:
       - id: OSPS-DO-05.01
         text: |
@@ -436,6 +452,9 @@ controls:
         entries:
           - reference-id: Claim 1.2.1
           - reference-id: Claim 1.2.2
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.01
     assessment-requirements:
       - id: OSPS-DO-06.01
         text: |
