@@ -68,6 +68,9 @@ controls:
           - reference-id: RA-5
           - reference-id: SA-11
           - reference-id: SA-15          
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.2.3
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
@@ -155,9 +158,6 @@ controls:
           - reference-id: 6.3.2
           - reference-id: 6.4.3
           - reference-id: 12.5.1
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 1.2
       - reference-id: 800-161
         entries:
           - reference-id: CA-7
@@ -170,6 +170,11 @@ controls:
           - reference-id: SA-15
           - reference-id: SR-3
           - reference-id: SR-4                
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.2.1
+          - reference-id: Claim 1.2.2
+          - reference-id: Claim 3.1.1
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
@@ -254,6 +259,10 @@ controls:
           - reference-id: SA-11
           - reference-id: SA-15
           - reference-id: SR-3                
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.3.2
+          - reference-id: Claim 1.3.3
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
@@ -273,9 +282,8 @@ controls:
     title: |
       Enforce Security Requirements on All Codebases
     objective: |
-      Ensure that additional code repositories or subprojects produced by the
-      project are held to a standard that is clear and appropriate for that
-      codebase.
+      Ensure that all codebases produced by the project are well
+      documented and held to the same security standard.
     guideline-mappings:
       - reference-id: CRA
         entries:
@@ -312,8 +320,8 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
-          While active, the project documentation MUST contain a list of any
-          codebases that are considered subprojects.
+          Projects with multiple repositories MUST document a list of codebases
+          that are part of the project.
         applicability:
           - Maturity Level 1
           - Maturity Level 2

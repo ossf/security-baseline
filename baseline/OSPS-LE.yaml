@@ -93,6 +93,9 @@ controls:
       - reference-id: 800-161
         entries:
           - reference-id: PL-4                 
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: LE.01
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
@@ -156,6 +159,9 @@ controls:
       - reference-id: 800-161
         entries:
           - reference-id: PL-4                 
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: LE.02
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |

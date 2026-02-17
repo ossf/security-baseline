@@ -8,7 +8,7 @@ While maintainer consensus shall be the process for decision making, all issues 
 
 ## OpenSSF Security Baseline Special Interest Group
 
-The Open Source Project Security Baseline (OSPS Baseline) is produced by the OpenSSF's Baseline SIG, part of the [BEST Working Group](https://github.com/ossf/wg-best-practices-os-developers).
+The Open Source Project Security Baseline (OSPS Baseline) is produced by the OpenSSF's Baseline SIG, part of the [ORBIT Working Group](https://github.com/ossf/wg-orbit).
 
 Refer to the [OpenSSF Community Calendar](https://openssf.org/getinvolved/) for SIG meeting times, meeting notes, and links to past recordings.
 

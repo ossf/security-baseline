@@ -25,6 +25,9 @@ controls:
           - reference-id: PO.5.2
           - reference-id: PS.1
           - reference-id: PS.2
+      - reference-id: Scorecard
+        entries:
+          - reference-id: Dangerous-Workflow
       - reference-id: CSF
         entries:
           - reference-id: PR.AA-02
@@ -56,26 +59,55 @@ controls:
           - reference-id: CM-5
           - reference-id: CM-7
           - reference-id: SI-7
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 2.1.2
+          - reference-id: Claim 2.2.2          
     assessment-requirements:
       - id: OSPS-BR-01.01
         text: |
-          When a CI/CD pipeline accepts an input parameter, that parameter MUST
-          be sanitized and validated prior to use in the pipeline.
-        applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
-        recommendation: # TODO
-      - id: OSPS-BR-01.02
-        text: |
-          When a CI/CD pipeline uses a branch name in its functionality, that
-          name value MUST be sanitized and validated prior to use in the
+          When a CI/CD pipeline operates on untrusted metadata, those
+          parameters MUST be sanitized and validated prior to use in the
           pipeline.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
-        recommendation: # TODO
+        recommendation: |
+          CI/CD pipelines should sanitize (quote, escape or exit on expected
+          values) all metadata inputs which correspond to untrusted sources.
+          This includes data such as branch names, commit messages, tags, pull request titles,
+          and author information.
+      - id: OSPS-BR-01.02
+        text: |
+          Retired in https://github.com/ossf/security-baseline/pull/443
+        applicability:
+          - retired
+      - id: OSPS-BR-01.03
+        text: |
+          When a CI/CD pipeline operates on untrusted code snapshots, it MUST
+          prevent access to privileged CI/CD credentials and assets.
+        applicability:
+          - Maturity Level 1
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          CI/CD pipelines should isolate untrusted code snapshots from
+          privileged credentials and assets. In particular, projects should be
+          careful to ensure that workflows which build or execute code prior
+          to review by a collaborator do not have access to CI/CD credentials.
+      - id: OSPS-BR-01.04
+        text: |
+          CI/CD pipelines which accept trusted collaborator input MUST sanitize and
+          validate that input prior to use in the pipeline.
+        applicability:
+          - Maturity Level 3
+        recommendation: |
+          CI/CD pipelines should sanitize (quote, escape or exit on expected
+          values) all collaborator inputs on explicit workflow executions.
+          While collaborators are generally trusted, manual inputs to a
+          workflow cannot be reviewed and could be abused by an account
+          takeover or insider threat.
 
   - id: OSPS-BR-02
     title: |
@@ -116,15 +148,20 @@ controls:
       - reference-id: PCIDSS
         entries:
           - reference-id: 6.4.3
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 3.1
       - reference-id: 800-161
         entries:
           - reference-id: IA-4
           - reference-id: SA-15
           - reference-id: SI-7
           - reference-id: SR-4
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.1.4
+          - reference-id: Claim 3.1.1  
+          - reference-id: Claim 3.4.2 
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.02    
     assessment-requirements:
       - id: OSPS-BR-02.01
         text: |
@@ -195,13 +232,16 @@ controls:
           - reference-id: 4.2.2
           - reference-id: 6.4.1
           - reference-id: 8.3.2
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 3.1
       - reference-id: 800-161
         entries:
           - reference-id: AC-4
           - reference-id: AC-4(21)
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 3.1.2  
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.03             
     assessment-requirements:
       - id: OSPS-BR-03.01
         text: |
@@ -219,15 +259,18 @@ controls:
       - id: OSPS-BR-03.02
         text: |
           When the project lists a URI as an official distribution channel,
-          that URI MUST be exclusively delivered using encrypted channels.
+          that channel MUST be protected from adversary-in-the-middle
+          attacks using cryptographically authenticated channels.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-          Configure the project's release pipeline to only fetch data from
-          websites, API responses, and other services which use encrypted
-          channels such as SSH or HTTPS for data transmission.
+          Artifacts distributed by the project should be distributed through
+          channels which ensure integrity and authenticity. Use of HTTPS for
+          downloads, signed releases, or distribution through trusted package
+          managers are all acceptable methods to protect against
+          adversary-in-the-middle attacks.
 
   - id: OSPS-BR-04
     title: |
@@ -289,10 +332,6 @@ controls:
           - reference-id: 6.5.1
           - reference-id: 6.5.2
           - reference-id: 10.2.2
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 3.1
-          - reference-id: 3.5
       - reference-id: 800-161
         entries:
           - reference-id: AU-2
@@ -304,6 +343,14 @@ controls:
           - reference-id: MA-8
           - reference-id: SI-4
           - reference-id: SI-5
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.1.4
+          - reference-id: Claim 2.2.3
+          - reference-id: Claim 3.1.1
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.04         
     assessment-requirements:
       - id: OSPS-BR-04.01
         text: |
@@ -370,10 +417,6 @@ controls:
       - reference-id: PCIDSS
         entries:
           - reference-id: 6.4.3
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 1.1
-          - reference-id: 1.2
       - reference-id: 800-161
         entries:
           - reference-id: AC-4
@@ -383,6 +426,10 @@ controls:
           - reference-id: RA-5
           - reference-id: SA-15
           - reference-id: SR-3
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.2.1
+          - reference-id: Claim 1.2.5  
     assessment-requirements:
       - id: OSPS-BR-05.01
         text: |
@@ -437,9 +484,6 @@ controls:
           - reference-id: 4.2.2
           - reference-id: 6.4.1
           - reference-id: 8.3.2
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: 3.1
       - reference-id: 800-161
         entries:
           - reference-id: AU-10
@@ -447,6 +491,13 @@ controls:
           - reference-id: SA-15
           - reference-id: SI-7
           - reference-id: SI-7(14)
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.2.2
+          - reference-id: Claim 3.1.1  
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: BR.03
     assessment-requirements:
       - id: OSPS-BR-06.01
         text: |
@@ -481,6 +532,10 @@ controls:
           - reference-id: PW.1.2
           - reference-id: PW.1.3
           - reference-id: PW.5.1
+      - reference-id: UKSSCOP
+        entries:
+          - reference-id: Claim 1.4.3
+          - reference-id: Claim 1.4.5
     assessment-requirements:
       - id: OSPS-BR-07.01
         text: |
