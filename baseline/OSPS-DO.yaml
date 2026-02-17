@@ -465,7 +465,10 @@ controls:
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
-
+          It is recommended to publish this information alongside the project's
+          technical & design documentation on a publicly viewable resource such
+          as the source code repository, project website, or other channel.  
+        
   - id: OSPS-DO-07
     title: |
       The project documentation MUST provide instructions on how to build
