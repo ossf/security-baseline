@@ -471,8 +471,7 @@ controls:
         
   - id: OSPS-DO-07
     title: |
-      The project documentation MUST provide instructions on how to build
-      from source code.
+      Provide Instructions on How to Build From Source
     objective: |
       Ensure that users have a clear and comprehensive instructions on how
       to build the software from source code.
