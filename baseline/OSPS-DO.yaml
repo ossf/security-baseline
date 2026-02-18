@@ -486,8 +486,8 @@ controls:
          include instructions on how to build the software, including required
          libraries, frameworks, SDKs, and dependencies.
       applicability:
-        Maturity Level 2
-        Maturity Level 3
+        - Maturity Level 2
+        - Maturity Level 3
       recommendation: |
         It is recommended to publish this information alongside the project's
         technical & design documentation on a publicly viewable resource such
