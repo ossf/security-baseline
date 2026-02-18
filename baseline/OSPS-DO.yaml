@@ -482,7 +482,7 @@ controls:
     assessment-requirements:
       -id: OSPS-DO-07.01
        text: |
-         When the project has made a release, the project documentation MUST
+         The project documentation MUST
          include instructions on how to build the software, including required
          =libraries, frameworks, SDKs, and dependencies.
       applicability:
