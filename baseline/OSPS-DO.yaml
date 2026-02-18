@@ -484,7 +484,7 @@ controls:
        text: |
          The project documentation MUST
          include instructions on how to build the software, including required
-         =libraries, frameworks, SDKs, and dependencies.
+         libraries, frameworks, SDKs, and dependencies.
       applicability:
         Maturity Level 2
         Maturity Level 3
