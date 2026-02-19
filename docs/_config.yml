@@ -46,7 +46,7 @@ minima:
 #     the order they should be rendered.
    nav_pages:
      - index.md
-     - versions/2025-10-10.md
+     - versions/2026-02-19.md
      - maintainers.md
      - faq.md
      - maintenance.md
