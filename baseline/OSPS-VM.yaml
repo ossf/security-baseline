@@ -94,6 +94,9 @@ controls:
           - reference-id: Claim 3.4.1
           - reference-id: Claim 3.5.1
           - reference-id: Claim 4.1.2
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: VM.01
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
@@ -160,6 +163,9 @@ controls:
           - reference-id: IR-4
           - reference-id: IR-6
           - reference-id: IR-8                
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: VM.01
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
@@ -204,6 +210,9 @@ controls:
       - reference-id: 800-161
         entries:
           - reference-id: IR-6                
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: VM.01
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
@@ -269,6 +278,9 @@ controls:
           - reference-id: SI-2
           - reference-id: SI-4
           - reference-id: SI-5                
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: VM.02
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
@@ -530,7 +542,10 @@ controls:
           - reference-id: RA-5
           - reference-id: SA-11
           - reference-id: SI-2
-          - reference-id: SI-3                
+          - reference-id: SI-3     
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.05
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
