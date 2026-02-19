@@ -467,4 +467,29 @@ controls:
         recommendation: |
           It is recommended to publish this information alongside the project's
           technical & design documentation on a publicly viewable resource such
-          as the source code repository, project website, or other channel.
+          as the source code repository, project website, or other channel.  
+        
+  - id: OSPS-DO-07
+    title: |
+      Provide Instructions on How to Build From Source
+    objective: |
+      Ensure that users have a clear and comprehensive instructions on how
+      to build the software from source code.
+    guideline-mappings:
+      - reference-id: 
+        entries:
+          - reference-id:
+    assessment-requirements:
+      - id: OSPS-DO-07.01
+        text: |
+          The project documentation MUST
+          include instructions on how to build the software, including required
+          libraries, frameworks, SDKs, and dependencies.
+        applicability:
+          - Maturity Level 2
+          - Maturity Level 3
+        recommendation: |
+          It is recommended to publish this information alongside the project's
+          contributor documentation, such as in `CONTRIBUTING.md` or other
+          developer task documentation. This may also be documented using
+          `Makefile` targets or other automation scripts.
