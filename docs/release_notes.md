@@ -1,5 +1,36 @@
 # OSPS Baseline release notes
 
+## 2026-02-19
+
+### New controls
+
+* Level 1
+    * [OSPS-BR-01.03](versions/2026-02-19#osps-br-0103)
+* Level 2
+    * [OSPS-DO-07.01](versions/2026-02-19#osps-do-0701)
+* Level 3
+    * [OSPS-BR-01.04](versions/2026-02-19#osps-br-0104)
+
+
+### Modified controls
+
+* [OSPS-BR-03.02](versions/2026-02-19#osps-br-0302) updated to clarify intent
+* [OSPS-QA-04.01](versions/2026-02-19#osps-qa-0401) updated to clarify intent
+
+### Removed controls
+
+* OSPS-BR-01.02
+
+### New control mappings
+
+* [BSI-TR-03185-2](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03185/BSI-TR-03185-2.pdf?__blob=publicationFile&v=5)
+* Additional [UKSSCOP](https://www.gov.uk/government/publications/software-security-code-of-practice/software-security-code-of-practice) 
+
+### Other changes
+
+* Control titles are more brief to improve clarity
+
+
 ## 2025-10-10
 
 ### New controls
