@@ -56,7 +56,7 @@ controls:
           - reference-id: PM-30          
       - reference-id: UKSSCOP
         entries:
-          - reference-id: Claim 2.1.1 
+          - reference-id: Claim 2.1.1
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
@@ -113,6 +113,9 @@ controls:
           - reference-id: AC-21
           - reference-id: AU-6
           - reference-id: PL-1          
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: QA.03                 
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
@@ -169,6 +172,11 @@ controls:
       - reference-id: UKSSCOP
         entries:
           - reference-id: Claim 2.1.1
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: GV.01
+          - reference-id: QA.04
+          - reference-id: QA.05       
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
