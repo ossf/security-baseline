@@ -71,6 +71,9 @@ controls:
           - reference-id: Claim 1.4.2
           - reference-id: Claim 2.1.5   
           - reference-id: Claim 2.2.2   
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: GV.02          
     assessment-requirements:
       - id: OSPS-AC-01.01
         text: |
@@ -134,6 +137,9 @@ controls:
       - reference-id: UKSSCOP
         entries:
           - reference-id: Claim 2.2.2   
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: GV.02      
     assessment-requirements:
       - id: OSPS-AC-02.01
         text: |
@@ -197,6 +203,10 @@ controls:
         entries:
           - reference-id: Claim 1.1.4
           - reference-id: Claim 2.2.2
+      - reference-id: BSI-TR-03185-2
+        entries:
+          - reference-id: GV.02      
+          - reference-id: QA.06      
     assessment-requirements:
       - id: OSPS-AC-03.01
         text: |
