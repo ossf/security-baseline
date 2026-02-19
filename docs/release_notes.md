@@ -1,5 +1,63 @@
 # OSPS Baseline release notes
 
+<!-- Use the template below to start the release notes for the next version. -->
+
+<!--
+## TEMPLATE
+
+### New controls
+
+* Level 1
+    * (none)
+* Level 2
+    * (none)
+* Level 3
+    * (none)
+
+### Modified controls
+
+(none)
+
+### Removed controls
+
+(none)
+
+### New control mappings
+
+(none)
+
+### Other changes
+
+-->
+
+<!--
+## Next release, commented out until we have a date and are about ready to release
+
+### New controls
+
+* Level 1
+    * (none)
+* Level 2
+    * (none)
+* Level 3
+    * (none)
+
+### Modified controls
+
+(none)
+
+### Removed controls
+
+(none)
+
+### New control mappings
+
+(none)
+
+### Other changes
+
+-->
+
 ## 2026-02-19
 
 ### New controls
