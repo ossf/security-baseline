@@ -43,6 +43,8 @@ body:
         - label: |
             Add the link to the new version to the "current version" in `docs/index.md` (e.g. `Current version: [2025-02-04](versions/2025-02-04]`). Be sure to use the HTML syntax for the link to the checklist in order to have Jekyll link to the markdown version instead of an html version.
         - label: |
+            Make sure the `docs/versions/release_notes.md` file contains an accurate list of changes and is not commented out.
+        - label: |
             Open a pull request with the above changes
         - label: |
             After the pull request is merged, git tag the commit
