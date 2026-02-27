@@ -72,6 +72,7 @@
 
 ### Modified controls
 
+* [OSPS-BR-01.01](versions/2026-02-19#osps-br-0101) updated to remove ambiguity and overlap
 * [OSPS-BR-03.02](versions/2026-02-19#osps-br-0302) updated to clarify intent
 * [OSPS-QA-04.01](versions/2026-02-19#osps-qa-0401) updated to clarify intent
 
