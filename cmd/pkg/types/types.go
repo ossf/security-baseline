@@ -3,7 +3,7 @@
 
 package types
 
-import "github.com/ossf/gemara/layer2"
+import "github.com/gemaraproj/go-gemara"
 
 var ControlFamilies = []string{
 	"AC",
@@ -18,10 +18,8 @@ var ControlFamilies = []string{
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	// map of family names to IDs to support OSCAL groups
-	ControlFamilyIDs map[string]string
-	Catalog          layer2.Catalog
-	Lexicon          []LexiconEntry
+	Catalog gemara.ControlCatalog
+	Lexicon []LexiconEntry
 }
 
 type LexiconEntry struct {

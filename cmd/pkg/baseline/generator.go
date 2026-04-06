@@ -44,8 +44,13 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 		"addLinks": func(s string) string {
 			return addLinksTemplateFunction(b.Lexicon, s)
 		},
-		"asLink":   asLinkTemplateFunction,
-		"maxLevel": maxLevel,
+		"asLink":           asLinkTemplateFunction,
+		"maxLevel":         maxLevel,
+		"controlsForGroup": controlsForGroup,
+		"isRetired":        isRetired,
+		"applicabilityTitle": func(id string) string {
+			return applicabilityTitle(b.Catalog.Metadata.ApplicabilityGroups, id)
+		},
 	}).Parse(string(templateContent))
 	if err != nil {
 		return fmt.Errorf("error parsing template: %w", err)

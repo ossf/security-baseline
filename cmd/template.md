@@ -53,8 +53,7 @@ For more information on the project and to make contributions, visit the [GitHub
 * [Level 3](#level-3): for any code project that has a large number of consistent users
 
 ### Level 1
-{{ range .Catalog.ControlFamilies }}
-{{- range .Controls }}
+{{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 1 }}
@@ -62,11 +61,9 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 {{- end }}
 {{- end }}
-{{- end }}
 
 ### Level 2
-{{ range .Catalog.ControlFamilies }}
-{{- range .Controls }}
+{{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 2 }}
@@ -74,11 +71,9 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 {{- end }}
 {{- end }}
-{{- end }}
 
 ### Level 3
-{{ range .Catalog.ControlFamilies }}
-{{- range .Controls }}
+{{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
 {{- if maxLevel .Applicability 3 }}
@@ -86,15 +81,14 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- end }}
 {{- end }}
 {{- end }}
-{{- end }}
 
-{{ range .Catalog.ControlFamilies }}
+{{ range .Catalog.Groups }}
 
 ## {{ .Title }}
 
 {{ .Description }}
 
-{{ range .Controls }}
+{{ range controlsForGroup $.Catalog.Controls .Id }}
 
 ### {{ .Id }} - {{ .Title | addLinks | collapseNewlines }}
 
@@ -104,7 +98,7 @@ For more information on the project and to make contributions, visit the [GitHub
 
 #### {{ .Id }}
 
-{{ if eq (index .Applicability 0) "retired" -}}
+{{ if isRetired .State -}}
 {{ .Text | collapseNewlines }}
 {{ else -}}
 **Requirement:** {{ .Text | addLinks | collapseNewlines }}
@@ -112,7 +106,7 @@ For more information on the project and to make contributions, visit the [GitHub
 **Recommendation:** {{ .Recommendation }}
 
 **Control applies to:**
-{{ range .Applicability }}- {{ . }}
+{{ range .Applicability }}- {{ . | applicabilityTitle }}
 {{ end }}
 
 {{- end -}}
@@ -120,8 +114,8 @@ For more information on the project and to make contributions, visit the [GitHub
 {{ end }}
 
 #### External Framework Relations
-{{ if  .GuidelineMappings }}
-  {{ range .GuidelineMappings }}
+{{ if  .Guidelines }}
+  {{ range .Guidelines }}
   - **{{ .ReferenceId | addLinks }}**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry.ReferenceId }}{{ end }}
   {{- end }}
 {{ end }}

@@ -1,11 +1,13 @@
-title: Vulnerability Management
-description: |
-  Vulnerability Management focuses on the
-  processes and practices used to identify and
-  address security vulnerabilities in the project's
-  software dependencies. These controls help ensure
-  that the project is well positioned to respond to
-  security threats and vulnerabilities in the software.
+groups:
+  - id: VM
+    title: Vulnerability Management
+    description: |
+      Vulnerability Management focuses on the
+      processes and practices used to identify and
+      address security vulnerabilities in the project's
+      software dependencies. These controls help ensure
+      that the project is well positioned to respond to
+      security threats and vulnerabilities in the software.
 controls:
   - id: OSPS-VM-01
     title: |
@@ -14,7 +16,8 @@ controls:
       Establish a process for reporting and addressing vulnerabilities in the
       project, ensuring that security issues are handled promptly and
       transparently.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: R-B-6
@@ -104,8 +107,8 @@ controls:
           include a policy for coordinated vulnerability disclosure (CVD), with a clear
           timeframe for response.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Create a SECURITY.md file at the root of the directory, outlining the
           project's policy for coordinated vulnerability disclosure. Include a
@@ -119,7 +122,8 @@ controls:
       Enable external parties, such as researchers, to easily understand who they 
       should contact in the event that a vulnerability is found, and what process
       they should follow.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-8
@@ -172,7 +176,7 @@ controls:
           While active, the project documentation MUST contain
           security contacts.
         applicability:
-          - Maturity Level 1
+          - maturity-1
         recommendation: |
           Create a security.md (or similarly-named) file that contains security
           contacts for the project.
@@ -185,7 +189,8 @@ controls:
       the project so that security vulnerabilities are not be shared with the
       public until the project has been provided time to analyze and prepare
       remediations to protect users of the project.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: R-B-7
@@ -220,8 +225,8 @@ controls:
           provide a means for private vulnerability reporting directly to
           the security contacts within the project.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Provide a means for security researchers to report vulnerabilities
           privately to the project. This may be a dedicated email address, a
@@ -234,7 +239,8 @@ controls:
     objective: |
       Ensure that project end users have a well known mechanism to understand
       vulnerabilities found within the project.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: CRA
         entries:
           - reference-id: 1.2a
@@ -287,8 +293,8 @@ controls:
           While active, the project documentation MUST
           publicly publish data about discovered vulnerabilities.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Provide information about known vulnerabilities in a predictable
           public channel, such as a CVE entry, blog post, or other medium.
@@ -302,7 +308,7 @@ controls:
           in a VEX document, augmenting the vulnerability report with
           non-exploitability details.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Establish a VEX feed communicating the exploitability status of
           known vulnerabilities, including assessment details or any
@@ -316,7 +322,8 @@ controls:
       Identify and address defects and security weaknesses in the project's
       imported code early in the development process, reducing the risk of
       shipping insecure software.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-8
@@ -413,7 +420,7 @@ controls:
           defines a threshold for remediation of SCA findings related to
           vulnerabilities and licenses.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Document a policy in the project that defines a threshold for
           remediation of SCA findings related to vulnerabilities and licenses.
@@ -424,7 +431,7 @@ controls:
           While active, the project documentation MUST include a policy to
           address SCA violations prior to any release.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Document a policy in the project to address applicable Software
           Composition Analysis results before any release, and add status checks
@@ -437,7 +444,7 @@ controls:
           in the event of violations, except when declared and suppressed as
           non-exploitable.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Create a status check in the project's version control system that
           runs a Software Composition Analysis tool on all changes
@@ -451,7 +458,8 @@ controls:
       Identify and address defects and security weaknesses in the project's
       codebase early in the development process, reducing the risk of shipping
       insecure software.
-    guideline-mappings:
+    group: VM
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-8
@@ -552,7 +560,7 @@ controls:
           While active, the project documentation MUST include a policy that
           defines a threshold for remediation of SAST findings.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Document a policy in the project that defines a threshold for
           remediation of Static Application Security Testing (SAST) findings.
@@ -565,7 +573,7 @@ controls:
           weaknesses and blocked in the event of violations except when declared
           and suppressed as non-exploitable.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Create a status check in the project's version control system that
           runs a Static Application Security Testing (SAST) tool on all changes

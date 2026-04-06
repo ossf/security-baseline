@@ -11,6 +11,8 @@ import (
 	"strings"
 	"unicode"
 
+	"github.com/gemaraproj/go-gemara"
+
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
@@ -100,6 +102,31 @@ func asLinkTemplateFunction(text string) string {
 			return '-'
 		}
 	}, text)
+}
+
+func isRetired(state gemara.Lifecycle) bool {
+	return state == gemara.LifecycleRetired
+}
+
+// applicabilityTitle resolves an applicability group ID to its human-readable title.
+func applicabilityTitle(groups []gemara.Group, id string) string {
+	for _, g := range groups {
+		if g.Id == id {
+			return g.Title
+		}
+	}
+	return id
+}
+
+// controlsForGroup returns only the controls that belong to a given group id.
+func controlsForGroup(controls []gemara.Control, groupID string) []gemara.Control {
+	var out []gemara.Control
+	for _, c := range controls {
+		if c.Group == groupID {
+			out = append(out, c)
+		}
+	}
+	return out
 }
 
 // loop through maturityLevels
