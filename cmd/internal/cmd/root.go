@@ -24,6 +24,7 @@ func Execute() error {
 	addCompile(rootCmd)
 	addValidate(rootCmd)
 	addOscal(rootCmd)
+	addGemara(rootCmd)
 
 	return rootCmd.Execute()
 }

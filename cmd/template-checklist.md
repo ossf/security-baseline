@@ -4,7 +4,7 @@
 {{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
-{{- if maxLevel .Applicability 1 }}
+{{- if and (not (isRetired .State)) (maxLevel .Applicability 1) }}
 - [ ] **{{ $req.Id }}**: {{ $req.Text | collapseNewlines }}
 {{- end }}
 {{- end }}
@@ -14,7 +14,7 @@
 {{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
-{{- if maxLevel .Applicability 2 }}
+{{- if and (not (isRetired .State)) (maxLevel .Applicability 2) }}
 - [ ] **{{ $req.Id }}**: {{ $req.Text | collapseNewlines }}
 {{- end }}
 {{- end }}
@@ -24,7 +24,7 @@
 {{ range .Catalog.Controls }}
 {{- range .AssessmentRequirements }}
 {{- $req := . }}
-{{- if maxLevel .Applicability 3 }}
+{{- if and (not (isRetired .State)) (maxLevel .Applicability 3) }}
 - [ ] **{{ $req.Id }}**: {{ $req.Text | collapseNewlines }}
 {{- end }}
 {{- end }}

@@ -85,7 +85,10 @@ controls:
         text: |
           Retired in https://github.com/ossf/security-baseline/pull/443
         applicability:
-          - retired
+          - maturity-1
+          - maturity-2
+          - maturity-3
+        state: Retired
       - id: OSPS-BR-01.03
         text: |
           When a CI/CD pipeline operates on untrusted code snapshots, it MUST

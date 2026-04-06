@@ -134,9 +134,6 @@ func controlsForGroup(controls []gemara.Control, groupID string) []gemara.Contro
 func maxLevel(maturityLevels []string, targetMaturity int) bool {
 	var out bool
 	for _, maturity := range maturityLevels {
-		if maturity == "retired" {
-			return false
-		}
 		maturityInt, err := strconv.Atoi(maturity[len(maturity)-1:])
 		if err != nil {
 			fmt.Println(err)

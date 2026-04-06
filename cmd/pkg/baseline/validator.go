@@ -10,6 +10,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/gemaraproj/go-gemara"
+
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
@@ -47,36 +49,32 @@ func (v *Validator) Check(b *types.Baseline) error {
 			if len(assessment.Applicability) == 0 {
 				errs = append(errs, fmt.Errorf("missing 'applicability' for assessment %s in control %s", assessment.Id, entry.Id))
 			}
-			if slices.Contains(assessment.Applicability, "retired") {
-				if len(assessment.Applicability) > 1 {
-					errs = append(errs, fmt.Errorf("assessment %s in control %s is marked as 'retired' but also has other applicability levels", assessment.Id, entry.Id))
-				}
+			if assessment.State == gemara.LifecycleRetired {
 				if !strings.HasPrefix(assessment.Text, "Retired in") {
-					errs = append(errs, fmt.Errorf("assessment %s in control %s is marked as 'retired' but does not start with 'Retired in'", assessment.Id, entry.Id))
+					errs = append(errs, fmt.Errorf("assessment %s in control %s has state 'Retired' but text does not start with 'Retired in'", assessment.Id, entry.Id))
 				}
-			} else {
-				baseMaturity := -1
-				for i, maturity := range assessment.Applicability {
-					if maturity[:len(maturity)-1] != "maturity-" {
+			}
+			baseMaturity := -1
+			for i, maturity := range assessment.Applicability {
+				if maturity[:len(maturity)-1] != "maturity-" {
+					errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
+					continue
+				}
+				var err error
+				if i == 0 {
+					baseMaturity, err = strconv.Atoi(maturity[len(maturity)-1:])
+					if err != nil {
 						errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
 						continue
 					}
-					var err error
-					if i == 0 {
-						baseMaturity, err = strconv.Atoi(maturity[len(maturity)-1:])
-						if err != nil {
-							errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
-							continue
-						}
-					} else {
-						maturityInt, err := strconv.Atoi(maturity[len(maturity)-1:])
-						if err != nil {
-							errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
-							continue
-						}
-						if maturityInt != baseMaturity+i {
-							errs = append(errs, fmt.Errorf("applicability entry %d for assessment %s in control %s was %q, expected %d", i+1, assessment.Id, entry.Id, maturity, baseMaturity+i))
-						}
+				} else {
+					maturityInt, err := strconv.Atoi(maturity[len(maturity)-1:])
+					if err != nil {
+						errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
+						continue
+					}
+					if maturityInt != baseMaturity+i {
+						errs = append(errs, fmt.Errorf("applicability entry %d for assessment %s in control %s was %q, expected %d", i+1, assessment.Id, entry.Id, maturity, baseMaturity+i))
 					}
 				}
 			}
