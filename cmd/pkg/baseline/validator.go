@@ -23,10 +23,11 @@ type Validator struct{}
 
 // Check verifies the data parsed for consistency and completeness
 func (v *Validator) Check(b *types.Baseline) error {
-	var entryIDs []string
+	entryIDs := make([]string, 0, len(b.Catalog.Controls))
 	assessmentIDs := []string{}
 	errs := []error{}
-	for _, entry := range b.Catalog.Controls {
+	for i := range b.Catalog.Controls {
+		entry := &b.Catalog.Controls[i]
 		if slices.Contains(entryIDs, entry.Id) {
 			errs = append(errs, fmt.Errorf("duplicate ID for 'control' for %s", entry.Id))
 		}

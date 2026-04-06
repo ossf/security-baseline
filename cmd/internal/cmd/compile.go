@@ -122,8 +122,8 @@ func addCompile(parentCmd *cobra.Command) {
 
 			fmt.Printf("\nℹ️  Counts\n")
 			groupCounts := map[string]int{}
-			for _, c := range bline.Catalog.Controls {
-				groupCounts[c.Group]++
+			for i := range bline.Catalog.Controls {
+				groupCounts[bline.Catalog.Controls[i].Group]++
 			}
 			for _, g := range bline.Catalog.Groups {
 				fmt.Printf(" %s: %d controls\n", g.Title, groupCounts[g.Id])
