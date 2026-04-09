@@ -36,7 +36,7 @@ func (o *oscalOptions) AddFlags(cmd *cobra.Command) {
 	)
 
 	cmd.PersistentFlags().StringVarP(
-		&o.outPath, "out", "o", "", "path to output file (defaults to STDOUT)",
+		&o.outPath, "output", "o", "", "path to output file (defaults to STDOUT)",
 	)
 }
 

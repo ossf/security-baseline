@@ -78,7 +78,7 @@ Use the `--help` flag for more options.
 
 ### oscal
 
-This command reads the YAML OSPS Baseline data files and translates the catalog of controls into [OSCAL](https://pages.nist.gov/OSCAL/) format. It writes the JSON output to STDOUT by default. You can specify a file with `--out`.
+This command reads the YAML OSPS Baseline data files and translates the catalog of controls into [OSCAL](https://pages.nist.gov/OSCAL/) format. It writes the JSON output to STDOUT by default. You can specify a file with `--output`.
 
 Use the `--help` flag for more options.
 
