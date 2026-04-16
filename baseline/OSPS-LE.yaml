@@ -166,15 +166,16 @@ controls:
       - id: OSPS-LE-03.01
         text: |
           While active, the license for the source code MUST be maintained in
-          the corresponding repository's LICENSE file, COPYING file, or
-          LICENSE/ directory.
+          the corresponding repository's LICENSE file, COPYING file,
+          LICENSES/ directory, or LICENSE/ directory.
         applicability:
           - Maturity Level 1
           - Maturity Level 2
           - Maturity Level 3
         recommendation: |
           Include the project's source code license in the project's LICENSE
-          file, COPYING file, or LICENSE/ directory to provide visibility and
+          file, COPYING file, LICENSES/ directory, or LICENSE/ directory
+          to provide visibility and
           clarity on the licensing terms. The filename MAY have an extension.
           If the project has multiple repositories, ensure that each repository
           includes the license file.
