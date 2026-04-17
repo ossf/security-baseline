@@ -10,7 +10,7 @@ dictionaries:
 ignorePaths:
   - '.cspell.yaml'
   - 'governance/'
-  - '*.{csv,go,mod,scss,sum}'
+  - '*.{csv,cue,go,mod,scss,sum}'
   - 'CNAME'
   - 'LICENSE'
   - 'docs/assets/'

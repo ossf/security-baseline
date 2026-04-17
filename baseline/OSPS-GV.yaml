@@ -1,10 +1,12 @@
-title: Governance
-description: |
-  Governance focuses on the policies and
-  procedures that guide the project's decision-making
-  and community interactions. These controls help ensure
-  that the project is well positioned to respond to
-  both threats and opportunities.
+groups:
+  - id: GV
+    title: Governance
+    description: |
+      Governance focuses on the policies and
+      procedures that guide the project's decision-making
+      and community interactions. These controls help ensure
+      that the project is well positioned to respond to
+      both threats and opportunities.
 controls:
   - id: OSPS-GV-01
     title: |
@@ -13,7 +15,8 @@ controls:
       Document project roles and responsibilities to help project participants,
       potential contributors, and downstream consumers understand who is working
       on the project and what areas of authority they may have.
-    guideline-mappings:
+    group: GV
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-3
@@ -63,8 +66,8 @@ controls:
           While active, the project documentation MUST include a list of
           project members with access to sensitive resources.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Document project participants and their roles through such artifacts
           as members.md, governance.md, maintainers.md, or similar file within
@@ -76,8 +79,8 @@ controls:
           While active, the project documentation MUST include descriptions of
           the roles and responsibilities for members of the project.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Document project participants and their roles through such artifacts
           as members.md, governance.md, maintainers.md, or similar file within
@@ -90,7 +93,8 @@ controls:
       Encourage open communication and collaboration within the project
       community by enabling users to provide feedback and discuss proposed
       changes or usage challenges.
-    guideline-mappings:
+    group: GV
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-3
@@ -122,9 +126,9 @@ controls:
           While active, the project MUST have one or more mechanisms for public
           discussions about proposed changes and usage obstacles.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Establish one or more mechanisms for public discussions within the
           project, such as mailing lists, instant messaging, or issue trackers,
@@ -136,7 +140,8 @@ controls:
     objective: |
       Provide guidance on how to participate in the project, outlining the steps
       required to submit changes or enhancements to the project's codebase.
-    guideline-mappings:
+    group: GV
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-4
@@ -183,9 +188,9 @@ controls:
           While active, the project documentation MUST include an explanation
           of the contribution process.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Create a CONTRIBUTING.md or CONTRIBUTING/ directory to outline the
           contribution process including the steps for submitting changes, and
@@ -195,8 +200,8 @@ controls:
           While active, the project documentation MUST include a guide for code
           contributors that includes requirements for acceptable contributions.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Extend the CONTRIBUTING.md or CONTRIBUTING/ contents in the project
           documentation to outline the requirements for acceptable
@@ -211,7 +216,8 @@ controls:
       Ensure that code contributors are vetted and reviewed before being granted
       elevated permissions to sensitive resources within the project, reducing
       the risk of unauthorized access or misuse.
-    guideline-mappings:
+    group: GV
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-5
@@ -270,7 +276,7 @@ controls:
           collaborators are reviewed prior to granting escalated permissions to
           sensitive resources.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Publish an enforceable policy in the project documentation that
           requires code collaborators to be reviewed and approved before being

@@ -1,13 +1,15 @@
-title: Legal
-description: |
-  Legal focuses on the policies and
-  procedures that govern the project's licensing
-  and intellectual property. These controls help
-  ensure that the project's source code is
-  distributed under a recognized and legally
-  enforceable open source software license,
-  reducing the risk of intellectual property
-  disputes or licensing violations.
+groups:
+  - id: LE
+    title: Legal
+    description: |
+      Legal focuses on the policies and
+      procedures that govern the project's licensing
+      and intellectual property. These controls help
+      ensure that the project's source code is
+      distributed under a recognized and legally
+      enforceable open source software license,
+      reducing the risk of intellectual property
+      disputes or licensing violations.
 controls:
   - id: OSPS-LE-01
     title: |
@@ -16,7 +18,8 @@ controls:
       Ensure that code contributors are aware of and acknowledge their legal
       responsibility for the contributions they make to the project, reducing
       the risk of intellectual property disputes against the project.
-    guideline-mappings:
+    group: LE
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-1
@@ -46,8 +49,8 @@ controls:
           contributors to assert that they are legally authorized to make the
           associated contributions on every commit.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Include a DCO in the project's repository, requiring code
           contributors to assert that they are legally authorized to commit the
@@ -67,7 +70,8 @@ controls:
       Ensure that the project's source code is distributed under a recognized
       and legally enforceable open source software license, providing clarity on
       how the code can be used and shared by others.
-    guideline-mappings:
+    group: LE
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-6
@@ -102,9 +106,9 @@ controls:
           While active, the license for the source code MUST meet the OSI Open
           Source Definition or the FSF Free Software Definition.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Add a LICENSE file to the project's repo with a license that is an
           approved license by the Open Source Initiative (OSI), or a free
@@ -118,9 +122,9 @@ controls:
           While active, the license for the released software assets MUST meet
           the OSI Open Source Definition or the FSF Free Software Definition.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           If a different license is included with released software assets,
           ensure it is an approved license by the Open Source Initiative (OSI),
@@ -137,7 +141,8 @@ controls:
       Ensure that the project's source code and released software assets are
       distributed with the appropriate license terms, making it clear to users
       and contributors how each can be used and shared.
-    guideline-mappings:
+    group: LE
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-8
@@ -169,9 +174,9 @@ controls:
           the corresponding repository's LICENSE file, COPYING file,
           LICENSES/ directory, or LICENSE/ directory.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Include the project's source code license in the project's LICENSE
           file, COPYING file, LICENSES/ directory, or LICENSE/ directory
@@ -186,9 +191,9 @@ controls:
           file, or LICENSE/ directory alongside the corresponding release
           assets.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Include the project's released software assets license in the released
           source code, or in a LICENSE file, COPYING file, or LICENSE/ directory

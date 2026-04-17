@@ -8,18 +8,18 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/gemaraproj/go-gemara"
 	"github.com/goccy/go-yaml"
-	"github.com/ossf/gemara/layer2"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
 const (
-	LexiconFilename    = "lexicon.yaml"
-	FrameworksFilename = "frameworks.yaml"
+	LexiconFilename  = "lexicon.yaml"
+	MetadataFilename = "metadata.yaml"
 )
 
-// Loader is an object that reads the baseline data
+// Loader reads baseline data from a directory of YAML source files
 type Loader struct {
 	DataPath string
 }
@@ -37,79 +37,72 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	if err != nil {
 		return nil, fmt.Errorf("error reading lexicon: %w", err)
 	}
-	frameworks, err := l.loadFrameworks()
-	if err != nil {
-		return nil, fmt.Errorf("error reading frameworks: %w", err)
-	}
-
 	b.Lexicon = lexicon
-	controlFamilies := []layer2.ControlFamily{}
-	familyIDs := map[string]string{}
 
-	for _, familyID := range types.ControlFamilies {
-		cf, err := l.loadControlFamily(familyID)
-		if err != nil {
-			return nil, fmt.Errorf("loading control family %s: %w", familyID, err)
-		}
-		familyIDs[cf.Title] = familyID
-		controlFamilies = append(controlFamilies, *cf)
+	catalog, err := l.loadMetadata()
+	if err != nil {
+		return nil, fmt.Errorf("error reading metadata: %w", err)
 	}
-	b.ControlFamilyIDs = familyIDs
-	b.Catalog = layer2.Catalog{
-		ControlFamilies: controlFamilies,
-		Metadata: layer2.Metadata{
-			MappingReferences: frameworks,
-		},
+
+	if err := l.loadControlFamilies(catalog); err != nil {
+		return nil, fmt.Errorf("error reading families: %w", err)
 	}
+
+	b.Catalog = *catalog
 	return b, nil
 }
 
-// loadLexicon
-func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, LexiconFilename))
+// decodeYAMLFile opens a YAML file and decodes it into target with strict
+// field checking.
+func decodeYAMLFile(path string, target any) error {
+	file, err := os.Open(path)
 	if err != nil {
-		return nil, fmt.Errorf("error opening file: %w", err)
+		return fmt.Errorf("error opening file: %w", err)
 	}
 	defer file.Close() //nolint:errcheck
 
-	var lexicon []types.LexiconEntry
-
 	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
-	if err := decoder.Decode(&lexicon); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %w", err)
+	if err := decoder.Decode(target); err != nil {
+		return fmt.Errorf("error decoding YAML: %w", err)
+	}
+	return nil
+}
+
+// loadLexicon decodes the controlled vocabulary used across the baseline.
+func (l *Loader) loadLexicon() ([]types.LexiconEntry, error) {
+	var lexicon []types.LexiconEntry
+	if err := decodeYAMLFile(filepath.Join(l.DataPath, LexiconFilename), &lexicon); err != nil {
+		return nil, err
 	}
 	return lexicon, nil
 }
 
-func (l *Loader) loadFrameworks() ([]layer2.MappingReference, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, FrameworksFilename))
-	if err != nil {
-		return nil, fmt.Errorf("error opening file: %w", err)
+// loadMetadata decodes the catalog-level metadata.
+func (l *Loader) loadMetadata() (*gemara.ControlCatalog, error) {
+	var catalog gemara.ControlCatalog
+	if err := decodeYAMLFile(filepath.Join(l.DataPath, MetadataFilename), &catalog); err != nil {
+		return nil, err
 	}
-	defer file.Close() //nolint:errcheck
-
-	var metadata layer2.Metadata
-
-	decoder := yaml.NewDecoder(file, yaml.DisallowUnknownField())
-	if err := decoder.Decode(&metadata); err != nil {
-		return nil, fmt.Errorf("error decoding YAML: %w", err)
-	}
-	return metadata.MappingReferences, nil
+	return &catalog, nil
 }
 
-// loadControlFamily loads a ControlFamily definition from its YAML source
-func (l *Loader) loadControlFamily(familyID string) (*layer2.ControlFamily, error) {
-	file, err := os.Open(filepath.Join(l.DataPath, fmt.Sprintf("OSPS-%s.yaml", familyID)))
+// loadControlFamilies decodes per-family YAML files and appends their groups
+// and controls onto the provided catalog.
+func (l *Loader) loadControlFamilies(catalog *gemara.ControlCatalog) error {
+	absData, err := filepath.Abs(l.DataPath)
 	if err != nil {
-		return nil, fmt.Errorf("error opening file: %w", err)
+		return fmt.Errorf("resolving absolute path: %w", err)
 	}
-	defer file.Close() //nolint:errcheck
 
-	controlFamily := &layer2.ControlFamily{}
-
-	decoder := yaml.NewDecoder(file, yaml.Strict())
-	if err := decoder.Decode(controlFamily); err != nil {
-		return nil, fmt.Errorf("error decoding %s YAML: %w", familyID, err)
+	familyPaths := make([]string, 0, len(types.ControlFamilies))
+	for _, familyID := range types.ControlFamilies {
+		familyPath := "file://" + filepath.Join(absData, fmt.Sprintf("OSPS-%s.yaml", familyID))
+		familyPaths = append(familyPaths, familyPath)
 	}
-	return controlFamily, nil
+
+	if err := catalog.LoadFiles(familyPaths); err != nil {
+		return fmt.Errorf("error loading controls families: %w", err)
+	}
+
+	return nil
 }
