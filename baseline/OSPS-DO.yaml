@@ -1,12 +1,14 @@
-title: Documentation
-description: |
-  Documentation focuses on the information
-  provided to users, contributors, and maintainers
-  of the project. These controls help ensure that
-  the project's documentation is comprehensive,
-  accurate, and up-to-date, enabling users to
-  understand the project's features and functionality, maintenance, support,
-  security and release practices.
+groups:
+  - id: DO
+    title: Documentation
+    description: |
+      Documentation focuses on the information
+      provided to users, contributors, and maintainers
+      of the project. These controls help ensure that
+      the project's documentation is comprehensive,
+      accurate, and up-to-date, enabling users to
+      understand the project's features and functionality, maintenance, support,
+      security and release practices.
 controls:
   - id: OSPS-DO-01
     title: |
@@ -15,7 +17,8 @@ controls:
       Ensure that users have a clear and comprehensive understanding of the
       project's current features in order to prevent damage from misuse or
       misconfiguration.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-1
@@ -75,9 +78,9 @@ controls:
           When the project has made a release, the project documentation MUST
           include user guides for all basic functionality.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Create user guides or documentation for all basic functionality of the
           project, explaining how to install, configure, and use the project's
@@ -91,7 +94,8 @@ controls:
       Enable users and contributors to report defects or issues with the
       released software assets, facilitating communication and collaboration on
       defect fixes and improvements.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-3
@@ -149,9 +153,9 @@ controls:
           When the project has made a release, the project documentation MUST
           include a guide for reporting defects.
         applicability:
-          - Maturity Level 1
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           It is recommended that projects use their VCS default issue tracker.
           If an external source is used, ensure that the project documentation
@@ -166,7 +170,8 @@ controls:
       Enable users to verify the authenticity and integrity of the project's
       released software assets, reducing the risk of using tampered or
       unauthorized versions of the software.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: CC-B-8
@@ -225,7 +230,7 @@ controls:
           contain instructions to verify the integrity and authenticity of the
           release assets.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Instructions in the project should contain information about the
           technology used, the commands to run, and the expected output.
@@ -239,7 +244,7 @@ controls:
           contain instructions to verify the expected identity of the person or
           process authoring the software release.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           The expected identity may be in the form of key IDs used to sign,
           issuer and identity from a sigstore certificate, or other similar
@@ -256,7 +261,8 @@ controls:
       Provide users with clear expectations regarding the project's support
       lifecycle in such a way that enables downstream consumers to ensure the
       continued functionality and security of their systems.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: R-B-3
@@ -311,7 +317,7 @@ controls:
           include a descriptive statement about the scope and duration of
           support for each release.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           In order to communicate the scope and duration of support for the
           project's released software assets, the project should have a
@@ -327,7 +333,8 @@ controls:
     objective: |
       Communicate when the project maintainers will no longer fix defects or
       security vulnerabilities.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: CRA
         entries:
           - reference-id: 1.2c
@@ -382,7 +389,7 @@ controls:
           provide a descriptive statement when releases or versions will no
           longer receive security updates.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           In order to communicate the scope and duration of support for security
           fixes, the project should have a SUPPORT.md or other documentation
@@ -394,7 +401,8 @@ controls:
     objective: |
       Provide information about how the project selects, obtains, and tracks
       third-party components that are required for the software to function.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: A-S-1
@@ -462,8 +470,8 @@ controls:
           include a description of how the project selects, obtains, and tracks
           its dependencies.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           It is recommended to publish this information alongside the project's
           technical & design documentation on a publicly viewable resource such
@@ -475,7 +483,8 @@ controls:
     objective: |
       Ensure that users have a clear and comprehensive instructions on how
       to build the software from source code.
-    guideline-mappings:
+    group: DO
+    guidelines:
       - reference-id: 
         entries:
           - reference-id:
@@ -486,8 +495,8 @@ controls:
           include instructions on how to build the software, including required
           libraries, frameworks, SDKs, and dependencies.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           It is recommended to publish this information alongside the project's
           contributor documentation, such as in `CONTRIBUTING.md` or other

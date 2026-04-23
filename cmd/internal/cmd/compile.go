@@ -121,8 +121,12 @@ func addCompile(parentCmd *cobra.Command) {
 			}
 
 			fmt.Printf("\nℹ️  Counts\n")
-			for _, family := range bline.Catalog.ControlFamilies {
-				fmt.Printf(" OSPS-%s: %d controls\n", bline.ControlFamilyIDs[family.Title], len(family.Controls))
+			groupCounts := map[string]int{}
+			for i := range bline.Catalog.Controls {
+				groupCounts[bline.Catalog.Controls[i].Group]++
+			}
+			for _, g := range bline.Catalog.Groups {
+				fmt.Printf(" %s: %d controls\n", g.Title, groupCounts[g.Id])
 			}
 			fmt.Printf("\n+ %d mapped frameworks\n", len(bline.Catalog.Metadata.MappingReferences))
 			fmt.Printf("\n+ %d lexicon entries\n", len(bline.Lexicon))

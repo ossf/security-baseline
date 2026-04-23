@@ -1,9 +1,11 @@
-title: Security Assessment
-description: |
-  Security Assessment encourages practices that
-  help ensure that the project is well positioned
-  to identify and address security vulnerabilities
-  and threats in the software.
+groups:
+  - id: SA
+    title: Security Assessment
+    description: |
+      Security Assessment encourages practices that
+      help ensure that the project is well positioned
+      to identify and address security vulnerabilities
+      and threats in the software.
 controls:
   - id: OSPS-SA-01
     title: |
@@ -13,7 +15,8 @@ controls:
       the interactions and components of the system to help contributors and
       security reviewers understand the internal logic of the released software
       assets.
-    guideline-mappings:
+    group: SA
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-1
@@ -80,8 +83,8 @@ controls:
           include design documentation demonstrating all actions and actors
           within the system.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Include designs in the project documentation that explains the actions
           and actors. Actors include any subsystem or entity that can influence
@@ -95,7 +98,8 @@ controls:
       Provide users and developers with an understanding of how to interact with
       the project's software and integrate it with other systems, enabling them
       to use the software effectively.
-    guideline-mappings:
+    group: SA
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-B-10
@@ -151,8 +155,8 @@ controls:
           include descriptions of all external software interfaces of the
           released software assets.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Document all software interfaces (APIs) of the released software
           assets, explaining how users can interact with the software and what
@@ -165,7 +169,8 @@ controls:
     objective: |
       Provide project maintainers an understanding of how the software can be
       misused or broken, enabling them to plan mitigations accordingly.
-    guideline-mappings:
+    group: SA
+    guidelines:
       - reference-id: BPB
         entries:
           - reference-id: B-S-8
@@ -241,8 +246,8 @@ controls:
           security assessment to understand the most likely and impactful
           potential security problems that could occur within the software.
         applicability:
-          - Maturity Level 2
-          - Maturity Level 3
+          - maturity-2
+          - maturity-3
         recommendation: |
           Performing a security assessment informs both project members as well
           as downstream consumers that the project understands what problems
@@ -258,7 +263,7 @@ controls:
           attacks on critical code paths, functions, and interactions within the
           system.
         applicability:
-          - Maturity Level 3
+          - maturity-3
         recommendation: |
           Threat modeling is an activity where the project looks at the
           codebase, associated processes and infrastructure, interfaces, key
