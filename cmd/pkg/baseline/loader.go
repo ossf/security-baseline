@@ -4,11 +4,13 @@
 package baseline
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"path/filepath"
 
 	"github.com/gemaraproj/go-gemara"
+	"github.com/gemaraproj/go-gemara/fetcher"
 	"github.com/goccy/go-yaml"
 
 	"github.com/ossf/security-baseline/pkg/types"
@@ -100,7 +102,7 @@ func (l *Loader) loadControlFamilies(catalog *gemara.ControlCatalog) error {
 		familyPaths = append(familyPaths, familyPath)
 	}
 
-	if err := catalog.LoadFiles(familyPaths); err != nil {
+	if err := catalog.LoadFiles(context.Background(), &fetcher.URI{}, familyPaths); err != nil {
 		return fmt.Errorf("error loading controls families: %w", err)
 	}
 
