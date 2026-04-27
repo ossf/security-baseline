@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/defenseunicorns/go-oscal v0.7.0
-	github.com/gemaraproj/go-gemara v0.3.0
+	github.com/gemaraproj/go-gemara v0.4.0
 	github.com/goccy/go-yaml v1.19.2
 	github.com/spf13/cobra v1.10.2
 )
