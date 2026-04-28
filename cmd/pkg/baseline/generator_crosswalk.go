@@ -20,7 +20,8 @@ type reverseCrosswalkMap map[string]map[string][]string
 // inverts the Baseline -> External mapping into External -> Baseline.
 func buildReverseCrosswalk(b *types.Baseline) reverseCrosswalkMap {
 	result := make(reverseCrosswalkMap)
-	for _, control := range b.Catalog.Controls {
+	for i := range b.Catalog.Controls {
+		control := &b.Catalog.Controls[i]
 		controlID := control.Id // FIXED: 'Id' instead of 'ID'
 		// A guideline is a MultiEntryMapping
 		for _, guideline := range control.Guidelines {

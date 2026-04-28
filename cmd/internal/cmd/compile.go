@@ -152,7 +152,11 @@ func addCompile(parentCmd *cobra.Command) {
 				if err != nil {
 					return fmt.Errorf("creating crosswalk output file: %w", err)
 				}
-				defer f.Close()
+				defer func() {
+					if cerr := f.Close(); cerr != nil {
+						fmt.Printf("error closing file: %v\n", cerr)
+					}
+				}()
 
 				// Use the existing 'gen' and 'bline' variables
 				if err := gen.ExportReverseCrosswalk(bline, f); err != nil {

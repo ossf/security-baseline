@@ -8,6 +8,7 @@ import (
 	"testing"
 
 	"github.com/gemaraproj/go-gemara"
+
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
