@@ -17,6 +17,7 @@ type compileOptions struct {
 	outPath               string
 	checklistOutPath      string
 	baselinePath          string
+	crosswalkOutputPath   string
 	checklistTemplatePath string
 	templatePath          string
 	validate              bool
@@ -40,6 +41,11 @@ func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 	cmd.PersistentFlags().StringVarP(
 		&o.checklistOutPath, "checklist-output", "", "",
 		"path to checklist output file (checklist only generated if specified)",
+	)
+
+	cmd.PersistentFlags().StringVarP(
+		&o.crosswalkOutputPath, "crosswalk-output", "", "",
+		"path to crosswalk output file (crosswalk only generated if specified)",
 	)
 
 	cmd.PersistentFlags().StringVarP(
@@ -140,7 +146,26 @@ func addCompile(parentCmd *cobra.Command) {
 				fmt.Printf("\n✅ Checklist rendered to %s",
 					opts.checklistOutPath)
 			}
+			// Print a reverse crosswalk if they asked for it
+			if opts.crosswalkOutputPath != "" {
+				f, err := os.Create(opts.crosswalkOutputPath)
+				if err != nil {
+					return fmt.Errorf("creating crosswalk output file: %w", err)
+				}
+				defer func() {
+					if cerr := f.Close(); cerr != nil {
+						fmt.Printf("error closing file: %v\n", cerr)
+					}
+				}()
 
+				// Use the existing 'gen' and 'bline' variables
+				if err := gen.ExportReverseCrosswalk(bline, f); err != nil {
+					return fmt.Errorf("exporting reverse crosswalk: %w", err)
+				}
+
+				// Mirror their success message style
+				fmt.Printf("\n✅ Crosswalk rendered to %s", opts.crosswalkOutputPath)
+			}
 			return nil
 		},
 	}
