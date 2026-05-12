@@ -1,0 +1,39 @@
+name: OSPS Baseline Assessment
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  osps-assessment:
+    runs-on: ubuntu-latest
+    name: OSPS Baseline Assessment
+
+    permissions:
+      contents: read
+      security-events: write # Required for SARIF upload
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Open Source Project Security Baseline Scanner
+        uses: revanite-io/osps-baseline-action@3bf988fa8e4b59568dcfac138a1854df87c15aff # v1.3.2
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          token: ${{ github.token }}
+          catalog: "osps-baseline-2026-02"
+          upload-sarif: "true"
+
+      - name: Upload Assessment Results
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: osps-assessment-results-${{ github.run_number }}
+          path: evaluation_results/
+          retention-days: 30
