@@ -11,7 +11,7 @@ metadata:
     reviewed.
   draft: true
   author:
-    id: baseline-authors
+    id: openssf
     name: OSPS Baseline Authors
     type: Human
   mapping-references:
