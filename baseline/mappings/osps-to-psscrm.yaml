@@ -1,0 +1,304 @@
+title: OSPS Baseline to P-SSCRM Mapping
+metadata:
+  id: osps-baseline-to-psscrm
+  type: MappingDocument
+  gemara-version: "1.2.0"
+  description: |
+    Cross-walk from the Open Source Project Security (OSPS) Baseline
+    controls to P-SSCRM. Each mapping asserts a "relates-to"
+    relationship; strength, confidence-level, and rationale are left
+    unset and should be added as the mappings are individually
+    reviewed.
+  draft: true
+  author:
+    id: baseline-authors
+    name: OSPS Baseline Authors
+    type: Human
+  mapping-references:
+    - id: osps-baseline
+      title: Open Source Project Security Baseline
+      version: "draft"
+      url: https://github.com/ossf/security-baseline
+      description: |
+        The Open Source Project Security (OSPS) Baseline is a set of security
+        criteria that projects should meet to demonstrate a strong security
+        posture.
+    - id: PSSCRM
+      title: Proactive Software Supply Chain Risk Management Framework
+      version: "1.0"
+      url: https://arxiv.org/pdf/2404.12300
+      description: The Proactive-Software Supply Chain Risk Management (P-SSCRM) Framework is designed to help you understand and plan a secure software supply chain risk management initiative. P-SSCRM
+        was created through a process of understanding and analyzing real-world data from nine industry-leading software supply chain risk management initiatives as well as through the analysis and unification
+        of ten government and industry documents, frameworks, and standards. Although individual methodologies and standards differ, many initiatives and standards share common ground. P-SSCRM describes
+        this common ground and presents a model for understanding, quantifying, and developing a secure software supply chain risk management program and determining where your organization’s existing efforts
+        stand when contrasted with other real-world software supply chain risk management initiatives.
+source-reference:
+  reference-id: osps-baseline
+  entry-type: Control
+target-reference:
+  reference-id: PSSCRM
+  entry-type: Guideline
+mappings:
+  - id: M-OSPS-AC-01-PSSCRM
+    source: OSPS-AC-01
+    relationship: relates-to
+    targets:
+      - entry-id: G2.6
+      - entry-id: P3.3
+      - entry-id: E1.2
+      - entry-id: E1.3
+      - entry-id: E1.4
+      - entry-id: E3.1
+  - id: M-OSPS-AC-02-PSSCRM
+    source: OSPS-AC-02
+    relationship: relates-to
+    targets:
+      - entry-id: P2.3
+      - entry-id: E1.2
+      - entry-id: E3.3
+  - id: M-OSPS-AC-03-PSSCRM
+    source: OSPS-AC-03
+    relationship: relates-to
+    targets:
+      - entry-id: P3.2
+      - entry-id: P3.5
+      - entry-id: E1.5
+      - entry-id: E3.1
+  - id: M-OSPS-AC-04-PSSCRM
+    source: OSPS-AC-04
+    relationship: relates-to
+    targets:
+      - entry-id: P3.2
+  - id: M-OSPS-BR-01-PSSCRM
+    source: OSPS-BR-01
+    relationship: relates-to
+    targets:
+      - entry-id: P2.3
+      - entry-id: P3.2
+      - entry-id: P3.5
+      - entry-id: E2.4
+      - entry-id: E2.5
+      - entry-id: D2.2
+  - id: M-OSPS-BR-02-PSSCRM
+    source: OSPS-BR-02
+    relationship: relates-to
+    targets:
+      - entry-id: G1.4
+      - entry-id: E1.2
+      - entry-id: E2.1
+      - entry-id: E2.6
+  - id: M-OSPS-BR-03-PSSCRM
+    source: OSPS-BR-03
+    relationship: relates-to
+    targets:
+      - entry-id: E1.1
+      - entry-id: E2.2
+      - entry-id: E2.4
+      - entry-id: E2.5
+  - id: M-OSPS-BR-04-PSSCRM
+    source: OSPS-BR-04
+    relationship: relates-to
+    targets:
+      - entry-id: G1.4
+      - entry-id: E2.1
+      - entry-id: E2.4
+      - entry-id: E2.5
+      - entry-id: E3.1
+      - entry-id: E3.6
+  - id: M-OSPS-BR-05-PSSCRM
+    source: OSPS-BR-05
+    relationship: relates-to
+    targets:
+      - entry-id: P3.1
+      - entry-id: P3.5
+      - entry-id: E2.2
+      - entry-id: E2.3
+      - entry-id: E2.4
+      - entry-id: E2.5
+  - id: M-OSPS-BR-06-PSSCRM
+    source: OSPS-BR-06
+    relationship: relates-to
+    targets:
+      - entry-id: P1.2
+      - entry-id: P3.2
+      - entry-id: P3.3
+      - entry-id: E2.1
+      - entry-id: E2.2
+      - entry-id: E2.6
+  - id: M-OSPS-DO-01-PSSCRM
+    source: OSPS-DO-01
+    relationship: relates-to
+    targets:
+      - entry-id: G5.1
+      - entry-id: E3.5
+  - id: M-OSPS-DO-03-PSSCRM
+    source: OSPS-DO-03
+    relationship: relates-to
+    targets:
+      - entry-id: G1.3
+      - entry-id: G2.5
+      - entry-id: P1.2
+      - entry-id: P3.1
+      - entry-id: P3.2
+      - entry-id: P3.3
+      - entry-id: E2.6
+  - id: M-OSPS-DO-04-PSSCRM
+    source: OSPS-DO-04
+    relationship: relates-to
+    targets:
+      - entry-id: E1.6
+  - id: M-OSPS-DO-05-PSSCRM
+    source: OSPS-DO-05
+    relationship: relates-to
+    targets:
+      - entry-id: E1.6
+  - id: M-OSPS-DO-06-PSSCRM
+    source: OSPS-DO-06
+    relationship: relates-to
+    targets:
+      - entry-id: G1.4
+      - entry-id: G2.4
+      - entry-id: P3.1
+      - entry-id: P3.2
+      - entry-id: P3.4
+  - id: M-OSPS-GV-01-PSSCRM
+    source: OSPS-GV-01
+    relationship: relates-to
+    targets:
+      - entry-id: G2.3
+      - entry-id: E3.1
+      - entry-id: E3.3
+  - id: M-OSPS-GV-03-PSSCRM
+    source: OSPS-GV-03
+    relationship: relates-to
+    targets:
+      - entry-id: G2.4
+      - entry-id: P2.2
+  - id: M-OSPS-GV-04-PSSCRM
+    source: OSPS-GV-04
+    relationship: relates-to
+    targets:
+      - entry-id: E3.1
+      - entry-id: E3.3
+  - id: M-OSPS-LE-01-PSSCRM
+    source: OSPS-LE-01
+    relationship: relates-to
+    targets:
+      - entry-id: E3.1
+  - id: M-OSPS-LE-02-PSSCRM
+    source: OSPS-LE-02
+    relationship: relates-to
+    targets:
+      - entry-id: G1.2
+  - id: M-OSPS-LE-03-PSSCRM
+    source: OSPS-LE-03
+    relationship: relates-to
+    targets:
+      - entry-id: G1.2
+  - id: M-OSPS-QA-01-PSSCRM
+    source: OSPS-QA-01
+    relationship: relates-to
+    targets:
+      - entry-id: P3.5
+      - entry-id: E2.2
+  - id: M-OSPS-QA-02-PSSCRM
+    source: OSPS-QA-02
+    relationship: relates-to
+    targets:
+      - entry-id: G1.4
+      - entry-id: G1.5
+      - entry-id: G2.5
+      - entry-id: P3.1
+      - entry-id: P3.2
+      - entry-id: P5.1
+      - entry-id: P5.2
+      - entry-id: E2.1
+      - entry-id: E2.2
+  - id: M-OSPS-QA-03-PSSCRM
+    source: OSPS-QA-03
+    relationship: relates-to
+    targets:
+      - entry-id: G2.2
+      - entry-id: G5.3
+      - entry-id: G5.4
+      - entry-id: P3.5
+      - entry-id: P4.1
+      - entry-id: P4.2
+  - id: M-OSPS-QA-04-PSSCRM
+    source: OSPS-QA-04
+    relationship: relates-to
+    targets:
+      - entry-id: G2.2
+      - entry-id: G5.4
+  - id: M-OSPS-QA-06-PSSCRM
+    source: OSPS-QA-06
+    relationship: relates-to
+    targets:
+      - entry-id: P4.1
+      - entry-id: P4.2
+      - entry-id: P4.3
+      - entry-id: P4.4
+      - entry-id: E2.4
+      - entry-id: E2.5
+  - id: M-OSPS-QA-07-PSSCRM
+    source: OSPS-QA-07
+    relationship: relates-to
+    targets:
+      - entry-id: G2.4
+      - entry-id: P3.3
+      - entry-id: P3.5
+  - id: M-OSPS-SA-01-PSSCRM
+    source: OSPS-SA-01
+    relationship: relates-to
+    targets:
+      - entry-id: G5.1
+      - entry-id: P1.1
+      - entry-id: E3.4
+      - entry-id: E3.7
+  - id: M-OSPS-SA-02-PSSCRM
+    source: OSPS-SA-02
+    relationship: relates-to
+    targets:
+      - entry-id: E3.4
+      - entry-id: E3.7
+  - id: M-OSPS-SA-03-PSSCRM
+    source: OSPS-SA-03
+    relationship: relates-to
+    targets:
+      - entry-id: G4.3
+      - entry-id: G5.2
+      - entry-id: P2.1
+  - id: M-OSPS-VM-01-PSSCRM
+    source: OSPS-VM-01
+    relationship: relates-to
+    targets:
+      - entry-id: D1.1
+      - entry-id: D1.2
+      - entry-id: D1.3
+      - entry-id: D1.5
+  - id: M-OSPS-VM-04-PSSCRM
+    source: OSPS-VM-04
+    relationship: relates-to
+    targets:
+      - entry-id: G2.2
+      - entry-id: D1.1
+  - id: M-OSPS-VM-05-PSSCRM
+    source: OSPS-VM-05
+    relationship: relates-to
+    targets:
+      - entry-id: G5.4
+      - entry-id: P4.1
+      - entry-id: P4.2
+      - entry-id: P4.3
+      - entry-id: P4.4
+      - entry-id: P4.5
+  - id: M-OSPS-VM-06-PSSCRM
+    source: OSPS-VM-06
+    relationship: relates-to
+    targets:
+      - entry-id: G5.4
+      - entry-id: P4.1
+      - entry-id: P4.2
+      - entry-id: P4.3
+      - entry-id: P4.4
+      - entry-id: P4.5

@@ -1,0 +1,175 @@
+title: OSPS Baseline to NIST CSF 2.0 Mapping
+metadata:
+  id: osps-baseline-to-csf
+  type: MappingDocument
+  gemara-version: "1.2.0"
+  description: |
+    Cross-walk from the Open Source Project Security (OSPS) Baseline
+    controls to NIST CSF 2.0. Each mapping asserts a "relates-to"
+    relationship; strength, confidence-level, and rationale are left
+    unset and should be added as the mappings are individually
+    reviewed.
+  draft: true
+  author:
+    id: baseline-authors
+    name: OSPS Baseline Authors
+    type: Human
+  mapping-references:
+    - id: osps-baseline
+      title: Open Source Project Security Baseline
+      version: "draft"
+      url: https://github.com/ossf/security-baseline
+      description: |
+        The Open Source Project Security (OSPS) Baseline is a set of security
+        criteria that projects should meet to demonstrate a strong security
+        posture.
+    - id: CSF
+      title: NIST Cybersecurity Framework
+      version: "2.0"
+      url: https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf
+      description: The NIST Cybersecurity Framework (CSF) 2.0 provides guidance to industry, government agencies, and other organizations to manage cybersecurity risks. It offers a taxonomy of high level
+        cybersecurity outcomes that can be used by any organization — regardless of its size, sector, or maturity — to better understand, assess, prioritize, and communicate its cybersecurity efforts. The
+        CSF does not prescribe how outcomes should be achieved. Rather, it links to online resources that provide additional guidance on practices and controls that could be used to achieve those outcomes.
+source-reference:
+  reference-id: osps-baseline
+  entry-type: Control
+target-reference:
+  reference-id: CSF
+  entry-type: Guideline
+mappings:
+  - id: M-OSPS-AC-01-CSF
+    source: OSPS-AC-01
+    relationship: relates-to
+    targets:
+      - entry-id: PR.A-02
+      - entry-id: PR.A-05
+  - id: M-OSPS-AC-02-CSF
+    source: OSPS-AC-02
+    relationship: relates-to
+    targets:
+      - entry-id: PR.AA-02
+      - entry-id: PR.AA-05
+  - id: M-OSPS-AC-03-CSF
+    source: OSPS-AC-03
+    relationship: relates-to
+    targets:
+      - entry-id: PR.A-02
+      - entry-id: PR.A-05
+  - id: M-OSPS-AC-04-CSF
+    source: OSPS-AC-04
+    relationship: relates-to
+    targets:
+      - entry-id: PR.AA-02
+      - entry-id: PR.AA-05
+  - id: M-OSPS-BR-01-CSF
+    source: OSPS-BR-01
+    relationship: relates-to
+    targets:
+      - entry-id: PR.AA-02
+  - id: M-OSPS-DO-01-CSF
+    source: OSPS-DO-01
+    relationship: relates-to
+    targets:
+      - entry-id: GV.OC-04
+      - entry-id: GV.OC-05
+  - id: M-OSPS-DO-02-CSF
+    source: OSPS-DO-02
+    relationship: relates-to
+    targets:
+      - entry-id: RS.MA-02
+      - entry-id: GV.RM-05
+  - id: M-OSPS-GV-04-CSF
+    source: OSPS-GV-04
+    relationship: relates-to
+    targets:
+      - entry-id: PR.AA-02
+      - entry-id: PR.AA-05
+  - id: M-OSPS-LE-02-CSF
+    source: OSPS-LE-02
+    relationship: relates-to
+    targets:
+      - entry-id: GV.OC-03
+  - id: M-OSPS-QA-01-CSF
+    source: OSPS-QA-01
+    relationship: relates-to
+    targets:
+      - entry-id: ID.AM-02
+      - entry-id: ID.RA-01
+      - entry-id: ID.RA-08
+  - id: M-OSPS-QA-02-CSF
+    source: OSPS-QA-02
+    relationship: relates-to
+    targets:
+      - entry-id: ID.AM.01
+      - entry-id: ID.AM-02
+  - id: M-OSPS-QA-03-CSF
+    source: OSPS-QA-03
+    relationship: relates-to
+    targets:
+      - entry-id: ID.IM-02
+  - id: M-OSPS-QA-06-CSF
+    source: OSPS-QA-06
+    relationship: relates-to
+    targets:
+      - entry-id: ID.AM-02
+  - id: M-OSPS-SA-01-CSF
+    source: OSPS-SA-01
+    relationship: relates-to
+    targets:
+      - entry-id: ID.AM-02
+  - id: M-OSPS-SA-02-CSF
+    source: OSPS-SA-02
+    relationship: relates-to
+    targets:
+      - entry-id: GV.OC-05
+      - entry-id: ID.AM-01
+  - id: M-OSPS-SA-03-CSF
+    source: OSPS-SA-03
+    relationship: relates-to
+    targets:
+      - entry-id: ID.RA-01
+      - entry-id: ID.RA-04
+      - entry-id: ID.RA-05
+      - entry-id: DE.AE-07
+  - id: M-OSPS-VM-01-CSF
+    source: OSPS-VM-01
+    relationship: relates-to
+    targets:
+      - entry-id: GV.PO-01
+      - entry-id: GV.PO-02
+      - entry-id: ID.RA-01
+      - entry-id: ID.RA-08
+  - id: M-OSPS-VM-02-CSF
+    source: OSPS-VM-02
+    relationship: relates-to
+    targets:
+      - entry-id: GV.PO-01
+      - entry-id: GV.PO-02
+      - entry-id: ID.RA-01
+  - id: M-OSPS-VM-04-CSF
+    source: OSPS-VM-04
+    relationship: relates-to
+    targets:
+      - entry-id: ID.RA-01
+  - id: M-OSPS-VM-05-CSF
+    source: OSPS-VM-05
+    relationship: relates-to
+    targets:
+      - entry-id: GV.RM-05
+      - entry-id: GV.RM-06
+      - entry-id: GV.PO-01
+      - entry-id: GV.PO-02
+      - entry-id: ID.RA-01
+      - entry-id: ID.RA-08
+      - entry-id: ID.IM-02
+  - id: M-OSPS-VM-06-CSF
+    source: OSPS-VM-06
+    relationship: relates-to
+    targets:
+      - entry-id: GV.RM-05
+      - entry-id: GV.RM-06
+      - entry-id: GV.PO-01
+      - entry-id: GV.PO-02
+      - entry-id: ID.RA-01
+      - entry-id: ID.RA-08
+      - entry-id: ID.IM-02

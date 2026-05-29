@@ -1,0 +1,228 @@
+title: OSPS Baseline to UK NCSC Software Security Code of Practice Mapping
+metadata:
+  id: osps-baseline-to-uksscop
+  type: MappingDocument
+  gemara-version: "1.2.0"
+  description: |
+    Cross-walk from the Open Source Project Security (OSPS) Baseline
+    controls to UK NCSC Software Security Code of Practice. Each mapping asserts a "relates-to"
+    relationship; strength, confidence-level, and rationale are left
+    unset and should be added as the mappings are individually
+    reviewed.
+  draft: true
+  author:
+    id: baseline-authors
+    name: OSPS Baseline Authors
+    type: Human
+  mapping-references:
+    - id: osps-baseline
+      title: Open Source Project Security Baseline
+      version: "draft"
+      url: https://github.com/ossf/security-baseline
+      description: |
+        The Open Source Project Security (OSPS) Baseline is a set of security
+        criteria that projects should meet to demonstrate a strong security
+        posture.
+    - id: UKSSCOP
+      title: United Kingdom National Cyber Security Centre Software Security Code of Practice
+      version: "2025-05-07"
+      url: https://www.ncsc.gov.uk/guidance/software-security-code-of-practice-assurance-principles-claims
+      description: The Software Code of Practice has been created by DSIT and the National Cyber Security Centre (NCSC), the UK’s technical authority for cyber security, and is co-sealed by the Canadian
+        Centre for Cyber Security (CCCS). The Code reflects the government’s ongoing focus on codifying minimum standards for technology providers to reduce cyber risk. It is aimed at professionals who
+        are responsible for overseeing the development of ‘commodity’ software, including technical, compliance, and risk experts. For those organisations that require a higher level of assurance in the
+        resilience of their connected products and technology, consider using the NCSC’s Cyber Resilience Testing scheme.
+source-reference:
+  reference-id: osps-baseline
+  entry-type: Control
+target-reference:
+  reference-id: UKSSCOP
+  entry-type: Guideline
+mappings:
+  - id: M-OSPS-AC-01-UKSSCOP
+    source: OSPS-AC-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.4.2
+      - entry-id: Claim 2.1.5
+      - entry-id: Claim 2.2.2
+  - id: M-OSPS-AC-02-UKSSCOP
+    source: OSPS-AC-02
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.2.2
+  - id: M-OSPS-AC-03-UKSSCOP
+    source: OSPS-AC-03
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.1.4
+      - entry-id: Claim 2.2.2
+  - id: M-OSPS-AC-04-UKSSCOP
+    source: OSPS-AC-04
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.1.1
+      - entry-id: Claim 2.1.3
+      - entry-id: Claim 2.2.2
+  - id: M-OSPS-BR-01-UKSSCOP
+    source: OSPS-BR-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.1.2
+      - entry-id: Claim 2.2.2
+  - id: M-OSPS-BR-02-UKSSCOP
+    source: OSPS-BR-02
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.1.4
+      - entry-id: Claim 3.1.1
+      - entry-id: Claim 3.4.2
+  - id: M-OSPS-BR-03-UKSSCOP
+    source: OSPS-BR-03
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 3.1.2
+  - id: M-OSPS-BR-04-UKSSCOP
+    source: OSPS-BR-04
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.1.4
+      - entry-id: Claim 2.2.3
+      - entry-id: Claim 3.1.1
+  - id: M-OSPS-BR-05-UKSSCOP
+    source: OSPS-BR-05
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.2.1
+      - entry-id: Claim 1.2.5
+  - id: M-OSPS-BR-06-UKSSCOP
+    source: OSPS-BR-06
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.2.2
+      - entry-id: Claim 3.1.1
+  - id: M-OSPS-BR-07-UKSSCOP
+    source: OSPS-BR-07
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.4.3
+      - entry-id: Claim 1.4.5
+  - id: M-OSPS-DO-01-UKSSCOP
+    source: OSPS-DO-01
+    relationship: relates-to
+    targets:
+      - entry-id: '4.1'
+  - id: M-OSPS-DO-02-UKSSCOP
+    source: OSPS-DO-02
+    relationship: relates-to
+    targets:
+      - entry-id: '1.1'
+      - entry-id: '1.3'
+  - id: M-OSPS-DO-03-UKSSCOP
+    source: OSPS-DO-03
+    relationship: relates-to
+    targets:
+      - entry-id: '3.1'
+  - id: M-OSPS-DO-04-UKSSCOP
+    source: OSPS-DO-04
+    relationship: relates-to
+    targets:
+      - entry-id: '4.1'
+      - entry-id: '4.2'
+      - entry-id: Claim 4.1.1
+      - entry-id: Claim 4.1.2
+      - entry-id: Claim 4.2.1
+  - id: M-OSPS-DO-05-UKSSCOP
+    source: OSPS-DO-05
+    relationship: relates-to
+    targets:
+      - entry-id: '3.5'
+      - entry-id: '4.1'
+      - entry-id: Claim 4.1.1
+      - entry-id: Claim 4.2.1
+  - id: M-OSPS-DO-06-UKSSCOP
+    source: OSPS-DO-06
+    relationship: relates-to
+    targets:
+      - entry-id: '1.2'
+      - entry-id: '3.3'
+      - entry-id: Claim 1.2.1
+      - entry-id: Claim 1.2.2
+  - id: M-OSPS-GV-01-UKSSCOP
+    source: OSPS-GV-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.1.1
+  - id: M-OSPS-GV-03-UKSSCOP
+    source: OSPS-GV-03
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.1.1
+  - id: M-OSPS-QA-01-UKSSCOP
+    source: OSPS-QA-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 2.2.3
+  - id: M-OSPS-QA-02-UKSSCOP
+    source: OSPS-QA-02
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.2.1
+      - entry-id: Claim 1.2.2
+      - entry-id: Claim 3.1.1
+  - id: M-OSPS-QA-03-UKSSCOP
+    source: OSPS-QA-03
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.3.2
+      - entry-id: Claim 1.3.3
+  - id: M-OSPS-SA-01-UKSSCOP
+    source: OSPS-SA-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.1.5
+  - id: M-OSPS-SA-02-UKSSCOP
+    source: OSPS-SA-02
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.1.5
+  - id: M-OSPS-SA-03-UKSSCOP
+    source: OSPS-SA-03
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 1.4.1
+  - id: M-OSPS-VM-01-UKSSCOP
+    source: OSPS-VM-01
+    relationship: relates-to
+    targets:
+      - entry-id: Claim 3.4.1
+      - entry-id: Claim 3.5.1
+      - entry-id: Claim 4.1.2
+  - id: M-OSPS-VM-02-UKSSCOP
+    source: OSPS-VM-02
+    relationship: relates-to
+    targets:
+      - entry-id: '3.2'
+  - id: M-OSPS-VM-03-UKSSCOP
+    source: OSPS-VM-03
+    relationship: relates-to
+    targets:
+      - entry-id: '3.2'
+  - id: M-OSPS-VM-04-UKSSCOP
+    source: OSPS-VM-04
+    relationship: relates-to
+    targets:
+      - entry-id: '3.4'
+      - entry-id: '3.5'
+      - entry-id: '4.3'
+  - id: M-OSPS-VM-05-UKSSCOP
+    source: OSPS-VM-05
+    relationship: relates-to
+    targets:
+      - entry-id: '1.2'
+      - entry-id: '3.3'
+  - id: M-OSPS-VM-06-UKSSCOP
+    source: OSPS-VM-06
+    relationship: relates-to
+    targets:
+      - entry-id: '1.3'
+      - entry-id: '1.4'
