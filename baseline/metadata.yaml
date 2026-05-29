@@ -2,7 +2,7 @@ title: Open Source Project Security Baseline
 metadata:
   id: osps-baseline
   type: ControlCatalog
-  gemara-version: v1.0.0-rc.2
+  gemara-version: "1.2.0"
   description: |
     The Open Source Project Security (OSPS) Baseline is a set of security criteria that projects should meet to demonstrate a strong security posture.
   draft: true
@@ -26,6 +26,11 @@ metadata:
       version: 2024
       url: https://github.com/coreinfrastructure/best-practices-badge/blob/main/criteria/criteria.yml
       description: "The Open Source Security Foundation (OpenSSF) Best Practices Badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices. Projects can voluntarily self-certify, at no cost, by using this web application to explain how they follow each best practice. The OpenSSF Best Practices Badge is inspired by the many badges available to projects on GitHub. Consumers of the badge can quickly assess which FLOSS projects are following best practices and, as a result, are more likely to produce higher-quality secure software."
+    - id: Scorecard
+      title: OpenSSF Scorecard
+      version: "5.0"
+      url: https://github.com/ossf/scorecard
+      description: "OpenSSF Scorecard is an automated tool that assesses a number of important heuristics ('checks') associated with software security and assigns each check a score of 0-10. You can use these scores to understand specific areas to improve in order to strengthen the security posture of your project."
     - id: CSF
       title: NIST Cybersecurity Framework
       version: 2.0
@@ -41,12 +46,12 @@ metadata:
       version: 1.1
       url: https://csrc.nist.gov/pubs/sp/800/218/final
       description: "The Secure Software Development Framework (SSDF) is a set of fundamental, sound, and secure software development practices based on established secure software development practice documents from organizations such as BSA, OWASP, and SAFECode. Few software development life cycle (SDLC) models explicitly address software security in detail, so practices like those in the SSDF need to be added to and integrated with each SDLC implementation. Following the SSDF practices should help software producers reduce the number of vulnerabilities in released software, reduce the potential impact of the exploitation of undetected or unaddressed vulnerabilities, and address the root causes of vulnerabilities to prevent recurrences. Also, because the SSDF provides a common language for describing secure software development practices, software producers and acquirers can use it to foster their communications for procurement processes and other management activities."
-    - id: OC
+    - id: ISO-18974
       title: ISO/IEC 18974
       version: 1.0 - 2023-12
       url: https://openchainproject.org/security-assurance
       description: "ISO/IEC 18974 helps organizations check open source for known security vulnerability issues like CVEs, GitHub dependency alerts or package manager alerts. ISO/IEC 18974 identifies: The key places to have security processes, How to assign roles and responsibilities, And how to ensure sustainability of the processes. ISO/IEC 18974 is lightweight, easy to read and is supported by our global community with free reference material and conformance resources."
-    - id: OCRE
+    - id: OpenCRE
       title: Open Cybersecurity Reference Architecture
       version: 2024
       url: https://github.com/OWASP/OpenCRE
