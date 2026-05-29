@@ -8,11 +8,11 @@ name: Publish to grc.store
 # grcli. Triggered automatically when a GitHub Release is published; also
 # runnable manually for testing (dry_run defaults to true).
 #
-# Requirements:
-#   - Repository secret GRCLI_TOKEN: bearer token for the hub sync call.
-#     Obtain by running `grcli login` locally and copying the access token from
-#     ${XDG_DATA_HOME:-~/.local/share}/grcli/credentials.json, or by issuing a
-#     service-account token in the grc.store hub UI.
+# Auth:
+#   - grcli authenticates to grc.store via OIDC trusted publishing. The
+#     id-token: write permission below lets the runner mint an OIDC token
+#     that grcli exchanges for a hub credential. No static secrets needed —
+#     register this repo as a trusted publisher in the grc.store hub UI.
 #
 # Notes:
 #   - grcli is distributed as an OCI artifact (not a runnable container),
@@ -37,6 +37,7 @@ on:
 permissions:
   contents: read
   packages: read
+  id-token: write
 
 jobs:
   publish:
@@ -81,7 +82,6 @@ jobs:
 
       - name: Publish catalog and mapping documents to grc.store
         env:
-          GRCLI_TOKEN: ${{ secrets.GRCLI_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           EVENT_NAME: ${{ github.event_name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
@@ -108,9 +108,6 @@ jobs:
           if [ "${DRY_RUN:-false}" = "true" ]; then
             publish_args+=(--dry-run)
             echo "Running in DRY-RUN mode (no network, OCI layout written under grcli-out/)"
-          elif [ -z "${GRCLI_TOKEN:-}" ]; then
-            echo "::error::GRCLI_TOKEN secret is not set; cannot publish to grc.store"
-            exit 1
           fi
 
           staged="$RUNNER_TEMP/staged"
