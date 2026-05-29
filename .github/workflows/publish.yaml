@@ -17,9 +17,9 @@ name: Publish to grc.store
 # Notes:
 #   - grcli is distributed as an OCI artifact (not a runnable container),
 #     so we fetch it with oras instead of docker pull.
-#   - The OCI tag for each artifact comes from the artifact's own
-#     metadata.version field. Make sure metadata.version is bumped and
-#     `draft: true` is cleared before cutting a release.
+#   - The OCI tag for each artifact is the release tag. We stamp it onto
+#     each artifact's metadata.version at publish time so grcli's default
+#     tag resolution picks it up; the committed YAML files are untouched.
 #   - Signing is disabled (--no-sign). To enable cosign signing, add a
 #     COSIGN_KEY secret and pass --cosign-key (or remove --no-sign once grcli
 #     supports keyless Sigstore signing in CI).
@@ -83,8 +83,26 @@ jobs:
         env:
           GRCLI_TOKEN: ${{ secrets.GRCLI_TOKEN }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           set -euo pipefail
+
+          # Every artifact in a single release is stamped with the same
+          # metadata.version (and therefore the same OCI tag). On release
+          # events that's the release tag; on manual dry-runs it's a
+          # deterministic dev tag derived from the commit SHA.
+          if [ "$EVENT_NAME" = "release" ]; then
+            RELEASE_VERSION="$RELEASE_TAG"
+          else
+            RELEASE_VERSION="v0.0.0-dev-${GITHUB_SHA:0:7}"
+          fi
+          if [ -z "$RELEASE_VERSION" ]; then
+            echo "::error::Could not determine release version"
+            exit 1
+          fi
+          export RELEASE_VERSION
+          echo "Publishing all artifacts as metadata.version=$RELEASE_VERSION"
 
           publish_args=(--no-sign)
           if [ "${DRY_RUN:-false}" = "true" ]; then
@@ -95,10 +113,17 @@ jobs:
             exit 1
           fi
 
+          staged="$RUNNER_TEMP/staged"
+          mkdir -p "$staged"
+
           publish() {
-            local file="$1"
-            echo "::group::Publishing $file"
-            grcli publish "$file" "${publish_args[@]}"
+            local src="$1"
+            local dst="$staged/$(basename "$src")"
+            # Stamp metadata.version with the resolved release version so grcli
+            # picks it up as the OCI tag (we never modify the committed source).
+            yq '.metadata.version = strenv(RELEASE_VERSION)' "$src" > "$dst"
+            echo "::group::Publishing $src"
+            grcli publish "$dst" "${publish_args[@]}"
             echo "::endgroup::"
           }
 
