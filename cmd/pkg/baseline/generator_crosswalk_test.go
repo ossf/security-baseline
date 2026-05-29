@@ -16,32 +16,44 @@ func setupFakeBaseline() *types.Baseline {
 	return &types.Baseline{
 		Catalog: gemara.ControlCatalog{
 			Controls: []gemara.Control{
-				{
-					Id: "OSPS-AC-01",
-					Guidelines: []gemara.MultiEntryMapping{
-						{
-							ReferenceId: "NIST SP 800-53",
-							Entries: []gemara.ArtifactMapping{
-								{ReferenceId: "AC-2"},
-								{ReferenceId: "AC-3"},
-							},
+				{Id: "OSPS-AC-01"},
+				{Id: "OSPS-GV-01"},
+			},
+		},
+		Mappings: []gemara.MappingDocument{
+			{
+				SourceReference: gemara.TypedMapping{ReferenceId: "osps-baseline", EntryType: gemara.EntryTypeControl},
+				TargetReference: gemara.TypedMapping{ReferenceId: "NIST SP 800-53", EntryType: gemara.EntryTypeGuideline},
+				Mappings: []gemara.Mapping{
+					{
+						Id:           "M-OSPS-AC-01-NIST",
+						Source:       "OSPS-AC-01",
+						Relationship: gemara.RelRelatesTo,
+						Targets: []gemara.MappingTarget{
+							{EntryId: "AC-2"},
+							{EntryId: "AC-3"},
+						},
+					},
+					{
+						Id:           "M-OSPS-GV-01-NIST",
+						Source:       "OSPS-GV-01",
+						Relationship: gemara.RelRelatesTo,
+						Targets: []gemara.MappingTarget{
+							{EntryId: "AC-2"},
 						},
 					},
 				},
-				{
-					Id: "OSPS-GV-01",
-					Guidelines: []gemara.MultiEntryMapping{
-						{
-							ReferenceId: "NIST SP 800-53",
-							Entries: []gemara.ArtifactMapping{
-								{ReferenceId: "AC-2"},
-							},
-						},
-						{
-							ReferenceId: "CIS Controls v8",
-							Entries: []gemara.ArtifactMapping{
-								{ReferenceId: "1.1"},
-							},
+			},
+			{
+				SourceReference: gemara.TypedMapping{ReferenceId: "osps-baseline", EntryType: gemara.EntryTypeControl},
+				TargetReference: gemara.TypedMapping{ReferenceId: "CIS Controls v8", EntryType: gemara.EntryTypeGuideline},
+				Mappings: []gemara.Mapping{
+					{
+						Id:           "M-OSPS-GV-01-CIS",
+						Source:       "OSPS-GV-01",
+						Relationship: gemara.RelRelatesTo,
+						Targets: []gemara.MappingTarget{
+							{EntryId: "1.1"},
 						},
 					},
 				},

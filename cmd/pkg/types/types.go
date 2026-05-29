@@ -18,8 +18,9 @@ var ControlFamilies = []string{
 
 // Struct for holding the entire YAML structure
 type Baseline struct {
-	Catalog gemara.ControlCatalog
-	Lexicon []LexiconEntry
+	Catalog  gemara.ControlCatalog
+	Lexicon  []LexiconEntry
+	Mappings []gemara.MappingDocument
 }
 
 type LexiconEntry struct {

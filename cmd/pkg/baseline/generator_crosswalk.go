@@ -16,20 +16,24 @@ import (
 // Framework name -> Requirement ID -> sorted list of OSPS Control IDs
 type reverseCrosswalkMap map[string]map[string][]string
 
-// buildReverseCrosswalk iterates through the Gemara catalog and
+// buildReverseCrosswalk iterates the loaded #MappingDocument artifacts and
 // inverts the Baseline -> External mapping into External -> Baseline.
+// The framework name is taken from each mapping document's TargetReference.
 func buildReverseCrosswalk(b *types.Baseline) reverseCrosswalkMap {
 	result := make(reverseCrosswalkMap)
-	for i := range b.Catalog.Controls {
-		control := &b.Catalog.Controls[i]
-		controlID := control.Id // FIXED: 'Id' instead of 'ID'
-		// A guideline is a MultiEntryMapping
-		for _, guideline := range control.Guidelines {
-			// The Framework name is usually stored in ReferenceId
-			framework := guideline.ReferenceId
-			// We have to loop through the specific requirements under this framework
-			for _, entry := range guideline.Entries {
-				reqID := entry.ReferenceId // e.g. "CC6.1", "AC-2"
+	for i := range b.Mappings {
+		doc := &b.Mappings[i]
+		framework := doc.TargetReference.ReferenceId
+		if framework == "" {
+			continue
+		}
+		for _, m := range doc.Mappings {
+			controlID := m.Source
+			for _, t := range m.Targets {
+				reqID := t.EntryId
+				if reqID == "" {
+					continue
+				}
 				if _, ok := result[framework]; !ok {
 					result[framework] = make(map[string][]string)
 				}

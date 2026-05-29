@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sort"
 	"strings"
 
 	"github.com/gemaraproj/go-gemara"
@@ -20,6 +21,7 @@ import (
 const (
 	LexiconFilename  = "lexicon.yaml"
 	MetadataFilename = "metadata.yaml"
+	MappingsDirname  = "mappings"
 )
 
 // Loader reads baseline data from a directory of YAML source files
@@ -52,6 +54,13 @@ func (l *Loader) Load() (*types.Baseline, error) {
 	}
 
 	b.Catalog = *catalog
+
+	mappings, err := l.loadMappings()
+	if err != nil {
+		return nil, fmt.Errorf("error reading mappings: %w", err)
+	}
+	b.Mappings = mappings
+
 	return b, nil
 }
 
@@ -108,6 +117,43 @@ func toFileURI(path string) string {
 		return "file:///" + strings.TrimPrefix(cleaned, "/")
 	}
 	return cleaned
+}
+
+// loadMappings decodes every #MappingDocument YAML file found under the
+// baseline's mappings/ subdirectory. Results are returned sorted by file name
+// to keep downstream output deterministic.
+func (l *Loader) loadMappings() ([]gemara.MappingDocument, error) {
+	mappingsDir := filepath.Join(l.DataPath, MappingsDirname)
+	entries, err := os.ReadDir(mappingsDir)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil, nil
+		}
+		return nil, fmt.Errorf("reading mappings directory: %w", err)
+	}
+
+	files := make([]string, 0, len(entries))
+	for _, e := range entries {
+		if e.IsDir() {
+			continue
+		}
+		name := e.Name()
+		if filepath.Ext(name) != ".yaml" && filepath.Ext(name) != ".yml" {
+			continue
+		}
+		files = append(files, name)
+	}
+	sort.Strings(files)
+
+	docs := make([]gemara.MappingDocument, 0, len(files))
+	for _, name := range files {
+		var doc gemara.MappingDocument
+		if err := decodeYAMLFile(filepath.Join(mappingsDir, name), &doc); err != nil {
+			return nil, fmt.Errorf("decoding mapping %s: %w", name, err)
+		}
+		docs = append(docs, doc)
+	}
+	return docs, nil
 }
 
 // loadControlFamilies decodes per-family YAML files and appends their groups
