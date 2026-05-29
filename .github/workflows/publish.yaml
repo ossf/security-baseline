@@ -6,7 +6,7 @@ name: Publish to grc.store
 # Publishes the compiled OSPS Baseline ControlCatalog plus every MappingDocument
 # under baseline/mappings/ to the Gemara registry (https://hub.grc.store) using
 # grcli. Triggered automatically when a GitHub Release is published; also
-# runnable manually for testing (use the dry_run input to skip the network).
+# runnable manually for testing (dry_run defaults to true).
 #
 # Requirements:
 #   - Repository secret GRCLI_TOKEN: bearer token for the hub sync call.
@@ -15,10 +15,11 @@ name: Publish to grc.store
 #     service-account token in the grc.store hub UI.
 #
 # Notes:
-#   - The OCI tag for each artifact is taken from the release tag (or the
-#     workflow_dispatch input on manual runs). It is NOT taken from the
-#     artifact's metadata.version because the catalog and mapping documents
-#     are still marked draft: true.
+#   - grcli is distributed as an OCI artifact (not a runnable container),
+#     so we fetch it with oras instead of docker pull.
+#   - The OCI tag for each artifact comes from the artifact's own
+#     metadata.version field. Make sure metadata.version is bumped and
+#     `draft: true` is cleared before cutting a release.
 #   - Signing is disabled (--no-sign). To enable cosign signing, add a
 #     COSIGN_KEY secret and pass --cosign-key (or remove --no-sign once grcli
 #     supports keyless Sigstore signing in CI).
@@ -28,10 +29,6 @@ on:
     types: [published]
   workflow_dispatch:
     inputs:
-      tag:
-        description: "OCI tag to publish under (defaults to release tag; required for manual runs)"
-        required: false
-        default: ""
       dry_run:
         description: "Dry-run: build OCI layouts locally without pushing to the registry"
         type: boolean
@@ -39,13 +36,14 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 jobs:
   publish:
     name: Publish baseline catalog and mappings
     runs-on: ubuntu-latest
     env:
-      GRCLI_IMAGE: ghcr.io/revanite-io/grcli:latest
+      GRCLI_REF: ghcr.io/revanite-io/grcli:latest
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -59,48 +57,36 @@ jobs:
           check-latest: true
           cache: true
 
+      - name: Setup oras
+        uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
+
       - name: Build baseline-compiler
         run: go build -C cmd/ -o ../baseline-compiler
 
       - name: Compile catalog to single Gemara YAML
         run: ./baseline-compiler gemara -b baseline -o baseline.gemara.yaml
 
-      - name: Determine publish tag
-        id: tag
+      - name: Install grcli from OCI artifact
         env:
-          EVENT_NAME: ${{ github.event_name }}
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
-          INPUT_TAG: ${{ github.event.inputs.tag }}
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          if [ "$EVENT_NAME" = "release" ]; then
-            tag="$RELEASE_TAG"
-          elif [ -n "$INPUT_TAG" ]; then
-            tag="$INPUT_TAG"
-          else
-            # Manual dispatch with no explicit tag: build a deterministic dev tag
-            # tied to the commit SHA. Only useful for dry-run publishing.
-            tag="v0.0.0-dev-${GITHUB_SHA:0:7}"
-          fi
-          if [ -z "$tag" ]; then
-            echo "::error::Unable to determine publish tag"
-            exit 1
-          fi
-          echo "tag=$tag" >> "$GITHUB_OUTPUT"
-          echo "Using publish tag: $tag"
-
-      - name: Pull grcli image
-        run: docker pull "$GRCLI_IMAGE"
+          mkdir -p "$RUNNER_TEMP/bin"
+          echo "$GHCR_TOKEN" | oras login ghcr.io -u "${{ github.actor }}" --password-stdin
+          cd "$RUNNER_TEMP/bin"
+          oras pull --platform linux/amd64 "$GRCLI_REF"
+          chmod +x grcli
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          ./grcli --version
 
       - name: Publish catalog and mapping documents to grc.store
         env:
           GRCLI_TOKEN: ${{ secrets.GRCLI_TOKEN }}
-          PUBLISH_TAG: ${{ steps.tag.outputs.tag }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
           set -euo pipefail
 
-          publish_args=(--tag "$PUBLISH_TAG" --no-sign)
+          publish_args=(--no-sign)
           if [ "${DRY_RUN:-false}" = "true" ]; then
             publish_args+=(--dry-run)
             echo "Running in DRY-RUN mode (no network, OCI layout written under grcli-out/)"
@@ -111,11 +97,8 @@ jobs:
 
           publish() {
             local file="$1"
-            echo "::group::Publishing $file (tag=$PUBLISH_TAG)"
-            docker run --rm \
-              -v "$PWD:/workspace" -w /workspace \
-              -e GRCLI_TOKEN \
-              "$GRCLI_IMAGE" publish "$file" "${publish_args[@]}"
+            echo "::group::Publishing $file"
+            grcli publish "$file" "${publish_args[@]}"
             echo "::endgroup::"
           }
 
