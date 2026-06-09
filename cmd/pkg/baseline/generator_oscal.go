@@ -21,7 +21,7 @@ const (
 )
 
 func (g *Generator) ExportOSCAL(b *types.Baseline, w io.Writer) error {
-	oscalCatalog, err := gemaraconv.ControlCatalog(&b.Catalog).ToOSCAL(
+	oscalCatalog, err := gemaraconv.ControlCatalog(b.Catalog).ToOSCAL(
 		gemaraconv.WithCanonicalHrefFormat(canonicalHREF),
 		gemaraconv.WithControlHref(controlHREF))
 	if err != nil {
