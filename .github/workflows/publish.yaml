@@ -4,10 +4,12 @@
 name: Publish to grc.store
 
 # Publishes the compiled OSPS Baseline ControlCatalog plus every MappingDocument
-# under baseline/mappings/ to the Gemara registry (https://hub.grc.store by
-# default) using grcli. Triggered automatically when a GitHub Release is
-# published; also runnable manually for testing (dry_run defaults to true, and
-# hub_url can point at preview).
+# under baseline/mappings/ to the grc.store PREVIEW hub using grcli. Triggered
+# automatically when a GitHub Release is published; also runnable manually
+# (dry_run defaults to true; version can be specified for the run).
+#
+# TEMPORARY: this targets preview.grc.store while we validate the pipeline.
+# Flip HUB_URL to https://hub.grc.store once everything is locked in.
 #
 # Auth:
 #   - grcli authenticates to grc.store via OIDC trusted publishing. The
@@ -37,10 +39,10 @@ on:
         description: "Dry-run: build OCI layouts locally without pushing to the registry"
         type: boolean
         default: true
-      hub_url:
-        description: "Hub base URL to publish to (e.g. https://hub.preview.grc.store for testing)"
+      version:
+        description: "Catalog version — the metadata.version stamped onto every artifact, and the OCI tag (e.g. v0.1.0). Defaults to a dev tag derived from the commit SHA if left blank."
         type: string
-        default: "https://hub.grc.store"
+        default: ""
 
 permissions:
   contents: read
@@ -112,26 +114,25 @@ jobs:
       - name: Publish catalog and mapping documents to grc.store
         env:
           DRY_RUN: ${{ github.event.inputs.dry_run }}
-          HUB_URL_INPUT: ${{ github.event.inputs.hub_url }}
+          VERSION_INPUT: ${{ github.event.inputs.version }}
           EVENT_NAME: ${{ github.event_name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           set -euo pipefail
 
-          # Hub target: the dispatch input when set (lets a manual run point at
-          # preview), otherwise the production hub for release events.
-          HUB_URL="${HUB_URL_INPUT:-}"
-          if [ -z "$HUB_URL" ]; then
-            HUB_URL="https://hub.grc.store"
-          fi
+          # TEMPORARY: always target the preview hub while we validate the
+          # pipeline. Change this to https://hub.grc.store once locked in.
+          HUB_URL="https://hub.preview.grc.store"
           echo "Target hub: $HUB_URL"
 
           # Every artifact in a single release is stamped with the same
-          # metadata.version (and therefore the same OCI tag). On release
-          # events that's the release tag; on manual dry-runs it's a
-          # deterministic dev tag derived from the commit SHA.
+          # metadata.version (and therefore the same OCI tag). Resolution order:
+          # the release tag on release events; otherwise the version dispatch
+          # input; otherwise a deterministic dev tag derived from the commit SHA.
           if [ "$EVENT_NAME" = "release" ]; then
             RELEASE_VERSION="$RELEASE_TAG"
+          elif [ -n "${VERSION_INPUT:-}" ]; then
+            RELEASE_VERSION="$VERSION_INPUT"
           else
             RELEASE_VERSION="v0.0.0-dev-${GITHUB_SHA:0:7}"
           fi
