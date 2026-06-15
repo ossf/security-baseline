@@ -4,15 +4,18 @@
 name: Publish to grc.store
 
 # Publishes the compiled OSPS Baseline ControlCatalog plus every MappingDocument
-# under baseline/mappings/ to the Gemara registry (https://hub.grc.store) using
-# grcli. Triggered automatically when a GitHub Release is published; also
-# runnable manually for testing (dry_run defaults to true).
+# under baseline/mappings/ to the Gemara registry (https://hub.grc.store by
+# default) using grcli. Triggered automatically when a GitHub Release is
+# published; also runnable manually for testing (dry_run defaults to true, and
+# hub_url can point at preview).
 #
 # Auth:
 #   - grcli authenticates to grc.store via OIDC trusted publishing. The
 #     id-token: write permission below lets the runner mint an OIDC token
 #     that grcli exchanges for a hub credential. No static secrets needed —
-#     register this repo as a trusted publisher in the grc.store hub UI.
+#     register this repo as a trusted publisher in the grc.store hub for the
+#     target (openssf) namespace. A 403 at publish means that binding is
+#     missing, not that a secret is needed.
 #
 # Notes:
 #   - grcli is distributed as an OCI artifact (not a runnable container),
@@ -20,9 +23,10 @@ name: Publish to grc.store
 #   - The OCI tag for each artifact is the release tag. We stamp it onto
 #     each artifact's metadata.version at publish time so grcli's default
 #     tag resolution picks it up; the committed YAML files are untouched.
-#   - Signing is disabled (--no-sign). To enable cosign signing, add a
-#     COSIGN_KEY secret and pass --cosign-key (or remove --no-sign once grcli
-#     supports keyless Sigstore signing in CI).
+#   - Signing: grcli signs keyless via cosign automatically in GitHub Actions
+#     (it reads the GHA OIDC token; needs cosign on PATH + id-token: write).
+#     Real publishes are signed; dry-runs pass --no-sign since there is no
+#     registry to push a signature to.
 
 on:
   release:
@@ -33,6 +37,10 @@ on:
         description: "Dry-run: build OCI layouts locally without pushing to the registry"
         type: boolean
         default: true
+      hub_url:
+        description: "Hub base URL to publish to (e.g. https://hub.preview.grc.store for testing)"
+        type: string
+        default: "https://hub.grc.store"
 
 permissions:
   contents: read
@@ -58,14 +66,35 @@ jobs:
           check-latest: true
           cache: true
 
+      - name: Setup CUE
+        uses: cue-lang/setup-cue@a93fa358375740cd8b0078f76355512b9208acb1 # v1.0.1
+        with:
+          version: latest
+
       - name: Setup oras
         uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
+
+      # Pinning note: grcli's own release CI uses this same tag and signs
+      # keyless with --new-bundle-format successfully. SHA-pin before merge to
+      # match this repo's action-pinning convention (dependabot will maintain it).
+      - name: Setup cosign
+        uses: sigstore/cosign-installer@v3
 
       - name: Build baseline-compiler
         run: go build -C cmd/ -o ../baseline-compiler
 
       - name: Compile catalog to single Gemara YAML
         run: ./baseline-compiler gemara -b baseline -o baseline.gemara.yaml
+
+      - name: Validate catalog and mappings against CUE schema
+        run: |
+          set -euo pipefail
+          cd schema
+          cue vet -d '#OSPSBaseline' . ../baseline.gemara.yaml
+          for f in ../baseline/mappings/*.yaml; do
+            echo "vetting $f"
+            cue vet -d '#OSPSMapping' . "$f"
+          done
 
       - name: Install grcli from OCI artifact
         env:
@@ -83,10 +112,19 @@ jobs:
       - name: Publish catalog and mapping documents to grc.store
         env:
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          HUB_URL_INPUT: ${{ github.event.inputs.hub_url }}
           EVENT_NAME: ${{ github.event_name }}
           RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
           set -euo pipefail
+
+          # Hub target: the dispatch input when set (lets a manual run point at
+          # preview), otherwise the production hub for release events.
+          HUB_URL="${HUB_URL_INPUT:-}"
+          if [ -z "$HUB_URL" ]; then
+            HUB_URL="https://hub.grc.store"
+          fi
+          echo "Target hub: $HUB_URL"
 
           # Every artifact in a single release is stamped with the same
           # metadata.version (and therefore the same OCI tag). On release
@@ -104,10 +142,13 @@ jobs:
           export RELEASE_VERSION
           echo "Publishing all artifacts as metadata.version=$RELEASE_VERSION"
 
-          publish_args=(--no-sign)
+          # Real publishes are signed keyless (no flag needed — grcli detects
+          # GitHub Actions + the id-token and drives cosign). Dry-runs skip the
+          # network, so there is nothing to sign or push a signature to.
+          publish_args=(--url "$HUB_URL")
           if [ "${DRY_RUN:-false}" = "true" ]; then
-            publish_args+=(--dry-run)
-            echo "Running in DRY-RUN mode (no network, OCI layout written under grcli-out/)"
+            publish_args+=(--dry-run --no-sign)
+            echo "Running in DRY-RUN mode (no network; OCI layouts under grcli-out/, unsigned)"
           fi
 
           staged="$RUNNER_TEMP/staged"
