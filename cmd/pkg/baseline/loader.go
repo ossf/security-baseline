@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/gemaraproj/go-gemara"
 	"github.com/gemaraproj/go-gemara/fetcher"
@@ -88,6 +89,27 @@ func (l *Loader) loadMetadata() (*gemara.ControlCatalog, error) {
 	return &catalog, nil
 }
 
+// toFileURI converts local paths to RFC-8089 file:/// URIs, handling Windows drive-letter paths correctly.
+func toFileURI(path string) string {
+	switch {
+	case strings.HasPrefix(path, "https://"), strings.HasPrefix(path, "http://"):
+		return path
+	case strings.HasPrefix(path, "file:///"):
+		return path
+	case strings.HasPrefix(path, "file://"):
+		path = strings.TrimPrefix(path, "file://")
+	}
+	cleaned := filepath.Clean(path)
+	cleaned = strings.ReplaceAll(cleaned, "\\", "/")
+	isAbs := strings.HasPrefix(cleaned, "/") ||
+		filepath.IsAbs(path) ||
+		(len(cleaned) >= 3 && cleaned[1] == ':' && cleaned[2] == '/')
+	if isAbs {
+		return "file:///" + strings.TrimPrefix(cleaned, "/")
+	}
+	return cleaned
+}
+
 // loadControlFamilies decodes per-family YAML files and appends their groups
 // and controls onto the provided catalog.
 func (l *Loader) loadControlFamilies(catalog *gemara.ControlCatalog) error {
@@ -98,7 +120,7 @@ func (l *Loader) loadControlFamilies(catalog *gemara.ControlCatalog) error {
 
 	familyPaths := make([]string, 0, len(types.ControlFamilies))
 	for _, familyID := range types.ControlFamilies {
-		familyPath := "file://" + filepath.Join(absData, fmt.Sprintf("OSPS-%s.yaml", familyID))
+		familyPath := toFileURI(filepath.Join(absData, fmt.Sprintf("OSPS-%s.yaml", familyID)))
 		familyPaths = append(familyPaths, familyPath)
 	}
 
