@@ -41,8 +41,8 @@ mappings:
     source: OSPS-AC-01
     relationship: relates-to
     targets:
-      - entry-id: PR.A-02
-      - entry-id: PR.A-05
+      - entry-id: PR.AA-02
+      - entry-id: PR.AA-05
   - id: M-OSPS-AC-02-CSF
     source: OSPS-AC-02
     relationship: relates-to
@@ -53,8 +53,8 @@ mappings:
     source: OSPS-AC-03
     relationship: relates-to
     targets:
-      - entry-id: PR.A-02
-      - entry-id: PR.A-05
+      - entry-id: PR.AA-02
+      - entry-id: PR.AA-05
   - id: M-OSPS-AC-04-CSF
     source: OSPS-AC-04
     relationship: relates-to
@@ -100,7 +100,7 @@ mappings:
     source: OSPS-QA-02
     relationship: relates-to
     targets:
-      - entry-id: ID.AM.01
+      - entry-id: ID.AM-01
       - entry-id: ID.AM-02
   - id: M-OSPS-QA-03-CSF
     source: OSPS-QA-03
