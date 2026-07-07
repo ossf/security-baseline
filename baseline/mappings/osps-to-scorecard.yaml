@@ -66,8 +66,8 @@ mappings:
     relationship: relates-to
     targets:
       - entry-id: License
-  - id: M-OSPS-QA-04-Scorecard
-    source: OSPS-QA-04
+  - id: M-OSPS-QA-05-Scorecard
+    source: OSPS-QA-05
     relationship: relates-to
     targets:
       - entry-id: Binary-Artifacts

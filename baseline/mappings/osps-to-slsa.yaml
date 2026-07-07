@@ -40,7 +40,7 @@ mappings:
     source: OSPS-AC-04
     relationship: relates-to
     targets:
-      - entry-id: Producer - Choose an appropriate build platform
+      - entry-id: Choose an appropriate build platform
       - entry-id: Build platform - Isolation strength - Isolated
   - id: M-OSPS-BR-01-SLSA
     source: OSPS-BR-01
@@ -52,7 +52,8 @@ mappings:
     relationship: relates-to
     targets:
       - entry-id: Follow a consistent build process
-      - entry-id: Provenance generation- Exists, Authentic
+      - entry-id: Build platform - Provenance generation - Exists
+      - entry-id: Build platform - Provenance generation - Authentic
   - id: M-OSPS-BR-03-SLSA
     source: OSPS-BR-03
     relationship: relates-to
@@ -64,24 +65,24 @@ mappings:
     targets:
       - entry-id: Choose an appropriate build platform
       - entry-id: Follow a consistent build process
-      - entry-id: Build platform - Isolation strength - isolated
+      - entry-id: Build platform - Isolation strength - Isolated
   - id: M-OSPS-BR-05-SLSA
     source: OSPS-BR-05
     relationship: relates-to
     targets:
-      - entry-id: Isolation strength - isolated
+      - entry-id: Build platform - Isolation strength - Isolated
   - id: M-OSPS-BR-06-SLSA
     source: OSPS-BR-06
     relationship: relates-to
     targets:
-      - entry-id: Distribute provenance - Exists
+      - entry-id: Distribute provenance
   - id: M-OSPS-QA-01-SLSA
     source: OSPS-QA-01
     relationship: relates-to
     targets:
-      - entry-id: Build platform - isolation strength - Isolated
+      - entry-id: Build platform - Isolation strength - Isolated
   - id: M-OSPS-QA-04-SLSA
     source: OSPS-QA-04
     relationship: relates-to
     targets:
-      - entry-id: Build platform - isolation strength - Isolated
+      - entry-id: Build platform - Isolation strength - Isolated

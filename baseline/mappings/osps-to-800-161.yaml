@@ -47,8 +47,6 @@ mappings:
       - entry-id: CM-6
       - entry-id: IA-2
       - entry-id: IA-5
-      - entry-id: 1.2e
-      - entry-id: 1.2f
   - id: M-OSPS-AC-02-800-161
     source: OSPS-AC-02
     relationship: relates-to

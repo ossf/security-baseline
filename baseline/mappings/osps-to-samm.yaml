@@ -95,16 +95,16 @@ mappings:
     targets:
       - entry-id: Implementation -Secure Build -Build Process Lvl3
       - entry-id: Implementation -Secure Build -Software Dependencies Lvl3
-      - entry-id: Verification -Requirements Testing -Control Verification Lvl1
-      - entry-id: Verification -Requirements Testing -Control Verification Lvl2
-      - entry-id: Verification -Requirements Testing -Control Verification Lvl3
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl1
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl2
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl3
   - id: M-OSPS-QA-06-SAMM
     source: OSPS-QA-06
     relationship: relates-to
     targets:
-      - entry-id: Verification-Requirements -Testing -Control Verification Lvl1
-      - entry-id: Verification-Requirements -Testing -Control Verification Lvl2
-      - entry-id: Verification-Requirements -Testing -Control Verification Lvl3
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl1
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl2
+      - entry-id: Verification -Requirements-driven Testing -Control Verification Lvl3
       - entry-id: Verification -Security Testing -Scalable Baseline Lvl3
   - id: M-OSPS-SA-01-SAMM
     source: OSPS-SA-01
@@ -115,7 +115,7 @@ mappings:
     source: OSPS-SA-03
     relationship: relates-to
     targets:
-      - entry-id: Governance -Create and Promote Lvl1
+      - entry-id: Governance -Strategy & Metrics -Create and Promote Lvl1
       - entry-id: Design -Threat Assessment -Application Risk Profile Lvl1
       - entry-id: Design -Threat Assessment -Threat Modeling Lvl1
       - entry-id: Verification -Architecture Assessment -Architecture Mitigation Lvl2
@@ -123,7 +123,7 @@ mappings:
     source: OSPS-VM-01
     relationship: relates-to
     targets:
-      - entry-id: Governance -Create and Promote Lvl2
+      - entry-id: Governance -Strategy & Metrics -Create and Promote Lvl2
       - entry-id: Governance -Policy & Compliance -Policy & Standards Lvl1
       - entry-id: Implementation -Defect Management -Defect Tracking Lvl1
       - entry-id: Implementation -Defect Management -Defect Tracking Lvl2
@@ -135,7 +135,7 @@ mappings:
     source: OSPS-VM-02
     relationship: relates-to
     targets:
-      - entry-id: Governance -Policy&Compliance -Policy&Standards Lvl2
+      - entry-id: Governance -Policy & Compliance -Policy & Standards Lvl2
   - id: M-OSPS-VM-03-SAMM
     source: OSPS-VM-03
     relationship: relates-to
@@ -145,15 +145,15 @@ mappings:
     source: OSPS-VM-05
     relationship: relates-to
     targets:
-      - entry-id: Implementation -Secure Build-Build Process Lvl3
-      - entry-id: Implementation -Software Dependencies Lvl3
+      - entry-id: Implementation -Secure Build -Build Process Lvl3
+      - entry-id: Implementation -Secure Build -Software Dependencies Lvl3
       - entry-id: Verification -Security Testing -Scalable Baseline Lvl1
       - entry-id: Verification -Security Testing -Scalable Baseline Lvl3
   - id: M-OSPS-VM-06-SAMM
     source: OSPS-VM-06
     relationship: relates-to
     targets:
-      - entry-id: Implementation -Secure Build-Build Process Lvl3
-      - entry-id: Implementation -Software Dependencies Lvl3
+      - entry-id: Implementation -Secure Build -Build Process Lvl3
+      - entry-id: Implementation -Secure Build -Software Dependencies Lvl3
       - entry-id: Verification -Security Testing -Scalable Baseline Lvl1
       - entry-id: Verification -Security Testing -Scalable Baseline Lvl3
