@@ -146,7 +146,7 @@ jobs:
           # Real publishes are signed keyless (no flag needed — grcli detects
           # GitHub Actions + the id-token and drives cosign). Dry-runs skip the
           # network, so there is nothing to sign or push a signature to.
-          publish_args=(--url "$HUB_URL")
+          publish_args=(--url "$HUB_URL" --license Apache-2.0)
           if [ "${DRY_RUN:-false}" = "true" ]; then
             publish_args+=(--dry-run --no-sign)
             echo "Running in DRY-RUN mode (no network; OCI layouts under grcli-out/, unsigned)"
