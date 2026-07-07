@@ -79,8 +79,9 @@ jobs:
       # Pinning note: grcli's own release CI uses this same tag and signs
       # keyless with --new-bundle-format successfully. SHA-pin before merge to
       # match this repo's action-pinning convention (dependabot will maintain it).
-      - name: Setup cosign
-        uses: sigstore/cosign-installer@v3
+      - uses: sigstore/cosign-installer@v4.1.2
+        with:
+          cosign-release: v3.1.1
 
       - name: Build baseline-compiler
         run: go build -C cmd/ -o ../baseline-compiler
