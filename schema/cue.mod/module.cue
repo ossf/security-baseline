@@ -4,6 +4,6 @@ language: {
 }
 deps: {
 	"github.com/gemaraproj/gemara@v1": {
-		v: "v1.0.0-rc.2"
+		v: "v1.2.0"
 	}
 }

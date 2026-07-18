@@ -129,6 +129,50 @@ func controlsForGroup(controls []gemara.Control, groupID string) []gemara.Contro
 	return out
 }
 
+// FrameworkRelation describes how a control relates to a single external framework.
+// It mirrors the shape the markdown template needs to render the per-control
+// "External Framework Relations" section.
+type FrameworkRelation struct {
+	Framework string
+	Entries   []string
+}
+
+// relationsForControl returns the external framework relations for a given OSPS
+// control id, aggregated from the loaded #MappingDocument artifacts. The result
+// is sorted by framework name for deterministic output.
+func relationsForControl(mappings []gemara.MappingDocument, controlID string) []FrameworkRelation {
+	byFW := map[string][]string{}
+	for i := range mappings {
+		doc := &mappings[i]
+		fw := doc.TargetReference.ReferenceId
+		if fw == "" {
+			continue
+		}
+		for _, m := range doc.Mappings {
+			if m.Source != controlID {
+				continue
+			}
+			for _, t := range m.Targets {
+				if t.EntryId == "" {
+					continue
+				}
+				byFW[fw] = append(byFW[fw], t.EntryId)
+			}
+		}
+	}
+	if len(byFW) == 0 {
+		return nil
+	}
+	out := make([]FrameworkRelation, 0, len(byFW))
+	for fw, entries := range byFW {
+		out = append(out, FrameworkRelation{Framework: fw, Entries: entries})
+	}
+	slices.SortFunc(out, func(a, b FrameworkRelation) int {
+		return strings.Compare(a.Framework, b.Framework)
+	})
+	return out
+}
+
 // loop through maturityLevels
 // to see if any are higher than the targetMaturity
 func maxLevel(maturityLevels []string, targetMaturity int) bool {
