@@ -8,10 +8,6 @@ The goal of the OSPS Documentation Style Guide is to ensure that every control m
 
 ## Additional editorial resources
 
-In general, we follow the rules mentioned in:
-
-- [Lexicon](https://github.com/ossf/security-baseline)
-
 Here is a list of supplementary resources to research and help you think, but don’t consider them a part of the OSPS Documentation Style Guide:
 
 - [Red Hat supplementary style guide for product documentation](https://redhat-documentation.github.io/supplementary-style-guide/)  
