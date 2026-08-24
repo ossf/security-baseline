@@ -68,7 +68,6 @@ mappings:
     targets:
       - entry-id: 486-813
       - entry-id: 124-564
-      - entry-id: 347-507
       - entry-id: 263-184
       - entry-id: 123-124
   - id: M-OSPS-BR-01-OpenCRE
@@ -96,7 +95,6 @@ mappings:
     relationship: relates-to
     targets:
       - entry-id: 486-813
-      - entry-id: 068-486
       - entry-id: 124-564
       - entry-id: 757-271
       - entry-id: 347-352
@@ -219,11 +217,6 @@ mappings:
     relationship: relates-to
     targets:
       - entry-id: 464-513
-  - id: M-OSPS-VM-03-OpenCRE
-    source: OSPS-VM-03
-    relationship: relates-to
-    targets:
-      - entry-id: 308-514
   - id: M-OSPS-VM-05-OpenCRE
     source: OSPS-VM-05
     relationship: relates-to
