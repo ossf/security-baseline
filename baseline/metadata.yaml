@@ -57,7 +57,7 @@ metadata:
       url: https://github.com/OWASP/OpenCRE
       description: "OpenCRE stands for Open Common Requirement enumeration. It is an interactive content linking platform for uniting security standards and guidelines. It offers easy and robust access to relevant information when designing, developing, testing and procuring secure software."
     - id: SLSA
-      title: Supply Chain Levels for Software Artifacts
+      title: Supply-chain Levels for Software Artifacts
       version: 1.0
       url: https://github.com/slsa-framework/slsa
       description: "SLSA (pronounced \"salsa\") is a security framework from source to service, giving anyone working with software a common language for increasing levels of software security and supply chain integrity. It’s how you get from safe enough to being as resilient as possible, at any link in the chain."

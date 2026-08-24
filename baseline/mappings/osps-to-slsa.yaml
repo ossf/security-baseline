@@ -24,7 +24,7 @@ metadata:
         criteria that projects should meet to demonstrate a strong security
         posture.
     - id: SLSA
-      title: Supply Chain Levels for Software Artifacts
+      title: Supply-chain Levels for Software Artifacts
       version: "1.0"
       url: https://github.com/slsa-framework/slsa
       description: SLSA (pronounced "salsa") is a security framework from source to service, giving anyone working with software a common language for increasing levels of software security and supply chain
