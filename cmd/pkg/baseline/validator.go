@@ -84,5 +84,16 @@ func (v *Validator) Check(b *types.Baseline) error {
 		}
 	}
 
+	// The mapping documents live outside the catalog, so nothing but this check
+	// keeps a mapping's source pointing at a control that actually exists.
+	for i := range b.Mappings {
+		doc := &b.Mappings[i]
+		for _, m := range doc.Mappings {
+			if !slices.Contains(entryIDs, m.Source) {
+				errs = append(errs, fmt.Errorf("mapping %s targets unknown control %q", m.Id, m.Source))
+			}
+		}
+	}
+
 	return errors.Join(errs...)
 }

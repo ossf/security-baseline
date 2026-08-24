@@ -136,3 +136,40 @@ func TestGenerateReverseCrosswalk_TableFormat(t *testing.T) {
 		t.Error("expected sorted control IDs joined with comma")
 	}
 }
+
+func TestRelationsForControl(t *testing.T) {
+	b := setupFakeBaseline()
+
+	// OSPS-GV-01 is mapped by both documents, so it exercises aggregation
+	// across frameworks and the alphabetical sort of the result.
+	gv := relationsForControl(b.Mappings, "OSPS-GV-01")
+	if len(gv) != 2 {
+		t.Fatalf("expected 2 frameworks for OSPS-GV-01, got %d", len(gv))
+	}
+	if gv[0].Framework != "CIS Controls v8" || gv[1].Framework != "NIST SP 800-53" {
+		t.Errorf("frameworks not sorted by name: %q, %q", gv[0].Framework, gv[1].Framework)
+	}
+	if len(gv[1].Entries) != 1 || gv[1].Entries[0] != "AC-2" {
+		t.Errorf("unexpected NIST entries for OSPS-GV-01: %v", gv[1].Entries)
+	}
+
+	ac := relationsForControl(b.Mappings, "OSPS-AC-01")
+	if len(ac) != 1 {
+		t.Fatalf("expected 1 framework for OSPS-AC-01, got %d", len(ac))
+	}
+	if len(ac[0].Entries) != 2 || ac[0].Entries[0] != "AC-2" || ac[0].Entries[1] != "AC-3" {
+		t.Errorf("entry order not preserved: %v", ac[0].Entries)
+	}
+
+	if got := relationsForControl(b.Mappings, "OSPS-ZZ-99"); got != nil {
+		t.Errorf("expected nil for an unmapped control, got %v", got)
+	}
+
+	// A target with no entry-id must be skipped rather than rendered blank,
+	// which is what produced the empty crosswalk row for OSPS-DO-07.
+	b.Mappings[1].Mappings[0].Targets = append(b.Mappings[1].Mappings[0].Targets, gemara.MappingTarget{})
+	cis := relationsForControl(b.Mappings, "OSPS-GV-01")[0]
+	if len(cis.Entries) != 1 {
+		t.Errorf("empty entry-id was not skipped: %v", cis.Entries)
+	}
+}

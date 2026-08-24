@@ -126,9 +126,6 @@ func (l *Loader) loadMappings() ([]gemara.MappingDocument, error) {
 	mappingsDir := filepath.Join(l.DataPath, MappingsDirname)
 	entries, err := os.ReadDir(mappingsDir)
 	if err != nil {
-		if os.IsNotExist(err) {
-			return nil, nil
-		}
 		return nil, fmt.Errorf("reading mappings directory: %w", err)
 	}
 
