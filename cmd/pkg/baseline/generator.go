@@ -51,6 +51,9 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 		"applicabilityTitle": func(id string) string {
 			return applicabilityTitle(b.Catalog.Metadata.ApplicabilityGroups, id)
 		},
+		"relationsForControl": func(controlID string) []FrameworkRelation {
+			return relationsForControl(b.Mappings, controlID)
+		},
 	}).Parse(string(templateContent))
 	if err != nil {
 		return fmt.Errorf("error parsing template: %w", err)

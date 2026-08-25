@@ -18,65 +18,6 @@ controls:
       Enable users to access and review the project's source code and history,
       promoting transparency and collaboration within the project community.
     group: QA
-    guidelines:
-      - reference-id: BPB
-        entries:
-          - reference-id: CC-B-1
-          - reference-id: CC-B-2
-          - reference-id: CC-B-3
-          - reference-id: R-B-5
-      - reference-id: CRA
-        entries:
-          - reference-id: 1.2b
-          - reference-id: 1.2f
-          - reference-id: 1.2j
-      - reference-id: SSDF
-        entries:
-          - reference-id: PS.1
-          - reference-id: PS.2
-          - reference-id: PS.3
-          - reference-id: PW.1.2
-          - reference-id: PW.2.1
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 486-813
-          - reference-id: 124-564
-          - reference-id: 757-271
-      - reference-id: CSF
-        entries:
-          - reference-id: ID.AM-02
-          - reference-id: ID.RA-01
-          - reference-id: ID.RA-08
-      - reference-id: ISO-18974
-        entries:
-          - reference-id: 4.1.4
-      - reference-id: SLSA
-        entries:
-          - reference-id: Build platform - isolation strength - Isolated
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: P3.5
-          - reference-id: E2.2
-      - reference-id: SAMM
-        entries:
-          - reference-id: Implementation -Secure Build -Build Process Lvl1
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 2.1.1
-          - reference-id: 6.2.1
-          - reference-id: 6.5.1
-          - reference-id: 6.5.2
-      - reference-id: 800-161
-        entries:
-          - reference-id: RA-5
-          - reference-id: SA-11
-          - reference-id: SA-15          
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: Claim 2.2.3
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: QA.02
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
@@ -114,77 +55,6 @@ controls:
       while enabling users and contributors to understand the software's direct
       dependencies.
     group: QA
-    guidelines:
-      - reference-id: BPB
-        entries:
-          - reference-id: Q-S-8
-          - reference-id: Q-S-9
-      - reference-id: CRA
-        entries:
-          - reference-id: 2.1
-          - reference-id: 2.2
-          - reference-id: 2.3
-      - reference-id: SSDF
-        entries:
-          - reference-id: PO.3.3
-          - reference-id: PS.1
-          - reference-id: PS.2
-          - reference-id: PS.3.2
-          - reference-id: PW.4
-      - reference-id: CSF
-        entries:
-          - reference-id: ID.AM.01
-          - reference-id: ID.AM-02
-      - reference-id: ISO-18974
-        entries:
-          - reference-id: 4.1.5
-          - reference-id: 4.3.1
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 486-813
-          - reference-id: 124-564
-          - reference-id: 673-475
-          - reference-id: 863-521
-          - reference-id: 613-286
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: G1.4
-          - reference-id: G1.5
-          - reference-id: G2.5
-          - reference-id: P3.1
-          - reference-id: P3.2
-          - reference-id: P5.1
-          - reference-id: P5.2
-          - reference-id: E2.1
-          - reference-id: E2.2
-      - reference-id: SAMM
-        entries:
-          - reference-id: Implementation -Secure Build -Software Dependencies Lvl1
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.3.2
-          - reference-id: 6.4.3
-          - reference-id: 12.5.1
-      - reference-id: 800-161
-        entries:
-          - reference-id: CA-7
-          - reference-id: CM-2
-          - reference-id: CM-8
-          - reference-id: PL-8
-          - reference-id: RA-3(1)
-          - reference-id: RA-5
-          - reference-id: SA-11
-          - reference-id: SA-15
-          - reference-id: SR-3
-          - reference-id: SR-4                
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: Claim 1.2.1
-          - reference-id: Claim 1.2.2
-          - reference-id: Claim 3.1.1
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: QA.01
     assessment-requirements:
       - id: OSPS-QA-02.01
         text: |
@@ -220,63 +90,6 @@ controls:
       overlooking security vulnerabilities or defects identified by automated
       checks.
     group: QA
-    guidelines:
-      - reference-id: CRA
-        entries:
-          - reference-id: 1.2f
-          - reference-id: 1.2k
-      - reference-id: SSDF
-        entries:
-          - reference-id: PO.4.1
-          - reference-id: PS.1
-          - reference-id: PS.2
-          - reference-id: RV.1.2
-      - reference-id: CSF
-        entries:
-          - reference-id: ID.IM-02
-      - reference-id: ISO-18974
-        entries:
-          - reference-id: 4.1.5
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 263-184
-          - reference-id: 253-452
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: G2.2
-          - reference-id: G5.3
-          - reference-id: G5.4
-          - reference-id: P3.5
-          - reference-id: P4.1
-          - reference-id: P4.2
-      - reference-id: SAMM
-        entries:
-          - reference-id: Implementation -Secure Build -Build Process Lvl3
-          - reference-id: Implementation -Secure Build -Software Dependencies Lvl3
-          - reference-id: Verification -Requirements Testing -Control Verification Lvl1
-          - reference-id: Verification -Requirements Testing -Control Verification Lvl2
-          - reference-id: Verification -Requirements Testing -Control Verification Lvl3
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.3.1
-          - reference-id: 6.3.2
-          - reference-id: 6.5.2
-      - reference-id: 800-161
-        entries:
-          - reference-id: AU-6
-          - reference-id: CM-3
-          - reference-id: CM-6
-          - reference-id: PL-8
-          - reference-id: SA-11
-          - reference-id: SA-15
-          - reference-id: SR-3                
-      - reference-id: UKSSCOP
-        entries:
-          - reference-id: Claim 1.3.2
-          - reference-id: Claim 1.3.3
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: QA.04
     assessment-requirements:
       - id: OSPS-QA-03.01
         text: |
@@ -299,39 +112,6 @@ controls:
       Ensure that all codebases produced by the project are well
       documented and held to the same security standard.
     group: QA
-    guidelines:
-      - reference-id: CRA
-        entries:
-          - reference-id: 1.2b
-          - reference-id: 1.2f
-      - reference-id: SSDF
-        entries:
-          - reference-id: PO.3.2
-          - reference-id: PO.4.1
-          - reference-id: PS.1
-          - reference-id: PS.2
-          - reference-id: RV.1.2
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 486-813
-          - reference-id: 124-564
-      - reference-id: SLSA
-        entries:
-          - reference-id: Build platform - isolation strength - Isolated
-      - reference-id: Scorecard
-        entries:
-          - reference-id: Binary-Artifacts
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: G2.2
-          - reference-id: G5.4
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.4.2
-      - reference-id: 800-161
-        entries:
-          - reference-id: PL-8
-          - reference-id: SA-15                
     assessment-requirements:
       - id: OSPS-QA-04.01
         text: |
@@ -369,29 +149,6 @@ controls:
       project's version control system, ensuring that only source code and
       necessary files are stored in the repository.
     group: QA
-    guidelines:
-      - reference-id: CRA
-        entries:
-          - reference-id: 1.2b
-      - reference-id: SSDF
-        entries:
-          - reference-id: PS.1
-          - reference-id: PS.2
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 486-813
-          - reference-id: 124-564
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.4.3
-      - reference-id: 800-161
-        entries:
-          - reference-id: PL-8
-          - reference-id: SA-15
-          - reference-id: SR-3                
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: BR.05
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
@@ -429,62 +186,6 @@ controls:
       Ensure that the project uses at least one automated test suite for the
       source code repository and clearly documents when and how tests are run.
     group: QA
-    guidelines:
-      - reference-id: BPB
-        entries:
-          - reference-id: Q-B-4
-          - reference-id: Q-B-8
-          - reference-id: Q-B-9
-          - reference-id: Q-B-10
-          - reference-id: Q-S-2
-      - reference-id: CRA
-        entries:
-          - reference-id: 2.3
-      - reference-id: SSDF
-        entries:
-          - reference-id: PW.8.2
-      - reference-id: CSF
-        entries:
-          - reference-id: ID.AM-02
-      - reference-id: ISO-18974
-        entries:
-          - reference-id: 4.1.5
-      - reference-id: OpenCRE
-        entries:
-          - reference-id: 207-435
-          - reference-id: 088-377
-      - reference-id: Scorecard
-        entries:
-          - reference-id: CI-Tests
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: P4.1
-          - reference-id: P4.2
-          - reference-id: P4.3
-          - reference-id: P4.4
-          - reference-id: E2.4
-          - reference-id: E2.5
-      - reference-id: SAMM
-        entries:
-          - reference-id: Verification-Requirements -Testing -Control Verification Lvl1
-          - reference-id: Verification-Requirements -Testing -Control Verification Lvl2
-          - reference-id: Verification-Requirements -Testing -Control Verification Lvl3
-          - reference-id: Verification -Security Testing -Scalable Baseline Lvl3
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.2.3
-          - reference-id: 6.3.1
-          - reference-id: 6.3.2
-          - reference-id: 6.4.2
-      - reference-id: 800-161
-        entries:
-          - reference-id: SA-11
-          - reference-id: SA-15
-          - reference-id: SR-3                
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: QA.04
-          - reference-id: QA.05       
     assessment-requirements:
       - id: OSPS-QA-06.01
         text: |
@@ -533,33 +234,6 @@ controls:
       non-author human approval of changes before merging into the release or
       primary branch.
     group: QA
-    guidelines:
-      - reference-id: BPB
-        entries:
-          - reference-id: B-G-3
-      - reference-id: Scorecard
-        entries:
-          - reference-id: Code-Review
-      - reference-id: PSSCRM
-        entries:
-          - reference-id: G2.4
-          - reference-id: P3.3
-          - reference-id: P3.5
-      - reference-id: PCIDSS
-        entries:
-          - reference-id: 6.2.3.1
-          - reference-id: 6.4.2
-          - reference-id: 6.5.4
-      - reference-id: 800-161
-        entries:
-          - reference-id: AC-5
-          - reference-id: AU-6
-          - reference-id: PL-8
-          - reference-id: SA-15
-          - reference-id: SR-3                
-      - reference-id: BSI-TR-03185-2
-        entries:
-          - reference-id: QA.06
     assessment-requirements:
       - id: OSPS-QA-07.01
         text: |

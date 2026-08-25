@@ -39,3 +39,11 @@ jobs:
 
       - name: Validate catalog against CUE schema
         run: cd schema && cue vet -d '#OSPSBaseline' . ../baseline.gemara.yaml
+
+      - name: Validate mapping documents against CUE schema
+        run: |
+          cd schema
+          for f in ../baseline/mappings/*.yaml; do
+            echo "vetting $f"
+            cue vet -d '#OSPSMapping' . "$f"
+          done

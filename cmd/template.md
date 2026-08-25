@@ -114,9 +114,10 @@ For more information on the project and to make contributions, visit the [GitHub
 {{ end }}
 
 #### External Framework Relations
-{{ if  .Guidelines }}
-  {{ range .Guidelines }}
-  - **{{ .ReferenceId | addLinks }}**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry.ReferenceId }}{{ end }}
+{{- $relations := relationsForControl .Id }}
+{{ if $relations }}
+  {{ range $relations }}
+  - **{{ .Framework | addLinks }}**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry }}{{ end }}
   {{- end }}
 {{ end }}
 
