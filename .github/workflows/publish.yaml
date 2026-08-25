@@ -18,14 +18,19 @@ name: Publish to grc.store
 #
 # Notes:
 #   - grcli is distributed as an OCI artifact (not a runnable container),
-#     so we fetch it with oras instead of docker pull.
+#     so we fetch it with oras instead of docker pull. Pin a released tag,
+#     never :latest — v0.5.1 shipped a broken signing path and anything
+#     tracking :latest inherited it. Note the upstream org move: v0.6.0+
+#     live at ghcr.io/gemaraproj/grcli, tags <= v0.5.1 at revanite-io.
 #   - The OCI tag for each artifact is the release tag. We stamp it onto
 #     each artifact's metadata.version at publish time so grcli's default
 #     tag resolution picks it up; the committed YAML files are untouched.
-#   - Signing: grcli signs keyless via cosign automatically in GitHub Actions
-#     (it reads the GHA OIDC token; needs cosign on PATH + id-token: write).
-#     Real publishes are signed; dry-runs pass --no-sign since there is no
-#     registry to push a signature to.
+#   - Signing: as of grcli v0.6.0 keyless signing runs in-process via
+#     sigstore-go — grcli mints the Actions OIDC token itself, gets a Fulcio
+#     certificate, logs to Rekor and attaches the signature as an OCI
+#     referrer. No cosign install step is needed (cosign is required only for
+#     the --cosign-key path, which we do not use). Real publishes are signed;
+#     dry-runs pass --no-sign since there is no registry to push a signature to.
 
 on:
   release:
@@ -50,8 +55,6 @@ jobs:
   publish:
     name: Publish baseline catalog and mappings
     runs-on: ubuntu-latest
-    env:
-      GRCLI_REF: ghcr.io/revanite-io/grcli:latest
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -72,11 +75,6 @@ jobs:
 
       - name: Setup oras
         uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
-
-      - name: Setup cosign
-        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
-        with:
-          cosign-release: v3.1.1
 
       - name: Build baseline-compiler
         run: go build -C cmd/ -o ../baseline-compiler
@@ -102,7 +100,7 @@ jobs:
           mkdir -p "$RUNNER_TEMP/bin"
           echo "$GHCR_TOKEN" | oras login ghcr.io -u "${{ github.actor }}" --password-stdin
           cd "$RUNNER_TEMP/bin"
-          oras pull --platform linux/amd64 "$GRCLI_REF"
+          oras pull --platform linux/amd64 ghcr.io/gemaraproj/grcli:v0.6.0
           chmod +x grcli
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
           ./grcli --version
@@ -138,8 +136,8 @@ jobs:
           echo "Publishing all artifacts as metadata.version=$RELEASE_VERSION"
 
           # Real publishes are signed keyless (no flag needed — grcli detects
-          # GitHub Actions + the id-token and drives cosign). Dry-runs skip the
-          # network, so there is nothing to sign or push a signature to.
+          # GitHub Actions + the id-token and signs in-process). Dry-runs skip
+          # the network, so there is nothing to sign or push a signature to.
           publish_args=(--url "$HUB_URL" --license Apache-2.0)
           if [ "${DRY_RUN:-false}" = "true" ]; then
             publish_args+=(--dry-run --no-sign)
