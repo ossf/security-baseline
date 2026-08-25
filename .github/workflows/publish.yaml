@@ -3,34 +3,11 @@
 ---
 name: Publish to grc.store
 
-# Publishes the compiled OSPS Baseline ControlCatalog plus every MappingDocument
-# under baseline/mappings/ to the grc.store hub using grcli. Triggered
-# automatically when a GitHub Release is published; also runnable manually
-# (dry_run defaults to true; version can be specified for the run).
-#
-# Auth:
-#   - grcli authenticates to grc.store via OIDC trusted publishing. The
-#     id-token: write permission below lets the runner mint an OIDC token
-#     that grcli exchanges for a hub credential. No static secrets needed —
-#     register this repo as a trusted publisher in the grc.store hub for the
-#     target (openssf) namespace. A 403 at publish means that binding is
-#     missing, not that a secret is needed.
-#
-# Notes:
-#   - grcli is distributed as an OCI artifact (not a runnable container),
-#     so we fetch it with oras instead of docker pull. Pin a released tag,
-#     never :latest — v0.5.1 shipped a broken signing path and anything
-#     tracking :latest inherited it. Note the upstream org move: v0.6.0+
-#     live at ghcr.io/gemaraproj/grcli, tags <= v0.5.1 at revanite-io.
-#   - The OCI tag for each artifact is the release tag. We stamp it onto
-#     each artifact's metadata.version at publish time so grcli's default
-#     tag resolution picks it up; the committed YAML files are untouched.
-#   - Signing: as of grcli v0.6.0 keyless signing runs in-process via
-#     sigstore-go — grcli mints the Actions OIDC token itself, gets a Fulcio
-#     certificate, logs to Rekor and attaches the signature as an OCI
-#     referrer. No cosign install step is needed (cosign is required only for
-#     the --cosign-key path, which we do not use). Real publishes are signed;
-#     dry-runs pass --no-sign since there is no registry to push a signature to.
+# Publishes the compiled ControlCatalog and every baseline/mappings/*.yaml to
+# grc.store. Auth is OIDC trusted publishing: `id-token: write` is the whole
+# setup, no secrets. A 403 means this repo is not yet registered as a trusted
+# publisher for the openssf namespace.
+# https://github.com/gemaraproj/grcli#publishing-from-github-actions
 
 on:
   release:
@@ -38,23 +15,35 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry-run: build OCI layouts locally without pushing to the registry"
+        description: "Build OCI layouts locally instead of pushing"
         type: boolean
         default: true
       version:
-        description: "Catalog version — the metadata.version stamped onto every artifact, and the OCI tag (e.g. v0.1.0). Defaults to a dev tag derived from the commit SHA if left blank."
+        description: "Version stamped on every artifact, and the OCI tag. Defaults to a dev tag from the commit SHA."
         type: string
-        default: ""
 
 permissions:
   contents: read
-  packages: read
   id-token: write
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   publish:
     name: Publish baseline catalog and mappings
     runs-on: ubuntu-latest
+    # Keyed on the target version, not the workflow: two runs publishing the
+    # same version must serialize, but two different releases must not queue
+    # against each other (a queued run gets cancelled when a third arrives).
+    concurrency:
+      group: publish-grc-store-${{ github.event.release.tag_name || inputs.version || github.sha }}
+      cancel-in-progress: false
+    env:
+      RELEASE_VERSION: ${{ github.event.release.tag_name || inputs.version || format('v0.0.0-dev-{0}', github.sha) }}
+      HUB_URL: https://hub.grc.store
+      DRY_RUN_FLAGS: ${{ inputs.dry_run && '--dry-run --no-sign' || '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -76,95 +65,42 @@ jobs:
       - name: Setup oras
         uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
 
-      - name: Build baseline-compiler
-        run: go build -C cmd/ -o ../baseline-compiler
+      - name: Compile catalog to a single Gemara YAML
+        run: |
+          go build -C cmd/ -o ../baseline-compiler
+          ./baseline-compiler gemara -b baseline -o baseline.gemara.yaml
 
-      - name: Compile catalog to single Gemara YAML
-        run: ./baseline-compiler gemara -b baseline -o baseline.gemara.yaml
-
+      # One `cue vet` per mapping: vetting them together would unify all 14 into
+      # a single instance instead of checking each on its own.
       - name: Validate catalog and mappings against CUE schema
         run: |
-          set -euo pipefail
           cd schema
           cue vet -d '#OSPSBaseline' . ../baseline.gemara.yaml
           for f in ../baseline/mappings/*.yaml; do
-            echo "vetting $f"
             cue vet -d '#OSPSMapping' . "$f"
           done
 
-      - name: Install grcli from OCI artifact
-        env:
-          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install grcli
         run: |
-          set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/bin"
-          echo "$GHCR_TOKEN" | oras login ghcr.io -u "${{ github.actor }}" --password-stdin
-          cd "$RUNNER_TEMP/bin"
-          oras pull --platform linux/amd64 ghcr.io/gemaraproj/grcli:v0.6.0
-          chmod +x grcli
-          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
-          ./grcli --version
+          oras pull ghcr.io/gemaraproj/grcli@sha256:9e668b4a5a6bc93c48190f2495911e20276bbc3dff9d9e0b0de35a859b69ca5f --platform linux/amd64
+          sudo install grcli /usr/local/bin/grcli
 
+      # One grcli invocation per artifact: positional args to `publish` describe
+      # ONE artifact, they are not a batch. metadata.version is stamped onto a
+      # staged copy (grcli uses it as the OCI tag); committed YAML is untouched.
+      # Each artifact gets its own --output so dry-run layouts don't collide on
+      # the shared tag.
       - name: Publish catalog and mapping documents to grc.store
-        env:
-          DRY_RUN: ${{ github.event.inputs.dry_run }}
-          VERSION_INPUT: ${{ github.event.inputs.version }}
-          EVENT_NAME: ${{ github.event_name }}
-          RELEASE_TAG: ${{ github.event.release.tag_name }}
         run: |
-          set -euo pipefail
-
-          HUB_URL="https://hub.grc.store"
-          echo "Target hub: $HUB_URL"
-
-          # Every artifact in a single release is stamped with the same
-          # metadata.version (and therefore the same OCI tag). Resolution order:
-          # the release tag on release events; otherwise the version dispatch
-          # input; otherwise a deterministic dev tag derived from the commit SHA.
-          if [ "$EVENT_NAME" = "release" ]; then
-            RELEASE_VERSION="$RELEASE_TAG"
-          elif [ -n "${VERSION_INPUT:-}" ]; then
-            RELEASE_VERSION="$VERSION_INPUT"
-          else
-            RELEASE_VERSION="v0.0.0-dev-${GITHUB_SHA:0:7}"
-          fi
-          if [ -z "$RELEASE_VERSION" ]; then
-            echo "::error::Could not determine release version"
-            exit 1
-          fi
-          export RELEASE_VERSION
-          echo "Publishing all artifacts as metadata.version=$RELEASE_VERSION"
-
-          # Real publishes are signed keyless (no flag needed — grcli detects
-          # GitHub Actions + the id-token and signs in-process). Dry-runs skip
-          # the network, so there is nothing to sign or push a signature to.
-          publish_args=(--url "$HUB_URL" --license Apache-2.0)
-          if [ "${DRY_RUN:-false}" = "true" ]; then
-            publish_args+=(--dry-run --no-sign)
-            echo "Running in DRY-RUN mode (no network; OCI layouts under grcli-out/, unsigned)"
-          fi
-
-          staged="$RUNNER_TEMP/staged"
-          mkdir -p "$staged"
-
-          publish() {
-            local src="$1"
-            local dst="$staged/$(basename "$src")"
-            # Stamp metadata.version with the resolved release version so grcli
-            # picks it up as the OCI tag (we never modify the committed source).
-            yq '.metadata.version = strenv(RELEASE_VERSION)' "$src" > "$dst"
-            echo "::group::Publishing $src"
-            grcli publish "$dst" "${publish_args[@]}"
-            echo "::endgroup::"
-          }
-
-          publish baseline.gemara.yaml
-          for f in baseline/mappings/*.yaml; do
-            publish "$f"
+          for f in baseline.gemara.yaml baseline/mappings/*.yaml; do
+            name=$(basename "$f" .yaml)
+            yq '.metadata.version = strenv(RELEASE_VERSION)' "$f" > "$RUNNER_TEMP/$name.yaml"
+            grcli publish "$RUNNER_TEMP/$name.yaml" --url "$HUB_URL" --license Apache-2.0 \
+              --output "grcli-out/$name" $DRY_RUN_FLAGS
           done
 
       - name: Upload dry-run OCI layouts
-        if: ${{ github.event.inputs.dry_run == 'true' }}
+        if: ${{ inputs.dry_run }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: grcli-dry-run-layouts
