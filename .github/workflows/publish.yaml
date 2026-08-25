@@ -4,12 +4,9 @@
 name: Publish to grc.store
 
 # Publishes the compiled OSPS Baseline ControlCatalog plus every MappingDocument
-# under baseline/mappings/ to the grc.store PREVIEW hub using grcli. Triggered
+# under baseline/mappings/ to the grc.store hub using grcli. Triggered
 # automatically when a GitHub Release is published; also runnable manually
 # (dry_run defaults to true; version can be specified for the run).
-#
-# TEMPORARY: this targets preview.grc.store while we validate the pipeline.
-# Flip HUB_URL to https://hub.grc.store once everything is locked in.
 #
 # Auth:
 #   - grcli authenticates to grc.store via OIDC trusted publishing. The
@@ -57,12 +54,12 @@ jobs:
       GRCLI_REF: ghcr.io/revanite-io/grcli:latest
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup Go
-        uses: actions/setup-go@4a3601121dd01d1626a1e23e37211e3254c1c06c # v6.4.0
+        uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6.5.0
         with:
           go-version-file: cmd/go.mod
           check-latest: true
@@ -76,10 +73,8 @@ jobs:
       - name: Setup oras
         uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
 
-      # Pinning note: grcli's own release CI uses this same tag and signs
-      # keyless with --new-bundle-format successfully. SHA-pin before merge to
-      # match this repo's action-pinning convention (dependabot will maintain it).
-      - uses: sigstore/cosign-installer@v4.1.2
+      - name: Setup cosign
+        uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
         with:
           cosign-release: v3.1.1
 
@@ -121,9 +116,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          # TEMPORARY: always target the preview hub while we validate the
-          # pipeline. Change this to https://hub.grc.store once locked in.
-          HUB_URL="https://hub.preview.grc.store"
+          HUB_URL="https://hub.grc.store"
           echo "Target hub: $HUB_URL"
 
           # Every artifact in a single release is stamped with the same
