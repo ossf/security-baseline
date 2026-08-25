@@ -20,30 +20,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Setup Go
-        uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6.5.0
-        with:
-          go-version-file: cmd/go.mod
-          check-latest: true
-          cache: true
-
-      - name: Setup CUE
-        uses: cue-lang/setup-cue@a93fa358375740cd8b0078f76355512b9208acb1 # v1.0.1
-        with:
-          version: latest
-
-      - name: Generate Gemara output
-        run: |
-          go build -C cmd/  -o ../baseline-compiler
-          ./baseline-compiler gemara -b baseline > baseline.gemara.yaml
-
-      - name: Validate catalog against CUE schema
-        run: cd schema && cue vet -d '#OSPSBaseline' . ../baseline.gemara.yaml
-
-      - name: Validate mapping documents against CUE schema
-        run: |
-          cd schema
-          for f in ../baseline/mappings/*.yaml; do
-            echo "vetting $f"
-            cue vet -d '#OSPSMapping' . "$f"
-          done
+      # Shared with publish.yaml — the CUE gate must not drift between the
+      # workflow that checks a PR and the one that publishes.
+      - name: Compile catalog and vet it against the CUE schema
+        uses: ./.github/actions/compile-and-vet
