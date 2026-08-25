@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: Copyright 2026 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+name: Compile and vet the baseline
+description: >
+  Builds baseline-compiler, assembles the baseline into a single Gemara
+  ControlCatalog at baseline.gemara.yaml, and vets that catalog plus every
+  mapping document against the CUE schema. Requires the repository to already
+  be checked out.
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Go
+      uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6.5.0
+      with:
+        go-version-file: cmd/go.mod
+        check-latest: true
+        cache: true
+
+    - name: Setup CUE
+      uses: cue-lang/setup-cue@a93fa358375740cd8b0078f76355512b9208acb1 # v1.0.1
+      with:
+        version: latest
+
+    - name: Compile catalog to a single Gemara YAML
+      shell: bash
+      run: |
+        go build -C cmd/ -o ../baseline-compiler
+        ./baseline-compiler gemara -b baseline -o baseline.gemara.yaml
+
+    # One `cue vet` per mapping: vetting them together would unify all 14 into
+    # a single instance instead of checking each on its own.
+    - name: Validate catalog and mappings against CUE schema
+      shell: bash
+      run: |
+        cd schema
+        cue vet -d '#OSPSBaseline' . ../baseline.gemara.yaml
+        for f in ../baseline/mappings/*.yaml; do
+          cue vet -d '#OSPSMapping' . "$f"
+        done

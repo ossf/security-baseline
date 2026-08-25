@@ -1,0 +1,87 @@
+# SPDX-FileCopyrightText: Copyright 2026 The OSPS Baseline Authors
+# SPDX-License-Identifier: Apache-2.0
+---
+name: Publish to grc.store
+
+# Publishes the compiled ControlCatalog and every baseline/mappings/*.yaml to
+# grc.store. Auth is OIDC trusted publishing: `id-token: write` is the whole
+# setup, no secrets. A 403 means this repo is not yet registered as a trusted
+# publisher for the openssf namespace.
+# https://github.com/gemaraproj/grcli#publishing-from-github-actions
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build OCI layouts locally instead of pushing"
+        type: boolean
+        default: true
+      version:
+        description: "Version stamped on every artifact, and the OCI tag. Defaults to a dev tag from the commit SHA."
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  publish:
+    name: Publish baseline catalog and mappings
+    runs-on: ubuntu-latest
+    # Keyed on the target version, not the workflow: two runs publishing the
+    # same version must serialize, but two different releases must not queue
+    # against each other (a queued run gets cancelled when a third arrives).
+    concurrency:
+      group: publish-grc-store-${{ github.event.release.tag_name || inputs.version || github.sha }}
+      cancel-in-progress: false
+    env:
+      RELEASE_VERSION: ${{ github.event.release.tag_name || inputs.version || format('v0.0.0-dev-{0}', github.sha) }}
+      HUB_URL: https://hub.grc.store
+      DRY_RUN_FLAGS: ${{ inputs.dry_run && '--dry-run --no-sign' || '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Shared with cue-validate.yaml — the CUE gate must not drift between the
+      # workflow that checks a PR and the one that publishes.
+      - name: Compile catalog and vet it against the CUE schema
+        uses: ./.github/actions/compile-and-vet
+
+      - name: Setup oras
+        uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
+
+      - name: Install grcli
+        run: |
+          oras pull ghcr.io/gemaraproj/grcli@sha256:9e668b4a5a6bc93c48190f2495911e20276bbc3dff9d9e0b0de35a859b69ca5f --platform linux/amd64
+          sudo install grcli /usr/local/bin/grcli
+
+      # One grcli invocation per artifact: positional args to `publish` describe
+      # ONE artifact, they are not a batch. metadata.version is stamped onto a
+      # staged copy (grcli uses it as the OCI tag); committed YAML is untouched.
+      # Each artifact gets its own --output so dry-run layouts don't collide on
+      # the shared tag.
+      - name: Publish catalog and mapping documents to grc.store
+        run: |
+          for f in baseline.gemara.yaml baseline/mappings/*.yaml; do
+            name=$(basename "$f" .yaml)
+            yq '.metadata.version = strenv(RELEASE_VERSION)' "$f" > "$RUNNER_TEMP/$name.yaml"
+            grcli publish "$RUNNER_TEMP/$name.yaml" --url "$HUB_URL" --license Apache-2.0 \
+              --output "grcli-out/$name" $DRY_RUN_FLAGS
+          done
+
+      - name: Upload dry-run OCI layouts
+        if: ${{ inputs.dry_run }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: grcli-dry-run-layouts
+          path: grcli-out/
+          retention-days: 7
+          if-no-files-found: warn

@@ -49,6 +49,8 @@ body:
         - label: |
             After the pull request is merged, git tag the commit
         - label: |
+            Publish a GitHub Release from that tag — this is what triggers the grc.store publish workflow; a bare git tag will not fire it
+        - label: |
             After the pull request is merged, send an email to the [mailing list](https://lists.openssf.org/g/openssf-sig-security-baseline)
         - label: |
             After the pull request is merged, notify OpenSSF's marketing team that we have a new release so that they can share it with the world
