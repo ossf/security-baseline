@@ -4,6 +4,7 @@ docs/_site
 
 # generated output from go run ./... compile
 docs/versions/devel-checklist.md
+docs/versions/devel-crosswalk.md
 
 # go build artifacts
 cmd/security-baseline
