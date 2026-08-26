@@ -196,3 +196,17 @@ func TestRelationsForControl(t *testing.T) {
 		t.Errorf("empty entry-id was not skipped: %v", cis.Entries)
 	}
 }
+
+func TestArtifactURL(t *testing.T) {
+	g := NewGenerator()
+	if got := g.artifactURL(""); got != "" {
+		t.Errorf("empty artifact id must not link to the bare namespace, got %q", got)
+	}
+	if got := g.artifactURL("osps-baseline"); got != "https://grc.store/openssf/osps-baseline" {
+		t.Errorf("unexpected unpinned URL: %q", got)
+	}
+	g.ArtifactVersion = "v1"
+	if got := g.artifactURL("osps-baseline"); got != "https://grc.store/openssf/osps-baseline/versions/v1" {
+		t.Errorf("unexpected pinned URL: %q", got)
+	}
+}

@@ -20,8 +20,12 @@ import (
 const grcStoreNamespace = "https://grc.store/openssf"
 
 // artifactURL returns the grc.store page for a published artifact id, pinned
-// to the generator's artifact version when one is set.
+// to the generator's artifact version when one is set. An empty id yields an
+// empty URL rather than a link to the bare namespace.
 func (g *Generator) artifactURL(id string) string {
+	if id == "" {
+		return ""
+	}
 	if g.ArtifactVersion != "" {
 		return fmt.Sprintf("%s/%s/versions/%s", grcStoreNamespace, id, g.ArtifactVersion)
 	}
