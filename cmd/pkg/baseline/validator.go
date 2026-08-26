@@ -84,6 +84,11 @@ func (v *Validator) Check(b *types.Baseline) error {
 		}
 	}
 
+	referenceIDs := make([]string, 0, len(b.Catalog.Metadata.MappingReferences))
+	for _, ref := range b.Catalog.Metadata.MappingReferences {
+		referenceIDs = append(referenceIDs, ref.Id)
+	}
+
 	// The mapping documents live outside the catalog, so nothing but this check
 	// keeps a mapping's source pointing at a control that actually exists.
 	for i := range b.Mappings {
@@ -93,6 +98,20 @@ func (v *Validator) Check(b *types.Baseline) error {
 				errs = append(errs, fmt.Errorf("mapping %s targets unknown control %q", m.Id, m.Source))
 			}
 		}
+		// The rendered document links each framework relation to the row for
+		// this ID in the External Frameworks table, so an ID that is not
+		// declared in the catalog metadata renders as a dead anchor.
+		if fw := doc.TargetReference.ReferenceId; fw != "" && !slices.Contains(referenceIDs, fw) {
+			errs = append(errs, fmt.Errorf("mapping document %q targets reference %q, which is not declared in metadata mapping-references", doc.Metadata.Id, fw))
+		}
+	}
+
+	lexiconTerms := make([]string, 0, len(b.Lexicon))
+	for _, entry := range b.Lexicon {
+		if slices.Contains(lexiconTerms, entry.Term) {
+			errs = append(errs, fmt.Errorf("duplicate lexicon term %q", entry.Term))
+		}
+		lexiconTerms = append(lexiconTerms, entry.Term)
 	}
 
 	return errors.Join(errs...)
