@@ -128,12 +128,15 @@ For more information on the project and to make contributions, visit the [GitHub
 
 ## External Frameworks
 
-Controls within this document may relate to the following external frameworks:
+Controls within this document may relate to the following external frameworks.
+Where a machine-readable [Gemara](https://gemara.openssf.org) mapping document
+exists, it is published to [grc.store](https://grc.store/openssf) with each
+Baseline release and linked below.
 
-| ID | Title | Version | Description |
-|----|-------|---------|-------------|
+| ID | Title | Version | Description | Mapping Document |
+|----|-------|---------|-------------|------------------|
 {{ range .Catalog.Metadata.MappingReferences -}}
-| <a name="fw-{{ .Id }}"></a>{{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} |
+| <a name="fw-{{ .Id }}"></a>{{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} | {{ with mappingDocURL .Id }}[grc.store]({{ . }}){{ end }} |
 {{ end }}
 
 ---
