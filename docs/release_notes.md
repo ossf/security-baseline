@@ -31,7 +31,9 @@
 -->
 
 <!--
-## Next release, commented out until we have a date and are about ready to release
+## Uncomment at release; drafted with the 2026-08-26 release candidate.
+
+## 2026-08-26
 
 ### New controls
 
@@ -44,7 +46,7 @@
 
 ### Modified controls
 
-(none)
+* [OSPS-LE-03.01](versions/2026-08-26#osps-le-0301) now also accepts a `LICENSES/` directory as a license location
 
 ### Removed controls
 
@@ -55,6 +57,10 @@
 (none)
 
 ### Other changes
+
+* The control mappings are now maintained as machine-readable [Gemara](https://gemara.openssf.org) mapping documents, published to [grc.store](https://grc.store/openssf) with each release alongside the compiled control catalog
+* Each version now includes a generated External Framework Crosswalk page (external requirement → OSPS controls), and the External Frameworks table links each framework's mapping document
+* Baseline content and tooling migrated to the Gemara v1 schema
 
 -->
 

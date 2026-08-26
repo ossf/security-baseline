@@ -20,7 +20,8 @@ Only the version labeled as "current" should be used for new compliance efforts.
 * Previous versions:
     * [v2025.10.10](versions/2025-10-10) (<a href="versions/2025-10-10-checklist.md">checklist</a>) ([release notes](release_notes.md#2025-10-10))
     * [v2025.02.25](versions/2025-02-25) (<a href="versions/2025-02-25-checklist.md">checklist</a>)
-* [In-development version](versions/devel) (<a href="versions/devel-checklist.md">checklist</a>)
+* Release candidate: [v2026.08.26-rc](versions/2026-08-26-rc) (<a href="versions/2026-08-26-rc-checklist.md">checklist</a>) (<a href="versions/2026-08-26-rc-crosswalk.md">crosswalk</a>)
+* [In-development version](versions/devel) (<a href="versions/devel-checklist.md">checklist</a>) (<a href="versions/devel-crosswalk.md">crosswalk</a>)
 
 Versions are managed according to the [Baseline maintenance process](maintenance).
 
