@@ -1,6 +1,5 @@
 CCCS
 CISA
-CSAG
 crosswalked
 devel
 DSIT
@@ -42,6 +41,5 @@ Subprojects
 triaging
 unreviewable
 UKSSCOP
-USCTM
 Updegrove
 webfonts

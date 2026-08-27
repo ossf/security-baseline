@@ -84,14 +84,64 @@ func (v *Validator) Check(b *types.Baseline) error {
 		}
 	}
 
-	// The mapping documents live outside the catalog, so nothing but this check
-	// keeps a mapping's source pointing at a control that actually exists.
+	referenceIDs := make([]string, 0, len(b.Catalog.Metadata.MappingReferences))
+	for _, ref := range b.Catalog.Metadata.MappingReferences {
+		referenceIDs = append(referenceIDs, ref.Id)
+	}
+
+	targetedIDs := make([]string, 0, len(b.Mappings))
 	for i := range b.Mappings {
 		doc := &b.Mappings[i]
+		// The mapping documents live outside the catalog, so nothing but this
+		// check keeps a mapping's source pointing at a control that actually
+		// exists.
 		for _, m := range doc.Mappings {
 			if !slices.Contains(entryIDs, m.Source) {
 				errs = append(errs, fmt.Errorf("mapping %s targets unknown control %q", m.Id, m.Source))
 			}
+		}
+		// The rendered document links each framework relation to the row for
+		// this ID in the External Frameworks table, so an ID that is not
+		// declared in the catalog metadata renders as a dead anchor. The empty
+		// ID is deliberately not exempt: the renderer skips it in silence,
+		// dropping the document from both the relations and the crosswalk
+		// without failing anything.
+		fw := doc.TargetReference.ReferenceId
+		if !slices.Contains(referenceIDs, fw) {
+			errs = append(errs, fmt.Errorf("mapping document %q targets reference %q, which is not declared in metadata mapping-references", doc.Metadata.Id, fw))
+		}
+		targetedIDs = append(targetedIDs, fw)
+	}
+
+	// The reverse of the check above: a reference declared in metadata with no
+	// mapping document behind it renders a table row nothing can link to.
+	for _, id := range referenceIDs {
+		if !slices.Contains(targetedIDs, id) {
+			errs = append(errs, fmt.Errorf("mapping-reference %q is declared in metadata but no mapping document targets it", id))
+		}
+	}
+
+	// addLinks resolves a name to the first lexicon entry declaring it, and
+	// asLink folds a term into its anchor, so two names differing only by case
+	// silently share one destination. Synonyms take part in that resolution
+	// too, so comparing terms alone misses the collisions that actually
+	// mislink. A synonym repeating its own entry's term is harmless -- addLinks
+	// skips already-wrapped text -- so only cross-entry collisions are errors.
+	declaredBy := make(map[string]int, len(b.Lexicon))
+	for i, entry := range b.Lexicon {
+		names := append([]string{entry.Term}, entry.Synonyms...)
+		for _, name := range names {
+			key := strings.ToLower(strings.TrimSpace(name))
+			if key == "" {
+				continue
+			}
+			// Ownership is tracked by entry index, not by term: two entries
+			// sharing a term must still collide with each other.
+			if owner, ok := declaredBy[key]; ok && owner != i {
+				errs = append(errs, fmt.Errorf("lexicon name %q in entry %q collides with entry %q", name, entry.Term, b.Lexicon[owner].Term))
+				continue
+			}
+			declaredBy[key] = i
 		}
 	}
 

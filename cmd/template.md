@@ -117,7 +117,7 @@ For more information on the project and to make contributions, visit the [GitHub
 {{- $relations := relationsForControl .Id }}
 {{ if $relations }}
   {{ range $relations }}
-  - **{{ .Framework | addLinks }}**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry }}{{ end }}
+  - **[{{ .Framework }}](#fw-{{ .Framework }})**: {{ range $index, $entry := .Entries }}{{ if $index }}, {{ end }}{{ $entry }}{{ end }}
   {{- end }}
 {{ end }}
 
@@ -133,7 +133,7 @@ Controls within this document may relate to the following external frameworks:
 | ID | Title | Version | Description |
 |----|-------|---------|-------------|
 {{ range .Catalog.Metadata.MappingReferences -}}
-| {{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} |
+| <a name="fw-{{ .Id }}"></a>{{ .Id }} | [{{ .Title }}]({{ .Url }}) | {{ .Version }} | {{ .Description }} |
 {{ end }}
 
 ---
