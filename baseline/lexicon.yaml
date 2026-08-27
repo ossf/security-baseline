@@ -310,7 +310,6 @@
     An OpenSSF project that sets guidelines for securing software supply chain infrastructure and artifact integrity. 
   synonyms: 
     - SLSA 
-    - Supply-chain Levels for Software Artifacts
   references: 
     - https://openssf.org/projects/slsa/
     - https://slsa.dev/
@@ -368,7 +367,5 @@
     maintainers, security teams, or the public,
     as well as tracking the resolution of these
     vulnerabilities.
-  synonyms:
-    - Coordinated Vulnerability Disclosure
   references:
     - https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability
