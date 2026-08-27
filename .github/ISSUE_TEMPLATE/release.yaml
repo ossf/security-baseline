@@ -20,7 +20,7 @@ body:
         - label: |
             Ensure all pull requests targeted for this release are merged
         - label: |
-            Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md --checklist-output ../docs/versions/2025-02-04-checklist.md` (replace `2025-02-04` with the version name)
+            Generate a static version of the baseline: `cd cmd && go run . compile --output ../docs/versions/2025-02-04.md --checklist-output ../docs/versions/2025-02-04-checklist.md --crosswalk-output ../docs/versions/2025-02-04-crosswalk.md --artifact-version v2025.02.04` (replace `2025-02-04` with the version name; `--artifact-version` pins the mapping-document links to the release tag)
         - label: |
             In the `docs/versions/<PREVIOUS_VERSION>.md` file, remove the nav-title header block
         - label: |
@@ -37,7 +37,7 @@ body:
         - label: |
             In the `docs/_config.yml` file, update the listing in the `nav_pages` group to point to the new release
         - label: |
-            In the `docs/versions/<VERSION>-checklist.md` file, change the header to have the version number of the new version
+            In the `docs/versions/<VERSION>-checklist.md` and `docs/versions/<VERSION>-crosswalk.md` files, change the headers to have the version number of the new version
         - label: |
             Move the link to the "current" version in `docs/index.md` to the "previous versions" list
         - label: |
@@ -45,11 +45,11 @@ body:
         - label: |
             Make sure the `docs/versions/release_notes.md` file contains an accurate list of changes and is not commented out.
         - label: |
-            Open a pull request with the above changes
+            Open a pull request with the above changes (reviewers can preview the site with `make dev`)
         - label: |
             After the pull request is merged, git tag the commit
         - label: |
-            Publish a GitHub Release from that tag — this is what triggers the grc.store publish workflow; a bare git tag will not fire it
+            Publish a GitHub Release from that tag — this is what triggers the grc.store publish workflow; a bare git tag will not fire it. The site deploys as soon as the PR merges, and the pinned grc.store links on the new version page will 404 until the workflow runs, so cut the Release promptly
         - label: |
             After the pull request is merged, send an email to the [mailing list](https://lists.openssf.org/g/openssf-sig-security-baseline)
         - label: |
