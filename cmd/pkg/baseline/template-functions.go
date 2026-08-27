@@ -96,8 +96,11 @@ func asLinkTemplateFunction(text string) string {
 		switch {
 		case unicode.IsLetter(r) || unicode.IsNumber(r):
 			return unicode.ToLower(r)
-		case r == '.':
-			return -1 // Existing versions drop ".", rather than mapping to "-"
+		case r == '.' || r == '/':
+			// kramdown deletes these when deriving a heading id ("CI/CD
+			// Pipeline" becomes #cicd-pipeline), so mapping them to "-"
+			// renders a dead anchor.
+			return -1
 		default:
 			return '-'
 		}

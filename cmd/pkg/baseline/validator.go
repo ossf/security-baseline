@@ -135,6 +135,15 @@ func (v *Validator) Check(b *types.Baseline) error {
 			if key == "" {
 				continue
 			}
+			// Frameworks belong in the External Frameworks table, not the
+			// glossary: a lexicon name shadowing a mapping-reference id
+			// renders the framework twice and lets addLinks capture its
+			// mentions in requirement text.
+			for _, ref := range referenceIDs {
+				if strings.EqualFold(ref, name) {
+					errs = append(errs, fmt.Errorf("lexicon name %q in entry %q shadows mapping-reference %q", name, entry.Term, ref))
+				}
+			}
 			// Ownership is tracked by entry index, not by term: two entries
 			// sharing a term must still collide with each other.
 			if owner, ok := declaredBy[key]; ok && owner != i {
