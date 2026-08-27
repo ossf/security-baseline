@@ -1,4 +1,4 @@
-# OSPS Baseline checklist, version: 2026.08.26-rc
+# OSPS Baseline checklist, version: 2026.08.28
 
 ## Level 1
 

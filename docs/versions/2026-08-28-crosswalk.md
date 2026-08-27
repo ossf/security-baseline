@@ -1,7 +1,6 @@
-# External Framework Crosswalk - v2026.08.26-rc
+# External Framework Crosswalk
 
-{: .warning}
-This is a release candidate, not intended for production use.
+Version: 2026.08.28
 
 This crosswalk inverts the OSPS Baseline mapping documents: for each external
 framework requirement, it lists the Baseline controls that the maintainers
@@ -17,7 +16,7 @@ Every section below is generated from a machine-readable
 
 ## NIST Special Publication 800-161 - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations
 
-Version r1-upd1 · [Framework](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-800-161)
+Version r1-upd1 · [Framework](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-upd1.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-800-161/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -88,7 +87,7 @@ Version r1-upd1 · [Framework](https://nvlpubs.nist.gov/nistpubs/SpecialPublicat
 
 ## OpenSSF Best Practices Badge
 
-Version 2024 · [Framework](https://github.com/coreinfrastructure/best-practices-badge/blob/main/criteria/criteria.yml) · [Mapping document](https://grc.store/openssf/osps-baseline-to-bpb)
+Version 2024 · [Framework](https://github.com/coreinfrastructure/best-practices-badge/blob/main/criteria/criteria.yml) · [Mapping document](https://grc.store/openssf/osps-baseline-to-bpb/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -151,7 +150,7 @@ Version 2024 · [Framework](https://github.com/coreinfrastructure/best-practices
 
 ## BSI TR-03185-2 Secure Software Lifecycle for Open Source Software
 
-Version v1.1.0 · [Framework](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03185/BSI-TR-03185-2.pdf?__blob=publicationFile&v=5) · [Mapping document](https://grc.store/openssf/osps-baseline-to-bsi-tr-03185-2)
+Version v1.1.0 · [Framework](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03185/BSI-TR-03185-2.pdf?__blob=publicationFile&v=5) · [Mapping document](https://grc.store/openssf/osps-baseline-to-bsi-tr-03185-2/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -176,7 +175,7 @@ Version v1.1.0 · [Framework](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BS
 
 ## Cyber Resilience Act
 
-Version 20.11.2024 · [Framework](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#tit_1) · [Mapping document](https://grc.store/openssf/osps-baseline-to-cra)
+Version 20.11.2024 · [Framework](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#tit_1) · [Mapping document](https://grc.store/openssf/osps-baseline-to-cra/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -203,7 +202,7 @@ Version 20.11.2024 · [Framework](https://eur-lex.europa.eu/legal-content/EN/TXT
 
 ## NIST Cybersecurity Framework
 
-Version 2.0 · [Framework](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-csf)
+Version 2.0 · [Framework](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-csf/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -228,7 +227,7 @@ Version 2.0 · [Framework](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.p
 
 ## ISO/IEC 18974
 
-Version 1.0 - 2023-12 · [Framework](https://openchainproject.org/security-assurance) · [Mapping document](https://grc.store/openssf/osps-baseline-to-iso-18974)
+Version 1.0 - 2023-12 · [Framework](https://openchainproject.org/security-assurance) · [Mapping document](https://grc.store/openssf/osps-baseline-to-iso-18974/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -245,7 +244,7 @@ Version 1.0 - 2023-12 · [Framework](https://openchainproject.org/security-assur
 
 ## Open Cybersecurity Reference Architecture
 
-Version 2024 · [Framework](https://github.com/OWASP/OpenCRE) · [Mapping document](https://grc.store/openssf/osps-baseline-to-opencre)
+Version 2024 · [Framework](https://github.com/OWASP/OpenCRE) · [Mapping document](https://grc.store/openssf/osps-baseline-to-opencre/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -288,7 +287,7 @@ Version 2024 · [Framework](https://github.com/OWASP/OpenCRE) · [Mapping docume
 
 ## Payment Card Industry Data Security Standard
 
-Version 4.0.1 · [Framework](https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-pcidss)
+Version 4.0.1 · [Framework](https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Standard/PCI-DSS-v4_0_1.pdf) · [Mapping document](https://grc.store/openssf/osps-baseline-to-pcidss/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -350,7 +349,7 @@ Version 4.0.1 · [Framework](https://docs-prv.pcisecuritystandards.org/PCI%20DSS
 
 ## Proactive Software Supply Chain Risk Management Framework
 
-Version 1.0 · [Framework](https://arxiv.org/pdf/2404.12300) · [Mapping document](https://grc.store/openssf/osps-baseline-to-psscrm)
+Version 1.0 · [Framework](https://arxiv.org/pdf/2404.12300) · [Mapping document](https://grc.store/openssf/osps-baseline-to-psscrm/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -411,7 +410,7 @@ Version 1.0 · [Framework](https://arxiv.org/pdf/2404.12300) · [Mapping documen
 
 ## OWASP Software Assurance Maturity Model
 
-Version 2.0 · [Framework](https://owaspsamm.org/model/) · [Mapping document](https://grc.store/openssf/osps-baseline-to-samm)
+Version 2.0 · [Framework](https://owaspsamm.org/model/) · [Mapping document](https://grc.store/openssf/osps-baseline-to-samm/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -447,7 +446,7 @@ Version 2.0 · [Framework](https://owaspsamm.org/model/) · [Mapping document](h
 
 ## OpenSSF Scorecard
 
-Version 5.0 · [Framework](https://github.com/ossf/scorecard) · [Mapping document](https://grc.store/openssf/osps-baseline-to-scorecard)
+Version 5.0 · [Framework](https://github.com/ossf/scorecard) · [Mapping document](https://grc.store/openssf/osps-baseline-to-scorecard/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -465,7 +464,7 @@ Version 5.0 · [Framework](https://github.com/ossf/scorecard) · [Mapping docume
 
 ## Supply-chain Levels for Software Artifacts
 
-Version 1.0 · [Framework](https://github.com/slsa-framework/slsa) · [Mapping document](https://grc.store/openssf/osps-baseline-to-slsa)
+Version 1.0 · [Framework](https://github.com/slsa-framework/slsa) · [Mapping document](https://grc.store/openssf/osps-baseline-to-slsa/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -478,7 +477,7 @@ Version 1.0 · [Framework](https://github.com/slsa-framework/slsa) · [Mapping d
 
 ## Secure Software Development Framework
 
-Version 1.1 · [Framework](https://csrc.nist.gov/pubs/sp/800/218/final) · [Mapping document](https://grc.store/openssf/osps-baseline-to-ssdf)
+Version 1.1 · [Framework](https://csrc.nist.gov/pubs/sp/800/218/final) · [Mapping document](https://grc.store/openssf/osps-baseline-to-ssdf/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
@@ -516,7 +515,7 @@ Version 1.1 · [Framework](https://csrc.nist.gov/pubs/sp/800/218/final) · [Mapp
 
 ## United Kingdom National Cyber Security Centre Software Security Code of Practice
 
-Version 2025-05-07 · [Framework](https://www.ncsc.gov.uk/guidance/software-security-code-of-practice-assurance-principles-claims) · [Mapping document](https://grc.store/openssf/osps-baseline-to-uksscop)
+Version 2025-05-07 · [Framework](https://www.ncsc.gov.uk/guidance/software-security-code-of-practice-assurance-principles-claims) · [Mapping document](https://grc.store/openssf/osps-baseline-to-uksscop/versions/v2026.08.28)
 
 | Requirement | OSPS Baseline Controls |
 |-------------|------------------------|
