@@ -21,7 +21,7 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-01.01
         text: |
-          While active, the project's source code repository MUST be publicly
+          The project's source code repository MUST be publicly
           readable at a static URL.
         applicability:
           - maturity-1
@@ -152,7 +152,7 @@ controls:
     assessment-requirements:
       - id: OSPS-QA-05.01
         text: |
-          While active, the version control system MUST NOT contain generated
+          The version control system MUST NOT contain generated
           executable artifacts.
         applicability:
           - maturity-1
@@ -166,7 +166,7 @@ controls:
           fetched during a specific well-documented pipeline step.
       - id: OSPS-QA-05.02
         text: |
-          While active, the version control system MUST NOT contain unreviewable
+          The version control system MUST NOT contain unreviewable
           binary artifacts.
         applicability:
           - maturity-1

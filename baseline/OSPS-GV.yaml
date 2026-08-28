@@ -19,8 +19,8 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-01.01
         text: |
-          While active, the project documentation MUST include a list of
-          project members with access to sensitive resources.
+         The project documentation MUST include a list of project members with 
+         access to sensitive resources.
         applicability:
           - maturity-2
           - maturity-3
@@ -32,8 +32,8 @@ controls:
           of maintainers, or more complex depending on the project's governance.
       - id: OSPS-GV-01.02
         text: |
-          While active, the project documentation MUST include descriptions of
-          the roles and responsibilities for members of the project.
+         The project documentation MUST include descriptions of the roles and 
+         responsibilities for members of the project
         applicability:
           - maturity-2
           - maturity-3
@@ -53,7 +53,7 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-02.01
         text: |
-          While active, the project MUST have one or more mechanisms for public
+          The project MUST have one or more mechanisms for public
           discussions about proposed changes and usage obstacles.
         applicability:
           - maturity-1
@@ -74,8 +74,8 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-03.01
         text: |
-          While active, the project documentation MUST include an explanation
-          of the contribution process.
+          The project documentation MUST include an explanation of the 
+          contribution process, or clearly state that public contributions are not accepted
         applicability:
           - maturity-1
           - maturity-2
@@ -86,7 +86,7 @@ controls:
           engaging with the project maintainers.
       - id: OSPS-GV-03.02
         text: |
-          While active, the project documentation MUST include a guide for code
+          The project documentation MUST include a guide for code
           contributors that includes requirements for acceptable contributions.
         applicability:
           - maturity-2
@@ -109,7 +109,7 @@ controls:
     assessment-requirements:
       - id: OSPS-GV-04.01
         text: |
-          While active, the project documentation MUST have a policy that code
+          The project documentation MUST have a policy that code
           collaborators are reviewed prior to granting escalated permissions to
           sensitive resources.
         applicability:
