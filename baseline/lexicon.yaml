@@ -305,14 +305,6 @@
     maintained in a separate repository.
     Subprojects may be compiled into the primary
     project or used as standalone components.
-- term: Supply-chain Levels for Software Artifacts
-  definition: |
-    An OpenSSF project that sets guidelines for securing software supply chain infrastructure and artifact integrity. 
-  synonyms: 
-    - SLSA 
-  references: 
-    - https://openssf.org/projects/slsa/
-    - https://slsa.dev/
 - term: Threat Modeling
   definition: |
     Threat modeling is an activity where the project

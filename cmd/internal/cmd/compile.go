@@ -20,6 +20,7 @@ type compileOptions struct {
 	crosswalkOutputPath   string
 	checklistTemplatePath string
 	templatePath          string
+	artifactVersion       string
 	validate              bool
 }
 
@@ -59,6 +60,11 @@ func (o *compileOptions) AddFlags(cmd *cobra.Command) {
 
 	cmd.PersistentFlags().StringVarP(
 		&o.templatePath, "template", "t", "template.md", "path to the markdown template file",
+	)
+
+	cmd.PersistentFlags().StringVarP(
+		&o.artifactVersion, "artifact-version", "", "",
+		"published artifact version (release tag) to pin grc.store mapping document links to; latest if unset",
 	)
 
 	cmd.PersistentFlags().BoolVarP(
@@ -116,6 +122,7 @@ func addCompile(parentCmd *cobra.Command) {
 
 			// Generate the rendered version
 			gen := baseline.NewGenerator()
+			gen.ArtifactVersion = opts.artifactVersion
 
 			if opts.outPath == "" {
 				fmt.Fprintf(os.Stderr, "\n⚠️  No output path specified. Not rendering Baseline.")

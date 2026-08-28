@@ -117,6 +117,13 @@ func TestCheck(t *testing.T) {
 			},
 		},
 		{
+			name: "lexicon synonym shadowing a mapping-reference id",
+			mutate: func(b *types.Baseline) {
+				b.Lexicon[0].Synonyms = append(b.Lexicon[0].Synonyms, "csf")
+			},
+			wantErr: `shadows mapping-reference "CSF"`,
+		},
+		{
 			name: "mapping targeting an unknown control",
 			mutate: func(b *types.Baseline) {
 				b.Mappings[0].Mappings[0].Source = "OSPS-XX-99"

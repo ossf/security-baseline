@@ -16,7 +16,11 @@ func NewGenerator() *Generator {
 	return &Generator{}
 }
 
-type Generator struct{}
+type Generator struct {
+	// ArtifactVersion pins grc.store mapping document links to a published
+	// version (the release tag). Empty links to the latest published version.
+	ArtifactVersion string
+}
 
 // ExportMarkdown runs the baseline data through the markdown template
 func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string) error {
@@ -53,6 +57,16 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 		},
 		"relationsForControl": func(controlID string) []FrameworkRelation {
 			return relationsForControl(b.Mappings, controlID)
+		},
+		// grc.store page of the mapping document targeting a framework
+		// reference id, or "" when no mapping document covers it.
+		"mappingDocURL": func(refID string) string {
+			for i := range b.Mappings {
+				if b.Mappings[i].TargetReference.ReferenceId == refID {
+					return g.artifactURL(b.Mappings[i].Metadata.Id)
+				}
+			}
+			return ""
 		},
 	}).Parse(string(templateContent))
 	if err != nil {

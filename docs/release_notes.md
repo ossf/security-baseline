@@ -30,8 +30,7 @@
 
 -->
 
-<!--
-## Next release, commented out until we have a date and are about ready to release
+## 2026-08-28
 
 ### New controls
 
@@ -44,7 +43,7 @@
 
 ### Modified controls
 
-(none)
+* [OSPS-LE-03.01](versions/2026-08-28#osps-le-0301) now also accepts a `LICENSES/` directory as a license location
 
 ### Removed controls
 
@@ -52,11 +51,14 @@
 
 ### New control mappings
 
-(none)
+* [OpenSSF Scorecard](versions/2026-08-28#external-frameworks)
 
 ### Other changes
 
--->
+* The control mappings are now maintained as machine-readable [Gemara](https://gemara.openssf.org) mapping documents, published to [grc.store](https://grc.store/openssf) with each release alongside the compiled control catalog
+* Each version now includes a generated External Framework Crosswalk page (external requirement → OSPS controls), and the External Frameworks table links each framework's mapping document
+* The External Frameworks table now lists only frameworks with published mappings; the OpenChain and OpenCRE entries were renamed to ISO/IEC 18974 and OpenCRE respectively
+* Baseline content and tooling migrated to the Gemara v1 schema
 
 ## 2026-02-19
 

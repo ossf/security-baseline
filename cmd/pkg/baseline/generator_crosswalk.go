@@ -6,86 +6,114 @@ package baseline
 import (
 	"fmt"
 	"io"
+	"slices"
 	"sort"
 	"strings"
+
+	"github.com/gemaraproj/go-gemara"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
-// reverseCrosswalkMap is a nested map:
-// Framework name -> Requirement ID -> sorted list of OSPS Control IDs
-type reverseCrosswalkMap map[string]map[string][]string
+// grcStoreNamespace is the browsable page for the artifacts that
+// .github/workflows/publish.yaml pushes to oci.grc.store/openssf.
+const grcStoreNamespace = "https://grc.store/openssf"
 
-// buildReverseCrosswalk iterates the loaded #MappingDocument artifacts and
-// inverts the Baseline -> External mapping into External -> Baseline.
-// The framework name is taken from each mapping document's TargetReference.
-func buildReverseCrosswalk(b *types.Baseline) reverseCrosswalkMap {
-	result := make(reverseCrosswalkMap)
-	for i := range b.Mappings {
-		doc := &b.Mappings[i]
-		framework := doc.TargetReference.ReferenceId
-		if framework == "" {
-			continue
-		}
-		for _, m := range doc.Mappings {
-			controlID := m.Source
-			for _, t := range m.Targets {
-				reqID := t.EntryId
-				if reqID == "" {
-					continue
-				}
-				if _, ok := result[framework]; !ok {
-					result[framework] = make(map[string][]string)
-				}
-				result[framework][reqID] = append(result[framework][reqID], controlID)
+// artifactURL returns the grc.store page for a published artifact id, pinned
+// to the generator's artifact version when one is set. An empty id yields an
+// empty URL rather than a link to the bare namespace.
+func (g *Generator) artifactURL(id string) string {
+	if id == "" {
+		return ""
+	}
+	if g.ArtifactVersion != "" {
+		return fmt.Sprintf("%s/%s/versions/%s", grcStoreNamespace, id, g.ArtifactVersion)
+	}
+	return grcStoreNamespace + "/" + id
+}
+
+// reverseMappings inverts one mapping document into
+// framework requirement id -> sorted, deduplicated OSPS control ids.
+func reverseMappings(doc *gemara.MappingDocument) map[string][]string {
+	result := map[string][]string{}
+	for _, m := range doc.Mappings {
+		for _, t := range m.Targets {
+			if t.EntryId == "" {
+				continue
 			}
+			result[t.EntryId] = append(result[t.EntryId], m.Source)
 		}
 	}
-	// Sort the control ID lists within each cell for determinism
-	for framework := range result {
-		for reqID := range result[framework] {
-			sort.Strings(result[framework][reqID])
-		}
+	for req := range result {
+		sort.Strings(result[req])
+		result[req] = slices.Compact(result[req])
 	}
 	return result
 }
 
-// ExportReverseCrosswalk writes a GitHub-flavored Markdown table
-// mapping External Framework Requirements -> OSPS Baseline Controls
-// to the provided writer.
-func (g *Generator) ExportReverseCrosswalk(b *types.Baseline, w io.Writer) error {
-	crosswalk := buildReverseCrosswalk(b)
+// targetReference resolves a mapping document's target framework to its
+// MappingReference entry, falling back to a bare id when it is not declared.
+func targetReference(doc *gemara.MappingDocument) gemara.MappingReference {
+	refID := doc.TargetReference.ReferenceId
+	for _, ref := range doc.Metadata.MappingReferences {
+		if ref.Id == refID {
+			return ref
+		}
+	}
+	return gemara.MappingReference{Id: refID, Title: refID}
+}
 
-	// Sort framework names for deterministic output
-	frameworks := make([]string, 0, len(crosswalk))
-	for fw := range crosswalk {
-		frameworks = append(frameworks, fw)
-	}
-	sort.Strings(frameworks)
-	// Write table header
-	_, err := fmt.Fprintln(w, "| Framework | Requirement | OSPS Controls |")
-	if err != nil {
-		return err
-	}
-	_, err = fmt.Fprintln(w, "|-----------|-------------|---------------|")
-	if err != nil {
-		return err
-	}
-	// Write rows, sorted by framework then requirement ID
-	for _, fw := range frameworks {
-		reqMap := crosswalk[fw]
-		reqIDs := make([]string, 0, len(reqMap))
-		for req := range reqMap {
+// ExportReverseCrosswalk writes a markdown page inverting every loaded
+// #MappingDocument: one section per external framework, listing each
+// framework requirement alongside the OSPS Baseline controls related to it.
+func (g *Generator) ExportReverseCrosswalk(b *types.Baseline, w io.Writer) error {
+	var out strings.Builder
+
+	out.WriteString(`# External Framework Crosswalk
+
+This crosswalk inverts the OSPS Baseline mapping documents: for each external
+framework requirement, it lists the Baseline controls that the maintainers
+believe relate to it. These are reference relationships, not functional
+connections, and progress on one does not imply progress on the other.
+
+Every section below is generated from a machine-readable
+[Gemara](https://gemara.openssf.org) mapping document published to
+[grc.store](` + grcStoreNamespace + `) with each Baseline release.
+
+* Contents
+{:toc}
+`)
+
+	for i := range b.Mappings {
+		doc := &b.Mappings[i]
+		if doc.TargetReference.ReferenceId == "" {
+			continue
+		}
+		ref := targetReference(doc)
+
+		fmt.Fprintf(&out, "\n## %s\n\n", ref.Title)
+		if ref.Version != "" {
+			fmt.Fprintf(&out, "Version %s · ", ref.Version)
+		}
+		if ref.Url != "" {
+			fmt.Fprintf(&out, "[Framework](%s) · ", ref.Url)
+		}
+		fmt.Fprintf(&out, "[Mapping document](%s)\n\n", g.artifactURL(doc.Metadata.Id))
+
+		out.WriteString("| Requirement | OSPS Baseline Controls |\n")
+		out.WriteString("|-------------|------------------------|\n")
+
+		crosswalk := reverseMappings(doc)
+		reqIDs := make([]string, 0, len(crosswalk))
+		for req := range crosswalk {
 			reqIDs = append(reqIDs, req)
 		}
 		sort.Strings(reqIDs)
 		for _, req := range reqIDs {
-			controls := strings.Join(reqMap[req], ", ")
-			_, err := fmt.Fprintf(w, "| %s | %s | %s |\n", fw, req, controls)
-			if err != nil {
-				return err
-			}
+			fmt.Fprintf(&out, "| %s | %s |\n", req, strings.Join(crosswalk[req], ", "))
 		}
 	}
-	return nil
+
+	_, err := io.WriteString(w, out.String())
+	return err
 }
