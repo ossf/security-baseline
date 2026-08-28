@@ -205,7 +205,7 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          While active, project's documentation MUST clearly document when and
+          The project documentation MUST clearly document when and
           how tests are run.
         applicability:
           - maturity-3
@@ -216,7 +216,7 @@ controls:
           interpret the results.
       - id: OSPS-QA-06.03
         text: |
-          While active, the project's documentation MUST include a policy that
+          The project documentation MUST include a policy that
           all major changes to the software produced by the project should add
           or update tests of the functionality in an automated test suite.
         applicability:
