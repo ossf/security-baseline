@@ -22,7 +22,7 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
-          Theversion control system MUST require all code
+          The version control system MUST require all code
           contributors to assert that they are legally authorized to make the
           associated contributions on every commit.
         applicability:
