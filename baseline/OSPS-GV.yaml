@@ -20,7 +20,7 @@ controls:
       - id: OSPS-GV-01.01
         text: |
          The project documentation MUST include a list of project members with 
-         access to sensitive resources
+         access to sensitive resources.
         applicability:
           - maturity-2
           - maturity-3
