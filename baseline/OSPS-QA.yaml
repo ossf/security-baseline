@@ -205,7 +205,7 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          Retired in https://github.com/ossf/security-baseline/pull/XXX
+          Retired in https://github.com/ossf/security-baseline/pull/547
         applicability:
           - maturity-3
         state: Retired
