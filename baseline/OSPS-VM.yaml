@@ -20,7 +20,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
-          While active, the project documentation MUST
+          The project documentation MUST
           include a policy for coordinated vulnerability disclosure (CVD), with a clear
           timeframe for response.
         applicability:
@@ -43,7 +43,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-02.01
         text: |
-          While active, the project documentation MUST contain
+          The project documentation MUST contain
           security contacts.
         applicability:
           - maturity-1
@@ -63,7 +63,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-03.01
         text: |
-          While active, the project documentation MUST
+          The project documentation MUST
           provide a means for private vulnerability reporting directly to
           the security contacts within the project.
         applicability:
@@ -85,7 +85,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-04.01
         text: |
-          While active, the project documentation MUST
+          The project documentation MUST
           publicly publish data about discovered vulnerabilities.
         applicability:
           - maturity-2
@@ -98,7 +98,7 @@ controls:
           instructions for mitigation or remediation.
       - id: OSPS-VM-04.02
         text: |
-          While active, any vulnerabilities in the
+          Any vulnerabilities in the
           software components not affecting the project MUST be accounted for
           in a VEX document, augmenting the vulnerability report with
           non-exploitability details.
@@ -121,7 +121,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
-          While active, the project documentation MUST include a policy that
+          The project documentation MUST include a policy that
           defines a threshold for remediation of SCA findings related to
           vulnerabilities and licenses.
         applicability:
@@ -133,7 +133,7 @@ controls:
           these findings.
       - id: OSPS-VM-05.02
         text: |
-          While active, the project documentation MUST include a policy to
+          The project documentation MUST include a policy to
           address SCA violations prior to any release.
         applicability:
           - maturity-3
@@ -143,7 +143,7 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          While active, all changes to the project's codebase MUST be
+          All changes to the project's codebase MUST be
           automatically evaluated against a documented policy for malicious
           dependencies and known vulnerabilities in dependencies, then blocked
           in the event of violations, except when declared and suppressed as
@@ -167,7 +167,7 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-06.01
         text: |
-          While active, the project documentation MUST include a policy that
+          The project documentation MUST include a policy that
           defines a threshold for remediation of SAST findings.
         applicability:
           - maturity-3
@@ -178,7 +178,7 @@ controls:
           these findings.
       - id: OSPS-VM-06.02
         text: |
-          While active, all changes to the project's codebase MUST be
+          All changes to the project's codebase MUST be
           automatically evaluated against a documented policy for security
           weaknesses and blocked in the event of violations except when declared
           and suppressed as non-exploitable.

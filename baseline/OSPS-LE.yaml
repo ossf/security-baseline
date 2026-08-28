@@ -22,7 +22,7 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-01.01
         text: |
-          While active, the version control system MUST require all code
+          Theversion control system MUST require all code
           contributors to assert that they are legally authorized to make the
           associated contributions on every commit.
         applicability:
@@ -51,7 +51,7 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-02.01
         text: |
-          While active, the license for the source code MUST meet the OSI Open
+          The license for the source code MUST meet the OSI Open
           Source Definition or the FSF Free Software Definition.
         applicability:
           - maturity-1
@@ -67,7 +67,7 @@ controls:
           this control if there are no other encumbrances such as patents.
       - id: OSPS-LE-02.02
         text: |
-          While active, the license for the released software assets MUST meet
+          The license for the released software assets MUST meet
           the OSI Open Source Definition or the FSF Free Software Definition.
         applicability:
           - maturity-1
@@ -93,7 +93,7 @@ controls:
     assessment-requirements:
       - id: OSPS-LE-03.01
         text: |
-          While active, the license for the source code MUST be maintained in
+          The license for the source code MUST be maintained in
           the corresponding repository's LICENSE file, COPYING file,
           LICENSES/ directory, or LICENSE/ directory.
         applicability:
@@ -109,7 +109,7 @@ controls:
           includes the license file.
       - id: OSPS-LE-03.02
         text: |
-          While active, the license for the released software assets MUST be
+          The license for the released software assets MUST be
           included in the released source code, or in a LICENSE file, COPYING
           file, or LICENSE/ directory alongside the corresponding release
           assets.
