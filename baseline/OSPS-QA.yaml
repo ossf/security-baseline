@@ -205,15 +205,10 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          The project documentation MUST clearly document when and
-          how tests are run.
+          Retired in https://github.com/ossf/security-baseline/pull/XXX
         applicability:
           - maturity-3
-        recommendation: |
-          Add a section to the contributing documentation that explains how to
-          run the tests locally and how to run the tests in the CI/CD pipeline.
-          The documentation should explain what the tests are testing and how to
-          interpret the results.
+        state: Retired
       - id: OSPS-QA-06.03
         text: |
           The project documentation MUST include a policy that
@@ -225,6 +220,24 @@ controls:
           Add a section to the contributing documentation that explains the
           policy for adding or updating tests. The policy should explain what
           constitutes a major change and what tests should be added or updated.
+      - id: OSPS-QA-06.04
+        text: |
+          The project documentation MUST document when tests are run.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Add a section to the contributing documentation that explains when
+          the automated tests are run in the CI/CD pipeline.
+      - id: OSPS-QA-06.05
+        text: |
+          The project documentation MUST document how tests are run.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Add a section to the contributing documentation that explains how to
+          run the tests locally and how the tests are run in the CI/CD
+          pipeline. The documentation should explain what the tests are testing
+          and how to interpret the results.
 
   - id: OSPS-QA-07
     title: |
