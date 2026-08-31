@@ -42,6 +42,9 @@ jobs:
       cancel-in-progress: false
     env:
       RELEASE_VERSION: ${{ github.event.release.tag_name || inputs.version || format('v0.0.0-dev-{0}', github.sha) }}
+      # Explicitly versioned artifacts (release tag or dispatch version input)
+      # are published as non-draft; dev-SHA fallback publishes stay draft.
+      ARTIFACT_DRAFT: ${{ (github.event.release.tag_name || inputs.version) && 'false' || 'true' }}
       HUB_URL: https://hub.grc.store
       DRY_RUN_FLAGS: ${{ inputs.dry_run && '--dry-run --no-sign' || '' }}
     steps:
@@ -64,15 +67,22 @@ jobs:
           sudo install grcli /usr/local/bin/grcli
 
       # One grcli invocation per artifact: positional args to `publish` describe
-      # ONE artifact, they are not a batch. metadata.version is stamped onto a
-      # staged copy (grcli uses it as the OCI tag); committed YAML is untouched.
+      # ONE artifact, they are not a batch. Release metadata is stamped onto a
+      # staged copy (grcli uses metadata.version as the OCI tag); committed YAML
+      # is untouched — in-repo it tracks devel, so its osps-baseline reference
+      # says "draft" and metadata.draft is true. The stamp pins the mapping
+      # documents' osps-baseline reference to the version being published and
+      # applies ARTIFACT_DRAFT wherever a draft flag exists.
       # Each artifact gets its own --output so dry-run layouts don't collide on
       # the shared tag.
       - name: Publish catalog and mapping documents to grc.store
         run: |
           for f in baseline.gemara.yaml baseline/mappings/*.yaml; do
             name=$(basename "$f" .yaml)
-            yq '.metadata.version = strenv(RELEASE_VERSION)' "$f" > "$RUNNER_TEMP/$name.yaml"
+            yq '.metadata.version = strenv(RELEASE_VERSION) |
+                (.metadata.mapping-references[] | select(.id == "osps-baseline")).version = strenv(RELEASE_VERSION) |
+                with(select(.metadata | has("draft")); .metadata.draft = env(ARTIFACT_DRAFT))' \
+              "$f" > "$RUNNER_TEMP/$name.yaml"
             grcli publish "$RUNNER_TEMP/$name.yaml" --url "$HUB_URL" --license Apache-2.0 \
               --output "grcli-out/$name" $DRY_RUN_FLAGS
           done
