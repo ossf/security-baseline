@@ -44,6 +44,8 @@
 ### Modified controls
 
 * [OSPS-LE-03.01](versions/2026-08-28#osps-le-0301) now also accepts a `LICENSES/` directory as a license location
+* [OSPS-GV-03.01](versions/2026-08-28#osps-gv-0301) now also accepts clearly stating that public contributions are not accepted
+* The "While active" qualifier was removed from all control requirement texts
 
 ### Removed controls
 
