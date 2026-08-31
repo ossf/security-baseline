@@ -2,9 +2,11 @@ docs/versions/devel.md
 .DS_Store
 docs/_site
 
-# generated output from go run ./... compile
+# generated output
 docs/versions/devel-checklist.md
 docs/versions/devel-crosswalk.md
+cmd/baseline.gemara.*
+cmd/.*
 
 # go build artifacts
 cmd/security-baseline
