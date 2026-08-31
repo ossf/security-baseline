@@ -19,7 +19,7 @@ on:
         type: boolean
         default: true
       version:
-        description: "Version stamped on every artifact, and the OCI tag. Defaults to a dev tag from the commit SHA."
+        description: "Version stamped on every artifact, and the OCI tag. Required for manual runs."
         type: string
 
 permissions:
@@ -38,16 +38,24 @@ jobs:
     # same version must serialize, but two different releases must not queue
     # against each other (a queued run gets cancelled when a third arrives).
     concurrency:
-      group: publish-grc-store-${{ github.event.release.tag_name || inputs.version || github.sha }}
+      group: publish-grc-store-${{ github.event.release.tag_name || inputs.version }}
       cancel-in-progress: false
     env:
-      RELEASE_VERSION: ${{ github.event.release.tag_name || inputs.version || format('v0.0.0-dev-{0}', github.sha) }}
-      # Explicitly versioned artifacts (release tag or dispatch version input)
-      # are published as non-draft; dev-SHA fallback publishes stay draft.
-      ARTIFACT_DRAFT: ${{ (github.event.release.tag_name || inputs.version) && 'false' || 'true' }}
+      RELEASE_VERSION: ${{ github.event.release.tag_name || inputs.version }}
+      # If a version is manually typed instead of targeting an existing tag, the artifact is tagged as "draft"
+      ARTIFACT_DRAFT: ${{ github.event.release.tag_name && 'false' || 'true' }}
       HUB_URL: https://hub.grc.store
       DRY_RUN_FLAGS: ${{ inputs.dry_run && '--dry-run --no-sign' || '' }}
     steps:
+      # A dispatch with an empty version input would otherwise stamp
+      # metadata.version: "" and publish under an empty OCI tag.
+      - name: Require a release tag or version input
+        run: |
+          if [ -z "$RELEASE_VERSION" ]; then
+            echo "::error::No version to publish: run this from a published release, or pass the version input."
+            exit 1
+          fi
+
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -79,10 +87,12 @@ jobs:
         run: |
           for f in baseline.gemara.yaml baseline/mappings/*.yaml; do
             name=$(basename "$f" .yaml)
+
             yq '.metadata.version = strenv(RELEASE_VERSION) |
                 (.metadata.mapping-references[] | select(.id == "osps-baseline")).version = strenv(RELEASE_VERSION) |
                 .metadata.draft = env(ARTIFACT_DRAFT)' \
               "$f" > "$RUNNER_TEMP/$name.yaml"
+
             # A drifted reference id makes the pin above a silent no-op that
             # `cue vet` still passes — "draft" is a valid version string — so
             # assert the stamp landed rather than publishing an unstamped doc.
@@ -90,6 +100,7 @@ jobs:
             [ "$name" = baseline.gemara ] || yq -e '.metadata.mapping-references[] |
                 select(.id == "osps-baseline") | .version == strenv(RELEASE_VERSION)' \
               "$RUNNER_TEMP/$name.yaml" > /dev/null
+
             grcli publish "$RUNNER_TEMP/$name.yaml" --url "$HUB_URL" --license Apache-2.0 \
               --output "grcli-out/$name" $DRY_RUN_FLAGS
           done
