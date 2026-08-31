@@ -6,7 +6,6 @@ docs/_site
 docs/versions/devel-checklist.md
 docs/versions/devel-crosswalk.md
 cmd/baseline.gemara.*
-cmd/.*
 
 # go build artifacts
 cmd/security-baseline
