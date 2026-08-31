@@ -72,7 +72,7 @@ jobs:
       # is untouched — in-repo it tracks devel, so its osps-baseline reference
       # says "draft" and metadata.draft is true. The stamp pins the mapping
       # documents' osps-baseline reference to the version being published and
-      # applies ARTIFACT_DRAFT wherever a draft flag exists.
+      # sets metadata.draft from ARTIFACT_DRAFT.
       # Each artifact gets its own --output so dry-run layouts don't collide on
       # the shared tag.
       - name: Publish catalog and mapping documents to grc.store
@@ -81,8 +81,15 @@ jobs:
             name=$(basename "$f" .yaml)
             yq '.metadata.version = strenv(RELEASE_VERSION) |
                 (.metadata.mapping-references[] | select(.id == "osps-baseline")).version = strenv(RELEASE_VERSION) |
-                with(select(.metadata | has("draft")); .metadata.draft = env(ARTIFACT_DRAFT))' \
+                .metadata.draft = env(ARTIFACT_DRAFT)' \
               "$f" > "$RUNNER_TEMP/$name.yaml"
+            # A drifted reference id makes the pin above a silent no-op that
+            # `cue vet` still passes — "draft" is a valid version string — so
+            # assert the stamp landed rather than publishing an unstamped doc.
+            # The catalog has no osps-baseline self-reference, so it is exempt.
+            [ "$name" = baseline.gemara ] || yq -e '.metadata.mapping-references[] |
+                select(.id == "osps-baseline") | .version == strenv(RELEASE_VERSION)' \
+              "$RUNNER_TEMP/$name.yaml" > /dev/null
             grcli publish "$RUNNER_TEMP/$name.yaml" --url "$HUB_URL" --license Apache-2.0 \
               --output "grcli-out/$name" $DRY_RUN_FLAGS
           done
