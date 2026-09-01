@@ -178,14 +178,31 @@ controls:
           these findings.
       - id: OSPS-VM-06.02
         text: |
-          All changes to the project's codebase MUST be
-          automatically evaluated against a documented policy for security
-          weaknesses and blocked in the event of violations except when declared
-          and suppressed as non-exploitable.
+          Retired in https://github.com/ossf/security-baseline/pull/548
+        applicability:
+          - maturity-3
+        state: Retired
+      - id: OSPS-VM-06.03
+        text: |
+          All changes to an active project's codebase MUST be automatically
+          evaluated against a documented policy for security weaknesses.
         applicability:
           - maturity-3
         recommendation: |
           Create a status check in the project's version control system that
           runs a Static Application Security Testing (SAST) tool on all changes
-          to the codebase. Require that the status check passes before changes
-          can be merged.
+          to the codebase. Configure the tool to evaluate changes against the
+          project's documented SAST remediation policy.
+      - id: OSPS-VM-06.04
+        text: |
+          All changes to an active project's codebase MUST be blocked in the
+          event of security policy violations except when declared and
+          suppressed as non-exploitable.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Configure the project's version control system to require the SAST
+          status check to pass before changes can be merged into protected
+          branches. Changes that introduce findings which violate the
+          project's documented security policy should be blocked from merging
+          until the findings are resolved. 
