@@ -20,9 +20,15 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-01.01
         text: |
-          The project documentation MUST
-          include a policy for coordinated vulnerability disclosure (CVD), with a clear
-          timeframe for response.
+          Retired in https://github.com/ossf/security-baseline/pull/555
+        applicability:
+          - maturity-2
+          - maturity-3
+        state: Retired
+      - id: OSPS-VM-01.02
+        text: |
+          The project documentation MUST include a coordinated
+          vulnerability disclosure (CVD) policy.
         applicability:
           - maturity-2
           - maturity-3
@@ -31,6 +37,17 @@ controls:
           project's policy for coordinated vulnerability disclosure. Include a
           method for reporting vulnerabilities. Set expectations for how the
           project will respond and address reported issues.
+      - id: OSPS-VM-01.03
+        text: |
+          The project's coordinated vulnerability disclosure (CVD) policy
+          MUST define a timeframe for responding to vulnerability reports.
+        applicability:
+          - maturity-2
+          - maturity-3
+        recommendation: |
+          Create a SECURITY.md file at the root of the directory, outlining the
+          project's policy for coordinated vulnerability disclosure. The file
+          should define a timeframe for responding to vulnerability reports.
 
   - id: OSPS-VM-02
     title: |
