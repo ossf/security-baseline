@@ -147,7 +147,7 @@ controls:
         applicability:
           - maturity-3
         state: Retired
-      - id: OSPS-VM-05.04
+      - id: OSPS-VM-05.06
         text: |
           All changes to the project's codebase MUST be
           automatically evaluated against a documented policy for malicious
@@ -159,7 +159,7 @@ controls:
           runs a Software Composition Analysis tool to detect malicious
           dependencies present in the codebase. Require that the status check
           passes before any new changes can be merged.
-      - id: OSPS-VM-05.05
+      - id: OSPS-VM-05.07
         text: |
           All changes to the project's codebase MUST be
           automatically evaluated against a documented policy for known
@@ -171,7 +171,7 @@ controls:
           runs a Software Composition Analysis tool to detect known
           vulnerabilities in dependencies. Require that the status check
           passes before any new changes can be merged.
-      - id: OSPS-VM-05.06
+      - id: OSPS-VM-05.08
         text: |
           Changes to the codebase MUST be blocked when they violate the
           documented policy for malicious dependencies or known
@@ -182,7 +182,7 @@ controls:
           Configure status checks to block any new changes from being merged
           when the documented policy for malicious dependencies or known
           vulnerabilities is violated.
-      - id: OSPS-VM-05.07
+      - id: OSPS-VM-05.09
         text: |
           A project MUST allow documented dependency policy violations to be
           suppressed when they are declared non-exploitable.
