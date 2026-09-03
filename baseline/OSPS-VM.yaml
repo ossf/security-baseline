@@ -143,7 +143,7 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          Retired in <PR_URL>
+          Retired in https://github.com/ossf/security-baseline/pull/553
         applicability:
           - maturity-3
         state: Retired
