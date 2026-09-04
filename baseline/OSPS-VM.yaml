@@ -143,18 +143,57 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
+          Retired in https://github.com/ossf/security-baseline/pull/553
+        applicability:
+          - maturity-3
+        state: Retired
+      - id: OSPS-VM-05.06
+        text: |
           All changes to the project's codebase MUST be
           automatically evaluated against a documented policy for malicious
-          dependencies and known vulnerabilities in dependencies, then blocked
-          in the event of violations, except when declared and suppressed as
-          non-exploitable.
+          dependencies.
         applicability:
           - maturity-3
         recommendation: |
           Create a status check in the project's version control system that
-          runs a Software Composition Analysis tool on all changes
-          to the codebase. Require that the status check passes before changes
-          can be merged.
+          runs a Software Composition Analysis tool to detect malicious
+          dependencies present in the codebase. Require that the status check
+          passes before any new changes can be merged.
+      - id: OSPS-VM-05.07
+        text: |
+          All changes to the project's codebase MUST be
+          automatically evaluated against a documented policy for known
+          vulnerabilities in dependencies.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Create a status check in the project's version control system that
+          runs a Software Composition Analysis tool to detect known
+          vulnerabilities in dependencies. Require that the status check
+          passes before any new changes can be merged.
+      - id: OSPS-VM-05.08
+        text: |
+          Changes to the codebase MUST be blocked when they violate the
+          documented policy for malicious dependencies or known
+          vulnerabilities.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Configure status checks to block any new changes from being merged
+          when the documented policy for malicious dependencies or known
+          vulnerabilities is violated.
+      - id: OSPS-VM-05.09
+        text: |
+          A project MUST allow documented dependency policy violations to be
+          suppressed when they are declared non-exploitable.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Configure the status check in the project's version control system
+          that runs a Software Composition Analysis tool to support
+          documented suppressions for dependency policy violations that have
+          been determined to be non-exploitable. Require that the findings
+          and justifications are documented for each suppression.
 
   - id: OSPS-VM-06
     title: |
