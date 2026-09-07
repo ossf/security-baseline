@@ -44,7 +44,7 @@ controls:
       - id: OSPS-BR-01.03
         text: |
           When a CI/CD pipeline operates on untrusted code snapshots, it MUST
-          prevent access to privileged CI/CD credentials and assets.
+          prevent access to privileged CI/CD credentials or assets.
         applicability:
           - maturity-1
           - maturity-2
