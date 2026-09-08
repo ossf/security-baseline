@@ -121,16 +121,32 @@ controls:
     assessment-requirements:
       - id: OSPS-VM-05.01
         text: |
-          The project documentation MUST include a policy that
-          defines a threshold for remediation of SCA findings related to
-          vulnerabilities and licenses.
+          Retired in https://github.com/ossf/security-baseline/pull/554
+        applicability:
+          - maturity-3
+        state: Retired
+      - id: OSPS-VM-05.04
+        text: |
+          The project documentation MUST define a remediation threshold
+          for SCA findings related to vulnerabilities.
         applicability:
           - maturity-3
         recommendation: |
           Document a policy in the project that defines a threshold for
-          remediation of SCA findings related to vulnerabilities and licenses.
-          Include the process for identifying, prioritizing, and remediating
-          these findings.
+          remediation of SCA findings related to vulnerabilities. Include
+          the process for identifying, prioritizing, and remediating these
+          findings.
+      - id: OSPS-VM-05.05
+        text: |
+          The project documentation MUST define a remediation threshold
+          for SCA findings related to licenses.
+        applicability:
+          - maturity-3
+        recommendation: |
+          Document a policy in the project that defines a threshold for
+          remediation of SCA findings related to licenses. Include the
+          process for identifying, prioritizing, and remediating these
+          findings.
       - id: OSPS-VM-05.02
         text: |
           The project documentation MUST include a policy to
