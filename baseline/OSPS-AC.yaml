@@ -80,9 +80,10 @@ controls:
           specific separate act.
       - id: OSPS-AC-03.02
         text: |
-          When an attempt is made to delete the project's primary branch,
-          the version control system MUST treat this as a sensitive activity
-          and require explicit confirmation of intent.
+          When an attempt is made to delete the project's primary branch, 
+          the version control system MUST treat this as a sensitive activity 
+          that requires explicit confirmation of intent.
+
         applicability:
           - maturity-1
           - maturity-2

@@ -67,7 +67,7 @@ jobs:
         uses: ./.github/actions/compile-and-vet
 
       - name: Setup oras
-        uses: oras-project/setup-oras@8d34698a59f5ffe24821f0b48ab62a3de8b64b20 # v1.2.3
+        uses: oras-project/setup-oras@1d808f7d7f6995cc68b7bf507bfe5c5446e1dc9d # v2.0.1
 
       - name: Install grcli
         run: |
