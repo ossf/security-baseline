@@ -205,8 +205,9 @@ controls:
           end-to-end tests.
       - id: OSPS-QA-06.02
         text: |
-          The project documentation MUST clearly document when and
-          how tests are run.
+          The project documentation MUST clearly document all supported test
+          environments, including how tests are invoked, whether manually or by
+          automated triggers.
         applicability:
           - maturity-3
         recommendation: |
