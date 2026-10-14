@@ -219,6 +219,8 @@ controls:
           The project MUST prevent the unintentional storage of unencrypted sensitive data, such as secrets and credentials, in the version control system.
         applicability:
           - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Configure .gitignore or equivalent to exclude files that may contain sensitive information. Use pre-commit hooks and automated scanning tools to detect and prevent the inclusion of sensitive data in commits.
       - id: OSPS-BR-07.02

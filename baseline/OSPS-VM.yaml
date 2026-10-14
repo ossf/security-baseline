@@ -47,6 +47,8 @@ controls:
           security contacts.
         applicability:
           - maturity-1
+          - maturity-2
+          - maturity-3
         recommendation: |
           Create a security.md (or similarly-named) file that contains security
           contacts for the project.
