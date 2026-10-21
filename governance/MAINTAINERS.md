@@ -3,7 +3,7 @@
 ## Project Maintainers
 
 - Eddie Knight, Revanite (@eddie-knight)
-- Adolfo García Veytia, Independent (@puerco)
+- Adolfo García Veytia, Carabiner Systems (@puerco)
 - Christopher "CRob" Robinson, OpenSSF (@SecurityCRob)
 - David A Wheeler, OpenSSF (@david-a-wheeler)
 - Ben Cotton, OpenSSF (@funnelfiasco)
