@@ -2,11 +2,11 @@
 
 ## Project Maintainers
 
-- Eddie Knight, Sonatype (@eddie-knight)
+- Eddie Knight, Revanite (@eddie-knight)
 - Adolfo García Veytia, Independent (@puerco)
 - Christopher "CRob" Robinson, OpenSSF (@SecurityCRob)
 - David A Wheeler, OpenSSF (@david-a-wheeler)
-- Ben Cotton, Kusari (@funnelfiasco)
+- Ben Cotton, OpenSSF (@funnelfiasco)
 - Evan Anderson, Custcodian (@evankanderson)
 - Travis Truman, CVS Health (@trumant)
 
