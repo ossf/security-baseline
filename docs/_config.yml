@@ -18,11 +18,11 @@ kramdown:
 
 # Add to plugins: list
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+#  - jekyll-optional-front-matter
 
-remote_theme: jekyll/minima
+theme: minima
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
@@ -78,3 +78,9 @@ minima:
      - title: OpenSSF at LinkedIn
        icon: linkedin
        url: "https://www.linkedin.com/company/openssf/"
+
+defaults:
+  - scope:
+      path: "" # An empty string means all files in the project
+    values:
+      layout: "default"
