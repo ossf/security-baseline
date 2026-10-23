@@ -1,3 +1,5 @@
+---
+---
 # OSPS Baseline release notes
 
 <!-- Use the template below to start the release notes for the next version. -->
