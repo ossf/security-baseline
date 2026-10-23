@@ -20,9 +20,11 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-#  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-remote-theme
 
-theme: minima
+remote_theme: jekyll/minima
 
 # Minima-specific settings (applicable to Minima v3 and above only)
 # -----------------------------------------------------------------
