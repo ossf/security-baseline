@@ -2,8 +2,14 @@
 
 source "https://rubygems.org"
 
-# gem "jekyll"
-gem "github-pages", "~> 232", group: :jekyll_plugins
-# gem "rails"
+gem "jekyll-remote-theme", "~> 0.6"
+
+# Jekyll plugins
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.18"
+  gem "jekyll-seo-tag", "~> 2.9"
+  gem "jekyll-relative-links", ">= 0.6.1"
+  gem "jekyll-titles-from-headings", ">= 0.5.3"
+end
 
 gem "webrick", "~> 1.9"

@@ -18,9 +18,11 @@ kramdown:
 
 # Add to plugins: list
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-remote-theme
 
 remote_theme: jekyll/minima
 
@@ -78,3 +80,9 @@ minima:
      - title: OpenSSF at LinkedIn
        icon: linkedin
        url: "https://www.linkedin.com/company/openssf/"
+
+defaults:
+  - scope:
+      path: "" # An empty string means all files in the project
+    values:
+      layout: "default"

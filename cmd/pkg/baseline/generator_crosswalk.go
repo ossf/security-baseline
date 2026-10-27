@@ -69,7 +69,9 @@ func targetReference(doc *gemara.MappingDocument) gemara.MappingReference {
 func (g *Generator) ExportReverseCrosswalk(b *types.Baseline, w io.Writer) error {
 	var out strings.Builder
 
-	out.WriteString(`# External Framework Crosswalk
+	out.WriteString(`---
+---
+# External Framework Crosswalk
 
 This crosswalk inverts the OSPS Baseline mapping documents: for each external
 framework requirement, it lists the Baseline controls that the maintainers
