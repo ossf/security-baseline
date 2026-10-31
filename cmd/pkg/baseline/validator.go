@@ -15,6 +15,10 @@ import (
 	"github.com/ossf/security-baseline/pkg/types"
 )
 
+// maturityPrefix is the fixed prefix of an applicability entry, which is
+// followed by exactly one character naming the level.
+const maturityPrefix = "maturity-"
+
 func NewValidator() *Validator {
 	return &Validator{}
 }
@@ -57,7 +61,7 @@ func (v *Validator) Check(b *types.Baseline) error {
 			}
 			baseMaturity := -1
 			for i, maturity := range assessment.Applicability {
-				if maturity[:len(maturity)-1] != "maturity-" {
+				if !strings.HasPrefix(maturity, maturityPrefix) || len(maturity) != len(maturityPrefix)+1 {
 					errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
 					continue
 				}
