@@ -13,10 +13,11 @@ import (
 )
 
 const (
-	testControlID = "OSPS-AC-01"
-	testSourceRef = "osps-baseline"
-	testTerm      = "Repository"
-	wantCollision = `collides with entry "Repository"`
+	testControlID    = "OSPS-AC-01"
+	testAssessmentID = "OSPS-AC-01.01"
+	testSourceRef    = "osps-baseline"
+	testTerm         = "Repository"
+	wantCollision    = `collides with entry "Repository"`
 )
 
 // validBaseline is the smallest baseline that passes Check: one control, one
@@ -129,6 +130,35 @@ func TestCheck(t *testing.T) {
 				b.Mappings[0].Mappings[0].Source = "OSPS-XX-99"
 			},
 			wantErr: `targets unknown control "OSPS-XX-99"`,
+		},
+		{
+			// Regression guard: an empty entry used to reach the prefix
+			// test with nothing to slice, so osps validate died on the
+			// data it exists to report on.
+			name: "empty applicability entry",
+			mutate: func(b *types.Baseline) {
+				b.Catalog.Controls[0].AssessmentRequirements = []gemara.AssessmentRequirement{
+					{Id: testAssessmentID, Applicability: []string{""}},
+				}
+			},
+			wantErr: `invalid maturity level ''`,
+		},
+		{
+			name: "applicability entry with a two character level",
+			mutate: func(b *types.Baseline) {
+				b.Catalog.Controls[0].AssessmentRequirements = []gemara.AssessmentRequirement{
+					{Id: testAssessmentID, Applicability: []string{"maturity-10"}},
+				}
+			},
+			wantErr: `invalid maturity level 'maturity-10'`,
+		},
+		{
+			name: "well formed applicability entries pass",
+			mutate: func(b *types.Baseline) {
+				b.Catalog.Controls[0].AssessmentRequirements = []gemara.AssessmentRequirement{
+					{Id: testAssessmentID, Applicability: []string{"maturity-1", "maturity-2"}},
+				}
+			},
 		},
 	}
 
