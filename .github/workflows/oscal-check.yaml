@@ -29,7 +29,7 @@ jobs:
             path: .build/go-oscal/
             persist-credentials: false
 
-      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
         name: setup-go
         with:
           go-version-file: cmd/go.mod
@@ -37,7 +37,7 @@ jobs:
           cache: true
 
       - name: Setup Java # this is here because oscal-cli-action below needs a java runtime
-        uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad
+        uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880
         id: setup-java
         with:
           distribution: temurin
