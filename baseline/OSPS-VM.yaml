@@ -111,6 +111,21 @@ controls:
           known vulnerabilities, including assessment details or any
           mitigations in place preventing vulnerable code from being
           executed.
+      - id: OSPS-VM-04.03
+        text: |
+          For each published vulnerability in the project's own code, the
+          project MUST perform a root cause analysis and document the cause
+          and any changes made to prevent similar vulnerabilities.
+        applicability:
+          - maturity-3
+        recommendation: |
+          After a vulnerability in code maintained by the project is fixed,
+          determine why it was introduced and what could have prevented it,
+          check the codebase for similar vulnerabilities, and record the
+          findings and resulting process or code changes, for example in the
+          security advisory or a linked post-incident report. Vulnerabilities
+          that originate in dependencies are covered by OSPS-VM-05 and do not
+          require a root cause analysis by the project.
 
   - id: OSPS-VM-05
     title: |

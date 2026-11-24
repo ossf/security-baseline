@@ -272,6 +272,7 @@ mappings:
       - entry-id: PO.4.1
       - entry-id: RV.2.1
       - entry-id: RV.2.2
+      - entry-id: RV.3.1
   - id: M-OSPS-VM-05-SSDF
     source: OSPS-VM-05
     relationship: relates-to
