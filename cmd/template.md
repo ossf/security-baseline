@@ -2,11 +2,13 @@
 ---
 # Open Source Project Security Baseline
 
-Version: devel
+Version: {{ releaseVersion }}
 
+{{ if not isRelease -}}
 {: .warning}
 Not for production use.
 
+{{ end -}}
 <!-- A button for returning to the top of the page -->
 <button onclick="toTop()" id="topButton" title="Go to top"
 style="display: none; position: fixed; bottom: 20px; right: 30px; border: none; background-color: CornflowerBlue; color: white; cursor: pointer; padding: 10px; border-radius: 10px; font-size: 18px;">to top</button>

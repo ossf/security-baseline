@@ -8,6 +8,7 @@ import (
 	"html/template"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/ossf/security-baseline/pkg/types"
 )
@@ -20,6 +21,24 @@ type Generator struct {
 	// ArtifactVersion pins grc.store mapping document links to a published
 	// version (the release tag). Empty links to the latest published version.
 	ArtifactVersion string
+}
+
+// develVersion is what unreleased renders show as their version.
+const develVersion = "devel"
+
+// ReleaseVersion is the version shown in rendered documents: the artifact
+// version without its leading "v" (v2026.08.28 becomes 2026.08.28), or
+// "devel" when no artifact version is set.
+func (g *Generator) ReleaseVersion() string {
+	if v := strings.TrimPrefix(g.ArtifactVersion, "v"); v != "" {
+		return v
+	}
+	return develVersion
+}
+
+// IsRelease reports whether the generator renders a published release.
+func (g *Generator) IsRelease() bool {
+	return g.ReleaseVersion() != develVersion
 }
 
 // ExportMarkdown runs the baseline data through the markdown template
@@ -49,6 +68,8 @@ func (g *Generator) ExportMarkdown(b *types.Baseline, templatePath, path string)
 			return addLinksTemplateFunction(b.Lexicon, s)
 		},
 		"asLink":           asLinkTemplateFunction,
+		"releaseVersion":   g.ReleaseVersion,
+		"isRelease":        g.IsRelease,
 		"maxLevel":         maxLevel,
 		"controlsForGroup": controlsForGroup,
 		"isRetired":        isRetired,
