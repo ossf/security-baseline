@@ -4,8 +4,8 @@ github.com/defenseunicorns/go-oscal v0.7.2 h1:nsokNYpDAopub3R0QQOKQuH28jfm62iA4N
 github.com/defenseunicorns/go-oscal v0.7.2/go.mod h1:2VGbt7jOZ8VfcmWg7Mg9m9NKpLtl/LXAqTWDzcH0qms=
 github.com/dlclark/regexp2 v1.11.0 h1:G/nrcoOa7ZXlpoa/91N3X7mM3r8eIlMBBJZvsz/mxKI=
 github.com/dlclark/regexp2 v1.11.0/go.mod h1:DHkYz0B9wPfa6wondMfaivmHpzrQ3v9q8cnmRbL6yW8=
-github.com/gemaraproj/go-gemara v0.12.0 h1:H3tmwx3tcNrq8VrUCDh3j1o8WJI82VD6CIgNwRHNKSA=
-github.com/gemaraproj/go-gemara v0.12.0/go.mod h1:f2Z92OdIEsxvt6LYud/qxJ0gSRGsZUD6pv+epM2Iytw=
+github.com/gemaraproj/go-gemara v0.13.0 h1:RE182eh+Cb8mj0AASIu5mOlLva/cZ8u9eGaq+KJ9OJE=
+github.com/gemaraproj/go-gemara v0.13.0/go.mod h1:IkLkFDEHnEtXfLBmPF4Usa7cWED1EakoXE254607ptA=
 github.com/goccy/go-yaml v1.19.2 h1:PmFC1S6h8ljIz6gMRBopkjP1TVT7xuwrButHID66PoM=
 github.com/goccy/go-yaml v1.19.2/go.mod h1:XBurs7gK8ATbW4ZPGKgcbrY1Br56PdM69F7LkFRi1kA=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
