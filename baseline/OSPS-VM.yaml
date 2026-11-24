@@ -120,7 +120,7 @@ controls:
           - maturity-3
         recommendation: |
           After a vulnerability in code maintained by the project is fixed,
-          determine why it was introduced and why it was not caught earlier,
+          determine why it was introduced and what could have prevented it,
           check the codebase for similar vulnerabilities, and record the
           findings and resulting process or code changes, for example in the
           security advisory or a linked post-incident report. Vulnerabilities
