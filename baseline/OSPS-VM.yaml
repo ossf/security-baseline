@@ -161,16 +161,13 @@ controls:
           that verify compliance with that policy prior to release.
       - id: OSPS-VM-05.03
         text: |
-          All changes to the project's codebase MUST be
-          automatically evaluated against a documented policy for malicious
-          dependencies and known vulnerabilities in dependencies, then blocked
-          in the event of violations, except when declared and suppressed as
-          non-exploitable.
+          Whenever there is a code change to the project, CI tooling MUST use
+          an automated status check to enforce the project’s SCA policy.
         applicability:
           - maturity-3
         recommendation: |
-          Create a status check in the project's version control system that
-          runs a Software Composition Analysis tool on all changes
+          Create a status check in the project's version control or CI system
+          that runs a Software Composition Analysis tool on all changes
           to the codebase. Require that the status check passes before changes
           can be merged.
 
