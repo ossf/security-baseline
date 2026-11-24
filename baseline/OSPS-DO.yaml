@@ -107,19 +107,37 @@ controls:
     assessment-requirements:
       - id: OSPS-DO-04.01
         text: |
+          Retired in https://github.com/ossf/security-baseline/pull/584
+        applicability:
+          - maturity-3
+        state: Retired
+      - id: OSPS-DO-04.02
+        text: |
           When the project has made a release, the project documentation MUST
-          include a descriptive statement about the scope and duration of
-          support for each release.
+          include a descriptive statement about the scope of support for each
+          release.
         applicability:
           - maturity-3
         recommendation: |
-          In order to communicate the scope and duration of support for the
-          project's released software assets, the project should have a
-          SUPPORT.md file, a "Support" section in SECURITY.md, or
-          other documentation explaining the support lifecycle,
-          including the expected duration of support for each release, the
-          types of support provided (e.g., bug fixes, security updates), and
-          any relevant policies or procedures for obtaining support.
+          In order to communicate the scope of support for the project's
+          released software assets, the project should have a SUPPORT.md file,
+          a "Support" section in SECURITY.md, or other documentation explaining
+          the types of support provided for each release (e.g., bug fixes,
+          security updates) and any relevant policies or procedures for
+          obtaining support.
+      - id: OSPS-DO-04.03
+        text: |
+          When the project has made a release, the project documentation MUST
+          include a descriptive statement about the duration of support for
+          each release.
+        applicability:
+          - maturity-3
+        recommendation: |
+          In order to communicate the duration of support for the project's
+          released software assets, the project should have a SUPPORT.md file,
+          a "Support" section in SECURITY.md, or other documentation explaining
+          the support lifecycle, including the expected duration of support
+          for each release.
 
   - id: OSPS-DO-05
     title: |
