@@ -178,11 +178,11 @@ controls:
           - maturity-2
           - maturity-3
         recommendation: |
-          Use a common tooling for your ecosystem, such as package managers or
-          dependency management tools to ingest dependencies at build time. This
-          may include using a dependency file, lock file, or manifest to specify
-          the required dependencies, which are then pulled in by the build
-          system.
+          Use the dependency tooling of your ecosystem, such as package
+          managers or dependency management tools, or tooling that is at least
+          as secure. This may include using a dependency file, lock file, or
+          manifest to specify the required dependencies, which are then pulled
+          in and verified by the build system.
 
   - id: OSPS-BR-06
     title: |
