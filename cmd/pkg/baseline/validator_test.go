@@ -19,6 +19,13 @@ const (
 	wantCollision = `collides with entry "Repository"`
 )
 
+// The maturity levels baseline/metadata.yaml declares as applicability groups.
+const (
+	maturity1 = "maturity-1"
+	maturity2 = "maturity-2"
+	maturity3 = "maturity-3"
+)
+
 // validBaseline is the smallest baseline that passes Check: one control, one
 // declared mapping-reference, and one mapping document targeting it.
 func validBaseline() *types.Baseline {
@@ -82,6 +89,35 @@ func TestCheck(t *testing.T) {
 					gemara.MappingReference{Id: "ORPHAN", Title: "Orphan", Version: "1"})
 			},
 			wantErr: `mapping-reference "ORPHAN" is declared in metadata but no mapping document targets it`,
+		},
+		{
+			// The same shape one level down: a maturity level nothing applies
+			// to is an applicability matrix column with no rows under it, and
+			// a project assessed at that level is checked against nothing.
+			name: "declared applicability-group with no assessment requirement",
+			mutate: func(b *types.Baseline) {
+				b.Catalog.Metadata.ApplicabilityGroups = []gemara.Group{
+					{Id: maturity1, Title: "Maturity Level 1"},
+					{Id: maturity2, Title: "Maturity Level 2"},
+					{Id: maturity3, Title: "Maturity Level 3"},
+				}
+				b.Catalog.Controls[0].AssessmentRequirements = []gemara.AssessmentRequirement{
+					{Id: "OSPS-AC-01.01", Applicability: []string{maturity1, maturity2}},
+				}
+			},
+			wantErr: `applicability-group "maturity-3" is declared in metadata but no assessment requirement applies to it`,
+		},
+		{
+			name: "every declared applicability-group has a requirement",
+			mutate: func(b *types.Baseline) {
+				b.Catalog.Metadata.ApplicabilityGroups = []gemara.Group{
+					{Id: maturity1, Title: "Maturity Level 1"},
+					{Id: maturity2, Title: "Maturity Level 2"},
+				}
+				b.Catalog.Controls[0].AssessmentRequirements = []gemara.AssessmentRequirement{
+					{Id: "OSPS-AC-01.01", Applicability: []string{maturity1, maturity2}},
+				}
+			},
 		},
 		{
 			name: "duplicate lexicon term",
