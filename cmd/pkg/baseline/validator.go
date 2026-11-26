@@ -25,6 +25,7 @@ type Validator struct{}
 func (v *Validator) Check(b *types.Baseline) error {
 	entryIDs := make([]string, 0, len(b.Catalog.Controls))
 	assessmentIDs := []string{}
+	appliedIDs := []string{}
 	errs := []error{}
 	for i := range b.Catalog.Controls {
 		entry := &b.Catalog.Controls[i]
@@ -57,6 +58,10 @@ func (v *Validator) Check(b *types.Baseline) error {
 			}
 			baseMaturity := -1
 			for i, maturity := range assessment.Applicability {
+				// Recorded before the checks below, because whether a declared
+				// group has anything behind it does not depend on the other
+				// entries in this list being well formed.
+				appliedIDs = append(appliedIDs, maturity)
 				if maturity[:len(maturity)-1] != "maturity-" {
 					errs = append(errs, fmt.Errorf("invalid maturity level '%s' for assessment %s in control %s", maturity, assessment.Id, entry.Id))
 					continue
@@ -81,6 +86,20 @@ func (v *Validator) Check(b *types.Baseline) error {
 			}
 
 			assessmentIDs = append(assessmentIDs, assessment.Id)
+		}
+	}
+
+	// A maturity level is declared once, in metadata applicability-groups, and
+	// is populated only by the assessment requirements that list it. Nothing
+	// above ties the two together, so a level that no requirement applies to
+	// passes validation while being empty. It is not harmless: the rendered
+	// catalog takes its applicability matrix columns from the declared groups
+	// whenever any are declared, so such a level becomes a column with no rows
+	// under it, and a project assessed at that level is checked against
+	// nothing.
+	for _, group := range b.Catalog.Metadata.ApplicabilityGroups {
+		if !slices.Contains(appliedIDs, group.Id) {
+			errs = append(errs, fmt.Errorf("applicability-group %q is declared in metadata but no assessment requirement applies to it", group.Id))
 		}
 	}
 
